@@ -1,0 +1,29 @@
+@import "../library/_variable";
+@import "../mixin/_media";
+/*
+メインナビエリア
+
+画面上部に固定表示されます。ロゴ・店舗名（および店舗ページへのリンク）・ユーザメニューが含まれます。
+
+Markup:
+.c-container
+
+Styleguide 2.0
+*/
+
+.c-mainNavArea {
+  width: 230px;
+  height: 100%;
+  background: #F3F4F6;
+  border-right: 1px solid $dllNavy20;
+  position: fixed;
+  left: 0;
+  z-index: 900;
+
+  &__nav {
+
+   }
+  &__navItem {
+    border-bottom: 1px solid $dllNavy20;
+  }
+}

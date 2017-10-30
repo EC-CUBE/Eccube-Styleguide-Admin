@@ -1,0 +1,7 @@
+//メディアクエリ
+
+@mixin media_sp(){
+  @media only screen and (max-width: 1024px) {
+    @content;
+  }
+}

@@ -6,8 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "run-p dev:*",
-    "dev:styelguide": "gulp styleguide:server",
-    "dev:browserSync": "gulp server"
+    "dev:watch": "gulp",
+    "dev:styelguide": "gulp styleguide:server"
   },
   "author": "",
   "license": "ISC",
