@@ -1,24 +1,6 @@
 @import "../library/_variable";
 @import "../mixin/_media";
-/*
-コンテナー
 
-コンテンツの表示幅を定義しています。最大サイズは2500px、最小サイズは1024pxです。
-[TODO ファイル移動する。]
-
-Markup:
-.c-container
-
-Styleguide 1.0
-*/
-
-.c-container {
-  margin: 0 auto;
-  margin-top: 65px;
-  width: 100%;
-  max-width: 2500px;
-  min-width: 1024px;
-}
 /*
 ヘッダーバー
 
@@ -28,7 +10,7 @@ Markup:
 include /assets/tmpl/components/headerBar.pug
 +c-headerBar
 
-Styleguide 1.1
+Styleguide 2.0
 */
 
 .c-headerBar {

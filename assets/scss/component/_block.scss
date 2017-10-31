@@ -1,0 +1,145 @@
+@import "../library/_variable";
+@import "../mixin/_media";
+/*
+ブロック
+
+コンテンツエリアに配置されます。あるひとつのテーマをもった表示単位であり、
+原則としてタイトルをもちます。ブロック内部にコンテンツやフォームを、テーマにそってまとめます。
+
+Markup:
+.c-block
+
+Styleguide 8.0
+*/
+
+.c-block {
+  border-radius: 4px;
+  margin-bottom: 20px;
+  background: #fff;
+  color: $black85;
+  font-size: 14px;
+  &__heading {
+    display: table;
+    padding: 15px;
+    width: 100%;
+    border-bottom: 2px solid $black20;
+  }
+  &__titles {
+    display: table-cell;
+  }
+  &__title {
+    display: inline-block;
+    margin-right: 5px;
+    margin-bottom: 0;
+    font-size: 14px;
+    vertical-align: middle;
+  }
+  &__toolTip {
+    display: inline-block;
+    vertical-align: middle;
+    i {
+      font-size: 20px;
+    }
+  }
+  &__toggle {
+    display: table-cell;
+    width: 20px;
+    text-center: right;
+    vertical-align: middle;
+    i {
+      font-size: 20px;
+    }
+  }
+  &__contents {
+    padding: 15px;
+  }
+}
+
+
+/*
+ページタイトル
+
+ページタイトルを表示します。
+
+Markup:
+.c-secondaryCol
+
+Styleguide 8.1
+*/
+.c-pageTitle {
+  display: table;
+  margin-bottom: 20px;
+  padding: 15px;
+  width: 100%;
+  background: #fff;
+  &__titles {
+    display: table-cell;
+}
+  &__title {
+    display: inline-block;
+    margin-right: 10px;
+    margin-bottom: 0;
+    font-size: 20px;
+    vertical-align: middle;
+  }
+  &__subTitle {
+    display: inline-block;
+    font-size: 16px;
+    vertical-align: middle;
+  }
+  // コンバージョンエリアに移動
+  //&__beseLink {
+  //  display: table-cell;
+  //  width: 200px;
+  //  text-align: right;
+  //  font-size: 16px;
+  //  vertical-align: middle;
+  //
+  //  a {
+  //    color: $black;
+  //    &:hover {
+  //     opacity: .5;
+  //    }
+  //  }
+  //
+  //  i {
+  //    display: inline-block;
+  //    margin-right: 10px;
+  //  }
+  //  span {
+  //    display: inline-block;
+  //  }
+  //}
+}
+
+
+
+/*
+フォーム
+
+コンテンツエリアに配置されます。あるひとつのテーマをもった表示単位であり、
+原則としてタイトルをもちます。ブロック内部にコンテンツやフォームを、テーマにそってまとめます。
+
+Markup:
+.c-block
+
+Styleguide 8.2
+*/
+.c-form {
+  width: 100%;
+  &__label {
+    display: inline-block;
+    width: 18%;
+
+  }
+  &__input {
+    display: inline-block;
+    width: 80%;
+    text-align: right;
+    input {
+      display: inline-block;
+      width: 100%;
+    }
+  }
+
+}

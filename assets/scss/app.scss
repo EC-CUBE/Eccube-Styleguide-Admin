@@ -1,5 +1,8 @@
+@import "library/variable";
+
 html,body {
   font-size: 14px;
+  background: $paleBlue;
 }
 a:hover {
   color: inherit;
@@ -16,5 +19,11 @@ li {
   list-style: none;
 }
 
+@import "component/_container";
 @import "component/_headerBar";
 @import "component/_mainNavArea";
+@import "component/_contentsArea";
+@import "component/_primaryCol";
+@import "component/_secondaryCol";
+@import "component/_conversionArea";
+@import "component/_block";

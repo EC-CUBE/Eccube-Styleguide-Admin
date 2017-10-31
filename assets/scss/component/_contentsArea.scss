@@ -1,0 +1,38 @@
+@import "../library/_variable";
+@import "../mixin/_media";
+
+/*
+コンテンツエリア
+
+画面内のコンテンツ・入力フォームを表示します。`.c-contentsArea__cols`ではプライマリカラム、セカンダリカラムのレイアウトを定義します。
+<br>
+`.c-contentsArea__secondaryCol`がない場合は`.c-contentsArea__primaryCol`がコンテンツエリアの幅100%で表示されます。
+
+Markup:
+.c-contentsArea
+  .c-contentsArea__cols
+    .c-contentsArea__primaryCol
+    .c-contentsArea__secondaryCol
+Styleguide 4.0
+*/
+
+.c-contentsArea {
+  margin-left: 220px;
+  background: $paleBlue;
+
+  @include media_sp {
+    margin-left: 0;
+  }
+  &__cols {
+    display: table;
+    padding: 0 30px 0 20px;
+    width: 100%;
+  }
+  &__primaryCol {
+    display: table-cell;
+  }
+  &__secondaryCol {
+    display: table-cell;
+    width: 320px;
+  }
+}

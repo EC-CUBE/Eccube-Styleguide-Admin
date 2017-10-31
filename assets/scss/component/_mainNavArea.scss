@@ -8,17 +8,21 @@
 Markup:
 .c-container
 
-Styleguide 2.0
+Styleguide 3.0
 */
 
 .c-mainNavArea {
-  width: 230px;
+  width: 220px;
   height: 100%;
   background: #F3F4F6;
   border-right: 1px solid $dllNavy20;
   position: fixed;
   left: 0;
   z-index: 900;
+
+  @include media_sp {
+    display: none;
+  }
 
   &__nav {
 

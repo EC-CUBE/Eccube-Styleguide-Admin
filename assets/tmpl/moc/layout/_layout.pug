@@ -1,0 +1,14 @@
+include /node_modules/bemto.pug/bemto.pug
+include /assets/tmpl/components/headerBar
+include /assets/tmpl/components/mainNavArea
+
+doctype html
+html(lang="ja")
+    include common/_head.pug
+
+    body
+        +c-headerBar
+        .c-container
+            +c-mainNavArea
+            block contents
+        block conversionArea

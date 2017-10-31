@@ -1,0 +1,29 @@
+@import "../library/_variable";
+@import "../mixin/_media";
+
+/*
+コンテナー
+
+コンテンツの表示幅を定義しています。最大サイズは2500px、最小サイズは1024pxです。
+メインナビエリアとコンテンツエリアを内包します。デバイスサイズが1024pxより小さくなる場合、画面に表示しきれない要素は右スクロールで表示することができます。
+
+Markup:
+.c-container
+
+Styleguide 1.0
+*/
+
+.c-container {
+  margin: 0 auto;
+  margin-top: 65px;
+  width: 100%;
+  max-width: 2500px;
+  min-width: 1024px;
+}
+
+//todo SP画面左ナビ表示の時オーバレイにする
+//.c-curtain {
+//  width: 100%;
+//  height: 100vh;
+//  background: red;
+//}

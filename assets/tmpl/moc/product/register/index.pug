@@ -1,4 +1,4 @@
-extends /assets/tmpl/moc/layout/_layout-2col.pug
+extends /assets/tmpl/moc/layout/_layout-3col.pug
 block pageTitle
     +b.c-pageTitle
         +e.titles
@@ -6,6 +6,27 @@ block pageTitle
             +e.SPAN.subTitle 商品管理
 
 block primaryContents
+    .c-block
+        .c-block__heading
+            .c-block__titles
+                h2.c-block__title 基本設定
+                .c-block__toolTip
+                    i.fa.fa-question-circle
+            .c-block__toggle
+                i.fa.fa-angle-up
+        .c-block__contents
+            form
+                .c-form
+                    .c-form__label
+                        label
+                            span.c-form__labelTitle 商品ID
+                            .c-form__labelToolTip
+                                i.fa.fa-question-circle
+                            .c-form__labelRequired 必須
+                    .c-form__input
+                        input(type="text")
+
+block secondaryContents
     .c-block
         .c-block__heading
             .c-block__titles

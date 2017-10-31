@@ -1,0 +1,27 @@
+@import "../library/_variable";
+@import "../mixin/_media";
+
+/*
+コンバージョンエリア
+
+補助的なコンテンツ・入力フォームなどを表示します。
+画面によっては存在しない場合があり、その場合はプライマリカラムがコンテンツエリアの全幅を占めます。
+
+Markup:
+.c-conversionArea
+
+Styleguide 7.0
+*/
+.c-conversionArea {
+  width: calc(100% - 220px);
+  height: 60px;
+  background: #2f3f4e;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  text-align: right;
+
+  @include media_sp {
+    width: 100%;
+  }
+}
