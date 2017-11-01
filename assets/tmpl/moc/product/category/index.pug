@@ -1,0 +1,76 @@
+extends /assets/tmpl/moc/layout/_layout-3col.pug
+block pageTitle
+    +b.c-pageTitle
+        +e.titles
+            +e.H2.title カテゴリ管理
+            +e.SPAN.subTitle 管理商品
+
+block primaryContents
+    .c-block
+        .c-block__heading
+            .c-block__titles
+                h2.c-block__title 基本設定
+                .c-block__toolTip
+                    i.fa.fa-question-circle
+            .c-block__toggle
+                i.fa.fa-angle-up
+        .c-block__contents
+            form
+                .c-form
+                    .c-form_create
+                        input.c-form_createForm(type="text")
+                        input.c-form_createBtn(type="button", value="新規作成")
+                    .c-categoryTitle
+                        i.fa.fa-bars(aria-hidden="true")
+                        a.c-categoryTitle_title(href="#") カテゴリA
+                        .c-category_operation
+                            a(herf="#")
+                                i.fa.fa-arrow-up(aria-hidden="true")
+                            a(herf="#")
+                                i.fa.fa-arrow-down(aria-hidden="true")
+                            a(herf="#")
+                                i.fa.fa-pencil(aria-hidden="true")
+                            a(herf="#")
+                                i.fa.fa-times(aria-hidden="true")
+                    .c-categoryAdd
+                        input.c-categoryAdd_textBox(type="text" placeholder="カテゴリ名を入力")
+                        input.c-categoryAdd_decisionBtn(type="button", value="決定")
+                        input.c-categoryAdd_cancelBtn(type="button", value="キャンセル")
+                        .c-category_operation
+                            a(herf="#")
+                                i.fa.fa-arrow-up(aria-hidden="true")
+                            a(herf="#")
+                                i.fa.fa-arrow-down(aria-hidden="true")
+                            a(herf="#")
+                                i.fa.fa-pencil(aria-hidden="true")
+                            a(herf="#")
+                                i.fa.fa-times(aria-hidden="true")
+
+block secondaryContents
+    .c-block
+        .c-block__heading
+            .c-block__titles
+                h2.c-block__title 基本設定
+                .c-block__toolTip
+                    i.fa.fa-question-circle
+            .c-block__toggle
+                i.fa.fa-angle-up
+        .c-block__contents
+            form
+                .c-form
+                    .c-form__label
+                        label
+                            span.c-form__labelTitle 商品ID
+                            .c-form__labelToolTip
+                                i.fa.fa-question-circle
+                            .c-form__labelRequired 必須
+                    .c-form__input
+                        input(type="text")
+
+block conversionArea
+    +b.c-conversionArea
+        +e.container
+            span 公開
+            span 更新
+
+
