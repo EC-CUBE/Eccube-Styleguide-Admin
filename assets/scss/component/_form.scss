@@ -1,0 +1,237 @@
+@import "../library/_variable";
+@import "../mixin/_media";
+@import "../mixin/_form";
+/*
+フォーム
+
+コンテンツエリアに配置されます。あるひとつのテーマをもった表示単位であり、
+原則としてタイトルをもちます。ブロック内部にコンテンツやフォームを、テーマにそってまとめます。
+
+Markup:
+form
+  .c-form
+
+Styleguide 9.0
+*/
+
+.c-form {
+  display: inline-block;
+  width: 100%;
+}
+
+/*
+テキスト
+
+コンテンツエリアに配置されます。あるひとつのテーマをもった表示単位であり、
+原則としてタイトルをもちます。ブロック内部にコンテンツやフォームを、テーマにそってまとめます。
+
+Markup:
+form
+  .c-form
+    .c-form__text
+      input(type="text")
+      textarea(rows="9" placeholder="テキスト")
+
+Styleguide 9.1
+*/
+.c-form {
+  &__text {
+    input {
+      @include form_text;
+    }
+    textarea {
+      @include form_text;
+      height: auto;
+    }
+  }
+}
+
+/*
+セレクト
+
+コンテンツエリアに配置されます。あるひとつのテーマをもった表示単位であり、
+原則としてタイトルをもちます。ブロック内部にコンテンツやフォームを、テーマにそってまとめます。
+
+Markup:
+form
+  .c-form
+    .c-form__select
+      select
+        option 選んでください
+        option 決済処理中
+        option 入金済み
+        option 入金待ち
+        option ...
+
+Styleguide 9.2
+*/
+.c-form {
+  &__select {
+    select {
+      margin-bottom: 10px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      padding: .5rem;
+      width: 100%;
+      height: 40px;
+      font-size: 14px;
+      color: $black85;
+      background: #fff;
+      &:focus {
+        outline: none;
+        border: 1px solid $lochmara;
+      }
+    }
+  }
+}
+
+/*
+数字
+
+コンテンツエリアに配置されます。あるひとつのテーマをもった表示単位であり、
+原則としてタイトルをもちます。ブロック内部にコンテンツやフォームを、テーマにそってまとめます。
+
+Markup:
+form
+  .c-form
+    .c-form__number
+      input(type="number")
+
+Styleguide 9.3
+*/
+.c-form {
+  &__number {
+    input {
+      @include form_text;
+    }
+  }
+}
+
+/*
+日付
+
+コンテンツエリアに配置されます。あるひとつのテーマをもった表示単位であり、
+原則としてタイトルをもちます。ブロック内部にコンテンツやフォームを、テーマにそってまとめます。
+
+Markup:
+form
+  .c-form
+    .c-form__date
+      input(type="date" placeholder="2000/01/01")
+
+Styleguide 9.4
+*/
+.c-form {
+  &__date {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 40px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+
+    &::before {
+      position: absolute;
+      content: "\f073";
+      top: 0;
+      right: 0;
+      width: 40px;
+      height: 40px;
+      font-family: FontAwesome;
+      font-size: 20px;
+      color: $black85;
+      text-align: center;
+      line-height: 37px;
+    }
+    input {
+      margin-bottom: 10px;
+      position: relative;
+      padding: 0 10px;
+      width: 100%;
+      height: 40px;
+      border: 0;
+      background: transparent;
+      box-sizing: border-box;
+      border-radius: 4px;
+      font-size: 14px;
+      color:$black85;
+      &:focus {
+        outline: none;
+        border: 1px solid $lochmara;
+      }
+      &::-webkit-inner-spin-button{
+        -webkit-appearance: none;
+      }
+      &::-webkit-clear-button{
+        -webkit-appearance: none;
+      }
+      &::-webkit-calendar-picker-indicator{
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        padding: 0;
+        width: 40px;
+        height: 40px;
+        background: transparent;
+        color: transparent;
+        cursor: pointer;
+      }
+
+      &:placeholder {
+        color: $black40;
+      }
+    }
+  }
+}
+
+/*
+金額
+
+コンテンツエリアに配置されます。あるひとつのテーマをもった表示単位であり、
+原則としてタイトルをもちます。ブロック内部にコンテンツやフォームを、テーマにそってまとめます。
+
+Markup:
+form
+  .c-form
+    .c-form__price
+      .c-form__priceMark
+        span ￥
+      input(type="text")
+
+Styleguide 9.5
+*/
+.c-form {
+  &__price {
+    display: flex;
+    align-items: stretch;
+    margin-bottom: 20px;
+    border: 1px solid $black20;
+    border-radius: 4px;
+    width: 100%;
+    height: 40px;
+    box-sizing: border-box;
+    position: relative;
+    .c-form__priceMark {
+      align-items: center;
+      border-right: 1px solid $black20;
+      text-align: center;
+      height: 100%;
+      width: 40px;
+      font-size: 20px;
+      background: #F2F2F2;
+      border-radius: 4px 0 0 4px;
+      line-height: 40px;
+      span {
+        font-size: inherit;
+      }
+    }
+
+    input {
+      @include form_text;
+      border-radius: 0 4px 4px 0;
+      height: 100%;
+      border: none;
+      margin-bottom: 0;
+    }
+  }
+}
