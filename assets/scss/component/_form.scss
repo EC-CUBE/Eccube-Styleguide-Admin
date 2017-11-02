@@ -11,7 +11,7 @@ Markup:
 form
   .c-form
 
-Styleguide 9.0
+Styleguide 10.0
 */
 
 .c-form {
@@ -32,7 +32,7 @@ form
       input(type="text")
       textarea(rows="9" placeholder="テキスト")
 
-Styleguide 9.1
+Styleguide 10.1
 */
 .c-form {
   &__text {
@@ -63,7 +63,7 @@ form
         option 入金待ち
         option ...
 
-Styleguide 9.2
+Styleguide 10.2
 */
 .c-form {
   &__select {
@@ -97,7 +97,7 @@ form
     .c-form__number
       input(type="number")
 
-Styleguide 9.3
+Styleguide 10.3
 */
 .c-form {
   &__number {
@@ -119,7 +119,7 @@ form
     .c-form__date
       input(type="date" placeholder="2000/01/01")
 
-Styleguide 9.4
+Styleguide 10.4
 */
 .c-form {
   &__date {
@@ -198,7 +198,7 @@ form
         span ￥
       input(type="text")
 
-Styleguide 9.5
+Styleguide 10.5
 */
 .c-form {
   &__price {
