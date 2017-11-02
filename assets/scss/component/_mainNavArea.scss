@@ -12,13 +12,16 @@ Styleguide 3.0
 */
 
 .c-mainNavArea {
+  padding-top: 65px;
   width: 220px;
   height: 100%;
-  background: #F3F4F6;
-  border-right: 1px solid $dllNavy20;
+  background: #f3f4f6;
+  border-right: 1px solid #d6d9e0;
   position: fixed;
+  top: 0;
   left: 0;
-  z-index: 900;
+  overflow-y: scroll;
+  z-index: 1000;
 
   @include media_sp {
     display: none;
@@ -28,6 +31,83 @@ Styleguide 3.0
 
    }
   &__navItem {
+
+    ul {
+      background: #fff;
+      color: $navy70;
+      font-size: 14px;
+    }
+    li {
+      a {
+        display: block;
+        padding: 10px 40px;
+        text-align: left;
+        color: inherit;
+        font-size: inherit;
+        cursor: pointer;
+        &:hover {
+          background: $black05;
+        }
+      }
+    }
+  }
+  &__navItemTitle {
+    display: block;
     border-bottom: 1px solid $dllNavy20;
+    padding: 10px 15px;
+    font-size: 16px;
+    color: $navy80;
+    cursor: pointer;
+    position: relative;
+    &::after {
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      content: "\f106";
+      text-align: right;
+      font-family: FontAwesome;
+      font-size: 20px;
+      color: #54687a;
+      position: absolute;
+      top: 7px;
+      right: 15px;
+    }
+    &:hover {
+      background: $black05;
+    }
+
+    i {
+      margin-right: .5em;
+      color: $navy70;
+      font-size: inherit;
+    }
+    span {
+      color: $navy80;
+    }
+  }
+  &__navItemSubTitle {
+    display: block;
+    border-bottom: 1px solid $dllNavy20;
+    padding: 10px 35px;
+    font-size: 16px;
+    color: $navy80;
+    cursor: pointer;
+    position: relative;
+    &:after {
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      content: "\f106";
+      text-align: right;
+      font-family: FontAwesome;
+      font-size: 20px;
+      color: #54687a;
+      position: absolute;
+      top: 7px;
+      right: 15px;
+    }
+    span {
+      color: $navy80;
+    }
   }
 }

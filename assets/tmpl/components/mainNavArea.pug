@@ -3,9 +3,14 @@ mixin c-mainNavArea
         nav
             +e.UL.nav
                 +e.LI.navItem
-                    a(href="")
+                    +e.navItemTitle
                         i.fa.fa-home(aria-hidden="true")
                         span ホーム
+
+                +e.LI.navItem
+                    +e.navItemTitle
+                        i.fa.fa-cube(aria-hidden="true")
+                        span 商品管理
                     ul
                         li: a(href="") 商品マスタ
                         li: a(href="") 商品登録
@@ -16,31 +21,70 @@ mixin c-mainNavArea
                         li: a(href="") カテゴリCSV登録
 
                 +e.LI.navItem
-                    a
-                        i.fa.fa-cube(aria-hidden="true")
-                        span 商品管理
-                +e.LI.navItem
-                    a
+                    +e.navItemTitle
                         i.fa.fa-inbox(aria-hidden="true")
                         span 受注管理
+                    ul
+                        li: a(href="") 受注一覧
+                        li: a(href="") 受注管理
+
                 +e.LI.navItem
-                    a
+                    +e.navItemTitle
                         i.fa.fa-truck(aria-hidden="true")
                         span 出荷管理
+                    ul
+                        li: a(href="") 出荷マスター
+                        li: a(href="") 出荷管理
+                        li: a(href="") 出荷CSV登録
+
                 +e.LI.navItem
-                    a
+                    +e.navItemTitle
                         i.fa.fa-users(aria-hidden="true")
                         span 会員管理
+                    ul
+                        li: a(href="") 会員マスター
+                        li: a(href="") 会員管理
+
                 +e.LI.navItem
-                    a
+                    +e.navItemTitle
                         i.fa.fa-file-text-o(aria-hidden="true")
                         span コンテンツ管理
+                    ul
+                        li: a(href="") 新着情報管理
+                        li: a(href="") ファイル管理
+                        li: a(href="") レイアウト管理
+                        li: a(href="") ページ管理
+                        li: a(href="") ブロック管理
+                        li: a(href="") キャッシュ管理
+
                 +e.LI.navItem
-                    a
+                    +e.navItemTitle
                         i.fa.fa-cog(aria-hidden="true")
                         span 設定
+
+                    +e.navItemSubTitle
+                            span 基本情報設定
+                    ul
+                        li: a(href="")  ショップマスター
+                        li: a(href="")  特定商取引法
+                        li: a(href="")  利用規約設定
+                        li: a(href="")  支払方法設定
+                        li: a(href="")  配送方法設定
+                        li: a(href="")  税率設定
+                        li: a(href="") 利用規約設定
+                        li: a(href="") メール設定
+                        li
+                    +e.A.navItemSubTitle
+                        span システム情報設定
+                    ul
+                        li: a(href="") システム情報
+                        li: a(href="") メンバー管理
+                        li: a(href="") 権限管理
+                        li: a(href="") セキュリティ管理
+                        li: a(href="") EC-CUBE ログ表示
+                        li: a(href="") マスターデータ管理
+
                 +e.LI.navItem
-                    a
+                    +e.A.navItemTitle
                         i.fa.fa-info-circle(aria-hidden="true")
                         span オーナーズストア
-
