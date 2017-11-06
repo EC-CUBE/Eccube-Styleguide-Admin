@@ -25,3 +25,49 @@ Styleguide 7.0
     width: 100%;
   }
 }
+
+/*
+トグルスイッチ
+
+補助的なコンテンツ・入力フォームなどを表示します。
+画面によっては存在しない場合があり、その場合はプライマリカラムがコンテンツエリアの全幅を占めます。
+
+Markup:
+.c-toggleSwitch
+  input.c-toggleSwitch__btn(type="checkbox" id="switch")
+  label(for="switch")
+
+Styleguide 7.1
+*/
+.c-toggleSwitch {
+  input[type=checkbox].c-toggleSwitch__btn + label{
+    width: 50px;
+    height: 30px;
+    background: #D3D3D3;
+    display: inline-block;
+    border-radius: 25px;
+    position: relative;
+    cursor: pointer;
+    &:after{
+      content: "";
+      display: inline-block;
+      width: 26px;
+      height: 26px;
+      background: #FFF;
+      border-radius: 50%;
+      position: absolute;
+      top: 1.5px;
+      left: 1.5px;
+      transition: all .3s;
+    }
+  }
+  input[type=checkbox].c-toggleSwitch__btn{
+    display: none;
+    &:checked + label{
+      background-color: #25B877;
+      &:after{
+        left: 21.5px;
+      }
+    }
+  }
+}
