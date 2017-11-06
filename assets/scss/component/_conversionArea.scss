@@ -51,13 +51,13 @@ Styleguide 7.1
     &:after{
       content: "";
       display: inline-block;
-      width: 26px;
+      width: 27px;
       height: 26px;
       background: #FFF;
       border-radius: 50%;
       position: absolute;
-      top: 1.5px;
-      left: 1.5px;
+      top: 2px;
+      left: 2px;
       transition: all .3s;
     }
   }
