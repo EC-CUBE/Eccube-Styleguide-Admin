@@ -1,0 +1,22 @@
+mixin c-table--customer
+    +b.TABLE.c-table
+        +e.THEAD.tableHeader
+            th
+                input(type='checkbox')
+            th 会員ID
+            th 会員名
+            th 電話番号
+            th メールアドレス
+            th &nbsp;
+        - for (var x = 0; x < 6; x++)
+            tr
+                td
+                    input(type='checkbox')
+                td 1
+                td.c-usersTable_name
+                    a(href='#') 山田 はなこ
+                td 06-6666-6666
+                td witchdoktor@gmail.com
+                td
+                    +e.A.delete(href='#')
+                        i.fa.fa-times
