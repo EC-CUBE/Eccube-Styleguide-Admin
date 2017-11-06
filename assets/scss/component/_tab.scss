@@ -1,0 +1,82 @@
+@import "../library/_variable";
+@import "../mixin/_media";
+
+/*
+タブ
+
+ボタンのサイズや色を定義します。
+
+Styleguide 11.0
+*/
+
+
+/*
+タブ
+
+タブサイズは `regular` `small` の2種類定義されています。
+選択中のタブ`.c-tab__item`に`.is-active`クラスを付与することでアクティブ状態のスタイルを適用することが出来ます。
+
+Markup:
+.c-tab--regular
+  .c-tab__item.is_active
+    span ラベルが長文の場合は文言の分、横幅が伸びます。
+  .c-tab__item
+    i.fa.fa-home
+    span ラベル aaaa
+  .c-tab__item
+    span ラベル3
+.c-tab--small
+  .c-tab__item.is_active
+    span ラベルが長文の場合は文言の分、横幅が伸びます。
+  .c-tab__item
+    i.fa.fa-home
+    span ラベル aaaa
+  .c-tab__item
+    span ラベル3
+
+Styleguide 11.1
+*/
+@mixin tab($item-width:150px,$item-padding:10px 15px) {
+  margin-bottom: 15px;
+  display: inline-block;
+  border: 1px solid $boulder;
+  border-radius: 4px;
+  box-sizing: border-box;
+
+  .c-tab__item {
+    display: inline-block;
+    min-width: $item-width;
+    border-right: 1px solid $boulder;
+    padding: $item-padding;
+    text-align: center;
+    border-collapse: collapse;
+    span {
+      font-size: 14px;
+      font-weight: bold;
+      color: $black65;
+    }
+    i {
+      color: $navy70;
+      font-size: 16px;
+      margin-right: 0.5em;
+    }
+  }
+  .c-tab__item:last-of-type {
+    border-right: none;
+  }
+  .c-tab__item.is_active {
+    color: #fff;
+    background: $boulder;
+    span,i {
+      color: #fff;
+    }
+  }
+}
+
+.c-tab--regular {
+  @include tab;
+}
+
+.c-tab--small {
+  @include tab(200px,5px 10px);
+}
