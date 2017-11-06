@@ -1,6 +1,7 @@
 @import "../library/_variable";
 @import "../mixin/_media";
 @import "../mixin/_form";
+
 /*
 フォーム
 
@@ -8,8 +9,7 @@
 原則としてタイトルをもちます。ブロック内部にコンテンツやフォームを、テーマにそってまとめます。
 
 Markup:
-form
-  .c-form
+form.c-form
 
 Styleguide 10.0
 */
@@ -53,15 +53,14 @@ Styleguide 10.1
 原則としてタイトルをもちます。ブロック内部にコンテンツやフォームを、テーマにそってまとめます。
 
 Markup:
-form
-  .c-form
-    .c-form__select
-      select
-        option 選んでください
-        option 決済処理中
-        option 入金済み
-        option 入金待ち
-        option ...
+form.c-form
+  .c-form__select
+    select
+      option 選んでください
+      option 決済処理中
+      option 入金済み
+      option 入金待ち
+      option ...
 
 Styleguide 10.2
 */
@@ -92,10 +91,9 @@ Styleguide 10.2
 原則としてタイトルをもちます。ブロック内部にコンテンツやフォームを、テーマにそってまとめます。
 
 Markup:
-form
-  .c-form
-    .c-form__number
-      input(type="number")
+form.c-form
+  .c-form__number
+    input(type="number")
 
 Styleguide 10.3
 */
@@ -114,10 +112,9 @@ Styleguide 10.3
 原則としてタイトルをもちます。ブロック内部にコンテンツやフォームを、テーマにそってまとめます。
 
 Markup:
-form
-  .c-form
-    .c-form__date
-      input(type="date" placeholder="2000/01/01")
+form.c-form
+  .c-form__date
+    input(type="date" placeholder="2000/01/01")
 
 Styleguide 10.4
 */
@@ -191,12 +188,11 @@ Styleguide 10.4
 原則としてタイトルをもちます。ブロック内部にコンテンツやフォームを、テーマにそってまとめます。
 
 Markup:
-form
-  .c-form
-    .c-form__price
-      .c-form__priceMark
-        span ￥
-      input(type="text")
+form.c-form
+  .c-form__price
+    .c-form__priceMark
+      span ￥
+    input(type="text")
 
 Styleguide 10.5
 */
@@ -235,3 +231,128 @@ Styleguide 10.5
     }
   }
 }
+
+/*
+チェックボックス
+
+コンテンツエリアに配置されます。あるひとつのテーマをもった表示単位であり、
+原則としてタイトルをもちます。ブロック内部にコンテンツやフォームを、テーマにそってまとめます。
+
+Markup:
+form.c-form
+  .c-form__checkbox
+    input(type="checkbox" name="filter" value="open" checked="checked")
+    span 公開
+  .c-form__checkbox
+    input(type="checkbox" name="filter" value="close")
+    span 非公開
+  .c-form__checkbox
+    input(type="checkbox" name="filter" value="soldOut")
+    span 在庫切れ
+
+Styleguide 10.6
+*/
+.c-form {
+  &__checkbox {
+    display: inline-block;
+    margin-right: 10px;
+    input {
+      margin-right: .5em;
+    }
+  }
+}
+
+/*
+ラジオボタン
+
+コンテンツエリアに配置されます。あるひとつのテーマをもった表示単位であり、
+原則としてタイトルをもちます。ブロック内部にコンテンツやフォームを、テーマにそってまとめます。
+
+Markup:
+form.c-form
+  .c-form__radio
+    input(type="radio" name="filter" value="open" checked="checked")
+    span 仮会員
+  .c-form__radio
+    input(type="radio" name="filter" value="close")
+    span 本会員
+
+Styleguide 10.7
+*/
+.c-form {
+  &__radio {
+    display: inline-block;
+    margin-right: 10px;
+    input {
+      margin-right: .5em;
+    }
+  }
+}
+
+/*
+ファイルアップロード
+
+コンテンツエリアに配置されます。あるひとつのテーマをもった表示単位であり、
+原則としてタイトルをもちます。ブロック内部にコンテンツやフォームを、テーマにそってまとめます。
+
+Markup:
+form.c-form
+  .c-form__fileUpload
+    i.fa.fa-cloud-upload(aria-hidden="true")
+    p 画像をドラッグ＆ドロップ
+      br
+      | または
+    input(type="file")
+    button.c-button--regular.c-button--normal ファイルを選択
+
+  Styleguide 10.8
+*/
+.c-form {
+  &__fileUpload {
+    width: 100%;
+    padding: 25px;
+    border: 1px dashed #979797;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background: #fff;
+    text-align: center;
+
+    i {
+      display: block;
+      color: $black20;
+      font-size: 54px;
+    }
+
+    input[type="file"] {
+      display: none;
+    }
+    p {
+      color: #797979;
+      font-size: 14px;
+      line-height: 1.6;
+      font-weight: bold;
+    }
+  }
+}
+/*
+必須ラベル
+
+フォーム内の必須項目を示すラベルです。
+
+Markup:
+form.c-form
+  label 商品ID
+  .c-requiredLabel
+    span 必須
+
+Styleguide 10.9
+*/
+.c-requiredLabel {
+  display: inline-block;
+  padding: 0.2em 0.5em;
+  border: 1px solid $blue;
+  font-size: 13px;
+  font-weight: bold;
+  color: $blue;
+  border-radius: 4px;
+  }
