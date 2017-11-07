@@ -6,15 +6,15 @@ block pageTitle
             +e.SPAN.subTitle 商品管理
 
 block primaryContents
-    .c-block
-        .c-block__heading
-            .c-block__titles
-                h2.c-block__title 基本設定
-                .c-block__toolTip
+    +b.c-block
+        +e.heading
+            +e.titles
+                +e.H2.title 基本設定
+                +e.toolTip
                     i.fa.fa-question-circle
-            .c-block__toggle
+            +e.toggle
                 i.fa.fa-angle-up
-        .c-block__contents
+        +e.contents
             form
                 .c-form
                     .c-form__label
@@ -25,32 +25,71 @@ block primaryContents
                             .c-form__labelRequired 必須
                     .c-form__input
                         input(type="text")
+    +b.c-block
+        +e.heading
+            +e.titles
+                +e.H2.title 規格設定
+                +e.toolTip
+                    i.fa.fa-question-circle
+            +e.toggle
+                i.fa.fa-angle-up
+        +e.contents
+            .c-toolTip
+                span.c-toolTip__title この商品の規格
+                i.fa.fa-question-circle.c-toolTip__icon
+            include /assets/tmpl/components/table.pug
+            +c-table--standard
+
+            +e.action
+               a.c-button--regular.c-button--normal(href='#') この商品の規格管理
 
 block secondaryContents
-    .c-block
-        .c-block__heading
-            .c-block__titles
-                h2.c-block__title 基本設定
-                .c-block__toolTip
+    +b.c-block
+        +e.heading
+            +e.titles
+                +e.H2.title カテゴリ
+                +e.toolTip
                     i.fa.fa-question-circle
-            .c-block__toggle
+            +e.toggle
                 i.fa.fa-angle-up
-        .c-block__contents
-            form
-                .c-form
-                    .c-form__label
-                        label
-                            span.c-form__labelTitle 商品ID
-                            .c-form__labelToolTip
-                                i.fa.fa-question-circle
-                            .c-form__labelRequired 必須
-                    .c-form__input
-                        input(type="text")
+        +e.contents
+            +b.FORM.c-search
+                +e.form
+                    input(type='text' placeholder='カテゴリ検索')
+                +e.A.btn
+                    i.fa.fa-search
+            include /assets/tmpl/components/category.pug
+            +c-category
+
+            +e.action
+                a.c-button--full.c-button--normal(href='#') カテゴリの追加・編集
+    +b.c-block
+        +e.heading
+            +e.titles
+                +e.H2.title タグ
+                +e.toolTip
+                    i.fa.fa-question-circle
+            +e.toggle
+                i.fa.fa-angle-up
+        +e.contents
+            .c-tags
+                a.c-tag.c-tag--black オススメ
+                a.c-tag.c-tag--blue 限定品
+                a.c-tag.c-tag--black 新入荷
+                a.c-tag.c-tag--blue 値下げしました
+                a.c-tag.c-tag--black オススメ
+                a.c-tag.c-tag--blue 限定品
+                a.c-tag.c-tag--black 新入荷
+                a.c-tag.c-tag--black 値下げしました
+                a.c-tag.c-tag--black 送料無料
+            a.c-subAction(href='#')
+                i.fa.fa-plus-square-o
+                span.c-subAction_text すべてのタグを表示
+            +e.action
+                a.c-button--full.c-button--normal(href='#') タグの追加・編集
 
 block conversionArea
     +b.c-conversionArea
         +e.container
             span 公開
             span 更新
-
-

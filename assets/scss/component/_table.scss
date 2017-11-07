@@ -2,7 +2,7 @@
 @import "../mixin/_media";
 
 /*
-テーブル
+会員管理テーブル
 
 タブサイズは `regular` `small` の2種類定義されています。
 選択中のタブ`.c-tab__item`に`.is-active`クラスを付与することでアクティブ状態のスタイルを適用することが出来ます。
@@ -13,7 +13,7 @@ include /assets/tmpl/components/table.pug
 
 Styleguide 12.0
 */
-.c-table {
+.c-customerTable{
   position: relative;
   width: 100%;
   margin-bottom: 10px;
@@ -95,5 +95,237 @@ Styleguide 12.1
   &__list.is-active {
     color: #fff;
     background: $black65;
+  }
+}
+
+
+/*
+規格テーブル
+
+タブサイズは `regular` `small` の2種類定義されています。
+選択中のタブ`.c-tab__item`に`.is-active`クラスを付与することでアクティブ状態のスタイルを適用することが出来ます。
+
+Markup:
+include /assets/tmpl/components/pagination.pug
++c-pagenation
+
+Styleguide 12.2
+*/
+.c-standardTable {
+  width: 100%;
+  margin-bottom: 20px;
+  &__tableHeader {
+    th {
+      border-top: 1px solid #a3a3a3;
+      background-color: #f2f2f2;
+      padding: 10px;
+    }
+
+  }
+  tr {
+    border-bottom: 1px solid #ccc;
+  }
+  tr:nth-child(odd):not(first-child) {
+    background-color: #f9f9f9;
+  }
+  td {
+    padding: 10px 0;
+    padding-left: 10px;
+  }
+}
+
+/*
+ツールチップ TODO　コーディング途中
+
+タブサイズは `regular` `small` の2種類定義されています。
+選択中のタブ`.c-tab__item`に`.is-active`クラスを付与することでアクティブ状態のスタイルを適用することが出来ます。
+
+Markup:
+include /assets/tmpl/components/pagination.pug
++c-pagenation
+
+Styleguide 12.3
+*/
+.c-toolTip {
+  margin-bottom: 10px;
+  &__title {
+  }
+  &__icon {
+    display: inline-block;
+    margin-left: 5px;
+    font-size: 20px;
+  }
+}
+
+
+/*
+検索ボックス
+
+タブサイズは `regular` `small` の2種類定義されています。
+選択中のタブ`.c-tab__item`に`.is-active`クラスを付与することでアクティブ状態のスタイルを適用することが出来ます。
+
+Markup:
+include /assets/tmpl/components/pagination.pug
++c-pagenation
+
+Styleguide 12.4
+*/
+.c-search {
+  display: flex;
+  margin-bottom: 10px;
+  &__form {
+    width: calc(100% - 40px);
+    input {
+
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      padding: .5rem;
+      width: 100%;
+      height: 40px;
+      box-sizing: border-box;
+      font-size: 14px;
+      color: $black85;
+      background: #fff;
+      &:focus {
+        outline: none;
+        border: 1px solid $lochmara;
+      }
+      &:placeholder {
+        color: $black40;
+      }
+    }
+  }
+  &__btn {
+    margin-left: 10px;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    background: #f9f9f9;
+    color: $navy60;
+    cursor: pointer;
+    text-align: center;
+    line-height: 2;
+    font-size: 20px;
+    &:hover {
+      opacity: .5;
+    }
+    i {
+      color: $navy60;
+    }
+  }
+}
+
+
+/*
+カテゴリ
+
+タブサイズは `regular` `small` の2種類定義されています。
+選択中のタブ`.c-tab__item`に`.is-active`クラスを付与することでアクティブ状態のスタイルを適用することが出来ます。
+
+Markup:
+include /assets/tmpl/components/category.pug
++c-category
+
+Styleguide 12.5
+*/
+.c-category {
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  max-height: 300px;
+  padding: 10px;
+  overflow: scroll;
+  //2層目以降
+  ul >li > ul {
+    li > label {
+      margin-left: 10px;
+    }
+    li:not(:last-of-type) > label::before {
+      margin-left: 2px;
+      margin-right: .5em;
+      content: "├";
+      display: inline-block;
+      width: 1em;
+      height: 1em;
+      color: $dllNavy20;
+    }
+
+    li:last-of-type > label::before  {
+      margin-right: .6em;
+      content: "└";
+      display: inline-block;
+      width: 1em;
+      height: 1em;
+      color: $dllNavy20;
+    }
+  }
+  //3層目
+  ul >li ul >li ul  {
+    li > label {
+      margin-left: 20px;
+    }
+  }
+  //4層目
+  ul >li ul >li ul > li ul  {
+    li > label {
+      margin-left: 30px;
+    }
+  }
+}
+
+/*
+タグ
+
+タブサイズは `regular` `small` の2種類定義されています。
+選択中のタブ`.c-tab__item`に`.is-active`クラスを付与することでアクティブ状態のスタイルを適用することが出来ます。
+
+Markup:
+include /assets/tmpl/components/pagination.pug
++c-pagenation
+
+Styleguide 12.6
+*/
+
+.c-tags {
+  margin-bottom: 10px;
+}
+.c-tag {
+  display: inline-block;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  padding: 5px 10px;
+}
+.c-tag--black {
+  border: 1px solid #999;
+  color: #333;
+}
+.c-tag--blue {
+  border: 1px solid #527dbf;
+  color: #527dbf;
+}
+
+
+/*
+サブアクションボタン
+
+タブサイズは `regular` `small` の2種類定義されています。
+選択中のタブ`.c-tab__item`に`.is-active`クラスを付与することでアクティブ状態のスタイルを適用することが出来ます。
+
+Markup:
+include /assets/tmpl/components/pagination.pug
++c-pagenation
+
+Styleguide 12.7
+*/
+
+.c-subAction {
+  display: block;
+  margin-bottom: 15px;
+  color: #333;
+  &_text {
+    margin-left: 5px;
+    font-weight: bold;
   }
 }

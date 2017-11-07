@@ -1,5 +1,6 @@
+//- 会員マスター>会員管理テーブル　TODO（商品登録の規格等でもそのまま使えるか検討必要）
 mixin c-table--customer
-    +b.TABLE.c-table
+    +b.TABLE.c-customerTable
         +e.THEAD.tableHeader
             th
                 input(type='checkbox')
@@ -20,3 +21,20 @@ mixin c-table--customer
                 td
                     +e.A.delete(href='#')
                         i.fa.fa-times
+
+//- 商品登録>規格設定　TODO（クラス名これでいいのか検討必要）
+mixin c-table--standard
+    +b.TABLE.c-standardTable
+        +e.THEAD.tableHeader
+            th.c-standard_head 規格１
+            th.c-standard_head 規格２
+            th.c-standard_head 商品コード
+            th.c-standard_head 在庫数
+            th.c-standard_head 販売価格（円）
+        - for (var x = 0; x < 6; x++)
+            tr
+                td.c-standard_data プラチナ
+                td.c-standard_data 100cm
+                td.c-standard_data aa-001
+                td.c-standard_data ４
+                td.c-standard_data 10,000
