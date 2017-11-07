@@ -298,14 +298,31 @@ Styleguide 12.6
   padding: 5px 10px;
 }
 .c-tag--black {
-  border: 1px solid #999;
-  color: #333;
+  border: 1px solid $black40;
+  color: $mineShaft;
+  :hover {
+    color: $mineShaft;
+  }
+  a,i {
+    color: $mineShaft;
+    :hover {
+      color: $mineShaft;
+    }
+  }
 }
 .c-tag--blue {
-  border: 1px solid #527dbf;
-  color: #527dbf;
+  border: 1px solid $lochmara;
+  color: $lochmara;
+  &:hover {
+    color: $lochmara;
+  }
+  a,i {
+    color: $lochmara;
+    &:hover {
+      color: $lochmara;
+    }
+  }
 }
-
 
 /*
 サブアクションボタン

@@ -44,11 +44,10 @@ Styleguide 10.0
 原則としてタイトルをもちます。ブロック内部にコンテンツやフォームを、テーマにそってまとめます。
 
 Markup:
-form
-  .c-form
-    .c-form__text
-      input(type="text")
-      textarea(rows="9" placeholder="テキスト")
+form.c-form
+  .c-form__text
+    input(type="text")
+    textarea(rows="9" placeholder="テキスト")
 
 Styleguide 10.1
 */
@@ -374,3 +373,29 @@ Styleguide 10.9
   color: $blue;
   border-radius: 4px;
   }
+
+
+
+/*
+ラベルとインプットが水平配置のフォームレイアウト
+
+タブサイズは `regular` `small` の2種類定義されています。
+選択中のタブ`.c-tab__item`に`.is-active`クラスを付与することでアクティブ状態のスタイルを適用することが出来ます。
+
+Markup:
+include /assets/tmpl/components/pagination.pug
++c-pagenation
+
+Styleguide 10.10
+*/
+.c-horizontalForm {
+  margin-bottom: 10px;
+  display: flex;
+  width: 100%;
+  &__label {
+    width: 190px;
+  }
+  &__form {
+    width: calc(100% - 190px);
+  }
+}
