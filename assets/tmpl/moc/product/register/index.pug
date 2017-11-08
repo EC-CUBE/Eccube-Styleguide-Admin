@@ -17,25 +17,108 @@ block primaryContents
         +e.contents
             +b.c-horizontalForm
                 +e.label
-                    p hogehoge
-
-                +e.form
-                    form.c-form
-                        .c-form__text
-                            input(type="text")
-            +b.c-horizontalForm
-                +e.label
-                    p hogehoge
+                    .c-toolTip
+                        span.c-toolTip__title 商品名
+                        i.fa.fa-question-circle.c-toolTip__icon
                 +e.form
                     .row
-                        .col-6
+                        .col-12
+                            | 12
+            +b.c-horizontalForm
+                +e.label
+                    .c-toolTip
+                        span.c-toolTip__title 商品ID
+                        i.fa.fa-question-circle.c-toolTip__icon
+                        .c-requiredLabel
+                            span 必須
+                +e.form
+                    .row
+                        .col-12
                             form.c-form
                                 .c-form__text
-                                    input(type="text")
-                        .col-6
+                                    input(type="text" placeholder="テキスト")
+            +b.c-horizontalForm
+                +e.label
+                    .c-toolTip
+                        span.c-toolTip__title 商品種別
+                        i.fa.fa-question-circle.c-toolTip__icon
+                        .c-requiredLabel
+                            span 必須
+                +e.form
+                    .row
+                        .col-12
+                            form.c-form
+                                .c-form__select
+                                    select
+                                        option 通常商品
+            +b.c-horizontalForm
+                +e.label
+                    .c-toolTip
+                        span.c-toolTip__title 商品画像
+                        i.fa.fa-question-circle.c-toolTip__icon
+                +e.form
+                    .row
+                        .col-12
+                            form.c-form
+                                .c-form__fileUpload
+                                    i.fa.fa-cloud-upload
+                                    p 画像をドラッグ＆ドロップ
+                                    br
+                                    | または
+                                    input(type="file")
+                                    button.c-button--regular.c-button--normal ファイルを選択
+            +b.c-horizontalForm
+                +e.label
+                    .c-toolTip
+                        span.c-toolTip__title 商品説明
+                        i.fa.fa-question-circle.c-toolTip__icon
+                +e.form
+                    .row
+                        .col-12
                             form.c-form
                                 .c-form__text
-                                    input(type="text")
+                                    textarea(rows="9" placeholder="テキスト")
+            +b.c-horizontalForm
+                +e.label
+                    .c-toolTip
+                        span.c-toolTip__title 販売価格
+                        i.fa.fa-question-circle.c-toolTip__icon
+                        .c-requiredLabel
+                            span 必須
+                +e.form
+                    .row
+                        .col-12
+                            form.c-form
+                                .c-form__text
+                                    input(type="text" placeholder="テキスト")
+            +b.c-horizontalForm
+                +e.label
+                    .c-toolTip
+                        span.c-toolTip__title 在庫数
+                        i.fa.fa-question-circle.c-toolTip__icon
+                        .c-requiredLabel
+                            span 必須
+                +e.form
+                    .row
+                        .col-3
+                            form.c-form
+                                .c-form__text
+                                    input(type="text" placeholder="テキスト")
+                                .c-form__checkbox
+                                    input(type="checkbox" name="filter" value="open")
+                                    span 無制限
+            +b.c-horizontalForm
+                +e.label
+                    .c-toolTip
+                        span.c-toolTip__title 検索ワード
+                        i.fa.fa-question-circle.c-toolTip__icon
+                +e.form
+                    .row
+                        .col-12
+                            form.c-form
+                                .c-form__text
+                                    input(type="text" placeholder="テキスト")
+
 
     +b.c-block
         +e.heading
