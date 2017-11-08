@@ -7,19 +7,16 @@ block pageTitle
 
 block primaryContents
     .c-block
-        .c-block__heading
-            .c-block__titles
-                h2.c-block__title 基本設定
-                .c-block__toolTip
-                    i.fa.fa-question-circle
-            .c-block__toggle
-                i.fa.fa-angle-up
         .c-block__contents
             form
                 .c-form
                     .c-form_create
-                        input.c-form_createForm(type="text")
-                        input.c-form_createBtn(type="button", value="新規作成")
+                        .row
+                            .col-6
+                                .c-form__text
+                                    input.c-form_createForm(type="text")
+                            .col-6
+                                button.c-button--regular.c-button--normal 新規作成
                     .c-categoryTitle
                         i.fa.fa-bars(aria-hidden="true")
                         a.c-categoryTitle_title(href="#") カテゴリA
@@ -33,9 +30,13 @@ block primaryContents
                             a(herf="#")
                                 i.fa.fa-times(aria-hidden="true")
                     .c-categoryAdd
-                        input.c-categoryAdd_textBox(type="text" placeholder="カテゴリ名を入力")
-                        input.c-categoryAdd_decisionBtn(type="button", value="決定")
-                        input.c-categoryAdd_cancelBtn(type="button", value="キャンセル")
+                        .row
+                            .col-6
+                                .c-form__text
+                                    input.c-form_createForm(type="text" placeholder="カテゴリ名を入力")
+                            .col-6
+                                button.c-button--small.c-button--conversion 決定
+                                button.c-button--small.c-button--sub キャンセル
                         .c-category_operation
                             a(herf="#")
                                 i.fa.fa-arrow-up(aria-hidden="true")
@@ -47,25 +48,18 @@ block primaryContents
                                 i.fa.fa-times(aria-hidden="true")
 
 block secondaryContents
-    .c-block
-        .c-block__heading
-            .c-block__titles
-                h2.c-block__title 基本設定
-                .c-block__toolTip
-                    i.fa.fa-question-circle
-            .c-block__toggle
-                i.fa.fa-angle-up
-        .c-block__contents
-            form
-                .c-form
-                    .c-form__label
-                        label
-                            span.c-form__labelTitle 商品ID
-                            .c-form__labelToolTip
-                                i.fa.fa-question-circle
-                            .c-form__labelRequired 必須
-                    .c-form__input
-                        input(type="text")
+    +b.c-block
+        +e.heading
+            +e.titles
+                +e.H2.title すべてのカテゴリ
+        +e.contents
+            +b.FORM.c-search
+                +e.form
+                    input(type='text' placeholder='カテゴリ検索')
+                +e.A.btn
+                    i.fa.fa-search
+            include /assets/tmpl/components/category.pug
+            +c-category
 
 block conversionArea
     +b.c-conversionArea
