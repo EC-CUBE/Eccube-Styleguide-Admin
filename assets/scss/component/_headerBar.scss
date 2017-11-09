@@ -38,6 +38,10 @@ Styleguide 2.0
     vertical-align: middle;
     white-space: nowrap;
     text-overflow: ellipsis;
+    img {
+      width: 172px;
+      height: 25px;
+    }
     @include media_sp {
       display: none;
     }
