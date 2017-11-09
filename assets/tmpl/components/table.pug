@@ -39,8 +39,8 @@ mixin c-table--standard
                 td.c-standard_data ４
                 td.c-standard_data 10,000
 
-//- カテゴリ管理,タグ管理　
-mixin c-sortTable--category
+//- 並び替えテーブル
+mixin c-sortTable(text1,text2,text3)
     +b.c-sortTable
         +e.item
             +e.itemForm
@@ -52,7 +52,7 @@ mixin c-sortTable--category
             +e.itemNob
                 i.fa.fa-bars
             +e.itemCategory
-                a(href="") カテゴリA
+                a(href="")= text1
             +e.itemAction
                 +e.itemActionBtn(href=""): i.fa.fa-arrow-up
                 +e.itemActionBtn(href=""): i.fa.fa-arrow-down
@@ -63,7 +63,7 @@ mixin c-sortTable--category
                 i.fa.fa-bars
 
             +e.itemCategory
-                a(href="") カテゴリB
+                a(href="")= text2
             +e.itemAction
                 +e.itemActionBtn(href=""): i.fa.fa-arrow-up
                 +e.itemActionBtn(href=""): i.fa.fa-arrow-down
@@ -86,61 +86,7 @@ mixin c-sortTable--category
                 i.fa.fa-bars
 
             +e.itemCategory
-                a(href="") カテゴリC
-            +e.itemAction
-                +e.itemActionBtn(href=""): i.fa.fa-arrow-up
-                +e.itemActionBtn(href=""): i.fa.fa-arrow-down.c-category__itemAction--stopped
-                +e.itemActionBtn(href=""): i.fa.fa-pencil
-                +e.itemActionBtn(href=""): i.fa.fa-close
-
-//- カテゴリ管理,タグ管理
-mixin c-sortTable--tag
-    +b.c-sortTable
-        +e.item
-            +e.itemForm
-                form.c-form
-                    .c-form__text--regular
-                        input(type="text")
-                    button.c-button--regular.c-button--normal 新規作成
-        +e.item
-            +e.itemNob
-                i.fa.fa-bars
-            +e.itemCategory
-                a(href="") タグA
-            +e.itemAction
-                +e.itemActionBtn(href=""): i.fa.fa-arrow-up
-                +e.itemActionBtn(href=""): i.fa.fa-arrow-down
-                +e.itemActionBtn(href=""): i.fa.fa-pencil
-                +e.itemActionBtn(href=""): i.fa.fa-close
-        +e.item
-            +e.itemNob
-                i.fa.fa-bars
-
-            +e.itemCategory
-                a(href="") タグB
-            +e.itemAction
-                +e.itemActionBtn(href=""): i.fa.fa-arrow-up
-                +e.itemActionBtn(href=""): i.fa.fa-arrow-down
-                +e.itemActionBtn(href=""): i.fa.fa-pencil
-                +e.itemActionBtn(href=""): i.fa.fa-close
-        +e.item
-            +e.itemForm
-                form.c-form
-                    .c-form__text--regular
-                        input(type="text" placeholder="カテゴリ名を入力")
-                    button.c-button--regular.c-button--conversion 決定
-                    button.c-button--regular.c-button--sub キャンセル
-            +e.itemAction
-                +e.itemActionBtn(href=""): i.fa.fa-arrow-up
-                +e.itemActionBtn(href=""): i.fa.fa-arrow-down
-                +e.itemActionBtn(href=""): i.fa.fa-pencil
-                +e.itemActionBtn(href=""): i.fa.fa-close
-        +e.item
-            +e.itemNob
-                i.fa.fa-bars
-
-            +e.itemCategory
-                a(href="") タグC
+                a(href="")= text3
             +e.itemAction
                 +e.itemActionBtn(href=""): i.fa.fa-arrow-up
                 +e.itemActionBtn(href=""): i.fa.fa-arrow-down.c-category__itemAction--stopped

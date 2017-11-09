@@ -442,7 +442,7 @@ Styleguide 12.9
 
 Markup:
 include /assets/tmpl/components/table.pug
-+c-sortTable--category
++c-sortTable("カテゴリA","カテゴリB","カテゴリC")
 
 Styleguide 12.10
 */
