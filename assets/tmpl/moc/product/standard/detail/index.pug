@@ -1,0 +1,18 @@
+extends /assets/tmpl/moc/layout/_layout-2col.pug
+block pageTitle
+    include /assets/tmpl/components/pageTitle.pug
+    +c-pageTitle("規格管理","商品管理")
+
+block primaryContents
+
+
+    .c-block
+        +e.heading
+            +e.titles
+                span 分類設定
+            +e.toggle
+                i.fa.fa-angle-up
+        +e.contents--noPaddingAll
+            include /assets/tmpl/components/table.pug
+            +c-sortTable("100cm","120cm","130cm")
+    p 項目の順番はドラッグ＆ドロップでも変更可能です。

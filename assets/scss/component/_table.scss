@@ -436,7 +436,7 @@ Styleguide 12.9
 カテゴリ管理テーブル
 
 タブサイズは `regular` `small` の2種類定義されています。
-選択中のタブ`.c-tab__item`に`.is-active`クラスを付与することでアクティブ状態のスタイルを適用することが出来ます。
+`.c-sortTable__itemActionBtn`に`.is-stopped`クラスを付与することでボタンを非アクティブ化することが出来ます。
 
 Markup:
 include /assets/tmpl/components/table.pug
@@ -471,7 +471,7 @@ Styleguide 12.10
     display: table-cell;
     vertical-align: middle;
     width: 40px;
-    color: #ccc;
+    color: $black40;
     cursor: pointer;
   }
   &__itemCategory {
@@ -506,8 +506,11 @@ Styleguide 12.10
   &__itemActionBtn:not(:last-of-type) {
     margin-right: 10px;
   }
-  &__itemAction--stopped {
+  &__itemActionBtn.is-stopped {
     color: #ccc;
+    i {
+      color: #ccc;
+    }
   }
 }
 
