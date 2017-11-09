@@ -39,9 +39,9 @@ mixin c-table--standard
                 td.c-standard_data ４
                 td.c-standard_data 10,000
 
-//- カテゴリ管理　TODO（クラス名これでいいのか検討必要、ツールチップ部分未実装）
-mixin c-categoryTable
-    +b.c-categoryTable
+//- カテゴリ管理,タグ管理　
+mixin c-sortTable--category
+    +b.c-sortTable
         +e.item
             +e.itemForm
                 form.c-form
@@ -87,6 +87,60 @@ mixin c-categoryTable
 
             +e.itemCategory
                 a(href="") カテゴリC
+            +e.itemAction
+                +e.itemActionBtn(href=""): i.fa.fa-arrow-up
+                +e.itemActionBtn(href=""): i.fa.fa-arrow-down.c-category__itemAction--stopped
+                +e.itemActionBtn(href=""): i.fa.fa-pencil
+                +e.itemActionBtn(href=""): i.fa.fa-close
+
+//- カテゴリ管理,タグ管理
+mixin c-sortTable--tag
+    +b.c-sortTable
+        +e.item
+            +e.itemForm
+                form.c-form
+                    .c-form__text--regular
+                        input(type="text")
+                    button.c-button--regular.c-button--normal 新規作成
+        +e.item
+            +e.itemNob
+                i.fa.fa-bars
+            +e.itemCategory
+                a(href="") タグA
+            +e.itemAction
+                +e.itemActionBtn(href=""): i.fa.fa-arrow-up
+                +e.itemActionBtn(href=""): i.fa.fa-arrow-down
+                +e.itemActionBtn(href=""): i.fa.fa-pencil
+                +e.itemActionBtn(href=""): i.fa.fa-close
+        +e.item
+            +e.itemNob
+                i.fa.fa-bars
+
+            +e.itemCategory
+                a(href="") タグB
+            +e.itemAction
+                +e.itemActionBtn(href=""): i.fa.fa-arrow-up
+                +e.itemActionBtn(href=""): i.fa.fa-arrow-down
+                +e.itemActionBtn(href=""): i.fa.fa-pencil
+                +e.itemActionBtn(href=""): i.fa.fa-close
+        +e.item
+            +e.itemForm
+                form.c-form
+                    .c-form__text--regular
+                        input(type="text" placeholder="カテゴリ名を入力")
+                    button.c-button--regular.c-button--conversion 決定
+                    button.c-button--regular.c-button--sub キャンセル
+            +e.itemAction
+                +e.itemActionBtn(href=""): i.fa.fa-arrow-up
+                +e.itemActionBtn(href=""): i.fa.fa-arrow-down
+                +e.itemActionBtn(href=""): i.fa.fa-pencil
+                +e.itemActionBtn(href=""): i.fa.fa-close
+        +e.item
+            +e.itemNob
+                i.fa.fa-bars
+
+            +e.itemCategory
+                a(href="") タグC
             +e.itemAction
                 +e.itemActionBtn(href=""): i.fa.fa-arrow-up
                 +e.itemActionBtn(href=""): i.fa.fa-arrow-down.c-category__itemAction--stopped

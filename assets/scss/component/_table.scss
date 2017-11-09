@@ -442,11 +442,11 @@ Styleguide 12.9
 
 Markup:
 include /assets/tmpl/components/table.pug
-+c-categoryTable
++c-sortTable--category
 
 Styleguide 12.10
 */
-.c-categoryTable {
+.c-sortTable {
   width: 100%;
   display: block;
   &__item {

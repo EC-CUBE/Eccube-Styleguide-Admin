@@ -6,49 +6,8 @@ block pageTitle
             +e.SPAN.subTitle 商品管理
 
 block primaryContents
-    +b.c-block
-        +e.contents
-            form.c-form
-                .c-form__text
-                    .row
-                        .col-3
-                            input(type="text")
-                        .col-9
-                            button.c-button--regular.c-button--normal(href='#') 新規作成
-
-            i.fa.fa-bars(aria-hidden="true")
-            a.c-tagTitle_title(href="#") タグA
-            label
-                a(herf="#")
-                    i.fa.fa-arrow-up(aria-hidden="true")
-                a(herf="#")
-                    i.fa.fa-arrow-down(aria-hidden="true")
-                a(herf="#")
-                    i.fa.fa-pencil(aria-hidden="true")
-                a(herf="#")
-                    i.fa.fa-times(aria-hidden="true")
-
-            form.c-form
-                .c-form__text
-                    .row
-                        .col-3
-                            input(type="text" placeholder="タグ名を入力")
-                        .col-9
-                            a.c-button--small.c-button--conversion(href='#') 決定
-                            a.c-button--small.c-button--sub(href='#') キャンセル
-                            a(herf="#")
-                                i.fa.fa-arrow-up(aria-hidden="true")
-                            a(herf="#")
-                                i.fa.fa-arrow-down(aria-hidden="true")
-                            a(herf="#")
-                                i.fa.fa-pencil(aria-hidden="true")
-                            a(herf="#")
-                                i.fa.fa-times(aria-hidden="true")
-
-block conversionArea
-    +b.c-conversionArea
-        +e.container
-            span 公開
-            span 更新
-
-
+    .c-block
+        .c-block__contents--noPaddingAll
+            include /assets/tmpl/components/table.pug
+            +c-sortTable--tag
+    p 項目の順番はドラッグ＆ドロップでも変更可能です。
