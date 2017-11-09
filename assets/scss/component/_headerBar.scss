@@ -22,6 +22,13 @@ Styleguide 2.0
   top: 0;
   box-sizing: border-box;
   z-index: 10000;
+  a {
+    color: #fff;
+    &:hover {
+      color: #fff;
+      text-decoration: none;
+    }
+  }
 
   &__container {
     display: table;
