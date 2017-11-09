@@ -1,9 +1,7 @@
 extends /assets/tmpl/moc/layout/_layout-3col.pug
 block pageTitle
-    +b.c-pageTitle
-        +e.titles
-            +e.H2.title 商品登録
-            +e.SPAN.subTitle 商品管理
+    include /assets/tmpl/components/pageTitle.pug
+    +c-pageTitle("商品登録","商品管理")
 
 block primaryContents
     +b.c-block
