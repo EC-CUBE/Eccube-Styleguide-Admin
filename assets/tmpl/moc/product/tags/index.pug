@@ -2,29 +2,48 @@ extends /assets/tmpl/moc/layout/_layout-2col.pug
 block pageTitle
     +b.c-pageTitle
         +e.titles
-            +e.H2.title 商品登録
+            +e.H2.title タグ管理
             +e.SPAN.subTitle 商品管理
 
 block primaryContents
-    .c-block
-        .c-block__heading
-            .c-block__titles
-                h2.c-block__title 基本設定
-                .c-block__toolTip
-                    i.fa.fa-question-circle
-            .c-block__toggle
-                i.fa.fa-angle-up
-        .c-block__contents
-            form
-                .c-form
-                    .c-form__label
-                        label
-                            span.c-form__labelTitle 商品ID
-                            .c-form__labelToolTip
-                                i.fa.fa-question-circle
-                            .c-form__labelRequired 必須
-                    .c-form__input
-                        input(type="text")
+    +b.c-block
+        +e.contents
+            form.c-form
+                .c-form__text
+                    .row
+                        .col-3
+                            input(type="text")
+                        .col-9
+                            button.c-button--regular.c-button--normal(href='#') 新規作成
+
+            i.fa.fa-bars(aria-hidden="true")
+            a.c-tagTitle_title(href="#") タグA
+            label
+                a(herf="#")
+                    i.fa.fa-arrow-up(aria-hidden="true")
+                a(herf="#")
+                    i.fa.fa-arrow-down(aria-hidden="true")
+                a(herf="#")
+                    i.fa.fa-pencil(aria-hidden="true")
+                a(herf="#")
+                    i.fa.fa-times(aria-hidden="true")
+
+            form.c-form
+                .c-form__text
+                    .row
+                        .col-3
+                            input(type="text" placeholder="タグ名を入力")
+                        .col-9
+                            a.c-button--small.c-button--conversion(href='#') 決定
+                            a.c-button--small.c-button--sub(href='#') キャンセル
+                            a(herf="#")
+                                i.fa.fa-arrow-up(aria-hidden="true")
+                            a(herf="#")
+                                i.fa.fa-arrow-down(aria-hidden="true")
+                            a(herf="#")
+                                i.fa.fa-pencil(aria-hidden="true")
+                            a(herf="#")
+                                i.fa.fa-times(aria-hidden="true")
 
 block conversionArea
     +b.c-conversionArea

@@ -1,0 +1,92 @@
+extends /assets/tmpl/moc/layout/_layout-2col.pug
+block pageTitle
+    +b.c-pageTitle
+        +e.titles
+            +e.H2.title 商品CSV登録
+            +e.SPAN.subTitle 商品管理
+
+
+block primaryContents
+    +b.c-block
+        +e.heading
+            +e.titles
+                +e.H2.title CSVファイルをアップロード
+                +e.toolTip
+                    i.fa.fa-question-circle
+        +e.contents
+            form.c-form
+                .c-form__fileUpload
+                    i.fa.fa-cloud-upload(aria-hidden='true')
+                    p CSVファイルをドラッグ＆ドロップ
+                        br
+                        | または
+                    input(type='file')
+                    button.c-button--regular.c-button--normal ファイルを選択
+                a.c-button--regular.c-button--conversion(href="#") 商品登録を実行
+
+    +b.c-block
+        +e.heading
+            +e.titles
+                +e.H2.title 商品登録CSVファイルフォーマット
+                +e.toolTip
+                    i.fa.fa-question-circle
+        +e.contents
+            table
+                thead
+                    th 商品ID
+                    th
+                        p 新規登録時は未設定
+                            br
+                            | 既存商品の更新は商品IDを設定
+                tr
+                    td 公開ステータス(ID)
+                        .c-requiredLabel
+                            span 必須
+                tr
+                    td 商品名
+                        .c-requiredLabel
+                            span 必須
+                tr
+                    td ショップ用メモ欄
+                        .c-requiredLabel
+                            span 必須
+                tr
+                    td 商品説明(一覧)
+                tr
+                    td 商品説明(詳細)
+                tr
+                    td 検索ワード
+                tr
+                    td フリーエリア
+                tr
+                    td 商品削除フラグ
+                    td 設定されていない場合0を登録
+                tr
+                    td 商品画像
+                    td 複数画像の場合、画像ファイル名をカンマ区切りで「"」で囲んで設定
+                tr
+                    td 商品カテゴリ(ID)
+                    td 複数カテゴリの場合、商品カテゴリIDをカンマ区切りで「"」で囲んで設定
+                tr
+                    td タグ(ID)
+                    td 複数タグの場合、タグIDをカンマ区切りで「"」で囲んで設定
+                tr
+                    td 商品種別(ID)
+                        .c-requiredLabel
+                            span 必須
+                tr
+                    td 規格分類1(ID)
+                tr
+                    td 規格分類2(ID)
+                tr
+                    td 商品種別(ID)
+                tr
+                    td 発送日目安(ID)
+
+
+
+block conversionArea
+    +b.c-conversionArea
+        +e.container
+            span 公開
+            span 更新
