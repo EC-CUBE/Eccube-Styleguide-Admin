@@ -113,6 +113,9 @@ Styleguide 9.2
     text-decoration: none;
   }
 }
+a.c-button--conversion {
+  @extend .c-button--conversion;
+}
 .c-button--sub {
   background-color: $iron;
   color: $mineShaft;
@@ -126,6 +129,9 @@ Styleguide 9.2
     text-decoration: none;
   }
 }
+a.c-button--sub {
+  @extend .c-button--sub;
+}
 .c-button--normal {
   background-color: $white;
   color: $boulder;
@@ -138,6 +144,9 @@ Styleguide 9.2
     text-decoration: none;
   }
 }
+a.c-button--normal {
+  @extend .c-button--normal;
+}
 .c-button--delete {
   background-color: $brickRedLight;
   color: $white;
@@ -149,4 +158,7 @@ Styleguide 9.2
     opacity: .9;
     text-decoration: none;
   }
+}
+a.c-button--delete {
+  @extend .c-button--delete;
 }

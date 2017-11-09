@@ -238,5 +238,14 @@ block secondaryContents
 block conversionArea
     +b.c-conversionArea
         +e.container
-            span 公開
-            span 更新
+            +e.leftBlock
+                +e.leftBlockItem
+                    a(href="").c-beseLink
+                        i.fa.fa-backward
+                        span 商品マスター
+            +e.rightBlock
+                +e.rightBlockItem
+                    include /assets/tmpl/components/toggleSwitch.pug
+                    +c-toggleSwitch
+                +e.rightBlockItem
+                    button.c-button--conversion.c-button--regular 更新
