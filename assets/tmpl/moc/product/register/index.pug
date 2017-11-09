@@ -9,9 +9,9 @@ block primaryContents
     +b.c-block
         +e.heading
             +e.titles
-                +e.H2.title 基本設定
-                +e.toolTip
-                    i.fa.fa-question-circle
+                .c-toolTip
+                    span.c-toolTip__title 基本設定
+                    i.fa.fa-question-circle.c-toolTip__icon
             +e.toggle
                 i.fa.fa-angle-up
         +e.contents
@@ -23,14 +23,14 @@ block primaryContents
                 +e.form
                     .row
                         .col-12
-                            | 12
+                            p 12
             +b.c-horizontalForm
                 +e.label
                     .c-toolTip
                         span.c-toolTip__title 商品ID
                         i.fa.fa-question-circle.c-toolTip__icon
-                        .c-requiredLabel
-                            span 必須
+                    .c-requiredLabel
+                        span 必須
                 +e.form
                     .row
                         .col-12
@@ -42,8 +42,8 @@ block primaryContents
                     .c-toolTip
                         span.c-toolTip__title 商品種別
                         i.fa.fa-question-circle.c-toolTip__icon
-                        .c-requiredLabel
-                            span 必須
+                    .c-requiredLabel
+                        span 必須
                 +e.form
                     .row
                         .col-12
@@ -63,8 +63,8 @@ block primaryContents
                                 .c-form__fileUpload
                                     i.fa.fa-cloud-upload
                                     p 画像をドラッグ＆ドロップ
-                                    br
-                                    | または
+                                        br
+                                        | または
                                     input(type="file")
                                     button.c-button--regular.c-button--normal ファイルを選択
             +b.c-horizontalForm
@@ -78,26 +78,32 @@ block primaryContents
                             form.c-form
                                 .c-form__text
                                     textarea(rows="9" placeholder="テキスト")
+                            a.c-subAction(href='#')
+                                i.fa.fa-plus-square-o
+                                span.c-subAction_text 一覧コメントを追加
             +b.c-horizontalForm
                 +e.label
                     .c-toolTip
                         span.c-toolTip__title 販売価格
                         i.fa.fa-question-circle.c-toolTip__icon
-                        .c-requiredLabel
-                            span 必須
+                    .c-requiredLabel
+                        span 必須
                 +e.form
                     .row
                         .col-12
                             form.c-form
                                 .c-form__text
                                     input(type="text" placeholder="テキスト")
+                            a.c-subAction(href='#')
+                                i.fa.fa-plus-square-o
+                                span.c-subAction_text 通常価格を追加
             +b.c-horizontalForm
                 +e.label
                     .c-toolTip
                         span.c-toolTip__title 在庫数
                         i.fa.fa-question-circle.c-toolTip__icon
-                        .c-requiredLabel
-                            span 必須
+                    .c-requiredLabel
+                        span 必須
                 +e.form
                     .row
                         .col-3
@@ -119,13 +125,12 @@ block primaryContents
                                 .c-form__text
                                     input(type="text" placeholder="テキスト")
 
-
     +b.c-block
         +e.heading
             +e.titles
-                +e.H2.title 規格設定
-                +e.toolTip
-                    i.fa.fa-question-circle
+                .c-toolTip
+                    span.c-toolTip__title 規格設定
+                    i.fa.fa-question-circle.c-toolTip__icon
             +e.toggle
                 i.fa.fa-angle-up
         +e.contents
@@ -138,13 +143,34 @@ block primaryContents
             +e.action
                a.c-button--regular.c-button--normal(href='#') この商品の規格管理
 
+    +b.c-block
+        +e.heading
+            +e.titles
+                .c-toolTip
+                    span.c-toolTip__title フリーエリア
+                    i.fa.fa-question-circle.c-toolTip__icon
+            +e.toggle
+                i.fa.fa-angle-up
+        +e.contents
+            +b.c-horizontalForm
+                +e.label
+                    .c-toolTip
+                        span.c-toolTip__title フリーエリア
+                        i.fa.fa-question-circle.c-toolTip__icon
+                +e.form
+                    .row
+                        .col-12
+                            form.c-form
+                                .c-form__text
+                                    textarea(rows="9" placeholder="テキスト")
+
 block secondaryContents
     +b.c-block
         +e.heading
             +e.titles
-                +e.H2.title カテゴリ
-                +e.toolTip
-                    i.fa.fa-question-circle
+                .c-toolTip
+                    span.c-toolTip__title カテゴリ
+                    i.fa.fa-question-circle.c-toolTip__icon
             +e.toggle
                 i.fa.fa-angle-up
         +e.contents
@@ -161,28 +187,56 @@ block secondaryContents
     +b.c-block
         +e.heading
             +e.titles
-                +e.H2.title タグ
-                +e.toolTip
-                    i.fa.fa-question-circle
+                .c-toolTip
+                    span.c-toolTip__title タグ
+                    i.fa.fa-question-circle.c-toolTip__icon
             +e.toggle
                 i.fa.fa-angle-up
         +e.contents
-            .c-tags
-                span.c-tag.c-tag--black オススメ
-                span.c-tag.c-tag--blue 限定品
-                span.c-tag.c-tag--black 新入荷
-                span.c-tag.c-tag--blue 値下げしました
-                span.c-tag.c-tag--black オススメ
-                span.c-tag.c-tag--blue 限定品
-                span.c-tag.c-tag--black 新入荷
-                span.c-tag.c-tag--black 値下げしました
-                span.c-tag.c-tag--black 送料無料
+            include /assets/tmpl/components/tag.pug
+            +c-tags
             a.c-subAction(href='#')
                 i.fa.fa-plus-square-o
                 span.c-subAction_text すべてのタグを表示
             +e.action
                 a.c-button--full.c-button--normal(href='#') タグの追加・編集
+    +b.c-block
+        +e.heading
+            +e.titles
+                .c-toolTip
+                    span.c-toolTip__title 登録日・更新日
+                    i.fa.fa-question-circle.c-toolTip__icon
+            +e.toggle
+                i.fa.fa-angle-up
+        +e.contents
+            +b.DL.c-definitionList
+                +e.DT.term
+                    i.fa.fa-flag
+                    span 登録日
+                +e.DD.description 2017/11/09
+            +b.DL.c-definitionList
+                +e.DT.term
+                    i.fa.fa-refresh
+                    span 最終更新日
+                +e.DD.description 2017/11/12
+            +b.DL.c-definitionList
+                +e.DT.term
+                    i.fa.fa-user
+                    span 最終更新者
+                +e.DD.description user_name
 
+    +b.c-block
+        +e.heading
+            +e.titles
+                .c-toolTip
+                    span.c-toolTip__title ショップ用メモ欄
+                    i.fa.fa-question-circle.c-toolTip__icon
+            +e.toggle
+                i.fa.fa-angle-up
+        +e.contents
+            form.c-form
+                .c-form__text
+                    textarea(rows="9" placeholder="テキスト")
 block conversionArea
     +b.c-conversionArea
         +e.container

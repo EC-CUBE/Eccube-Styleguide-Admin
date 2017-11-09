@@ -141,13 +141,16 @@ Styleguide 12.2
 選択中のタブ`.c-tab__item`に`.is-active`クラスを付与することでアクティブ状態のスタイルを適用することが出来ます。
 
 Markup:
-include /assets/tmpl/components/pagination.pug
-+c-pagenation
+.c-toolTip
+  span.c-toolTip__title 商品ID
+  i.fa.fa-question-circle.c-toolTip__icon
+  .c-requiredLabel
+      span 必須
 
 Styleguide 12.3
 */
 .c-toolTip {
-  margin-bottom: 10px;
+  display: inline-block;
   &__title {
   }
   &__icon {
@@ -281,8 +284,8 @@ Styleguide 12.5
 選択中のタブ`.c-tab__item`に`.is-active`クラスを付与することでアクティブ状態のスタイルを適用することが出来ます。
 
 Markup:
-include /assets/tmpl/components/pagination.pug
-+c-pagenation
+include /assets/tmpl/components/category.pug
++c-tags
 
 Styleguide 12.6
 */
@@ -331,8 +334,9 @@ Styleguide 12.6
 選択中のタブ`.c-tab__item`に`.is-active`クラスを付与することでアクティブ状態のスタイルを適用することが出来ます。
 
 Markup:
-include /assets/tmpl/components/pagination.pug
-+c-pagenation
+a.c-subAction(href='#')
+  i.fa.fa-plus-square-o
+  span.c-subAction_text すべてのタグを表示
 
 Styleguide 12.7
 */
@@ -344,5 +348,48 @@ Styleguide 12.7
   &_text {
     margin-left: 5px;
     font-weight: bold;
+  }
+}
+
+/*
+定義リスト
+
+タブサイズは `regular` `small` の2種類定義されています。
+選択中のタブ`.c-tab__item`に`.is-active`クラスを付与することでアクティブ状態のスタイルを適用することが出来ます。
+
+Markup:
++b.DL.c-definitionList
+  +e.DT.term
+    i.fa.fa-flag
+    span 登録日
+  +e.DD.description 2017/11/09
++b.DL.c-definitionList
+  +e.DT.term
+    i.fa.fa-refresh
+    span 最終更新日
+  +e.DD.description 2017/11/12
++b.DL.c-definitionList
+  +e.DT.term
+    i.fa.fa-user
+    span 最終更新者
+  +e.DD.description user_name
+
+Styleguide 12.8
+*/
+.c-definitionList {
+  &__term {
+    display: inline-block;
+    margin-bottom: 10px;
+    font-weight: normal;
+    &::after {
+      display: inline-block;
+      content: ":";
+    }
+    i {
+      margin-right: .5em;
+    }
+  }
+  &__description {
+    display: inline-block;
   }
 }

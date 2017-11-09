@@ -27,20 +27,6 @@ Styleguide 8.0
   &__titles {
     display: table-cell;
   }
-  &__title {
-    display: inline-block;
-    margin-right: 5px;
-    margin-bottom: 0;
-    font-size: 14px;
-    vertical-align: middle;
-  }
-  &__toolTip {
-    display: inline-block;
-    vertical-align: middle;
-    i {
-      font-size: 20px;
-    }
-  }
   &__toggle {
     display: table-cell;
     width: 20px;
