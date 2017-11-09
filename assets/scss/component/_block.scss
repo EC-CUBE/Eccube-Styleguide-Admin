@@ -42,9 +42,31 @@ Styleguide 8.0
   &__contents--noPadding {
     padding: 15px 0;
   }
+  &__contents--noPaddingAll {
+    padding: 0;
+  }
   &__action {
     width: 100%;
     text-align: center;
+  }
+}
+
+/*
+ブロック外コンテンツ
+
+コンテンツエリア上部に配置されます。ブロックに内包されないコンテンツグループです。
+
+Markup:
++b.c-outsideBlock
+  +e.contents
+
+Styleguide 8.1
+*/
+
+.c-outsideBlock {
+  width: 100%;
+  &__contents {
+    padding: 20px 15px 0;
   }
 }
 
@@ -57,7 +79,7 @@ Styleguide 8.0
 Markup:
 .c-secondaryCol
 
-Styleguide 8.1
+Styleguide 8.2
 */
 .c-pageTitle {
   display: table;

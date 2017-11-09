@@ -41,7 +41,6 @@ Styleguide 11.1
   display: inline-block;
   border: 1px solid $boulder;
   border-radius: 4px;
-  box-sizing: border-box;
 
   .c-tab__item {
     display: inline-block;
@@ -50,6 +49,8 @@ Styleguide 11.1
     padding: $item-padding;
     text-align: center;
     border-collapse: collapse;
+    background: #fff;
+
     span {
       font-size: 14px;
       font-weight: bold;
@@ -61,8 +62,12 @@ Styleguide 11.1
       margin-right: 0.5em;
     }
   }
+  .c-tab__item:first-of-type {
+    border-radius: 4px 0 0 4px;
+  }
   .c-tab__item:last-of-type {
     border-right: none;
+    border-radius: 0 4px 4px 0;
   }
   .c-tab__item.is_active {
     color: #fff;

@@ -30,9 +30,11 @@ Styleguide 4.0
   }
   &__primaryCol {
     display: table-cell;
+    vertical-align: top;
   }
   &__secondaryCol {
     display: table-cell;
     width: 350px;
+    vertical-align: top;
   }
 }

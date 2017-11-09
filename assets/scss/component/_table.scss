@@ -221,18 +221,18 @@ Styleguide 12.4
 
 
 /*
-カテゴリ
+カテゴリ(商品登録)
 
 タブサイズは `regular` `small` の2種類定義されています。
 選択中のタブ`.c-tab__item`に`.is-active`クラスを付与することでアクティブ状態のスタイルを適用することが出来ます。
 
 Markup:
 include /assets/tmpl/components/category.pug
-+c-category
++c-categoryRegister
 
 Styleguide 12.5
 */
-.c-category {
+.c-category--register {
   margin-bottom: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -284,7 +284,7 @@ Styleguide 12.5
 選択中のタブ`.c-tab__item`に`.is-active`クラスを付与することでアクティブ状態のスタイルを適用することが出来ます。
 
 Markup:
-include /assets/tmpl/components/category.pug
+include /assets/tmpl/components/tag.pug
 +c-tags
 
 Styleguide 12.6
@@ -391,5 +391,198 @@ Styleguide 12.8
   }
   &__description {
     display: inline-block;
+  }
+}
+
+
+/*
+パンくずリスト
+
+タブサイズは `regular` `small` の2種類定義されています。
+選択中のタブ`.c-tab__item`に`.is-active`クラスを付与することでアクティブ状態のスタイルを適用することが出来ます。
+
+Markup:
+.c-breadcrumbs
+  a(href="") すべてのカテゴリ
+  a カテゴリA
+
+Styleguide 12.9
+*/
+.c-breadcrumbs {
+  a:not(:last-of-type) {
+    font-size: 14px;
+    font-weight: bold;
+    color: $blue;
+
+    &:hover {
+      text-decoration: none;
+      opacity: .5;
+    }
+    &:after {
+      content: ">";
+      display: inline-block;
+      margin: 0 .5em;
+      color: $mineShaft;
+      font-weight: normal;
+    }
+  }
+  a:last-of-type {
+    font-size: 14px;
+    font-weight: bold;
+    color: $mineShaft;
+
+  }
+}
+
+/*
+カテゴリ管理テーブル
+
+タブサイズは `regular` `small` の2種類定義されています。
+選択中のタブ`.c-tab__item`に`.is-active`クラスを付与することでアクティブ状態のスタイルを適用することが出来ます。
+
+Markup:
+include /assets/tmpl/components/table.pug
++c-categoryTable
+
+Styleguide 12.10
+*/
+.c-categoryTable {
+  width: 100%;
+  display: block;
+  &__item {
+    display: table;
+    padding: 0 15px;
+    width: 100%;
+    height: 70px;
+    box-sizing: border-box;
+  }
+  &__item:not(:first-of-type) {
+    border-top: 1px solid #ccc;
+  }
+  &__itemForm {
+    display: table-cell;
+    vertical-align: middle;
+    min-width: 500px;
+    color: #ccc;
+    cursor: pointer;
+    .c-form input {
+      margin-bottom: 0;
+    }
+  }
+  &__itemNob {
+    display: table-cell;
+    vertical-align: middle;
+    width: 40px;
+    color: #ccc;
+    cursor: pointer;
+  }
+  &__itemCategory {
+    display: table-cell;
+    vertical-align: middle;
+    a {
+      text-decoration: none;
+      color: $blue;
+    }
+    :hover {
+      opacity: .5;
+    }
+  }
+  &__itemAction {
+    text-align: right;
+    display: table-cell;
+    vertical-align: middle;
+    min-width: 200px;
+    color: black;
+    font-size: 20px;
+  }
+  &__itemActionBtn {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    color: $navy70;
+    &:hover {
+      background: $black05;
+    }
+  }
+  &__itemActionBtn:not(:last-of-type) {
+    margin-right: 10px;
+  }
+  &__itemAction--stopped {
+    color: #ccc;
+  }
+}
+
+/*
+カテゴリ(カテゴリ管理)
+
+タブサイズは `regular` `small` の2種類定義されています。
+選択中のタブ`.c-tab__item`に`.is-active`クラスを付与することでアクティブ状態のスタイルを適用することが出来ます。
+
+Markup:
+include /assets/tmpl/components/category.pug
++c-categoryRegister
+
+Styleguide 12.11
+*/
+.c-category {
+  margin-bottom: 10px;
+  border-radius: 4px;
+  //1層目
+  & > ul > li {
+    &::before {
+      content: "\f196";
+      display: inline-block;
+      margin-right: .5em;
+      font-family: FontAwesome;
+      font-size: 16px;
+
+    }
+  }
+
+  & > ul > li.is-active {
+    &::before {
+      content: "\f147";
+      display: inline-block;
+      margin-right: .5em;
+      font-family: FontAwesome;
+      font-size: 16px;
+    }
+  }
+  //2層目以降
+  ul >li > ul {
+    li > label {
+      margin-left: 10px;
+    }
+    li:not(:last-of-type) > label::before {
+      margin-left: 2px;
+      margin-right: .5em;
+      content: "├";
+      display: inline-block;
+      width: 1em;
+      height: 1em;
+      color: $dllNavy20;
+    }
+
+    li:last-of-type > label::before  {
+      margin-right: .6em;
+      content: "└";
+      display: inline-block;
+      width: 1em;
+      height: 1em;
+      color: $dllNavy20;
+    }
+  }
+  //3層目
+  ul >li ul >li ul  {
+    li > label {
+      margin-left: 20px;
+    }
+  }
+  //4層目
+  ul >li ul >li ul > li ul  {
+    li > label {
+      margin-left: 30px;
+    }
   }
 }

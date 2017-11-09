@@ -4,60 +4,37 @@ block pageTitle
         +e.titles
             +e.H2.title カテゴリ管理
             +e.SPAN.subTitle 管理商品
+block outsideBlock
+    +b.c-outsideBlock
+        +e.contents
+            .row
+                .col-6
+                    .c-breadcrumbs
+                        a(href="") すべてのカテゴリ
+                        a カテゴリA
+                .col-6.text-right
+                    .c-tab--regular
+                        a(href="").c-tab__item
+                            i.fa.fa-cloud-download
+                            span CSVダウンロード
+                        a(href="").c-tab__item
+                            i.fa.fa-cog
+                            span CSV出力設定
 
 block primaryContents
     .c-block
-        .c-block__contents
-            form
-                .c-form
-                    .c-form_create
-                        .row
-                            .col-6
-                                .c-form__text
-                                    input.c-form_createForm(type="text")
-                            .col-6
-                                button.c-button--regular.c-button--normal 新規作成
-                    .c-categoryTitle
-                        i.fa.fa-bars(aria-hidden="true")
-                        a.c-categoryTitle_title(href="#") カテゴリA
-                        .c-category_operation
-                            a(herf="#")
-                                i.fa.fa-arrow-up(aria-hidden="true")
-                            a(herf="#")
-                                i.fa.fa-arrow-down(aria-hidden="true")
-                            a(herf="#")
-                                i.fa.fa-pencil(aria-hidden="true")
-                            a(herf="#")
-                                i.fa.fa-times(aria-hidden="true")
-                    .c-categoryAdd
-                        .row
-                            .col-6
-                                .c-form__text
-                                    input.c-form_createForm(type="text" placeholder="カテゴリ名を入力")
-                            .col-6
-                                button.c-button--small.c-button--conversion 決定
-                                button.c-button--small.c-button--sub キャンセル
-                        .c-category_operation
-                            a(herf="#")
-                                i.fa.fa-arrow-up(aria-hidden="true")
-                            a(herf="#")
-                                i.fa.fa-arrow-down(aria-hidden="true")
-                            a(herf="#")
-                                i.fa.fa-pencil(aria-hidden="true")
-                            a(herf="#")
-                                i.fa.fa-times(aria-hidden="true")
+        .c-block__contents--noPaddingAll
+            include /assets/tmpl/components/table.pug
+            +c-categoryTable
+    p 項目の順番はドラッグ＆ドロップでも変更可能です。
 
 block secondaryContents
     +b.c-block
         +e.heading
-            +e.titles
-                +e.H2.title すべてのカテゴリ
+            .c-toolTip
+                span.c-toolTip__title すべてのカテゴリ
+                i.fa.fa-question-circle.c-toolTip__icon
         +e.contents
-            +b.FORM.c-search
-                +e.form
-                    input(type='text' placeholder='カテゴリ検索')
-                +e.A.btn
-                    i.fa.fa-search
             include /assets/tmpl/components/category.pug
             +c-category
 

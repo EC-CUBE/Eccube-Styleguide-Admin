@@ -48,6 +48,26 @@ form.c-form
   .c-form__text
     input(type="text")
     textarea(rows="9" placeholder="テキスト")
+form.c-form
+  .c-form__text--regular
+    input(type="text")
+  .c-form__text--regular
+    input(type="text")
+form.c-form
+  .c-form__text--small
+    input(type="text")
+  span.c-form__hyphen -
+  .c-form__text--small
+    input(type="text")
+form.c-form
+  .c-form__text--extraSmall
+    input(type="text")
+  span.c-form__hyphen -
+  .c-form__text--extraSmall
+    input(type="text")
+  span.c-form__hyphen -
+  .c-form__text--extraSmall
+    input(type="text")
 
 Styleguide 10.1
 */
@@ -61,8 +81,53 @@ Styleguide 10.1
       height: auto;
     }
   }
-}
 
+  &__text--regular {
+    display: inline-block;
+    margin-right: 10px;
+    input {
+      @include form_text;
+      min-width: 250px;
+      max-width: 250px;
+    }
+    textarea {
+      @include form_text;
+      height: auto;
+      min-width: 250px;
+      max-width: 250px;
+    }
+  }
+  &__text--small {
+    display: inline-block;
+    margin-right: 10px;
+    input {
+      @include form_text;
+      max-width: 120px;
+    }
+    textarea {
+      @include form_text;
+      height: auto;
+      max-width: 120px;
+    }
+  }
+  &__text--extraSmall {
+    display: inline-block;
+    margin-right: 10px;
+    input {
+      @include form_text;
+      max-width: 80px;
+    }
+    textarea {
+      @include form_text;
+      height: auto;
+      max-width: 80px;
+    }
+  }
+  &__hyphen {
+    display: inline-block;
+    margin-right: 5px;
+  }
+}
 /*
 セレクト
 

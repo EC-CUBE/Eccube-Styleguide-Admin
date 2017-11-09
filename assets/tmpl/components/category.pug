@@ -1,6 +1,42 @@
 mixin c-category
     .c-category
         ul
+            li.is-active
+                label.c-categoryLayer1 カテゴリA
+                ul
+                    li
+                        label カテゴリA-a
+                    li
+                        label カテゴリA-b
+                    li
+                        label カテゴリA-c
+                        ul
+                            li
+                                label カテゴリA-c-1
+                            li
+                                label カテゴリA-c-2
+                                ul
+                                    li
+                                        label カテゴリA-c-2-1
+                                    li
+                                        label カテゴリA-c-2-2
+        ul.is-active
+            li
+                label カテゴリB
+                ul
+                    li
+                        label カテゴリB-a
+                    li
+                        label カテゴリB-b
+                    li
+                        label カテゴリB-c
+        ul
+            li
+                label カテゴリC
+
+mixin c-categoryRegister
+    .c-category--register
+        ul
             li
                 input(type='checkbox')
                 label.c-categoryLayer1 カテゴリA
