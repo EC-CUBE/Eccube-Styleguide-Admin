@@ -74,3 +74,5 @@ gulp.task('styleguide:server', ['styleguide:dev'],()=>{
 });
 
 gulp.task('styleguide', ['styleguide:build']);
+
+global.build.push('styleguide')
