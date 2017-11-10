@@ -13,7 +13,7 @@ const target = src+'assets/scss/';
 
 const styelguideConfig = {
   title: 'My Styleguide',
-  server: true,
+  server: false,
   rootPath: 'public',
   appRoot: '/styleguide',
   overviewPath: 'styleguide.md',
