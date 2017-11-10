@@ -76,9 +76,8 @@ block primaryContents
                             form.c-form
                                 .c-form__text
                                     textarea(rows="9" placeholder="テキスト")
-                            a.c-subAction(href='#')
-                                i.fa.fa-plus-square-o
-                                span.c-subAction_text 一覧コメントを追加
+                            include /assets/tmpl/components/subAction.pug
+                            +c-subAction("一覧コメントを追加")
             +b.c-horizontalForm
                 +e.label
                     .c-toolTip
@@ -92,9 +91,8 @@ block primaryContents
                             form.c-form
                                 .c-form__text
                                     input(type="text" placeholder="テキスト")
-                            a.c-subAction(href='#')
-                                i.fa.fa-plus-square-o
-                                span.c-subAction_text 通常価格を追加
+                            include /assets/tmpl/components/subAction.pug
+                            +c-subAction("通常価格を追加")
             +b.c-horizontalForm
                 +e.label
                     .c-toolTip
@@ -193,9 +191,10 @@ block secondaryContents
         +e.contents
             include /assets/tmpl/components/tag.pug
             +c-tags
-            a.c-subAction(href='#')
-                i.fa.fa-plus-square-o
-                span.c-subAction_text すべてのタグを表示
+
+            include /assets/tmpl/components/subAction.pug
+            +c-subAction("すべてのタグを表示")
+
             +e.action
                 a.c-button--full.c-button--normal(href='#') タグの追加・編集
     +b.c-block

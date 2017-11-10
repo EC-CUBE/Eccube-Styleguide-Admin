@@ -1,0 +1,45 @@
+extends /assets/tmpl/moc/layout/_layout-2col.pug
+block pageTitle
+    include /assets/tmpl/components/pageTitle.pug
+    +c-pageTitle("会員マスター","会員管理")
+
+block outsideBlock
+    +b.c-outsideBlock
+        +e.contents
+            .row
+                .col-6
+                    form.c-form
+                        label 会員ID・メールアドレス・お名前
+                        .c-form__text
+                            input(type="text" placeholder="テキスト")
+                .col-6
+            .row
+                .col-12
+                    include /assets/tmpl/components/subAction.pug
+                    +c-subAction("詳細検索","is-active")
+        .c-subContents
+            p hoge
+        +e.contents
+            .row
+                .col-12.text-right
+                    form.c-form--inline
+                        .c-form__select--small
+                            select
+                                option 10件
+                    .c-tab--regular
+                        a(href="").c-tab__item
+                            i.fa.fa-cloud-download
+                            span CSVダウンロード
+                        a(href="").c-tab__item
+                            i.fa.fa-cog
+                            span CSV出力設定
+
+
+block primaryContents
+    .c-block
+        .c-block__contents--noPadding
+            include /assets/tmpl/components/table.pug
+            +c-table--customer
+
+            include /assets/tmpl/components/pagination.pug
+            +c-pagenation
