@@ -135,22 +135,30 @@ Styleguide 12.2
 }
 
 /*
-ツールチップ TODO　コーディング途中
+ツールチップ
 
-タブサイズは `regular` `small` の2種類定義されています。
-選択中のタブ`.c-tab__item`に`.is-active`クラスを付与することでアクティブ状態のスタイルを適用することが出来ます。
+カーソルをホバーすると表示され、用語や操作方法を解説します。
+`.c-toolTip`ではBlockとアイコンのみのスタイルを定義し、ツールチップの実装はBootstrapにて行います。
+
+sg-wrapper:
+  <div style="padding: 10px;">
+  <script>
+    $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+  })
+  </script>
+<sg-wrapper-content/>
 
 Markup:
-.c-toolTip
+.c-toolTip(data-toggle="tooltip" data-placement="top" title="ここに用語や操作方法の説明を記述します。")
   span.c-toolTip__title 商品ID
   i.fa.fa-question-circle.c-toolTip__icon
-  .c-requiredLabel
-      span 必須
 
 Styleguide 12.3
 */
 .c-toolTip {
   display: inline-block;
+  cursor: pointer;
   &__title {
   }
   &__icon {
