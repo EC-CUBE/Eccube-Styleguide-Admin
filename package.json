@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "run-p dev:*",
     "dev:watch": "gulp",
-    "dev:styelguide": "gulp styleguide:server"
+    "dev:styelguide": "gulp styleguide:server",
+    "build": "gulp build && gulp styleguide:build"
   },
   "author": "",
   "license": "ISC",

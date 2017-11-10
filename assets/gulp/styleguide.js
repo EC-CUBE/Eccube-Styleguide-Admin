@@ -13,7 +13,7 @@ const target = src+'assets/scss/';
 
 const styelguideConfig = {
   title: 'My Styleguide',
-  server: true,
+  server: false,
   rootPath: 'public',
   appRoot: '/styleguide',
   overviewPath: 'styleguide.md',
@@ -42,7 +42,7 @@ gulp.task('styleguide:generate', function() {
 
 // サーバを生成せずビルドするだけ
 gulp.task('styleguide:generateOnly', function() {
-    return gulp.src(target)
+    return gulp.src(target+'**/*.scss')
         .pipe(styleguide.generate(styelguideConfig))
         .pipe(gulp.dest(outputPath));
 });
@@ -74,3 +74,5 @@ gulp.task('styleguide:server', ['styleguide:dev'],()=>{
 });
 
 gulp.task('styleguide', ['styleguide:build']);
+
+global.build.push('styleguide')
