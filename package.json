@@ -8,7 +8,7 @@
     "dev": "run-p dev:*",
     "dev:watch": "gulp",
     "dev:styelguide": "gulp styleguide:server",
-    "build": "gulp build"
+    "build": "gulp build && gulp styleguide:dev"
   },
   "author": "",
   "license": "ISC",
