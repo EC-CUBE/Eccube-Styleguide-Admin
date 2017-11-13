@@ -143,9 +143,7 @@ Styleguide 12.2
 sg-wrapper:
   <div style="padding: 10px;">
   <script>
-    $(function () {
-    $('[data-toggle="tooltip"]').tooltip()
-  })
+    toolTip();
   </script>
 <sg-wrapper-content/>
 
@@ -642,5 +640,8 @@ Styleguide 12.12
     position: absolute;
     top: -9px;
     left: 10px;
+  }
+  &__action {
+    text-align: center;
   }
 }

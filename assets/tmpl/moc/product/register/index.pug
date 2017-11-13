@@ -7,7 +7,7 @@ block primaryContents
     +b.c-block
         +e.heading
             +e.titles
-                .c-toolTip(data-toggle="tooltip" data-placement="top" title="Tooltip on top")
+                +b.c-toolTip(data-toggle="tooltip" data-placement="top" title="Tooltip")
                     span.c-toolTip__title 基本設定
                     i.fa.fa-question-circle.c-toolTip__icon
             +e.toggle
@@ -15,7 +15,7 @@ block primaryContents
         +e.contents
             +b.c-horizontalForm
                 +e.label
-                    .c-toolTip
+                    .c-toolTip(data-toggle="tooltip" data-placement="top" title="Tooltip")
                         span.c-toolTip__title 商品名
                         i.fa.fa-question-circle.c-toolTip__icon
                 +e.form
@@ -24,7 +24,7 @@ block primaryContents
                             p 12
             +b.c-horizontalForm
                 +e.label
-                    .c-toolTip
+                    .c-toolTip(data-toggle="tooltip" data-placement="top" title="Tooltip")
                         span.c-toolTip__title 商品ID
                         i.fa.fa-question-circle.c-toolTip__icon
                     .c-requiredLabel
@@ -37,7 +37,7 @@ block primaryContents
                                     input(type="text" placeholder="テキスト")
             +b.c-horizontalForm
                 +e.label
-                    .c-toolTip
+                    .c-toolTip(data-toggle="tooltip" data-placement="top" title="Tooltip")
                         span.c-toolTip__title 商品種別
                         i.fa.fa-question-circle.c-toolTip__icon
                     .c-requiredLabel
@@ -51,7 +51,7 @@ block primaryContents
                                         option 通常商品
             +b.c-horizontalForm
                 +e.label
-                    .c-toolTip
+                    .c-toolTip(data-toggle="tooltip" data-placement="top" title="Tooltip")
                         span.c-toolTip__title 商品画像
                         i.fa.fa-question-circle.c-toolTip__icon
                 +e.form
@@ -67,7 +67,7 @@ block primaryContents
                                     button.c-button--regular.c-button--normal ファイルを選択
             +b.c-horizontalForm
                 +e.label
-                    .c-toolTip
+                    .c-toolTip(data-toggle="tooltip" data-placement="top" title="Tooltip")
                         span.c-toolTip__title 商品説明
                         i.fa.fa-question-circle.c-toolTip__icon
                 +e.form
@@ -80,7 +80,7 @@ block primaryContents
                             +c-subAction("一覧コメントを追加")
             +b.c-horizontalForm
                 +e.label
-                    .c-toolTip
+                    .c-toolTip(data-toggle="tooltip" data-placement="top" title="Tooltip")
                         span.c-toolTip__title 販売価格
                         i.fa.fa-question-circle.c-toolTip__icon
                     .c-requiredLabel
@@ -95,7 +95,7 @@ block primaryContents
                             +c-subAction("通常価格を追加")
             +b.c-horizontalForm
                 +e.label
-                    .c-toolTip
+                    .c-toolTip(data-toggle="tooltip" data-placement="top" title="Tooltip")
                         span.c-toolTip__title 在庫数
                         i.fa.fa-question-circle.c-toolTip__icon
                     .c-requiredLabel
@@ -111,7 +111,7 @@ block primaryContents
                                     span 無制限
             +b.c-horizontalForm
                 +e.label
-                    .c-toolTip
+                    .c-toolTip(data-toggle="tooltip" data-placement="top" title="Tooltip")
                         span.c-toolTip__title 検索ワード
                         i.fa.fa-question-circle.c-toolTip__icon
                 +e.form
@@ -124,13 +124,13 @@ block primaryContents
     +b.c-block
         +e.heading
             +e.titles
-                .c-toolTip
+                .c-toolTip(data-toggle="tooltip" data-placement="top" title="Tooltip")
                     span.c-toolTip__title 規格設定
                     i.fa.fa-question-circle.c-toolTip__icon
             +e.toggle
                 i.fa.fa-angle-up
         +e.contents
-            .c-toolTip
+            .c-toolTip(data-toggle="tooltip" data-placement="top" title="Tooltip")
                 span.c-toolTip__title この商品の規格
                 i.fa.fa-question-circle.c-toolTip__icon
             include /assets/tmpl/components/table.pug
@@ -142,7 +142,7 @@ block primaryContents
     +b.c-block
         +e.heading
             +e.titles
-                .c-toolTip
+                .c-toolTip(data-toggle="tooltip" data-placement="top" title="Tooltip")
                     span.c-toolTip__title フリーエリア
                     i.fa.fa-question-circle.c-toolTip__icon
             +e.toggle
@@ -150,7 +150,7 @@ block primaryContents
         +e.contents
             +b.c-horizontalForm
                 +e.label
-                    .c-toolTip
+                    .c-toolTip(data-toggle="tooltip" data-placement="top" title="Tooltip")
                         span.c-toolTip__title フリーエリア
                         i.fa.fa-question-circle.c-toolTip__icon
                 +e.form
@@ -164,7 +164,7 @@ block secondaryContents
     +b.c-block
         +e.heading
             +e.titles
-                .c-toolTip
+                .c-toolTip(data-toggle="tooltip" data-placement="top" title="Tooltip")
                     span.c-toolTip__title カテゴリ
                     i.fa.fa-question-circle.c-toolTip__icon
             +e.toggle
@@ -183,7 +183,7 @@ block secondaryContents
     +b.c-block
         +e.heading
             +e.titles
-                .c-toolTip
+                .c-toolTip(data-toggle="tooltip" data-placement="top" title="Tooltip")
                     span.c-toolTip__title タグ
                     i.fa.fa-question-circle.c-toolTip__icon
             +e.toggle
@@ -200,7 +200,7 @@ block secondaryContents
     +b.c-block
         +e.heading
             +e.titles
-                .c-toolTip
+                .c-toolTip(data-toggle="tooltip" data-placement="top" title="Tooltip")
                     span.c-toolTip__title 登録日・更新日
                     i.fa.fa-question-circle.c-toolTip__icon
             +e.toggle
@@ -225,7 +225,7 @@ block secondaryContents
     +b.c-block
         +e.heading
             +e.titles
-                .c-toolTip
+                .c-toolTip(data-toggle="tooltip" data-placement="top" title="Tooltip")
                     span.c-toolTip__title ショップ用メモ欄
                     i.fa.fa-question-circle.c-toolTip__icon
             +e.toggle

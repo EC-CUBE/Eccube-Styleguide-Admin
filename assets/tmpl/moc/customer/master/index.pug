@@ -17,9 +17,45 @@ block outsideBlock
                 .col-12
                     include /assets/tmpl/components/subAction.pug
                     +c-subAction("詳細検索","is-active")
-        .c-subContents
-            p hoge
+        +b.c-subContents
+            .row
+                .col-6
+                    label 会員種別
+                    form.c-form
+                        .c-form__radio
+                            input(type="radio" name="filter" value="open" checked="checked")
+                            span 仮会員
+                        .c-form__radio
+                            input(type="radio" name="filter" value="close")
+                            span 本会員
+                    label 性別
+                    form.c-form
+                        .c-form__radio
+                            input(type="radio" name="filter" value="open" checked="checked")
+                            span 男性
+                        .c-form__radio
+                            input(type="radio" name="filter" value="close")
+                            span 女性
+                    label 誕生日
+                    form.c-form
+                        .c-form__select--register
+                            select
+                                option 選んでください
+                                option ...
+                    label 誕生日
+                    form.c-form
+                        .c-form__date--register
+                            input(type="date" placeholder="2000/01/01")
+                        span.c-form__sign 〜
+                        .c-form__date--register
+                            input(type="date" placeholder="2000/01/01")
+
+            +e.action
+                button.c-button--regular.c-button--normal 検索条件クリア
         +e.contents
+            .row
+                .col-12
+                    button.c-button--regular.c-button--conversion 検索
             .row
                 .col-12.text-right
                     form.c-form--inline
