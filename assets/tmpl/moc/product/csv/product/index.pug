@@ -10,9 +10,9 @@ block primaryContents
     +b.c-block
         +e.heading
             +e.titles
-                +e.H2.title CSVファイルをアップロード
-                +e.toolTip
-                    i.fa.fa-question-circle
+                +b.c-toolTip(data-toggle="tooltip" data-placement="top" title="Tooltip")
+                    span.c-toolTip__title CSVファイルをアップロード
+                    i.fa.fa-question-circle.c-toolTip__icon
         +e.contents
             form.c-form
                 .c-form__fileUpload
@@ -27,61 +27,101 @@ block primaryContents
     +b.c-block
         +e.heading
             +e.titles
-                +e.H2.title 商品登録CSVファイルフォーマット
-                +e.toolTip
-                    i.fa.fa-question-circle
+                +b.c-toolTip(data-toggle="tooltip" data-placement="top" title="Tooltip")
+                    span.c-toolTip__title 商品登録CSVファイルフォーマット
+                    i.fa.fa-question-circle.c-toolTip__icon
+                    button.c-button--small.c-button--normal 雛形ファイルダウンロード
         +e.contents
             table
-                thead
+                tr
                     th 商品ID
-                    th
-                        p 新規登録時は未設定
-                            br
-                            | 既存商品の更新は商品IDを設定
+                    td 新規登録時は未設定
+                        br
+                        | 既存商品の更新は商品IDを設定
                 tr
-                    td 公開ステータス(ID)
+                    th 公開ステータス(ID)
                         .c-requiredLabel
                             span 必須
+                    td
                 tr
-                    td 商品名
+                    th 商品名
                         .c-requiredLabel
                             span 必須
+                    td
                 tr
-                    td ショップ用メモ欄
+                    th ショップ用メモ欄
                         .c-requiredLabel
                             span 必須
+                    td
                 tr
-                    td 商品説明(一覧)
+                    th 商品説明(一覧)
+                    td
                 tr
-                    td 商品説明(詳細)
+                    th 商品説明(詳細)
+                    td
                 tr
-                    td 検索ワード
+                    th 検索ワード
+                    td
                 tr
-                    td フリーエリア
+                    th フリーエリア
+                    td
                 tr
-                    td 商品削除フラグ
+                    th 商品削除フラグ
                     td 設定されていない場合0を登録
                 tr
-                    td 商品画像
+                    th 商品画像
                     td 複数画像の場合、画像ファイル名をカンマ区切りで「"」で囲んで設定
                 tr
-                    td 商品カテゴリ(ID)
+                    th 商品カテゴリ(ID)
                     td 複数カテゴリの場合、商品カテゴリIDをカンマ区切りで「"」で囲んで設定
                 tr
-                    td タグ(ID)
+                    th タグ(ID)
                     td 複数タグの場合、タグIDをカンマ区切りで「"」で囲んで設定
                 tr
-                    td 商品種別(ID)
+                    th 商品種別(ID)
                         .c-requiredLabel
                             span 必須
+                    td
                 tr
-                    td 規格分類1(ID)
+                    th 規格分類1(ID)
+                    td
                 tr
-                    td 規格分類2(ID)
+                    th 規格分類2(ID)
+                    td
                 tr
-                    td 商品種別(ID)
+                    th 商品種別(ID)
+                    td
                 tr
-                    td 発送日目安(ID)
+                    th 発送日目安(ID)
+                    td
+                tr
+                    th 商品コード
+                    td
+                tr
+                    th 在庫数
+                    td
+                tr
+                    th 在庫数無制限フラグ
+                        .c-requiredLabel
+                            span 必須
+                    td 在庫数無制限フラグが0の場合、0以上の数値を設定
+                tr
+                    th 販売制限数
+                    td 0以上の数値を設定
+                tr
+                    th 通常価格
+                    td 0以上の数値を設定
+                tr
+                    th 販売価格
+                        .c-requiredLabel
+                            span 必須
+                    td 0以上の数値を設定
+                tr
+                    th 送料
+                    td 商品ごとの送料設定が有効の場合、0以上の数値を設定
+                tr
+                    th 商品規格削除フラグ
+                    td 設定されていない場合、0を登録
 
 
 
