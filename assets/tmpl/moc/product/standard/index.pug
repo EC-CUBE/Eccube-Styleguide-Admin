@@ -1,43 +1,12 @@
-extends /assets/tmpl/moc/layout/_layout-2col.pug
+extends /assets/tmpl/moc/layout/_layout-2col
 block pageTitle
-    include /assets/tmpl/components/pageTitle.pug
+    include /assets/tmpl/components/pageTitle
     +c-pageTitle("規格管理","商品管理")
 
 block primaryContents
-    +b.c-block
-        +e.heading
-            +e.titles
-                span 基本設定
-        +e.contents
-            +b.c-horizontalForm
-                +e.label
-                    .c-toolTip(data-toggle="tooltip" data-placement="top" title="Tooltip")
-                        span.c-toolTip__title 表示名
-                        i.fa.fa-question-circle.c-toolTip__icon
-                    .c-requiredLabel
-                        span 必須
-                +e.form
-                    .row
-                        .col-12
-                            form.c-form
-                                .c-form__text
-                                    input(type="text" placeholder="テキスト")
-            +b.c-horizontalForm
-                +e.label
-                    .c-toolTip(data-toggle="tooltip" data-placement="top" title="Tooltip")
-                        span.c-toolTip__title 管理名
-                        i.fa.fa-question-circle.c-toolTip__icon
-                    .c-requiredLabel
-                        span 必須
-                +e.form
-                    .row
-                        .col-12
-                            form.c-form
-                                .c-form__text
-                                    input(type="text" placeholder="テキスト")
 
     .c-block
-        .c-block__contents--noPaddingAll
-            include /assets/tmpl/components/table.pug
-            +c-sortTable("靴サイズ [表示名：サイズ]　（４）","規格B [表示名：サイズ]　（３）","規格C [表示名：サイズ] （12）")
+        +e.contents--noPaddingAll
+            include /assets/tmpl/components/table
+            +c-sortTable("靴サイズ［表示名：サイズ］（4）","規格B［表示名：サイズ］（3）","規格C［表示名：サイズ］（12）")
     p 項目の順番はドラッグ＆ドロップでも変更可能です。
