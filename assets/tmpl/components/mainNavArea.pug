@@ -3,15 +3,15 @@ mixin c-mainNavArea
         nav
             +e.UL.nav
                 +e.LI.navItem
-                    +e.navItemTitle
+                    +e.A.navItemTitle.collapsed(data-toggle="collapse" href="#home" aria-expanded="false" aria-controls="home")
                         i.fa.fa-home(aria-hidden="true")
                         span ホーム
 
                 +e.LI.navItem
-                    +e.navItemTitle
+                    +e.A.navItemTitle.collapsed(data-toggle="collapse" href="#productManagement" aria-expanded="false" aria-controls="productManagement")
                         i.fa.fa-cube(aria-hidden="true")
                         span 商品管理
-                    ul
+                    ul.collapse#productManagement
                         li: a(href="") 商品マスタ
                         li: a(href="") 商品登録
                         li: a(href="") 規格管理
@@ -21,35 +21,35 @@ mixin c-mainNavArea
                         li: a(href="") カテゴリCSV登録
 
                 +e.LI.navItem
-                    +e.navItemTitle
+                    +e.A.navItemTitle.collapsed(data-toggle="collapse" href="#orderManagement" aria-expanded="false" aria-controls="orderManagement")
                         i.fa.fa-inbox(aria-hidden="true")
                         span 受注管理
-                    ul
+                    ul.collapse#orderManagement
                         li: a(href="") 受注一覧
                         li: a(href="") 受注管理
 
                 +e.LI.navItem
-                    +e.navItemTitle
+                    +e.A.navItemTitle.collapsed(data-toggle="collapse" href="#shipManagement" aria-expanded="false" aria-controls="shipManagement")
                         i.fa.fa-truck(aria-hidden="true")
                         span 出荷管理
-                    ul
+                    ul.collapse#shipManagement
                         li: a(href="") 出荷マスター
                         li: a(href="") 出荷管理
                         li: a(href="") 出荷CSV登録
 
                 +e.LI.navItem
-                    +e.navItemTitle
+                    +e.A.navItemTitle.collapsed(data-toggle="collapse" href="#userManagement" aria-expanded="false" aria-controls="userManagement")
                         i.fa.fa-users(aria-hidden="true")
                         span 会員管理
-                    ul
+                    ul.collapse#userManagement
                         li: a(href="") 会員マスター
                         li: a(href="") 会員管理
 
                 +e.LI.navItem
-                    +e.navItemTitle
+                    +e.A.navItemTitle.collapsed(data-toggle="collapse" href="#contentsManagement" aria-expanded="false" aria-controls="contentsManagement")
                         i.fa.fa-file-text-o(aria-hidden="true")
                         span コンテンツ管理
-                    ul
+                    ul.collapse#contentsManagement
                         li: a(href="") 新着情報管理
                         li: a(href="") ファイル管理
                         li: a(href="") レイアウト管理
@@ -58,13 +58,13 @@ mixin c-mainNavArea
                         li: a(href="") キャッシュ管理
 
                 +e.LI.navItem
-                    +e.navItemTitle
+                    +e.A.navItemTitle.collapsed(data-toggle="collapse" href="#config" aria-expanded="false" aria-controls="config")
                         i.fa.fa-cog(aria-hidden="true")
                         span 設定
 
-                    +e.navItemSubTitle
-                            span 基本情報設定
-                    ul
+                    +e.A.navItemSubTitle.collapsed(data-toggle="collapse" href="#commonConfig" aria-expanded="false" aria-controls="commonConfig")
+                        span 基本情報設定
+                    ul.collapse#commonConfig
                         li: a(href="")  ショップマスター
                         li: a(href="")  特定商取引法
                         li: a(href="")  利用規約設定
@@ -74,9 +74,10 @@ mixin c-mainNavArea
                         li: a(href="") 利用規約設定
                         li: a(href="") メール設定
                         li
-                    +e.A.navItemSubTitle
+
+                    +e.A.navItemSubTitle.collapsed(data-toggle="collapse" href="#systemConfig" aria-expanded="false" aria-controls="systemConfig")
                         span システム情報設定
-                    ul
+                    ul.collapse#systemConfig
                         li: a(href="") システム情報
                         li: a(href="") メンバー管理
                         li: a(href="") 権限管理
@@ -85,6 +86,6 @@ mixin c-mainNavArea
                         li: a(href="") マスターデータ管理
 
                 +e.LI.navItem
-                    +e.A.navItemTitle
+                    +e.A.navItemTitle.collapsed(data-toggle="collapse" href="#ornersStore" aria-expanded="false" aria-controls="ornersStore")
                         i.fa.fa-info-circle(aria-hidden="true")
                         span オーナーズストア
