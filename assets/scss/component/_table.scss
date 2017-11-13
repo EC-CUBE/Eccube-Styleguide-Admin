@@ -385,17 +385,17 @@ Styleguide 12.7
 Markup:
 +b.DL.c-definitionList
   +e.DT.term
-    i.fa.fa-flag
+    i.fa.fa-flag(aria-hidden="true")
     span 登録日
   +e.DD.description 2017/11/09
 +b.DL.c-definitionList
   +e.DT.term
-    i.fa.fa-refresh
+    i.fa.fa-refresh(aria-hidden="true")
     span 最終更新日
   +e.DD.description 2017/11/12
 +b.DL.c-definitionList
   +e.DT.term
-    i.fa.fa-user
+    i.fa.fa-user(aria-hidden="true")
     span 最終更新者
   +e.DD.description user_name
 
@@ -405,10 +405,14 @@ Styleguide 12.8
   &__term {
     display: inline-block;
     margin-bottom: 10px;
+    min-width: 120px;
     font-weight: normal;
+    position: relative;
     &::after {
       display: inline-block;
       content: ":";
+      position: absolute;
+      right: 0;
     }
     i {
       margin-right: .5em;

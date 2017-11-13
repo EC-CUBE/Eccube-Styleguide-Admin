@@ -147,6 +147,22 @@ form.c-form
       option 入金済み
       option 入金待ち
       option ...
+form.c-form--inline
+  .c-form__select--register
+    select
+      option 選んでください
+      option 決済処理中
+      option 入金済み
+      option 入金待ち
+      option ...
+form.c-form--inline
+  .c-form__select--small
+    select
+      option 選んでください
+      option 決済処理中
+      option 入金済み
+      option 入金待ち
+      option ...
 
 Styleguide 10.2
 */
