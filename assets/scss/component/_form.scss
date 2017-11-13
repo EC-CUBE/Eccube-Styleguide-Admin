@@ -60,16 +60,16 @@ form.c-form
 form.c-form
   .c-form__text--small
     input(type="text")
-  span.c-form__hyphen -
+  span.c-form__sign -
   .c-form__text--small
     input(type="text")
 form.c-form
   .c-form__text--extraSmall
     input(type="text")
-  span.c-form__hyphen -
+  span.c-form__sign -
   .c-form__text--extraSmall
     input(type="text")
-  span.c-form__hyphen -
+  span.c-form__sign -
   .c-form__text--extraSmall
     input(type="text")
 
@@ -127,7 +127,7 @@ Styleguide 10.1
       max-width: 80px;
     }
   }
-  &__hyphen {
+  &__sign {
     display: inline-block;
     margin-right: 5px;
   }
@@ -168,7 +168,25 @@ Styleguide 10.2
       }
     }
   }
-
+  &__select--register {
+    display: inline-block;
+    select {
+      margin-bottom: 10px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      padding: .5rem;
+      min-width: 250px;
+      max-width: 250px;
+      height: 40px;
+      font-size: 14px;
+      color: $black85;
+      background: #fff;
+      &:focus {
+        outline: none;
+        border: 1px solid $lochmara;
+      }
+    }
+  }
   &__select--small {
     display: inline-block;
     select {
@@ -221,6 +239,12 @@ Markup:
 form.c-form
   .c-form__date
     input(type="date" placeholder="2000/01/01")
+form.c-form
+  .c-form__date
+    input(type="date" placeholder="2000/01/01")
+  span.c-form__sign 〜
+  .c-form__date
+    input(type="date" placeholder="2000/01/01")
 
 Styleguide 10.4
 */
@@ -230,9 +254,8 @@ Styleguide 10.4
     display: inline-block;
     width: 100%;
     height: 40px;
-    border: 1px solid #ccc;
     border-radius: 4px;
-
+    background: #fff;
     &::before {
       position: absolute;
       content: "\f073";
@@ -244,7 +267,7 @@ Styleguide 10.4
       font-size: 20px;
       color: $black85;
       text-align: center;
-      line-height: 37px;
+      line-height: 40px;
     }
     input {
       margin-bottom: 10px;
@@ -252,9 +275,70 @@ Styleguide 10.4
       padding: 0 10px;
       width: 100%;
       height: 40px;
-      border: 0;
       background: transparent;
       box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 14px;
+      color:$black85;
+      &:focus {
+        outline: none;
+        border: 1px solid $lochmara;
+      }
+      &::-webkit-inner-spin-button{
+        -webkit-appearance: none;
+      }
+      &::-webkit-clear-button{
+        -webkit-appearance: none;
+      }
+      &::-webkit-calendar-picker-indicator{
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        padding: 0;
+        width: 40px;
+        height: 40px;
+        background: transparent;
+        color: transparent;
+        cursor: pointer;
+      }
+
+      &:placeholder {
+        color: $black40;
+      }
+    }
+  }
+  &__date--register {
+    position: relative;
+    display: inline-block;
+    margin-right: 5px;
+    min-width: 220px;
+    max-width: 220px;
+    height: 40px;
+    border-radius: 4px;
+    background: #fff;
+    &::before {
+      position: absolute;
+      content: "\f073";
+      top: 0;
+      right: 0;
+      width: 40px;
+      height: 40px;
+      font-family: FontAwesome;
+      font-size: 20px;
+      color: $black85;
+      text-align: center;
+      line-height: 40px;
+    }
+    input {
+      margin-bottom: 10px;
+      position: relative;
+      padding: 0 10px;
+      width: 100%;
+      height: 40px;
+      background: transparent;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
       border-radius: 4px;
       font-size: 14px;
       color:$black85;
