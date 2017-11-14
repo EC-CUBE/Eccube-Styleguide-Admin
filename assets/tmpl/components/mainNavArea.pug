@@ -3,15 +3,15 @@ mixin c-mainNavArea
         nav
             +e.UL.nav
                 +e.LI.navItem
-                    +e.navItemTitle
+                    +e.A.navItemTitle.collapsed(data-toggle="collapse" href="#home" aria-expanded="false" aria-controls="home")
                         i.fa.fa-home(aria-hidden="true")
                         span ホーム
 
                 +e.LI.navItem
-                    +e.navItemTitle
+                    +e.A.navItemTitle.collapsed(data-toggle="collapse" href="#productManagement" aria-expanded="false" aria-controls="productManagement")
                         i.fa.fa-cube(aria-hidden="true")
                         span 商品管理
-                    ul
+                    ul.collapse#productManagement
                         li: a(href="/moc/product/master") 商品マスタ
                         li: a(href="/moc/product/register") 商品登録
                         li: a(href="/moc/product/standard") 規格管理
@@ -21,35 +21,37 @@ mixin c-mainNavArea
                         li: a(href="/moc/product/csv/category") カテゴリCSV登録
 
                 +e.LI.navItem
-                    +e.navItemTitle
+                    +e.A.navItemTitle.collapsed(data-toggle="collapse" href="#orderManagement" aria-expanded="false" aria-controls="orderManagement")
                         i.fa.fa-inbox(aria-hidden="true")
                         span 受注管理
-                    ul
+                    ul.collapse#orderManagement
                         li: a(href="/moc/order/list") 受注一覧
                         li: a(href="/moc/order/management") 受注管理
 
                 +e.LI.navItem
-                    +e.navItemTitle
+                    +e.A.navItemTitle.collapsed(data-toggle="collapse" href="#shipManagement" aria-expanded="false" aria-controls="shipManagement")
                         i.fa.fa-truck(aria-hidden="true")
                         span 出荷管理
-                    ul
+                    ul.collapse#shipManagement
                         li: a(href="/moc/shipment/master") 出荷マスター
                         li: a(href="/moc/shipment/management") 出荷管理
                         li: a(href="/moc/shipment/register") 出荷CSV登録
 
                 +e.LI.navItem
-                    +e.navItemTitle
+                    +e.A.navItemTitle.collapsed(data-toggle="collapse" href="#userManagement" aria-expanded="false" aria-controls="userManagement")
                         i.fa.fa-users(aria-hidden="true")
                         span 会員管理
-                    ul
+                        
+                    ul.collapse#userManagement
                         li: a(href="/moc/customer/master") 会員マスター
                         li: a(href="/moc/customer/management") 会員管理
 
                 +e.LI.navItem
-                    +e.navItemTitle
+                    +e.A.navItemTitle.collapsed(data-toggle="collapse" href="#contentsManagement" aria-expanded="false" aria-controls="contentsManagement")
                         i.fa.fa-file-text-o(aria-hidden="true")
                         span コンテンツ管理
-                    ul
+                        
+                    ul.collapse#contentsManagement
                         li: a(href="/moc/content/news") 新着情報管理
                         li: a(href="/moc/content/file") ファイル管理
                         li: a(href="/moc/content/layout") レイアウト管理
@@ -58,13 +60,13 @@ mixin c-mainNavArea
                         li: a(href="/moc/content/cache") キャッシュ管理
 
                 +e.LI.navItem
-                    +e.navItemTitle
+                    +e.A.navItemTitle.collapsed(data-toggle="collapse" href="#config" aria-expanded="false" aria-controls="config")
                         i.fa.fa-cog(aria-hidden="true")
                         span 設定
 
-                    +e.navItemSubTitle
+                    +e.A.navItemSubTitle.collapsed(data-toggle="collapse" href="#commonConfig" aria-expanded="false" aria-controls="commonConfig")
                             span 基本情報設定
-                    ul
+                    ul.collapse#commonConfig
                         li: a(href="/moc/setting/basis/shop")  ショップマスター
                         li: a(href="/moc/setting/basis/tradelaw")  特定商取引法
                         li: a(href="/moc/setting/basis/agreement")  利用規約設定
@@ -72,9 +74,9 @@ mixin c-mainNavArea
                         li: a(href="/moc/setting/basis/delivery")  配送方法設定
                         li: a(href="/moc/setting/basis/tax")  税率設定
                         li: a(href="/moc/setting/basis/mail") メール設定
-                    +e.A.navItemSubTitle
+                    +e.A.navItemSubTitle.collapsed(data-toggle="collapse" href="#systemConfig" aria-expanded="false" aria-controls="systemConfig")
                         span システム情報設定
-                    ul
+                    ul.collapse#systemConfig
                         li: a(href="/moc/setting/system/system") システム情報
                         li: a(href="/moc/setting/system/member") メンバー管理
                         li: a(href="/moc/setting/system/authority") 権限管理
@@ -83,6 +85,6 @@ mixin c-mainNavArea
                         li: a(href="/moc/setting/system/master") マスターデータ管理
 
                 +e.LI.navItem
-                    +e.A.navItemTitle
+                    +e.A.navItemTitle.collapsed(data-toggle="collapse" href="#ornersStore" aria-expanded="false" aria-controls="ornersStore")
                         i.fa.fa-info-circle(aria-hidden="true")
                         span オーナーズストア
