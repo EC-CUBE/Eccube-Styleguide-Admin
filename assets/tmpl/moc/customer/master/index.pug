@@ -20,99 +20,109 @@ block outsideBlock
         +b.c-subContents
             .row
                 .col-6
-                    label 会員種別
-                    form.c-form
-                        .c-form__radio
-                            input(type="radio" name="filter" value="open" checked="checked")
-                            span 仮会員
-                        .c-form__radio
-                            input(type="radio" name="filter" value="close")
-                            span 本会員
-                    label 性別
-                    form.c-form
-                        .c-form__radio
-                            input(type="radio" name="filter" value="open" checked="checked")
-                            span 男性
-                        .c-form__radio
-                            input(type="radio" name="filter" value="close")
-                            span 女性
-                    label 誕生月
-                    form.c-form
-                        .c-form__select--register
-                            select
-                                option 選んでください
-                                option ...
-                    label 誕生日
-                    form.c-form
-                        .c-form__date--register
-                            input(type="date" placeholder="2000/01/01")
-                        span.c-form__sign 〜
-                        .c-form__date--register
-                            input(type="date" placeholder="2000/01/01")
-                    label 都道府県
-                    form.c-form
-                        .c-form__select--register
-                            select
-                                option 選んでください
-                                option ...
-                    label 電話番号
-                    form.c-form
-                        .c-form__text--extraSmall
-                            input(type="text" placeholder="00")
-                        span.c-form__sign -
-                        .c-form__text--extraSmall
-                            input(type="text" placeholder="0000")
-                        span.c-form__sign -
-                        .c-form__text--extraSmall
-                            input(type="text" placeholder="0000")
+                    .mb-4
+                        label 会員種別
+                        form.c-form
+                            .c-form__radio
+                                input(type="radio" name="filter" value="open" checked="checked")
+                                span 仮会員
+                            .c-form__radio
+                                input(type="radio" name="filter" value="close")
+                                span 本会員
+                    .mb-4
+                        label 性別
+                        form.c-form
+                            .c-form__radio
+                                input(type="radio" name="filter" value="open" checked="checked")
+                                span 男性
+                            .c-form__radio
+                                input(type="radio" name="filter" value="close")
+                                span 女性
+                    .mb-4
+                        label 誕生月
+                        form.c-form
+                            .c-form__select--register
+                                select
+                                    option 選んでください
+                                    option ...
+                    .mb-4
+                        label 誕生日
+                        form.c-form
+                            .c-form__date--regular
+                                input(type="date" placeholder="2000/01/01")
+                            span.c-form__sign 〜
+                            .c-form__date--regular
+                                input(type="date" placeholder="2000/01/01")
+                    .mb-4
+                        label 都道府県
+                        form.c-form
+                            .c-form__select--register
+                                select
+                                    option 選んでください
+                                    option ...
+                    .mb-4
+                        label 電話番号
+                        form.c-form
+                            .c-form__text--extraSmall
+                                input(type="text" placeholder="00")
+                            span.c-form__sign -
+                            .c-form__text--extraSmall
+                                input(type="text" placeholder="0000")
+                            span.c-form__sign -
+                            .c-form__text--extraSmall
+                                input(type="text" placeholder="0000")
                 .col-6
-                    label 購入商品名
-                    form.c-form
-                        .c-form__text
-                            input(type="text")
-                    label 購入金額
-                    form.c-form
-                        //TODO 問題ないか確認
-                        .c-form__text--small
-                            .c-form__price
-                                .c-form__priceMark
-                                    span ￥
+                    .mb-4
+                        label 購入商品名
+                        form.c-form
+                            .c-form__text
                                 input(type="text")
-                        span.c-form__sign 〜
-                        .c-form__text--small
-                            .c-form__price
-                                .c-form__priceMark
-                                    span ￥
+                    .mb-4
+                        label 購入金額
+                        form.c-form
+                            .c-form__price--regular
+                                .c-form__price
+                                    .c-form__priceMark
+                                        span ￥
+                                    input(type="text")
+                            span.c-form__sign 〜
+                            .c-form__price--regular
+                                .c-form__price
+                                    .c-form__priceMark
+                                        span ￥
+                                    input(type="text")
+                    .mb-4
+                        label 購入回数
+                        form.c-form
+                            .c-form__text--small
                                 input(type="text")
-                    label 購入回数
-                    form.c-form
-                        .c-form__text--small
-                            input(type="text")
-                        span.c-form__sign 〜
-                        .c-form__text--small
-                            input(type="text")
-                    label 登録日
+                            span.c-form__sign 〜
+                            .c-form__text--small
+                                input(type="text")
+                    .mb-4
+                        label 登録日
                         form.c-form
-                            .c-form__date--register
+                            .c-form__date--regular
                                 input(type="date" placeholder="2000/01/01")
                             span.c-form__sign 〜
-                            .c-form__date--register
+                            .c-form__date--regular
                                 input(type="date" placeholder="2000/01/01")
-                    label 更新日
+                    .mb-4
+                        label 更新日
                         form.c-form
-                            .c-form__date--register
+                            .c-form__date--regular
                                 input(type="date" placeholder="2000/01/01")
                             span.c-form__sign 〜
-                            .c-form__date--register
+                            .c-form__date--regular
                                 input(type="date" placeholder="2000/01/01")
-                    label 最終購入日
+                    .mb-4
+                        label 最終購入日
                         form.c-form
-                            .c-form__date--register
+                            .c-form__date--regular
                                 input(type="date" placeholder="2000/01/01")
                             span.c-form__sign 〜
-                            .c-form__date--register
+                            .c-form__date--regular
                                 input(type="date" placeholder="2000/01/01")
-                    form.c-form
             +e.action
                 button.c-button--regular.c-button--normal 検索条件クリア
         +e.contents

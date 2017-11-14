@@ -129,7 +129,7 @@ Styleguide 10.1
   }
   &__sign {
     display: inline-block;
-    margin-right: 5px;
+    margin-right: 3px;
   }
 }
 /*
@@ -255,11 +255,11 @@ Markup:
 form.c-form
   .c-form__date
     input(type="date" placeholder="2000/01/01")
-form.c-form
-  .c-form__date
+form.c-form--inline
+  .c-form__date--regular
     input(type="date" placeholder="2000/01/01")
   span.c-form__sign 〜
-  .c-form__date
+  .c-form__date--regular
     input(type="date" placeholder="2000/01/01")
 
 Styleguide 10.4
@@ -324,7 +324,7 @@ Styleguide 10.4
       }
     }
   }
-  &__date--register {
+  &__date--regular {
     position: relative;
     display: inline-block;
     margin-right: 5px;
@@ -399,6 +399,16 @@ form.c-form
     .c-form__priceMark
       span ￥
     input(type="text")
+form.c-form
+  .c-form__price--regular
+    .c-form__priceMark
+      span ￥
+    input(type="text")
+  span.c-form__sign 〜
+  .c-form__price--regular
+    .c-form__priceMark
+      span ￥
+    input(type="text")
 
 Styleguide 10.5
 */
@@ -407,7 +417,6 @@ Styleguide 10.5
     display: flex;
     align-items: stretch;
     margin-bottom: 20px;
-    border: 1px solid $black20;
     border-radius: 4px;
     width: 100%;
     height: 40px;
@@ -415,10 +424,12 @@ Styleguide 10.5
     position: relative;
     .c-form__priceMark {
       align-items: center;
-      border-right: 1px solid $black20;
+      border: 1px solid $black20;
+      border-right: none;
       text-align: center;
       height: 100%;
-      width: 40px;
+      min-width: 40px;
+      max-width: 40px;
       font-size: 20px;
       background: #F2F2F2;
       border-radius: 4px 0 0 4px;
@@ -427,12 +438,45 @@ Styleguide 10.5
         font-size: inherit;
       }
     }
-
     input {
       @include form_text;
+      border: 1px solid $black20;
       border-radius: 0 4px 4px 0;
       height: 100%;
-      border: none;
+      margin-bottom: 0;
+    }
+  }
+  &__price--regular {
+    display: inline-flex;
+    align-items: stretch;
+    margin-right: 5px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    width: 200px;
+    height: 40px;
+    box-sizing: border-box;
+    position: relative;
+    .c-form__priceMark {
+      align-items: center;
+      border: 1px solid $black20;
+      border-right: none;
+      text-align: center;
+      height: 100%;
+      min-width: 40px;
+      max-width: 40px;
+      font-size: 20px;
+      background: #F2F2F2;
+      border-radius: 4px 0 0 4px;
+      line-height: 40px;
+      span {
+        font-size: inherit;
+      }
+    }
+    input {
+      @include form_text;
+      border: 1px solid $black20;
+      border-radius: 0 4px 4px 0;
+      height: 100%;
       margin-bottom: 0;
     }
   }
