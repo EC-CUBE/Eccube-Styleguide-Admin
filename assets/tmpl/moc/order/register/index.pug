@@ -1,0 +1,191 @@
+extends /assets/tmpl/moc/layout/_layout-2col.pug
+block pageTitle
+    include /assets/tmpl/components/pageTitle.pug
+    +c-pageTitle("受注登録","受注管理")
+
+block primaryContents
+    +b.c-block
+        +e.heading
+            +e.titles
+                .c-toolTip(data-toggle="tooltip" data-placement="top" title="Tooltip")
+                    span.c-toolTip__title 受注概要
+                    i.fa.fa-question-circle.c-toolTip__icon
+            +e.toggle
+                i.fa.fa-angle-up
+        .c-block__contents
+            .row
+                .col-6
+                    .row.mb-3
+                        .col-4
+                            span 注文番号
+                        .col-8
+                            span.mr-3 1
+                            span.font-weight-bold ラベル
+                    .row.mb-3
+                        .col-4
+                            span 出荷番号
+                        .col-8
+                            a(href="") 123456
+                            span.ml-3.mr-3 |
+                            a(href="") 123456
+                            span.ml-3.mr-3 |
+                            a(href="") 123456
+                    .row.mb-3
+                        .col-4
+                            .c-toolTip(data-toggle="tooltip" data-placement="top" title="Tooltip")
+                                span.c-toolTip__title 対応状況
+                                i.fa.fa-question-circle.c-toolTip__icon
+                        .col-8
+                            form.c-form--inline
+                                .c-form__select--register
+                                    select
+                                        option 出荷済み
+                                        option ...
+                    .row.mb-3
+                        .col-4
+                            span お支払い方法
+                        .col-8
+                            form.c-form--inline
+                                .c-form__select--small
+                                    select
+                                        option 郵便振替
+                                        option ...
+                .col-6
+                    .row.mb-3
+                        .col-4
+                            i.fa.fa-flag(aria-hidden="true").mr-1
+                            span 登録日
+                        .col-8
+                            span 2017/11/09
+                    .row.mb-3
+                        .col-4
+                            i.fa.fa-refresh(aria-hidden="true").mr-1
+                            span 最終更新日
+                        .col-8
+                            span 2017/11/12
+
+                    .row.mb-3
+                        .col-4
+                            i.fa.fa-user(aria-hidden="true").mr-1
+                            span 最終更新者
+                        .col-8
+                            span user_name
+
+    +b.c-block
+        +e.heading
+            +e.titles
+                +b.c-toolTip(data-toggle="tooltip" data-placement="top" title="Tooltip")
+                    span.c-toolTip__title 注文者情報
+                    i.fa.fa-question-circle.c-toolTip__icon
+            +e.toggle
+                i.fa.fa-angle-up
+        +e.contents
+            +b.c-horizontalForm
+                +e.label
+                    .c-toolTip(data-toggle="tooltip" data-placement="top" title="Tooltip")
+                        span.c-toolTip__title 会員ID
+                        i.fa.fa-question-circle.c-toolTip__icon
+                +e.form
+                    .row
+                        .col-12
+                            p 12
+            +b.c-horizontalForm
+                +e.label
+                    span お名前
+                    .c-requiredLabel
+                        span 必須
+                +e.form
+                    .row
+                        .col-6
+                            form.c-form--iunline
+                                .c-form__text
+                                    input(type="text" placeholder="テキスト")
+                        .col-6
+                            form.c-form--iunline
+                                .c-form__text
+                                    input(type="text" placeholder="テキスト")
+            +b.c-horizontalForm
+                +e.label
+                    .c-toolTip(data-toggle="tooltip" data-placement="top" title="Tooltip")
+                        span.c-toolTip__title 商品種別
+                        i.fa.fa-question-circle.c-toolTip__icon
+                    .c-requiredLabel
+                        span 必須
+                +e.form
+                    .row
+                        .col-12
+                            form.c-form
+                                .c-form__select
+                                    select
+                                        option 通常商品
+            +b.c-horizontalForm
+                +e.label
+                    .c-toolTip(data-toggle="tooltip" data-placement="top" title="Tooltip")
+                        span.c-toolTip__title 商品画像
+                        i.fa.fa-question-circle.c-toolTip__icon
+                +e.form
+                    .row
+                        .col-12
+                            form.c-form
+                                .c-form__fileUpload
+                                    i.fa.fa-cloud-upload
+                                    p 画像をドラッグ＆ドロップ
+                                        br
+                                        | または
+                                    input(type="file")
+                                    button.c-button--regular.c-button--normal ファイルを選択
+            +b.c-horizontalForm
+                +e.label
+                    .c-toolTip(data-toggle="tooltip" data-placement="top" title="Tooltip")
+                        span.c-toolTip__title 商品説明
+                        i.fa.fa-question-circle.c-toolTip__icon
+                +e.form
+                    .row
+                        .col-12
+                            form.c-form
+                                .c-form__text
+                                    textarea(rows="9" placeholder="テキスト")
+                            include /assets/tmpl/components/subAction.pug
+                            +c-subAction("一覧コメントを追加")
+            +b.c-horizontalForm
+                +e.label
+                    .c-toolTip(data-toggle="tooltip" data-placement="top" title="Tooltip")
+                        span.c-toolTip__title 販売価格
+                        i.fa.fa-question-circle.c-toolTip__icon
+                    .c-requiredLabel
+                        span 必須
+                +e.form
+                    .row
+                        .col-12
+                            form.c-form
+                                .c-form__text
+                                    input(type="text" placeholder="テキスト")
+                            include /assets/tmpl/components/subAction.pug
+                            +c-subAction("通常価格を追加")
+            +b.c-horizontalForm
+                +e.label
+                    .c-toolTip(data-toggle="tooltip" data-placement="top" title="Tooltip")
+                        span.c-toolTip__title 在庫数
+                        i.fa.fa-question-circle.c-toolTip__icon
+                    .c-requiredLabel
+                        span 必須
+                +e.form
+                    .row
+                        .col-3
+                            form.c-form
+                                .c-form__text
+                                    input(type="text" placeholder="テキスト")
+                                .c-form__checkbox
+                                    input(type="checkbox" name="filter" value="open")
+                                    span 無制限
+            +b.c-horizontalForm
+                +e.label
+                    .c-toolTip(data-toggle="tooltip" data-placement="top" title="Tooltip")
+                        span.c-toolTip__title 検索ワード
+                        i.fa.fa-question-circle.c-toolTip__icon
+                +e.form
+                    .row
+                        .col-12
+                            form.c-form
+                                .c-form__text
+                                    input(type="text" placeholder="テキスト")

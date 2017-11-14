@@ -12,50 +12,52 @@ mixin c-mainNavArea
                         i.fa.fa-cube(aria-hidden="true")
                         span 商品管理
                     ul.collapse#productManagement
-                        li: a(href="") 商品マスタ
-                        li: a(href="") 商品登録
-                        li: a(href="") 規格管理
-                        li: a(href="") カテゴリ管理
-                        li: a(href="") タグ管理
-                        li: a(href="") 商品CSV登録
-                        li: a(href="") カテゴリCSV登録
+                        li: a(href="/moc/product/master") 商品マスタ
+                        li: a(href="/moc/product/register") 商品登録
+                        li: a(href="/moc/product/standard") 規格管理
+                        li: a(href="/moc/product/category") カテゴリ管理
+                        li: a(href="/moc/product/tags") タグ管理
+                        li: a(href="/moc/product/csv/product") 商品CSV登録
+                        li: a(href="/moc/product/csv/category") カテゴリCSV登録
 
                 +e.LI.navItem
                     +e.A.navItemTitle.collapsed(data-toggle="collapse" href="#orderManagement" aria-expanded="false" aria-controls="orderManagement")
                         i.fa.fa-inbox(aria-hidden="true")
                         span 受注管理
                     ul.collapse#orderManagement
-                        li: a(href="") 受注一覧
-                        li: a(href="") 受注管理
+                        li: a(href="/moc/order/list") 受注一覧
+                        li: a(href="/moc/order/management") 受注管理
 
                 +e.LI.navItem
                     +e.A.navItemTitle.collapsed(data-toggle="collapse" href="#shipManagement" aria-expanded="false" aria-controls="shipManagement")
                         i.fa.fa-truck(aria-hidden="true")
                         span 出荷管理
                     ul.collapse#shipManagement
-                        li: a(href="") 出荷マスター
-                        li: a(href="") 出荷管理
-                        li: a(href="") 出荷CSV登録
+                        li: a(href="/moc/shipment/master") 出荷マスター
+                        li: a(href="/moc/shipment/management") 出荷管理
+                        li: a(href="/moc/shipment/register") 出荷CSV登録
 
                 +e.LI.navItem
                     +e.A.navItemTitle.collapsed(data-toggle="collapse" href="#userManagement" aria-expanded="false" aria-controls="userManagement")
                         i.fa.fa-users(aria-hidden="true")
                         span 会員管理
+                        
                     ul.collapse#userManagement
-                        li: a(href="") 会員マスター
-                        li: a(href="") 会員管理
+                        li: a(href="/moc/customer/master") 会員マスター
+                        li: a(href="/moc/customer/management") 会員管理
 
                 +e.LI.navItem
                     +e.A.navItemTitle.collapsed(data-toggle="collapse" href="#contentsManagement" aria-expanded="false" aria-controls="contentsManagement")
                         i.fa.fa-file-text-o(aria-hidden="true")
                         span コンテンツ管理
+                        
                     ul.collapse#contentsManagement
-                        li: a(href="") 新着情報管理
-                        li: a(href="") ファイル管理
-                        li: a(href="") レイアウト管理
-                        li: a(href="") ページ管理
-                        li: a(href="") ブロック管理
-                        li: a(href="") キャッシュ管理
+                        li: a(href="/moc/content/news") 新着情報管理
+                        li: a(href="/moc/content/file") ファイル管理
+                        li: a(href="/moc/content/layout") レイアウト管理
+                        li: a(href="/moc/content/page") ページ管理
+                        li: a(href="/moc/content/block") ブロック管理
+                        li: a(href="/moc/content/cache") キャッシュ管理
 
                 +e.LI.navItem
                     +e.A.navItemTitle.collapsed(data-toggle="collapse" href="#config" aria-expanded="false" aria-controls="config")
@@ -63,27 +65,24 @@ mixin c-mainNavArea
                         span 設定
 
                     +e.A.navItemSubTitle.collapsed(data-toggle="collapse" href="#commonConfig" aria-expanded="false" aria-controls="commonConfig")
-                        span 基本情報設定
+                            span 基本情報設定
                     ul.collapse#commonConfig
-                        li: a(href="")  ショップマスター
-                        li: a(href="")  特定商取引法
-                        li: a(href="")  利用規約設定
-                        li: a(href="")  支払方法設定
-                        li: a(href="")  配送方法設定
-                        li: a(href="")  税率設定
-                        li: a(href="") 利用規約設定
-                        li: a(href="") メール設定
-                        li
-
+                        li: a(href="/moc/setting/basis/shop")  ショップマスター
+                        li: a(href="/moc/setting/basis/tradelaw")  特定商取引法
+                        li: a(href="/moc/setting/basis/agreement")  利用規約設定
+                        li: a(href="/moc/setting/basis/payment")  支払方法設定
+                        li: a(href="/moc/setting/basis/delivery")  配送方法設定
+                        li: a(href="/moc/setting/basis/tax")  税率設定
+                        li: a(href="/moc/setting/basis/mail") メール設定
                     +e.A.navItemSubTitle.collapsed(data-toggle="collapse" href="#systemConfig" aria-expanded="false" aria-controls="systemConfig")
                         span システム情報設定
                     ul.collapse#systemConfig
-                        li: a(href="") システム情報
-                        li: a(href="") メンバー管理
-                        li: a(href="") 権限管理
-                        li: a(href="") セキュリティ管理
-                        li: a(href="") EC-CUBE ログ表示
-                        li: a(href="") マスターデータ管理
+                        li: a(href="/moc/setting/system/system") システム情報
+                        li: a(href="/moc/setting/system/member") メンバー管理
+                        li: a(href="/moc/setting/system/authority") 権限管理
+                        li: a(href="/moc/setting/system/security") セキュリティ管理
+                        li: a(href="/moc/setting/system/log") EC-CUBE ログ表示
+                        li: a(href="/moc/setting/system/master") マスターデータ管理
 
                 +e.LI.navItem
                     +e.A.navItemTitle.collapsed(data-toggle="collapse" href="#ornersStore" aria-expanded="false" aria-controls="ornersStore")
