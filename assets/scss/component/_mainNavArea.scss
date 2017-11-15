@@ -75,8 +75,11 @@ Styleguide 3.0
     }
     &:hover {
       background: $black05;
+      text-decoration: none;
     }
-
+    &.collapsed::after {
+      content: "\f107";
+    }
     i {
       margin-right: .5em;
       color: $navy70;
@@ -106,6 +109,12 @@ Styleguide 3.0
       position: absolute;
       top: 7px;
       right: 15px;
+    }
+    &.collapsed::after {
+      content: "\f107";
+    }
+    &:hover {
+      text-decoration: none;
     }
     span {
       color: $navy80;
