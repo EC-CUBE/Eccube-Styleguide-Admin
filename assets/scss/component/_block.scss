@@ -27,10 +27,11 @@ Styleguide 8.0
   &__titles {
     display: table-cell;
   }
+  // TODO トグル以外も入るので名前検討
   &__toggle {
     display: table-cell;
-    width: 20px;
-    text-center: right;
+    min-width: 20px;
+    text-align: right;
     vertical-align: middle;
     i {
       font-size: 20px;

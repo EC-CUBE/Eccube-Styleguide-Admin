@@ -72,6 +72,9 @@ form.c-form
   span.c-form__sign -
   .c-form__text--extraSmall
     input(type="text")
+form.c-form
+  .c-form__text--extraExtraSmall
+    input(type="text")
 
 Styleguide 10.1
 */
@@ -125,6 +128,19 @@ Styleguide 10.1
       @include form_text;
       height: auto;
       max-width: 80px;
+    }
+  }
+  &__text--extraExtraSmall {
+    display: inline-block;
+    margin-right: 10px;
+    input {
+      @include form_text;
+      max-width: 50px;
+    }
+    textarea {
+      @include form_text;
+      height: auto;
+      max-width: 50px;
     }
   }
   &__sign {
