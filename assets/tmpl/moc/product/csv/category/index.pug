@@ -2,7 +2,7 @@ extends /assets/tmpl/moc/layout/_layout-2col.pug
 block pageTitle
     +b.c-pageTitle
         +e.titles
-            +e.H2.title 商品CSV登録
+            +e.H2.title カテゴリCSV登録
             +e.SPAN.subTitle 商品管理
 
 //- TODO マークアップ見直し必要
@@ -14,7 +14,7 @@ block primaryContents
                     span.c-toolTip__title CSVファイルをアップロード
                     i.fa.fa-question-circle.c-toolTip__icon
         +e.contents
-            .row
+            .row.mb-2
                 .col-2
                     span CSVファイル選択
                 .col-10
@@ -33,7 +33,7 @@ block primaryContents
             +e.toggle
                 a(href="#").c-button--small.c-button--normal 雛形ファイルダウンロード
         +e.contents
-            table
+            table.c-csvTable
                 tr
                     th カテゴリID
                     td 新規登録時は未設定

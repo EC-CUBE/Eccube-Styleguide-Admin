@@ -14,7 +14,7 @@ block primaryContents
                     span.c-toolTip__title CSVファイルをアップロード
                     i.fa.fa-question-circle.c-toolTip__icon
         +e.contents
-            .row
+            .row.mb-2
                 .col-2
                     span CSVファイル選択
                 .col-10
@@ -33,7 +33,7 @@ block primaryContents
             +e.toggle
                 a(href="#").c-button--small.c-button--normal 雛形ファイルダウンロード
         +e.contents
-            table
+            table.c-csvTable
                 tr
                     th 商品ID
                     td 新規登録時は未設定
@@ -123,9 +123,3 @@ block primaryContents
                 tr
                     th 商品規格削除フラグ
                     td 設定されていない場合、0を登録
-
-block conversionArea
-    +b.c-conversionArea
-        +e.container
-            span 公開
-            span 更新
