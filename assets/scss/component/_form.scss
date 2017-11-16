@@ -621,9 +621,7 @@ Styleguide 10.9
   font-weight: bold;
   color: $blue;
   border-radius: 4px;
-  }
-
-
+}
 
 /*
 ラベルとインプットが水平配置のフォームレイアウト
@@ -647,4 +645,23 @@ Styleguide 10.10
   &__form {
     width: calc(100% - 190px);
   }
+}
+
+/*
+ラベル
+
+Markup:
+form.c-form
+  label 発送済み
+  .c-label
+    span 必須
+ */
+.c-label {
+  display: inline-block;
+  padding: 0.4em 0.8em;
+  border: 1px solid $lightGreen;
+  font-size: 13px;
+  font-weight: bold;
+  color: $lightGreen;
+  border-radius: 4px;
 }

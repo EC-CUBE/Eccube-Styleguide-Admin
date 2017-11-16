@@ -116,3 +116,20 @@ mixin c-csvTable
         tr
             th 在庫数無制限フラグ
             td
+
+mixin c-table--mail
+    +b.TABLE.c-table--mail
+        +e.THEAD.tableHeader
+            th 配信日
+            th テンプレート
+            th 件名
+        tr
+            td 2017/12/03
+            td お問い合わせを受け付けました
+            td
+                a(href="#") お問い合わせを受け付けました
+        tr
+            td 2017/12/03
+            td ご注文ありがとうございます
+            td
+                a(href="#") ご注文ありがとうございます
