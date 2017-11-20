@@ -98,10 +98,15 @@ Styleguide 4.3
 
 コンテンツの内容を示すタイトルです。メインカラム上部に表示されます。
 
+sg-wrapper:
+<div class="c-contentsArea">
+  <sg-wrapper-content/>
+  <div class="c-contentsArea__cols"></div>
+</div>
+
 Markup:
-.c-contentsArea
-  include /assets/tmpl/components/pageTitle.pug
-  +c-pageTitle("ページタイトル","親カテゴリ名")
+include /assets/tmpl/components/pageTitle.pug
++c-pageTitle("ページタイトル","親カテゴリ名")
 
 Styleguide 4.4
 */
