@@ -73,7 +73,7 @@ form.c-form
   .c-form__text--extraSmall
     input(type="text")
 form.c-form
-  .c-form__text--extraExtraSmall
+  .c-form__text--smallest
     input(type="text")
 
 Styleguide 10.1
@@ -130,7 +130,7 @@ Styleguide 10.1
       max-width: 80px;
     }
   }
-  &__text--extraExtraSmall {
+  &__text--smallest {
     display: inline-block;
     margin-right: 10px;
     input {
@@ -630,8 +630,42 @@ Styleguide 10.9
 選択中のタブ`.c-tab__item`に`.is-active`クラスを付与することでアクティブ状態のスタイルを適用することが出来ます。
 
 Markup:
-include /assets/tmpl/components/pagination.pug
-+c-pagenation
++b.c-horizontalForm
+  +e.label
+    .c-toolTip(data-toggle="tooltip" data-placement="top" title="Tooltip")
+      span.c-toolTip__title 商品名
+      i.fa.fa-question-circle.c-toolTip__icon
+  +e.form
+    .row
+      .col-12
+        p 12
++b.c-horizontalForm
+  +e.label
+    .c-toolTip(data-toggle="tooltip" data-placement="top" title="Tooltip")
+      span.c-toolTip__title 商品ID
+      i.fa.fa-question-circle.c-toolTip__icon
+    .c-requiredLabel
+      span 必須
+  +e.form
+    .row
+      .col-12
+        form.c-form
+          .c-form__text
+            input(type="text" placeholder="テキスト")
++b.c-horizontalForm
+  +e.label
+    .c-toolTip(data-toggle="tooltip" data-placement="top" title="Tooltip")
+      span.c-toolTip__title 商品種別
+      i.fa.fa-question-circle.c-toolTip__icon
+    .c-requiredLabel
+      span 必須
+  +e.form
+    .row
+      .col-12
+        form.c-form
+          .c-form__select
+            select
+                option 通常商品
 
 Styleguide 10.10
 */
