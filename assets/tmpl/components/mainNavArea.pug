@@ -3,7 +3,7 @@ mixin c-mainNavArea
         nav
             +e.UL.nav
                 +e.LI.navItem
-                    +e.A.navItemTitle.collapsed(data-toggle="collapse" href="#home" aria-expanded="false" aria-controls="home")
+                    +e.A.navItemTitle
                         i.fa.fa-home(aria-hidden="true")
                         span ホーム
 
@@ -41,7 +41,7 @@ mixin c-mainNavArea
                     +e.A.navItemTitle.collapsed(data-toggle="collapse" href="#userManagement" aria-expanded="false" aria-controls="userManagement")
                         i.fa.fa-users(aria-hidden="true")
                         span 会員管理
-                        
+
                     ul.collapse#userManagement
                         li: a(href="/moc/customer/master") 会員マスター
                         li: a(href="/moc/customer/management") 会員管理
@@ -50,7 +50,7 @@ mixin c-mainNavArea
                     +e.A.navItemTitle.collapsed(data-toggle="collapse" href="#contentsManagement" aria-expanded="false" aria-controls="contentsManagement")
                         i.fa.fa-file-text-o(aria-hidden="true")
                         span コンテンツ管理
-                        
+
                     ul.collapse#contentsManagement
                         li: a(href="/moc/content/news") 新着情報管理
                         li: a(href="/moc/content/file") ファイル管理
@@ -65,7 +65,7 @@ mixin c-mainNavArea
                         span 設定
 
                     +e.A.navItemSubTitle.collapsed(data-toggle="collapse" href="#commonConfig" aria-expanded="false" aria-controls="commonConfig")
-                            span 基本情報設定
+                        span 基本情報設定
                     ul.collapse#commonConfig
                         li: a(href="/moc/setting/basis/shop")  ショップマスター
                         li: a(href="/moc/setting/basis/tradelaw")  特定商取引法

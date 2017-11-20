@@ -6,7 +6,86 @@
 画面上部に固定表示されます。ロゴ・店舗名（および店舗ページへのリンク）・ユーザメニューが含まれます。
 
 Markup:
-.c-container
+// `style="position: static; padding-top: 0;"` はスタイルガイドにおけるサンプル表示の都合上付与しています。
++b.c-mainNavArea(style="position: static; padding-top: 0;")
+  nav
+    +e.UL.nav
+      +e.LI.navItem
+        +e.A.navItemTitle
+          i.fa.fa-home(aria-hidden="true")
+          span ホーム
+      +e.LI.navItem
+        +e.A.navItemTitle.collapsed(data-toggle="collapse" href="#productManagement" aria-expanded="false" aria-controls="productManagement")
+          i.fa.fa-cube(aria-hidden="true")
+          span 商品管理
+        ul.collapse#productManagement
+          li: a(href="/moc/product/master") 商品マスタ
+          li: a(href="/moc/product/register") 商品登録
+          li: a(href="/moc/product/standard") 規格管理
+          li: a(href="/moc/product/category") カテゴリ管理
+          li: a(href="/moc/product/tags") タグ管理
+          li: a(href="/moc/product/csv/product") 商品CSV登録
+          li: a(href="/moc/product/csv/category") カテゴリCSV登録
+      +e.LI.navItem
+        +e.A.navItemTitle.collapsed(data-toggle="collapse" href="#orderManagement" aria-expanded="false" aria-controls="orderManagement")
+          i.fa.fa-inbox(aria-hidden="true")
+          span 受注管理
+        ul.collapse#orderManagement
+          li: a(href="/moc/order/list") 受注一覧
+          li: a(href="/moc/order/management") 受注管理
+      +e.LI.navItem
+        +e.A.navItemTitle.collapsed(data-toggle="collapse" href="#shipManagement" aria-expanded="false" aria-controls="shipManagement")
+          i.fa.fa-truck(aria-hidden="true")
+          span 出荷管理
+        ul.collapse#shipManagement
+          li: a(href="/moc/shipment/master") 出荷マスター
+          li: a(href="/moc/shipment/management") 出荷管理
+          li: a(href="/moc/shipment/register") 出荷CSV登録
+      +e.LI.navItem
+        +e.A.navItemTitle.collapsed(data-toggle="collapse" href="#userManagement" aria-expanded="false" aria-controls="userManagement")
+          i.fa.fa-users(aria-hidden="true")
+          span 会員管理
+        ul.collapse#userManagement
+          li: a(href="/moc/customer/master") 会員マスター
+          li: a(href="/moc/customer/management") 会員管理
+      +e.LI.navItem
+        +e.A.navItemTitle.collapsed(data-toggle="collapse" href="#contentsManagement" aria-expanded="false" aria-controls="contentsManagement")
+          i.fa.fa-file-text-o(aria-hidden="true")
+          span コンテンツ管理
+        ul.collapse#contentsManagement
+          li: a(href="/moc/content/news") 新着情報管理
+          li: a(href="/moc/content/file") ファイル管理
+          li: a(href="/moc/content/layout") レイアウト管理
+          li: a(href="/moc/content/page") ページ管理
+          li: a(href="/moc/content/block") ブロック管理
+          li: a(href="/moc/content/cache") キャッシュ管理
+      +e.LI.navItem
+        +e.A.navItemTitle.collapsed(data-toggle="collapse" href="#config" aria-expanded="false" aria-controls="config")
+          i.fa.fa-cog(aria-hidden="true")
+          span 設定
+        +e.A.navItemSubTitle.collapsed(data-toggle="collapse" href="#commonConfig" aria-expanded="false" aria-controls="commonConfig")
+            span 基本情報設定
+        ul.collapse#commonConfig
+          li: a(href="/moc/setting/basis/shop")  ショップマスター
+          li: a(href="/moc/setting/basis/tradelaw")  特定商取引法
+          li: a(href="/moc/setting/basis/agreement")  利用規約設定
+          li: a(href="/moc/setting/basis/payment")  支払方法設定
+          li: a(href="/moc/setting/basis/delivery")  配送方法設定
+          li: a(href="/moc/setting/basis/tax")  税率設定
+          li: a(href="/moc/setting/basis/mail") メール設定
+        +e.A.navItemSubTitle.collapsed(data-toggle="collapse" href="#systemConfig" aria-expanded="false" aria-controls="systemConfig")
+          span システム情報設定
+        ul.collapse#systemConfig
+          li: a(href="/moc/setting/system/system") システム情報
+          li: a(href="/moc/setting/system/member") メンバー管理
+          li: a(href="/moc/setting/system/authority") 権限管理
+          li: a(href="/moc/setting/system/security") セキュリティ管理
+          li: a(href="/moc/setting/system/log") EC-CUBE ログ表示
+          li: a(href="/moc/setting/system/master") マスターデータ管理
+      +e.LI.navItem
+        +e.A.navItemTitle.collapsed(data-toggle="collapse" href="#ornersStore" aria-expanded="false" aria-controls="ornersStore")
+          i.fa.fa-info-circle(aria-hidden="true")
+          span オーナーズストア
 
 Styleguide 3.0
 */
@@ -28,8 +107,8 @@ Styleguide 3.0
   }
 
   &__nav {
-
-   }
+    margin-bottom: 0;
+  }
   &__navItem {
 
     ul {
@@ -88,6 +167,10 @@ Styleguide 3.0
     span {
       color: $navy80;
     }
+  }
+
+  &__navItem:first-of-type > .c-mainNavArea__navItemTitle::after {
+    display: none;
   }
   &__navItemSubTitle {
     display: block;
