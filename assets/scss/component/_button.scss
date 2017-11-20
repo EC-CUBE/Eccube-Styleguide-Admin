@@ -20,6 +20,7 @@ sg-wrapper:
   <sg-wrapper-content/>
 
 Markup:
+// `style="margin-right:10px;"` はスタイルガイドにおけるサンプル表示の都合上付与しています。
 a(href="" style="margin-right:10px;").c-button--small.c-button--conversion small
 a(href="" style="margin-right:10px;").c-button--regular.c-button--conversion regular
 button(style="margin-right:10px;").c-button--large.c-button--conversion large
@@ -91,6 +92,7 @@ sg-wrapper:
   <sg-wrapper-content/>
 
 Markup:
+// `style="margin-right:10px;"` はスタイルガイドにおけるサンプル表示の都合上付与しています。
 a(href="" style="margin-right:10px;").c-button--regular.c-button--conversion コンバージョン
 a(href="" style="margin-right:10px;").c-button--regular.c-button--sub サブ
 button(style="margin-right:10px;").c-button--regular.c-button--normal ノーマル
