@@ -70,36 +70,3 @@ Styleguide 8.1
     padding: 0 15px;
   }
 }
-
-/*
-ページタイトル
-
-ページタイトルを表示します。
-
-Markup:
-.c-secondaryCol
-
-Styleguide 8.2
-*/
-.c-pageTitle {
-  display: table;
-  margin-bottom: 20px;
-  padding: 15px;
-  width: 100%;
-  background: #fff;
-  &__titles {
-    display: table-cell;
-}
-  &__title {
-    display: inline-block;
-    margin-right: 10px;
-    margin-bottom: 0;
-    font-size: 20px;
-    vertical-align: middle;
-  }
-  &__subTitle {
-    display: inline-block;
-    font-size: 16px;
-    vertical-align: middle;
-  }
-}

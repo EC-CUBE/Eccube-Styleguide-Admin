@@ -1,19 +1,43 @@
 @import "../library/_variable";
 @import "../mixin/_media";
 
+
 /*
 コンテンツエリア
 
+Markup:
++b.c-contentsArea
+  include /assets/tmpl/components/pageTitle.pug
+  +c-pageTitle("商品登録","商品管理")
+  +e.cols
+    +e.primaryCol
+      .c-primaryCol
+        +b.c-block
+          +e.contents
+              p プライマリカラム領域
+    +e.secondaryCol
+      .c-secondaryCol
+        +b.c-block
+          +e.contents
+              p セカンダリカラム領域
+
+Styleguide 4.0
+*/
+
+
+/*
+コンテンツエリアのレイアウト
+
 画面内のコンテンツ・入力フォームを表示します。`.c-contentsArea__cols`ではプライマリカラム、セカンダリカラムのレイアウトを定義します。
-<br>
 `.c-contentsArea__secondaryCol`がない場合は`.c-contentsArea__primaryCol`がコンテンツエリアの幅100%で表示されます。
 
 Markup:
-.c-contentsArea
-  .c-contentsArea__cols
-    .c-contentsArea__primaryCol
-    .c-contentsArea__secondaryCol
-Styleguide 4.0
++b.c-contentsArea
+  +e.cols
+    +e.primaryCol
+    +e.secondaryCol
+
+Styleguide 4.1
 */
 
 .c-contentsArea {
@@ -36,5 +60,70 @@ Styleguide 4.0
     display: table-cell;
     width: 350px;
     vertical-align: top;
+  }
+}
+
+
+/*
+プライマリカラム
+
+コンテンツ・入力フォームのうち主要なものを表示します。
+
+Markup:
+.c-primaryCol
+
+Styleguide 4.2
+*/
+.c-primaryCol {
+}
+
+/*
+セカンダリカラム
+
+補助的なコンテンツ・入力フォームなどを表示します。
+画面によっては存在しない場合があり、その場合はプライマリカラムがコンテンツエリアの全幅を占めます。
+
+Markup:
+.c-secondaryCol
+
+Styleguide 4.3
+*/
+.c-secondaryCol {
+  margin-left: 15px;
+
+}
+
+/*
+ページタイトル
+
+コンテンツの内容を示すタイトルです。メインカラム上部に表示されます。
+
+Markup:
+.c-contentsArea
+  include /assets/tmpl/components/pageTitle.pug
+  +c-pageTitle("ページタイトル","親カテゴリ名")
+
+Styleguide 4.4
+*/
+.c-pageTitle {
+  display: table;
+  margin-bottom: 20px;
+  padding: 15px;
+  width: 100%;
+  background: #fff;
+  &__titles {
+    display: table-cell;
+  }
+  &__title {
+    display: inline-block;
+    margin-right: 10px;
+    margin-bottom: 0;
+    font-size: 20px;
+    vertical-align: middle;
+  }
+  &__subTitle {
+    display: inline-block;
+    font-size: 16px;
+    vertical-align: middle;
   }
 }
