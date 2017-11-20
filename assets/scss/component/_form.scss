@@ -72,6 +72,9 @@ form.c-form
   span.c-form__sign -
   .c-form__text--extraSmall
     input(type="text")
+form.c-form
+  .c-form__text--extraExtraSmall
+    input(type="text")
 
 Styleguide 10.1
 */
@@ -125,6 +128,19 @@ Styleguide 10.1
       @include form_text;
       height: auto;
       max-width: 80px;
+    }
+  }
+  &__text--extraExtraSmall {
+    display: inline-block;
+    margin-right: 10px;
+    input {
+      @include form_text;
+      max-width: 50px;
+    }
+    textarea {
+      @include form_text;
+      height: auto;
+      max-width: 50px;
     }
   }
   &__sign {
@@ -605,9 +621,7 @@ Styleguide 10.9
   font-weight: bold;
   color: $blue;
   border-radius: 4px;
-  }
-
-
+}
 
 /*
 ラベルとインプットが水平配置のフォームレイアウト
@@ -631,4 +645,23 @@ Styleguide 10.10
   &__form {
     width: calc(100% - 190px);
   }
+}
+
+/*
+ラベル
+
+Markup:
+form.c-form
+  label 発送済み
+  .c-label
+    span 必須
+ */
+.c-label {
+  display: inline-block;
+  padding: 0.4em 0.8em;
+  border: 1px solid $lightGreen;
+  font-size: 13px;
+  font-weight: bold;
+  color: $lightGreen;
+  border-radius: 4px;
 }

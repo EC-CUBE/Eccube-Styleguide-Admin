@@ -1,0 +1,118 @@
+extends /assets/tmpl/moc/layout/_layout-2col
+block pageTitle
+    +b.c-pageTitle
+        +e.titles
+            +e.H2.title メール通知
+            +e.SPAN.subTitle 受注管理
+
+//- TODO マークアップ見直し必要
+block primaryContents
+    +b.c-block
+        +e.heading
+            +e.titles
+                +b.c-toolTip(data-toggle="tooltip" data-placement="top" title="Tooltip")
+                    span.c-toolTip__title メール配信先
+                    i.fa.fa-question-circle.c-toolTip__icon
+            +e.toggle
+                i.fa.fa-angle-up
+        +e.contents
+            .row.mb-2
+                .col-2
+                    span 注文番号
+                .col-4
+                    span 1234
+                .col-2
+                    span 購入金額(円)
+                .col-4
+                    span 52,980
+            .row.mb-2
+                .col-2
+                    span 注文者
+                .col-4
+                    span 田口 はなこ（タグチ ハナコ）
+                    br
+                    | 〒000-0000
+                    br
+                    | 大阪府大阪市淀川区十三東1-17-13
+                .col-2
+                    span 購入商品
+                .col-4
+                    span パーコレーター 他３点
+            .row
+                .col-2
+                    span 対応状況
+                .col-10
+                    .c-label
+                        span 発送済み
+    +b.c-block
+        +e.heading
+            +e.titles
+                +b.c-toolTip(data-toggle="tooltip" data-placement="top" title="Tooltip")
+                    span.c-toolTip__title 配信履歴
+            +e.toggle
+                i.fa.fa-angle-up
+        +e.contents
+            table.c-table--mail
+                +e.THEAD.tableHeader
+                    th 配信日
+                    th テンプレート
+                    th 件名
+                tr
+                    td 2017/12/03
+                    td お問い合わせを受け付けました
+                    td
+                        a(href="#") お問い合わせを受け付けました
+                tr
+                    td 2017/12/03
+                    td ご注文ありがとうございます
+                    td
+                        a(href="#") ご注文ありがとうございます
+
+    +b.c-block
+        +e.heading
+            +e.titles
+                +b.c-toolTip(data-toggle="tooltip" data-placement="top" title="Tooltip")
+                    span.c-toolTip__title 新規メール配信
+            +e.toggle
+                i.fa.fa-angle-up
+        +e.contents
+            .row
+                .col-2
+                    span テンプレート
+                    i.fa.fa-question-circle.c-toolTip__icon
+                    .c-requiredLabel
+                        span 必須
+                .col-10
+                    form.c-form
+                        .c-form__text
+                            input(type="text")
+            .row
+                .col-2
+                    span 件名
+                    span &nbsp;
+                    .c-requiredLabel
+                        span 必須
+                .col-10
+                    form.c-form
+                        .c-form__text
+                            input(type="text")
+            .row
+                .col-2
+                    span ヘッダー文
+                .col-10
+                    form.c-form
+                        .c-form__text
+                            textarea(rows="9")
+            .row
+                .col-2
+                    span フッター文
+                .col-10
+                    form.c-form
+                        .c-form__text
+                            textarea(rows="9")
+
+block conversionArea
+    +b.c-conversionArea
+        +e.container
+            span 公開
+            span 更新

@@ -649,3 +649,68 @@ Styleguide 12.12
     text-align: center;
   }
 }
+
+/*
+登録CSV
+
+Markup:
+include /assets/tmpl/components/table.pug
++c-csvTable
+
+Styleguide 12.13
+ */
+.c-csvTable {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  tr {
+    border-bottom: 1px solid #CCCCCC;
+    text-align: left;
+  }
+  tr:nth-child(odd) {
+    background: #F9F9F9;
+  }
+  th {
+    background: #F2F2F2;
+    border-right: 1px solid #999999;
+    padding: 10px 11px;
+  }
+  td {
+    padding: 10px 11px;
+  }
+}
+
+/*
+配信履歴テーブル
+
+Markup:
+include /assets/tmpl/components/table.pug
++c-table--mail
+
+Styleguide 12.14
+*/
+.c-table--mail {
+  width: 100%;
+  margin-bottom: 20px;
+  th {
+    border-top: 1px solid #a3a3a3;
+    background-color: #f2f2f2;
+    padding: 10px;
+  }
+  tr {
+    border-bottom: 1px solid #ccc;
+  }
+  tr:nth-child(odd):not(first-child) {
+    background-color: #f9f9f9;
+  }
+  td {
+    padding: 10px 0;
+    padding-left: 10px;
+    a {
+      color: $blue;
+      &:hover {
+        opacity: .5;
+      }
+    }
+  }
+}
