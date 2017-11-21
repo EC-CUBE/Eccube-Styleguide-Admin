@@ -106,8 +106,8 @@ Styleguide 12.1
 選択中のタブ`.c-tab__item`に`.is-active`クラスを付与することでアクティブ状態のスタイルを適用することが出来ます。
 
 Markup:
-include /assets/tmpl/components/pagination.pug
-+c-pagenation
+include /assets/tmpl/components/table.pug
++c-table--standard
 
 Styleguide 12.2
 */
@@ -141,7 +141,6 @@ Styleguide 12.2
 `.c-toolTip`ではBlockとアイコンのみのスタイルを定義し、ツールチップの実装はBootstrapにて行います。
 
 sg-wrapper:
-  <div style="padding: 10px;">
   <script>
     toolTip();
   </script>
@@ -174,12 +173,12 @@ Styleguide 12.3
 選択中のタブ`.c-tab__item`に`.is-active`クラスを付与することでアクティブ状態のスタイルを適用することが出来ます。
 
 Markup:
-include /assets/tmpl/components/pagination.pug
-+c-pagenation
+include /assets/tmpl/components/searchBox.pug
++c-searchBox
 
 Styleguide 12.4
 */
-.c-search {
+.c-searchBox {
   display: flex;
   margin-bottom: 10px;
   &__form {
@@ -227,7 +226,7 @@ Styleguide 12.4
 
 
 /*
-カテゴリ(商品登録)
+カテゴリ登録
 
 タブサイズは `regular` `small` の2種類定義されています。
 選択中のタブ`.c-tab__item`に`.is-active`クラスを付与することでアクティブ状態のスタイルを適用することが出来ます。
@@ -334,12 +333,12 @@ Styleguide 12.6
 /*
 サブアクションボタン
 
-タブサイズは `regular` `small` の2種類定義されています。
-選択中のタブ`.c-tab__item`に`.is-active`クラスを付与することでアクティブ状態のスタイルを適用することが出来ます。
+`.c-subAction`に`.is-active`クラスを付与することでアクティブ状態のスタイルを適用することが出来ます。
 
 Markup:
 include /assets/tmpl/components/subAction.pug
 +c-subAction("すべてのタグを表示")
++c-subAction("すべてのタグを表示","is-active")
 
 Styleguide 12.7
 */
@@ -348,10 +347,12 @@ Styleguide 12.7
   &__btn {
     display: inline-block;
     margin-bottom: 15px;
+    text-decoration: none;
     color: #333;
 
     &:hover {
       text-decoration: none;
+      color: #333;
     }
 
     &::before {
@@ -464,7 +465,7 @@ Styleguide 12.9
 }
 
 /*
-カテゴリ管理テーブル
+並び替えテーブル
 
 タブサイズは `regular` `small` の2種類定義されています。
 `.c-sortTable__itemActionBtn`に`.is-stopped`クラスを付与することでボタンを非アクティブ化することが出来ます。
@@ -546,14 +547,14 @@ Styleguide 12.10
 }
 
 /*
-カテゴリ(カテゴリ管理)
+カテゴリ管理
 
 タブサイズは `regular` `small` の2種類定義されています。
 選択中のタブ`.c-tab__item`に`.is-active`クラスを付与することでアクティブ状態のスタイルを適用することが出来ます。
 
 Markup:
 include /assets/tmpl/components/category.pug
-+c-categoryRegister
++c-category
 
 Styleguide 12.11
 */
@@ -623,8 +624,26 @@ Styleguide 12.11
 メインとなるコンテンツの補助として存在し、表示/非表示を切り替えることのできるコンテンツです。
 
 Markup:
-include /assets/tmpl/components/category.pug
-+c-categoryRegister
++b.c-subContents
+            .row
+                .col-6
+                    .mb-4
+                        label 会員種別
+                        form.c-form
+                            .c-form__radio
+                                input(type="radio" name="filter" value="open" checked="checked")
+                                span 仮会員
+                            .c-form__radio
+                                input(type="radio" name="filter" value="close")
+                                span 本会員
+                .col-6
+                    .mb-4
+                        label 購入商品名
+                        form.c-form
+                            .c-form__text
+                                input(type="text")
+            +e.action
+                button.c-button--regular.c-button--normal 検索条件クリア
 
 Styleguide 12.12
 */

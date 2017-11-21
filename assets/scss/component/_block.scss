@@ -27,7 +27,6 @@ Markup:
       i.fa.fa-angle-up
   +e.contents
     p コンテンツが入ります
-
 +b.c-block
   +e.heading
     +e.titles
@@ -38,7 +37,6 @@ Markup:
       i.fa.fa-angle-up
   +e.contents--noPadding
     p コンテンツが入ります
-
 +b.c-block
   +e.heading
     +e.titles
@@ -98,25 +96,25 @@ Styleguide 8.0
 
 コンテンツエリア上部に配置されます。ブロックに内包されないコンテンツグループです。
 
+sg-wrapper:
+<div class="c-contentsArea">
+  <sg-wrapper-content/>
+</div>
+
 Markup:
 +b.c-outsideBlock
   +e.contents
     .row
-      .col-12
-          include /assets/tmpl/components/subAction.pug
-          +c-subAction("詳細検索","is-active")
-  +b.c-subContents
-    .row
       .col-6
-        .mb-4
-          label 会員種別
-          form.c-form
-            .c-form__radio
-              input(type="radio" name="filter" value="open" checked="checked")
-              span 仮会員
-            .c-form__radio
-              input(type="radio" name="filter" value="close")
-              span 本会員
+        form.c-form
+          label 会員ID・メールアドレス・お名前
+          .c-form__text
+            input(type="text" placeholder="テキスト")
+      .col-6
+    .row
+      .col-12
+        include /assets/tmpl/components/subAction.pug
+        +c-subAction("詳細検索","is-active")
 
 Styleguide 8.1
 */
