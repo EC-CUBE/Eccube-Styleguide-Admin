@@ -1,0 +1,117 @@
+extends /assets/tmpl/moc/layout/_layout-2col
+block pageTitle
+    +b.c-pageTitle
+        +e.titles
+            +e.H2.title 受注一覧
+            +e.SPAN.subTitle 受注管理
+
+block outsideBlock
+    +b.c-outsideBlock
+        +e.contents
+            .row
+                .col-12
+                    form.c-form
+                        label 受注ID・注文者名・注文者会社名・メールアドレス・電話番号
+                        .c-form__text
+                            input(type="text")
+            .row.mb-3
+                form.c-form
+                    label.col-12 対応状況
+                    .c-form__checkbox
+                        .ml-5
+                            input(type='checkbox', name='filter', value='open', checked='checked')
+                            span 新規受付
+                    .c-form__checkbox
+                        .ml-2
+                            input(type='checkbox', name='filter', value='open')
+                            span 決済処理中
+                    .c-form__checkbox
+                        .ml-2
+                            input(type='checkbox', name='filter', value='open')
+                            span 入金待ち
+                    .c-form__checkbox
+                        .ml-2
+                            input(type='checkbox', name='filter', value='open')
+                            span 入金済み
+                    .c-form__checkbox
+                        .ml-2
+                            input(type='checkbox', name='filter', value='open')
+                            span キャンセル
+                    .c-form__checkbox
+                        .ml-2
+                            input(type='checkbox', name='filter', value='open')
+                            span 取り寄せ中
+                    .c-form__checkbox
+                        .ml-2
+                            input(type='checkbox', name='filter', value='open')
+                            span 発送済み
+                    .c-form__checkbox
+                        .ml-2
+                            input(type='checkbox', name='filter', value='open')
+                            span 購入処理中
+            .row
+                .col-12
+                    include /assets/tmpl/components/subAction.pug
+                    +c-subAction("詳細検索","is-active")
+        +b.c-subContents
+            .row
+                .col-7
+                    .mb-4
+                        label 注文者名
+                        form.c-form
+                            .c-form__text
+                                input(type="text")
+                .col-5
+                    .mb-4
+                        label.col-12 性別
+                        .c-form__checkbox
+                            .ml-5
+                                input(type='checkbox', name='filter', value='open')
+                                span 男性
+                        .c-form__checkbox
+                            .ml-2
+                                input(type='checkbox', name='filter', value='open')
+                                span 女性
+            .row
+                .col-7
+                    .mb-4
+                        label 注文者名（フリガナ）
+                        form.c-form
+                            .c-form__text
+                                input(type="text")
+                .col-5
+                    .mb-4
+                        label.col-12 支払方法
+                        .c-form__checkbox
+                            .ml-5
+                                input(type='checkbox', name='filter', value='open')
+                                span 郵便振替
+                        .c-form__checkbox
+                            .ml-2
+                                input(type='checkbox', name='filter', value='open')
+                                span 現金書留
+                        .c-form__checkbox
+                            .ml-2
+                                input(type='checkbox', name='filter', value='open')
+                                span 銀行振込
+                        .c-form__checkbox
+                            .ml-2
+                                input(type='checkbox', name='filter', value='open')
+                                span 代金引換
+            .row
+                .col-7
+                    .mb-4
+                        label 注文者会社名
+                        form.c-form
+                            .c-form__text
+                                input(type="text")
+
+            //    .col-5
+            //        .mb-4
+            //            label 受注日
+                        //form.c-form--inline
+                        //    .c-form__date--regular
+                        //        input(type='date', placeholder='2000/01/01')
+                        //    span.c-form__sign 〜
+                        //    .c-form__date--regular
+                        //        input(type='date', placeholder='2000/01/01')
