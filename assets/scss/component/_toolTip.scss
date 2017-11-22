@@ -1,0 +1,34 @@
+@import "../library/_variable";
+@import "../mixin/_media";
+
+/*
+ツールチップ
+
+カーソルをホバーすると表示され、用語や操作方法を解説します。
+`.c-toolTip`ではBlockとアイコンのみのスタイルを定義し、ツールチップの実装はBootstrapにて行います。
+
+sg-wrapper:
+  <script>
+    toolTip();
+  </script>
+<sg-wrapper-content/>
+
+Markup:
+.c-toolTip(data-toggle="tooltip" data-placement="top" title="ここに用語や操作方法の説明を記述します。")
+  span.c-toolTip__title 商品ID
+  i.fa.fa-question-circle.c-toolTip__icon
+
+Styleguide 17.0
+*/
+
+.c-toolTip {
+  display: inline-block;
+  cursor: pointer;
+  &__title {
+  }
+  &__icon {
+    display: inline-block;
+    margin-left: 5px;
+    font-size: 20px;
+  }
+}
