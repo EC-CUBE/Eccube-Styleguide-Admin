@@ -113,10 +113,10 @@ block outsideBlock
                             label 受注日
                         form.c-form--inline
                             .c-form__date--regular.ml-3
-                                input(type='date', placeholder='2000/01/01')
+                                input(type='date', value='2000-01-01')
                             span.c-form__sign.ml-2 〜
                             .c-form__date--regular.ml-2
-                                input(type='date', placeholder='2000/01/01')
+                                input(type='date', value='2000-01-01')
             .row
                 .col-6
                     .mb-2
@@ -130,10 +130,10 @@ block outsideBlock
                             label 受注日
                         form.c-form--inline
                             .c-form__date--regular.ml-3
-                                input(type='date', placeholder='2000/01/01')
+                                input(type='date', value='2000-01-01')
                             span.c-form__sign.ml-2 〜
                             .c-form__date--regular.ml-2
-                                input(type='date', placeholder='2000/01/01')
+                                input(type='date', value='2000-01-01')
             .row
                 .col-6
                     .mb-2
@@ -147,10 +147,10 @@ block outsideBlock
                             label 受注ID
                         form.c-form--inline
                             .c-form__date--regular.ml-3
-                                input(type='date', placeholder='2000/01/01')
+                                input(type='date', value='2000-01-01')
                             span.c-form__sign.ml-2 〜
                             .c-form__date--regular.ml-2
-                                input(type='date', placeholder='2000/01/01')
+                                input(type='date', value='2000-01-01')
             .row
                 .col-6
                     .mb-2
@@ -261,7 +261,8 @@ block outsideBlock
                     td
                         .c-tags
                             span.c-tag.c-tag--black 入金待ち
-                    td &nbsp;
+                    td
+                        i.fa.fa-commenting
                     td &nbsp;
                 tr
                     td
@@ -281,7 +282,8 @@ block outsideBlock
                     td
                         .c-tags
                             span.c-tag.c-tag--black キャンセル
-                    td &nbsp;
+                    td
+                        i.fa.fa-commenting
                     td &nbsp;
                 tr
                     td
@@ -319,7 +321,8 @@ block outsideBlock
                     td
                         .c-tags
                             span.c-tag.c-tag--black 発送済み
-                    td &nbsp;
+                    td
+                        i.fa.fa-commenting
                     td &nbsp;
                 tr
                     td
@@ -357,7 +360,8 @@ block outsideBlock
                     td
                         .c-tags
                             span.c-tag.c-tag--black 購入処理中
-                    td &nbsp;
+                    td
+                        i.fa.fa-commenting
                     td &nbsp;
                 tr
                     td
@@ -417,7 +421,8 @@ block outsideBlock
                     td
                         .c-tags
                             span.c-tag.c-tag--black 発送済み
-                    td &nbsp;
+                    td
+                        i.fa.fa-commenting
                     td &nbsp;
             include /assets/tmpl/components/pagination.pug
             +c-pagenation
