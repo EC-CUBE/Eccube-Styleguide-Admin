@@ -210,10 +210,214 @@ block outsideBlock
                                 i.fa.fa-cog
                                 span CSV出力設定
     .c-block
-        // TODO: 仮で記述しているため書き直しが必要 #35
+        // TODO: 修正が必要
         .c-block__contents--noPadding
-            include /assets/tmpl/components/table.pug
-            +c-table--customer
-
+            table.c-customerTable
+                thead.c-customerTable__tableHeader
+                    th
+                        input(type='checkbox', name='filter', value='open')
+                    th 受注日時
+                    th 注文番号
+                    th お名前
+                    th 支払方法
+                    th 購入金額（円）
+                    th 出荷番号
+                    th 対応状況
+                    th メモ／問合せ
+                    th &nbsp;
+                tr
+                    td
+                        input(type='checkbox', name='filter', value='open')
+                    td 2017/09/13
+                        br
+                        | 21:23
+                    td
+                        a(href='#') 127645
+                    td 山田はなこ
+                    td 郵便振替
+                    td 53,920
+                    td
+                        a(href='#') 12345
+                        br
+                        a(href='#') 12346
+                    td
+                        .c-tags
+                            span.c-tag.c-tag--black 新規受付
+                    td &nbsp;
+                    td &nbsp;
+                tr
+                    td
+                        input(type='checkbox', name='filter', value='open')
+                    td 2017/09/13
+                        br
+                        | 21:23
+                    td
+                        a(href='#') 127645
+                    td 山田はなこ
+                    td 郵便振替
+                    td 53,920
+                    td
+                        a(href='#') 12432
+                    td
+                        .c-tags
+                            span.c-tag.c-tag--black 入金待ち
+                    td &nbsp;
+                    td &nbsp;
+                tr
+                    td
+                        input(type='checkbox', name='filter', value='open')
+                    td 2017/09/13
+                        br
+                        | 21:23
+                    td
+                        a(href='#') 127645
+                    td 山田はなこ
+                    td 郵便振替
+                    td 53,920
+                    td
+                        a(href='#') 12345
+                        br
+                        a(href='#') 12346
+                    td
+                        .c-tags
+                            span.c-tag.c-tag--black キャンセル
+                    td &nbsp;
+                    td &nbsp;
+                tr
+                    td
+                        input(type='checkbox', name='filter', value='open')
+                    td 2017/09/13
+                        br
+                        | 21:23
+                    td
+                        a(href='#') 127645
+                    td 山田はなこ
+                    td 郵便振替
+                    td 53,920
+                    td
+                        a(href='#') 15342
+                    td
+                        .c-tags
+                            span.c-tag.c-tag--black 入金済み
+                    td &nbsp;
+                    td &nbsp;
+                tr
+                    td
+                        input(type='checkbox', name='filter', value='open')
+                    td 2017/09/13
+                        br
+                        | 21:23
+                    td
+                        a(href='#') 127645
+                    td 山田はなこ
+                    td 郵便振替
+                    td 53,920
+                    td
+                        a(href='#') 12345
+                        br
+                        a(href='#') 12346
+                    td
+                        .c-tags
+                            span.c-tag.c-tag--black 発送済み
+                    td &nbsp;
+                    td &nbsp;
+                tr
+                    td
+                        input(type='checkbox', name='filter', value='open')
+                    td 2017/09/13
+                        br
+                        | 21:23
+                    td
+                        a(href='#') 127645
+                    td 山田はなこ
+                    td 郵便振替
+                    td 53,920
+                    td
+                        a(href='#') 12345
+                        br
+                        a(href='#') 12346
+                    td
+                        .c-tags
+                            span.c-tag.c-tag--black 取り寄せ中
+                    td &nbsp;
+                    td &nbsp;
+                tr
+                    td
+                        input(type='checkbox', name='filter', value='open')
+                    td 2017/09/13
+                        br
+                        | 21:23
+                    td
+                        a(href='#') 127645
+                    td 山田はなこ
+                    td 郵便振替
+                    td 53,920
+                    td
+                        a(href='#') -
+                    td
+                        .c-tags
+                            span.c-tag.c-tag--black 購入処理中
+                    td &nbsp;
+                    td &nbsp;
+                tr
+                    td
+                        input(type='checkbox', name='filter', value='open')
+                    td 2017/09/13
+                        br
+                        | 21:23
+                    td
+                        a(href='#') 127645
+                    td 山田はなこ
+                    td 郵便振替
+                    td 53,920
+                    td
+                        a(href='#') 12345
+                        br
+                        a(href='#') 12346
+                    td
+                        .c-tags
+                            span.c-tag.c-tag--black 決済処理中
+                    td &nbsp;
+                    td &nbsp;
+                tr
+                    td
+                        input(type='checkbox', name='filter', value='open')
+                    td 2017/09/13
+                        br
+                        | 21:23
+                    td
+                        a(href='#') 127645
+                    td 山田はなこ
+                    td 郵便振替
+                    td 53,920
+                    td
+                        a(href='#') 12345
+                        br
+                        a(href='#') 12346
+                    td
+                        .c-tags
+                            span.c-tag.c-tag--black 発送済み
+                    td &nbsp;
+                    td &nbsp;
+                tr
+                    td
+                        input(type='checkbox', name='filter', value='open')
+                    td 2017/09/13
+                        br
+                        | 21:23
+                    td
+                        a(href='#') 127645
+                    td 山田はなこ
+                    td 郵便振替
+                    td 53,920
+                    td
+                        a(href='#') 12345
+                        br
+                        a(href='#') 12346
+                    td
+                        .c-tags
+                            span.c-tag.c-tag--black 発送済み
+                    td &nbsp;
+                    td &nbsp;
             include /assets/tmpl/components/pagination.pug
             +c-pagenation
