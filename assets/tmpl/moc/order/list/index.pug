@@ -55,15 +55,16 @@ block outsideBlock
                     +c-subAction("詳細検索","is-active")
         +b.c-subContents
             .row
-                .col-7
+                .col-6
                     .mb-4
                         label 注文者名
                         form.c-form
                             .c-form__text
                                 input(type="text")
-                .col-5
+                .col-6
                     .mb-4
-                        label.col-12 性別
+                        .col-12
+                            label 性別
                         .c-form__checkbox
                             .ml-5
                                 input(type='checkbox', name='filter', value='open')
@@ -73,15 +74,16 @@ block outsideBlock
                                 input(type='checkbox', name='filter', value='open')
                                 span 女性
             .row
-                .col-7
+                .col-6
                     .mb-4
                         label 注文者名（フリガナ）
                         form.c-form
                             .c-form__text
                                 input(type="text")
-                .col-5
+                .col-6
                     .mb-4
-                        label.col-12 支払方法
+                        .col-12
+                            label 支払方法
                         .c-form__checkbox
                             .ml-5
                                 input(type='checkbox', name='filter', value='open')
@@ -99,19 +101,119 @@ block outsideBlock
                                 input(type='checkbox', name='filter', value='open')
                                 span 代金引換
             .row
-                .col-7
+                .col-6
                     .mb-4
                         label 注文者会社名
                         form.c-form
                             .c-form__text
                                 input(type="text")
+                .col-6
+                    .mb-4
+                        .col-12
+                            label 受注日
+                        form.c-form--inline
+                            .c-form__date--regular.ml-3
+                                input(type='date', placeholder='2000/01/01')
+                            span.c-form__sign.ml-2 〜
+                            .c-form__date--regular.ml-2
+                                input(type='date', placeholder='2000/01/01')
+            .row
+                .col-6
+                    .mb-2
+                        label 注文者会社名
+                        form.c-form
+                            .c-form__text
+                                input(type="text")
+                .col-6
+                    .mb-2
+                        .col-12
+                            label 受注日
+                        form.c-form--inline
+                            .c-form__date--regular.ml-3
+                                input(type='date', placeholder='2000/01/01')
+                            span.c-form__sign.ml-2 〜
+                            .c-form__date--regular.ml-2
+                                input(type='date', placeholder='2000/01/01')
+            .row
+                .col-6
+                    .mb-2
+                        label メールアドレス
+                        form.c-form
+                            .c-form__text
+                                input(type="text")
+                .col-6
+                    .mb-2
+                        .col-12
+                            label 受注ID
+                        form.c-form--inline
+                            .c-form__date--regular.ml-3
+                                input(type='date', placeholder='2000/01/01')
+                            span.c-form__sign.ml-2 〜
+                            .c-form__date--regular.ml-2
+                                input(type='date', placeholder='2000/01/01')
+            .row
+                .col-6
+                    .mb-2
+                        label 電話番号
+                        form.c-form
+                            .c-form__text
+                                input(type="text")
+                .col-6
+                    .mb-2
+                        .col-12
+                            label 受注ID
+                        form.c-form--inline
+                            .c-form__text--regular.ml-3
+                                input(type='text')
+                            span.c-form__sign.ml-2 〜
+                            .c-form__text--regular.ml-2
+                                input(type='text')
+            .row
+                .col-6
+                .col-6
+                    .mb-4.ml-3
+                        label 購入商品名
+                        form.c-form
+                            .c-form__text
+                                input(type="text")
+            .row
+                .col-12
+                    .text-center
+                        button.c-button--regular.c-button--normal 検索条件クリア
+        +e.contents
+            .row
+                .mb-4
+                    .col-12
+                        a.c-button--regular.c-button--conversion(href='') 検索
+            .row
+                .col-7
+                    label 一括操作
+                    button.c-button--regular.c-button--normal.ml-2 メールする
+                    button.c-button--regular.c-button--normal.ml-2 帳票出力
+                    button.c-button--regular.c-button--delete.ml-2 削除
+                    form.c-form--inline.ml-2
+                        .c-form__select--small
+                            select
+                                option 対応状況の変更
+                    button.c-button--regular.c-button--normal 決定
+                .col-5
+                    .text-left
+                        form.c-form--inline
+                            .c-form__select--small
+                                select
+                                    option 10件
+                        .c-tab--regular
+                            .c-tab__item
+                                i.fa.fa-cloud-download
+                                span CSVダウンロード
+                            .c-tab__item
+                                i.fa.fa-cog
+                                span CSV出力設定
+    .c-block
+        // TODO: 仮で記述しているため書き直しが必要 #35
+        .c-block__contents--noPadding
+            include /assets/tmpl/components/table.pug
+            +c-table--customer
 
-            //    .col-5
-            //        .mb-4
-            //            label 受注日
-                        //form.c-form--inline
-                        //    .c-form__date--regular
-                        //        input(type='date', placeholder='2000/01/01')
-                        //    span.c-form__sign 〜
-                        //    .c-form__date--regular
-                        //        input(type='date', placeholder='2000/01/01')
+            include /assets/tmpl/components/pagination.pug
+            +c-pagenation
