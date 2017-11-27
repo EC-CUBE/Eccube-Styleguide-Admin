@@ -11,8 +11,9 @@ block primaryContents
             +e.titles
                 +b.c-toolTip(data-toggle="tooltip" data-placement="top" title="Tooltip")
                     span.c-toolTip__title 注文概要
-                    i.fa.fa-question-circle(aria-hidden="true")
-                    i.fa.fa-chevron-up(aria-hidden="true")
+                    i.fa.fa-question-circle.c-toolTip__icon(aria-hidden="true")
+            +e.toggle
+                i.fa.fa-chevron-up(aria-hidden="true")
         +e.contents
             .row
                 .col-6
@@ -85,8 +86,9 @@ block primaryContents
             +e.titles
                 +b.c-toolTip(data-toggle="tooltip" data-placement="top" title="Tooltip")
                     span.c-toolTip__title 注文者情報
-                    i.fa.fa-question-circle(aria-hidden="true")
-                    i.fa.fa-chevron-up(aria-hidden="true")
+                    i.fa.fa-question-circle.c-toolTip__icon(aria-hidden="true")
+            +e.toggle
+                i.fa.fa-chevron-up(aria-hidden="true")
         +e.contents
             +b.c-horizontalForm
                 +e.label
@@ -217,15 +219,23 @@ block primaryContents
             +e.titles
                 +b.c-toolTip(data-toggle="tooltip" data-placement="top" title="Tooltip")
                     span.c-toolTip__title 受注商品情報
-                    i.fa.fa-question-circle(aria-hidden="true")
-                    i.fa.fa-chevron-up(aria-hidden="true")
+                    i.fa.fa-question-circle.c-toolTip__icon(aria-hidden="true")
+            +e.toggle
+                i.fa.fa-chevron-up(aria-hidden="true")
         +e.contents
-            a(href="#")
-                button.c-button--regular.c-button--normal(style="margin-right:10px;") 商品を追加
-            a(href="#")
-                button.c-button--regular.c-button--normal(style="margin-right:10px;") その他の明細を追加
-            a(href="#")
-                button.c-button--regular.c-button--normal(style="margin-right:10px;") 計算結果の更新
+            .row
+                .col-12
+                    .mb-4
+                        .row
+                            .col-10
+                                a(href="#")
+                                    button.c-button--regular.c-button--normal(style="margin-right:10px;") 商品を追加
+                                a(href="#")
+                                    button.c-button--regular.c-button--normal(style="margin-right:10px;") その他の明細を追加
+                            .col-2.text-right
+                                a(href="#")
+                                button.c-button--regular.c-button--normal(style="margin-right:10px;") 計算結果の更新
+            // テーブルの幅を直す
             table.c-table--mail
                 thead.c-table--mail__tableHeader
                     th 商品名・コード
@@ -249,11 +259,11 @@ block primaryContents
                                 input(type="text")
                     td
                         form.c-form
-                            .c-form__text--extrasmall
+                            .c-form__text--extraSmall
                                 input(type="text")
                     td
                         form.c-form
-                            .c-form__text--extraExtrasmall
+                            .c-form__text--smallest
                                 input(type="text")
                     td
                         |
@@ -273,11 +283,11 @@ block primaryContents
                                 input(type="text")
                     td
                         form.c-form
-                            .c-form__text--extrasmall
+                            .c-form__text--extraSmall
                                 input(type="text")
                     td
                         form.c-form
-                            .c-form__text--extraExtrasmall
+                            .c-form__text--smallest
                                 input(type="text")
                     td
                         |
@@ -297,11 +307,11 @@ block primaryContents
                                 input(type="text")
                     td
                         form.c-form
-                            .c-form__text--extrasmall
+                            .c-form__text--extraSmall
                                 input(type="text")
                     td
                         form.c-form
-                            .c-form__text--extraExtrasmall
+                            .c-form__text--smallest
                                 input(type="text")
                     td
                         |
@@ -309,44 +319,110 @@ block primaryContents
                         | (税込)
                     td
                         i.fa.fa-close(aria-hidden="true")
-            .row
+            .row.text-right
                 .col-12
                     .mb-2
                         .row
+                            .col-9
+
                             .col-2
                                 label 小計
-                            .col-2
+                            .col-1
                                 span ¥12,000
                     .mb-2
                         .row
+                            .col-9
+
                             .col-2
                                 label 内値引き
-                            .col-2
+                            .col-1
                                 span -¥500
                     .mb-2
                         .row
+                            .col-9
+
                             .col-2
                                 label 内送料
-                            .col-2
+                            .col-1
                                 span ¥0
                     .mb-2
                         .row
+                            .col-9
+
                             .col-2
                                 label 内手数料
-                            .col-2
+                            .col-1
                                 span ¥0
-            .row
+            hr
+            .row.text-right
                 .col-12
                     .mb-2
                         .row
+                            .col-9
+
                             .col-2
                                 label 合計
-                            .col-2
+                            .col-1
                                 span ¥11,500
                     .mb-2
                         .row
+                            .col-9
+
                             .col-2
                                 label お支払い合計
-                            .col-2
+                            .col-1
                                 span ¥11,500
+    +b.c-block
+        +e.heading
+            +e.titles
+                +b.c-toolTip(data-toggle="tooltip" data-placement="top" title="Tooltip")
+                    span.c-toolTip__title メール配信履歴
+            +e.toggle
+                i.fa.fa-chevron-up(aria-hidden="true")
+        +e.contents
+            table.c-table--mail
+                thead.c-table--mail__tableHeader
+                    th 配信日
+                    th テンプレート
+                    th 件名
+                tr
+                    td 2017/12/03
+                    td お問い合わせを受け付けました
+                    td
+                        a(href='#') お問い合わせを受け付けました
+                tr
+                    td 2017/12/01
+                    td ご注文ありがとうございます
+                    td
+                        a(href='#') ご注文ありがとうございます
+            .row
+                .col-12.text-center
+                    a(href="#")
+                        button.c-button--regular.c-button--normal メールの新規作成
+    +b.c-block
+        +e.heading
+            +e.titles
+                +b.c-toolTip(data-toggle="tooltip" data-placement="top" title="Tooltip")
+                    span.c-toolTip__title ショップ用メモ欄
+                    i.fa.fa-question-circle.c-toolTip__icon(aria-hidden="true")
+            +e.toggle
+                i.fa.fa-chevron-up(aria-hidden="true")
+        +e.contents
+            form.c-form
+                .c-form__text
+                    textarea(rows='9', placeholder='テキスト')
+block conversionArea
+    +b.c-conversionArea
+        +e.container
+            .row
+                .col-12
+                    .mt-2
+                        .row
+                            .col-6.text-left
+                                i.fa.fa-backward(aria-hidden="true")
+                                span 受注マスター
+                            .col-6.text-right
+                                a(href="#")
+                                    button.c-button--regular.c-button--conversion 受注情報を登録
+
 
