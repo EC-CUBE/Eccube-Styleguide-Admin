@@ -170,11 +170,8 @@ block secondaryContents
             +e.toggle
                 i.fa.fa-angle-up
         +e.contents
-            +b.FORM.c-search
-                +e.form
-                    input(type='text' placeholder='カテゴリ検索')
-                +e.A.btn
-                    i.fa.fa-search
+            include /assets/tmpl/components/searchBox.pug
+            +c-searchBox
             include /assets/tmpl/components/category.pug
             +c-categoryRegister
 

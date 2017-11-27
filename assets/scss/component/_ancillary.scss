@@ -1,0 +1,101 @@
+@import "../library/_variable";
+@import "../mixin/_media";
+
+/*
+サブアクションボタン
+
+`.c-subAction`に`.is-active`クラスを付与することでアクティブ状態のスタイルを適用することが出来ます。
+
+Markup:
+include /assets/tmpl/components/subAction.pug
++c-subAction("すべてのタグを表示")
++c-subAction("すべてのタグを表示","is-active")
+
+Styleguide 20.0
+*/
+
+.c-subAction {
+  &__btn {
+    display: inline-block;
+    margin-bottom: 15px;
+    text-decoration: none;
+    color: #333;
+
+    &:hover {
+      text-decoration: none;
+      color: #333;
+    }
+
+    &::before {
+      content: "\f196";
+      display: inline-block;
+      margin-right: .5em;
+      font-family: FontAwesome;
+    }
+
+    span {
+      margin-left: 5px;
+      font-weight: bold;
+    }
+  }
+  &.is-active {
+    .c-subAction__btn::before {
+      content: "\f147";
+      display: inline-block;
+      margin-right: .5em;
+      font-family: FontAwesome;
+    }
+  }
+}
+
+
+/*
+サブコンテンツ
+
+メインとなるコンテンツの補助として存在し、表示/非表示を切り替えることのできるコンテンツです。
+
+Markup:
++b.c-subContents
+  .row
+    .col-6
+      .mb-4
+        label 会員種別
+        form.c-form
+          .c-form__radio
+            input(type="radio" name="filter" value="open" checked="checked")
+            span 仮会員
+          .c-form__radio
+            input(type="radio" name="filter" value="close")
+            span 本会員
+    .col-6
+      .mb-4
+        label 購入商品名
+        form.c-form
+          .c-form__text
+            input(type="text")
+  +e.action
+    button.c-button--regular.c-button--normal 検索条件クリア
+
+Styleguide 20.1
+*/
+.c-subContents {
+  background: $paleBlue100;
+  margin-bottom: 10px;
+  padding: 15px;
+  box-sizing: border-box;
+  position: relative;
+  &::before {
+    content: "";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 10px 10px 10px;
+    border-color: transparent transparent $paleBlue100 transparent;
+    position: absolute;
+    top: -9px;
+    left: 10px;
+  }
+  &__action {
+    text-align: center;
+  }
+}

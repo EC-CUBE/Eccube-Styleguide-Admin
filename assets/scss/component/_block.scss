@@ -5,9 +5,48 @@
 
 コンテンツエリアに配置されます。あるひとつのテーマをもった表示単位であり、
 原則としてタイトルをもちます。ブロック内部にコンテンツやフォームを、テーマにそってまとめます。
+コンテンツエリアである`.c-block__contents`には、左右の余白がない`.c-block__contentscontents--noPadding`と、上下左右の余白がない`.c-block__contentscontents--noPaddingAll`が用意されています。
+
+sg-wrapper:
+<div class="c-contentsArea">
+  <div class="c-contentsArea__cols">
+    <div class="c-contentsArea__primaryCol" style="padding: 20px;">
+      <sg-wrapper-content/>
+    </div>
+  </div>
+</div>
 
 Markup:
-.c-block
++b.c-block
+  +e.heading
+    +e.titles
+      +b.c-toolTip(data-toggle="tooltip" data-placement="top" title="Tooltip")
+        span.c-toolTip__title ブロックタイトル
+        i.fa.fa-question-circle.c-toolTip__icon
+    +e.toggle
+      i.fa.fa-angle-up
+  +e.contents
+    p コンテンツが入ります
++b.c-block
+  +e.heading
+    +e.titles
+      +b.c-toolTip(data-toggle="tooltip" data-placement="top" title="Tooltip")
+        span.c-toolTip__title ブロックタイトル
+        i.fa.fa-question-circle.c-toolTip__icon
+    +e.toggle
+      i.fa.fa-angle-up
+  +e.contents--noPadding
+    p コンテンツが入ります
++b.c-block
+  +e.heading
+    +e.titles
+      +b.c-toolTip(data-toggle="tooltip" data-placement="top" title="Tooltip")
+        span.c-toolTip__title ブロックタイトル
+        i.fa.fa-question-circle.c-toolTip__icon
+    +e.toggle
+      i.fa.fa-angle-up
+  +e.contents--noPaddingAll
+    p コンテンツが入ります
 
 Styleguide 8.0
 */
@@ -27,10 +66,11 @@ Styleguide 8.0
   &__titles {
     display: table-cell;
   }
+  // TODO トグル以外も入るので名前検討
   &__toggle {
     display: table-cell;
-    width: 20px;
-    text-center: right;
+    min-width: 20px;
+    text-align: right;
     vertical-align: middle;
     i {
       font-size: 20px;
@@ -56,9 +96,25 @@ Styleguide 8.0
 
 コンテンツエリア上部に配置されます。ブロックに内包されないコンテンツグループです。
 
+sg-wrapper:
+<div class="c-contentsArea">
+  <sg-wrapper-content/>
+</div>
+
 Markup:
 +b.c-outsideBlock
   +e.contents
+    .row
+      .col-6
+        form.c-form
+          label 会員ID・メールアドレス・お名前
+          .c-form__text
+            input(type="text" placeholder="テキスト")
+      .col-6
+    .row
+      .col-12
+        include /assets/tmpl/components/subAction.pug
+        +c-subAction("詳細検索","is-active")
 
 Styleguide 8.1
 */
@@ -67,38 +123,5 @@ Styleguide 8.1
   width: 100%;
   &__contents {
     padding: 0 15px;
-  }
-}
-
-/*
-ページタイトル
-
-ページタイトルを表示します。
-
-Markup:
-.c-secondaryCol
-
-Styleguide 8.2
-*/
-.c-pageTitle {
-  display: table;
-  margin-bottom: 20px;
-  padding: 15px;
-  width: 100%;
-  background: #fff;
-  &__titles {
-    display: table-cell;
-}
-  &__title {
-    display: inline-block;
-    margin-right: 10px;
-    margin-bottom: 0;
-    font-size: 20px;
-    vertical-align: middle;
-  }
-  &__subTitle {
-    display: inline-block;
-    font-size: 16px;
-    vertical-align: middle;
   }
 }

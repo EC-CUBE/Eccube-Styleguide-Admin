@@ -72,6 +72,9 @@ form.c-form
   span.c-form__sign -
   .c-form__text--extraSmall
     input(type="text")
+form.c-form
+  .c-form__text--smallest
+    input(type="text")
 
 Styleguide 10.1
 */
@@ -88,7 +91,6 @@ Styleguide 10.1
 
   &__text--regular {
     display: inline-block;
-    margin-right: 10px;
     input {
       @include form_text;
       min-width: 250px;
@@ -103,7 +105,6 @@ Styleguide 10.1
   }
   &__text--small {
     display: inline-block;
-    margin-right: 10px;
     input {
       @include form_text;
       max-width: 120px;
@@ -116,7 +117,6 @@ Styleguide 10.1
   }
   &__text--extraSmall {
     display: inline-block;
-    margin-right: 10px;
     input {
       @include form_text;
       max-width: 80px;
@@ -127,9 +127,20 @@ Styleguide 10.1
       max-width: 80px;
     }
   }
+  &__text--smallest {
+    display: inline-block;
+    input {
+      @include form_text;
+      max-width: 50px;
+    }
+    textarea {
+      @include form_text;
+      height: auto;
+      max-width: 50px;
+    }
+  }
   &__sign {
     display: inline-block;
-    margin-right: 3px;
   }
 }
 /*
@@ -327,7 +338,6 @@ Styleguide 10.4
   &__date--regular {
     position: relative;
     display: inline-block;
-    margin-right: 5px;
     min-width: 220px;
     max-width: 220px;
     height: 40px;
@@ -449,7 +459,6 @@ Styleguide 10.5
   &__price--regular {
     display: inline-flex;
     align-items: stretch;
-    margin-right: 5px;
     margin-bottom: 20px;
     border-radius: 4px;
     width: 200px;
@@ -505,7 +514,6 @@ Styleguide 10.6
 .c-form,.c-form--inline {
   &__checkbox {
     display: inline-block;
-    margin-right: 10px;
     input {
       margin-right: .5em;
     }
@@ -532,7 +540,6 @@ Styleguide 10.7
 .c-form,.c-form--inline {
   &__radio {
     display: inline-block;
-    margin-right: 10px;
     input {
       margin-right: .5em;
     }
@@ -605,9 +612,7 @@ Styleguide 10.9
   font-weight: bold;
   color: $blue;
   border-radius: 4px;
-  }
-
-
+}
 
 /*
 ラベルとインプットが水平配置のフォームレイアウト
@@ -616,8 +621,42 @@ Styleguide 10.9
 選択中のタブ`.c-tab__item`に`.is-active`クラスを付与することでアクティブ状態のスタイルを適用することが出来ます。
 
 Markup:
-include /assets/tmpl/components/pagination.pug
-+c-pagenation
++b.c-horizontalForm
+  +e.label
+    .c-toolTip(data-toggle="tooltip" data-placement="top" title="Tooltip")
+      span.c-toolTip__title 商品名
+      i.fa.fa-question-circle.c-toolTip__icon
+  +e.form
+    .row
+      .col-12
+        p 12
++b.c-horizontalForm
+  +e.label
+    .c-toolTip(data-toggle="tooltip" data-placement="top" title="Tooltip")
+      span.c-toolTip__title 商品ID
+      i.fa.fa-question-circle.c-toolTip__icon
+    .c-requiredLabel
+      span 必須
+  +e.form
+    .row
+      .col-12
+        form.c-form
+          .c-form__text
+            input(type="text" placeholder="テキスト")
++b.c-horizontalForm
+  +e.label
+    .c-toolTip(data-toggle="tooltip" data-placement="top" title="Tooltip")
+      span.c-toolTip__title 商品種別
+      i.fa.fa-question-circle.c-toolTip__icon
+    .c-requiredLabel
+      span 必須
+  +e.form
+    .row
+      .col-12
+        form.c-form
+          .c-form__select
+            select
+                option 通常商品
 
 Styleguide 10.10
 */
@@ -631,4 +670,23 @@ Styleguide 10.10
   &__form {
     width: calc(100% - 190px);
   }
+}
+
+/*
+ラベル
+
+Markup:
+form.c-form
+  label 発送済み
+  .c-label
+    span 必須
+ */
+.c-label {
+  display: inline-block;
+  padding: 0.4em 0.8em;
+  border: 1px solid $lightGreen;
+  font-size: 13px;
+  font-weight: bold;
+  color: $lightGreen;
+  border-radius: 4px;
 }

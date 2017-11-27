@@ -8,7 +8,7 @@
 
 Markup:
 +b.HEADER.c-headerBar(style="position: static;")
-  // `style="position: static;` はスタイルガイドでの表示の都合上付与しています。
+  // `style="position: static;` はスタイルガイドにおけるサンプル表示の都合上付与しています。
   +e.container
     +e.logo
         img(src="/img/logo@2x.png")

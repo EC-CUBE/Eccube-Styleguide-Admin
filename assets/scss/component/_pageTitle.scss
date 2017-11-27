@@ -1,0 +1,43 @@
+@import "../library/_variable";
+@import "../mixin/_media";
+
+/*
+ページタイトル
+
+コンテンツの内容を示すタイトルです。メインカラム上部に表示されます。
+
+sg-wrapper:
+<div class="c-contentsArea">
+  <sg-wrapper-content/>
+  <div class="c-contentsArea__cols"></div>
+</div>
+
+Markup:
+include /assets/tmpl/components/pageTitle.pug
++c-pageTitle("ページタイトル","親カテゴリ名")
+
+Styleguide 13.0
+*/
+
+.c-pageTitle {
+  display: table;
+  margin-bottom: 20px;
+  padding: 15px;
+  width: 100%;
+  background: #fff;
+  &__titles {
+    display: table-cell;
+  }
+  &__title {
+    display: inline-block;
+    margin-right: 10px;
+    margin-bottom: 0;
+    font-size: 20px;
+    vertical-align: middle;
+  }
+  &__subTitle {
+    display: inline-block;
+    font-size: 16px;
+    vertical-align: middle;
+  }
+}
