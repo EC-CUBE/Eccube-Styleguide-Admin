@@ -1,0 +1,41 @@
+@import "../library/_variable";
+@import "../mixin/_media";
+
+/*
+パンくずリスト
+
+タブサイズは `regular` `small` の2種類定義されています。
+選択中のタブ`.c-tab__item`に`.is-active`クラスを付与することでアクティブ状態のスタイルを適用することが出来ます。
+
+Markup:
+.c-breadcrumbs
+  a(href="") すべてのカテゴリ
+  a カテゴリA
+
+Styleguide 15.0
+*/
+.c-breadcrumbs {
+  a:not(:last-of-type) {
+    font-size: 14px;
+    font-weight: bold;
+    color: $blue;
+
+    &:hover {
+      text-decoration: none;
+      opacity: .5;
+    }
+    &:after {
+      content: ">";
+      display: inline-block;
+      margin: 0 .5em;
+      color: $mineShaft;
+      font-weight: normal;
+    }
+  }
+  a:last-of-type {
+    font-size: 14px;
+    font-weight: bold;
+    color: $mineShaft;
+
+  }
+}

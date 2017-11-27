@@ -1,6 +1,9 @@
 //Bootstrap ツールチップ
-$(function () {
-    $('[data-toggle="tooltip"]').tooltip()
-    console.log("hoeg")
-})
+var toolTip = function(){
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+        console.log("hoeg")
+    })
+};
 
+toolTip();

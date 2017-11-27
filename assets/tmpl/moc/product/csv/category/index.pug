@@ -1,0 +1,56 @@
+extends /assets/tmpl/moc/layout/_layout-2col.pug
+block pageTitle
+    +b.c-pageTitle
+        +e.titles
+            +e.H2.title カテゴリCSV登録
+            +e.SPAN.subTitle 商品管理
+
+//- TODO マークアップ見直し必要
+block primaryContents
+    +b.c-block
+        +e.heading
+            +e.titles
+                +b.c-toolTip(data-toggle="tooltip" data-placement="top" title="Tooltip")
+                    span.c-toolTip__title CSVファイルをアップロード
+                    i.fa.fa-question-circle.c-toolTip__icon
+        +e.contents
+            .row.mb-2
+                .col-2
+                    span CSVファイル選択
+                .col-10
+                    a.c-button--small.c-button--normal(href="#") ファイルを選択
+            .row
+                .col-2
+                    span &nbsp;
+                .col-10
+                    a.c-button--regular.c-button--conversion(href="#") 一括登録を実行
+    +b.c-block
+        +e.heading
+            +e.titles
+                +b.c-toolTip(data-toggle="tooltip" data-placement="top" title="Tooltip")
+                    span.c-toolTip__title カテゴリ登録CSVファイルフォーマット
+                    i.fa.fa-question-circle.c-toolTip__icon
+            +e.toggle
+                a(href="#").c-button--small.c-button--normal 雛形ファイルダウンロード
+        +e.contents
+            table.c-csvTable
+                tr
+                    th カテゴリID
+                    td 新規登録時は未設定
+                        br
+                        | 既存商品の更新は商品IDを設定
+                tr
+                    th 公開ステータス(ID)
+                        .c-requiredLabel
+                            span 必須
+                    td
+                tr
+                    th 商品名
+                        .c-requiredLabel
+                            span 必須
+                    td
+                tr
+                    th 親カテゴリID
+                        .c-requiredLabel
+                            span 必須
+                    td
