@@ -15,16 +15,11 @@ const pug = require("pug")
 const pugMiddleWare = (req, res, next) => {
 
     const basedir = process.cwd();
-    const requestPath = getPugTemplatePath(basedir,req)
-    // console.log(url.parse(req.url).pathname)
+    const pugPath = getPugTemplatePath(basedir,req)
 
-    if (
-        !requestPath ||
-        path.parse(requestPath).ext !== ".html"
-    ) {
+    if ( pugPath === false ) {
         return next();
     }
-    const pugPath = requestPath.replace('.html', '.pug');
 
     try{
         console.log("[BS] try to file "+ pugPath)
@@ -44,12 +39,15 @@ const pugMiddleWare = (req, res, next) => {
 }
 
 const getPugTemplatePath = (baseDir,req)=>{
-    const requestPath = url.parse(req.url).pathname;
-    if(requestPath.substr(0,4) !== "/moc"){
-        return null;
+    let requestPath = url.parse(req.url).pathname.replace(".html",".pug");
+    if (
+      path.parse(requestPath).ext &&
+      path.parse(requestPath).ext !== ".pug"
+    ) {
+      return false;
     }
-    const suffix = path.parse(requestPath).ext ? "": "index.html"
-    return path.join(baseDir,"assets/tmpl",requestPath,suffix);
+    const suffix = path.parse(requestPath).ext ? "": "index.pug"
+    return path.join(baseDir,"assets/tmpl/moc/",requestPath,suffix);
 }
 
 
@@ -70,9 +68,14 @@ gulp.task("server",()=> {
     // });
 
   browserSync({
-    proxy:"localhost:4000",
-    middleware: [pugMiddleWare],
-    serveStatic:["./public",],
+    // proxy:"localhost:4000",
+    // serveStatic:["./public",],
+    server:{
+        middleware: [pugMiddleWare],
+        baseDir:"public",
+        index: "index.html",
+    },
+    // middleware: [pugMiddleWare],
     open:true,
 
   })
