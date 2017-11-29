@@ -32,7 +32,7 @@ Markup:
           i.fa.fa-inbox(aria-hidden="true")
           span 受注管理
         ul.collapse#orderManagement
-          li: a(href="/moc/order/list") 受注一覧
+          li: a(href="/moc/order/master") 受注一覧
           li: a(href="/moc/order/management") 受注管理
       +e.LI.navItem
         +e.A.navItemTitle.collapsed(data-toggle="collapse" href="#shipManagement" aria-expanded="false" aria-controls="shipManagement")
