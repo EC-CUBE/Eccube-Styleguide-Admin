@@ -149,7 +149,7 @@ block primaryContents
                             td 6
                             td 8,000
                 .d-block.text-center.text-center
-                    button(type="button").btn.btn-outline-dark この商品の規格管理
+                    a(href="/product/register/standard").btn.btn-outline-dark この商品の規格管理
     .card.rounded.border-0.mb-4
         .card-header
             .row
@@ -283,14 +283,16 @@ block secondaryContents
 block conversionArea
     +b.c-conversionArea
         +e.container
-            +e.leftBlock
-                +e.leftBlockItem
-                    a(href="").c-beseLink
-                        i.fa.fa-backward
-                        span 商品マスター
-            +e.rightBlock
-                +e.rightBlockItem
-                    include /assets/tmpl/components/toggleSwitch.pug
-                    +c-toggleSwitch
-                +e.rightBlockItem
-                    button.c-button--conversion.c-button--regular 更新
+            .row.justify-content-between.align-items-center
+                .col-6
+                    +e.leftBlockItem
+                        a(href="").c-beseLink
+                            i.fa.fa-backward(aria-hidden="true")
+                            span 商品マスター
+                .col-6
+                    .row.align-items-center.justify-content-end
+                        .col-auto
+                            include /assets/tmpl/components/toggleSwitch.pug
+                            +c-toggleSwitch
+                        .col-auto
+                            button(type="submit").btn.btn-primary.px-5 更新
