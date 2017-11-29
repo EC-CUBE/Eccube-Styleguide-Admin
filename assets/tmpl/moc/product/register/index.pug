@@ -191,43 +191,9 @@ block secondaryContents
                             input.form-control(type="search" placeholder="カテゴリ検索" aria-label="Search")
                         .col-auto
                             button.btn.btn-light(type="submit"): i.fa.fa-search
-                .c-category--register
-                    ul
-                        li
-                            input(type='checkbox')
-                            label.c-categoryLayer1 カテゴリA
-                            ul
-                                li
-                                    input(type='checkbox')
-                                    label.c-categoryLayer2 カテゴリA-a
-                                li
-                                    input(type='checkbox')
-                                    label.c-categoryLayer2 カテゴリA-b
-                                li
-                                    input(type='checkbox')
-                                    label.c-categoryLayer2 カテゴリA-c
-                                    ul
-                                        li
-                                            input(type='checkbox')
-                                            label.c-categoryLayer3 カテゴリA-c-1
-                                        li
-                                            input(type='checkbox')
-                                            label.c-categoryLayer3 カテゴリA-c-2
-                                            ul
-                                                li
-                                                    input(type='checkbox')
-                                                    label.c-categoryLayer3 カテゴリA-c-2-1
-                                                li
-                                                    input(type='checkbox')
-                                                    label.c-categoryLayer3 カテゴリA-c-2-2
-                    ul
-                        li
-                            input(type='checkbox')
-                            label.c-categoryLayer1 カテゴリB
-                    ul
-                        li
-                            input(type='checkbox')
-                            label.c-categoryLayer1 カテゴリC
+                include /assets/tmpl/components/category.pug
+                +c-category
+
                 .d-block.text-center
                     button(type="button").btn.btn-block.btn-outline-dark カテゴリの追加・編集
 
