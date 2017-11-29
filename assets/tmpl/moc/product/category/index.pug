@@ -4,19 +4,17 @@ block outsideBlock
         +e.contents.mb-2
             .row
                 .col-6
-                    .d-inline-block.mr-1
-                        a(href="").card-link すべてのカテゴリ &nbsp;
-                    .d-inline-block.mr-2
-                        i.fa.fa-angle-right.ml-1
-                    .d-inline-block
-                        span カテゴリA
-
+                    nav(aria-label='breadcrumb', role='navigation')
+                        ol.breadcrumb
+                            li.breadcrumb-item
+                                a(href='#') すべてのカテゴリ
+                            li.breadcrumb-item.active(aria-current='page') カテゴリA
                 .col-6.text-right
                     .btn-group(role='group')
-                        button.btn.btn-outline-dark.bg-white(type='button')
+                        button.btn.btn-light.border.border-dark(type='button')
                             i.fa.fa-cloud-download.mr-1
                             span CSVダウンロード
-                        button.btn.btn-outline-dark.bg-white(type='button')
+                        button.btn.btn-light.border.border-dark(type='button')
                             i.fa.fa-cog.mr-1
                             span CSV出力設定
 
