@@ -4,8 +4,8 @@ block pageTitle
     +c-pageTitle("タグ管理","商品管理")
 
 block primaryContents
-    .c-block
-        .c-block__contents--noPaddingAll
+    .card.rounded.border-0.mb-4
+        .card-body.p-0
             include /assets/tmpl/components/table.pug
             +c-sortTable("タグA","タグB","タグC")
     p 項目の順番はドラッグ＆ドロップでも変更可能です。

@@ -4,40 +4,44 @@ block pageTitle
     +c-pageTitle("規格管理","商品管理")
 
 block primaryContents
-    +b.c-block
-        +e.heading
-            +e.titles
-                span 基本設定
-        +e.contents
-            +b.c-horizontalForm
-                +e.label
-                    .c-toolTip(data-toggle="tooltip" data-placement="top" title="Tooltip")
-                        span.c-toolTip__title 表示名
-                        i.fa.fa-question-circle.c-toolTip__icon
-                    .c-requiredLabel
-                        span 必須
-                +e.form
-                    .row
-                        .col-12
-                            form.c-form
-                                .c-form__text
-                                    input(type="text" placeholder="テキスト")
-            +b.c-horizontalForm
-                +e.label
-                    .c-toolTip(data-toggle="tooltip" data-placement="top" title="Tooltip")
-                        span.c-toolTip__title 管理名
-                        i.fa.fa-question-circle.c-toolTip__icon
-                    .c-requiredLabel
-                        span 必須
-                +e.form
-                    .row
-                        .col-12
-                            form.c-form
-                                .c-form__text
-                                    input(type="text" placeholder="テキスト")
-
-    .c-block
-        .c-block__contents--noPaddingAll
+    .card.rounded.border-0.mb-4
+        .card-header
+            .row
+                .col-8
+                    .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
+                        span.card-title 基本設定
+                            i.fa.fa-question-circle.ml-1
+                .col-4.text-right
+                    a(data-toggle="collapse" href="#basicConfig" aria-expanded="false" aria-controls="basicConfig")
+                        i.fa.fa-angle-up
+        .collapse(id="basicConfig").show
+            .card-body
+                .row.mb-3
+                    .col-3
+                        .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
+                            span 表示名
+                            i.fa.fa-question-circle.ml-1
+                            span.badge.badge-primary.ml-1 必須
+                    .col-9
+                        form
+                            .form-group
+                                input(type="text" placeholder="テキスト").form-control
+                .row.mb-3
+                    .col-3
+                        .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
+                            span 管理名
+                            i.fa.fa-question-circle.ml-1
+                            span.badge.badge-primary.ml-1 必須
+                    .col-9
+                        form
+                            .form-group
+                                input(type="text" placeholder="テキスト").form-control
+    .card.rounded.border-0.mb-4
+        .card-header
+            .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
+                span.card-title 基本設定
+                    i.fa.fa-question-circle.ml-1
+        .card-body.p-0
             include /assets/tmpl/components/table
-            +c-sortTable("100cm","120cm","130cm")
+            +c-sortTable("靴サイズ［表示名：サイズ］（4）","規格B［表示名：サイズ］（3）","規格C［表示名：サイズ］（12）")
     p 項目の順番はドラッグ＆ドロップでも変更可能です。

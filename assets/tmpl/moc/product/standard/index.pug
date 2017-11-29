@@ -4,9 +4,8 @@ block pageTitle
     +c-pageTitle("規格管理","商品管理")
 
 block primaryContents
-
-    .c-block
-        +e.contents--noPaddingAll
+    .card.rounded.border-0.mb-4
+        .card-body.p-0
             include /assets/tmpl/components/table
             +c-sortTable("靴サイズ［表示名：サイズ］（4）","規格B［表示名：サイズ］（3）","規格C［表示名：サイズ］（12）")
     p 項目の順番はドラッグ＆ドロップでも変更可能です。

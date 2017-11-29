@@ -3,7 +3,7 @@ mixin c-mainNavArea
         nav
             +e.UL.nav
                 +e.LI.navItem
-                    +e.A.navItemTitle
+                    +e.A.navItemTitle(href="/")
                         i.fa.fa-home(aria-hidden="true")
                         span ホーム
 
@@ -25,17 +25,17 @@ mixin c-mainNavArea
                         i.fa.fa-inbox(aria-hidden="true")
                         span 受注管理
                     ul.collapse#orderManagement
-                        li: a(href="/moc/order/list") 受注一覧
-                        li: a(href="/moc/order/management") 受注管理
+                        li: a(href="/order/list") 受注マスター
+                        li: a(href="/order/management") 受注管理
 
                 +e.LI.navItem
                     +e.A.navItemTitle.collapsed(data-toggle="collapse" href="#shipManagement" aria-expanded="false" aria-controls="shipManagement")
                         i.fa.fa-truck(aria-hidden="true")
                         span 出荷管理
                     ul.collapse#shipManagement
-                        li: a(href="/moc/shipment/master") 出荷マスター
-                        li: a(href="/moc/shipment/management") 出荷管理
-                        li: a(href="/moc/shipment/register") 出荷CSV登録
+                        li: a(href="/shipment/master") 出荷マスター
+                        li: a(href="/shipment/management") 出荷管理
+                        li: a(href="/shipment/register") 出荷CSV登録
 
                 +e.LI.navItem
                     +e.A.navItemTitle.collapsed(data-toggle="collapse" href="#userManagement" aria-expanded="false" aria-controls="userManagement")
@@ -43,8 +43,8 @@ mixin c-mainNavArea
                         span 会員管理
 
                     ul.collapse#userManagement
-                        li: a(href="/moc/customer/master") 会員マスター
-                        li: a(href="/moc/customer/management") 会員管理
+                        li: a(href="/customer/master") 会員マスター
+                        li: a(href="/customer/management") 会員管理
 
                 +e.LI.navItem
                     +e.A.navItemTitle.collapsed(data-toggle="collapse" href="#contentsManagement" aria-expanded="false" aria-controls="contentsManagement")
@@ -52,12 +52,12 @@ mixin c-mainNavArea
                         span コンテンツ管理
 
                     ul.collapse#contentsManagement
-                        li: a(href="/moc/content/news") 新着情報管理
-                        li: a(href="/moc/content/file") ファイル管理
-                        li: a(href="/moc/content/layout") レイアウト管理
-                        li: a(href="/moc/content/page") ページ管理
-                        li: a(href="/moc/content/block") ブロック管理
-                        li: a(href="/moc/content/cache") キャッシュ管理
+                        li: a(href="/content/news") 新着情報管理
+                        li: a(href="/content/file") ファイル管理
+                        li: a(href="/content/layout") レイアウト管理
+                        li: a(href="/content/page") ページ管理
+                        li: a(href="/content/block") ブロック管理
+                        li: a(href="/content/cache") キャッシュ管理
 
                 +e.LI.navItem
                     +e.A.navItemTitle.collapsed(data-toggle="collapse" href="#config" aria-expanded="false" aria-controls="config")
@@ -67,24 +67,30 @@ mixin c-mainNavArea
                     +e.A.navItemSubTitle.collapsed(data-toggle="collapse" href="#commonConfig" aria-expanded="false" aria-controls="commonConfig")
                         span 基本情報設定
                     ul.collapse#commonConfig
-                        li: a(href="/moc/setting/basis/shop")  ショップマスター
-                        li: a(href="/moc/setting/basis/tradelaw")  特定商取引法
-                        li: a(href="/moc/setting/basis/agreement")  利用規約設定
-                        li: a(href="/moc/setting/basis/payment")  支払方法設定
-                        li: a(href="/moc/setting/basis/delivery")  配送方法設定
-                        li: a(href="/moc/setting/basis/tax")  税率設定
-                        li: a(href="/moc/setting/basis/mail") メール設定
+                        li: a(href="/setting/basis/shop")  ショップマスター
+                        li: a(href="/setting/basis/tradelaw")  特定商取引法
+                        li: a(href="/setting/basis/agreement")  利用規約設定
+                        li: a(href="/setting/basis/payment")  支払方法設定
+                        li: a(href="/setting/basis/delivery")  配送方法設定
+                        li: a(href="/setting/basis/tax")  税率設定
+                        li: a(href="/setting/basis/mail") メール設定
                     +e.A.navItemSubTitle.collapsed(data-toggle="collapse" href="#systemConfig" aria-expanded="false" aria-controls="systemConfig")
                         span システム情報設定
                     ul.collapse#systemConfig
-                        li: a(href="/moc/setting/system/system") システム情報
-                        li: a(href="/moc/setting/system/member") メンバー管理
-                        li: a(href="/moc/setting/system/authority") 権限管理
-                        li: a(href="/moc/setting/system/security") セキュリティ管理
-                        li: a(href="/moc/setting/system/log") EC-CUBE ログ表示
-                        li: a(href="/moc/setting/system/master") マスターデータ管理
+                        li: a(href="/setting/system/system") システム情報
+                        li: a(href="/setting/system/member") メンバー管理
+                        li: a(href="/setting/system/authority") 権限管理
+                        li: a(href="/setting/system/security") セキュリティ管理
+                        li: a(href="/setting/system/log") EC-CUBE ログ表示
+                        li: a(href="/setting/system/master") マスターデータ管理
 
                 +e.LI.navItem
                     +e.A.navItemTitle.collapsed(data-toggle="collapse" href="#ornersStore" aria-expanded="false" aria-controls="ornersStore")
                         i.fa.fa-info-circle(aria-hidden="true")
                         span オーナーズストア
+                +e.LI.navItem
+                    +e.A.navItemTitle.collapsed(data-toggle="collapse" href="#others" aria-expanded="false" aria-controls="shipManagement")
+                        i.fa.fa-truck(aria-hidden="true")
+                        span その他
+                    ul.collapse#others
+                        li: a(href="/styleguide/") スタイルガイド

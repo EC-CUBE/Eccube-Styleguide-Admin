@@ -5,7 +5,7 @@ global.watch = [];
 global.build = [];
 
 global.src = "./";
-global.dest = "./public/moc/";
+global.dest = "./public/";
 
 require("./assets/gulp/pug.js")
 require("./assets/gulp/sass.js")
@@ -13,6 +13,13 @@ require("./assets/gulp/sass.js")
 require("./assets/gulp/styleguide.js")
 require("./assets/gulp/browserSync.js")
 
+
+gulp.task("mv",()=>{
+  return gulp.src([
+    `${src}static/**/*`
+  ])
+    .pipe(gulp.dest(`${dest}`));
+})
 
 gulp.task("watch",global.watch)
 
