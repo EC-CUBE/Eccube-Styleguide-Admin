@@ -7,9 +7,9 @@ block primaryContents
     +b.c-block
         +e.heading
             +e.titles
-                span.c-toolTip__title 商品名：フォーク
+                span 商品名：フォーク
             +e.toggle
-                a(href="#").c-button--small.c-button--delete 商品規格を初期化
+                button.btn.btn-danger.py-2.px-4 商品規格を初期化
         +e.contents
             .row
                 .col-1
@@ -25,237 +25,242 @@ block primaryContents
     +b.c-block
         +e.heading
             +e.titles
-                span.c-toolTip__title 9件の規格の組み合わせがあります
+                span 9件の規格の組み合わせがあります
             +e.toggle
-                a.c-button--small.c-button--normal(href="#" style="margin-right:10px;")
+                button.btn.page-link.text-dark.d-inline-block.px-4.py-2
                         i.fa.fa-files-o(aria-hidden="true")
                         | &nbsp;一行目をすべての行に複製
-        +e.contents
-            +b.c-horizontalForm
-                table.c-customerTable
-                    thead.c-customerTable__tableHeader
-                        th 登録
-                        th 材質
-                        th サイズ
-                        th コード
-                        th 在庫数
-                        th 販売制限数
-                        th 通常価格
-                        th お届け可能日
-                        th 商品種別
-                    tr
-                        td
-                            input(type="checkbox")
-                        td プラチナ
-                        td 130cm
-                        td
-                            .c-form__text--extraSmall
-                                input(type="text")
-                        td
-                            .c-form__text--smallest
-                                input(type="text")
-                            input(type="checkbox")
-                            | &nbsp;無制限
-                        td
-                            .c-form__text--smallest
-                                input(type="text")
-                        td
-                            .c-form__text--extraSmall
-                                input(type="text")
-                        td
-                            .c-form__select--small
-                                select
-                                    option 指定なし
-                        td
-                            .c-form__select--small
-                                select
-                                    option 商品種別A
-                    tr
-                        td
-                            input(type="checkbox")
-                        td プラチナ
-                        td 130cm
-                        td
-                            .c-form__text--extraSmall
-                                input(type="text")
-                        td
-                            .c-form__text--smallest
-                                input(type="text")
-                            input(type="checkbox")
-                            | &nbsp;無制限
-                        td
-                            .c-form__text--smallest
-                                input(type="text")
-                        td
-                            .c-form__text--extraSmall
-                                input(type="text")
-                        td
-                            .c-form__select--small
-                                select
-                                    option 指定なし
-                        td
-                            .c-form__select--small
-                                select
-                                    option 商品種別A
-                    tr
-                        td
-                            input(type="checkbox")
-                        td プラチナ
-                        td 130cm
-                        td
-                            .c-form__text--extraSmall
-                                input(type="text")
-                        td
-                            .c-form__text--smallest
-                                input(type="text")
-                            input(type="checkbox")
-                            | &nbsp;無制限
-                        td
-                            .c-form__text--smallest
-                                input(type="text")
-                        td
-                            .c-form__text--extraSmall
-                                input(type="text")
-                        td
-                            .c-form__select--small
-                                select
-                                    option 指定なし
-                        td
-                            .c-form__select--small
-                                select
-                                    option 商品種別A
-                    tr
-                        td
-                            input(type="checkbox")
-                        td プラチナ
-                        td 130cm
-                        td
-                            .c-form__text--extraSmall
-                                input(type="text")
-                        td
-                            .c-form__text--smallest
-                                input(type="text")
-                            input(type="checkbox")
-                            | &nbsp;無制限
-                        td
-                            .c-form__text--smallest
-                                input(type="text")
-                        td
-                            .c-form__text--extraSmall
-                                input(type="text")
-                        td
-                            .c-form__select--small
-                                select
-                                    option 指定なし
-                        td
-                            .c-form__select--small
-                                select
-                                    option 商品種別A
-                    tr
-                        td
-                            input(type="checkbox")
-                        td プラチナ
-                        td 130cm
-                        td
-                            .c-form__text--extraSmall
-                                input(type="text")
-                        td
-                            .c-form__text--smallest
-                                input(type="text")
-                            input(type="checkbox")
-                            | &nbsp;無制限
-                        td
-                            .c-form__text--smallest
-                                input(type="text")
-                        td
-                            .c-form__text--extraSmall
-                                input(type="text")
-                        td
-                            .c-form__select--small
-                                select
-                                    option 指定なし
-                        td
-                            .c-form__select--small
-                                select
-                                    option 商品種別A
-                    tr
-                        td
-                            input(type="checkbox")
-                        td プラチナ
-                        td 130cm
-                        td
-                            .c-form__text--extraSmall
-                                input(type="text")
-                        td
-                            .c-form__text--smallest
-                                input(type="text")
-                            input(type="checkbox")
-                            | &nbsp;無制限
-                        td
-                            .c-form__text--smallest
-                                input(type="text")
-                        td
-                            .c-form__text--extraSmall
-                                input(type="text")
-                        td
-                            .c-form__select--small
-                                select
-                                    option 指定なし
-                        td
-                            .c-form__select--small
-                                select
-                                    option 商品種別A
-                    tr
-                        td
-                            input(type="checkbox")
-                        td プラチナ
-                        td 130cm
-                        td
-                            .c-form__text--extraSmall
-                                input(type="text")
-                        td
-                            .c-form__text--smallest
-                                input(type="text")
-                            input(type="checkbox")
-                            | &nbsp;無制限
-                        td
-                            .c-form__text--smallest
-                                input(type="text")
-                        td
-                            .c-form__text--extraSmall
-                                input(type="text")
-                        td
-                            .c-form__select--small
-                                select
-                                    option 指定なし
-                        td
-                            .c-form__select--small
-                                select
-                                    option 商品種別A
-                    tr
-                        td
-                            input(type="checkbox")
-                        td プラチナ
-                        td 130cm
-                        td
-                            .c-form__text--extraSmall
-                                input(type="text")
-                        td
-                            .c-form__text--smallest
-                                input(type="text")
-                            input(type="checkbox")
-                            | &nbsp;無制限
-                        td
-                            .c-form__text--smallest
-                                input(type="text")
-                        td
-                            .c-form__text--extraSmall
-                                input(type="text")
-                        td
-                            .c-form__select--small
-                                select
-                                    option 指定なし
-                        td
-                            .c-form__select--small
-                                select
-                                    option 商品種別A
+        +b.c-horizontalForm
+            table.table
+                thead
+                    th 登録
+                    th 材質
+                    th サイズ
+                    th コード
+                    th 在庫数
+                    th 販売制限数
+                    th 通常価格
+                    th お届け可能日
+                    th 商品種別
+                tr
+                    td
+                        input(type="checkbox")
+                    td プラチナ
+                    td 130cm
+                    td
+                        input.form-control(type="text")
+                    td
+                        .row
+                            .col-7
+                                input.form-control(type="text", size="5")
+                            .col-5.p-0
+                                input(type="checkbox")
+                                | &nbsp;無制限
+                    td
+                        input.form-control(type="text",size="5")
+                    td
+                        input.form-control(type="text")
+                    td
+                        select.custom-select
+                            option 指定なし
+                            option ...
+                    td
+                        select.custom-select
+                            option 商品種別A
+                            option ...
+                tr
+                    td
+                        input(type="checkbox")
+                    td プラチナ
+                    td 130cm
+                    td
+                        input.form-control(type="text", size="5")
+                    td
+                        .row
+                            .col-7
+                                input.form-control(type="text", size="5")
+                            .col-5.p-0
+                                input(type="checkbox")
+                                | &nbsp;無制限
+                    td
+                        input.form-control(type="text", size="5")
+                    td
+                        input.form-control(type="text", size="5")
+                    td
+                        select.custom-select
+                            option 指定なし
+                            option ...
+                    td
+                        select.custom-select
+                            option 商品種別A
+                            option ...
+                tr
+                    td
+                        input(type="checkbox")
+                    td プラチナ
+                    td 130cm
+                    td
+                        input.form-control(type="text", size="5")
+                    td
+                        .row
+                            .col-7
+                                input.form-control(type="text", size="5")
+                            .col-5.p-0
+                                input(type="checkbox")
+                                | &nbsp;無制限
+                    td
+                        input.form-control(type="text", size="5")
+                    td
+                        input.form-control(type="text", size="5")
+                    td
+                        select.custom-select
+                            option 指定なし
+                            option ...
+                    td
+                        select.custom-select
+                            option 商品種別A
+                            option ...
+                tr
+                    td
+                        input(type="checkbox")
+                    td プラチナ
+                    td 130cm
+                    td
+                        input.form-control(type="text", size="5")
+                    td
+                        .row
+                            .col-7
+                                input.form-control(type="text", size="5")
+                            .col-5.p-0
+                                input(type="checkbox")
+                                | &nbsp;無制限
+                    td
+                        input.form-control(type="text", size="5")
+                    td
+                        input.form-control(type="text", size="5")
+                    td
+                        select.custom-select
+                            option 指定なし
+                            option ...
+                    td
+                        select.custom-select
+                            option 商品種別A
+                            option ...
+                tr
+                    td
+                        input(type="checkbox")
+                    td プラチナ
+                    td 130cm
+                    td
+                        input.form-control(type="text", size="5")
+                    td
+                        .row
+                            .col-7
+                                input.form-control(type="text", size="5")
+                            .col-5.p-0
+                                input(type="checkbox")
+                                | &nbsp;無制限
+                    td
+                        input.form-control(type="text", size="5")
+                    td
+                        input.form-control(type="text", size="5")
+                    td
+                        select.custom-select
+                            option 指定なし
+                            option ...
+                    td
+                        select.custom-select
+                            option 商品種別A
+                            option ...
+                tr
+                    td
+                        input(type="checkbox")
+                    td プラチナ
+                    td 130cm
+                    td
+                        input.form-control(type="text", size="5")
+                    td
+                        .row
+                            .col-7
+                                input.form-control(type="text", size="5")
+                            .col-5.p-0
+                                input(type="checkbox")
+                                | &nbsp;無制限
+                    td
+                        input.form-control(type="text", size="5")
+                    td
+                        input.form-control(type="text", size="5")
+                    td
+                        select.custom-select
+                            option 指定なし
+                            option ...
+                    td
+                        select.custom-select
+                            option 商品種別A
+                            option ...
+                tr
+                    td
+                        input(type="checkbox")
+                    td プラチナ
+                    td 130cm
+                    td
+                        input.form-control(type="text", size="5")
+                    td
+                        .row
+                            .col-7
+                                input.form-control(type="text", size="5")
+                            .col-5.p-0
+                                input(type="checkbox")
+                                | &nbsp;無制限
+                    td
+                        input.form-control(type="text", size="5")
+                    td
+                        input.form-control(type="text", size="5")
+                    td
+                        select.custom-select
+                            option 指定なし
+                            option ...
+                    td
+                        select.custom-select
+                            option 商品種別A
+                            option ...
+                tr
+                    td
+                        input(type="checkbox")
+                    td プラチナ
+                    td 130cm
+                    td
+                        input.form-control(type="text", size="5")
+                    td
+                        .row
+                            .col-7
+                                input.form-control(type="text", size="5")
+                            .col-5.p-0
+                                input(type="checkbox")
+                                | &nbsp;無制限
+                    td
+                        input.form-control(type="text", size="5")
+                    td
+                        input.form-control(type="text", size="5")
+                    td
+                        select.custom-select
+                            option 指定なし
+                            option ...
+                    td
+                        select.custom-select
+                            option 商品種別A
+                            option ...
+block conversionArea
+    +b.c-conversionArea
+        +e.container
+            +e.leftBlock
+                +e.leftBlockItem
+                    a(href="").c-beseLink
+                        i.fa.fa-backward(aria-hidden="true")
+                        span 商品マスター
+            +e.rightBlock
+                +e.rightBlockItem
+                    include /assets/tmpl/components/toggleSwitch.pug
+                    +c-toggleSwitch
+                +e.rightBlockItem
+                    button.btn.btn-primary.px-5.py-2 更新
