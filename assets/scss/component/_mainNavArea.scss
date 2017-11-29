@@ -101,7 +101,7 @@ Styleguide 3.0
   top: 0;
   left: 0;
   overflow-y: scroll;
-  z-index: 1000;
+  z-index: 500;
 
   @include media_sp {
     display: none;

@@ -149,7 +149,22 @@ block primaryContents
                             td 6
                             td 8,000
                 .d-block.text-center.text-center
-                    a(href="/product/register/standard").btn.btn-outline-dark この商品の規格管理
+                    button(type="button" data-toggle="modal" data-target="#confirmModal").btn.btn-outline-dark この商品の規格管理
+                    #confirmModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='confirmModal', aria-hidden='true')
+                        .modal-dialog(role='document')
+                            .modal-content
+                                .modal-header
+                                    h5#exampleModalLabel.modal-title ページを移動します。
+                                    button.close(type='button', data-dismiss='modal', aria-label='Close')
+                                        span(aria-hidden='true') ×
+                                .modal-body
+                                    p 規格の管理画面に移動します。商品情報を保存してから移動しますか？
+                                .modal-footer
+                                    a(href="/product/register/standard").btn.btn-primary) 変更を保存
+                                    button.btn.btn-secondary(type='button', data-dismiss='modal') キャンセル
+
+
+
     .card.rounded.border-0.mb-4
         .card-header
             .row
