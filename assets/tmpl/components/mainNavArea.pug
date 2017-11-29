@@ -12,13 +12,13 @@ mixin c-mainNavArea
                         i.fa.fa-cube(aria-hidden="true")
                         span 商品管理
                     ul.collapse#productManagement
-                        li: a(href="/moc/product/master") 商品マスター
-                        li: a(href="/moc/product/register") 商品登録
-                        li: a(href="/moc/product/standard") 規格管理
-                        li: a(href="/moc/product/category") カテゴリ管理
-                        li: a(href="/moc/product/tags") タグ管理
-                        li: a(href="/moc/product/csv/product") 商品CSV登録
-                        li: a(href="/moc/product/csv/category") カテゴリCSV登録
+                        li: a(href="/product/master") 商品マスター
+                        li: a(href="/product/register") 商品登録
+                        li: a(href="/product/standard") 規格管理
+                        li: a(href="/product/category") カテゴリ管理
+                        li: a(href="/product/tags") タグ管理
+                        li: a(href="/product/csv/product") 商品CSV登録
+                        li: a(href="/product/csv/category") カテゴリCSV登録
 
                 +e.LI.navItem
                     +e.A.navItemTitle.collapsed(data-toggle="collapse" href="#orderManagement" aria-expanded="false" aria-controls="orderManagement")
