@@ -148,8 +148,8 @@ block primaryContents
                             td aa-004
                             td 6
                             td 8,000
-            .card-footer.text-center
-                button(type="button").btn.btn-outline-dark この商品の規格管理
+                .d-block.text-center.text-center
+                    button(type="button").btn.btn-outline-dark この商品の規格管理
     .card.rounded.border-0.mb-4
         .card-header
             .row
@@ -173,76 +173,147 @@ block primaryContents
                                 textarea(rows="8" placeholder="テキスト").form-control
 
 block secondaryContents
-    +b.c-block
-        +e.heading
-            +e.titles
-                .c-toolTip(data-toggle="tooltip" data-placement="top" title="Tooltip")
-                    span.c-toolTip__title カテゴリ
-                    i.fa.fa-question-circle.c-toolTip__icon
-            +e.toggle
-                i.fa.fa-angle-up
-        +e.contents
-            include /assets/tmpl/components/searchBox.pug
-            +c-searchBox
-            include /assets/tmpl/components/category.pug
-            +c-categoryRegister
+    .card.rounded.border-0.mb-4
+        .card-header
+            .row
+                .col-8
+                    .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
+                        span.card-title カテゴリ
+                            i.fa.fa-question-circle.ml-1
+                .col-4.text-right
+                    a(data-toggle="collapse" href="#category" aria-expanded="false" aria-controls="category")
+                        i.fa.fa-angle-up
+        .collapse(id="category").show
+            .card-body
+                form.mb-3
+                    .form-row
+                        .col-10
+                            input.form-control(type="search" placeholder="カテゴリ検索" aria-label="Search")
+                        .col-2
+                            button.btn.btn-light(type="submit"): i.fa.fa-search
+                .c-category--register
+                    ul
+                        li
+                            input(type='checkbox')
+                            label.c-categoryLayer1 カテゴリA
+                            ul
+                                li
+                                    input(type='checkbox')
+                                    label.c-categoryLayer2 カテゴリA-a
+                                li
+                                    input(type='checkbox')
+                                    label.c-categoryLayer2 カテゴリA-b
+                                li
+                                    input(type='checkbox')
+                                    label.c-categoryLayer2 カテゴリA-c
+                                    ul
+                                        li
+                                            input(type='checkbox')
+                                            label.c-categoryLayer3 カテゴリA-c-1
+                                        li
+                                            input(type='checkbox')
+                                            label.c-categoryLayer3 カテゴリA-c-2
+                                            ul
+                                                li
+                                                    input(type='checkbox')
+                                                    label.c-categoryLayer3 カテゴリA-c-2-1
+                                                li
+                                                    input(type='checkbox')
+                                                    label.c-categoryLayer3 カテゴリA-c-2-2
+                    ul
+                        li
+                            input(type='checkbox')
+                            label.c-categoryLayer1 カテゴリB
+                    ul
+                        li
+                            input(type='checkbox')
+                            label.c-categoryLayer1 カテゴリC
+                .d-block.text-center
+                    button(type="button").btn.btn-block.btn-outline-dark カテゴリの追加・編集
 
-            +e.action
-                a.c-button--full.c-button--normal(href='#') カテゴリの追加・編集
-    +b.c-block
-        +e.heading
-            +e.titles
-                .c-toolTip(data-toggle="tooltip" data-placement="top" title="Tooltip")
-                    span.c-toolTip__title タグ
-                    i.fa.fa-question-circle.c-toolTip__icon
-            +e.toggle
-                i.fa.fa-angle-up
-        +e.contents
-            include /assets/tmpl/components/tag.pug
-            +c-tags
+    .card.rounded.border-0.mb-4
+        .card-header
+            .row
+                .col-8
+                    .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
+                        span.card-title タグ
+                            i.fa.fa-question-circle.ml-1
+                .col-4.text-right
+                    a(data-toggle="collapse" href="#tag" aria-expanded="false" aria-controls="tag")
+                        i.fa.fa-angle-up
+        .collapse(id="tag").show
+            .card-body
+                .d-inline-block.mb-2.mr-2
+                    button.btn.btn-outline-primary(type='button') オススメ
+                .d-inline-block.mb-2.mr-2
+                    button.btn.btn-outline-secondary(type='button') 限定品
+                .d-inline-block.mb-2.mr-2
+                    button.btn.btn-outline-primary(type='button') 新入荷
+                .d-inline-block.mb-2.mr-2
+                    button.btn.btn-outline-secondary(type='button') 値下げしました
+                .d-inline-block.mb-2.mr-2
+                    button.btn.btn-outline-primary(type='button') オススメ
+                .d-inline-block.mb-2.mr-2
+                    button.btn.btn-outline-secondary(type='button') 限定品
+                .d-inline-block.mb-2.mr-2
+                    button.btn.btn-outline-primary(type='button') 新入荷
+                .d-inline-block.mb-2.mr-2
+                    button.btn.btn-outline-secondary(type='button') 値下げしました
+                .d-inline-block.mb-2.mr-2
+                    button.btn.btn-outline-secondary(type='button') 送料無料
+                .d-block.mb-3
+                    i.fa.fa-plus-square-o.font-weight-bold.mr-1
+                    span.font-weight-bold 全てのタグを表示
+                .d-block.text-center
+                    button(type="button").btn.btn-block.btn-outline-dark タグの追加・編集
 
-            include /assets/tmpl/components/subAction.pug
-            +c-subAction("すべてのタグを表示")
+    .card.rounded.border-0.mb-4
+        .card-header
+            .row
+                .col-8
+                    .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
+                        span.card-title 登録日・更新日
+                            i.fa.fa-question-circle.ml-1
+                .col-4.text-right
+                    a(data-toggle="collapse" href="#update" aria-expanded="false" aria-controls="update")
+                        i.fa.fa-angle-up
+        .collapse(id="update").show
+            .card-body
+                .row.mb-2
+                    .col
+                        i.fa.fa-flag.mr-1
+                        span 登録日
+                    .col
+                        span ：2017/11/09
+                .row.mb-2
+                    .col
+                        i.fa.fa-refresh.mr-1
+                        span 最終更新日
+                    .col
+                        span ：2017/11/12
+                .row.mb-2
+                    .col
+                        i.fa.fa-user.mr-1
+                        span 最終更新者
+                    .col
+                        span ：user_name
 
-            +e.action
-                a.c-button--full.c-button--normal(href='#') タグの追加・編集
-    +b.c-block
-        +e.heading
-            +e.titles
-                .c-toolTip(data-toggle="tooltip" data-placement="top" title="Tooltip")
-                    span.c-toolTip__title 登録日・更新日
-                    i.fa.fa-question-circle.c-toolTip__icon
-            +e.toggle
-                i.fa.fa-angle-up
-        +e.contents
-            +b.DL.c-definitionList
-                +e.DT.term
-                    i.fa.fa-flag
-                    span 登録日
-                +e.DD.description 2017/11/09
-            +b.DL.c-definitionList
-                +e.DT.term
-                    i.fa.fa-refresh
-                    span 最終更新日
-                +e.DD.description 2017/11/12
-            +b.DL.c-definitionList
-                +e.DT.term
-                    i.fa.fa-user
-                    span 最終更新者
-                +e.DD.description user_name
+    .card.rounded.border-0.mb-4
+        .card-header
+            .row
+                .col-8
+                    .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
+                        span.card-title ショップ用メモ
+                            i.fa.fa-question-circle.ml-1
+                .col-4.text-right
+                    a(data-toggle="collapse" href="#shopMemo" aria-expanded="false" aria-controls="shopMemo")
+                        i.fa.fa-angle-up
+        .collapse(id="shopMemo").show
+            .card-body
+                form
+                    .form-group
+                        textarea(rows="8" placeholder="テキスト").form-control
 
-    +b.c-block
-        +e.heading
-            +e.titles
-                .c-toolTip(data-toggle="tooltip" data-placement="top" title="Tooltip")
-                    span.c-toolTip__title ショップ用メモ欄
-                    i.fa.fa-question-circle.c-toolTip__icon
-            +e.toggle
-                i.fa.fa-angle-up
-        +e.contents
-            form.c-form
-                .c-form__text
-                    textarea(rows="9" placeholder="テキスト")
 block conversionArea
     +b.c-conversionArea
         +e.container
