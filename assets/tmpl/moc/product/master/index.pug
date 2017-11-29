@@ -8,330 +8,321 @@ block pageTitle
 block outsideBlock
     +b.c-outsideBlock
         +e.contents
-            .row
+            .row.justify-content-start
                 .col-6
                     form
-                        .row
-                            label.col-12.col-form-label 商品名・商品ID・商品コード
-                            .col-10
-                                input.form-control(type='text')
-                .col-6
-            .row
-                .col-12
-                    .c-subAction.is-active
-                        a.c-subAction__btn(href='#')
-                            span 詳細検索
-        +b.c-subContents
+                        .form-group
+                            label.col-form-label 商品名・商品ID・商品コード
+                            input.form-control(type='text')
+                    .d-inline-block.mb-3(data-toggle="collapse" href="#commentList" aria-expanded="false" aria-controls="commentList")
+                        i.fa.fa-plus-square-o.font-weight-bold.mr-1
+                        span.font-weight-bold 一覧コメントを追加
+
+        +b.c-subContents.collapse(id="commentList").show
             .row
                 .col-6
-                    .mb-2
-                        label カテゴリ
-                        form
-                            select.custom-select
+                    form.form-row
+                        .form-group.col-6
+                            label.col-form-label カテゴリ
+                            select.form-control
                                 option 選んでください
                                 option ...
-                    .mb-2
-                        .row
-                            form
-                                .col-12
-                                    label フィルタ
-                                .col-12
-                                    .form-check
-                                        label.form-check-label.mr-2
-                                            input.form-check-input(type='checkbox', value='')
-                                            | 公開
-                                        label.form-check-label.mr-2
-                                            input.form-check-input(type='checkbox', value='')
-                                            | 非公開
-                                        label.form-check-label.mr-2
-                                            input.form-check-input(type='checkbox', value='')
-                                            | 在庫切れ
+                    form.form-row
+                        .form-group.col-12
+                            p.col-form-label フィルタ
+                            label.form-check-label.mr-3
+                                input.form-check-input(type='checkbox', value='')
+                                | 公開
+                            label.form-check-label.mr-3
+                                input.form-check-input(type='checkbox', value='')
+                                | 非公開
+                            label.form-check-label
+                                input.form-check-input(type='checkbox', value='')
+                                | 在庫切れ
                 .col-6
-                    .row
-                        .mb-2
-                            .col-12
-                                label 登録日
-                                i.fa.fa-question-circle.c-toolTip__icon(aria-hidden="true")
-                            .col-12
-                                form
-                                    .row
-                                        .col-5.text-right
-                                            input.form-control(type='date', value='2000-01-01')
-                                        .col-2.text-center
-                                            span 〜
-                                        .col-5.text-left
-                                            input.form-control(type='date', value='2000-01-01')
-                        .mb-2
-                            .col-12
-                                label 更新日
-                            .col-12
-                                form
-                                    .row
-                                        .col-5.text-right
-                                            input.form-control(type='date', value='2000-01-01')
-                                        .col-2.text-center
-                                            span 〜
-                                        .col-5.text-left
-                                            input.form-control(type='date', value='2000-01-01')
-        +e.contents
-            .row
-                .mb-4
-                    .col-12
-                        a.btn.btn-primary.p-2.px-5(href='#', role='button') 検索
-            .row.mb-2
-                .col-7
-                    .text-left
-                            label.mr-2 一括操作
-                            .btn-group.mr-2(data-toggle="buttons")
-                                button.btn.page-link.text-dark.d-inline-block.px-4.py-2 公開
-                                button.btn.page-link.text-dark.d-inline-block.px-3.py-2 非公開
-                            button.btn.page-link.text-dark.d-inline-block.px-4.py-2.mr-2 廃止
-                            button.btn.btn-danger.py-2.px-4.mr-2 完全に削除
-                .col-5
-                    .text-right
-                        form
-                            select.custom-select
-                                option(selected='') 10件
-                                option ...
-                            .btn-group.mr-2(data-toggle="buttons")
-                                button.btn.page-link.text-dark.d-inline-block.px-4.py-2
-                                    i.fa.fa-cloud-download(aria-hidden="true")
-                                    span CSVダウンロード
-                                button.btn.page-link.text-dark.d-inline-block.px-5.py-2
-                                    i.fa.fa-cog(aria-hidden="true")
-                                    span CSV出力設定
-        +e.contents
-            +b.c-block
-                table.table.table-hover
-                    thead
-                        tr
-                            th
-                                input(type='checkbox', name='filter', value='open')
-                            th ID
-                            th 画像
-                            th 商品名
-                            th コード
-                            th 価格
-                            th 在庫数
-                            th 公開状態
-                            th 登録日
-                            th 更新日
-                            th &nbsp;
-                            th &nbsp;
-                            th &nbsp;
-                            th &nbsp;
-                    tbody
-                        tr
-                            td
-                                input(type='checkbox', name='filter', value='open')
-                            td 34
-                            td &nbsp;
-                            td
-                                a(href="#") ディナーフォーク
-                            td fork-01 ～ fork-09
-                            td  12,000
-                            td 2
-                            td 公開
-                            td 2017/01/12
-                            td 2017/07/12
-                            td &nbsp;
-                            td
-                                i.fa.fa-eye.fa-lg(aria-hidden="true")
-                            td
-                                i.fa.fa-files-o.fa-lg(aria-hidden="true")
-                            td
-                                i.fa.fa-close.fa-lg(aria-hidden="true")
-                        tr
-                            td
-                                input(type='checkbox', name='filter', value='open')
-                            td 33
-                            td &nbsp;
-                            td
-                                a(href="#") ディナースプーン
-                            td sp-01 ～ sp-02
-                            td  12,000
-                            td 2
-                            td 非公開
-                            td 2017/01/12
-                            td 2017/07/12
-                            td &nbsp;
-                            td
-                                i.fa.fa-eye.fa-lg(aria-hidden="true")
-                            td
-                                i.fa.fa-files-o.fa-lg(aria-hidden="true")
-                            td
-                                i.fa.fa-close.fa-lg(aria-hidden="true")
-                        tr
-                            td
-                                input(type='checkbox', name='filter', value='open')
-                            td 1
-                            td &nbsp;
-                            td
-                                a(href="#") フライパン
-                            td fork01 他
-                            td  10,000〜
-                            td
-                                button.btn.page-link.text-dark.d-inline-block 規格確認
-                            td 公開
-                            td 2017/01/12
-                            td 2017/07/12
-                            td &nbsp;
-                            td
-                                i.fa.fa-eye.fa-lg(aria-hidden="true")
-                            td
-                                i.fa.fa-files-o.fa-lg(aria-hidden="true")
-                            td
-                                i.fa.fa-close.fa-lg(aria-hidden="true")
-                        tr
-                            td
-                                input(type='checkbox', name='filter', value='open')
-                            td 31
-                            td &nbsp;
-                            td
-                                a(href="#") 泡立て器
-                            td awa01
-                            td  12,000
-                            td 12
-                            td 公開
-                            td 2017/01/12
-                            td 2017/07/12
-                            td &nbsp;
-                            td
-                                i.fa.fa-eye.fa-lg(aria-hidden="true")
-                            td
-                                i.fa.fa-files-o.fa-lg(aria-hidden="true")
-                            td
-                                i.fa.fa-close.fa-lg(aria-hidden="true")
-                        tr
-                            td
-                                input(type='checkbox', name='filter', value='open')
-                            td 30
-                            td &nbsp;
-                            td
-                                a(href="#") ステンレス鍋100mm
-                            td nabe100
-                            td  12,000
-                            td 4
-                            td 非公開
-                            td 2017/01/12
-                            td 2017/07/12
-                            td &nbsp;
-                            td
-                                i.fa.fa-eye.fa-lg(aria-hidden="true")
-                            td
-                                i.fa.fa-files-o.fa-lg(aria-hidden="true")
-                            td
-                                i.fa.fa-close.fa-lg(aria-hidden="true")
-                        tr
-                            td
-                                input(type='checkbox', name='filter', value='open')
-                            td 29
-                            td &nbsp;
-                            td
-                                a(href="#") セラミック包丁
-                            td sera12
-                            td  12,000
-                            td 0
-                            td 公開
-                            td 2017/01/12
-                            td 2017/07/12
-                            td &nbsp;
-                            td
-                                i.fa.fa-eye.fa-lg(aria-hidden="true")
-                            td
-                                i.fa.fa-files-o.fa-lg(aria-hidden="true")
-                            td
-                                i.fa.fa-close.fa-lg(aria-hidden="true")
-                        tr
-                            td
-                                input(type='checkbox', name='filter', value='open')
-                            td 28
-                            td &nbsp;
-                            td
-                                a(href="#") たわし
-                            td tawa01
-                            td  12,000
-                            td 34
-                            td 公開
-                            td 2017/01/12
-                            td 2017/07/12
-                            td &nbsp;
-                            td
-                                i.fa.fa-eye.fa-lg(aria-hidden="true")
-                            td
-                                i.fa.fa-files-o.fa-lg(aria-hidden="true")
-                            td
-                                i.fa.fa-close.fa-lg(aria-hidden="true")
-                        tr
-                            td
-                                input(type='checkbox', name='filter', value='open')
-                            td 27
-                            td &nbsp;
-                            td
-                                a(href="#") おろしがね特級
-                            td oroshi15
-                            td  12,000
-                            td 4
-                            td 公開
-                            td 2017/01/12
-                            td 2017/07/12
-                            td &nbsp;
-                            td
-                                i.fa.fa-eye.fa-lg(aria-hidden="true")
-                            td
-                                i.fa.fa-files-o.fa-lg(aria-hidden="true")
-                            td
-                                i.fa.fa-close.fa-lg(aria-hidden="true")
-                        tr
-                            td
-                                input(type='checkbox', name='filter', value='open')
-                            td 26
-                            td &nbsp;
-                            td
-                                a(href="#") ステンレス水筒
-                            td suito-01 ～ suito-09
-                            td  12,000
-                            td 2
-                            td 公開
-                            td 2017/01/12
-                            td 2017/07/12
-                            td &nbsp;
-                            td
-                                i.fa.fa-eye.fa-lg(aria-hidden="true")
-                            td
-                                i.fa.fa-files-o.fa-lg(aria-hidden="true")
-                            td
-                                i.fa.fa-close.fa-lg(aria-hidden="true")
-                        tr
-                            td
-                                input(type='checkbox', name='filter', value='open')
-                            td 25
-                            td &nbsp;
-                            td
-                                a(href="#") ウォーターサーバ
-                            td ws1
-                            td  12,000
-                            td 5
-                            td 公開
-                            td 2017/01/12
-                            td 2017/07/12
-                            td &nbsp;
-                            td
-                                i.fa.fa-eye.fa-lg(aria-hidden="true")
-                            td
-                                i.fa.fa-files-o.fa-lg(aria-hidden="true")
-                            td
-                                i.fa.fa-close.fa-lg(aria-hidden="true")
-                .row
-                    .col-12
-                        .my-4
-                            nav(aria-label='Page navigation example')
-                                ul.pagination.justify-content-center
-                                    li.page-item
-                                        a.page-link(href='#') 1
-                                    li.page-item
-                                        a.page-link(href='#') 2
-                                    li.page-item
-                                        a.page-link(href='#') 3
-                                    li.page-item
-                                        a.page-link(href='#') 4
+                    form
+                        .form-group
+                            label.col-form-label(data-toggle="tooltip" data-placement="top" title="Tooltip")
+                                | 登録日
+                                i.fa.fa-question-circle.ml-1
+                            .form-row.align-items-center
+                                .col
+                                    input.form-control(type='date', value='2000-01-01')
+                                .col-auto.text-center
+                                    span 〜
+                                .col
+                                    input.form-control(type='date', value='2000-01-01')
+
+                    form
+                        .form-group
+                            label.col-form-label
+                                | 更新日
+                            .form-row.align-items-center
+                                .col
+                                    input.form-control(type='date', value='2000-01-01')
+                                .col-auto
+                                    span 〜
+                                .col
+                                    input.form-control(type='date', value='2000-01-01')
+        +e.contents.mb-5
+            button.btn.btn-primary.px-5(type="button") 検索
+
+block primaryContents
+    .row.justify-content-between.mb-2
+        .col-6
+            label.mr-2 一括操作
+            .btn-group(role='group').mr-2
+                button.btn.btn-light.border.border-dark(type='button')
+                    span 公開
+                button.btn.btn-light.border.border-dark(type='button')
+                    span 非公開
+            button.btn.btn-light.border.border-dark.mr-2 廃止
+            button.btn.btn-danger 完全に削除
+
+        .col-4.text-right
+            .d-inline-block.mr-2
+                form
+                    select.custom-select
+                        option(selected='') 10件
+                        option ...
+            .d-inline-block
+                .btn-group(role='group')
+                    button.btn.btn-light.border.border-dark(type='button')
+                        i.fa.fa-cloud-download.mr-1
+                        span CSVダウンロード
+                    button.btn.btn-light.border.border-dark(type='button')
+                        i.fa.fa-cog.mr-1
+                        span CSV出力設定
+
+    .card.rounded.border-0.mb-4
+        .card-body.p-0
+            table.table
+                thead
+                    tr
+                        th.border-top-0
+                            input(type='checkbox', name='filter', value='open')
+                        th.border-top-0 ID
+                        th.border-top-0 画像
+                        th.border-top-0 商品名
+                        th.border-top-0 コード
+                        th.border-top-0 価格
+                        th.border-top-0 在庫数
+                        th.border-top-0 公開状態
+                        th.border-top-0 登録日
+                        th.border-top-0 更新日
+                        th.border-top-0(colspan="3")
+                tbody
+                    tr
+                        td.align-middle
+                            input(type='checkbox', name='filter', value='open')
+                        td.align-middle 34
+                        td.align-middle
+                            a(href="/product/register")
+                                img(src="http://via.placeholder.com/50x50")
+                        td.align-middle
+                            a(href="#") ディナーフォーク
+                        td.align-middle fork-01 ～ fork-09
+                        td.align-middle 12,000
+                        td.align-middle 2
+                        td.align-middle 公開
+                        td.align-middle 2017/01/12
+                        td.align-middle 2017/07/12
+                        td.align-middle(colspan="3")
+                            .row
+                                .col(data-toggle="tooltip" data-placement="top" title="表示"): i.fa.fa-eye.fa-lg(aria-hidden="true")
+                                .col(data-toggle="tooltip" data-placement="top" title="複製"): i.fa.fa-files-o.fa-lg(aria-hidden="true")
+                                .col(data-toggle="tooltip" data-placement="top" title="廃止"): i.fa.fa-close.fa-lg(aria-hidden="true")
+                    tr.table-secondary
+                        td.align-middle
+                            input(type='checkbox', name='filter', value='open')
+                        td.align-middle 33
+                        td.align-middle
+                            a(href="/product/register")
+                                img(src="http://via.placeholder.com/50x50")
+                        td.align-middle
+                            a(href="#") ディナースプーン
+                        td.align-middle sp-01 ～ sp-02
+                        td.align-middle 12,000
+                        td.align-middle 2
+                        td.align-middle 非公開
+                        td.align-middle 2017/01/12
+                        td.align-middle 2017/07/12
+                        td.align-middle(colspan="3")
+                            .row
+                                .col(data-toggle="tooltip" data-placement="top" title="表示"): i.fa.fa-eye.fa-lg(aria-hidden="true")
+                                .col(data-toggle="tooltip" data-placement="top" title="複製"): i.fa.fa-files-o.fa-lg(aria-hidden="true")
+                                .col(data-toggle="tooltip" data-placement="top" title="廃止"): i.fa.fa-close.fa-lg(aria-hidden="true")
+                    tr
+                        td.align-middle
+                            input(type='checkbox', name='filter', value='open')
+                        td.align-middle 1
+
+                        td.align-middle
+                            a(href="/product/register")
+                                img(src="http://via.placeholder.com/50x50")
+                        td.align-middle
+                            a(href="#") フライパン
+                        td.align-middle fork01 他
+                        td.align-middle 10,000〜
+                        td.align-middle
+                            button.btn.page-link.text-dark.d-inline-block 規格確認
+                        td.align-middle 公開
+                        td.align-middle 2017/01/12
+                        td.align-middle 2017/07/12
+                        td.align-middle(colspan="3")
+                            .row
+                                .col(data-toggle="tooltip" data-placement="top" title="表示"): i.fa.fa-eye.fa-lg(aria-hidden="true")
+                                .col(data-toggle="tooltip" data-placement="top" title="複製"): i.fa.fa-files-o.fa-lg(aria-hidden="true")
+                                .col(data-toggle="tooltip" data-placement="top" title="廃止"): i.fa.fa-close.fa-lg(aria-hidden="true")
+                    tr
+                        td.align-middle
+                            input(type='checkbox', name='filter', value='open')
+                        td.align-middle 31
+
+                        td.align-middle
+                            a(href="/product/register")
+                                img(src="http://via.placeholder.com/50x50")
+                        td.align-middle
+                            a(href="#") 泡立て器
+                        td.align-middle awa01
+                        td.align-middle 12,000
+                        td.align-middle 12
+                        td.align-middle 公開
+                        td.align-middle 2017/01/12
+                        td.align-middle 2017/07/12
+                        td.align-middle(colspan="3")
+                            .row
+                                .col(data-toggle="tooltip" data-placement="top" title="表示"): i.fa.fa-eye.fa-lg(aria-hidden="true")
+                                .col(data-toggle="tooltip" data-placement="top" title="複製"): i.fa.fa-files-o.fa-lg(aria-hidden="true")
+                                .col(data-toggle="tooltip" data-placement="top" title="廃止"): i.fa.fa-close.fa-lg(aria-hidden="true")
+                    tr.table-secondary
+                        td.align-middle
+                            input(type='checkbox', name='filter', value='open')
+                        td.align-middle 30
+
+                        td.align-middle
+                            a(href="/product/register")
+                                img(src="http://via.placeholder.com/50x50")
+                        td.align-middle
+                            a(href="#") ステンレス鍋100mm
+                        td.align-middle nabe100
+                        td.align-middle 12,000
+                        td.align-middle 4
+                        td.align-middle 非公開
+                        td.align-middle 2017/01/12
+                        td.align-middle 2017/07/12
+                        td.align-middle(colspan="3")
+                            .row
+                                .col(data-toggle="tooltip" data-placement="top" title="表示"): i.fa.fa-eye.fa-lg(aria-hidden="true")
+                                .col(data-toggle="tooltip" data-placement="top" title="複製"): i.fa.fa-files-o.fa-lg(aria-hidden="true")
+                                .col(data-toggle="tooltip" data-placement="top" title="廃止"): i.fa.fa-close.fa-lg(aria-hidden="true")
+                    tr.table-danger
+                        td.align-middle
+                            input(type='checkbox', name='filter', value='open')
+                        td.align-middle 29
+                        td.align-middle
+                            a(href="/product/register")
+                                img(src="http://via.placeholder.com/50x50")
+                        td.align-middle
+                            a(href="#") セラミック包丁
+                        td.align-middle sera12
+                        td.align-middle 12,000
+                        td.align-middle 0
+                        td.align-middle 公開
+                        td.align-middle 2017/01/12
+                        td.align-middle 2017/07/12
+                        td.align-middle(colspan="3")
+                            .row
+                                .col(data-toggle="tooltip" data-placement="top" title="表示"): i.fa.fa-eye.fa-lg(aria-hidden="true")
+                                .col(data-toggle="tooltip" data-placement="top" title="複製"): i.fa.fa-files-o.fa-lg(aria-hidden="true")
+                                .col(data-toggle="tooltip" data-placement="top" title="廃止"): i.fa.fa-close.fa-lg(aria-hidden="true")
+                    tr
+                        td.align-middle
+                            input(type='checkbox', name='filter', value='open')
+                        td.align-middle 28
+                        td.align-middle
+                            a(href="/product/register")
+                                img(src="http://via.placeholder.com/50x50")
+                        td.align-middle
+                            a(href="#") たわし
+                        td.align-middle tawa01
+                        td.align-middle 12,000
+                        td.align-middle 34
+                        td.align-middle 公開
+                        td.align-middle 2017/01/12
+                        td.align-middle 2017/07/12
+                        td.align-middle(colspan="3")
+                            .row
+                                .col(data-toggle="tooltip" data-placement="top" title="表示"): i.fa.fa-eye.fa-lg(aria-hidden="true")
+                                .col(data-toggle="tooltip" data-placement="top" title="複製"): i.fa.fa-files-o.fa-lg(aria-hidden="true")
+                                .col(data-toggle="tooltip" data-placement="top" title="廃止"): i.fa.fa-close.fa-lg(aria-hidden="true")
+                    tr
+                        td.align-middle
+                            input(type='checkbox', name='filter', value='open')
+                        td.align-middle 27
+                        td.align-middle
+                            a(href="/product/register")
+                                img(src="http://via.placeholder.com/50x50")
+                        td.align-middle
+                            a(href="#") おろしがね特級
+                        td.align-middle oroshi15
+                        td.align-middle 12,000
+                        td.align-middle 4
+                        td.align-middle 公開
+                        td.align-middle 2017/01/12
+                        td.align-middle 2017/07/12
+                        td.align-middle(colspan="3")
+                            .row
+                                .col(data-toggle="tooltip" data-placement="top" title="表示"): i.fa.fa-eye.fa-lg(aria-hidden="true")
+                                .col(data-toggle="tooltip" data-placement="top" title="複製"): i.fa.fa-files-o.fa-lg(aria-hidden="true")
+                                .col(data-toggle="tooltip" data-placement="top" title="廃止"): i.fa.fa-close.fa-lg(aria-hidden="true")
+                    tr
+                        td.align-middle
+                            input(type='checkbox', name='filter', value='open')
+                        td.align-middle 26
+                        td.align-middle
+                            a(href="/product/register")
+                                img(src="http://via.placeholder.com/50x50")
+                        td.align-middle
+                            a(href="#") ステンレス水筒
+                        td.align-middle suito-01 ～ suito-09
+                        td.align-middle  12,000
+                        td.align-middle 2
+                        td.align-middle 公開
+                        td.align-middle 2017/01/12
+                        td.align-middle 2017/07/12
+                        td.align-middle(colspan="3")
+                            .row
+                                .col(data-toggle="tooltip" data-placement="top" title="表示"): i.fa.fa-eye.fa-lg(aria-hidden="true")
+                                .col(data-toggle="tooltip" data-placement="top" title="複製"): i.fa.fa-files-o.fa-lg(aria-hidden="true")
+                                .col(data-toggle="tooltip" data-placement="top" title="廃止"): i.fa.fa-close.fa-lg(aria-hidden="true")
+                    tr
+                        td.align-middle
+                            input(type='checkbox', name='filter', value='open')
+                        td.align-middle 25
+                        td.align-middle
+                            a(href="/product/register")
+                                img(src="http://via.placeholder.com/50x50")
+                        td.align-middle
+                            a(href="#") ウォーターサーバ
+                        td.align-middle ws1
+                        td.align-middle 12,000
+                        td.align-middle 5
+                        td.align-middle 公開
+                        td.align-middle 2017/01/12
+                        td.align-middle 2017/07/12
+                        td.align-middle(colspan="3")
+                            .row
+                                .col(data-toggle="tooltip" data-placement="top" title="表示"): i.fa.fa-eye.fa-lg(aria-hidden="true")
+                                .col(data-toggle="tooltip" data-placement="top" title="複製"): i.fa.fa-files-o.fa-lg(aria-hidden="true")
+                                .col(data-toggle="tooltip" data-placement="top" title="廃止"): i.fa.fa-close.fa-lg(aria-hidden="true")
+        .row.justify-content-md-center.mb-4
+            .col-auto
+                .btn-group.btn-group-lg
+                    button.btn.btn-secondary(type='button') 1
+                .btn-group.btn-group-lg
+                    button.btn.btn-light.border.border-dark(type='button') 2
+                .btn-group.btn-group-lg
+                    button.btn.btn-light.border.border-dark(type='button') 3
+                .btn-group.btn-group-lg
+                    button.btn.btn-light.border.border-dark(type='button') 4
