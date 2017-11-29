@@ -1,0 +1,211 @@
+extends /assets/tmpl/moc/layout/_layout-2col
+block pageTitle
+    +b.c-pageTitle
+        +e.titles
+            +e.H2.title 出荷登録
+            +e.SPAN.subTitle 出荷管理
+
+//- TODO マークアップ見直し必要
+block primaryContents
+    +b.c-block
+        +e.heading
+            +e.titles
+                +b.c-toolTip(data-toggle="tooltip" data-placement="top" title="Tooltip")
+                    span.c-toolTip__title 出荷概要
+            +e.toggle
+                i.fa.fa-chevron-up(aria-hidden="true")
+        .c-block__contents
+            .row
+                .col-6
+                    .row.mb-3
+                        .col-3
+                            span 出荷番号
+                        .col-9
+                            a(href="#") 345
+                    .row.mb-3
+                        .col-3
+                            span お届け先
+                        .col-9
+                            p 田口 花子（タグチ ハナコ）
+                            p 〒000-0000
+                            p 大阪府大阪市淀川区十三東1-17-13
+                            a(href="#")
+                                i.fa.fa-pencil(aria-hidden="true") お届け先の編集
+                    .row.mb-3
+                        .col-3
+                            span 注文者
+                        .col-9
+                            p 田口 花子（タグチ ハナコ）
+                            p 〒000-0000
+                            p 大阪府大阪市淀川区十三東1-17-13
+                    .row.mb-3
+                        .col-3
+                            span 出荷伝票番号
+                        .col-9
+                            form.c-form
+                                .c-form__text
+                                    input(type='text' placeholder="1234-567890")
+                    .row.mb-3
+                        .col-3
+                            span 発送状況
+                        .col-9
+                            form.c-form--inline
+                                .c-form__select--small
+                                    select
+                                        option 未発送
+                                        option ...
+                    .row.mb-3
+                        .col-3
+                            span 配送業者
+                        .col-9
+                            form.c-form--inline
+                                .c-form__select--small
+                                    select
+                                        option ヤマト運輸
+                                        option ...
+                .col-6
+                    .row.mb-3
+                        .col-3
+                            span
+                                i.fa.fa-calendar-check-o(aria-hidden="true") お届け希望日
+                        .col-9
+                            form.c-form
+                                .c-form__date
+                                    input(type='date', placeholder='2000/01/01')
+                    .row.mb-3
+                        .col-3
+                            span
+                                i.fa.fa-clock-o(aria-hidden="true") 時間帯指定
+                        .col-9
+                            form.c-form
+                                .c-form__select
+                                    select
+                                        option 指定なし
+                                        option ...
+                    .row.mb-3
+                        .col-3
+                            span
+                                i.fa.fa-truck(aria-hidden="true") 発送日
+                        .col-9
+                            form.c-form
+                                .c-form__date
+                                    input(type='date', placeholder='2000/01/01')
+                    .row.mb-3
+                        .col-3
+                            span
+                                i.fa.fa-refresh(aria-hidden="true") 最終更新日
+                        .col-9
+                            span 2017/09/14
+                    .row.mb-3
+                        .col-3
+                            span
+                                i.fa.fa-user(aria-hidden="true") 最終更新者
+                        .col-9
+                            span user_name
+    +b.c-block
+        +e.heading
+            +e.titles
+                +b.c-toolTip(data-toggle="tooltip" data-placement="top" title="Tooltip")
+                    span.c-toolTip__title 出荷商品情報
+                    i.fa.fa-question-circle.c-toolTip__icon(aria-hidden="true")
+            +e.toggle
+                i.fa.fa-chevron-up(aria-hidden="true")
+        +e.contents
+            .row.mb-4
+                .col-12
+                    a(href="#")
+                        button.c-button--regular.c-button--normal(style="margin-right:10px;") 商品を追加
+            // テーブルの幅を直す
+            table.c-table--mail
+                thead.c-table--mail__tableHeader
+                    th 商品名・コード
+                    th 注文番号
+                    th 単価
+                    th 数量
+                    th 税率
+                    th 小計
+                    th
+                tr
+                    td ☆ご予約販売☆
+                        br
+                        | あかもく ぎばさ 秋田県男鹿の三高水産 冷凍(200g×10袋)ギバサ・アカモクはフコイダンが豊富な海藻！日本海産/ぎばさ/あかもく/ギバサ/アカモク/たけしの家庭の医学で紹介！
+                        br
+                        | Cafe01 /  ( 材質： 金 / サイズ： 120mm )
+                    td
+                        a(href="#") 56
+                    td
+                        span ¥5,000
+                    td
+                        span 1
+                    td
+                        span 8%
+                    td
+                        span ¥5,400
+                        | (税込)
+                    td
+                        i.fa.fa-close(aria-hidden="true")
+                tr
+                    td パーコレーター
+                        br
+                        | Cafe01
+                    td
+                        a(href="#") 57
+                    td
+                        span ¥5,000
+                    td
+                        span 1
+                    td
+                        span 8%
+                    td
+                        span ¥5,400
+                        | (税込)
+                    td
+                        i.fa.fa-close(aria-hidden="true")
+                tr
+                    td パーコレーター
+                        br
+                        | Cafe01
+                    td
+                        a(href="#") 56
+                    td
+                        span ¥5,000
+                    td
+                        span 1
+                    td
+                        span 8%
+                    td
+                        span ¥5,400
+                        | (税込)
+                    td
+                        i.fa.fa-close(aria-hidden="true")
+    +b.c-block
+        +e.heading
+            +e.titles
+                +b.c-toolTip(data-toggle="tooltip" data-placement="top" title="Tooltip")
+                    span.c-toolTip__title 配達用メモ欄
+                    i.fa.fa-question-circle.c-toolTip__icon(aria-hidden="true")
+            +e.toggle
+                i.fa.fa-chevron-up(aria-hidden="true")
+        +e.contents
+            form.c-form
+                .c-form__text
+                    textarea(rows='9', placeholder='テキスト')
+
+block conversionArea
+    +b.c-conversionArea
+        +e.container
+            +e.leftBlock
+                +e.leftBlockItem
+                    a(href="").c-beseLink
+                        i.fa.fa-backward
+                        span 出荷マスター
+            +e.rightBlock
+                +e.rightBlockItem
+                    +b.c-toggleSwitch
+                        +e.btn
+                            input(type="checkbox" id="switch")
+                            label(for="switch")
+                        +e.label
+                            span 未出荷
+                +e.rightBlockItem
+                    button.c-button--conversion.c-button--regular 出荷情報を登録

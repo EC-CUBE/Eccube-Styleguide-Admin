@@ -1,8 +1,188 @@
 extends /assets/tmpl/moc/layout/_layout-2col.pug
 block pageTitle
-    +b.c-pageTitle
-        +e.titles
-            +e.H2.title 商品マスター
-            +e.SPAN.subTitle 商品管理
+    include /assets/tmpl/components/pageTitle.pug
+    +c-pageTitle("出荷マスター","出荷管理")
 
+block outsideBlock
+    +b.c-outsideBlock
+        +e.contents
+            form.c-form
+                .row
+                    .col-12
+                        label 配送番号・お届け先・お届け先会社名
+                    .col-12
+                        .c-form__text
+                            input(type="text")
+                    .col-12
+                        label 対応状況
+                    .col-12
+                        .c-form__checkbox
+                            input(type='checkbox', name='filter', value='open', checked='checked')
+                            span 新規受付
+                        .c-form__checkbox
+                            input(type='checkbox', name='filter', value='close')
+                            span 決済処理中
+                        .c-form__checkbox
+                            input(type='checkbox', name='filter', value='soldOut')
+                            span 入金待ち
+                        .c-form__checkbox
+                            input(type='checkbox', name='filter', value='close')
+                            span 入金済み
+                        .c-form__checkbox
+                            input(type='checkbox', name='filter', value='close')
+                            span キャンセル
+                        .c-form__checkbox
+                            input(type='checkbox', name='filter', value='close')
+                            span 取り寄せ中
+                        .c-form__checkbox
+                            input(type='checkbox', name='filter', value='close')
+                            span 発送済み
+                        .c-form__checkbox
+                            input(type='checkbox', name='filter', value='close')
+                            span 購入処理中
+            .row
+                .col-12
+                    include /assets/tmpl/components/subAction.pug
+                    +c-subAction("詳細検索","is-active")
+        +b.c-subContents
+            .row
+                .col-6
+                    .mb-1
+                        label お届け先
+                        form.c-form
+                            .c-form__text
+                                input(type="text")
+                    .mb-1
+                        label ご注文者
+                        form.c-form
+                            .c-form__text
+                                input(type="text")
+                    .mb-1
+                        label 注文番号
+                        form.c-form
+                            .c-form__text
+                                input(type="text")
+                    .mb-1
+                        label お届け予定日
+                        form.c-form--inline.col-12.p-0
+                            .c-form__date--regular
+                                input(type='date', placeholder='2000/01/01')
+                            span.c-form__sign 〜
+                            .c-form__date--regular
+                                input(type='date', placeholder='2000/01/01')
+                    .mb-1
+                        label 更新日
+                        form.c-form--inline.col-12.p-0
+                            .c-form__date--regular
+                                input(type='date', placeholder='2000/01/01')
+                            span.c-form__sign 〜
+                            .c-form__date--regular
+                                input(type='date', placeholder='2000/01/01')
+                    .mb-1
+                        label 購入金額
+                        form.c-form
+                            .c-form__text--small
+                                input(type='text')
+                            span.c-form__sign 〜
+                            .c-form__text--small
+                                input(type='text')
+
+                .col-6
+                    .mb-1
+                        label お届け先（フリガナ）
+                        form.c-form
+                            .c-form__text
+                                input(type="text")
+                    .mb-1
+                        label ご注文者（フリガナ）
+                        form.c-form
+                            .c-form__text
+                                input(type="text")
+                    .mb-1
+                        label お届け先電話番号
+                        form.c-form
+                            .c-form__text
+                                input(type="text")
+                    .mb-1
+                        label 発送日
+                        form.c-form--inline.col-12.p-0
+                            .c-form__date--regular
+                                input(type='date', placeholder='2000/01/01')
+                            span.c-form__sign 〜
+                            .c-form__date--regular
+                                input(type='date', placeholder='2000/01/01')
+                    .col-12
+                    .mb-1
+                        label 購入商品名
+                        form.c-form
+                            .c-form__text
+                                input(type="text")
+                .col-12.text-center
+                    a(href="#")
+                        button.c-button--regular.c-button--normal(style="margin-right:10px;") 検索条件クリア
+        +e.contents
+            form.c-form
+                .row
+                    .col-12.mb-4
+                        a.c-button--regular.c-button--conversion(href='', style='margin-right:10px;') 検索
+                    .col-6.text-left
+                        label 一括操作
+                        button.c-button--regular.c-button--normal(style='margin-right:10px;') メールする
+                        button.c-button--regular.c-button--normal(style='margin-right:10px;') 発送済みに更新
+                        button.c-button--regular.c-button--delete(style='margin-right:10px;') 削除
+                    .col-6.text-right
+                        form.c-form--inline
+                            .c-form__select--small
+                                select
+                                    option 10件
+                                    option ...
+                        .c-tab--regular
+                            .c-tab__item
+                                i.fa.fa-cloud-download(aria-hidden="true")
+                                span CSVダウンロード
+                            .c-tab__item
+                                i.fa.fa-cog(aria-hidden="true")
+                                span CSV出力設定
 block primaryContents
+    +b.c-block
+        // TODO: 修正が必要
+        +e.contents--noPadding
+            table.c-customerTable
+                thead.c-customerTable__tableHeader
+                    th
+                        input(type='checkbox', name='filter', value='open')
+                    th 発送番号
+                    th 出荷伝票番号
+                    th 注文番号
+                    th お届け先
+                    th 配送業者
+                    th 発送日
+                    th &nbsp;
+                tr
+                    td
+                        input(type='checkbox', name='filter', value='open')
+                    td
+                        a(href='#') 127645
+                    td 123-45678
+                    td
+                        a(href='#') 345
+                        span.c-tag.c-tag--blue 新規受付
+                        br
+                        |
+                        a(href='#') 346
+                        span.c-tag.c-tag--blue 入金済み
+                    td
+                        label
+                            | 532-0023
+                            br
+                            | 大阪市淀川区十三東1-17-13
+                            br
+                            | 田中 秀雄
+                            br
+                            | 06-6666-6666
+                    td 日本郵便
+                    td
+                        i.fa.fa-check(aria-hidden="true") 2017/10/31
+                    td
+                        i.fa.fa-paper-plane.fa-2x(aria-hidden="true")
+                        i.fa.fa-check.fa-2x(aria-hidden="true")
