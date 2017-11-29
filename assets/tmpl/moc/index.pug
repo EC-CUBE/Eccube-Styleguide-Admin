@@ -2,30 +2,50 @@ extends /assets/tmpl/moc/layout/_layout-2col.pug
 block pageTitle
     +b.c-pageTitle
         +e.titles
-            +e.H2.title 商品登録
-            +e.SPAN.subTitle 商品管理
+            +e.H2.title ホーム
+            //+e.SPAN.subTitle 商品管理
 
 block primaryContents
-    .c-block
-        .c-block__heading
-            .c-block__titles
-                h2.c-block__title 基本設定
-                .c-block__toolTip
-                    i.fa.fa-question-circle
-            .c-block__toggle
-                i.fa.fa-angle-up
-        .c-block__contents
-            form
-                .c-form
-                    .c-form__label
-                        label
-                            span.c-form__labelTitle 商品ID
-                            .c-form__labelToolTip
-                                i.fa.fa-question-circle
-                            .c-form__labelRequired 必須
-                    .c-form__input
-                        input(type="text")
-
+    .card
+        .card-header ようこそ、EC-CUBEへ
+        .card-body
+            p hoge
+            hr
+            p hoge
+    br
+    .row
+        .col-sm-4
+            .card
+                .card-header
+                    a(href="/") 受注状況
+                .card-body
+                    p hoge
+                    hr
+                    p hoge
+        .col-sm-8
+            .card
+                .card-header 売上状況
+                .card-body
+                    p hoge
+                    hr
+                    p hoge
+    br
+    .row
+        .col-sm-6
+            .card
+                .card-header ショップ状況
+                .card-body
+                    p hoge
+                    hr
+                    p hoge
+        .col-sm-6
+            .card
+                .card-header お知らせ
+                .card-body
+                    p hoge
+                    hr
+                    p hoge
+    br
 block conversionArea
     +b.c-conversionArea
         +e.container
