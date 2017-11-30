@@ -5,114 +5,527 @@ block pageTitle
             +e.H2.title メール通知
             +e.SPAN.subTitle 受注管理
 
-//- TODO マークアップ見直し必要
 block primaryContents
-    +b.c-block
-        +e.heading
-            +e.titles
-                +b.c-toolTip(data-toggle="tooltip" data-placement="top" title="Tooltip")
-                    span.c-toolTip__title メール配信先
-                    i.fa.fa-question-circle.fa-lg.c-toolTip__icon
-            +e.toggle
-                i.fa.fa-angle-up.fa-lg
-        +e.contents
-            .row.mb-2
-                .col-2
-                    span 注文番号
-                .col-4
-                    span 1234
-                .col-2
-                    span 購入金額(円)
-                .col-4
-                    span 52,980
-            .row.mb-2
-                .col-2
-                    span 注文者
-                .col-4
-                    span 田口 はなこ（タグチ ハナコ）
-                    br
-                    | 〒000-0000
-                    br
-                    | 大阪府大阪市淀川区十三東1-17-13
-                .col-2
-                    span 購入商品
-                .col-4
-                    span パーコレーター 他３点
+    .card.rounded.border-0.mb-4
+        .card-header
             .row
-                .col-2
-                    span 対応状況
-                .col-10
-                    .c-label
-                        span 発送済み
-    +b.c-block
-        +e.heading
-            +e.titles
-                +b.c-toolTip(data-toggle="tooltip" data-placement="top" title="Tooltip")
-                    span.c-toolTip__title 配信履歴
-            +e.toggle
-                i.fa.fa-angle-up.fa-lg
-        +e.contents
-            table.c-table--mail
-                +e.THEAD.tableHeader
-                    th 配信日
-                    th テンプレート
-                    th 件名
-                tr
-                    td 2017/12/03
-                    td お問い合わせを受け付けました
-                    td
-                        a(href="#") お問い合わせを受け付けました
-                tr
-                    td 2017/12/03
-                    td ご注文ありがとうございます
-                    td
-                        a(href="#") ご注文ありがとうございます
+                .col-8
+                    .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
+                        span.card-title メール配信先
+                        i.fa.fa-question-circle.fa-lg.ml-1
+                .col-4.text-right
+                    a(data-toggle="collapse" href="#mailTo" aria-expanded="false" aria-controls="mailTo")
+                        i.fa.fa-angle-up.fa-lg
+        .collapse(id="mailTo").show
+            .card-body
+                .row.mb-2
+                    .col-2
+                        span 注文番号
+                    .col-4
+                        span 1234
+                    .col-2
+                        span 購入金額(円)
+                    .col-4
+                        span 52,980
+                .row.mb-2
+                    .col-2
+                        span 注文者
+                    .col-4
+                        span 田口 はなこ（タグチ ハナコ）
+                        br
+                        | 〒000-0000
+                        br
+                        | 大阪府大阪市淀川区十三東1-17-13
+                    .col-2
+                        span 購入商品
+                    .col-4
+                        span パーコレーター 他３点
+                .row
+                    .col-2
+                        span 対応状況
+                    .col-10
+                        .c-label
+                            span 発送済み
+    .card.rounded.border-0.mb-4
+        .card-header
+            .row
+                .col-8
+                    span.card-title メール配信履歴
+                .col-4.text-right
+                    a(data-toggle="collapse" href="#mailHistory" aria-expanded="false" aria-controls="mailHistory")
+                        i.fa.fa-angle-up.fa-lg
+        .collapse(id="mailHistory").show
+            .card-body
+                table.table.table-striped
+                    thead.table-active
+                        th 配信日
+                        th テンプレート
+                        th 件名
+                    tbody
+                        tr
+                            td 2017/12/03
+                            td お問い合わせを受け付けました
+                            td
+                                a.text-primary(data-toggle="modal" data-target="#mail2") お問い合わせを受け付けました
+                                #mail2.modal.fade(tabindex='-1', role='dialog', aria-labelledby='mail2', aria-hidden='true')
+                                    .modal-dialog(role='document')
+                                        .modal-content
+                                            .modal-header
+                                                h5.modal-title [EC-CUBE SHOP] ご注文ありがとうございます
+                                                button.close(type='button', data-dismiss='modal', aria-label='Close')
+                                                    span(aria-hidden='true') ×
+                                            .modal-body
+                                                p
+                                                    | テスト タロウ 様
+                                                    br
+                                                    br
+                                                    | この度はご注文いただき誠にありがとうございます。下記ご注文内容にお間違えがないかご確認下さい。
+                                                    br
+                                                    br
+                                                    | ************************************************
+                                                    br
+                                                    |  ご請求金額
+                                                    br
+                                                    | ************************************************
+                                                    br
+                                                    br
+                                                    | ご注文番号：1
+                                                    br
+                                                    | お支払い合計：￥53,920
+                                                    br
+                                                    | お支払い方法：郵便振替
+                                                    br
+                                                    | メッセージ：
+                                                    br
+                                                    br
+                                                    br
+                                                    | ************************************************
+                                                    br
+                                                    |  ご注文商品明細
+                                                    br
+                                                    | ************************************************
+                                                    br
+                                                    br
+                                                    | -------------------------------------------------
+                                                    br
+                                                    | 小　計 ￥52,920(うち消費税 ￥3,920)
+                                                    br
+                                                    | 手数料 ￥0
+                                                    br
+                                                    | 送　料 ￥1,000
+                                                    br
+                                                    | ============================================
+                                                    br
+                                                    | 合　計 ￥53,920
+                                                    br
+                                                    br
+                                                    | ************************************************
+                                                    br
+                                                    |  ご注文者情報
+                                                    br
+                                                    | ************************************************
+                                                    br
+                                                    br
+                                                    | お名前　：テスト タロウ 様
+                                                    br
+                                                    | フリガナ：テスト タロウ 様
+                                                    br
+                                                    | 郵便番号：〒532-0023
+                                                    br
+                                                    | 住所　　：大阪府大阪市淀川区十三東
+                                                    br
+                                                    | 電話番号：00-0000-0000
+                                                    br
+                                                    | FAX番号 ：--
+                                                    br
+                                                    | メールアドレス：witchdoktor0403@gmail.com
+                                                    br
+                                                    br
+                                                    | ************************************************
+                                                    br
+                                                    |  配送情報
+                                                    br
+                                                    | ************************************************
+                                                    br
+                                                    br
+                                                    | ◎お届け先
+                                                    br
+                                                    | お名前　：テスト タロウ 様
+                                                    br
+                                                    | フリガナ：テスト タロウ 様
+                                                    br
+                                                    | 郵便番号：〒532-0023
+                                                    br
+                                                    | 住所　　：大阪府大阪市淀川区十三東
+                                                    br
+                                                    | 電話番号：00-0000-0000
+                                                    br
+                                                    | FAX番号 ：--
+                                                    br
+                                                    |
+                                                    | お届け日：指定なし
+                                                    br
+                                                    | お届け時間：指定なし
+                                                    br
+                                                    br
+                                                    | 商品コード: fork-05
+                                                    br
+                                                    | 商品名: ディナーフォーク 銀 170mm
+                                                    br
+                                                    | 数量：1
+                                                    br
+                                                    br
+                                                    | 商品コード:
+                                                    br
+                                                    | 商品名: 送料
+                                                    br
+                                                    | 数量：1
+                                                    br
+                                                    br
+                                                    | ============================================
+                                                    br
+                                                    br
+                                                    br
+                                                    | このメッセージはお客様へのお知らせ専用ですので、
+                                                    br
+                                                    | このメッセージへの返信としてご質問をお送りいただいても回答できません。
+                                                    br
+                                                    | ご了承ください。
+                                                    br
+                                                    br
+                                                    | ご質問やご不明な点がございましたら、こちらからお願いいたします。
+                                                    br
+                                            .modal-footer
+                                                button.btn.btn-light(type='button', data-dismiss='modal') 閉じる
+                        tr
+                            td 2017/12/01
+                            td ご注文ありがとうございます
+                            td
+                                a.text-primary(data-toggle="modal" data-target="#mail1") ご注文ありがとうございます
+                                #mail1.modal.fade(tabindex='-1', role='dialog', aria-labelledby='mail1', aria-hidden='true')
+                                    .modal-dialog(role='document')
+                                        .modal-content
+                                            .modal-header
+                                                h5.modal-title [EC-CUBE SHOP] ご注文ありがとうございます
+                                                button.close(type='button', data-dismiss='modal', aria-label='Close')
+                                                    span(aria-hidden='true') ×
+                                            .modal-body
+                                                p
+                                                    | テスト タロウ 様
+                                                    br
+                                                    br
+                                                    | この度はご注文いただき誠にありがとうございます。下記ご注文内容にお間違えがないかご確認下さい。
+                                                    br
+                                                    br
+                                                    | ************************************************
+                                                    br
+                                                    |  ご請求金額
+                                                    br
+                                                    | ************************************************
+                                                    br
+                                                    br
+                                                    | ご注文番号：1
+                                                    br
+                                                    | お支払い合計：￥53,920
+                                                    br
+                                                    | お支払い方法：郵便振替
+                                                    br
+                                                    | メッセージ：
+                                                    br
+                                                    br
+                                                    br
+                                                    | ************************************************
+                                                    br
+                                                    |  ご注文商品明細
+                                                    br
+                                                    | ************************************************
+                                                    br
+                                                    br
+                                                    | -------------------------------------------------
+                                                    br
+                                                    | 小　計 ￥52,920(うち消費税 ￥3,920)
+                                                    br
+                                                    | 手数料 ￥0
+                                                    br
+                                                    | 送　料 ￥1,000
+                                                    br
+                                                    | ============================================
+                                                    br
+                                                    | 合　計 ￥53,920
+                                                    br
+                                                    br
+                                                    | ************************************************
+                                                    br
+                                                    |  ご注文者情報
+                                                    br
+                                                    | ************************************************
+                                                    br
+                                                    br
+                                                    | お名前　：テスト タロウ 様
+                                                    br
+                                                    | フリガナ：テスト タロウ 様
+                                                    br
+                                                    | 郵便番号：〒532-0023
+                                                    br
+                                                    | 住所　　：大阪府大阪市淀川区十三東
+                                                    br
+                                                    | 電話番号：00-0000-0000
+                                                    br
+                                                    | FAX番号 ：--
+                                                    br
+                                                    | メールアドレス：witchdoktor0403@gmail.com
+                                                    br
+                                                    br
+                                                    | ************************************************
+                                                    br
+                                                    |  配送情報
+                                                    br
+                                                    | ************************************************
+                                                    br
+                                                    br
+                                                    | ◎お届け先
+                                                    br
+                                                    | お名前　：テスト タロウ 様
+                                                    br
+                                                    | フリガナ：テスト タロウ 様
+                                                    br
+                                                    | 郵便番号：〒532-0023
+                                                    br
+                                                    | 住所　　：大阪府大阪市淀川区十三東
+                                                    br
+                                                    | 電話番号：00-0000-0000
+                                                    br
+                                                    | FAX番号 ：--
+                                                    br
+                                                    |
+                                                    | お届け日：指定なし
+                                                    br
+                                                    | お届け時間：指定なし
+                                                    br
+                                                    br
+                                                    | 商品コード: fork-05
+                                                    br
+                                                    | 商品名: ディナーフォーク 銀 170mm
+                                                    br
+                                                    | 数量：1
+                                                    br
+                                                    br
+                                                    | 商品コード:
+                                                    br
+                                                    | 商品名: 送料
+                                                    br
+                                                    | 数量：1
+                                                    br
+                                                    br
+                                                    | ============================================
+                                                    br
+                                                    br
+                                                    br
+                                                    | このメッセージはお客様へのお知らせ専用ですので、
+                                                    br
+                                                    | このメッセージへの返信としてご質問をお送りいただいても回答できません。
+                                                    br
+                                                    | ご了承ください。
+                                                    br
+                                                    br
+                                                    | ご質問やご不明な点がございましたら、こちらからお願いいたします。
+                                                    br
+                                            .modal-footer
+                                                button.btn.btn-light(type='button', data-dismiss='modal') 閉じる
 
-    +b.c-block
-        +e.heading
-            +e.titles
-                +b.c-toolTip(data-toggle="tooltip" data-placement="top" title="Tooltip")
-                    span.c-toolTip__title 新規メール配信
-            +e.toggle
-                i.fa.fa-angle-up.fa-lg
-        +e.contents
+
+
+    .card.rounded.border-0.mb-4
+        .card-header
             .row
-                .col-2
-                    span テンプレート
-                    i.fa.fa-question-circle.fa-lg.c-toolTip__icon
-                    .c-requiredLabel
-                        span 必須
-                .col-10
-                    form.c-form
-                        .c-form__text
-                            input(type="text")
-            .row
-                .col-2
-                    span 件名
-                    span &nbsp;
-                    .c-requiredLabel
-                        span 必須
-                .col-10
-                    form.c-form
-                        .c-form__text
-                            input(type="text")
-            .row
-                .col-2
+                .col-8
+                    .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
+                        span.card-title 新規メール配信
+                        i.fa.fa-question-circle.fa-lg.ml-1
+                .col-4.text-right
+                    a(data-toggle="collapse" href="#mailCreate" aria-expanded="false" aria-controls="mailCreate")
+                        i.fa.fa-angle-up.fa-lg
+        .collapse(id="mailCreate").show
+            .card-body
+                .row.mb-3
+                    .col-3
+                        .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
+                            span テンプレート
+                            i.fa.fa-question-circle.fa-lg.ml-1
+                            span.badge.badge-primary.ml-1 必須
+                    .col
+                        form
+                            select.form-control
+                                option(value='') 選択してください。
+                .row.mb-3
+                    .col-3
+                        .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
+                            span 件名
+                            i.fa.fa-question-circle.fa-lg.ml-1
+                            span.badge.badge-primary.ml-1 必須
+                    .col
+                        form
+                            input(type="text" placeholder="テキスト").form-control
+
+            .row.mb-3
+                .col-3
                     span ヘッダー文
-                .col-10
-                    form.c-form
-                        .c-form__text
-                            textarea(rows="9")
-            .row
-                .col-2
+                .col
+                    form
+                        .form-group
+                            textarea(rows="8").form-control
+            .row.mb-3
+                .col-3
                     span フッター文
-                .col-10
-                    form.c-form
-                        .c-form__text
-                            textarea(rows="9")
-
+                .col
+                    form
+                        .form-group
+                            textarea(rows="8").form-control
 block conversionArea
     +b.c-conversionArea
         +e.container
-            span 公開
-            span 更新
+            .row.justify-content-between.align-items-center
+                .col-6
+                    +e.leftBlockItem
+                        a(href="/order/master").c-beseLink
+                            i.fa.fa-backward(aria-hidden="true")
+                            span 受注マスター
+                // TODO モーダルエラー出るので確認
+                .col-6
+                    .row.align-items-center.justify-content-end
+                        .col-auto
+                            button(data-toggle="modal" data-target="#mailConfirm").btn.btn-primary.px-5 配信内容を確認
+                            #mailConfirm.modal.fade(tabindex='-1', role='dialog', aria-labelledby='mailConfirm', aria-hidden='true')
+                                    .modal-dialog(role='document')
+                                        .modal-content
+                                            .modal-header
+                                                p.text-weight-bold.mb-3
+                                                    | 下の内容でメールを送信してもよろしいですか？ 確認の上、［メール送信］ボタンを押してください。
+                                                p.text-weight-bold.text-danger
+                                                    | ※24人に送信｜下記内容は1通分の例です。受注情報・宛名は宛先ごとに異なります。
+                                                button.close(type='button', data-dismiss='modal', aria-label='Close')
+                                                    span(aria-hidden='true') ×
+                                            .modal-body
+                                                h5.modal-title [EC-CUBE SHOP] ご注文ありがとうございます
+                                                p
+                                                    | テスト タロウ 様
+                                                    br
+                                                    br
+                                                    | この度はご注文いただき誠にありがとうございます。下記ご注文内容にお間違えがないかご確認下さい。
+                                                    br
+                                                    br
+                                                    | ************************************************
+                                                    br
+                                                    |  ご請求金額
+                                                    br
+                                                    | ************************************************
+                                                    br
+                                                    br
+                                                    | ご注文番号：1
+                                                    br
+                                                    | お支払い合計：￥53,920
+                                                    br
+                                                    | お支払い方法：郵便振替
+                                                    br
+                                                    | メッセージ：
+                                                    br
+                                                    br
+                                                    br
+                                                    | ************************************************
+                                                    br
+                                                    |  ご注文商品明細
+                                                    br
+                                                    | ************************************************
+                                                    br
+                                                    br
+                                                    | -------------------------------------------------
+                                                    br
+                                                    | 小　計 ￥52,920(うち消費税 ￥3,920)
+                                                    br
+                                                    | 手数料 ￥0
+                                                    br
+                                                    | 送　料 ￥1,000
+                                                    br
+                                                    | ============================================
+                                                    br
+                                                    | 合　計 ￥53,920
+                                                    br
+                                                    br
+                                                    | ************************************************
+                                                    br
+                                                    |  ご注文者情報
+                                                    br
+                                                    | ************************************************
+                                                    br
+                                                    br
+                                                    | お名前　：テスト タロウ 様
+                                                    br
+                                                    | フリガナ：テスト タロウ 様
+                                                    br
+                                                    | 郵便番号：〒532-0023
+                                                    br
+                                                    | 住所　　：大阪府大阪市淀川区十三東
+                                                    br
+                                                    | 電話番号：00-0000-0000
+                                                    br
+                                                    | FAX番号 ：--
+                                                    br
+                                                    | メールアドレス：witchdoktor0403@gmail.com
+                                                    br
+                                                    br
+                                                    | ************************************************
+                                                    br
+                                                    |  配送情報
+                                                    br
+                                                    | ************************************************
+                                                    br
+                                                    br
+                                                    | ◎お届け先
+                                                    br
+                                                    | お名前　：テスト タロウ 様
+                                                    br
+                                                    | フリガナ：テスト タロウ 様
+                                                    br
+                                                    | 郵便番号：〒532-0023
+                                                    br
+                                                    | 住所　　：大阪府大阪市淀川区十三東
+                                                    br
+                                                    | 電話番号：00-0000-0000
+                                                    br
+                                                    | FAX番号 ：--
+                                                    br
+                                                    |
+                                                    | お届け日：指定なし
+                                                    br
+                                                    | お届け時間：指定なし
+                                                    br
+                                                    br
+                                                    | 商品コード: fork-05
+                                                    br
+                                                    | 商品名: ディナーフォーク 銀 170mm
+                                                    br
+                                                    | 数量：1
+                                                    br
+                                                    br
+                                                    | 商品コード:
+                                                    br
+                                                    | 商品名: 送料
+                                                    br
+                                                    | 数量：1
+                                                    br
+                                                    br
+                                                    | ============================================
+                                                    br
+                                                    br
+                                                    br
+                                                    | このメッセージはお客様へのお知らせ専用ですので、
+                                                    br
+                                                    | このメッセージへの返信としてご質問をお送りいただいても回答できません。
+                                                    br
+                                                    | ご了承ください。
+                                                    br
+                                                    br
+                                                    | ご質問やご不明な点がございましたら、こちらからお願いいたします。
+                                                    br
+                                            .modal-footer
+                                                button.btn.btn-light(type='button', data-dismiss='modal') 閉じる
