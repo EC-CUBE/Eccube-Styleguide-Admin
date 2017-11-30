@@ -4,258 +4,95 @@ block pageTitle
     +c-pageTitle("商品登録（規格設定）","商品管理")
 
 block primaryContents
-    +b.c-block
-        +e.heading
-            +e.titles
-                span.c-toolTip__title 商品名：フォーク
-            +e.toggle
-                a(href="#").c-button--small.c-button--delete 商品規格を初期化
-        +e.contents
+    .card.rounded.border-0.mb-4
+        .card-header
             .row
-                .col-1
-                    span 規格１
-                .col-11
-                    span 材質 [表示名：材質]
+                .col-8
+                    span.card-title.align-middle 商品名：フォーク
+                .col-4.text-right
+                    button.btn.btn-danger 商品規格を初期化
+        .card-body
+            .row.mb-2
+                .col
+                    .d-inline-block.mr-2
+                        span 規格１
+                    .d-inline-block
+                        span 材質 [表示名：材質]
             .row
-                .col-1
-                    span 規格２
-                .col-11
-                    span サイズ [表示名：靴サイズ]
+                .col
+                    .d-inline-block.mr-2
+                        span 規格２
+                    .d-inline-block
+                        span サイズ [表示名：靴サイズ]
 
-    +b.c-block
-        +e.heading
-            +e.titles
-                span.c-toolTip__title 9件の規格の組み合わせがあります
-            +e.toggle
-                a.c-button--small.c-button--normal(href="#" style="margin-right:10px;")
-                        i.fa.fa-files-o(aria-hidden="true")
-                        | &nbsp;一行目をすべての行に複製
-        +e.contents
-            +b.c-horizontalForm
-                table.c-customerTable
-                    thead.c-customerTable__tableHeader
-                        th 登録
-                        th 材質
-                        th サイズ
-                        th コード
-                        th 在庫数
-                        th 販売制限数
-                        th 通常価格
-                        th お届け可能日
-                        th 商品種別
+    .card.rounded.border-0.mb-4
+        .card-header
+            .row.justify-content-between
+                .col-6
+                    span.align-middle 9件の規格の組み合わせがあります
+                .col-4.text-right
+                    button.btn.btn-light.border.border-dark.d-inline-block
+                        i.fa.fa-files-o.mr-1
+                        span 一行目をすべての行に複製
+        .card-body.p-0
+            table.table
+                thead
+                    th 登録
+                    th 材質
+                    th サイズ
+                    th コード
+                    th 在庫数
+                    th 販売制限数
+                    th 通常価格
+                    th お届け可能日
+                    th 商品種別
+                - for (var x = 0; x < 9; x++)
                     tr
-                        td
+                        td.align-middle
                             input(type="checkbox")
-                        td プラチナ
-                        td 130cm
-                        td
-                            .c-form__text--extraSmall
-                                input(type="text")
-                        td
-                            .c-form__text--smallest
-                                input(type="text")
-                            input(type="checkbox")
-                            | &nbsp;無制限
-                        td
-                            .c-form__text--smallest
-                                input(type="text")
-                        td
-                            .c-form__text--extraSmall
-                                input(type="text")
-                        td
-                            .c-form__select--small
-                                select
+                        td.align-middle プラチナ
+                        td.align-middle 130cm
+                        td.align-middle
+                            form
+                                input.form-control(type="text")
+                        td.align-middle
+                            form.form-row
+                                .col-5
+                                    input.form-control(type="number")
+                                .col-auto
+                                    label.form-check-label.align-middle
+                                        input.form-check-input(type="checkbox")
+                                        span 無制限
+                        td.align-middle
+                            form.form-row
+                                .col-6
+                                    input.form-control(type="number")
+                        td.align-middle
+                            input.form-control(type="text")
+                        td.align-middle
+                            form
+                                select.custom-select
                                     option 指定なし
-                        td
-                            .c-form__select--small
-                                select
+                                    option ...
+                        td.align-middle
+                            form
+                                select.custom-select
                                     option 商品種別A
-                    tr
-                        td
-                            input(type="checkbox")
-                        td プラチナ
-                        td 130cm
-                        td
-                            .c-form__text--extraSmall
-                                input(type="text")
-                        td
-                            .c-form__text--smallest
-                                input(type="text")
-                            input(type="checkbox")
-                            | &nbsp;無制限
-                        td
-                            .c-form__text--smallest
-                                input(type="text")
-                        td
-                            .c-form__text--extraSmall
-                                input(type="text")
-                        td
-                            .c-form__select--small
-                                select
-                                    option 指定なし
-                        td
-                            .c-form__select--small
-                                select
-                                    option 商品種別A
-                    tr
-                        td
-                            input(type="checkbox")
-                        td プラチナ
-                        td 130cm
-                        td
-                            .c-form__text--extraSmall
-                                input(type="text")
-                        td
-                            .c-form__text--smallest
-                                input(type="text")
-                            input(type="checkbox")
-                            | &nbsp;無制限
-                        td
-                            .c-form__text--smallest
-                                input(type="text")
-                        td
-                            .c-form__text--extraSmall
-                                input(type="text")
-                        td
-                            .c-form__select--small
-                                select
-                                    option 指定なし
-                        td
-                            .c-form__select--small
-                                select
-                                    option 商品種別A
-                    tr
-                        td
-                            input(type="checkbox")
-                        td プラチナ
-                        td 130cm
-                        td
-                            .c-form__text--extraSmall
-                                input(type="text")
-                        td
-                            .c-form__text--smallest
-                                input(type="text")
-                            input(type="checkbox")
-                            | &nbsp;無制限
-                        td
-                            .c-form__text--smallest
-                                input(type="text")
-                        td
-                            .c-form__text--extraSmall
-                                input(type="text")
-                        td
-                            .c-form__select--small
-                                select
-                                    option 指定なし
-                        td
-                            .c-form__select--small
-                                select
-                                    option 商品種別A
-                    tr
-                        td
-                            input(type="checkbox")
-                        td プラチナ
-                        td 130cm
-                        td
-                            .c-form__text--extraSmall
-                                input(type="text")
-                        td
-                            .c-form__text--smallest
-                                input(type="text")
-                            input(type="checkbox")
-                            | &nbsp;無制限
-                        td
-                            .c-form__text--smallest
-                                input(type="text")
-                        td
-                            .c-form__text--extraSmall
-                                input(type="text")
-                        td
-                            .c-form__select--small
-                                select
-                                    option 指定なし
-                        td
-                            .c-form__select--small
-                                select
-                                    option 商品種別A
-                    tr
-                        td
-                            input(type="checkbox")
-                        td プラチナ
-                        td 130cm
-                        td
-                            .c-form__text--extraSmall
-                                input(type="text")
-                        td
-                            .c-form__text--smallest
-                                input(type="text")
-                            input(type="checkbox")
-                            | &nbsp;無制限
-                        td
-                            .c-form__text--smallest
-                                input(type="text")
-                        td
-                            .c-form__text--extraSmall
-                                input(type="text")
-                        td
-                            .c-form__select--small
-                                select
-                                    option 指定なし
-                        td
-                            .c-form__select--small
-                                select
-                                    option 商品種別A
-                    tr
-                        td
-                            input(type="checkbox")
-                        td プラチナ
-                        td 130cm
-                        td
-                            .c-form__text--extraSmall
-                                input(type="text")
-                        td
-                            .c-form__text--smallest
-                                input(type="text")
-                            input(type="checkbox")
-                            | &nbsp;無制限
-                        td
-                            .c-form__text--smallest
-                                input(type="text")
-                        td
-                            .c-form__text--extraSmall
-                                input(type="text")
-                        td
-                            .c-form__select--small
-                                select
-                                    option 指定なし
-                        td
-                            .c-form__select--small
-                                select
-                                    option 商品種別A
-                    tr
-                        td
-                            input(type="checkbox")
-                        td プラチナ
-                        td 130cm
-                        td
-                            .c-form__text--extraSmall
-                                input(type="text")
-                        td
-                            .c-form__text--smallest
-                                input(type="text")
-                            input(type="checkbox")
-                            | &nbsp;無制限
-                        td
-                            .c-form__text--smallest
-                                input(type="text")
-                        td
-                            .c-form__text--extraSmall
-                                input(type="text")
-                        td
-                            .c-form__select--small
-                                select
-                                    option 指定なし
-                        td
-                            .c-form__select--small
-                                select
-                                    option 商品種別A
+                                    option ...
+
+block conversionArea
+    +b.c-conversionArea
+        +e.container
+            .row.justify-content-between.align-items-center
+                .col-6
+                    +e.leftBlockItem
+                        a(href="/product/master").c-beseLink
+                            i.fa.fa-backward(aria-hidden="true")
+                            span 商品マスター
+                .col-6
+                    .row.align-items-center.justify-content-end
+                        .col-auto
+                            include /assets/tmpl/components/toggleSwitch.pug
+                            +c-toggleSwitch
+                        .col-auto
+                            button(type="submit").btn.btn-primary.px-5 更新

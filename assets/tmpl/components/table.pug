@@ -41,57 +41,55 @@ mixin c-table--standard
 
 //- 並び替えテーブル
 mixin c-sortTable(text1,text2,text3)
-    +b.c-sortTable
-        +e.item
-            +e.itemForm
-                form.c-form
-                    .c-form__text--regular
-                        input(type="text")
-                    button.c-button--regular.c-button--normal 新規作成
-        +e.item
-            +e.itemNob
-                i.fa.fa-bars
-            +e.itemCategory
-                a(href="")= text1
-            +e.itemAction
-                +e.itemActionBtn.c-toolTip(href="" data-toggle="tooltip" data-placement="top" title="上へ移動"): i.fa.fa-arrow-up
-                +e.itemActionBtn.c-toolTip(href="" data-toggle="tooltip" data-placement="top" title="下へ移動"): i.fa.fa-arrow-down
-                +e.itemActionBtn.c-toolTip(href="" data-toggle="tooltip" data-placement="top" title="名前を編集"): i.fa.fa-pencil
-                +e.itemActionBtn.c-toolTip(href="" data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-close
-        +e.item
-            +e.itemNob
-                i.fa.fa-bars
-
-            +e.itemCategory
-                a(href="")= text2
-            +e.itemAction
-                +e.itemActionBtn.c-toolTip(href="" data-toggle="tooltip" data-placement="top" title="上へ移動"): i.fa.fa-arrow-up
-                +e.itemActionBtn.c-toolTip(href="" data-toggle="tooltip" data-placement="top" title="下へ移動"): i.fa.fa-arrow-down
-                +e.itemActionBtn.c-toolTip(href="" data-toggle="tooltip" data-placement="top" title="名前を編集"): i.fa.fa-pencil
-                +e.itemActionBtn.c-toolTip(href="" data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-close
-        +e.item
-            +e.itemForm
-                form.c-form
-                    .c-form__text--regular
-                        input(type="text" placeholder="変更名を入力")
-                    button.c-button--regular.c-button--conversion 決定
-                    button.c-button--regular.c-button--sub キャンセル
-            +e.itemAction
-                +e.itemActionBtn.c-toolTip(href="" data-toggle="tooltip" data-placement="top" title="上へ移動"): i.fa.fa-arrow-up
-                +e.itemActionBtn.c-toolTip(href="" data-toggle="tooltip" data-placement="top" title="下へ移動"): i.fa.fa-arrow-down
-                +e.itemActionBtn.c-toolTip(href="" data-toggle="tooltip" data-placement="top" title="名前を編集"): i.fa.fa-pencil
-                +e.itemActionBtn.c-toolTip(href="" data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-close
-        +e.item
-            +e.itemNob
-                i.fa.fa-bars
-
-            +e.itemCategory
-                a(href="")= text3
-            +e.itemAction
-                +e.itemActionBtn.c-toolTip(href="" data-toggle="tooltip" data-placement="top" title="上へ移動"): i.fa.fa-arrow-up
-                +e.itemActionBtn.c-toolTip(href="" data-toggle="tooltip" data-placement="top" title="下へ移動"): i.fa.fa-arrow-down
-                +e.itemActionBtn.c-toolTip(href="" data-toggle="tooltip" data-placement="top" title="名前を編集"): i.fa.fa-pencil
-                +e.itemActionBtn.is-stopped.c-toolTip(href="" data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-close
+    .card.rounded.border-0.mb-4
+        ul.list-group.list-group-flush
+            li.list-group-item
+                form.form-row
+                    .col-3
+                        input(type="text" placeholder="テキスト").form-control
+                    .col-auto
+                        button(type="submit").btn.btn-outline-dark 新規作成
+            li.list-group-item
+                .row.justify-content-around
+                    .col-auto
+                        i.fa.fa-bars
+                    .col
+                        a(href="/product/standard/detail")= text1
+                    .col-3.text-right
+                        .d-inline-block.mr-3(href="" data-toggle="tooltip" data-placement="top" title="上へ移動"): i.fa.fa-arrow-up.fa-lg
+                        .d-inline-block.mr-3(href="" data-toggle="tooltip" data-placement="top" title="下へ移動"): i.fa.fa-arrow-down.fa-lg
+                        .d-inline-block.mr-3(href="" data-toggle="tooltip" data-placement="top" title="名前を編集"): i.fa.fa-pencil.fa-lg
+                        .d-inline-block.mr-3(href="" data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-close.fa-lg
+            li.list-group-item
+                .row.justify-content-around
+                    .col-auto
+                        i.fa.fa-bars
+                    .col
+                        a(href="/product/standard/detail")= text2
+                    .col-3.text-right
+                        .d-inline-block.mr-3(href="" data-toggle="tooltip" data-placement="top" title="上へ移動"): i.fa.fa-arrow-up.fa-lg
+                        .d-inline-block.mr-3(href="" data-toggle="tooltip" data-placement="top" title="下へ移動"): i.fa.fa-arrow-down.fa-lg
+                        .d-inline-block.mr-3(href="" data-toggle="tooltip" data-placement="top" title="名前を編集"): i.fa.fa-pencil.fa-lg
+                        .d-inline-block.mr-3(href="" data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-close.fa-lg
+            li.list-group-item
+                form.form-row
+                    .col-3
+                        input(type="text" placeholder="テキスト").form-control
+                    .col-auto
+                        button(type="submit").btn.btn-primary 決定
+                    .col-auto
+                        button(type="submit").btn.btn-light キャンセル
+            li.list-group-item
+                .row.justify-content-around
+                    .col-auto
+                        i.fa.fa-bars
+                    .col
+                        a(href="/product/standard/detail")= text3
+                    .col-3.text-right
+                        .d-inline-block.mr-3(href="" data-toggle="tooltip" data-placement="top" title="上へ移動"): i.fa.fa-arrow-up.fa-lg
+                        .d-inline-block.mr-3(href="" data-toggle="tooltip" data-placement="top" title="下へ移動"): i.fa.fa-arrow-down.fa-lg
+                        .d-inline-block.mr-3(href="" data-toggle="tooltip" data-placement="top" title="名前を編集"): i.fa.fa-pencil.fa-lg
+                        .d-inline-block.mr-3(href="" data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-close.fa-lg
 
 mixin c-csvTable
     table.c-csvTable
