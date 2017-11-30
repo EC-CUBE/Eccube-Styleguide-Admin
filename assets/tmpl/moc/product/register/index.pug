@@ -13,7 +13,7 @@ block primaryContents
                         i.fa.fa-question-circle.fa-lg.ml-1
                 .col-4.text-right
                     a(data-toggle="collapse" href="#basicConfig" aria-expanded="false" aria-controls="basicConfig")
-                        i.fa.fa-angle-up
+                        i.fa.fa-angle-up.fa-lg
         .collapse(id="basicConfig").show
             .card-body
                 .row.mb-3
@@ -21,7 +21,7 @@ block primaryContents
                         .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
                             span 商品名
                             i.fa.fa-question-circle.fa-lg.ml-1
-                    .col-9
+                    .col
                         p 12
                 .row.mb-3
                     .col-3
@@ -29,7 +29,7 @@ block primaryContents
                             span 商品ID
                             i.fa.fa-question-circle.fa-lg.ml-1
                             span.badge.badge-primary.ml-1 必須
-                    .col-9
+                    .col
                         form
                             .form-group
                                 input(type="text" placeholder="テキスト").form-control
@@ -39,7 +39,7 @@ block primaryContents
                             span 商品種別
                             i.fa.fa-question-circle.fa-lg.ml-1
                             span.badge.badge-primary.ml-1 必須
-                    .col-9
+                    .col
                         form
                             .form-group
                                 select.form-control
@@ -49,7 +49,7 @@ block primaryContents
                         .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
                             span 商品画像
                             i.fa.fa-question-circle.fa-lg.ml-1
-                    .col-9
+                    .col
                         form
                             .form-group
                                 input(type="file").form-control-file
@@ -58,7 +58,7 @@ block primaryContents
                         .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
                             span 商品説明
                             i.fa.fa-question-circle.fa-lg.ml-1
-                    .col-9
+                    .col
                         form
                             .form-group
                                 textarea(rows="8").form-control
@@ -71,7 +71,7 @@ block primaryContents
                             span 販売価格
                             i.fa.fa-question-circle.fa-lg.ml-1
                             span.badge.badge-primary.ml-1 必須
-                    .col-9
+                    .col
                         form
                             .form-group
                                 input(type="text" placeholder="テキスト").form-control
@@ -84,7 +84,7 @@ block primaryContents
                             span 在庫数
                             i.fa.fa-question-circle.fa-lg.ml-1
                             span.badge.badge-primary.ml-1 必須
-                    .col-9
+                    .col
                         form
                             .form-group
                                 input(type="text" placeholder="テキスト").form-control
@@ -97,7 +97,7 @@ block primaryContents
                         .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
                             span 検索キーワード
                             i.fa.fa-question-circle.fa-lg.ml-1
-                    .col-9
+                    .col
                         form
                             .form-group
                                 input(type="text" placeholder="テキスト").form-control
@@ -110,7 +110,7 @@ block primaryContents
                             i.fa.fa-question-circle.fa-lg.ml-1
                 .col-4.text-right
                     a(data-toggle="collapse" href="#standardConfig" aria-expanded="false" aria-controls="standardConfig")
-                        i.fa.fa-angle-up
+                        i.fa.fa-angle-up.fa-lg
         .collapse(id="standardConfig").show
             .card-body
                 .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
@@ -154,7 +154,7 @@ block primaryContents
                         .modal-dialog(role='document')
                             .modal-content
                                 .modal-header
-                                    h5#exampleModalLabel.modal-title ページを移動します。
+                                    h5.modal-title ページを移動します。
                                     button.close(type='button', data-dismiss='modal', aria-label='Close')
                                         span(aria-hidden='true') ×
                                 .modal-body
@@ -171,10 +171,10 @@ block primaryContents
                 .col-8
                     .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
                         span.card-title フリーエリア
-                            i.fa.fa-question-circle.fa-lg.ml-1
+                        i.fa.fa-question-circle.fa-lg.ml-1
                 .col-4.text-right
                     a(data-toggle="collapse" href="#freeArea" aria-expanded="false" aria-controls="freeArea")
-                        i.fa.fa-angle-up
+                        i.fa.fa-angle-up.fa-lg
         .collapse(id="freeArea").show
             .card-body
                 .row
@@ -194,10 +194,10 @@ block secondaryContents
                 .col-8
                     .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
                         span.card-title カテゴリ
-                            i.fa.fa-question-circle.fa-lg.ml-1
+                        i.fa.fa-question-circle.fa-lg.ml-1
                 .col-4.text-right
                     a(data-toggle="collapse" href="#category" aria-expanded="false" aria-controls="category")
-                        i.fa.fa-angle-up
+                        i.fa.fa-angle-up.fa-lg
         .collapse(id="category").show
             .card-body
                 form.mb-3
@@ -221,7 +221,7 @@ block secondaryContents
                             i.fa.fa-question-circle.fa-lg.ml-1
                 .col-4.text-right
                     a(data-toggle="collapse" href="#tag" aria-expanded="false" aria-controls="tag")
-                        i.fa.fa-angle-up
+                        i.fa.fa-angle-up.fa-lg
         .collapse(id="tag").show
             .card-body
                 .d-inline-block.mb-2.mr-2
@@ -257,7 +257,7 @@ block secondaryContents
                             i.fa.fa-question-circle.fa-lg.ml-1
                 .col-4.text-right
                     a(data-toggle="collapse" href="#update" aria-expanded="false" aria-controls="update")
-                        i.fa.fa-angle-up
+                        i.fa.fa-angle-up.fa-lg
         .collapse(id="update").show
             .card-body
                 .row.mb-2
@@ -288,7 +288,7 @@ block secondaryContents
                             i.fa.fa-question-circle.fa-lg.ml-1
                 .col-4.text-right
                     a(data-toggle="collapse" href="#shopMemo" aria-expanded="false" aria-controls="shopMemo")
-                        i.fa.fa-angle-up
+                        i.fa.fa-angle-up.fa-lg
         .collapse(id="shopMemo").show
             .card-body
                 form
