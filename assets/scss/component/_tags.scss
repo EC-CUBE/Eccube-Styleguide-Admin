@@ -1,0 +1,53 @@
+@import "../library/_variable";
+@import "../mixin/_media";
+
+/*
+タグ
+
+タブサイズは `regular` `small` の2種類定義されています。
+選択中のタブ`.c-tab__item`に`.is-active`クラスを付与することでアクティブ状態のスタイルを適用することが出来ます。
+
+Markup:
+include /assets/tmpl/components/tag.pug
++c-tags
+
+Styleguide 18.0
+*/
+
+.c-tags {
+  margin-bottom: 10px;
+}
+.c-tag {
+  display: inline-block;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  padding: 5px 10px;
+}
+//- TODO　クラス名をセマンティックに修正する
+.c-tag--black {
+  border: 1px solid $black40;
+  color: $mineShaft;
+  :hover {
+    color: $mineShaft;
+  }
+  a,i {
+    color: $mineShaft;
+    :hover {
+      color: $mineShaft;
+    }
+  }
+}
+.c-tag--blue {
+  border: 1px solid $lochmara;
+  color: $lochmara;
+  &:hover {
+    color: $lochmara;
+  }
+  a,i {
+    color: $lochmara;
+    &:hover {
+      color: $lochmara;
+    }
+  }
+}

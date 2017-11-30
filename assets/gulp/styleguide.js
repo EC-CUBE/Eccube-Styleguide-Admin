@@ -3,7 +3,7 @@
 var gulp = require('gulp');
 var styleguide = require('sc5-styleguide');
 var sass = require('gulp-sass');
-var outputPath = 'public/styleguide';
+var outputPath = 'public';
 const runSequence = require("run-sequence");
 
 
@@ -14,8 +14,7 @@ const target = src+'assets/scss/';
 const styelguideConfig = {
   title: 'My Styleguide',
   server: false,
-  rootPath: 'public',
-  appRoot: '/styleguide',
+  rootPath: 'public/',
   overviewPath: 'styleguide.md',
   disableEncapsulation: true,
   enablePug: true,
@@ -41,10 +40,20 @@ gulp.task('styleguide:generate', function() {
 });
 
 // サーバを生成せずビルドするだけ
-gulp.task('styleguide:generateOnly', function() {
+gulp.task('styleguide:build:generate', function() {
+  styelguideConfig.appRoot = "/styleguide/"
     return gulp.src(target+'**/*.scss')
         .pipe(styleguide.generate(styelguideConfig))
-        .pipe(gulp.dest(outputPath));
+        .pipe(gulp.dest(outputPath+"/styleguide/"));
+});
+
+gulp.task('styleguide:build:applystyles', function() {
+  return gulp.src(target+'app.scss')
+    .pipe(sass({
+      errLogToConsole: true
+    }))
+    .pipe(styleguide.applyStyles())
+    .pipe(gulp.dest(outputPath+"/styleguide/"));
 });
 
 
@@ -65,7 +74,7 @@ gulp.task('styleguide:applystyles', function() {
 //         .pipe(gulp.dest("./styleguide/image"));
 // });
 
-gulp.task('styleguide:build', ["styleguide:generateOnly", "styleguide:applystyles"]);
+gulp.task('styleguide:build', ["styleguide:build:generate", "styleguide:build:applystyles"]);
 
 gulp.task('styleguide:dev', ['styleguide:generate','styleguide:applystyles']);
 

@@ -1,0 +1,42 @@
+@import "../library/_variable";
+@import "../mixin/_media";
+
+/*
+ページネーション
+
+タブサイズは `regular` `small` の2種類定義されています。
+選択中のタブ`.c-tab__item`に`.is-active`クラスを付与することでアクティブ状態のスタイルを適用することが出来ます。
+
+Markup:
+include /assets/tmpl/components/pagination.pug
++c-pagenation
+
+Styleguide 14.0
+*/
+.c-pagination {
+  width:100%;
+  text-align: center;
+  margin-bottom: 20px;
+  &__list {
+    display: inline-block;
+    border: 1px solid $black65;
+    padding: 10px 15px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: bold;
+    color: $black65;
+    background: #fff;
+    &:hover {
+      text-decoration: none;
+      color: $black65;
+      background: $black05;
+    }
+  }
+  &__list:not(last-child) {
+    margin-right: 10px;
+  }
+  &__list.is-active {
+    color: #fff;
+    background: $black65;
+  }
+}

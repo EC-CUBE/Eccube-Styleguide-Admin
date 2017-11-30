@@ -1,0 +1,260 @@
+extends /assets/tmpl/moc/layout/_layout-2col.pug
+block pageTitle
+    include /assets/tmpl/components/pageTitle.pug
+    +c-pageTitle("会員登録","会員管理")
+
+block primaryContents
+    +b.c-block
+        +e.heading
+            +e.titles
+                +b.c-toolTip(data-toggle="tooltip" data-placement="top" title="Tooltip")
+                    span.c-toolTip__title 会員情報
+        +e.contents
+            +b.c-horizontalForm
+                +e.label
+                    .c-toolTip(data-toggle="tooltip" data-placement="top" title="Tooltip")
+                        span.c-toolTip__title 会員ID
+                        i.fa.fa-question-circle.fa-lg.c-toolTip__icon
+                +e.form
+                    .row
+                        .col-12
+                            p 12
+            +b.c-horizontalForm
+                +e.label
+                    .c-toolTip(data-toggle="tooltip" data-placement="top" title="Tooltip")
+                        span.c-toolTip__title お名前
+                        .c-requiredLabel
+                            span 必須
+                +e.form
+                    .row
+                        .col-6
+                            form.c-form
+                                .c-form__text
+                                    input(type="text")
+                        .col-6
+                            form.c-form
+                                .c-form__text
+                                    input(type="text")
+            +b.c-horizontalForm
+                +e.label
+                    .c-toolTip(data-toggle="tooltip" data-placement="top" title="Tooltip")
+                        span.c-toolTip__title フリガナ
+                        .c-requiredLabel
+                            span 必須
+                +e.form
+                    .row
+                        .col-6
+                            form.c-form
+                                .c-form__text
+                                    input(type="text")
+                        .col-6
+                            form.c-form
+                                .c-form__text
+                                    input(type="text")
+            +b.c-horizontalForm
+                +e.label
+                    .c-toolTip(data-toggle="tooltip" data-placement="top" title="Tooltip")
+                        span.c-toolTip__title 会社名
+                +e.form
+                    .row
+                        .col-12
+                            form.c-form
+                                .c-form__text
+                                    input(type="text")
+            +b.c-horizontalForm
+                +e.label
+                    .c-toolTip(data-toggle="tooltip" data-placement="top" title="Tooltip")
+                        span.c-toolTip__title 住所
+                        .c-requiredLabel
+                            span 必須
+                +e.form
+                    .row
+                        .col-12
+                            form.c-form
+                                .c-form__text--small
+                                    input(type="text")
+                                span.c-form__sign -
+                                .c-form__text--small
+                                    input(type="text")
+                    .row
+                        .col-12
+                            form.c-form
+                                .c-form__select--small
+                                    select
+                                        option 東京都
+                                        option ...
+                    .row
+                        .col-12
+                            form.c-form
+                                .c-form__text
+                                    input(type="text")
+                    .row
+                        .col-12
+                            form.c-form
+                                .c-form__text
+                                    input(type="text")
+                //ここから
+            +b.c-horizontalForm
+                +e.label
+                    .c-toolTip(data-toggle="tooltip" data-placement="top" title="Tooltip")
+                        span.c-toolTip__title メールアドレス
+                        .c-requiredLabel
+                            span 必須
+                +e.form
+                    .row
+                        .col-12
+                            form.c-form
+                                .c-form__text
+                                    input(type="text")
+            +b.c-horizontalForm
+                +e.label
+                    .c-toolTip(data-toggle="tooltip" data-placement="top" title="Tooltip")
+                        span.c-toolTip__title 電話番号
+                        .c-requiredLabel
+                            span 必須
+                +e.form
+                    .row
+                        .col-12
+                            form.c-form
+                                .c-form__text--extraSmall
+                                    input(type="text")
+                                span.c-form__sign -
+                                .c-form__text--extraSmall
+                                    input(type="text")
+                                span.c-form__sign -
+                                .c-form__text--extraSmall
+                                    input(type="text")
+            +b.c-horizontalForm
+                +e.label
+                    .c-toolTip(data-toggle="tooltip" data-placement="top" title="Tooltip")
+                        span.c-toolTip__title FAX番号
+                +e.form
+                    .row
+                        .col-12
+                            form.c-form
+                                .c-form__text--extraSmall
+                                    input(type="text")
+                                span.c-form__sign -
+                                .c-form__text--extraSmall
+                                    input(type="text")
+                                span.c-form__sign -
+                                .c-form__text--extraSmall
+                                    input(type="text")
+            +b.c-horizontalForm
+                +e.label
+                    .c-toolTip(data-toggle="tooltip" data-placement="top" title="Tooltip")
+                        span.c-toolTip__title パスワード
+                        .c-requiredLabel
+                            span 必須
+                +e.form
+                    .row
+                        .col-12
+                            form.c-form
+                                .c-form__text
+                                    input(type="password")
+            +b.c-horizontalForm
+                +e.label
+                    .c-toolTip(data-toggle="tooltip" data-placement="top" title="Tooltip")
+                        span.c-toolTip__title パスワード（確認）
+                        .c-requiredLabel
+                            span 必須
+                +e.form
+                    .row
+                        .col-12
+                            form.c-form
+                                .c-form__text
+                                    input(type="password")
+            +b.c-horizontalForm
+                +e.label
+                    .c-toolTip(data-toggle="tooltip" data-placement="top" title="Tooltip")
+                        span.c-toolTip__title 性別
+                +e.form
+                    .row
+                        .col-12
+                            form.c-form
+                                .c-form__radio
+                                    input(type="radio" name="filter" value="open" checked="checked")
+                                    span 男性
+                                .c-form__radio
+                                    input(type="radio" name="filter" value="open")
+                                    span 女性
+            +b.c-horizontalForm
+                +e.label
+                    .c-toolTip(data-toggle="tooltip" data-placement="top" title="Tooltip")
+                        span.c-toolTip__title 職業
+                +e.form
+                    .row
+                        .col-12
+                            form.c-form
+                                .c-form__select
+                                    select
+                                        option 選択してください
+                                        option ...
+            +b.c-horizontalForm
+                +e.label
+                    .c-toolTip(data-toggle="tooltip" data-placement="top" title="Tooltip")
+                        span.c-toolTip__title 生年月日
+                +e.form
+                    .row
+                        .col-12
+                            form.c-form
+                                .c-form__date--regular
+                                    input(type="date" placeholder="2000/01/01")
+    +b.c-block
+        +e.heading
+            +e.titles
+                +b.c-toolTip(data-toggle="tooltip" data-placement="top" title="Tooltip")
+                    span.c-toolTip__title 購入履歴
+        +e.contents
+            table.c-table--mail
+                thead.c-table--mail__tableHeader
+                    th 発注日時
+                    th 受注番号
+                    th 購入金額
+                    th 対応状況
+                tr
+                    td 2017/09/13
+                    td
+                        a(href="#") 56
+                    td
+                        strong ¥4,000
+                    td 発送済み
+                tr
+                    td 2017/09/13
+                    td
+                        a(href="#") 56
+                    td
+                        strong ¥4,000
+                    td 発送済み
+                tr
+                    td 2017/09/13
+                    td
+                        a(href="#") 56
+                    td
+                        strong ¥4,000
+                    td 発送済み
+                tr
+                    td 2017/09/13
+                    td
+                        a(href="#") 56
+                    td
+                        strong ¥4,000
+                    td 発送済み
+                tr
+                    td 2017/09/13
+                    td
+                        a(href="#") 56
+                    td
+                        strong ¥4,000
+                    td 発送済み
+    +b.c-block
+        +e.heading
+            +e.titles
+                +b.c-toolTip(data-toggle="tooltip" data-placement="top" title="Tooltip")
+                    span.c-toolTip__title ショップ用メモ欄
+        +e.contents
+            .c-block__contents
+                form.c-form
+                    .c-form__text
+                        textarea(rows="9" placeholder="テキスト")
+

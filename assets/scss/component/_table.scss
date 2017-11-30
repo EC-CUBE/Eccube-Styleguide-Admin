@@ -59,55 +59,14 @@ Styleguide 12.0
 }
 
 /*
-ページネーション
-
-タブサイズは `regular` `small` の2種類定義されています。
-選択中のタブ`.c-tab__item`に`.is-active`クラスを付与することでアクティブ状態のスタイルを適用することが出来ます。
-
-Markup:
-include /assets/tmpl/components/pagination.pug
-+c-pagenation
-
-Styleguide 12.1
-*/
-.c-pagination {
-  width:100%;
-  text-align: center;
-  margin-bottom: 20px;
-  &__list {
-    display: inline-block;
-    border: 1px solid $black65;
-    padding: 10px 15px;
-    border-radius: 4px;
-    font-size: 14px;
-    font-weight: bold;
-    color: $black65;
-    background: #fff;
-    &:hover {
-      text-decoration: none;
-      color: $black65;
-      background: $black05;
-    }
-  }
-  &__list:not(last-child) {
-    margin-right: 10px;
-  }
-  &__list.is-active {
-    color: #fff;
-    background: $black65;
-  }
-}
-
-
-/*
 規格テーブル
 
 タブサイズは `regular` `small` の2種類定義されています。
 選択中のタブ`.c-tab__item`に`.is-active`クラスを付与することでアクティブ状態のスタイルを適用することが出来ます。
 
 Markup:
-include /assets/tmpl/components/pagination.pug
-+c-pagenation
+include /assets/tmpl/components/table.pug
++c-table--standard
 
 Styleguide 12.2
 */
@@ -135,334 +94,7 @@ Styleguide 12.2
 }
 
 /*
-ツールチップ
-
-カーソルをホバーすると表示され、用語や操作方法を解説します。
-`.c-toolTip`ではBlockとアイコンのみのスタイルを定義し、ツールチップの実装はBootstrapにて行います。
-
-sg-wrapper:
-  <div style="padding: 10px;">
-  <script>
-    $(function () {
-    $('[data-toggle="tooltip"]').tooltip()
-  })
-  </script>
-<sg-wrapper-content/>
-
-Markup:
-.c-toolTip(data-toggle="tooltip" data-placement="top" title="ここに用語や操作方法の説明を記述します。")
-  span.c-toolTip__title 商品ID
-  i.fa.fa-question-circle.c-toolTip__icon
-
-Styleguide 12.3
-*/
-.c-toolTip {
-  display: inline-block;
-  cursor: pointer;
-  &__title {
-  }
-  &__icon {
-    display: inline-block;
-    margin-left: 5px;
-    font-size: 20px;
-  }
-}
-
-
-/*
-検索ボックス
-
-タブサイズは `regular` `small` の2種類定義されています。
-選択中のタブ`.c-tab__item`に`.is-active`クラスを付与することでアクティブ状態のスタイルを適用することが出来ます。
-
-Markup:
-include /assets/tmpl/components/pagination.pug
-+c-pagenation
-
-Styleguide 12.4
-*/
-.c-search {
-  display: flex;
-  margin-bottom: 10px;
-  &__form {
-    width: calc(100% - 40px);
-    input {
-
-      border-radius: 4px;
-      border: 1px solid #ccc;
-      padding: .5rem;
-      width: 100%;
-      height: 40px;
-      box-sizing: border-box;
-      font-size: 14px;
-      color: $black85;
-      background: #fff;
-      &:focus {
-        outline: none;
-        border: 1px solid $lochmara;
-      }
-      &:placeholder {
-        color: $black40;
-      }
-    }
-  }
-  &__btn {
-    margin-left: 10px;
-    display: inline-block;
-    width: 40px;
-    height: 40px;
-    border-radius: 4px;
-    background: #f9f9f9;
-    color: $navy60;
-    cursor: pointer;
-    text-align: center;
-    line-height: 2;
-    font-size: 20px;
-    &:hover {
-      opacity: .5;
-    }
-    i {
-      color: $navy60;
-    }
-  }
-}
-
-
-/*
-カテゴリ(商品登録)
-
-タブサイズは `regular` `small` の2種類定義されています。
-選択中のタブ`.c-tab__item`に`.is-active`クラスを付与することでアクティブ状態のスタイルを適用することが出来ます。
-
-Markup:
-include /assets/tmpl/components/category.pug
-+c-categoryRegister
-
-Styleguide 12.5
-*/
-.c-category--register {
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  max-height: 300px;
-  padding: 10px;
-  overflow: scroll;
-  //2層目以降
-  ul >li > ul {
-    li > label {
-      margin-left: 10px;
-    }
-    li:not(:last-of-type) > label::before {
-      margin-left: 2px;
-      margin-right: .5em;
-      content: "├";
-      display: inline-block;
-      width: 1em;
-      height: 1em;
-    }
-
-    li:last-of-type > label::before  {
-      margin-right: .6em;
-      content: "└";
-      display: inline-block;
-      width: 1em;
-      height: 1em;
-    }
-  }
-  //3層目
-  ul >li ul >li ul  {
-    li > label {
-      margin-left: 20px;
-    }
-  }
-  //4層目
-  ul >li ul >li ul > li ul  {
-    li > label {
-      margin-left: 30px;
-    }
-  }
-}
-
-/*
-タグ
-
-タブサイズは `regular` `small` の2種類定義されています。
-選択中のタブ`.c-tab__item`に`.is-active`クラスを付与することでアクティブ状態のスタイルを適用することが出来ます。
-
-Markup:
-include /assets/tmpl/components/tag.pug
-+c-tags
-
-Styleguide 12.6
-*/
-
-.c-tags {
-  margin-bottom: 10px;
-}
-.c-tag {
-  display: inline-block;
-  margin-right: 10px;
-  margin-bottom: 10px;
-  border-radius: 4px;
-  padding: 5px 10px;
-}
-.c-tag--black {
-  border: 1px solid $black40;
-  color: $mineShaft;
-  :hover {
-    color: $mineShaft;
-  }
-  a,i {
-    color: $mineShaft;
-    :hover {
-      color: $mineShaft;
-    }
-  }
-}
-.c-tag--blue {
-  border: 1px solid $lochmara;
-  color: $lochmara;
-  &:hover {
-    color: $lochmara;
-  }
-  a,i {
-    color: $lochmara;
-    &:hover {
-      color: $lochmara;
-    }
-  }
-}
-
-/*
-サブアクションボタン
-
-タブサイズは `regular` `small` の2種類定義されています。
-選択中のタブ`.c-tab__item`に`.is-active`クラスを付与することでアクティブ状態のスタイルを適用することが出来ます。
-
-Markup:
-include /assets/tmpl/components/subAction.pug
-+c-subAction("すべてのタグを表示")
-
-Styleguide 12.7
-*/
-
-.c-subAction {
-  &__btn {
-    display: inline-block;
-    margin-bottom: 15px;
-    color: #333;
-
-    &:hover {
-      text-decoration: none;
-    }
-
-    &::before {
-      content: "\f196";
-      display: inline-block;
-      margin-right: .5em;
-      font-family: FontAwesome;
-    }
-
-    span {
-      margin-left: 5px;
-      font-weight: bold;
-    }
-  }
-  &.is-active {
-    .c-subAction__btn::before {
-      content: "\f147";
-      display: inline-block;
-      margin-right: .5em;
-      font-family: FontAwesome;
-    }
-  }
-}
-
-/*
-定義リスト
-
-タブサイズは `regular` `small` の2種類定義されています。
-選択中のタブ`.c-tab__item`に`.is-active`クラスを付与することでアクティブ状態のスタイルを適用することが出来ます。
-
-Markup:
-+b.DL.c-definitionList
-  +e.DT.term
-    i.fa.fa-flag
-    span 登録日
-  +e.DD.description 2017/11/09
-+b.DL.c-definitionList
-  +e.DT.term
-    i.fa.fa-refresh
-    span 最終更新日
-  +e.DD.description 2017/11/12
-+b.DL.c-definitionList
-  +e.DT.term
-    i.fa.fa-user
-    span 最終更新者
-  +e.DD.description user_name
-
-Styleguide 12.8
-*/
-.c-definitionList {
-  &__term {
-    display: inline-block;
-    margin-bottom: 10px;
-    font-weight: normal;
-    &::after {
-      display: inline-block;
-      content: ":";
-    }
-    i {
-      margin-right: .5em;
-    }
-  }
-  &__description {
-    display: inline-block;
-  }
-}
-
-
-/*
-パンくずリスト
-
-タブサイズは `regular` `small` の2種類定義されています。
-選択中のタブ`.c-tab__item`に`.is-active`クラスを付与することでアクティブ状態のスタイルを適用することが出来ます。
-
-Markup:
-.c-breadcrumbs
-  a(href="") すべてのカテゴリ
-  a カテゴリA
-
-Styleguide 12.9
-*/
-.c-breadcrumbs {
-  a:not(:last-of-type) {
-    font-size: 14px;
-    font-weight: bold;
-    color: $blue;
-
-    &:hover {
-      text-decoration: none;
-      opacity: .5;
-    }
-    &:after {
-      content: ">";
-      display: inline-block;
-      margin: 0 .5em;
-      color: $mineShaft;
-      font-weight: normal;
-    }
-  }
-  a:last-of-type {
-    font-size: 14px;
-    font-weight: bold;
-    color: $mineShaft;
-
-  }
-}
-
-/*
-カテゴリ管理テーブル
+並び替えテーブル
 
 タブサイズは `regular` `small` の2種類定義されています。
 `.c-sortTable__itemActionBtn`に`.is-stopped`クラスを付与することでボタンを非アクティブ化することが出来ます。
@@ -543,104 +175,68 @@ Styleguide 12.10
   }
 }
 
-/*
-カテゴリ(カテゴリ管理)
 
-タブサイズは `regular` `small` の2種類定義されています。
-選択中のタブ`.c-tab__item`に`.is-active`クラスを付与することでアクティブ状態のスタイルを適用することが出来ます。
+/*
+登録CSV
 
 Markup:
-include /assets/tmpl/components/category.pug
-+c-categoryRegister
+include /assets/tmpl/components/table.pug
++c-csvTable
 
-Styleguide 12.11
-*/
-.c-category {
-  margin-bottom: 10px;
-  border-radius: 4px;
-  //1層目
-  & > ul > li {
-    &::before {
-      content: "\f196";
-      display: inline-block;
-      margin-right: .5em;
-      font-family: FontAwesome;
-      font-size: 16px;
-
-    }
+Styleguide 12.13
+ */
+.c-csvTable {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  tr {
+    border-bottom: 1px solid #CCCCCC;
+    text-align: left;
   }
-
-  & > ul > li.is-active {
-    &::before {
-      content: "\f147";
-      display: inline-block;
-      margin-right: .5em;
-      font-family: FontAwesome;
-      font-size: 16px;
-    }
+  tr:nth-child(odd) {
+    background: #F9F9F9;
   }
-  //2層目以降
-  ul >li > ul {
-    li > label {
-      margin-left: 10px;
-    }
-    li:not(:last-of-type) > label::before {
-      margin-left: 2px;
-      margin-right: .5em;
-      content: "├";
-      display: inline-block;
-      width: 1em;
-      height: 1em;
-    }
-
-    li:last-of-type > label::before  {
-      margin-right: .6em;
-      content: "└";
-      display: inline-block;
-      width: 1em;
-      height: 1em;
-    }
+  th {
+    background: #F2F2F2;
+    border-right: 1px solid #999999;
+    padding: 10px 11px;
   }
-  //3層目
-  ul >li ul >li ul  {
-    li > label {
-      margin-left: 20px;
-    }
-  }
-  //4層目
-  ul >li ul >li ul > li ul  {
-    li > label {
-      margin-left: 30px;
-    }
+  td {
+    padding: 10px 11px;
   }
 }
 
 /*
-サブコンテンツ
-
-メインとなるコンテンツの補助として存在し、表示/非表示を切り替えることのできるコンテンツです。
+配信履歴テーブル
 
 Markup:
-include /assets/tmpl/components/category.pug
-+c-categoryRegister
+include /assets/tmpl/components/table.pug
++c-table--mail
 
-Styleguide 12.12
+Styleguide 12.14
 */
-.c-subContents {
-  background: $paleBlue100;
-  margin-bottom: 10px;
-  padding: 15px;
-  box-sizing: border-box;
-  position: relative;
-  &::before {
-    content: "";
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 0 10px 10px 10px;
-    border-color: transparent transparent $paleBlue100 transparent;
-    position: absolute;
-    top: -9px;
-    left: 10px;
+.c-table--mail {
+  width: 100%;
+  margin-bottom: 20px;
+  th {
+    border-top: 1px solid #a3a3a3;
+    background-color: #f2f2f2;
+    padding: 10px;
+  }
+  tr {
+    border-bottom: 1px solid #ccc;
+  }
+  tr:nth-child(odd):not(first-child) {
+    background-color: #f9f9f9;
+  }
+  td {
+    padding: 10px 0;
+    padding-left: 10px;
+    a {
+      color: $blue;
+      &:hover {
+        opacity: .5;
+      }
+    }
   }
 }

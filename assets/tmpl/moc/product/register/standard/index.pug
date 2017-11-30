@@ -1,0 +1,98 @@
+extends /assets/tmpl/moc/layout/_layout-2col.pug
+block pageTitle
+    include /assets/tmpl/components/pageTitle.pug
+    +c-pageTitle("商品登録（規格設定）","商品管理")
+
+block primaryContents
+    .card.rounded.border-0.mb-4
+        .card-header
+            .row
+                .col-8
+                    span.card-title.align-middle 商品名：フォーク
+                .col-4.text-right
+                    button.btn.btn-danger 商品規格を初期化
+        .card-body
+            .row.mb-2
+                .col
+                    .d-inline-block.mr-2
+                        span 規格１
+                    .d-inline-block
+                        span 材質 [表示名：材質]
+            .row
+                .col
+                    .d-inline-block.mr-2
+                        span 規格２
+                    .d-inline-block
+                        span サイズ [表示名：靴サイズ]
+
+    .card.rounded.border-0.mb-4
+        .card-header
+            .row.justify-content-between
+                .col-6
+                    span.align-middle 9件の規格の組み合わせがあります
+                .col-4.text-right
+                    button.btn.btn-light.border.border-dark.d-inline-block
+                        i.fa.fa-files-o.mr-1
+                        span 一行目をすべての行に複製
+        .card-body.p-0
+            table.table
+                thead
+                    th 登録
+                    th 材質
+                    th サイズ
+                    th コード
+                    th 在庫数
+                    th 販売制限数
+                    th 通常価格
+                    th お届け可能日
+                    th 商品種別
+                - for (var x = 0; x < 9; x++)
+                    tr
+                        td.align-middle
+                            input(type="checkbox")
+                        td.align-middle プラチナ
+                        td.align-middle 130cm
+                        td.align-middle
+                            form
+                                input.form-control(type="text")
+                        td.align-middle
+                            form.form-row
+                                .col-5
+                                    input.form-control(type="number")
+                                .col-auto
+                                    label.form-check-label.align-middle
+                                        input.form-check-input(type="checkbox")
+                                        span 無制限
+                        td.align-middle
+                            form.form-row
+                                .col-6
+                                    input.form-control(type="number")
+                        td.align-middle
+                            input.form-control(type="text")
+                        td.align-middle
+                            form
+                                select.custom-select
+                                    option 指定なし
+                                    option ...
+                        td.align-middle
+                            form
+                                select.custom-select
+                                    option 商品種別A
+                                    option ...
+
+block conversionArea
+    +b.c-conversionArea
+        +e.container
+            .row.justify-content-between.align-items-center
+                .col-6
+                    +e.leftBlockItem
+                        a(href="/product/master").c-beseLink
+                            i.fa.fa-backward(aria-hidden="true")
+                            span 商品マスター
+                .col-6
+                    .row.align-items-center.justify-content-end
+                        .col-auto
+                            include /assets/tmpl/components/toggleSwitch.pug
+                            +c-toggleSwitch
+                        .col-auto
+                            button(type="submit").btn.btn-primary.px-5 更新

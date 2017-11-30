@@ -1,38 +1,40 @@
 extends /assets/tmpl/moc/layout/_layout-3col.pug
-block pageTitle
-    include /assets/tmpl/components/pageTitle.pug
-    +c-pageTitle("カテゴリ管理","商品管理")
-
 block outsideBlock
     +b.c-outsideBlock
-        +e.contents
+        +e.contents.mb-2
             .row
                 .col-6
-                    .c-breadcrumbs
-                        a(href="") すべてのカテゴリ
-                        a カテゴリA
+                    nav(aria-label='breadcrumb', role='navigation')
+                        ol.breadcrumb
+                            li.breadcrumb-item
+                                a(href='#') すべてのカテゴリ
+                            li.breadcrumb-item.active(aria-current='page') カテゴリA
                 .col-6.text-right
-                    .c-tab--regular
-                        a(href="").c-tab__item
-                            i.fa.fa-cloud-download
+                    .btn-group(role='group')
+                        button.btn.btn-light.border.border-dark(type='button')
+                            i.fa.fa-cloud-download.mr-1
                             span CSVダウンロード
-                        a(href="").c-tab__item
-                            i.fa.fa-cog
+                        button.btn.btn-light.border.border-dark(type='button')
+                            i.fa.fa-cog.mr-1
                             span CSV出力設定
 
+block pageTitle
+    include /assets/tmpl/components/pageTitle
+    +c-pageTitle("カテゴリ管理","商品管理")
+
 block primaryContents
-    .c-block
-        .c-block__contents--noPaddingAll
+    .card.rounded.border-0.mb-4
+        .card-body.p-0
             include /assets/tmpl/components/table.pug
             +c-sortTable("カテゴリA","カテゴリB","カテゴリC")
     p 項目の順番はドラッグ＆ドロップでも変更可能です。
 
 block secondaryContents
-    +b.c-block
-        +e.heading
-            .c-toolTip
-                span.c-toolTip__title すべてのカテゴリ
-                i.fa.fa-question-circle.c-toolTip__icon
-        +e.contents
+    .card.rounded.border-0.mb-4
+        .card-header
+            .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
+                span.card-title 全てのカテゴリ
+                    i.fa.fa-question-circle.fa-lg.ml-1
+        .card-body
             include /assets/tmpl/components/category.pug
             +c-category

@@ -20,6 +20,7 @@ sg-wrapper:
   <sg-wrapper-content/>
 
 Markup:
+// `style="margin-right:10px;"` はスタイルガイドにおけるサンプル表示の都合上付与しています。
 a(href="" style="margin-right:10px;").c-button--small.c-button--conversion small
 a(href="" style="margin-right:10px;").c-button--regular.c-button--conversion regular
 button(style="margin-right:10px;").c-button--large.c-button--conversion large
@@ -83,14 +84,14 @@ Styleguide 9.1
 /*
 カラー
 
-コンテンツエリアに配置されます。あるひとつのテーマをもった表示単位であり、
-原則としてタイトルをもちます。ブロック内部にコンテンツやフォームを、テーマにそってまとめます。
+ボタンカラーは4種類設定しています。ページやモーダルウィンドウの目的を達成するための操作を司るコンバージョンボタン・キャンセルや補助操作を司るサブボタン・汎用的なノーマルボタン・そして破壊的操作を司るデリートボタンです。
 
 sg-wrapper:
 <div style="background: #f5f6f8; padding: 10px;">
   <sg-wrapper-content/>
 
 Markup:
+// `style="margin-right:10px;"` はスタイルガイドにおけるサンプル表示の都合上付与しています。
 a(href="" style="margin-right:10px;").c-button--regular.c-button--conversion コンバージョン
 a(href="" style="margin-right:10px;").c-button--regular.c-button--sub サブ
 button(style="margin-right:10px;").c-button--regular.c-button--normal ノーマル
