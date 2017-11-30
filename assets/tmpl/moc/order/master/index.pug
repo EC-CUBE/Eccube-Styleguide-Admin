@@ -216,7 +216,7 @@ block primaryContents
                         th.border-top-0 出荷番号
                         th.border-top-0 対応状況
                         th.border-top-0 メモ／問合せ
-                        th.border-top-0(colspan="3")
+                        th.border-top-0
                 tbody
                     tr
                         td.align-middle
@@ -234,9 +234,61 @@ block primaryContents
                                 br
                                 | 12346
                         td.align-middle
-                            button.btn.btn-outline-primary(type='button') 新規受付
-                        td.align-middle hoge
-                        td.align-middle(colspan="3")
+                            button.btn.btn-outline-primary.py-2(type='button') 新規受付
+
+                        td.align-middle
+                        td.align-middle
+                            .row
+                                .col(data-toggle="tooltip" data-placement="top" title="メール送信"): i.fa.fa-send.fa-lg(aria-hidden="true")
+                                .col(data-toggle="tooltip" data-placement="top" title="帳票"): i.fa.fa-table.fa-lg(aria-hidden="true")
+                                .col(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-close.fa-lg(aria-hidden="true")
+
+                    tr
+                        td.align-middle
+                            input(type='checkbox', name='filter', value='open')
+                        td.align-middle 2017/09/13
+                            br
+                            | 21:23
+                        td.align-middle
+                            a(href="") 127645
+                        td.align-middle 山田はなこ
+                        td.align-middle 郵便振替
+                        td.align-middle 53,920
+                        td.align-middle
+                            a(href='#') 12345
+                                br
+                                | 12346
+                        td.align-middle
+                            button.btn.btn-outline-danger.py-2(type='button') 入金待ち
+                        td.align-middle
+                            i.fa.fa-commenting.fa-lg(data-toggle="tooltip" data-placement="top" title="メモ/お問い合わせあり")
+                        td.align-middle
+                            .row
+                                .col(data-toggle="tooltip" data-placement="top" title="メール送信"): i.fa.fa-send.fa-lg(aria-hidden="true")
+                                .col(data-toggle="tooltip" data-placement="top" title="帳票"): i.fa.fa-table.fa-lg(aria-hidden="true")
+                                .col(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-close.fa-lg(aria-hidden="true")
+
+                    tr
+                        td.align-middle
+                            input(type='checkbox', name='filter', value='open')
+                        td.align-middle 2017/09/13
+                            br
+                            | 21:23
+                        td.align-middle
+                            a(href="") 127645
+                        td.align-middle 山田はなこ
+                        td.align-middle 郵便振替
+                        td.align-middle 53,920
+                        td.align-middle
+                            a(href='#') 12345
+                                br
+                                | 12346
+                        td.align-middle
+                            button.btn.btn-outline-primary.py-2(type='button') 新規受付
+
+                        td.align-middle
+                            i.fa.fa-commenting.fa-lg(data-toggle="tooltip" data-placement="top" title="メモ/お問い合わせあり")
+                        td.align-middle
                             .row
                                 .col(data-toggle="tooltip" data-placement="top" title="メール送信"): i.fa.fa-send.fa-lg(aria-hidden="true")
                                 .col(data-toggle="tooltip" data-placement="top" title="帳票"): i.fa.fa-table.fa-lg(aria-hidden="true")
@@ -257,10 +309,9 @@ block primaryContents
                                 br
                                 | 12346
                         td.align-middle
-                            button.btn.btn-outline-danger(type='button') 入金待ち
+                            button.btn.btn-outline-danger.py-2(type='button') 入金待ち
                         td.align-middle
-                            i.fa.fa-commenting.fa-lg(aria-hidden="true")
-                        td.align-middle(colspan="3")
+                        td.align-middle
                             .row
                                 .col(data-toggle="tooltip" data-placement="top" title="メール送信"): i.fa.fa-send.fa-lg(aria-hidden="true")
                                 .col(data-toggle="tooltip" data-placement="top" title="帳票"): i.fa.fa-table.fa-lg(aria-hidden="true")
@@ -281,9 +332,35 @@ block primaryContents
                                 br
                                 | 12346
                         td.align-middle
-                            button.btn.btn-outline-primary(type='button') 新規受付
+                            button.btn.btn-outline-secondary.py-2(type='button') キャンセル
+
                         td.align-middle
-                        td.align-middle(colspan="3")
+                            i.fa.fa-commenting.fa-lg(data-toggle="tooltip" data-placement="top" title="メモ/お問い合わせあり")
+                        td.align-middle
+                            .row
+                                .col(data-toggle="tooltip" data-placement="top" title="メール送信"): i.fa.fa-send.fa-lg(aria-hidden="true")
+                                .col(data-toggle="tooltip" data-placement="top" title="帳票"): i.fa.fa-table.fa-lg(aria-hidden="true")
+                                .col(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-close.fa-lg(aria-hidden="true")
+
+                    tr
+                        td.align-middle
+                            input(type='checkbox', name='filter', value='open')
+                        td.align-middle 2017/09/13
+                            br
+                            | 21:23
+                        td.align-middle
+                            a(href="") 127645
+                        td.align-middle 山田はなこ
+                        td.align-middle 郵便振替
+                        td.align-middle 53,920
+                        td.align-middle
+                            a(href='#') 12345
+                                br
+                                | 12346
+                        td.align-middle
+                            button.btn.btn-outline-success.py-2(type='button') 入金済み
+                        td.align-middle
+                        td.align-middle
                             .row
                                 .col(data-toggle="tooltip" data-placement="top" title="メール送信"): i.fa.fa-send.fa-lg(aria-hidden="true")
                                 .col(data-toggle="tooltip" data-placement="top" title="帳票"): i.fa.fa-table.fa-lg(aria-hidden="true")
@@ -304,9 +381,10 @@ block primaryContents
                                 br
                                 | 12346
                         td.align-middle
-                            button.btn.btn-outline-primary(type='button') 新規受付
+                            button.btn.btn-outline-secondary.py-2(type='button') 発送済み
                         td.align-middle
-                        td.align-middle(colspan="3")
+                            i.fa.fa-commenting.fa-lg(data-toggle="tooltip" data-placement="top" title="メモ/お問い合わせあり")
+                        td.align-middle
                             .row
                                 .col(data-toggle="tooltip" data-placement="top" title="メール送信"): i.fa.fa-send.fa-lg(aria-hidden="true")
                                 .col(data-toggle="tooltip" data-placement="top" title="帳票"): i.fa.fa-table.fa-lg(aria-hidden="true")
@@ -327,9 +405,9 @@ block primaryContents
                                 br
                                 | 12346
                         td.align-middle
-                            button.btn.btn-outline-primary(type='button') 新規受付
+                            button.btn.btn-outline-danger.py-2(type='button') 取り寄せ中
                         td.align-middle
-                        td.align-middle(colspan="3")
+                        td.align-middle
                             .row
                                 .col(data-toggle="tooltip" data-placement="top" title="メール送信"): i.fa.fa-send.fa-lg(aria-hidden="true")
                                 .col(data-toggle="tooltip" data-placement="top" title="帳票"): i.fa.fa-table.fa-lg(aria-hidden="true")
@@ -350,10 +428,90 @@ block primaryContents
                                 br
                                 | 12346
                         td.align-middle
-                            button.btn.btn-outline-primary(type='button') 新規受付
+                            button.btn.btn-outline-warning.py-2(type='button') 購入処理中
                         td.align-middle
-                        td.align-middle(colspan="3")
+                        td.align-middle
                             .row
                                 .col(data-toggle="tooltip" data-placement="top" title="メール送信"): i.fa.fa-send.fa-lg(aria-hidden="true")
                                 .col(data-toggle="tooltip" data-placement="top" title="帳票"): i.fa.fa-table.fa-lg(aria-hidden="true")
                                 .col(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-close.fa-lg(aria-hidden="true")
+                    tr
+                        td.align-middle
+                            input(type='checkbox', name='filter', value='open')
+                        td.align-middle 2017/09/13
+                            br
+                            | 21:23
+                        td.align-middle
+                            a(href="") 127645
+                        td.align-middle 山田はなこ
+                        td.align-middle 郵便振替
+                        td.align-middle 53,920
+                        td.align-middle
+                            a(href='#') 12345
+                                br
+                                | 12346
+                        td.align-middle
+                            button.btn.btn-outline-warning.py-2(type='button') 決済処理中
+                        td.align-middle
+                        td.align-middle
+                            .row
+                                .col(data-toggle="tooltip" data-placement="top" title="メール送信"): i.fa.fa-send.fa-lg(aria-hidden="true")
+                                .col(data-toggle="tooltip" data-placement="top" title="帳票"): i.fa.fa-table.fa-lg(aria-hidden="true")
+                                .col(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-close.fa-lg(aria-hidden="true")
+                    tr
+                        td.align-middle
+                            input(type='checkbox', name='filter', value='open')
+                        td.align-middle 2017/09/13
+                            br
+                            | 21:23
+                        td.align-middle
+                            a(href="") 127645
+                        td.align-middle 山田はなこ
+                        td.align-middle 郵便振替
+                        td.align-middle 53,920
+                        td.align-middle
+                            a(href='#') 12345
+                                br
+                                | 12346
+                        td.align-middle
+                            button.btn.btn-outline-secondary.py-2(type='button') 発送済み
+                        td.align-middle
+                        td.align-middle
+                            .row
+                                .col(data-toggle="tooltip" data-placement="top" title="メール送信"): i.fa.fa-send.fa-lg(aria-hidden="true")
+                                .col(data-toggle="tooltip" data-placement="top" title="帳票"): i.fa.fa-table.fa-lg(aria-hidden="true")
+                                .col(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-close.fa-lg(aria-hidden="true")
+                    tr
+                        td.align-middle
+                            input(type='checkbox', name='filter', value='open')
+                        td.align-middle 2017/09/13
+                            br
+                            | 21:23
+                        td.align-middle
+                            a(href="") 127645
+                        td.align-middle 山田はなこ
+                        td.align-middle 郵便振替
+                        td.align-middle 53,920
+                        td.align-middle
+                            a(href='#') 12345
+                                br
+                                | 12346
+                        td.align-middle
+                            button.btn.btn-outline-secondary.py-2(type='button') 発送済み
+                        td.align-middle
+                            i.fa.fa-commenting.fa-lg(data-toggle="tooltip" data-placement="top" title="メモ/お問い合わせあり")
+                        td.align-middle
+                            .row
+                                .col(data-toggle="tooltip" data-placement="top" title="メール送信"): i.fa.fa-send.fa-lg(aria-hidden="true")
+                                .col(data-toggle="tooltip" data-placement="top" title="帳票"): i.fa.fa-table.fa-lg(aria-hidden="true")
+                                .col(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-close.fa-lg(aria-hidden="true")
+            .row.justify-content-md-center.mb-4
+                .col-auto
+                    .btn-group.btn-group-lg
+                        button.btn.btn-secondary(type='button') 1
+                    .btn-group.btn-group-lg
+                        button.btn.btn-light.border.border-dark(type='button') 2
+                    .btn-group.btn-group-lg
+                        button.btn.btn-light.border.border-dark(type='button') 3
+                    .btn-group.btn-group-lg
+                        button.btn.btn-light.border.border-dark(type='button') 4
