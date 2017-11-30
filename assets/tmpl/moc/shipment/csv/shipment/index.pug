@@ -2,8 +2,8 @@ extends /assets/tmpl/moc/layout/_layout-2col.pug
 block pageTitle
     +b.c-pageTitle
         +e.titles
-            +e.H2.title カテゴリCSV登録
-            +e.SPAN.subTitle 商品管理
+            +e.H2.title 出荷CSV登録
+            +e.SPAN.subTitle 出荷管理
 
 block primaryContents
     .card.rounded.border-0.mb-4
@@ -14,8 +14,8 @@ block primaryContents
         .card-body
             .row.mb-3
                 .col-2
-                    span CSVファイル選択
-                    i.fa.fa-question-circle.fa-lg.ml-1
+                        span CSVファイル選択
+                        i.fa.fa-question-circle.fa-lg.ml-1
                 .col
                     form.mb-3
                         input(type="file").form-control-file
@@ -25,7 +25,7 @@ block primaryContents
             .row.justify-content-between
                 .col-6
                     .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
-                        span.align-middle カテゴリ登録CSVファイルフォーマット
+                        span.align-middle 出荷登録CSVファイルフォーマット
                         i.fa.fa-question-circle.fa-lg.fa-lg.ml-1
                 .col-4.text-right
                     button.btn.btn-light.border.border-dark.d-inline-block 雛形ファイルダウンロード
@@ -33,14 +33,6 @@ block primaryContents
             table.table.table-striped.table-bordered
                 tbody
                     tr
-                        th.w-25.align-middle.table-secondary カテゴリID
-                        td.align-middle 新規登録時は未設定
+                        th.w-25.align-middle.table-secondary 商品ID
+                        td.align-middle 項目は未決定
                             br
-                            | 既存商品の更新は商品IDを設定
-                    tr
-                        th.w-25.align-middle.table-secondary カテゴリ名
-                            span.badge.badge-primary.ml-1 必須
-                        td.align-middle
-                    tr
-                        th.w-25.align-middle.table-secondary 親カテゴリID
-                        td.align-middle
