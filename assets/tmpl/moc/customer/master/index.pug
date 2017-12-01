@@ -18,19 +18,15 @@ block outsideBlock
         +b.c-subContents.collapse(id="commentList").show
             .row.mb-2
                 .col
-                    form
-                        .form-group
-                            label 会員種別
-                            .form-row.align-items-center
-                                .col
-                                    label.custom-control.custom-radio
-                                        input.custom-control-input(name='radio', type='radio')
-                                        span.custom-control-indicator
-                                        span.custom-control-description 仮会員
-                                    label.custom-control.custom-radio
-                                        input.custom-control-input(name='radio', type='radio')
-                                        span.custom-control-indicator
-                                        span.custom-control-description 本会員
+                    form.form-row
+                        .form-group.col-12
+                            p.col-form-label 会員種別
+                            label.form-check-label.mr-3
+                                input.form-check-input(type='checkbox', value='')
+                                | 仮会員
+                            label.form-check-label.mr-3
+                                input.form-check-input(type='checkbox', value='')
+                                | 本会員
                 .col
                     form
                         .form-group
@@ -38,19 +34,15 @@ block outsideBlock
                             input(type="text").form-control
             .row.mb-2
                 .col
-                    form
-                        .form-group
-                            label 性別
-                            .form-row.align-items-center
-                                .col
-                                    label.custom-control.custom-radio
-                                        input.custom-control-input(name='radio', type='radio')
-                                        span.custom-control-indicator
-                                        span.custom-control-description 男性
-                                    label.custom-control.custom-radio
-                                        input.custom-control-input(name='radio', type='radio')
-                                        span.custom-control-indicator
-                                        span.custom-control-description 女性
+                    form.form-row
+                        .form-group.col-12
+                            p.col-form-label 性別
+                            label.form-check-label.mr-3
+                                input.form-check-input(type='checkbox', value='')
+                                | 男性
+                            label.form-check-label.mr-3
+                                input.form-check-input(type='checkbox', value='')
+                                | 女性
                 .col
                     form
                         .form-group
@@ -131,22 +123,19 @@ block outsideBlock
                                     input.form-control(type='date', value='2000-01-01')
             .row.mb-4
                 .col
-                    form
-                        .form-group
-                            label 電話番号
-                            .form-row.align-items-center
-                                .col-7
-                                    .row
-                                        .col
-                                            input.form-control(type='text', placeholder="00")
-                                        .col-auto.text-center
-                                            span -
-                                        .col
-                                            input.form-control(type='text', placeholder="0000")
-                                        .col-auto.text-center
-                                            span -
-                                        .col
-                                            input.form-control(type='text', placeholder="0000")
+                    form.mb-3
+                        label 電話番号
+                        .form-row.justify-content-start
+                            .col-2
+                                input.form-control(type='text', placeholder='0000')
+                            .col-auto.text-center.p-0
+                                span.align-middle -
+                            .col-2
+                                input.form-control(type='text', placeholder='0000')
+                            .col-auto.text-center.p-0
+                                span.align-middle -
+                            .col-2
+                                input.form-control(type='text', placeholder='0000')
                 .col
                     form
                         .form-group
