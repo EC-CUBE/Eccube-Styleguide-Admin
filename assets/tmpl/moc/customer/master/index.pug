@@ -6,149 +6,207 @@ block pageTitle
 block outsideBlock
     +b.c-outsideBlock
         +e.contents
-            .row
+            .row.justify-content-start
                 .col-6
-                    form.c-form
-                        label 会員ID・メールアドレス・お名前
-                        .c-form__text
-                            input(type="text" placeholder="テキスト")
-                .col-6
-            .row
-                .col-12
-                    include /assets/tmpl/components/subAction.pug
-                    +c-subAction("詳細検索","is-active")
-        +b.c-subContents
-            .row
-                .col-6
-                    .mb-4
-                        label 会員種別
-                        form.c-form
-                            .c-form__radio
-                                input(type="radio" name="filter" value="open" checked="checked")
-                                span 仮会員
-                            .c-form__radio
-                                input(type="radio" name="filter" value="close")
-                                span 本会員
-                    .mb-4
-                        label 性別
-                        form.c-form
-                            .c-form__radio
-                                input(type="radio" name="filter" value="open" checked="checked")
-                                span 男性
-                            .c-form__radio
-                                input(type="radio" name="filter" value="close")
-                                span 女性
-                    .mb-4
-                        label 誕生月
-                        form.c-form
-                            .c-form__select--register
-                                select
-                                    option 選んでください
-                                    option ...
-                    .mb-4
-                        label 誕生日
-                        form.c-form
-                            .c-form__date--regular
-                                input(type="date" placeholder="2000/01/01")
-                            span.c-form__sign 〜
-                            .c-form__date--regular
-                                input(type="date" placeholder="2000/01/01")
-                    .mb-4
-                        label 都道府県
-                        form.c-form
-                            .c-form__select--register
-                                select
-                                    option 選んでください
-                                    option ...
-                    .mb-4
-                        label 電話番号
-                        form.c-form
-                            .c-form__text--extraSmall
-                                input(type="text" placeholder="00")
-                            span.c-form__sign -
-                            .c-form__text--extraSmall
-                                input(type="text" placeholder="0000")
-                            span.c-form__sign -
-                            .c-form__text--extraSmall
-                                input(type="text" placeholder="0000")
-                .col-6
-                    .mb-4
-                        label 購入商品名
-                        form.c-form
-                            .c-form__text
-                                input(type="text")
-                    .mb-4
-                        label 購入金額
-                        form.c-form
-                            .c-form__price--regular
-                                .c-form__price
-                                    .c-form__priceMark
-                                        span ￥
-                                    input(type="text")
-                            span.c-form__sign 〜
-                            .c-form__price--regular
-                                .c-form__price
-                                    .c-form__priceMark
-                                        span ￥
-                                    input(type="text")
-                    .mb-4
-                        label 購入回数
-                        form.c-form
-                            .c-form__text--small
-                                input(type="text")
-                            span.c-form__sign 〜
-                            .c-form__text--small
-                                input(type="text")
-                    .mb-4
-                        label 登録日
-                        form.c-form
-                            .c-form__date--regular
-                                input(type="date" placeholder="2000/01/01")
-                            span.c-form__sign 〜
-                            .c-form__date--regular
-                                input(type="date" placeholder="2000/01/01")
-                    .mb-4
-                        label 更新日
-                        form.c-form
-                            .c-form__date--regular
-                                input(type="date" placeholder="2000/01/01")
-                            span.c-form__sign 〜
-                            .c-form__date--regular
-                                input(type="date" placeholder="2000/01/01")
-                    .mb-4
-                        label 最終購入日
-                        form.c-form
-                            .c-form__date--regular
-                                input(type="date" placeholder="2000/01/01")
-                            span.c-form__sign 〜
-                            .c-form__date--regular
-                                input(type="date" placeholder="2000/01/01")
-            +e.action
-                button.c-button--regular.c-button--normal 検索条件クリア
-        +e.contents
-            .row
-                .col-12
-                    button.c-button--regular.c-button--conversion 検索
-            .row
-                .col-12.text-right
-                    form.c-form--inline
-                        .c-form__select--small
-                            select
-                                option 10件
-                    .c-tab--regular
-                        a(href="").c-tab__item
-                            i.fa.fa-cloud-download
-                            span CSVダウンロード
-                        a(href="").c-tab__item
-                            i.fa.fa-cog
-                            span CSV出力設定
-
-
+                    form
+                        .form-group
+                            label.col-form-label 会員ID・メールアドレス・お名前
+                            input.form-control(type='text')
+                    .d-inline-block.mb-3(data-toggle="collapse" href="#commentList" aria-expanded="false" aria-controls="commentList")
+                        i.fa.fa-minus-square-o.font-weight-bold.mr-1
+                        span.font-weight-bold 詳細検索
+        +b.c-subContents.collapse(id="commentList").show
+            .row.mb-2
+                .col
+                    form
+                        .form-group
+                            label 会員種別
+                            .form-row.align-items-center
+                                .col
+                                    label.custom-control.custom-radio
+                                        input.custom-control-input(name='radio', type='radio')
+                                        span.custom-control-indicator
+                                        span.custom-control-description 仮会員
+                                    label.custom-control.custom-radio
+                                        input.custom-control-input(name='radio', type='radio')
+                                        span.custom-control-indicator
+                                        span.custom-control-description 本会員
+                .col
+                    form
+                        .form-group
+                            label 購入商品名
+                            input(type="text").form-control
+            .row.mb-2
+                .col
+                    form
+                        .form-group
+                            label 性別
+                            .form-row.align-items-center
+                                .col
+                                    label.custom-control.custom-radio
+                                        input.custom-control-input(name='radio', type='radio')
+                                        span.custom-control-indicator
+                                        span.custom-control-description 男性
+                                    label.custom-control.custom-radio
+                                        input.custom-control-input(name='radio', type='radio')
+                                        span.custom-control-indicator
+                                        span.custom-control-description 女性
+                .col
+                    form
+                        .form-group
+                            label 購入金額
+                            .form-row.align-items-center
+                                .col
+                                    input.form-control(type='text')
+                                .col-auto
+                                    span 〜
+                                .col
+                                    input.form-control(type='text')
+            .row.mb-2
+                .col
+                    form
+                        .form-group
+                            label 誕生月
+                            .row
+                                .col-5
+                                    select.form-control
+                                        option 選んでください
+                                        option ...
+                                .col-7
+                .col
+                    form
+                        .form-group
+                            label 購入回数
+                            .form-row.align-items-center
+                                .col
+                                    input.form-control(type='text')
+                                .col-auto
+                                    span 〜
+                                .col
+                                    input.form-control(type='text')
+            .row.mb-2
+                .col
+                    form
+                        .form-group
+                            label 誕生日
+                            .form-row.align-items-center
+                                .col
+                                    input.form-control(type='date', value='2000-01-01')
+                                .col-auto.text-center
+                                    span 〜
+                                .col
+                                    input.form-control(type='date', value='2000-01-01')
+                .col
+                    form
+                        .form-group
+                            label 登録日
+                            .form-row.align-items-center
+                                .col
+                                    input.form-control(type='date', value='2000-01-01')
+                                .col-auto.text-center
+                                    span 〜
+                                .col
+                                    input.form-control(type='date', value='2000-01-01')
+            .row.mb-2
+                .col
+                    form
+                        .form-group
+                            label 都道府県
+                            .row
+                                .col-5
+                                    select.form-control
+                                        option 選んでください
+                                        option ...
+                                .col-7
+                .col
+                    form
+                        .form-group
+                            label 更新日
+                            .form-row.align-items-center
+                                .col
+                                    input.form-control(type='date', value='2000-01-01')
+                                .col-auto.text-center
+                                    span 〜
+                                .col
+                                    input.form-control(type='date', value='2000-01-01')
+            .row.mb-4
+                .col
+                    form
+                        .form-group
+                            label 電話番号
+                            .form-row.align-items-center
+                                .col-7
+                                    .row
+                                        .col
+                                            input.form-control(type='text', placeholder="00")
+                                        .col-auto.text-center
+                                            span -
+                                        .col
+                                            input.form-control(type='text', placeholder="0000")
+                                        .col-auto.text-center
+                                            span -
+                                        .col
+                                            input.form-control(type='text', placeholder="0000")
+                .col
+                    form
+                        .form-group
+                            label 最終購入日
+                            .form-row.align-items-center
+                                .col
+                                    input.form-control(type='date', value='2000-01-01')
+                                .col-auto.text-center
+                                    span 〜
+                                .col
+                                    input.form-control(type='date', value='2000-01-01')
+            .d-block.text-center
+                button(type="button").btn.btn-light.border.border-dark 検索条件クリア
+        +e.contents.mb-5
+            button.btn.btn-primary.px-5(type="button") 検索
 block primaryContents
-    .c-block
-        .c-block__contents--noPadding
-            include /assets/tmpl/components/table.pug
-            +c-table--customer
-
-            include /assets/tmpl/components/pagination.pug
-            +c-pagenation
+    .row.justify-content-between.mb-2
+        .col-6
+        .col-5.text-right
+            .d-inline-block.mr-2
+                form
+                    select.custom-select
+                        option(selected='') 10件
+                        option ...
+            .d-inline-block
+                .btn-group(role='group')
+                    button.btn.btn-light.border.border-dark(type='button')
+                        i.fa.fa-cloud-download.mr-1
+                        span CSVダウンロード
+                    button.btn.btn-light.border.border-dark(type='button')
+                        i.fa.fa-cog.mr-1
+                        span CSV出力設定
+    .card.rounded.border-0.mb-4
+        .card-body.p-0
+            table.table
+                thead
+                    th.border-top-0 会員ID
+                    th.border-top-0 会員名
+                    th.border-top-0 電話番号
+                    th.border-top-0 メールアドレス
+                    th.border-top-0 &nbsp;
+                    th.border-top-0 &nbsp;
+                - for (var x = 0; x < 10; x++)
+                    tr
+                        td.align-middle 1
+                        td.align-middle
+                            a(href='#') 山田 はなこ
+                        td.align-middle 06-6666-6666
+                        td.align-middle witchdoktor@gmail.com
+                        td.align-middle
+                        td.align-middle
+                            .row
+                                .col.text-center(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-times.fa-lg(aria-hidden="true")
+            .row.justify-content-md-center.mb-4
+                .col-auto
+                    .btn-group.btn-group-lg
+                        button.btn.btn-secondary(type='button') 1
+                    .btn-group.btn-group-lg
+                        button.btn.btn-light.border.border-dark(type='button') 2
+                    .btn-group.btn-group-lg
+                        button.btn.btn-light.border.border-dark(type='button') 3
+                    .btn-group.btn-group-lg
+                        button.btn.btn-light.border.border-dark(type='button') 4
