@@ -4,105 +4,228 @@ block pageTitle
     +c-pageTitle("会員登録","会員管理")
 
 block primaryContents
-    +b.c-block
-        +e.heading
-            +e.titles
-                +b.c-toolTip(data-toggle="tooltip" data-placement="top" title="Tooltip")
-                    span.c-toolTip__title 会員情報
-        +e.contents
-            +b.c-horizontalForm
-                +e.label
-                    .c-toolTip(data-toggle="tooltip" data-placement="top" title="Tooltip")
-                        span.c-toolTip__title 会員ID
-                        i.fa.fa-question-circle.fa-lg.c-toolTip__icon
-                +e.form
-                    .row
-                        .col-12
-                            p 12
-            +b.c-horizontalForm
-                +e.label
-                    .c-toolTip(data-toggle="tooltip" data-placement="top" title="Tooltip")
-                        span.c-toolTip__title お名前
-                        .c-requiredLabel
-                            span 必須
-                +e.form
-                    .row
-                        .col-6
-                            form.c-form
-                                .c-form__text
-                                    input(type="text")
-                        .col-6
-                            form.c-form
-                                .c-form__text
-                                    input(type="text")
-            +b.c-horizontalForm
-                +e.label
-                    .c-toolTip(data-toggle="tooltip" data-placement="top" title="Tooltip")
-                        span.c-toolTip__title フリガナ
-                        .c-requiredLabel
-                            span 必須
-                +e.form
-                    .row
-                        .col-6
-                            form.c-form
-                                .c-form__text
-                                    input(type="text")
-                        .col-6
-                            form.c-form
-                                .c-form__text
-                                    input(type="text")
-            +b.c-horizontalForm
-                +e.label
-                    .c-toolTip(data-toggle="tooltip" data-placement="top" title="Tooltip")
-                        span.c-toolTip__title 会社名
-                +e.form
-                    .row
-                        .col-12
-                            form.c-form
-                                .c-form__text
-                                    input(type="text")
-            +b.c-horizontalForm
-                +e.label
-                    .c-toolTip(data-toggle="tooltip" data-placement="top" title="Tooltip")
-                        span.c-toolTip__title 住所
-                        .c-requiredLabel
-                            span 必須
-                +e.form
-                    .row
-                        .col-12
-                            form.c-form
-                                .c-form__text--small
-                                    input(type="text")
-                                span.c-form__sign -
-                                .c-form__text--small
-                                    input(type="text")
-            +b.c-horizontalForm
-                +e.label
-                    .c-toolTip(data-toggle="tooltip" data-placement="top" title="Tooltip")
-                +e.form
-                    .row
-                        .col-12
-                            form.c-form
-                                .c-form__select--small
-                                    select
-                                        option 東京都
-                                        option ...
-            +b.c-horizontalForm
-                +e.label
-                    .c-toolTip(data-toggle="tooltip" data-placement="top" title="Tooltip")
-                +e.form
-                    .row
-                        .col-12
-                            form.c-form
-                                .c-form__text
-                                    input(type="text")
-            +b.c-horizontalForm
-                +e.label
-                    .c-toolTip(data-toggle="tooltip" data-placement="top" title="Tooltip")
-                +e.form
-                    .row
-                        .col-12
-                            form.c-form
-                                .c-form__text
-                                    input(type="text")
+    .card.rounded.border-0.mb-4
+        .card-header
+            .row
+                .col-8
+                    span.card-title 会員情報
+                .col-4.text-right
+                    a(data-toggle="collapse" href="#ordererInfo" aria-expanded="false" aria-controls="ordererInfo")
+                        i.fa.fa-angle-up.fa-lg
+        .collapse(id="ordererInfo").show
+            .card-body
+                .row.mb-3
+                    .col-3
+                        .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
+                            span 会員ID
+                            i.fa.fa-question-circle.fa-lg.ml-1
+                    .col
+                        p 12
+                .row.mb-3
+                    .col-3
+                        span お名前
+                        span.badge.badge-primary.ml-1 必須
+                    .col
+                        form
+                            .row
+                                .col
+                                    input.form-control(type='text', placeholder='性')
+                                .col
+                                    input.form-control(type='text', placeholder='名')
+                .row.mb-3
+                    .col-3
+                        span フリガナ
+                        span.badge.badge-primary.ml-1 必須
+                    .col
+                        form
+                            .row
+                                .col
+                                    input.form-control(type='text', placeholder='セイ')
+                                .col
+                                    input.form-control(type='text', placeholder='メイ')
+                .row.mb-3
+                    .col-3
+                        span 会社名
+                    .col
+                        form
+                            input.form-control(type='text')
+                .row.mb-3
+                    .col-3
+                        span 住所
+                        span.badge.badge-primary.ml-1 必須
+                    .col.mb-3
+                        form.mb-3
+                            .row.justify-content-start
+                                .col-2
+                                    input.form-control(type='text', placeholder='郵便番号1')
+                                .col-auto.text-center.p-0
+                                    span.align-middle -
+                                .col-2
+                                    input.form-control(type='text', placeholder='郵便番号2')
+                        form.mb-3
+                            .row.justify-content-start
+                                .col-2
+                                    select.form-control
+                                        option(value='') 東京都
+                        form
+                            input.form-control.mb-3(type='text', placeholder='住所1')
+                            input.form-control(type='text', placeholder='住所2')
+                .row.mb-3
+                    .col-3
+                        span メールアドレス
+                        span.badge.badge-primary.ml-1 必須
+                    .col
+                        form
+                            input.form-control(type='email')
+                .row.mb-3
+                    .col-3
+                        span 電話番号
+                        span.badge.badge-primary.ml-1 必須
+                    .col
+                        form
+                            .row.justify-content-start
+                                .col-2
+                                    input.form-control(type='text', placeholder='0000')
+                                .col-auto.text-center.p-0
+                                    span.align-middle -
+                                .col-2
+                                    input.form-control(type='text', placeholder='0000')
+                                .col-auto.text-center.p-0
+                                    span.align-middle -
+                                .col-2
+                                    input.form-control(type='text', placeholder='0000')
+                .row.mb-3
+                    .col-3
+                        span FAX番号
+                    .col
+                        form
+                            .row.justify-content-start
+                                .col-2
+                                    input.form-control(type='text', placeholder='0000')
+                                .col-auto.text-center.p-0
+                                    span.align-middle -
+                                .col-2
+                                    input.form-control(type='text', placeholder='0000')
+                                .col-auto.text-center.p-0
+                                    span.align-middle -
+                                .col-2
+                                    input.form-control(type='text', placeholder='0000')
+                .row.mb-3
+                    .col-3
+                        span パスワード
+                        span.badge.badge-primary.ml-1 必須
+                    .col
+                        form
+                            input.form-control(type='password' , placeholder='')
+                .row.mb-3
+                    .col-3
+                        span パスワード（確認）
+                        span.badge.badge-primary.ml-1 必須
+                    .col
+                        form
+                            input.form-control(type='password' , placeholder='')
+                .row.mb-3
+                    .col-3
+                        span 性別
+                    .col
+                        form
+                            .form-check.form-check-inline
+                                label.form-check-label(for="male")
+                                    input.form-check-input#male(type="radio", name="gender")
+                                    |  男性
+                            .form-check.form-check-inline
+                                label.form-check-label(for="female")
+                                    input.form-check-input#female(type="radio", name="gender")
+                                    |  女性
+                .row.mb-3
+                    .col-3
+                        span 職業
+                    .col
+                        form
+                            select.form-control
+                                option(value='') 選択してください
+                .row.mb-3
+                    .col-3
+                        span 生年月日
+                    .col
+                        form
+                            input.form-control(type='date', value='0000-01-01')
+
+
+
+    .card.rounded.border-0.mb-4
+        .card-header
+            .row
+                .col-8
+                    .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
+                        span.card-title 購入履歴
+                            i.fa.fa-question-circle.fa-lg.ml-1
+                .col-4.text-right
+                    a(data-toggle="collapse" href="#standardConfig" aria-expanded="false" aria-controls="standardConfig")
+                        i.fa.fa-angle-up.fa-lg
+        .collapse(id="standardConfig").show
+            .card-body
+                table.table.table-striped
+                    thead.table-active
+                        th.align-middle 注文日時
+                        th.align-middle 注文番号
+                        th.align-middle 購入金額
+                        th.align-middle 対応状況
+                    tbody
+                        - for (var x = 0; x < 4; x++)
+                            tr
+                                td.align-middle 2017/09/13
+                                td.align-middle
+                                    a(href="") 56
+                                td.align-middle
+                                    span.h5.font-weight-normal ¥4,000
+                                td.align-middle
+                                    button.btn.btn-outline-secondary.py-2(type='button') 発送済み
+                .d-block.text-center.text-center
+                    button(type="button" data-toggle="modal" data-target="#confirmModal").btn.btn-outline-dark この商品の規格管理
+                    #confirmModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='confirmModal', aria-hidden='true')
+                        .modal-dialog(role='document')
+                            .modal-content
+                                .modal-header
+                                    h5.modal-title ページを移動します。
+                                    button.close(type='button', data-dismiss='modal', aria-label='Close')
+                                        span(aria-hidden='true') ×
+                                .modal-body
+                                    p 規格の管理画面に移動します。商品情報を保存してから移動しますか？
+                                .modal-footer
+                                    a(href="/product/register/standard").btn.btn-primary 変更を保存
+                                    button.btn.btn-secondary(type='button', data-dismiss='modal') キャンセル
+
+    .card.rounded.border-0.mb-4
+        .card-header
+            .row
+                .col-8
+                    .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
+                        span.card-title ショップ用メモ欄
+                        i.fa.fa-question-circle.fa-lg.ml-1
+                .col-4.text-right
+                    a(data-toggle="collapse" href="#shopMemo" aria-expanded="false" aria-controls="shopMemo")
+                        i.fa.fa-angle-up.fa-lg
+        .collapse(id="shopMemo").show
+            .card-body
+                form
+                    .form-group
+                        textarea(rows="8" placeholder="テキスト").form-control
+
+block conversionArea
+    +b.c-conversionArea
+        +e.container
+            .row.justify-content-between.align-items-center
+                .col-6
+                    +e.leftBlockItem
+                        a(href="").c-beseLink
+                            i.fa.fa-backward(aria-hidden="true")
+                            span 会員マスター
+                .col-6
+                    .row.align-items-center.justify-content-end
+                        .col-auto
+                            include /assets/tmpl/components/toggleSwitch.pug
+                            +c-toggleSwitch--customer
+                        .col-auto
+                            button(type="submit").btn.btn-primary.px-5 会員情報を登録
 
