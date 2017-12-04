@@ -1,130 +1,35 @@
 extends /assets/tmpl/moc/layout/_layout-2col
 block pageTitle
-    +b.c-pageTitle
-        +e.titles
-            +e.H2.title ページ管理
-            +e.SPAN.subTitle コンテンツ管理
+    include /assets/tmpl/components/pageTitle.pug
+    +c-pageTitle("ページ管理","コンテンツ管理")
 
-//- TODO マークアップ見直し必要
 block primaryContents
-    +b.c-outsideBlock
-        .row.mb-2
-            .col-9.text-left
-                button.c-button--regular.c-button--normal(style='margin-right:10px;') 新規追加
-            .col-3.text-right
-                form.c-searchBox
-                    .c-searchBox__form
-                        input(type='text')
-                    a.c-searchBox__btn
-                        i.fa.fa-search
-    +b.c-block
-        +e.contents
-            table.c-customerTable
-                thead.c-customerTable__tableHeader
-                    th ページ名
-                    th レイアウト
-                    th
-                tr
-                    td
-                        a(href="#") MYページ/会員登録内容変更(入力ページ)
-                    td
-                        i.fa.fa-desktop(aria-hidden="true")
-                        | 下層ページ用レイアウト（PC）
-                        br
-                        |
-                        i.fa.fa-mobile.fa-lg(aria-hidden="true")
-                        | 下層ページ用レイアウト（SP）
-                    td
-                        a.c-customerTable__delete(href='#')
-                            i.fa.fa-times
-                tr
-                    td
-                        a(href="#") MYページ/会員登録内容変更(入力ページ)
-                    td
-                        i.fa.fa-desktop(aria-hidden="true")
-                        | 下層ページ用レイアウト（PC）
-                        br
-                        |
-                        i.fa.fa-mobile.fa-lg(aria-hidden="true")
-                        | 下層ページ用レイアウト（SP）
-                    td
-                        a.c-customerTable__delete(href='#')
-                            i.fa.fa-times
-                tr
-                    td
-                        a(href="#") MYページ/会員登録内容変更(入力ページ)
-                    td
-                        i.fa.fa-desktop(aria-hidden="true")
-                        | 下層ページ用レイアウト（PC）
-                        br
-                        |
-                        i.fa.fa-mobile.fa-lg(aria-hidden="true")
-                        | 下層ページ用レイアウト（SP）
-                    td
-                        a.c-customerTable__delete(href='#')
-                            i.fa.fa-times
-                tr
-                    td
-                        a(href="#") MYページ/会員登録内容変更(入力ページ)
-                    td
-                        i.fa.fa-desktop(aria-hidden="true")
-                        | 下層ページ用レイアウト（PC）
-                        br
-                        |
-                        i.fa.fa-mobile.fa-lg(aria-hidden="true")
-                        | 下層ページ用レイアウト（SP）
-                    td
-                        a.c-customerTable__delete(href='#')
-                            i.fa.fa-times
-                tr
-                    td
-                        a(href="#") MYページ/会員登録内容変更(入力ページ)
-                    td
-                        i.fa.fa-desktop(aria-hidden="true")
-                        | 下層ページ用レイアウト（PC）
-                        br
-                        |
-                        i.fa.fa-mobile.fa-lg(aria-hidden="true")
-                        | 下層ページ用レイアウト（SP）
-                    td
-                        a.c-customerTable__delete(href='#')
-                            i.fa.fa-times
-                tr
-                    td
-                        a(href="#") MYページ/会員登録内容変更(入力ページ)
-                    td
-                        i.fa.fa-desktop(aria-hidden="true")
-                        | 下層ページ用レイアウト（PC）
-                        br
-                        |
-                        i.fa.fa-mobile.fa-lg(aria-hidden="true")
-                        | 下層ページ用レイアウト（SP）
-                    td
-                        a.c-customerTable__delete(href='#')
-                            i.fa.fa-times
-                tr
-                    td
-                        a(href="#") MYページ/会員登録内容変更(入力ページ)
-                    td
-                        i.fa.fa-desktop(aria-hidden="true")
-                        | 下層ページ用レイアウト（PC）
-                        br
-                        |
-                        i.fa.fa-mobile.fa-lg(aria-hidden="true")
-                        | 下層ページ用レイアウト（SP）
-                    td
-                        a.c-customerTable__delete(href='#')
-                            i.fa.fa-times
-                tr
-                    td
-                        a(href="#") MYページ/会員登録内容変更(入力ページ)
-                    td
-                        i.fa.fa-desktop(aria-hidden="true")
-                        | 下層ページ用レイアウト（PC）
-                        br
-                        |
-                        i.fa.fa-mobile.fa-lg(aria-hidden="true")
-                        | 下層ページ用レイアウト（SP）
-                    td
-                        a.c-customerTable__delete(href='#')
-                            i.fa.fa-times
+    .row.justify-content-between
+        .col-9
+            a(href="/content/page/edit").btn.btn-light.border.border-dark 新規追加
+        .col-3
+            form.mb-3
+                .form-row
+                    .col
+                        input.form-control(type="search" placeholder="" aria-label="Search")
+                    .col-auto
+                        button.btn.btn-light(type="submit"): i.fa.fa-search
+    .card.rounded.border-0.mb-4
+        .card-body.p-0
+            table.table
+                thead
+                    th.border-0 ページ名
+                    th.border-0 レイアウト
+                    th.border-0
+                - for (var x = 0; x < 8; x++)
+                    tr
+                        td.align-middle
+                            a(href="/content/page/edit") MYページ/会員登録内容変更(入力ページ)
+                        td.align-middle
+                            .d-block
+                                i.fa.fa-desktop.mr-2
+                                span 下層ページ用レイアウト（PC）
+                            .d-block
+                                i.fa.fa-mobile.fa-2x.mr-2
+                                span 下層ページ用レイアウト（SP）
+                        td.align-middle.text-center(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-close.fa-lg(aria-hidden="true")

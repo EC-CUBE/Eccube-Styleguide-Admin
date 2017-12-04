@@ -18,27 +18,27 @@ block outsideBlock
                         .form-group.col-12
                             p.col-form-label フィルタ
                             label.form-check-label.mr-3
-                                input.form-check-input(type='checkbox', value='' , checked='checked')
+                                input.form-check-input(type='checkbox', value='')
                                 | 新規受付
                             label.form-check-label.mr-3
                                 input.form-check-input(type='checkbox', value='')
                                 | 決済処理中
-                            label.form-check-label
+                            label.form-check-label.mr-3
                                 input.form-check-input(type='checkbox', value='')
                                 | 入金待ち
-                            label.form-check-label
+                            label.form-check-label.mr-3
                                 input.form-check-input(type='checkbox', value='')
                                 | 入金済み
-                            label.form-check-label
+                            label.form-check-label.mr-3
                                 input.form-check-input(type='checkbox', value='')
                                 | キャンセル
-                            label.form-check-label
+                            label.form-check-label.mr-3
                                 input.form-check-input(type='checkbox', value='')
                                 | 取り寄せ中
-                            label.form-check-label
+                            label.form-check-label.mr-3
                                 input.form-check-input(type='checkbox', value='')
                                 | 発送済み
-                            label.form-check-label
+                            label.form-check-label.mr-3
                                 input.form-check-input(type='checkbox', value='')
                                 | 購入処理中
                     .d-inline-block.mb-3(data-toggle="collapse" href="#searchDetail" aria-expanded="false" aria-controls="searchDetail")
@@ -56,10 +56,10 @@ block outsideBlock
                         .form-group.col-12
                             p.col-form-label 性別
                             label.form-check-label.mr-3
-                                input.form-check-input(type='radio', value='')
+                                input.form-check-input(type='checkbox', value='')
                                 | 男性
                             label.form-check-label.mr-3
-                                input.form-check-input(type='radio', value='')
+                                input.form-check-input(type='checkbox', value='')
                                 | 女性
             .row
                 .col
@@ -72,16 +72,16 @@ block outsideBlock
                         .form-group.col-12
                             p.col-form-label 支払方法
                             label.form-check-label.mr-3
-                                input.form-check-input(type='radio', value='')
+                                input.form-check-input(type='checkbox', value='')
                                 | 郵便振替
                             label.form-check-label.mr-3
-                                input.form-check-input(type='radio', value='')
+                                input.form-check-input(type='checkbox', value='')
                                 | 現金書留
                             label.form-check-label.mr-3
-                                input.form-check-input(type='radio', value='')
+                                input.form-check-input(type='checkbox', value='')
                                 | 銀行振込
                             label.form-check-label.mr-3
-                                input.form-check-input(type='radio', value='')
+                                input.form-check-input(type='checkbox', value='')
                                 | 代金引換
             .row
                 .col
@@ -141,10 +141,19 @@ block outsideBlock
                                     input.form-control(type='date', value='2000-01-01')
             .row
                 .col
-                    form
-                        .form-group
-                            label.col-form-label 電話番号
-                            input(type="text").form-control
+                    form.mb-3
+                        label 電話番号
+                        .form-row.justify-content-start
+                            .col-2
+                                input.form-control(type='text', placeholder='0000')
+                            .col-auto.text-center.p-0
+                                span.align-middle -
+                            .col-2
+                                input.form-control(type='text', placeholder='0000')
+                            .col-auto.text-center.p-0
+                                span.align-middle -
+                            .col-2
+                                input.form-control(type='text', placeholder='0000')
                 .col
                     form
                         .form-group
@@ -239,7 +248,8 @@ block primaryContents
                         td.align-middle
                         td.align-middle
                             .row
-                                .col(data-toggle="tooltip" data-placement="top" title="メール送信"): i.fa.fa-send.fa-lg(aria-hidden="true")
+                                .col
+                                    a(href="mail" data-toggle="tooltip" data-placement="top" title="メール送信"): i.fa.fa-send.fa-lg(aria-hidden="true")
                                 .col(data-toggle="tooltip" data-placement="top" title="帳票"): i.fa.fa-table.fa-lg(aria-hidden="true")
                                 .col(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-close.fa-lg(aria-hidden="true")
 
@@ -264,7 +274,8 @@ block primaryContents
                             i.fa.fa-commenting.fa-lg(data-toggle="tooltip" data-placement="top" title="メモ/お問い合わせあり")
                         td.align-middle
                             .row
-                                .col(data-toggle="tooltip" data-placement="top" title="メール送信"): i.fa.fa-send.fa-lg(aria-hidden="true")
+                                .col
+                                    a(href="mail" data-toggle="tooltip" data-placement="top" title="メール送信"): i.fa.fa-send.fa-lg(aria-hidden="true")
                                 .col(data-toggle="tooltip" data-placement="top" title="帳票"): i.fa.fa-table.fa-lg(aria-hidden="true")
                                 .col(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-close.fa-lg(aria-hidden="true")
 
@@ -290,7 +301,8 @@ block primaryContents
                             i.fa.fa-commenting.fa-lg(data-toggle="tooltip" data-placement="top" title="メモ/お問い合わせあり")
                         td.align-middle
                             .row
-                                .col(data-toggle="tooltip" data-placement="top" title="メール送信"): i.fa.fa-send.fa-lg(aria-hidden="true")
+                                .col
+                                    a(href="mail" data-toggle="tooltip" data-placement="top" title="メール送信"): i.fa.fa-send.fa-lg(aria-hidden="true")
                                 .col(data-toggle="tooltip" data-placement="top" title="帳票"): i.fa.fa-table.fa-lg(aria-hidden="true")
                                 .col(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-close.fa-lg(aria-hidden="true")
                     tr
@@ -313,7 +325,8 @@ block primaryContents
                         td.align-middle
                         td.align-middle
                             .row
-                                .col(data-toggle="tooltip" data-placement="top" title="メール送信"): i.fa.fa-send.fa-lg(aria-hidden="true")
+                                .col
+                                    a(href="mail" data-toggle="tooltip" data-placement="top" title="メール送信"): i.fa.fa-send.fa-lg(aria-hidden="true")
                                 .col(data-toggle="tooltip" data-placement="top" title="帳票"): i.fa.fa-table.fa-lg(aria-hidden="true")
                                 .col(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-close.fa-lg(aria-hidden="true")
                     tr
@@ -338,7 +351,8 @@ block primaryContents
                             i.fa.fa-commenting.fa-lg(data-toggle="tooltip" data-placement="top" title="メモ/お問い合わせあり")
                         td.align-middle
                             .row
-                                .col(data-toggle="tooltip" data-placement="top" title="メール送信"): i.fa.fa-send.fa-lg(aria-hidden="true")
+                                .col
+                                    a(href="mail" data-toggle="tooltip" data-placement="top" title="メール送信"): i.fa.fa-send.fa-lg(aria-hidden="true")
                                 .col(data-toggle="tooltip" data-placement="top" title="帳票"): i.fa.fa-table.fa-lg(aria-hidden="true")
                                 .col(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-close.fa-lg(aria-hidden="true")
 
@@ -362,7 +376,8 @@ block primaryContents
                         td.align-middle
                         td.align-middle
                             .row
-                                .col(data-toggle="tooltip" data-placement="top" title="メール送信"): i.fa.fa-send.fa-lg(aria-hidden="true")
+                                .col
+                                    a(href="mail" data-toggle="tooltip" data-placement="top" title="メール送信"): i.fa.fa-send.fa-lg(aria-hidden="true")
                                 .col(data-toggle="tooltip" data-placement="top" title="帳票"): i.fa.fa-table.fa-lg(aria-hidden="true")
                                 .col(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-close.fa-lg(aria-hidden="true")
                     tr
@@ -386,7 +401,8 @@ block primaryContents
                             i.fa.fa-commenting.fa-lg(data-toggle="tooltip" data-placement="top" title="メモ/お問い合わせあり")
                         td.align-middle
                             .row
-                                .col(data-toggle="tooltip" data-placement="top" title="メール送信"): i.fa.fa-send.fa-lg(aria-hidden="true")
+                                .col
+                                    a(href="mail" data-toggle="tooltip" data-placement="top" title="メール送信"): i.fa.fa-send.fa-lg(aria-hidden="true")
                                 .col(data-toggle="tooltip" data-placement="top" title="帳票"): i.fa.fa-table.fa-lg(aria-hidden="true")
                                 .col(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-close.fa-lg(aria-hidden="true")
                     tr
@@ -409,7 +425,8 @@ block primaryContents
                         td.align-middle
                         td.align-middle
                             .row
-                                .col(data-toggle="tooltip" data-placement="top" title="メール送信"): i.fa.fa-send.fa-lg(aria-hidden="true")
+                                .col
+                                    a(href="mail" data-toggle="tooltip" data-placement="top" title="メール送信"): i.fa.fa-send.fa-lg(aria-hidden="true")
                                 .col(data-toggle="tooltip" data-placement="top" title="帳票"): i.fa.fa-table.fa-lg(aria-hidden="true")
                                 .col(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-close.fa-lg(aria-hidden="true")
                     tr
@@ -432,7 +449,8 @@ block primaryContents
                         td.align-middle
                         td.align-middle
                             .row
-                                .col(data-toggle="tooltip" data-placement="top" title="メール送信"): i.fa.fa-send.fa-lg(aria-hidden="true")
+                                .col
+                                    a(href="mail" data-toggle="tooltip" data-placement="top" title="メール送信"): i.fa.fa-send.fa-lg(aria-hidden="true")
                                 .col(data-toggle="tooltip" data-placement="top" title="帳票"): i.fa.fa-table.fa-lg(aria-hidden="true")
                                 .col(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-close.fa-lg(aria-hidden="true")
                     tr
@@ -455,7 +473,8 @@ block primaryContents
                         td.align-middle
                         td.align-middle
                             .row
-                                .col(data-toggle="tooltip" data-placement="top" title="メール送信"): i.fa.fa-send.fa-lg(aria-hidden="true")
+                                .col
+                                    a(href="mail" data-toggle="tooltip" data-placement="top" title="メール送信"): i.fa.fa-send.fa-lg(aria-hidden="true")
                                 .col(data-toggle="tooltip" data-placement="top" title="帳票"): i.fa.fa-table.fa-lg(aria-hidden="true")
                                 .col(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-close.fa-lg(aria-hidden="true")
                     tr
@@ -478,7 +497,8 @@ block primaryContents
                         td.align-middle
                         td.align-middle
                             .row
-                                .col(data-toggle="tooltip" data-placement="top" title="メール送信"): i.fa.fa-send.fa-lg(aria-hidden="true")
+                                .col
+                                    a(href="mail" data-toggle="tooltip" data-placement="top" title="メール送信"): i.fa.fa-send.fa-lg(aria-hidden="true")
                                 .col(data-toggle="tooltip" data-placement="top" title="帳票"): i.fa.fa-table.fa-lg(aria-hidden="true")
                                 .col(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-close.fa-lg(aria-hidden="true")
                     tr
@@ -502,7 +522,8 @@ block primaryContents
                             i.fa.fa-commenting.fa-lg(data-toggle="tooltip" data-placement="top" title="メモ/お問い合わせあり")
                         td.align-middle
                             .row
-                                .col(data-toggle="tooltip" data-placement="top" title="メール送信"): i.fa.fa-send.fa-lg(aria-hidden="true")
+                                .col
+                                    a(href="mail" data-toggle="tooltip" data-placement="top" title="メール送信"): i.fa.fa-send.fa-lg(aria-hidden="true")
                                 .col(data-toggle="tooltip" data-placement="top" title="帳票"): i.fa.fa-table.fa-lg(aria-hidden="true")
                                 .col(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-close.fa-lg(aria-hidden="true")
             .row.justify-content-md-center.mb-4
