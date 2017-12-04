@@ -1,0 +1,138 @@
+extends /assets/tmpl/moc/layout/_layout-2col
+block pageTitle
+    include /assets/tmpl/components/pageTitle.pug
+    +c-pageTitle("ページ管理","コンテンツ管理")
+
+//- TODO マークアップ見直し必要
+block primaryContents
+    .card.rounded.border-0.mb-4
+        .card-header
+            .row
+                .col-8
+                    .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
+                        span.card-title ページ詳細編集
+                .col-4.text-right
+                    a(data-toggle="collapse" href="#pageDetail" aria-expanded="false" aria-controls="pageDetail")
+                        i.fa.fa-angle-up.fa-lg
+        .collapse(id="pageDetail").show
+            .card-body
+                .row.mb-3
+                    .col-2
+                        span ページ名称
+                        i.fa.fa-question-circle.fa-lg.ml-1
+                        span.badge.badge-primary.ml-1 必須
+                    .col-10
+                        form
+                            input.form-control(type='text', placeholder='TOPページ')
+                .row.mb-3
+                    .col-2
+                        span URL
+                        i.fa.fa-question-circle.fa-lg.ml-1
+                        span.badge.badge-primary.ml-1 必須
+                    .col-10
+                        form.form-row
+                            .col-3.pr-0
+                                span.align-middle http://example.com/user_data/
+                            .col-9.pl-0
+                                input.form-control(type='text')
+                .row.mb-3
+                    .col-2
+                        span ファイル名
+                        i.fa.fa-question-circle.fa-lg.ml-1
+                        span.badge.badge-primary.ml-1 必須
+                    .col-10
+                        form.form-row
+                            .col-2.pr-0.align-middle
+                                span.align-middle /app/html/user_data/
+                            .col-10.pl-0
+                                input.form-control(type='text')
+                        span.text-danger URLとファイル名はあとから変更できません。ご注意ください。
+                .row.mb-3
+                    .col-2
+                        span コード編集
+                        i.fa.fa-question-circle.fa-lg.ml-1
+                    .col-10
+                        pre
+                            code {#
+                                br
+                                |This file is part of EC-CUBE
+                                br
+                                |...
+    .card.rounded.border-0.mb-4
+        .card-header
+            .row
+                .col-8
+                    .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
+                        span.card-title レイアウト設定
+                        i.fa.fa-question-circle.fa-lg.ml-1
+                .col-4.text-right
+                    a(data-toggle="collapse" href="#pageLayout" aria-expanded="false" aria-controls="pageLayout")
+                        i.fa.fa-angle-up.fa-lg
+        .collapse(id="pageLayout").show
+            .card-body
+                .row.mb-3
+                    .col-2
+                        span PC
+                    .col-10
+                        form
+                            select.form-control
+                                option トップページ用レイアウト
+                                option ...
+                .row.mb-3
+                    .col-2
+                        span モバイル
+                    .col-10
+                        form
+                            select.form-control
+                                option トップページ用レイアウト（SP）
+                                option ...
+    .card.rounded.border-0.mb-4
+        .card-header
+            .row
+                .col-8
+                    .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
+                        span.card-title メタ設定
+                        i.fa.fa-question-circle.fa-lg.ml-1
+                .col-4.text-right
+                    a(data-toggle="collapse" href="#pageMeta" aria-expanded="false" aria-controls="pageMeta")
+                        i.fa.fa-angle-up.fa-lg
+        .collapse(id="pageMeta").show
+            .card-body
+                .row.mb-3
+                    .col-2
+                        span author
+                    .col-10
+                        form
+                            input.form-control(type='text', placeholder='テキスト')
+                .row.mb-3
+                    .col-2
+                        span description
+                    .col-10
+                        form
+                            input.form-control(type='text', placeholder='テキスト')
+                .row.mb-3
+                    .col-2
+                        span keyword
+                    .col-10
+                        form
+                            input.form-control(type='text', placeholder='テキスト')
+                .row.mb-3
+                    .col-2
+                        span robot
+                    .col-10
+                        form
+                            input.form-control(type='text', placeholder='テキスト')
+
+block conversionArea
+    +b.c-conversionArea
+        +e.container
+            .row.justify-content-between.align-items-center
+                .col-6
+                    +e.leftBlockItem
+                        a(href="/content/page").c-beseLink
+                            i.fa.fa-backward(aria-hidden="true")
+                            span ページ一覧
+                .col-6
+                    .row.align-items-center.justify-content-end
+                        .col-auto
+                            button(type="submit").btn.btn-primary.px-5 登録
