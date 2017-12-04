@@ -6,50 +6,171 @@ block pageTitle
             //+e.SPAN.subTitle 商品管理
 
 block primaryContents
-    .card
-        .card-header ようこそ、EC-CUBEへ
+    .card.rounded.border-0.mb-4
+        .card-header
+            .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
+                span.card-title ようこそ、EC-CUBEへ――基本的な設定
+                i.fa.fa-question-circle.fa-lg.ml-1(aria-hidden='true')
         .card-body
-            p hoge
-            hr
-            p hoge
-    br
+            .row
+                .col-1.align-middle.text-center
+                    i.fa.fa-flag.fa-4x(aria-hidden='true')
+                .col-9
+                    span.font-weight-bold.align-middle 特定商取引法に関する表記を設定しましょう
+                    p 商品マスターに最初の商品を登録してみましょう。商品の画像を用意してください。
+                .col-2.text-right.align-middle
+                    button(type="submit").btn.btn-primary.px-4 設定する
+            .row
+                .col.p-0
+                    hr
+            .row
+                .col-1.align-middle.text-center
+                    i.fa.fa-cubes.fa-4x(aria-hidden='true')
+                .col-9
+                    span.font-weight-bold.align-middle 特定商取引法に関する表記を設定しましょう
+                    p 商品マスターに最初の商品を登録してみましょう。商品の画像を用意してください。
+                .col-2.text-right.align-middle
+                    button(type="submit").btn.btn-primary.px-4 設定する
+            .row
+                .col.p-0
+                    hr
+            .row
+                .col-1.align-middle.text-center
+                    i.fa.fa-check.fa-2x.text-success(aria-hidden='true')
+                .col-11
+                    span.font-weight-bold.text-muted.align-middle お店の基本情報を設定しましょう
+            .row
+                .col.p-0
+                    hr
+            .row
+                .col.text-center.align-middle
+                    button.btn.btn-light.border.border-dark.p-2.px-3 すべてスキップ
     .row
-        .col-sm-4
-            .card
+        .col-4
+            .card.rounded.border-0.mb-4
                 .card-header
-                    a(href="/") 受注状況
+                    .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
+                        a(href="#")
+                            span.card-title 受注状況
+                .card-body.p-0
+                    table.table
+                        tbody
+                            tr
+                                td.border-0
+                                    .row
+                                        .col-2
+                                            i.fa.fa-question-circle.fa-2x.text-muted.mr-2(aria-hidden='true')
+                                        .col-10
+                                            a(href="#")
+                                                span.align-middle 新規受付
+                                td.border-0.text-right
+                                    span.h4.align-middle.font-weight-normal 13
+                            tr
+                                td
+                                    .row
+                                        .col-2
+                                            i.fa.fa-money.fa-2x.text-muted.mr-2(aria-hidden='true')
+                                        .col-10
+                                            a(href="#")
+                                                span.align-middle 入金待ち
+                                td.text-right
+                                    span.h4.align-middle.font-weight-normal 24
+                            tr
+                                td
+                                    .row
+                                        .col-2
+                                            i.fa.fa-check.fa-2x.text-muted.mr-2(aria-hidden='true')
+                                        .col-10
+                                            a(href="#")
+                                                span.align-middle 入金済み
+                                td.text-right
+                                    span.h4.align-middle.font-weight-normal 4
+                            tr
+                                td
+                                    .row
+                                        .col-2
+                                            i.fa.fa-plane.fa-2x.text-muted.mr-2(aria-hidden='true')
+                                        .col-10
+                                            a(href="#")
+                                                span.align-middle 取寄せ中
+                                td.text-right
+                                    span.h4.align-middle.font-weight-normal 8
+        .col-8
+            .card.rounded.border-0.mb-4
+                .card-header
+                    .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
+                        span.card-title 売上状況
+                        i.fa.fa-question-circle.fa-lg.ml-1(aria-hidden='true')
                 .card-body
-                    p hoge
-                    hr
-                    p hoge
-        .col-sm-8
-            .card
-                .card-header 売上状況
-                .card-body
-                    p hoge
-                    hr
-                    p hoge
-    br
+                    .row
+                        .col.text-center
+                            .btn-group(data-toggle='buttons')
+                                label.btn.btn-outline-secondary.px-5.active
+                                    input#option1(type='radio', name='options', autocomplete='off', checked='')
+                                    |  日別
+                                label.btn.btn-outline-secondary.px-5
+                                    input#option2(type='radio', name='options', autocomplete='off')
+                                    |  週別
+                                label.btn.btn-outline-secondary.px-5
+                                    input#option3(type='radio', name='options', autocomplete='off')
+                                    |  月別
     .row
-        .col-sm-6
-            .card
-                .card-header ショップ状況
-                .card-body
-                    p hoge
-                    hr
-                    p hoge
-        .col-sm-6
-            .card
-                .card-header お知らせ
-                .card-body
-                    p hoge
-                    hr
-                    p hoge
-    br
-block conversionArea
-    +b.c-conversionArea
-        +e.container
-            span 公開
-            span 更新
-
-
+        .col
+            .card.rounded.border-0.mb-4
+                .card-header
+                    .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
+                        span.card-title ショップ状況
+                        i.fa.fa-question-circle.fa-lg.ml-1(aria-hidden='true')
+                .card-body.p-0
+                    table.table
+                        tbody
+                            tr
+                                td.border-0
+                                    .row
+                                        .col-2.pr-0
+                                            i.fa.fa-exclamation-circle.fa-2x.text-muted.mr-2(aria-hidden='true')
+                                        .col-10.p-0
+                                            a(href="#")
+                                                span.align-middle 在庫切れ商品数
+                                td.border-0.text-right
+                                    span.h4.align-middle.font-weight-normal 13
+                            tr
+                                td
+                                    .row
+                                        .col-2.pr-0
+                                            i.fa.fa-cubes.fa-2x.text-muted.mr-2(aria-hidden='true')
+                                        .col-10.p-0
+                                            a(href="#")
+                                                span.align-middle 取扱商品数
+                                td.text-right
+                                    span.h4.align-middle.font-weight-normal 263
+                            tr
+                                td
+                                    .row
+                                        .col-2.pr-0
+                                            i.fa.fa-users.fa-2x.text-muted.mr-2(aria-hidden='true')
+                                        .col-10.p-0
+                                            a(href="#")
+                                                span.align-middle 会員数
+                                td.text-right
+                                    span.h4.align-middle.font-weight-normal 89
+        .col
+            .card.rounded.border-0.mb-4
+                .card-header
+                    .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
+                        span.card-title お知らせ
+                .card-body.p-0
+                    table.table
+                        tbody
+                            tr
+                                td.border-0
+                                    .row
+                                        .col-3
+                                        .col-9
+                                            a(href="#") EC-CUBEペイメントをお使いの方へ、トークン決済申込お手続きのご案内です
+                                            p.text-muted 【2018年3月まで】クレジットカード情報の非保持化対応に、トークン決済を検討中の加盟店様はご確認下さ…
+                            - for (var x = 0; x < 2; x++)
+                                tr
+                                    td
+                                        span.font-weight-bold.text-muted 2017/6/20
+                                        p.text-muted EC-CUBEをカスタマイズして構築されたECサイトの脆弱性を洗い出す、EC-CUBE公式セキュリティ診断。詳しい資料や報告書サンプルをご用意
