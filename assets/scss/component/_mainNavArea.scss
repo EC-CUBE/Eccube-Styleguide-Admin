@@ -84,7 +84,7 @@ Markup:
           li: a(href="/moc/setting/system/log") EC-CUBE ログ表示
           li: a(href="/moc/setting/system/master") マスターデータ管理
       +e.LI.navItem
-        +e.A.navItemTitle.collapsed(data-toggle="collapse" href="#ornersStore" aria-expanded="false" aria-controls="ornersStore")
+        +e.A.navItemTitle.collapsed(data-toggle="collapse" href="#ownersStore" aria-expanded="false" aria-controls="ownersStore")
           i.fa.fa-info-circle(aria-hidden="true")
           span オーナーズストア
 
