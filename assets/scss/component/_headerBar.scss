@@ -17,7 +17,7 @@ Markup:
     +e.A.shopTitle(href="")
         span EC-CUBE SHOP
         i.fa.fa-angle-right(aria-hidden="true")
-    +e.A.userMenu(href="")
+    +e.A.userMenu(data-container="body", data-toggle="popover" data-placement="bottom", title="最終ログイン", data-content="<p>2017/12/18 12:18</p><button class='btn btn-outline-dark btn-block'>パスワード変更</button><button class='btn btn-light btn-block'>ログアウト</button>" , data-html="true")
         i.fa.fa-user-circle(aria-hidden="true")
         span 管理者 様
         i.fa.fa-angle-down(aria-hidden="true")

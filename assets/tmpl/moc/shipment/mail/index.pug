@@ -3,7 +3,7 @@ block pageTitle
     +b.c-pageTitle
         +e.titles
             +e.H2.title メール通知
-            +e.SPAN.subTitle 受注管理
+            +e.SPAN.subTitle 出荷管理
 
 block primaryContents
     .card.rounded.border-0.mb-4
@@ -385,9 +385,9 @@ block conversionArea
             .row.justify-content-between.align-items-center
                 .col-6
                     +e.leftBlockItem
-                        a(href="/order/master").c-beseLink
+                        a(href="/shipment/master").c-beseLink
                             i.fa.fa-backward(aria-hidden="true")
-                            span 受注マスター
+                            span 出荷マスター
                 .col-6
                     .row.align-items-center.justify-content-end
                         .col-auto
