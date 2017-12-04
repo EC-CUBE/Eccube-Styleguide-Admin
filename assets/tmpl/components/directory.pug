@@ -1,0 +1,113 @@
+mixin c-directoryTree
+    .c-directoryTree.mb-3
+        ul
+            li
+                label.collapsed(data-toggle="collapse" href="#directory_categoryA" aria-expanded="false" aria-controls="directory_categoryA") カテゴリA
+                ul#directory_categoryA.collapse
+                    li
+                        label.collapsed(data-toggle="collapse" href="#directory_categoryA-a-1" aria-expanded="false" aria-controls="directory_categoryA-a-1")
+                            span カテゴリA-a
+                        ul#directory_categoryA-a-1.collapse
+                            li
+                                label
+                                    span カテゴリA-a-1
+                    li
+                        label.collapsed(data-toggle="collapse" href="#directory_categoryA-b-1" aria-expanded="false" aria-controls="directory_categoryA-b-1")
+                            span カテゴリA-b
+                        ul#directory_categoryA-b-1.collapse
+                            li
+                                label
+                                    span カテゴリA-b-1
+                    li
+                        label.collapsed(data-toggle="collapse" href="#directory_categoryA-c-1" aria-expanded="false" aria-controls="directory_categoryA-c-1")
+                            span カテゴリA-c
+                        ul#directory_categoryA-c-1.collapse
+                            li
+                                label
+                                    span カテゴリA-c-1
+        ul
+            li
+                label.collapsed(data-toggle="collapse" href="#directory_categoryB" aria-expanded="false" aria-controls="directory_categoryB") カテゴリB
+                ul#directory_categoryB.collapse
+                    li
+                        label
+                            span カテゴリB-a
+                    li
+                        label
+                            span カテゴリB-b
+                    li
+                        label
+                            span カテゴリB-c
+
+mixin c-directoryTreeRegister
+    .c-directoryTree--register.rounded.border.mb-3.p-3
+        ul
+            li
+                input(type='checkbox')
+                label カテゴリA
+                ul
+                    li
+                        input(type='checkbox')
+                        label カテゴリA-a
+                    li
+                        input(type='checkbox')
+                        label カテゴリA-b
+                    li
+                        input(type='checkbox')
+                        label カテゴリA-c
+                        ul
+                            li
+                                input(type='checkbox')
+                                label カテゴリA-c-1
+                            li
+                                input(type='checkbox')
+                                label カテゴリA-c-2
+                                ul
+                                    li
+                                        input(type='checkbox')
+                                        label カテゴリA-c-2-1
+                                    li
+                                        input(type='checkbox')
+                                        label カテゴリA-c-2-2
+        ul
+            li
+                input(type='checkbox')
+                label カテゴリB
+        ul
+            li
+                input(type='checkbox')
+                label カテゴリC
+
+mixin c-directoryTreeFolder
+    .c-directoryTree--folder.mb-3
+        ul
+            li
+                label.collapsed(data-toggle="collapse" href="#directory_userdata" aria-expanded="false" aria-controls="directory_userdata") user_data
+                ul#directory_userdata.collapse
+                    li
+                        label.collapsed(data-toggle="collapse" href="#directory_pdf" aria-expanded="false" aria-controls="directory_pdf")
+                            span pdf
+                        ul#directory_pdf.collapse
+                            li
+                                label
+                                    span フォルダA
+                            li
+                                label
+                                    span フォルダB
+                            li
+                                label.collapsed(data-toggle="collapse" href="#directory_eBook" aria-expanded="false" aria-controls="directory_eBook")
+                                    span.font-weight-bold 電子書籍
+                                ul#directory_eBook.collapse
+                                    li
+                                        label
+                                            span 実用書
+        ul
+            li
+                label.collapsed(data-toggle="collapse" href="#directory_images" aria-expanded="false" aria-controls="directory_images") images
+                ul#directory_images.collapse
+                    li
+                        label
+                            span イメージA
+                    li
+                        label
+                            span イメージB
