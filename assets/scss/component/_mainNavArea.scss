@@ -106,9 +106,12 @@ Styleguide 3.0
   @include media_sp {
     display: none;
   }
-
+  ul {
+    padding-left: 0;
+  }
   &__nav {
     margin-bottom: 0;
+    padding-left: 0;
   }
   &__navItem {
 
