@@ -3,20 +3,17 @@ block pageTitle
     include /assets/tmpl/components/pageTitle.pug
     +c-pageTitle("ページ管理","コンテンツ管理")
 
-//- TODO マークアップ見直し必要
 block primaryContents
     .row.justify-content-between
         .col-9
-            button.btn.btn-light.border.border-dark 新規追加
+            a(href="/content/page/edit").btn.btn-light.border.border-dark 新規追加
         .col-3
-            form.navbar-form.navbar-left(role='search')
-                .form-group
-                    .form-row
-                        .col-10
-                            input.form-control(type='text')
-                        .col-2
-                            button.btn.btn-default(type='submit')
-                                i.fa.fa-search(aria-hidden="true")
+            form.mb-3
+                .form-row
+                    .col
+                        input.form-control(type="search" placeholder="" aria-label="Search")
+                    .col-auto
+                        button.btn.btn-light(type="submit"): i.fa.fa-search
     .card.rounded.border-0.mb-4
         .card-body.p-0
             table.table
@@ -29,10 +26,10 @@ block primaryContents
                         td.align-middle
                             a(href="/content/page/edit") MYページ/会員登録内容変更(入力ページ)
                         td.align-middle
-                            i.fa.fa-desktop(aria-hidden="true")
-                            | 下層ページ用レイアウト（PC）
-                            br
-                            |
-                            i.fa.fa-mobile.fa-lg(aria-hidden="true")
-                            | 下層ページ用レイアウト（SP）
+                            .d-block
+                                i.fa.fa-desktop.mr-2
+                                span 下層ページ用レイアウト（PC）
+                            .d-block
+                                i.fa.fa-mobile.fa-2x.mr-2
+                                span 下層ページ用レイアウト（SP）
                         td.align-middle.text-center(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-close.fa-lg(aria-hidden="true")
