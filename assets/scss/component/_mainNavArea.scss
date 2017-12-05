@@ -133,6 +133,10 @@ Styleguide 3.0
           background: $black05;
         }
       }
+      a.is-active {
+        background: $navy70;
+        color: #fff;
+      }
     }
   }
   &__navItemTitle {
