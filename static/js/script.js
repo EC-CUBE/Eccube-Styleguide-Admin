@@ -18,3 +18,10 @@ var popoverHeader = function(){
     })
 };
 popoverHeader();
+// all page
+var popoverAll = function(){
+    $(function () {
+        $('[data-toggle="popover"]').popover()
+    })
+};
+popoverAll();
