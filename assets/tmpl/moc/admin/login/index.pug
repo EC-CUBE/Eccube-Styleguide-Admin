@@ -1,0 +1,20 @@
+extends /assets/tmpl/moc/layout/_layout.pug
+
+block primaryContents
+    .row.justify-content-center
+        .col-3.text-center
+            .card.rounded.border-0.mb-4
+                .card-body.p-5
+                    .d-block.mb-3
+                        img(src="http://via.placeholder.com/150x150")
+                    form
+                        .form-group.text-left
+                            label ログインID
+                            input(type="text").form-control
+                    form
+                        .form-group.text-left
+                            label パスワード
+                            input(type="password").form-control
+                    .d-block
+                            a(href="/admin/login/error").btn.btn-primary.btn-block.btn-lg ログイン
+            small.text-secondary Copyright © 2000-2017 LOCKON CO.,LTD. All Rights Reserved.

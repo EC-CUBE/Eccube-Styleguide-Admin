@@ -84,7 +84,7 @@ Markup:
           li: a(href="/moc/setting/system/log") EC-CUBE ログ表示
           li: a(href="/moc/setting/system/master") マスターデータ管理
       +e.LI.navItem
-        +e.A.navItemTitle.collapsed(data-toggle="collapse" href="#ornersStore" aria-expanded="false" aria-controls="ornersStore")
+        +e.A.navItemTitle.collapsed(data-toggle="collapse" href="#ownersStore" aria-expanded="false" aria-controls="ownersStore")
           i.fa.fa-info-circle(aria-hidden="true")
           span オーナーズストア
 
@@ -106,9 +106,12 @@ Styleguide 3.0
   @include media_sp {
     display: none;
   }
-
+  ul {
+    padding-left: 0;
+  }
   &__nav {
     margin-bottom: 0;
+    padding-left: 0;
   }
   &__navItem {
 
@@ -129,6 +132,10 @@ Styleguide 3.0
           text-decoration: none;
           background: $black05;
         }
+      }
+      a.is-active {
+        background: $navy70;
+        color: #fff;
       }
     }
   }
