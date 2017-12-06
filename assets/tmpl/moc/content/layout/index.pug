@@ -8,10 +8,15 @@ block pageTitle
 block outsideBlock
     +b.c-outsideBlock
         +e.contents
-            .d-block.text-center.mb-3
-                .btn-group.w-100.d-inline-block(role='group')
-                    button.btn.btn-secondary.w-25(type='button') PC
-                    button.btn.btn-light.w-25(type='button') モバイル
+            .row.mb-3
+                .col.text-center
+                    .btn-group(data-toggle='buttons')
+                        label.btn.btn-outline-secondary.px-5.active
+                            input#option1(type='radio', name='options', autocomplete='off', checked='')
+                            |  PC
+                        label.btn.btn-outline-secondary.px-5
+                            input#option3(type='radio', name='options', autocomplete='off')
+                            |  モバイル
             .d-block.mb-3
                 a.btn.btn-light.border.border-dark(href="/content/layout/detail") PC用レイアウトを新規追加
 
@@ -41,7 +46,7 @@ block primaryContents
             .row
                 .col-8
                     a(href="/content/layout/detail").card-title.align-middle トップページ用レイアウト
-                    button.btn.btn-light.border.border-dark(type='button' data-toggle='modal' data-target='#addPage') ページ追加
+                    button.btn.btn-outline-dark(type='button' data-toggle='modal' data-target='#addPage') ページ追加
 
                 .col-4.text-right
                     a(data-toggle="collapse" href="#topPageLayout" aria-expanded="false" aria-controls="topPageLayout")
@@ -56,7 +61,7 @@ block primaryContents
             .row
                 .col-8
                     a(href="/content/layout/detail").card-title.align-middle 下層ページ用レイアウト
-                    button.btn.btn-light.border.border-dark(type='button' data-toggle='modal' data-target='#addPage') ページ追加
+                    button.btn.btn-outline-dark(type='button' data-toggle='modal' data-target='#addPage') ページ追加
 
                 .col-4.text-right
                     a(data-toggle="collapse" href="#lowerPageLayout" aria-expanded="false" aria-controls="lowerPageLayout")
@@ -80,7 +85,7 @@ block primaryContents
             .row
                 .col-8
                     a(href="/content/layout/detail").card-title.align-middle ショッピングガイド用レイアウト
-                    button.btn.btn-light.border.border-dark(type='button' data-toggle='modal' data-target='#addPage') ページ追加
+                    button.btn.btn-outline-dark(type='button' data-toggle='modal' data-target='#addPage') ページ追加
 
                 .col-4.text-right
                     a(data-toggle="collapse" href="#shopGuideLayout" aria-expanded="false" aria-controls="shopGuideLayout")
@@ -93,7 +98,7 @@ block primaryContents
             .row
                 .col-8
                     a(href="/content/layout/detail").card-title.align-middle LPレイアウト
-                    button.btn.btn-light.border.border-dark(type='button' data-toggle='modal' data-target='#addPage') ページ追加
+                    button.btn.btn-outline-dark(type='button' data-toggle='modal' data-target='#addPage') ページ追加
 
                 .col-4.text-right
                     a(data-toggle="collapse" href="#lpLayout" aria-expanded="false" aria-controls="lpLayout")
