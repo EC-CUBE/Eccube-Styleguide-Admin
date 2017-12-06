@@ -14,7 +14,9 @@ block primaryContents
                     form
                         .form-group.text-left
                             label パスワード
-                            input(type="password").form-control
+                            input(type="password").form-control.is-invalid
+                            .invalid-feedback
+                                | ログインできませんでした。IDとパスワードを確認してください
                     .d-block
-                            a(href="/admin/login/error").btn.btn-primary.btn-block.btn-lg ログイン
+                            a(href="/").btn.btn-primary.btn-block.btn-lg ログイン
             small.text-secondary Copyright © 2000-2017 LOCKON CO.,LTD. All Rights Reserved.
