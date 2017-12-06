@@ -120,7 +120,7 @@ block primaryContents
                             a(href="/product/register")
                                 img(src="http://via.placeholder.com/50x50")
                         td.align-middle
-                            a(href="#") ディナーフォーク
+                            a(href="/product/register") ディナーフォーク
                         td.align-middle fork-01 ～ fork-09
                         td.align-middle 12,000
                         td.align-middle 2
@@ -129,9 +129,25 @@ block primaryContents
                         td.align-middle 2017/07/12
                         td.align-middle(colspan="3")
                             .row
-                                .col(data-toggle="tooltip" data-placement="top" title="表示"): i.fa.fa-eye.fa-lg(aria-hidden="true")
-                                .col(data-toggle="tooltip" data-placement="top" title="複製"): i.fa.fa-files-o.fa-lg(aria-hidden="true")
-                                .col(data-toggle="tooltip" data-placement="top" title="廃止"): i.fa.fa-close.fa-lg(aria-hidden="true")
+                                .col(data-toggle="tooltip" data-placement="top" title="表示").text-center
+                                    a(href="https://demo3.ec-cube.net/products/detail/3" target="_blank"): i.fa.fa-eye.fa-lg.text-secondary(aria-hidden="true")
+                                .col(data-toggle="tooltip" data-placement="top" title="複製").text-center
+                                    i.fa.fa-files-o.fa-lg.text-secondary(aria-hidden="true")
+                                .col(data-toggle="tooltip" data-placement="top" title="廃止").text-center
+                                    a(data-toggle="modal" data-target="#deleteConfirm")
+                                        i.fa.fa-close.fa-lg.text-secondary(aria-hidden="true")
+                                    #deleteConfirm.modal.fade(tabindex='-1', role='dialog', aria-labelledby='deleteConfirm', aria-hidden='true')
+                                        .modal-dialog(role='document')
+                                            .modal-content
+                                                .modal-header
+                                                    h5.modal-title 商品の取扱を停止します
+                                                    button.close(type='button', data-dismiss='modal', aria-label='Close')
+                                                        span(aria-hidden='true') ×
+                                                .modal-body
+                                                    p 商品は一覧（マスター）から削除されますが、これまでの取引等のデータから消えることはありません。この操作はあとから取り消すことができません。この商品を廃止しますか？
+                                                .modal-footer
+                                                    button.btn.btn-secondary(type='button', data-dismiss='modal') キャンセル
+                                                    button(type='button').btn.btn-danger 取扱を停止
                     tr.table-secondary
                         td.align-middle
                             input(type='checkbox', name='filter', value='open')
@@ -140,7 +156,7 @@ block primaryContents
                             a(href="/product/register")
                                 img(src="http://via.placeholder.com/50x50")
                         td.align-middle
-                            a(href="#") ディナースプーン
+                            a(href="/product/register") ディナースプーン
                         td.align-middle sp-01 ～ sp-02
                         td.align-middle 12,000
                         td.align-middle 2
@@ -161,11 +177,55 @@ block primaryContents
                             a(href="/product/register")
                                 img(src="http://via.placeholder.com/50x50")
                         td.align-middle
-                            a(href="#") フライパン
+                            a(href="/product/register") フライパン
                         td.align-middle fork01 他
                         td.align-middle 10,000〜
                         td.align-middle
-                            button.btn.page-link.text-dark.d-inline-block 規格確認
+                            button(type="button" data-toggle="modal" data-target="#standardConfirm").btn.page-link.text-dark.d-inline-block 規格確認
+                            #standardConfirm.modal.fade(tabindex='-1', role='dialog', aria-labelledby='standardConfirm', aria-hidden='true')
+                                .modal-dialog(role='document')
+                                    .modal-content
+                                        .modal-header
+                                            h5.modal-title パーコレーターの規格
+                                            button.close(type='button', data-dismiss='modal', aria-label='Close')
+                                                span(aria-hidden='true') ×
+                                        .modal-body
+                                            table.table.table-striped
+                                                thead.table-active
+                                                    th 規格１
+                                                    th 規格２
+                                                    th 商品コード
+                                                    th 在庫数
+                                                    th 販売価格（円）
+                                                tbody
+                                                    - for (var x = 0; x < 8; x++)
+                                                        tr
+                                                            td プラチナ
+                                                            td 100cm
+                                                            td aa-001
+                                                            td 4
+                                                            td 10,000
+                                                        tr
+                                                            td プラチナ
+                                                            td 130cm
+                                                            td aa-002
+                                                            td 8
+                                                            td 10,000
+                                                        tr
+                                                            td シルバー
+                                                            td 100cm
+                                                            td aa-003
+                                                            td 4
+                                                            td 8,000
+                                                        tr
+                                                            td シルバー
+                                                            td 130cm
+                                                            td aa-004
+                                                            td 6
+                                                            td 8,000
+                                        .modal-footer
+                                            button.btn.btn-secondary(type='button', data-dismiss='modal') 戻る
+                                            a(href="/product/register/standard").btn.btn-primary 規格の編集
                         td.align-middle 公開
                         td.align-middle 2017/01/12
                         td.align-middle 2017/07/12
@@ -183,7 +243,7 @@ block primaryContents
                             a(href="/product/register")
                                 img(src="http://via.placeholder.com/50x50")
                         td.align-middle
-                            a(href="#") 泡立て器
+                            a(href="/product/register") 泡立て器
                         td.align-middle awa01
                         td.align-middle 12,000
                         td.align-middle 12
@@ -204,7 +264,7 @@ block primaryContents
                             a(href="/product/register")
                                 img(src="http://via.placeholder.com/50x50")
                         td.align-middle
-                            a(href="#") ステンレス鍋100mm
+                            a(href="/product/register") ステンレス鍋100mm
                         td.align-middle nabe100
                         td.align-middle 12,000
                         td.align-middle 4
@@ -224,7 +284,7 @@ block primaryContents
                             a(href="/product/register")
                                 img(src="http://via.placeholder.com/50x50")
                         td.align-middle
-                            a(href="#") セラミック包丁
+                            a(href="/product/register") セラミック包丁
                         td.align-middle sera12
                         td.align-middle 12,000
                         td.align-middle 0
@@ -244,7 +304,7 @@ block primaryContents
                             a(href="/product/register")
                                 img(src="http://via.placeholder.com/50x50")
                         td.align-middle
-                            a(href="#") たわし
+                            a(href="/product/register") たわし
                         td.align-middle tawa01
                         td.align-middle 12,000
                         td.align-middle 34
@@ -264,7 +324,7 @@ block primaryContents
                             a(href="/product/register")
                                 img(src="http://via.placeholder.com/50x50")
                         td.align-middle
-                            a(href="#") おろしがね特級
+                            a(href="/product/register") おろしがね特級
                         td.align-middle oroshi15
                         td.align-middle 12,000
                         td.align-middle 4
@@ -284,7 +344,7 @@ block primaryContents
                             a(href="/product/register")
                                 img(src="http://via.placeholder.com/50x50")
                         td.align-middle
-                            a(href="#") ステンレス水筒
+                            a(href="/product/register") ステンレス水筒
                         td.align-middle suito-01 ～ suito-09
                         td.align-middle  12,000
                         td.align-middle 2
@@ -304,7 +364,7 @@ block primaryContents
                             a(href="/product/register")
                                 img(src="http://via.placeholder.com/50x50")
                         td.align-middle
-                            a(href="#") ウォーターサーバ
+                            a(href="/product/register") ウォーターサーバ
                         td.align-middle ws1
                         td.align-middle 12,000
                         td.align-middle 5
