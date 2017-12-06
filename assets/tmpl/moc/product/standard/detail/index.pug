@@ -7,40 +7,32 @@ block primaryContents
     .card.rounded.border-0.mb-4
         .card-header
             .row
-                .col-8
+                .col
+                    span.card-title 基本設定
+        .card-body
+            .row.mb-3
+                .col-3
                     .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
-                        span.card-title 基本設定
-                            i.fa.fa-question-circle.fa-lg.ml-1
-                .col-4.text-right
-                    a(data-toggle="collapse" href="#basicConfig" aria-expanded="false" aria-controls="basicConfig")
-                        i.fa.fa-angle-up.fa-lg
-        .collapse(id="basicConfig").show
-            .card-body
-                .row.mb-3
-                    .col-3
-                        .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
-                            span 表示名
-                            i.fa.fa-question-circle.fa-lg.ml-1
-                            span.badge.badge-primary.ml-1 必須
-                    .col-9
-                        form
-                            .form-group
-                                input(type="text" placeholder="テキスト").form-control
-                .row.mb-3
-                    .col-3
-                        .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
-                            span 管理名
-                            i.fa.fa-question-circle.fa-lg.ml-1
-                            span.badge.badge-primary.ml-1 必須
-                    .col-9
-                        form
-                            .form-group
-                                input(type="text" placeholder="テキスト").form-control
+                        span 表示名
+                        i.fa.fa-question-circle.fa-lg.ml-1
+                        span.badge.badge-primary.ml-1 必須
+                .col-9
+                    form
+                        .form-group
+                            input(type="text" placeholder="テキスト").form-control
+            .row.mb-3
+                .col-3
+                    .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
+                        span 管理名
+                        i.fa.fa-question-circle.fa-lg.ml-1
+                        span.badge.badge-primary.ml-1 必須
+                .col-9
+                    form
+                        .form-group
+                            input(type="text" placeholder="テキスト").form-control
     .card.rounded.border-0.mb-4
         .card-header
-            .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
-                span.card-title 基本設定
-                    i.fa.fa-question-circle.fa-lg.ml-1
+            span.card-title 分類設定
         .card-body.p-0
             include /assets/tmpl/components/table
             +c-sortTable("靴サイズ［表示名：サイズ］（4）","規格B［表示名：サイズ］（3）","規格C［表示名：サイズ］（12）")
