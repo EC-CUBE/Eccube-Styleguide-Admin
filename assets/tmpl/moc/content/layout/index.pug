@@ -1,0 +1,126 @@
+extends /assets/tmpl/moc/layout/_layout-2col
+block pageTitle
+    +b.c-pageTitle
+        +e.titles
+            +e.H2.title レイアウト管理
+            +e.SPAN.subTitle コンテンツ管理
+
+block outsideBlock
+    +b.c-outsideBlock
+        +e.contents
+            .row.mb-3
+                .col.text-center
+                    .btn-group(data-toggle='buttons')
+                        label.btn.btn-outline-secondary.px-5.active
+                            input#option1(type='radio', name='options', autocomplete='off', checked='')
+                            |  PC
+                        label.btn.btn-outline-secondary.px-5
+                            input#option3(type='radio', name='options', autocomplete='off')
+                            |  モバイル
+            .d-block.mb-3
+                a.btn.btn-light.border.border-dark(href="/content/layout/detail") PC用レイアウトを新規追加
+
+block primaryContents
+    .card.rounded.border-0.mb-4
+        .card-header
+            .row
+                .col-8
+                    .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
+                        span.card-title デフォルトのレイアウト
+                        i.fa.fa-question-circle.fa-lg.ml-1
+                .col-4.text-right
+                    a(data-toggle="collapse" href="#defaultLayout" aria-expanded="false" aria-controls="defaultLayout")
+                        i.fa.fa-angle-up.fa-lg
+        .collapse(id="defaultLayout").show
+            .card-body
+                .row
+                    .col-3.pr-0
+                        form
+                            .form-group
+                                select.form-control
+                                    option(value='') 下層ページ用レイアウト
+                    .col
+                        button.btn.btn-outline-dark(type='button') 登録
+    .card.rounded.border-0.mb-4
+        .card-header
+            .row
+                .col-8
+                    a(href="/content/layout/detail").card-title.align-middle トップページ用レイアウト
+                    button.btn.btn-outline-dark(type='button' data-toggle='modal' data-target='#addPage') ページ追加
+
+                .col-4.text-right
+                    a(data-toggle="collapse" href="#topPageLayout" aria-expanded="false" aria-controls="topPageLayout")
+                        i.fa.fa-angle-up.fa-lg
+        .collapse(id="topPageLayout").show
+            .card-body.p-0
+                .d-block.p-4
+                    i.fa.fa-bars.text-secondary.mr-3
+                    span トップページ（PC）
+    .card.rounded.border-0.mb-4
+        .card-header
+            .row
+                .col-8
+                    a(href="/content/layout/detail").card-title.align-middle 下層ページ用レイアウト
+                    button.btn.btn-outline-dark(type='button' data-toggle='modal' data-target='#addPage') ページ追加
+
+                .col-4.text-right
+                    a(data-toggle="collapse" href="#lowerPageLayout" aria-expanded="false" aria-controls="lowerPageLayout")
+                        i.fa.fa-angle-up.fa-lg
+        .collapse(id="lowerPageLayout").show
+            .card-body.p-0
+                .d-block.border.border-top-0.border-right-0.border-left-0.p-4
+                    i.fa.fa-bars.text-secondary.mr-3
+                    span 商品購入（お届け先変更）
+                .d-block.border.border-top-0.border-right-0.border-left-0.p-4
+                    i.fa.fa-bars.text-secondary.mr-3
+                    span パスワード変更（完了）
+                .d-block.border.border-top-0.border-right-0.border-left-0.p-4
+                    i.fa.fa-bars.text-secondary.mr-3
+                    span 商品購入（お届け先複数指定）
+                .d-block.p-4
+                    i.fa.fa-bars.text-secondary.mr-3
+                    span 商品購入（支払い方法選択）
+    .card.rounded.border-0.mb-4
+        .card-header
+            .row
+                .col-8
+                    a(href="/content/layout/detail").card-title.align-middle ショッピングガイド用レイアウト
+                    button.btn.btn-outline-dark(type='button' data-toggle='modal' data-target='#addPage') ページ追加
+
+                .col-4.text-right
+                    a(data-toggle="collapse" href="#shopGuideLayout" aria-expanded="false" aria-controls="shopGuideLayout")
+                        i.fa.fa-angle-up.fa-lg
+        .collapse(id="shopGuideLayout").show
+            .card-body.p-0
+
+    .card.rounded.border-0.mb-4
+        .card-header
+            .row
+                .col-8
+                    a(href="/content/layout/detail").card-title.align-middle LPレイアウト
+                    button.btn.btn-outline-dark(type='button' data-toggle='modal' data-target='#addPage') ページ追加
+
+                .col-4.text-right
+                    a(data-toggle="collapse" href="#lpLayout" aria-expanded="false" aria-controls="lpLayout")
+                        i.fa.fa-angle-up.fa-lg
+        .collapse(id="lpLayout").show
+            .card-body.p-0
+                .d-block.p-4
+                    span.text-muted ページの登録がありません
+    #addPage.modal.fade(tabindex='-1', role='dialog', aria-labelledby='addPage', aria-hidden='true')
+        .modal-dialog(role='document')
+            .modal-content
+                .modal-header
+                    h5.modal-title ページを追加
+                    button.close(type='button', data-dismiss='modal', aria-label='Close')
+                        span(aria-hidden='true') ×
+                .modal-body
+                    p このレイアウトに割り当てるページを選択してください。すでに他のレイアウトを割り当てられているページは設定が上書きされます
+                    form
+                        select.form-control
+                            option トップページ（トップ用レイアウトに割当済）
+                            option ...
+
+                .modal-footer
+                    button.btn.btn-light.w-25(type='button', data-dismiss='modal') キャンセル
+                    button.btn.btn-primary.w-25(type='button', data-dismiss='modal') ページを追加

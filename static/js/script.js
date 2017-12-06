@@ -2,7 +2,6 @@
 var toolTip = function(){
     $(function () {
         $('[data-toggle="tooltip"]').tooltip()
-        console.log("hoeg")
     })
 };
 
@@ -18,3 +17,10 @@ var popoverHeader = function(){
     })
 };
 popoverHeader();
+// all page
+var popoverAll = function(){
+    $(function () {
+        $('[data-toggle="popover"]').popover()
+    })
+};
+popoverAll();

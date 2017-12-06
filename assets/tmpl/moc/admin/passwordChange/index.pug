@@ -1,0 +1,35 @@
+extends /assets/tmpl/moc/layout/_layout-2col.pug
+block pageTitle
+    include /assets/tmpl/components/pageTitle.pug
+    +c-pageTitle("パスワード変更","アカウント管理")
+
+block primaryContents
+    .card.rounded.border-0.mb-4
+        .card-header
+            span.card-title パスワード変更
+        .card-body
+            form
+                .form-group
+                    label.col-form-label 現在のパスワード
+                    input.form-control(type="password")
+            form
+                .form-group
+                    label.col-form-label 新しいのパスワード
+                    input.form-control(type="password")
+            form
+                .form-group
+                    label.col-form-label 新しいのパスワード（確認）
+                    input.form-control(type="password")
+block conversionArea
+    +b.c-conversionArea
+        +e.container
+            .row.justify-content-between.align-items-center
+                .col-6
+                    +e.leftBlockItem
+                        a(href="/").c-beseLink
+                            i.fa.fa-backward(aria-hidden="true")
+                            span キャンセル
+                .col-6
+                    .row.align-items-center.justify-content-end
+                        .col-auto
+                            button(type="submit").btn.btn-primary.px-5 変更

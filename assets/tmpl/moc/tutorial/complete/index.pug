@@ -4,59 +4,20 @@ block pageTitle
         +e.titles
             +e.H2.title ホーム
 
-block outsideBlock
-    .alert.alert-primary.alert-dismissible.fade.show(role='alert')
-        i.fa.fa-comment.fa-lg.mr-2
-        span.font-weight-bold アラート：通常
-        button.close(type='button', data-dismiss='alert', aria-label='Close')
-            span(aria-hidden='true') ×
-    .alert.alert-success.alert-dismissible.fade.show(role='alert')
-        i.fa.fa-check.fa-lg.mr-2
-        span.font-weight-bold アラート：成功
-        button.close(type='button', data-dismiss='alert', aria-label='Close')
-            span(aria-hidden='true') ×
-    .alert.alert-danger.alert-dismissible.fade.show(role='alert')
-        i.fa.fa-warning.fa-lg.mr-2
-        span.font-weight-bold アラート：失敗
-        button.close(type='button', data-dismiss='alert', aria-label='Close')
-            span(aria-hidden='true') ×
-    .alert.alert-warning.alert-dismissible.fade.show(role='alert')
-        i.fa.fa-warning.fa-lg.mr-2
-        span.font-weight-bold アラート：警告
-        button.close(type='button', data-dismiss='alert', aria-label='Close')
-            span(aria-hidden='true') ×
-
 block primaryContents
     .card.rounded.border-0.mb-4
         .card-header
-            .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
-                span.card-title ようこそ、EC-CUBEへ――基本的な設定
-                i.fa.fa-question-circle.fa-lg.ml-1(aria-hidden='true')
-        .card-body.pt-0.pr-0.pl-0
-            .row.border.border-top-0.border-left-0.border-right-0.p-4.align-items-center
-                .col-1.align-middle.text-center
-                    i.fa.fa-flag.fa-4x.text-secondary(aria-hidden='true')
-                .col-9
-                    span.font-weight-bold.align-middle 特定商取引法に関する表記を設定しましょう
-                    p 商品マスターに最初の商品を登録してみましょう。商品の画像を用意してください。
-                .col-2.text-right.align-middle
-                    a(href="").btn.btn-primary.px-4 設定する
-            .row.border.border-top-0.border-left-0.border-right-0.p-4.align-items-center
-                .col-1.align-middle.text-center
-                    i.fa.fa-cubes.fa-4x.text-secondary(aria-hidden='true')
-                .col-9
-                    span.font-weight-bold.align-middle 特定商取引法に関する表記を設定しましょう
-                    p 商品マスターに最初の商品を登録してみましょう。商品の画像を用意してください。
-                .col-2.text-right.align-middle
-                    a(href="/product/register/").btn.btn-primary.px-4 設定する
-            .row.border.border-top-0.border-left-0.border-right-0.p-4.align-items-center.mb-3
-                .col-1.align-middle.text-center
-                    i.fa.fa-check.fa-2x.text-success(aria-hidden='true')
-                .col-11
-                    span.font-weight-bold.text-muted.align-middle お店の基本情報を設定しましょう
+            span.card-title 設定完了
+        .card-body.pt-0.pr-0.pl-0.text-center
+            i.fa.fa-check-circle-o.fa-5x.p-3.text-success
+            p.h2 おめでとうございます
+            p あなたのショップの基本設定が終わりました！
+                br
+                | ひきつづきEC-CUBEをお楽しみください！
             .row
                 .col.text-center.align-middle
-                    a(href="/tutorial/complete").btn.btn-outline-dark すべてスキップ
+                    button(type="button").btn.btn-primary.mr-2 この表示を消す
+                    a(href="/").btn.btn-outline-dark 課題を再表示
     .row
         .col-4.mb-4
             .card.rounded.border-0.h-100
@@ -169,8 +130,8 @@ block primaryContents
                                 a.d-inline-block.mb-2(href="#") EC-CUBEペイメントをお使いの方へ、トークン決済申込お手続きのご案内です
                                 p.text-muted 【2018年3月まで】クレジットカード情報の非保持化対応に、トークン決済を検討中の加盟店様はご確認下さ…
                     - for (var x = 0; x < 2; x++)
-                        .d-block.p-4.border.border-top-0.border-left-0.border-right-0
-                            .row.align-items-center
-                                .col
-                                    span.font-weight-bold.text-muted 2017/6/20
-                                    p.text-muted EC-CUBEをカスタマイズして構築されたECサイトの脆弱性を洗い出す、EC-CUBE公式セキュリティ診断。詳しい資料や報告書サンプルをご用意
+                    .d-block.p-4.border.border-top-0.border-left-0.border-right-0
+                        .row.align-items-center
+                            .col
+                                span.font-weight-bold.text-muted 2017/6/20
+                                p.text-muted EC-CUBEをカスタマイズして構築されたECサイトの脆弱性を洗い出す、EC-CUBE公式セキュリティ診断。詳しい資料や報告書サンプルをご用意

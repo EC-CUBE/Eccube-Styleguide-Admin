@@ -12,7 +12,7 @@ mixin c-mainNavArea
                         i.fa.fa-cube(aria-hidden="true")
                         span 商品管理
                     ul.collapse#productManagement
-                        li: a(href="/product/master") 商品マスター
+                        li: a.is-active(href="/product/master") 商品マスター
                         li: a(href="/product/register") 商品登録
                         li: a(href="/product/standard") 規格管理
                         li: a(href="/product/category") カテゴリ管理
@@ -63,29 +63,29 @@ mixin c-mainNavArea
                     +e.A.navItemTitle.collapsed(data-toggle="collapse" href="#config" aria-expanded="false" aria-controls="config")
                         i.fa.fa-cog(aria-hidden="true")
                         span 設定
-
-                    +e.A.navItemSubTitle.collapsed(data-toggle="collapse" href="#commonConfig" aria-expanded="false" aria-controls="commonConfig")
-                        span 基本情報設定
-                    ul.collapse#commonConfig
-                        li: a(href="/setting/basis/shop")  ショップマスター
-                        li: a(href="/setting/basis/tradelaw")  特定商取引法
-                        li: a(href="/setting/basis/agreement")  利用規約設定
-                        li: a(href="/setting/basis/payment")  支払方法設定
-                        li: a(href="/setting/basis/delivery")  配送方法設定
-                        li: a(href="/setting/basis/tax")  税率設定
-                        li: a(href="/setting/basis/mail") メール設定
-                    +e.A.navItemSubTitle.collapsed(data-toggle="collapse" href="#systemConfig" aria-expanded="false" aria-controls="systemConfig")
-                        span システム情報設定
-                    ul.collapse#systemConfig
-                        li: a(href="/setting/system/system") システム情報
-                        li: a(href="/setting/system/member") メンバー管理
-                        li: a(href="/setting/system/authority") 権限管理
-                        li: a(href="/setting/system/security") セキュリティ管理
-                        li: a(href="/setting/system/log") EC-CUBE ログ表示
-                        li: a(href="/setting/system/master") マスターデータ管理
+                    #config.collapse
+                        +e.A.navItemSubTitle.collapsed(data-toggle="collapse" href="#commonConfig" aria-expanded="false" aria-controls="commonConfig")
+                            span 基本情報設定
+                        ul.collapse#commonConfig
+                            li: a(href="/setting/basis/shop")  ショップマスター
+                            li: a(href="/setting/basis/tradelaw")  特定商取引法
+                            li: a(href="/setting/basis/agreement")  利用規約設定
+                            li: a(href="/setting/basis/payment")  支払方法設定
+                            li: a(href="/setting/basis/delivery")  配送方法設定
+                            li: a(href="/setting/basis/tax")  税率設定
+                            li: a(href="/setting/basis/mail") メール設定
+                        +e.A.navItemSubTitle.collapsed(data-toggle="collapse" href="#systemConfig" aria-expanded="false" aria-controls="systemConfig")
+                            span システム情報設定
+                        ul.collapse#systemConfig
+                            li: a(href="/setting/system/system") システム情報
+                            li: a(href="/setting/system/member") メンバー管理
+                            li: a(href="/setting/system/authority") 権限管理
+                            li: a(href="/setting/system/security") セキュリティ管理
+                            li: a(href="/setting/system/log") EC-CUBE ログ表示
+                            li: a(href="/setting/system/master") マスターデータ管理
 
                 +e.LI.navItem
-                    +e.A.navItemTitle.collapsed(data-toggle="collapse" href="#ornersStore" aria-expanded="false" aria-controls="ornersStore")
+                    +e.A.navItemTitle.collapsed(data-toggle="collapse" href="#ownersStore" aria-expanded="false" aria-controls="ownersStore")
                         i.fa.fa-info-circle(aria-hidden="true")
                         span オーナーズストア
                 +e.LI.navItem
