@@ -4,6 +4,28 @@ block pageTitle
         +e.titles
             +e.H2.title ホーム
 
+block outsideBlock
+    .alert.alert-primary.alert-dismissible.fade.show(role='alert')
+        i.fa.fa-comment.fa-lg.mr-2
+        span.font-weight-bold アラート：通常
+        button.close(type='button', data-dismiss='alert', aria-label='Close')
+            span(aria-hidden='true') ×
+    .alert.alert-success.alert-dismissible.fade.show(role='alert')
+        i.fa.fa-check.fa-lg.mr-2
+        span.font-weight-bold アラート：成功
+        button.close(type='button', data-dismiss='alert', aria-label='Close')
+            span(aria-hidden='true') ×
+    .alert.alert-danger.alert-dismissible.fade.show(role='alert')
+        i.fa.fa-warning.fa-lg.mr-2
+        span.font-weight-bold アラート：失敗
+        button.close(type='button', data-dismiss='alert', aria-label='Close')
+            span(aria-hidden='true') ×
+    .alert.alert-warning.alert-dismissible.fade.show(role='alert')
+        i.fa.fa-warning.fa-lg.mr-2
+        span.font-weight-bold アラート：警告
+        button.close(type='button', data-dismiss='alert', aria-label='Close')
+            span(aria-hidden='true') ×
+
 block primaryContents
     .card.rounded.border-0.mb-4
         .card-header
