@@ -46,7 +46,7 @@ block primaryContents
         .collapse(id="layoutBlockEdit").show
             .card-body
                 .row
-                    .col-8.p-2
+                    .col.p-2
                         .d-block.border
                             .d-block.p-3.border.border-top-0.border-right-0.border-left-0
                                 p.font-weight-bold headセクション
@@ -78,11 +78,10 @@ block primaryContents
                                                 data-html="true"
                                             )
                                                 i.fa.fa-ellipsis-v.fa-lg.text-secondary
-                            .d-block.p-3.border-top-0.border-right-0.border-left-0
+                            .d-block.p-3.border.border-top-0.border-right-0.border-left-0
                                 p.font-weight-bold <body>タグ直後
                                 .d-block.text-center.border.border-secondary.p-3
                                     span.text-secondary ブロックをドラッグ＆ドロップ
-                        .d-block.border
                             .d-block.p-3.border.border-top-0.border-right-0.border-left-0
                                 p.font-weight-bold #header
                                 .d-block.border.border-secondary.bg-light.p-3.mb-2
@@ -113,93 +112,94 @@ block primaryContents
                                             data-html="true"
                                             )
                                                 i.fa.fa-ellipsis-v.fa-lg.text-secondary
-                            .d-block.p-3.border-top-0.border-right-0.border-left-0
+                            .d-block.p-3.border.border-top-0.border-right-0.border-left-0
                                 p.font-weight-bold #contents_top
                                 .d-block.text-center.border.border-secondary.p-3
                                     span.text-secondary ブロックをドラッグ＆ドロップ
-                        .row
-                            .col.align-items-start.pr-0.p-3.border.border-top-0
-                                .d-block
-                                    p.font-weight-bold #side_left
-                                    .d-block.border.border-secondary.bg-light.p-3.mb-2.h-100
-                                        .row.justify-content-between
-                                            .col
-                                                i.fa.fa-bars.text-secondary.mr-3
-                                                a(href="" style="max-width: 150px;").text-truncate.d-inline-block.align-middle カテゴリーリスト
-                                            .col-auto.text-right
-                                                .d-inline-block(
-                                                data-container="body"
-                                                data-toggle="popover"
-                                                data-placement="bottom"
-                                                data-content="<div class='list-group'><a href='#' class='list-group-item list-group-item-action border-0'><i class='fa fa-long-arrow-up mr-1'></i>上に移動</a><a href='#' class='list-group-item list-group-item-action border-0'><i class='fa fa-long-arrow-down mr-1'></i>下に移動</a><a href='#' class='list-group-item list-group-item-action border-0' data-toggle='modal' data-target='#clickStreamConfirm'><i class='fa fa-arrows mr-1'></i>セクションに移動</a><a href='#' class='list-group-item list-group-item-action border-0' data-toggle='modal' data-target='#codePreview'><i class='fa fa-code mr-1'></i> コードプレビュー</a></div>"
-                                                data-html="true"
-                                                )
-                                                    i.fa.fa-ellipsis-v.fa-lg.text-secondary
-                                    .d-block.border.border-secondary.bg-light.p-3
-                                        .row.justify-content-between
-                                            .col
-                                                i.fa.fa-bars.text-secondary.mr-3
-                                                a(href="" style="max-width: 150px;").text-truncate.d-inline-block.align-middle 長いブロック名長いブロック名長い
-                                            .col-auto.text-right
-                                                .d-inline-block(
-                                                data-container="body"
-                                                data-toggle="popover"
-                                                data-placement="bottom"
-                                                data-content="<div class='list-group'><a href='#' class='list-group-item list-group-item-action border-0'><i class='fa fa-long-arrow-up mr-1'></i>上に移動</a><a href='#' class='list-group-item list-group-item-action border-0'><i class='fa fa-long-arrow-down mr-1'></i>下に移動</a><a href='#' class='list-group-item list-group-item-action border-0' data-toggle='modal' data-target='#clickStreamConfirm'><i class='fa fa-arrows mr-1'></i>セクションに移動</a><a href='#' class='list-group-item list-group-item-action border-0' data-toggle='modal' data-target='#codePreview'><i class='fa fa-code mr-1'></i> コードプレビュー</a></div>"
-                                                data-html="true"
-                                                )
-                                                    i.fa.fa-ellipsis-v.fa-lg.text-secondary
-                            .col.align-items-start.pl-0.pr-0.border.border-top-0.border-left-0.border-bottom-0
-                                .d-block.h-100
-                                    .d-block.p-3.border.border-top-0.border-left-0.border-right-0
-                                        p.font-weight-bold #main_top
-                                        .d-block.text-center.border.border-secondary.p-3
-                                            span.text-secondary ブロックをドラッグ＆ドロップ
-                                    .d-block.p-3.border.border-top-0.border-left-0.border-right-0.bg-light
-                                        p.font-weight-bold #main
-                                        .d-block.text-center.p-3
-                                    .d-block.p-3.border.border-top-0.border-left-0.border-right-0
-                                        p.font-weight-bold #main_bottom
-                                        .d-block.text-center.border.border-secondary.p-3
-                                            span.text-secondary ブロックをドラッグ＆ドロップ
-                            .col.align-items-start.pl-0.border.border-top-0.border-left-0
-                                .d-block.p-3.h-100
-                                    p.font-weight-bold #side_right
+                            .d-block.pl-3.pr-3.border.border-top-0.border-right-0.border-left-0
+                                .row
+                                    .col.align-items-start.pr-0.p-3.border.border-top-0
+                                        .d-block
+                                            p.font-weight-bold #side_left
+                                            .d-block.border.border-secondary.bg-light.p-3.mb-2.h-100
+                                                .row.justify-content-between
+                                                    .col
+                                                        i.fa.fa-bars.text-secondary.mr-3
+                                                        a(href="" style="max-width: 150px;").text-truncate.d-inline-block.align-middle カテゴリーリスト
+                                                    .col-auto.text-right
+                                                        .d-inline-block(
+                                                        data-container="body"
+                                                        data-toggle="popover"
+                                                        data-placement="bottom"
+                                                        data-content="<div class='list-group'><a href='#' class='list-group-item list-group-item-action border-0'><i class='fa fa-long-arrow-up mr-1'></i>上に移動</a><a href='#' class='list-group-item list-group-item-action border-0'><i class='fa fa-long-arrow-down mr-1'></i>下に移動</a><a href='#' class='list-group-item list-group-item-action border-0' data-toggle='modal' data-target='#clickStreamConfirm'><i class='fa fa-arrows mr-1'></i>セクションに移動</a><a href='#' class='list-group-item list-group-item-action border-0' data-toggle='modal' data-target='#codePreview'><i class='fa fa-code mr-1'></i> コードプレビュー</a></div>"
+                                                        data-html="true"
+                                                        )
+                                                            i.fa.fa-ellipsis-v.fa-lg.text-secondary
+                                            .d-block.border.border-secondary.bg-light.p-3
+                                                .row.justify-content-between
+                                                    .col
+                                                        i.fa.fa-bars.text-secondary.mr-3
+                                                        a(href="" style="max-width: 150px;").text-truncate.d-inline-block.align-middle 長いブロック名長いブロック名長い
+                                                    .col-auto.text-right
+                                                        .d-inline-block(
+                                                        data-container="body"
+                                                        data-toggle="popover"
+                                                        data-placement="bottom"
+                                                        data-content="<div class='list-group'><a href='#' class='list-group-item list-group-item-action border-0'><i class='fa fa-long-arrow-up mr-1'></i>上に移動</a><a href='#' class='list-group-item list-group-item-action border-0'><i class='fa fa-long-arrow-down mr-1'></i>下に移動</a><a href='#' class='list-group-item list-group-item-action border-0' data-toggle='modal' data-target='#clickStreamConfirm'><i class='fa fa-arrows mr-1'></i>セクションに移動</a><a href='#' class='list-group-item list-group-item-action border-0' data-toggle='modal' data-target='#codePreview'><i class='fa fa-code mr-1'></i> コードプレビュー</a></div>"
+                                                        data-html="true"
+                                                        )
+                                                            i.fa.fa-ellipsis-v.fa-lg.text-secondary
+                                    .col.align-items-start.pl-0.pr-0.border.border-top-0.border-left-0.border-bottom-0
+                                        .d-block.h-100
+                                            .d-block.p-3.border.border-top-0.border-left-0.border-right-0
+                                                p.font-weight-bold #main_top
+                                                .d-block.text-center.border.border-secondary.p-3
+                                                    span.text-secondary ブロックをドラッグ＆ドロップ
+                                            .d-block.p-3.border.border-top-0.border-left-0.border-right-0.bg-light
+                                                p.font-weight-bold #main
+                                                .d-block.text-center.p-3
+                                            .d-block.p-3.border.border-top-0.border-left-0.border-right-0
+                                                p.font-weight-bold #main_bottom
+                                                .d-block.text-center.border.border-secondary.p-3
+                                                    span.text-secondary ブロックをドラッグ＆ドロップ
+                                    .col.align-items-start.pl-0.border.border-top-0.border-left-0
+                                        .d-block.p-3.h-100
+                                            p.font-weight-bold #side_right
+                                            .d-block.text-center.border.border-secondary.p-3
+                                                span.text-secondary ブロックをドラッグ＆ドロップ
+                            .d-block.border.border-top-0.border-right-0.border-left-0
+                                .d-block.p-3.border-top-0.border-right-0.border-left-0
+                                    p.font-weight-bold #contents_bottom
                                     .d-block.text-center.border.border-secondary.p-3
                                         span.text-secondary ブロックをドラッグ＆ドロップ
-                        .d-block.border
-                            .d-block.p-3.border-top-0.border-right-0.border-left-0
-                                p.font-weight-bold #contents_bottom
-                                .d-block.text-center.border.border-secondary.p-3
-                                    span.text-secondary ブロックをドラッグ＆ドロップ
-                        .d-block.border
-                            .d-block.p-3.border-top-0.border-right-0.border-left-0
-                                p.font-weight-bold #footer
-                                .d-block.text-center.border.border-secondary.p-3
-                                    span.text-secondary ブロックをドラッグ＆ドロップ
-                        .d-block.border
-                            .d-block.p-3.border-top-0.border-right-0.border-left-0
-                                p.font-weight-bold #drawer
-                                .d-block.text-center.border.border-secondary.p-3
-                                    span.text-secondary ブロックをドラッグ＆ドロップ
-                        .d-block.border
-                            .d-block.p-3.border-top-0.border-right-0.border-left-0
-                                p.font-weight-bold </body>タグ直前
-                                .d-block.border.border-secondary.bg-light.p-3.mb-2
-                                    .row.justify-content-between
-                                        .col
-                                            i.fa.fa-bars.text-secondary.mr-3
-                                            a(href="") フッタJS
-                                        .col-auto.text-right
-                                            .d-inline-block(
-                                            data-container="body"
-                                            data-toggle="popover"
-                                            data-placement="bottom"
-                                            data-content="<div class='list-group'><a href='#' class='list-group-item list-group-item-action border-0'><i class='fa fa-long-arrow-up mr-1'></i>上に移動</a><a href='#' class='list-group-item list-group-item-action border-0'><i class='fa fa-long-arrow-down mr-1'></i>下に移動</a><a href='#' class='list-group-item list-group-item-action border-0' data-toggle='modal' data-target='#clickStreamConfirm'><i class='fa fa-arrows mr-1'></i>セクションに移動</a><a href='#' class='list-group-item list-group-item-action border-0' data-toggle='modal' data-target='#codePreview'><i class='fa fa-code mr-1'></i> コードプレビュー</a></div>"
-                                            data-html="true"
-                                            )
-                                                i.fa.fa-ellipsis-v.fa-lg.text-secondary
-                    .col.p-2
+                            .d-block.border.border-top-0.border-right-0.border-left-0
+                                .d-block.p-3.border-top-0.border-right-0.border-left-0
+                                    p.font-weight-bold #footer
+                                    .d-block.text-center.border.border-secondary.p-3
+                                        span.text-secondary ブロックをドラッグ＆ドロップ
+                            .d-block.border.border-top-0.border-right-0.border-left-0
+                                .d-block.p-3.border-top-0.border-right-0.border-left-0
+                                    p.font-weight-bold #drawer
+                                    .d-block.text-center.border.border-secondary.p-3
+                                        span.text-secondary ブロックをドラッグ＆ドロップ
+                            .d-block
+                                .d-block.p-3.border-top-0.border-right-0.border-left-0
+                                    p.font-weight-bold </body>タグ直前
+                                    .d-block.border.border-secondary.bg-light.p-3.mb-2
+                                        .row.justify-content-between
+                                            .col
+                                                i.fa.fa-bars.text-secondary.mr-3
+                                                a(href="") フッタJS
+                                            .col-auto.text-right
+                                                .d-inline-block(
+                                                data-container="body"
+                                                data-toggle="popover"
+                                                data-placement="bottom"
+                                                data-content="<div class='list-group'><a href='#' class='list-group-item list-group-item-action border-0'><i class='fa fa-long-arrow-up mr-1'></i>上に移動</a><a href='#' class='list-group-item list-group-item-action border-0'><i class='fa fa-long-arrow-down mr-1'></i>下に移動</a><a href='#' class='list-group-item list-group-item-action border-0' data-toggle='modal' data-target='#clickStreamConfirm'><i class='fa fa-arrows mr-1'></i>セクションに移動</a><a href='#' class='list-group-item list-group-item-action border-0' data-toggle='modal' data-target='#codePreview'><i class='fa fa-code mr-1'></i> コードプレビュー</a></div>"
+                                                data-html="true"
+                                                )
+                                                    i.fa.fa-ellipsis-v.fa-lg.text-secondary
+                    .col-3.p-2
                         .d-block.border
                             .d-block.p-3.border.border-top-0.border-right-0.border-left-0
                                 p.font-weight-bold 未使用ブロック
