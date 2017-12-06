@@ -134,17 +134,17 @@ block primaryContents
                                 .col(data-toggle="tooltip" data-placement="top" title="複製").text-center
                                     i.fa.fa-files-o.fa-lg.text-secondary(aria-hidden="true")
                                 .col(data-toggle="tooltip" data-placement="top" title="廃止").text-center
-                                    a(data-toggle="modal" data-target="#deleteConfirm")
+                                    a(data-toggle="modal" data-target="#discontinuance")
                                         i.fa.fa-close.fa-lg.text-secondary(aria-hidden="true")
-                                    #deleteConfirm.modal.fade(tabindex='-1', role='dialog', aria-labelledby='deleteConfirm', aria-hidden='true')
+                                    #discontinuance.modal.fade(tabindex='-1', role='dialog', aria-labelledby='discontinuance', aria-hidden='true')
                                         .modal-dialog(role='document')
                                             .modal-content
                                                 .modal-header
                                                     h5.modal-title 商品の取扱を停止します
                                                     button.close(type='button', data-dismiss='modal', aria-label='Close')
                                                         span(aria-hidden='true') ×
-                                                .modal-body
-                                                    p 商品は一覧（マスター）から削除されますが、これまでの取引等のデータから消えることはありません。この操作はあとから取り消すことができません。この商品を廃止しますか？
+                                                .modal-body.text-left
+                                                    p.text-left 商品は一覧（マスター）から削除されますが、これまでの取引等のデータから消えることはありません。この操作はあとから取り消すことができません。この商品を廃止しますか？
                                                 .modal-footer
                                                     button.btn.btn-secondary(type='button', data-dismiss='modal') キャンセル
                                                     button(type='button').btn.btn-danger 取扱を停止
@@ -165,9 +165,13 @@ block primaryContents
                         td.align-middle 2017/07/12
                         td.align-middle(colspan="3")
                             .row
-                                .col(data-toggle="tooltip" data-placement="top" title="表示"): i.fa.fa-eye.fa-lg(aria-hidden="true")
-                                .col(data-toggle="tooltip" data-placement="top" title="複製"): i.fa.fa-files-o.fa-lg(aria-hidden="true")
-                                .col(data-toggle="tooltip" data-placement="top" title="廃止"): i.fa.fa-close.fa-lg(aria-hidden="true")
+                                .col(data-toggle="tooltip" data-placement="top" title="表示").text-center
+                                    a(href="https://demo3.ec-cube.net/products/detail/3" target="_blank"): i.fa.fa-eye.fa-lg.text-secondary(aria-hidden="true")
+                                .col(data-toggle="tooltip" data-placement="top" title="複製").text-center
+                                    i.fa.fa-files-o.fa-lg.text-secondary(aria-hidden="true")
+                                .col(data-toggle="tooltip" data-placement="top" title="廃止").text-center
+                                    a(data-toggle="modal" data-target="#discontinuance")
+                                        i.fa.fa-close.fa-lg.text-secondary(aria-hidden="true")
                     tr
                         td.align-middle
                             input(type='checkbox', name='filter', value='open')
@@ -231,9 +235,13 @@ block primaryContents
                         td.align-middle 2017/07/12
                         td.align-middle(colspan="3")
                             .row
-                                .col(data-toggle="tooltip" data-placement="top" title="表示"): i.fa.fa-eye.fa-lg(aria-hidden="true")
-                                .col(data-toggle="tooltip" data-placement="top" title="複製"): i.fa.fa-files-o.fa-lg(aria-hidden="true")
-                                .col(data-toggle="tooltip" data-placement="top" title="廃止"): i.fa.fa-close.fa-lg(aria-hidden="true")
+                                .col(data-toggle="tooltip" data-placement="top" title="表示").text-center
+                                    a(href="https://demo3.ec-cube.net/products/detail/3" target="_blank"): i.fa.fa-eye.fa-lg.text-secondary(aria-hidden="true")
+                                .col(data-toggle="tooltip" data-placement="top" title="複製").text-center
+                                    i.fa.fa-files-o.fa-lg.text-secondary(aria-hidden="true")
+                                .col(data-toggle="tooltip" data-placement="top" title="廃止").text-center
+                                    a(data-toggle="modal" data-target="#discontinuance")
+                                        i.fa.fa-close.fa-lg.text-secondary(aria-hidden="true")
                     tr
                         td.align-middle
                             input(type='checkbox', name='filter', value='open')
@@ -252,9 +260,13 @@ block primaryContents
                         td.align-middle 2017/07/12
                         td.align-middle(colspan="3")
                             .row
-                                .col(data-toggle="tooltip" data-placement="top" title="表示"): i.fa.fa-eye.fa-lg(aria-hidden="true")
-                                .col(data-toggle="tooltip" data-placement="top" title="複製"): i.fa.fa-files-o.fa-lg(aria-hidden="true")
-                                .col(data-toggle="tooltip" data-placement="top" title="廃止"): i.fa.fa-close.fa-lg(aria-hidden="true")
+                                .col(data-toggle="tooltip" data-placement="top" title="表示").text-center
+                                    a(href="https://demo3.ec-cube.net/products/detail/3" target="_blank"): i.fa.fa-eye.fa-lg.text-secondary(aria-hidden="true")
+                                .col(data-toggle="tooltip" data-placement="top" title="複製").text-center
+                                    i.fa.fa-files-o.fa-lg.text-secondary(aria-hidden="true")
+                                .col(data-toggle="tooltip" data-placement="top" title="廃止").text-center
+                                    a(data-toggle="modal" data-target="#discontinuance")
+                                        i.fa.fa-close.fa-lg.text-secondary(aria-hidden="true")
                     tr.table-secondary
                         td.align-middle
                             input(type='checkbox', name='filter', value='open')
@@ -273,9 +285,13 @@ block primaryContents
                         td.align-middle 2017/07/12
                         td.align-middle(colspan="3")
                             .row
-                                .col(data-toggle="tooltip" data-placement="top" title="表示"): i.fa.fa-eye.fa-lg(aria-hidden="true")
-                                .col(data-toggle="tooltip" data-placement="top" title="複製"): i.fa.fa-files-o.fa-lg(aria-hidden="true")
-                                .col(data-toggle="tooltip" data-placement="top" title="廃止"): i.fa.fa-close.fa-lg(aria-hidden="true")
+                                .col(data-toggle="tooltip" data-placement="top" title="表示").text-center
+                                    a(href="https://demo3.ec-cube.net/products/detail/3" target="_blank"): i.fa.fa-eye.fa-lg.text-secondary(aria-hidden="true")
+                                .col(data-toggle="tooltip" data-placement="top" title="複製").text-center
+                                    i.fa.fa-files-o.fa-lg.text-secondary(aria-hidden="true")
+                                .col(data-toggle="tooltip" data-placement="top" title="廃止").text-center
+                                    a(data-toggle="modal" data-target="#discontinuance")
+                                        i.fa.fa-close.fa-lg.text-secondary(aria-hidden="true")
                     tr.table-danger
                         td.align-middle
                             input(type='checkbox', name='filter', value='open')
@@ -293,9 +309,13 @@ block primaryContents
                         td.align-middle 2017/07/12
                         td.align-middle(colspan="3")
                             .row
-                                .col(data-toggle="tooltip" data-placement="top" title="表示"): i.fa.fa-eye.fa-lg(aria-hidden="true")
-                                .col(data-toggle="tooltip" data-placement="top" title="複製"): i.fa.fa-files-o.fa-lg(aria-hidden="true")
-                                .col(data-toggle="tooltip" data-placement="top" title="廃止"): i.fa.fa-close.fa-lg(aria-hidden="true")
+                                .col(data-toggle="tooltip" data-placement="top" title="表示").text-center
+                                    a(href="https://demo3.ec-cube.net/products/detail/3" target="_blank"): i.fa.fa-eye.fa-lg.text-secondary(aria-hidden="true")
+                                .col(data-toggle="tooltip" data-placement="top" title="複製").text-center
+                                    i.fa.fa-files-o.fa-lg.text-secondary(aria-hidden="true")
+                                .col(data-toggle="tooltip" data-placement="top" title="廃止").text-center
+                                    a(data-toggle="modal" data-target="#discontinuance")
+                                        i.fa.fa-close.fa-lg.text-secondary(aria-hidden="true")
                     tr
                         td.align-middle
                             input(type='checkbox', name='filter', value='open')
@@ -313,9 +333,13 @@ block primaryContents
                         td.align-middle 2017/07/12
                         td.align-middle(colspan="3")
                             .row
-                                .col(data-toggle="tooltip" data-placement="top" title="表示"): i.fa.fa-eye.fa-lg(aria-hidden="true")
-                                .col(data-toggle="tooltip" data-placement="top" title="複製"): i.fa.fa-files-o.fa-lg(aria-hidden="true")
-                                .col(data-toggle="tooltip" data-placement="top" title="廃止"): i.fa.fa-close.fa-lg(aria-hidden="true")
+                                .col(data-toggle="tooltip" data-placement="top" title="表示").text-center
+                                    a(href="https://demo3.ec-cube.net/products/detail/3" target="_blank"): i.fa.fa-eye.fa-lg.text-secondary(aria-hidden="true")
+                                .col(data-toggle="tooltip" data-placement="top" title="複製").text-center
+                                    i.fa.fa-files-o.fa-lg.text-secondary(aria-hidden="true")
+                                .col(data-toggle="tooltip" data-placement="top" title="廃止").text-center
+                                    a(data-toggle="modal" data-target="#discontinuance")
+                                        i.fa.fa-close.fa-lg.text-secondary(aria-hidden="true")
                     tr
                         td.align-middle
                             input(type='checkbox', name='filter', value='open')
@@ -333,9 +357,13 @@ block primaryContents
                         td.align-middle 2017/07/12
                         td.align-middle(colspan="3")
                             .row
-                                .col(data-toggle="tooltip" data-placement="top" title="表示"): i.fa.fa-eye.fa-lg(aria-hidden="true")
-                                .col(data-toggle="tooltip" data-placement="top" title="複製"): i.fa.fa-files-o.fa-lg(aria-hidden="true")
-                                .col(data-toggle="tooltip" data-placement="top" title="廃止"): i.fa.fa-close.fa-lg(aria-hidden="true")
+                                .col(data-toggle="tooltip" data-placement="top" title="表示").text-center
+                                    a(href="https://demo3.ec-cube.net/products/detail/3" target="_blank"): i.fa.fa-eye.fa-lg.text-secondary(aria-hidden="true")
+                                .col(data-toggle="tooltip" data-placement="top" title="複製").text-center
+                                    i.fa.fa-files-o.fa-lg.text-secondary(aria-hidden="true")
+                                .col(data-toggle="tooltip" data-placement="top" title="廃止").text-center
+                                    a(data-toggle="modal" data-target="#discontinuance")
+                                        i.fa.fa-close.fa-lg.text-secondary(aria-hidden="true")
                     tr
                         td.align-middle
                             input(type='checkbox', name='filter', value='open')
@@ -353,9 +381,13 @@ block primaryContents
                         td.align-middle 2017/07/12
                         td.align-middle(colspan="3")
                             .row
-                                .col(data-toggle="tooltip" data-placement="top" title="表示"): i.fa.fa-eye.fa-lg(aria-hidden="true")
-                                .col(data-toggle="tooltip" data-placement="top" title="複製"): i.fa.fa-files-o.fa-lg(aria-hidden="true")
-                                .col(data-toggle="tooltip" data-placement="top" title="廃止"): i.fa.fa-close.fa-lg(aria-hidden="true")
+                                .col(data-toggle="tooltip" data-placement="top" title="表示").text-center
+                                    a(href="https://demo3.ec-cube.net/products/detail/3" target="_blank"): i.fa.fa-eye.fa-lg.text-secondary(aria-hidden="true")
+                                .col(data-toggle="tooltip" data-placement="top" title="複製").text-center
+                                    i.fa.fa-files-o.fa-lg.text-secondary(aria-hidden="true")
+                                .col(data-toggle="tooltip" data-placement="top" title="廃止").text-center
+                                    a(data-toggle="modal" data-target="#discontinuance")
+                                        i.fa.fa-close.fa-lg.text-secondary(aria-hidden="true")
                     tr
                         td.align-middle
                             input(type='checkbox', name='filter', value='open')
@@ -373,9 +405,13 @@ block primaryContents
                         td.align-middle 2017/07/12
                         td.align-middle(colspan="3")
                             .row
-                                .col(data-toggle="tooltip" data-placement="top" title="表示"): i.fa.fa-eye.fa-lg(aria-hidden="true")
-                                .col(data-toggle="tooltip" data-placement="top" title="複製"): i.fa.fa-files-o.fa-lg(aria-hidden="true")
-                                .col(data-toggle="tooltip" data-placement="top" title="廃止"): i.fa.fa-close.fa-lg(aria-hidden="true")
+                                .col(data-toggle="tooltip" data-placement="top" title="表示").text-center
+                                    a(href="https://demo3.ec-cube.net/products/detail/3" target="_blank"): i.fa.fa-eye.fa-lg.text-secondary(aria-hidden="true")
+                                .col(data-toggle="tooltip" data-placement="top" title="複製").text-center
+                                    i.fa.fa-files-o.fa-lg.text-secondary(aria-hidden="true")
+                                .col(data-toggle="tooltip" data-placement="top" title="廃止").text-center
+                                    a(data-toggle="modal" data-target="#discontinuance")
+                                        i.fa.fa-close.fa-lg.text-secondary(aria-hidden="true")
         .row.justify-content-md-center.mb-4
             .col-auto
                 .btn-group.btn-group-lg
