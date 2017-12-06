@@ -18,36 +18,6 @@ block primaryContents
                 .col.text-center.align-middle
                     button(type="button").btn.btn-primary.mr-2 この表示を消す
                     a(href="/").btn.btn-outline-dark 課題を再表示
-    .card.rounded.border-0.mb-4
-        .card-header
-            .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
-                span.card-title ようこそ、EC-CUBEへ――基本的な設定
-                i.fa.fa-question-circle.fa-lg.ml-1(aria-hidden='true')
-        .card-body.pt-0.pr-0.pl-0
-            .row.border.border-top-0.border-left-0.border-right-0.p-4.align-items-center
-                .col-1.align-middle.text-center
-                    i.fa.fa-flag.fa-4x.text-secondary(aria-hidden='true')
-                .col-9
-                    span.font-weight-bold.align-middle 特定商取引法に関する表記を設定しましょう
-                    p 商品マスターに最初の商品を登録してみましょう。商品の画像を用意してください。
-                .col-2.text-right.align-middle
-                    a(href="").btn.btn-primary.px-4 設定する
-            .row.border.border-top-0.border-left-0.border-right-0.p-4.align-items-center
-                .col-1.align-middle.text-center
-                    i.fa.fa-cubes.fa-4x.text-secondary(aria-hidden='true')
-                .col-9
-                    span.font-weight-bold.align-middle 特定商取引法に関する表記を設定しましょう
-                    p 商品マスターに最初の商品を登録してみましょう。商品の画像を用意してください。
-                .col-2.text-right.align-middle
-                    a(href="/product/register/").btn.btn-primary.px-4 設定する
-            .row.border.border-top-0.border-left-0.border-right-0.p-4.align-items-center.mb-3
-                .col-1.align-middle.text-center
-                    i.fa.fa-check.fa-2x.text-success(aria-hidden='true')
-                .col-11
-                    span.font-weight-bold.text-muted.align-middle お店の基本情報を設定しましょう
-            .row
-                .col.text-center.align-middle
-                    a(href="/tutorial/complete").btn.btn-outline-dark すべてスキップ
     .row
         .col-4.mb-4
             .card.rounded.border-0.h-100
@@ -133,7 +103,7 @@ block primaryContents
                             .col-1.align-middle.text-center.pr-5
                                 i.fa.fa-exclamation-circle.fa-2x.text-secondary(aria-hidden='true')
                             .col
-                                a(href="/order/master")
+                                a(href="/product/master")
                                     span.align-middle 取扱商品数
                             .col-auto.text-right.align-middle
                                 span.h4.align-middle.font-weight-normal 263
@@ -142,7 +112,7 @@ block primaryContents
                             .col-1.align-middle.text-center.pr-5
                                 i.fa.fa-cubes.fa-2x.text-secondary(aria-hidden='true')
                             .col
-                                a(href="/order/master")
+                                a(href="/customer/master")
                                     span.align-middle 会員数
                             .col-auto.text-check.align-middle
                                 span.h4.align-middle.font-weight-normal 89
