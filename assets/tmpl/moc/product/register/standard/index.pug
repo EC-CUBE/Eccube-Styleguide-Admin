@@ -10,7 +10,19 @@ block primaryContents
                 .col-8
                     span.card-title.align-middle 商品名：フォーク
                 .col-4.text-right
-                    button.btn.btn-danger 商品規格を初期化
+                    button.btn.btn-danger(data-toggle="modal" data-target="#initializationConfirm") 商品規格を初期化
+                    #initializationConfirm.modal.fade(tabindex='-1', role='dialog', aria-labelledby='deleteConfirm', aria-hidden='true')
+                        .modal-dialog(role='document')
+                            .modal-content
+                                .modal-header
+                                    h5.modal-title.font-weight-bold この商品の規格を初期化します
+                                    button.close(type='button', data-dismiss='modal', aria-label='Close')
+                                        span(aria-hidden='true') ×
+                                .modal-body
+                                    p.text-left この商品に登録された規格を初期化します。これまでの販売データには影響はありませんが、この操作は取り消すことができません。初期化しますか？
+                                .modal-footer
+                                    button.btn.btn-secondary(type='button', data-dismiss='modal') キャンセル
+                                    button(type='button').btn.btn-danger 規格を初期化
         .card-body
             .row.mb-2
                 .col
@@ -31,7 +43,7 @@ block primaryContents
                 .col-6
                     span.align-middle 9件の規格の組み合わせがあります
                 .col-4.text-right
-                    button.btn.btn-light.border.border-dark.d-inline-block
+                    button.btn.btn-outline-dark
                         i.fa.fa-files-o.mr-1
                         span 一行目をすべての行に複製
         .card-body.p-0
@@ -44,6 +56,7 @@ block primaryContents
                     th 在庫数
                     th 販売制限数
                     th 通常価格
+                    th 販売価格
                     th お届け可能日
                     th 商品種別
                 - for (var x = 0; x < 9; x++)
@@ -67,6 +80,8 @@ block primaryContents
                             form.form-row
                                 .col-6
                                     input.form-control(type="number")
+                        td.align-middle
+                            input.form-control(type="text")
                         td.align-middle
                             input.form-control(type="text")
                         td.align-middle
