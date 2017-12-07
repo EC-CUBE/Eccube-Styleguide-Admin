@@ -92,9 +92,7 @@ block outsideBlock
                 .col
                     form
                         .form-group
-                            label.col-form-label
-                                | 受注日
-                                i.fa.fa-question-circle.fa-lg.ml-1
+                            label.col-form-label 受注日
                             .form-row.align-items-center
                                 .col
                                     input.form-control(type='date', value='2000-01-01')
@@ -111,9 +109,7 @@ block outsideBlock
                 .col
                     form
                         .form-group
-                            label.col-form-label
-                                | 入金日
-                                i.fa.fa-question-circle.fa-lg.ml-1
+                            label.col-form-label 入金日
                             .form-row.align-items-center
                                 .col
                                     input.form-control(type='date', value='2000-01-01')
@@ -248,10 +244,12 @@ block primaryContents
                         td.align-middle
                         td.align-middle
                             .row
-                                .col
-                                    a(href="/order/mail/" data-toggle="tooltip" data-placement="top" title="メール送信"): i.fa.fa-send.fa-lg(aria-hidden="true")
-                                .col(data-toggle="tooltip" data-placement="top" title="帳票"): i.fa.fa-table.fa-lg(aria-hidden="true")
-                                .col(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-close.fa-lg(aria-hidden="true")
+                                .col.text-center
+                                    a(href="/order/mail/" data-toggle="tooltip" data-placement="top" title="メール送信"): i.fa.fa-send.fa-lg.text-secondary(aria-hidden="true")
+                                .col.text-center
+                                    a(data-toggle="tooltip" data-placement="top" title="帳票"): i.fa.fa-table.fa-lg.text-secondary(aria-hidden="true")
+                                .col.text-center
+                                    a(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-close.fa-lg.text-secondary(aria-hidden="true")
 
                     tr
                         td.align-middle
@@ -271,13 +269,15 @@ block primaryContents
                         td.align-middle
                             button.btn.btn-outline-danger.py-2(type='button') 入金待ち
                         td.align-middle
-                            a(href="/order/register/" data-toggle="tooltip" data-placement="top" title="メモ/お問い合わせあり"): i.fa.fa-commenting.fa-lg(aria-hidden="true")
+                            a(href="/order/register/" data-toggle="tooltip" data-placement="top" title="メモ/お問い合わせあり"): i.fa.fa-commenting.fa-lg.text-secondary(aria-hidden="true")
                         td.align-middle
                             .row
-                                .col
-                                    a(href="/order/mail/" data-toggle="tooltip" data-placement="top" title="メール送信"): i.fa.fa-send.fa-lg(aria-hidden="true")
-                                .col(data-toggle="tooltip" data-placement="top" title="帳票"): i.fa.fa-table.fa-lg(aria-hidden="true")
-                                .col(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-close.fa-lg(aria-hidden="true")
+                                .col.text-center
+                                    a(href="/order/mail/" data-toggle="tooltip" data-placement="top" title="メール送信"): i.fa.fa-send.fa-lg.text-secondary(aria-hidden="true")
+                                .col.text-center
+                                    a(data-toggle="tooltip" data-placement="top" title="帳票"): i.fa.fa-table.fa-lg.text-secondary(aria-hidden="true")
+                                .col.text-center
+                                    a(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-close.fa-lg.text-secondary(aria-hidden="true")
                     tr
                         td.align-middle
                             input(type='checkbox', name='filter', value='open')
@@ -297,13 +297,15 @@ block primaryContents
                             button.btn.btn-outline-secondary.py-2(type='button') キャンセル
 
                         td.align-middle
-                            a(href="/order/register/" data-toggle="tooltip" data-placement="top" title="メモ/お問い合わせあり"): i.fa.fa-commenting.fa-lg(aria-hidden="true")
+                            a(href="/order/register/" data-toggle="tooltip" data-placement="top" title="メモ/お問い合わせあり"): i.fa.fa-commenting.fa-lg.text-secondary(aria-hidden="true")
                         td.align-middle
                             .row
-                                .col
-                                    a(href="/order/mail/" data-toggle="tooltip" data-placement="top" title="メール送信"): i.fa.fa-send.fa-lg(aria-hidden="true")
-                                .col(data-toggle="tooltip" data-placement="top" title="帳票"): i.fa.fa-table.fa-lg(aria-hidden="true")
-                                .col(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-close.fa-lg(aria-hidden="true")
+                                .col.text-center
+                                    a(href="/order/mail/" data-toggle="tooltip" data-placement="top" title="メール送信"): i.fa.fa-send.fa-lg.text-secondary(aria-hidden="true")
+                                .col.text-center
+                                    a(data-toggle="tooltip" data-placement="top" title="帳票"): i.fa.fa-table.fa-lg.text-secondary(aria-hidden="true")
+                                .col.text-center
+                                    a(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-close.fa-lg.text-secondary(aria-hidden="true")
 
                     tr
                         td.align-middle
@@ -325,10 +327,12 @@ block primaryContents
                         td.align-middle
                         td.align-middle
                             .row
-                                .col
-                                    a(href="/order/mail/" data-toggle="tooltip" data-placement="top" title="メール送信"): i.fa.fa-send.fa-lg(aria-hidden="true")
-                                .col(data-toggle="tooltip" data-placement="top" title="帳票"): i.fa.fa-table.fa-lg(aria-hidden="true")
-                                .col(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-close.fa-lg(aria-hidden="true")
+                                .col.text-center
+                                    a(href="/order/mail/" data-toggle="tooltip" data-placement="top" title="メール送信"): i.fa.fa-send.fa-lg.text-secondary(aria-hidden="true")
+                                .col.text-center
+                                    a(data-toggle="tooltip" data-placement="top" title="帳票"): i.fa.fa-table.fa-lg.text-secondary(aria-hidden="true")
+                                .col.text-center
+                                    a(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-close.fa-lg.text-secondary(aria-hidden="true")
                     tr
                         td.align-middle
                             input(type='checkbox', name='filter', value='open')
@@ -347,14 +351,16 @@ block primaryContents
                         td.align-middle
                             button.btn.btn-outline-secondary.py-2(type='button') 発送済み
                         td.align-middle
-                            a(href="/order/register/" data-toggle="tooltip" data-placement="top" title="メモ/お問い合わせあり"): i.fa.fa-commenting.fa-lg(aria-hidden="true")
+                            a(href="/order/register/" data-toggle="tooltip" data-placement="top" title="メモ/お問い合わせあり"): i.fa.fa-commenting.fa-lg.text-secondary(aria-hidden="true")
                         td.align-middle
                             .row
-                                .col
-                                    a(href="/order/mail/" data-toggle="tooltip" data-placement="top" title="メール送信"): i.fa.fa-send.fa-lg(aria-hidden="true")
-                                .col(data-toggle="tooltip" data-placement="top" title="帳票"): i.fa.fa-table.fa-lg(aria-hidden="true")
-                                .col(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-close.fa-lg(aria-hidden="true")
-                    tr
+                                .col.text-center
+                                    a(href="/order/mail/" data-toggle="tooltip" data-placement="top" title="メール送信"): i.fa.fa-send.fa-lg.text-secondary(aria-hidden="true")
+                                .col.text-center
+                                    a(data-toggle="tooltip" data-placement="top" title="帳票"): i.fa.fa-table.fa-lg.text-secondary(aria-hidden="true")
+                                .col.text-center
+                                    a(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-close.fa-lg.text-secondary(aria-hidden="true")
+                    tr.text-secondary
                         td.align-middle
                             input(type='checkbox', name='filter', value='open')
                         td.align-middle 2017/09/13
@@ -374,10 +380,12 @@ block primaryContents
                         td.align-middle
                         td.align-middle
                             .row
-                                .col
-                                    a(href="/order/mail/" data-toggle="tooltip" data-placement="top" title="メール送信"): i.fa.fa-send.fa-lg(aria-hidden="true")
-                                .col(data-toggle="tooltip" data-placement="top" title="帳票"): i.fa.fa-table.fa-lg(aria-hidden="true")
-                                .col(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-close.fa-lg(aria-hidden="true")
+                                .col.text-center
+                                    a(href="/order/mail/" data-toggle="tooltip" data-placement="top" title="メール送信"): i.fa.fa-send.fa-lg.text-secondary(aria-hidden="true")
+                                .col.text-center
+                                    a(data-toggle="tooltip" data-placement="top" title="帳票"): i.fa.fa-table.fa-lg.text-secondary(aria-hidden="true")
+                                .col.text-center
+                                    a(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-close.fa-lg.text-secondary(aria-hidden="true")
                     tr
                         td.align-middle
                             input(type='checkbox', name='filter', value='open')
@@ -394,13 +402,15 @@ block primaryContents
                         td.align-middle
                             button.btn.btn-outline-warning.py-2(type='button') 購入処理中
                         td.align-middle
-                            a(href="/order/register/" data-toggle="tooltip" data-placement="top" title="メモ/お問い合わせあり"): i.fa.fa-commenting.fa-lg(aria-hidden="true")
+                            a(href="/order/register/" data-toggle="tooltip" data-placement="top" title="メモ/お問い合わせあり"): i.fa.fa-commenting.fa-lg.text-secondary(aria-hidden="true")
                         td.align-middle
                             .row
-                                .col
-                                    a(href="/order/mail/" data-toggle="tooltip" data-placement="top" title="メール送信"): i.fa.fa-send.fa-lg(aria-hidden="true")
-                                .col(data-toggle="tooltip" data-placement="top" title="帳票"): i.fa.fa-table.fa-lg(aria-hidden="true")
-                                .col(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-close.fa-lg(aria-hidden="true")
+                                .col.text-center
+                                    a(href="/order/mail/" data-toggle="tooltip" data-placement="top" title="メール送信"): i.fa.fa-send.fa-lg.text-secondary(aria-hidden="true")
+                                .col.text-center
+                                    a(data-toggle="tooltip" data-placement="top" title="帳票"): i.fa.fa-table.fa-lg.text-secondary(aria-hidden="true")
+                                .col.text-center
+                                    a(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-close.fa-lg.text-secondary(aria-hidden="true")
                     tr
                         td.align-middle
                             input(type='checkbox', name='filter', value='open')
@@ -421,10 +431,12 @@ block primaryContents
                         td.align-middle
                         td.align-middle
                             .row
-                                .col
-                                    a(href="/order/mail/" data-toggle="tooltip" data-placement="top" title="メール送信"): i.fa.fa-send.fa-lg(aria-hidden="true")
-                                .col(data-toggle="tooltip" data-placement="top" title="帳票"): i.fa.fa-table.fa-lg(aria-hidden="true")
-                                .col(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-close.fa-lg(aria-hidden="true")
+                                .col.text-center
+                                    a(href="/order/mail/" data-toggle="tooltip" data-placement="top" title="メール送信"): i.fa.fa-send.fa-lg.text-secondary(aria-hidden="true")
+                                .col.text-center
+                                    a(data-toggle="tooltip" data-placement="top" title="帳票"): i.fa.fa-table.fa-lg.text-secondary(aria-hidden="true")
+                                .col.text-center
+                                    a(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-close.fa-lg.text-secondary(aria-hidden="true")
                     tr
                         td.align-middle
                             input(type='checkbox', name='filter', value='open')
@@ -445,10 +457,12 @@ block primaryContents
                         td.align-middle
                         td.align-middle
                             .row
-                                .col
-                                    a(href="/order/mail/" data-toggle="tooltip" data-placement="top" title="メール送信"): i.fa.fa-send.fa-lg(aria-hidden="true")
-                                .col(data-toggle="tooltip" data-placement="top" title="帳票"): i.fa.fa-table.fa-lg(aria-hidden="true")
-                                .col(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-close.fa-lg(aria-hidden="true")
+                                .col.text-center
+                                    a(href="/order/mail/" data-toggle="tooltip" data-placement="top" title="メール送信"): i.fa.fa-send.fa-lg.text-secondary(aria-hidden="true")
+                                .col.text-center
+                                    a(data-toggle="tooltip" data-placement="top" title="帳票"): i.fa.fa-table.fa-lg.text-secondary(aria-hidden="true")
+                                .col.text-center
+                                    a(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-close.fa-lg.text-secondary(aria-hidden="true")
                     tr
                         td.align-middle
                             input(type='checkbox', name='filter', value='open')
@@ -467,13 +481,15 @@ block primaryContents
                         td.align-middle
                             button.btn.btn-outline-secondary.py-2(type='button') 発送済み
                         td.align-middle
-                            a(href="/order/register/" data-toggle="tooltip" data-placement="top" title="メモ/お問い合わせあり"): i.fa.fa-commenting.fa-lg(aria-hidden="true")
+                            a(href="/order/register/" data-toggle="tooltip" data-placement="top" title="メモ/お問い合わせあり"): i.fa.fa-commenting.fa-lg.text-secondary(aria-hidden="true")
                         td.align-middle
                             .row
-                                .col
-                                    a(href="/order/mail/" data-toggle="tooltip" data-placement="top" title="メール送信"): i.fa.fa-send.fa-lg(aria-hidden="true")
-                                .col(data-toggle="tooltip" data-placement="top" title="帳票"): i.fa.fa-table.fa-lg(aria-hidden="true")
-                                .col(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-close.fa-lg(aria-hidden="true")
+                                .col.text-center
+                                    a(href="/order/mail/" data-toggle="tooltip" data-placement="top" title="メール送信"): i.fa.fa-send.fa-lg.text-secondary(aria-hidden="true")
+                                .col.text-center
+                                    a(data-toggle="tooltip" data-placement="top" title="帳票"): i.fa.fa-table.fa-lg.text-secondary(aria-hidden="true")
+                                .col.text-center
+                                    a(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-close.fa-lg.text-secondary(aria-hidden="true")
             .row.justify-content-md-center.mb-4
                 .col-auto
                     .btn-group.btn-group-lg
