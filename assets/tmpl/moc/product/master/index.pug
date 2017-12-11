@@ -10,10 +10,9 @@ block outsideBlock
         +e.contents
             .row.justify-content-start
                 .col-6
-                    form
-                        .form-group
-                            label.col-form-label 商品名・商品ID・商品コード
-                            input.form-control(type='text')
+                    form.mb-2
+                        label.col-form-label 商品名・商品ID・商品コード
+                        input.form-control(type='text')
                     .d-inline-block.mb-3(data-toggle="collapse" href="#commentList" aria-expanded="false" aria-controls="commentList")
                         i.fa.fa-plus-square-o.font-weight-bold.mr-1
                         span.font-weight-bold 一覧コメントを追加
@@ -21,14 +20,14 @@ block outsideBlock
         +b.c-subContents.collapse(id="commentList").show
             .row
                 .col-6
-                    form.form-row
-                        .form-group.col-6
+                    form.form-row.mb-2
+                        .col-6
                             label.col-form-label カテゴリ
                             select.form-control
                                 option 選んでください
                                 option ...
-                    form.form-row
-                        .form-group.col-12
+                    form.form-row.mb-2
+                        .col-12
                             p.col-form-label フィルタ
                             label.form-check-label.mr-3
                                 input.form-check-input(type='checkbox', value='')
@@ -40,30 +39,28 @@ block outsideBlock
                                 input.form-check-input(type='checkbox', value='')
                                 | 在庫切れ
                 .col-6
-                    form
-                        .form-group
-                            label.col-form-label(data-toggle="tooltip" data-placement="top" title="Tooltip")
-                                | 登録日
-                                i.fa.fa-question-circle.fa-lg.ml-1
-                            .form-row.align-items-center
-                                .col
-                                    input.form-control(type='date', value='2000-01-01')
-                                .col-auto.text-center
-                                    span 〜
-                                .col
-                                    input.form-control(type='date', value='2000-01-01')
+                    form.mb-2
+                        label.col-form-label(data-toggle="tooltip" data-placement="top" title="Tooltip")
+                            | 登録日
+                            i.fa.fa-question-circle.fa-lg.ml-1
+                        .form-row.align-items-center
+                            .col
+                                input.form-control(type='date', value='2000-01-01')
+                            .col-auto.text-center
+                                span 〜
+                            .col
+                                input.form-control(type='date', value='2000-01-01')
 
-                    form
-                        .form-group
-                            label.col-form-label
-                                | 更新日
-                            .form-row.align-items-center
-                                .col
-                                    input.form-control(type='date', value='2000-01-01')
-                                .col-auto
-                                    span 〜
-                                .col
-                                    input.form-control(type='date', value='2000-01-01')
+                    form.mb-2
+                        label.col-form-label
+                            | 更新日
+                        .form-row.align-items-center
+                            .col
+                                input.form-control(type='date', value='2000-01-01')
+                            .col-auto
+                                span 〜
+                            .col
+                                input.form-control(type='date', value='2000-01-01')
         +e.contents.mb-5
             button.btn.btn-primary.px-5(type="button") 検索
 
@@ -96,7 +93,7 @@ block primaryContents
 
     .card.rounded.border-0.mb-4
         .card-body.p-0
-            table.table
+            table.table.table-sm
                 thead
                     tr
                         th.border-top-0
