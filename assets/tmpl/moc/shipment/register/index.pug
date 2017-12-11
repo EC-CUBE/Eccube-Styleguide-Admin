@@ -216,4 +216,15 @@ block conversionArea
                 .col-6
                     .row.align-items-center.justify-content-end
                         .col-auto
-                            button(type="submit").btn.btn-primary.px-4 出荷情報を登録
+                            button.btn.btn-primary.px-4(data-toggle="modal" data-target="#registerShipment") 出荷情報を登録
+    #registerShipment.modal.fade(tabindex='-1', role='dialog', aria-labelledby='registerShipment', aria-hidden='true')
+        .modal-dialog(role='document')
+            .modal-content
+                .modal-header
+                    h5.modal-title 配送に関わる情報が変更されました
+                    button.close(type='button', data-dismiss='modal', aria-label='Close')
+                        span(aria-hidden='true') ×
+                .modal-body
+                    p 送料の変更が必要な場合は、受注管理より手動で変更してください。
+                .modal-footer
+                    button.btn.btn-primary.px-5(type='button', data-dismiss='modal') OK

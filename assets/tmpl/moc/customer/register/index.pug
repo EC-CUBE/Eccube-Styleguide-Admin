@@ -172,7 +172,7 @@ block primaryContents
                         th.align-middle 購入金額
                         th.align-middle 対応状況
                     tbody
-                        - for (var x = 0; x < 4; x++)
+                        - for (var x = 0; x < 5; x++)
                             tr
                                 td.align-middle 2017/09/13
                                 td.align-middle
@@ -181,21 +181,6 @@ block primaryContents
                                     span.h5.font-weight-normal ¥4,000
                                 td.align-middle
                                     button.btn.btn-outline-secondary.py-2(type='button') 発送済み
-                .d-block.text-center.text-center
-                    button(type="button" data-toggle="modal" data-target="#confirmModal").btn.btn-outline-dark この商品の規格管理
-                    #confirmModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='confirmModal', aria-hidden='true')
-                        .modal-dialog(role='document')
-                            .modal-content
-                                .modal-header
-                                    h5.modal-title ページを移動します。
-                                    button.close(type='button', data-dismiss='modal', aria-label='Close')
-                                        span(aria-hidden='true') ×
-                                .modal-body
-                                    p 規格の管理画面に移動します。商品情報を保存してから移動しますか？
-                                .modal-footer
-                                    a(href="/product/register/standard").btn.btn-primary 変更を保存
-                                    button.btn.btn-secondary(type='button', data-dismiss='modal') キャンセル
-
     .card.rounded.border-0.mb-4
         .card-header
             .row
