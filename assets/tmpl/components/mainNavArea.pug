@@ -38,11 +38,11 @@ mixin c-mainNavArea
                         li: a(href="/shipment/csv/shipment") 出荷CSV登録
 
                 +e.LI.navItem
-                    +e.A.navItemTitle.collapsed(data-toggle="collapse" href="#userManagement" aria-expanded="false" aria-controls="userManagement")
+                    +e.A.navItemTitle.collapsed(data-toggle="collapse" href="#customerManagement" aria-expanded="false" aria-controls="customerManagemen")
                         i.fa.fa-users(aria-hidden="true")
                         span 会員管理
 
-                    ul.collapse#userManagement
+                    ul.collapse#customerManagemen
                         li: a(href="/customer/master") 会員マスター
                         li: a(href="/customer/register") 会員登録
 
