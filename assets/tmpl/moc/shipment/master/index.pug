@@ -144,36 +144,37 @@ block primaryContents
                 .modal-dialog(role='document')
                     .modal-content
                         .modal-header
-                            h5.modal-title 一括で発送済みにします
+                            h5.modal-title.font-weight-bold 一括で発送済みにします
                             button.close(type='button', data-dismiss='modal', aria-label='Close')
                                 span(aria-hidden='true') ×
                         .modal-body
-                            p 選択した配送をすべて発送済みにします。同時におこなう操作を選択してから［変更を確定］ボタンを押してください。この操作は取り消すことができません。ご注意ください。
+                            p.mb-4 選択した配送をすべて発送済みにします。同時におこなう操作を選択してから［変更を確定］ボタンを押してください。この操作は取り消すことができません。ご注意ください。
+                            form.mb-4
+                                .font-weight-bold.mb-2 関係する受注ステータスの変更
+                                .form-check.form-check-inline
+                                    label.form-check-label
+                                        input.form-check-input(type="radio", name="orderStatus" checked="")
+                                        |  この発送に関係する受注ステータスをすべて「発送済み」にします
+                                .form-check.form-check-inline
+                                    label.form-check-label
+                                        input.form-check-input(type="radio", name="orderStatus")
+                                        |  この発送に関係する受注ステータスはあとで手動で変更します
                             form
-                                .font-weight-bold 関係する受注ステータスの変更
-                                    label.custom-control.custom-radio
-                                        input#radio1.custom-control-input(name='radio', type='radio', checked="checked")
-                                        span.custom-control-indicator
-                                        span.custom-control-description この発送に関係する受注ステータスをすべて「発送済み」にします
-                                    label.custom-control.custom-radio
-                                        input#radio2.custom-control-input(name='radio', type='radio')
-                                        span.custom-control-indicator
-                                        span.custom-control-description この発送に関係する受注ステータスはあとで手動で変更します
-                                .font-weight-bold メールの送信
-                                    label.custom-control.custom-checkbox
-                                        input.custom-control-input(type='checkbox')
-                                        span.custom-control-indicator
-                                        span.custom-control-description 発送お知らせメールを同時に送る
+                                .font-weight-bold.mb-2 メールの送信
+                                .form-check.form-check-inline
+                                    label.form-check-label
+                                        input.form-check-input(type="checkbox", name="notificationMail" checked="")
+                                        |  発送お知らせメールを同時に送る
                             .d-inline-block(data-toggle="collapse" href="#viewEmail" aria-expanded="false" aria-controls="viewEmail")
                                 i.fa.fa-minus-square-o.font-weight-bold.mr-1
-                                span.font-weight-bold 詳細検索
-                        +b.c-subContents.collapse(id="viewEmail").show
-                            p [注文者名]様
-                            p お客さまがご注文された以下の商品を発送いたしました。商品の到着まで、今しばらくお待ちくださいませ。
-                            p [発送商品リストと明細]
+                                span.font-weight-bold メール文面を確認
+                            .collapse(id="viewEmail").bg-light.p-4
+                                p [注文者名]様
+                                p お客さまがご注文された以下の商品を発送いたしました。商品の到着まで、今しばらくお待ちくださいませ。
+                                p [発送商品リストと明細]
                         .modal-footer
                             button.btn.btn-secondary(type='button', data-dismiss='modal') キャンセル
-                            button.btn.btn-primary(type='button', data-dismiss='modal') 変更を保存
+                            button.btn.btn-primary(type='button', data-dismiss='modal') 変更を確定
 
             button.btn.btn-danger 削除
         .col-5.text-right
@@ -240,11 +241,11 @@ block primaryContents
                             | 2017/10/31
                         td.align-middle
                         td.align-middle
-                            .row
+                            .row.text-center
                                 .col
                                     a.text-right(href="/shipment/mail/" data-toggle="tooltip" data-placement="top" title="メール送信")
-                                        i.fa.fa-send.fa-lg(aria-hidden="true")
-                                .col(data-toggle="tooltip" data-placement="top" title="発送済みにする"): i.fa.fa-check.fa-lg(aria-hidden="true")
+                                        i.fa.fa-send.fa-lg.text-secondary(aria-hidden="true")
+                                .col(data-toggle="tooltip" data-placement="top" title="発送済みにする"): i.fa.fa-check.fa-lg.text-secondary(aria-hidden="true")
                     tr
                         td.align-middle
                             .row
@@ -275,11 +276,11 @@ block primaryContents
                         td.align-middle -
                         td.align-middle
                         td.align-middle
-                            .row
+                            .row.text-center
                                 .col
                                     a.text-right(href="/shipment/mail/" data-toggle="tooltip" data-placement="top" title="メール送信")
-                                        i.fa.fa-send.fa-lg(aria-hidden="true")
-                                .col(data-toggle="tooltip" data-placement="top" title="発送済みにする"): i.fa.fa-check.fa-lg(aria-hidden="true")
+                                        i.fa.fa-send.fa-lg.text-secondary(aria-hidden="true")
+                                .col(data-toggle="tooltip" data-placement="top" title="発送済みにする"): i.fa.fa-check.fa-lg.text-secondary(aria-hidden="true")
                     tr
                         td.align-middle
                             .row
@@ -312,11 +313,11 @@ block primaryContents
                             | 2017/10/31
                         td.align-middle
                         td.align-middle
-                            .row
+                            .row.text-center
                                 .col
                                     a.text-right(href="/shipment/mail/" data-toggle="tooltip" data-placement="top" title="メール送信")
-                                        i.fa.fa-send.fa-lg(aria-hidden="true")
-                                .col(data-toggle="tooltip" data-placement="top" title="発送済みにする"): i.fa.fa-check.fa-lg(aria-hidden="true")
+                                        i.fa.fa-send.fa-lg.text-secondary(aria-hidden="true")
+                                .col(data-toggle="tooltip" data-placement="top" title="発送済みにする"): i.fa.fa-check.fa-lg.text-secondary(aria-hidden="true")
                     tr
                         td.align-middle
                             .row
@@ -347,11 +348,11 @@ block primaryContents
                         td.align-middle -
                         td.align-middle
                         td.align-middle
-                            .row
+                            .row.text-center
                                 .col
                                     a.text-right(href="/shipment/mail/" data-toggle="tooltip" data-placement="top" title="メール送信")
-                                        i.fa.fa-send.fa-lg(aria-hidden="true")
-                                .col(data-toggle="tooltip" data-placement="top" title="発送済みにする"): i.fa.fa-check.fa-lg(aria-hidden="true")
+                                        i.fa.fa-send.fa-lg.text-secondary(aria-hidden="true")
+                                .col(data-toggle="tooltip" data-placement="top" title="発送済みにする"): i.fa.fa-check.fa-lg.text-secondary(aria-hidden="true")
                     tr
                         td.align-middle
                             .row
@@ -384,11 +385,11 @@ block primaryContents
                             | 2017/10/31
                         td.align-middle
                         td.align-middle
-                            .row
+                            .row.text-center
                                 .col
                                     a.text-right(href="/shipment/mail/" data-toggle="tooltip" data-placement="top" title="メール送信")
-                                        i.fa.fa-send.fa-lg(aria-hidden="true")
-                                .col(data-toggle="tooltip" data-placement="top" title="発送済みにする"): i.fa.fa-check.fa-lg(aria-hidden="true")
+                                        i.fa.fa-send.fa-lg.text-secondary(aria-hidden="true")
+                                .col(data-toggle="tooltip" data-placement="top" title="発送済みにする"): i.fa.fa-check.fa-lg.text-secondary(aria-hidden="true")
                     tr
                         td.align-middle
                             .row
@@ -419,11 +420,11 @@ block primaryContents
                         td.align-middle -
                         td.align-middle
                         td.align-middle
-                            .row
+                            .row.text-center
                                 .col
                                     a.text-right(href="/shipment/mail/" data-toggle="tooltip" data-placement="top" title="メール送信")
-                                        i.fa.fa-send.fa-lg(aria-hidden="true")
-                                .col(data-toggle="tooltip" data-placement="top" title="発送済みにする"): i.fa.fa-check.fa-lg(aria-hidden="true")
+                                        i.fa.fa-send.fa-lg.text-secondary(aria-hidden="true")
+                                .col(data-toggle="tooltip" data-placement="top" title="発送済みにする"): i.fa.fa-check.fa-lg.text-secondary(aria-hidden="true")
                     tr
                         td.align-middle
                             .row
@@ -454,11 +455,11 @@ block primaryContents
                         td.align-middle -
                         td.align-middle
                         td.align-middle
-                            .row
+                            .row.text-center
                                 .col
                                     a.text-right(href="/shipment/mail/" data-toggle="tooltip" data-placement="top" title="メール送信")
-                                        i.fa.fa-send.fa-lg(aria-hidden="true")
-                                .col(data-toggle="tooltip" data-placement="top" title="発送済みにする"): i.fa.fa-check.fa-lg(aria-hidden="true")
+                                        i.fa.fa-send.fa-lg.text-secondary(aria-hidden="true")
+                                .col(data-toggle="tooltip" data-placement="top" title="発送済みにする"): i.fa.fa-check.fa-lg.text-secondary(aria-hidden="true")
                     tr
                         td.align-middle
                             .row
@@ -491,11 +492,11 @@ block primaryContents
                             | 2017/10/31
                         td.align-middle
                         td.align-middle
-                            .row
+                            .row.text-center
                                 .col
                                     a.text-right(href="/shipment/mail/" data-toggle="tooltip" data-placement="top" title="メール送信")
-                                        i.fa.fa-send.fa-lg(aria-hidden="true")
-                                .col(data-toggle="tooltip" data-placement="top" title="発送済みにする"): i.fa.fa-check.fa-lg(aria-hidden="true")
+                                        i.fa.fa-send.fa-lg.text-secondary(aria-hidden="true")
+                                .col(data-toggle="tooltip" data-placement="top" title="発送済みにする"): i.fa.fa-check.fa-lg.text-secondary(aria-hidden="true")
                     tr
                         td.align-middle
                             .row
@@ -526,11 +527,11 @@ block primaryContents
                         td.align-middle -
                         td.align-middle
                         td.align-middle
-                            .row
+                            .row.text-center
                                 .col
                                     a.text-right(href="/shipment/mail/" data-toggle="tooltip" data-placement="top" title="メール送信")
-                                        i.fa.fa-send.fa-lg(aria-hidden="true")
-                                .col(data-toggle="tooltip" data-placement="top" title="発送済みにする"): i.fa.fa-check.fa-lg(aria-hidden="true")
+                                        i.fa.fa-send.fa-lg.text-secondary(aria-hidden="true")
+                                .col(data-toggle="tooltip" data-placement="top" title="発送済みにする"): i.fa.fa-check.fa-lg.text-secondary(aria-hidden="true")
                     tr
                         td.align-middle
                             .row
@@ -561,11 +562,11 @@ block primaryContents
                         td.align-middle -
                         td.align-middle
                         td.align-middle
-                            .row
+                            .row.text-center
                                 .col
                                     a.text-right(href="/shipment/mail/" data-toggle="tooltip" data-placement="top" title="メール送信")
-                                        i.fa.fa-send.fa-lg(aria-hidden="true")
-                                .col(data-toggle="tooltip" data-placement="top" title="発送済みにする"): i.fa.fa-check.fa-lg(aria-hidden="true")
+                                        i.fa.fa-send.fa-lg.text-secondary(aria-hidden="true")
+                                .col(data-toggle="tooltip" data-placement="top" title="発送済みにする"): i.fa.fa-check.fa-lg.text-secondary(aria-hidden="true")
             .row.justify-content-md-center.mb-4
                 .col-auto
                     .btn-group.btn-group-lg
