@@ -9,9 +9,8 @@ block outsideBlock
             .row
                 .col-12
                     form
-                        .form-group
-                            label.col-form-label 配送番号・お届け先・お届け先会社名
-                            input.form-control(type='text')
+                        label.col-form-label 配送番号・お届け先・お届け先会社名
+                        input.form-control(type='text')
                     form.form-row
                         .form-group.col-12
                             p.col-form-label 対応状況
@@ -40,98 +39,87 @@ block outsideBlock
                                 input.form-check-input(type='checkbox', value='')
                                 | 購入処理中
                     .d-inline-block.mb-3(data-toggle="collapse" href="#searchDetail" aria-expanded="false" aria-controls="searchDetail")
-                        i.fa.fa-minus-square-o.font-weight-bold.mr-1
+                        i.fa.fa-minus-square-o.mr-1
                         span.font-weight-bold 詳細検索
         +b.c-subContents.collapse(id="searchDetail").show
             .row
                 .col
                     form
-                        .form-group.mb-1
-                            label.col-form-label お届け先
-                            input(type="text").form-control
+                        label.col-form-label お届け先
+                        input(type="text").form-control
                 .col
                     form
-                        .form-group.mb-1
-                            label.col-form-label お届け先（フリガナ）
-                            input(type="text").form-control
+                        label.col-form-label お届け先（フリガナ）
+                        input(type="text").form-control
             .row
                 .col
                     form
-                        .form-group.mb-1
-                            label.col-form-label ご注文者
-                            input(type="text").form-control
+                        label.col-form-label ご注文者
+                        input(type="text").form-control
                 .col
                     form
-                        .form-group.mb-1
-                            label.col-form-label ご注文者（フリガナ）
-                            input(type="text").form-control
+                        label.col-form-label ご注文者（フリガナ）
+                        input(type="text").form-control
             .row
                 .col
                     form
-                        .form-group.mb-1
-                            label.col-form-label 注文番号
-                            input(type="text").form-control
+                        label.col-form-label 注文番号
+                        input(type="text").form-control
                 .col
                     form
-                        .form-group.mb-1
-                            label.col-form-label お届け先電話番号
-                            input(type="text").form-control
+                        label.col-form-label お届け先電話番号
+                        input(type="text").form-control
             .row
                 .col
                     form
-                        .form-group.mb-1
-                            label.col-form-label お届け予定日
-                            .form-row.align-items-center
-                                .col
-                                    input.form-control(type='date', value='2000-01-01')
-                                .col-auto.text-center
-                                    span 〜
-                                .col
-                                    input.form-control(type='date', value='2000-01-01')
+                        label.col-form-label お届け予定日
+                        .form-row.align-items-center
+                            .col
+                                input.form-control(type='date', value='2000-01-01')
+                            .col-auto.text-center
+                                span 〜
+                            .col
+                                input.form-control(type='date', value='2000-01-01')
                 .col
                     form
-                        .form-group.mb-1
-                            label.col-form-label 発送日
-                            .form-row.align-items-center
-                                .col
-                                    input.form-control(type='date', value='2000-01-01')
-                                .col-auto.text-center
-                                    span 〜
-                                .col
-                                    input.form-control(type='date', value='2000-01-01')
+                        label.col-form-label 発送日
+                        .form-row.align-items-center
+                            .col
+                                input.form-control(type='date', value='2000-01-01')
+                            .col-auto.text-center
+                                span 〜
+                            .col
+                                input.form-control(type='date', value='2000-01-01')
             .row
                 .col
                     form
-                        .form-group.mb-1
-                            label.col-form-label 更新日
-                            .form-row.align-items-center
-                                .col
-                                    input.form-control(type='date', value='2000-01-01')
-                                .col-auto.text-center
-                                    span 〜
-                                .col
-                                    input.form-control(type='date', value='2000-01-01')
+                        label.col-form-label 更新日
+                        .form-row.align-items-center
+                            .col
+                                input.form-control(type='date', value='2000-01-01')
+                            .col-auto.text-center
+                                span 〜
+                            .col
+                                input.form-control(type='date', value='2000-01-01')
                 .col
-            .row
-                .col
-                    form
-                        .form-group.mb-4
-                            label.col-form-label 購入金額
-                            .form-row.align-items-center
-                                .col
-                                    input.form-control(type='text')
-                                .col-auto
-                                    span 〜
-                                .col
-                                    input.form-control(type='text')
+            .row.mb-3
                 .col
                     form
-                        .form-group.mb-4
-                            label.col-form-label 購入商品
-                            input(type="text").form-control
+                        label.col-form-label 購入金額
+                        .form-row.align-items-center
+                            .col
+                                input.form-control(type='text')
+                            .col-auto
+                                span 〜
+                            .col
+                                input.form-control(type='text')
+                .col
+                    form
+                        label.col-form-label 購入商品
+                        input(type="text").form-control
             .d-block.text-center
-                button(type="button").btn.btn-light.border.border-dark 検索条件クリア
-        +e.contents.mb-5
+                button(type="button").btn.btn-outline-dark 検索条件クリア
+        +e.contents.mb-3
             button.btn.btn-primary.px-5(type="button") 検索
 
 block primaryContents
@@ -193,7 +181,7 @@ block primaryContents
                         span CSV出力設定
     .card.rounded.border-0.mb-4
         .card-body.p-0
-            table.table
+            table.table.table-sm
                 thead
                     tr
                         th.border-top-0
@@ -209,371 +197,83 @@ block primaryContents
                         th.border-top-0 &nbsp;
                         th.border-top-0 &nbsp;
                 tbody
-                    tr
-                        td.align-middle
-                            .row
-                                .col-12.text-center
-                                    input(type='checkbox', name='filter', value='open')
-                        td.align-middle
-                            a(href='/shipment/register/') 123456
-                        td.align-middle 123-45678
-                        td.align-middle
-                            a(href='#') 345
-                                button.btn.btn-outline-primary.py-2.mb-2(type='button') 新規受付
-                            br
-                            |
-                            a(href='#') 346
-                                button.btn.btn-outline-success.py-2(type='button') 入金済み
-                        td.align-middle
-                            label.m-0
-                                | 532-0023
+                    - for (var x = 0; x < 5; x++)
+                        tr
+                            td.align-middle
+                                .row
+                                    .col-12.text-center
+                                        input(type='checkbox', name='filter', value='open')
+                            td.align-middle
+                                a(href='/shipment/register/') 123456
+                            td.align-middle 123-45678
+                            td.align-middle
+                                .d-block
+                                    a(href='#') 345
+                                    button.btn.btn-outline-primary.py-2.mb-2(type='button') 新規受付
+                                .d-block
+                                    a(href='#') 346
+                                    button.btn.btn-outline-success.py-2(type='button') 入金済み
+                            td.align-middle
+                                label.m-0
+                                    | 532-0023
+                                    br
+                                    | 大阪市淀川区十三東1-17-13
+                                    br
+                                    | 田中 秀雄
+                                    br
+                                    | 06-6666-6666
+                            td.align-middle 日本郵便
+                            td.align-middle
+                                i.fa.fa-check.fa-lg.text-success(aria-hidden="true")
+                                | 2017/10/31
+                            td.align-middle
+                            td.align-middle
+                                .row.text-center
+                                    .col
+                                        a.text-right(href="/shipment/mail/" data-toggle="tooltip" data-placement="top" title="メール送信")
+                                            i.fa.fa-send.fa-lg.text-secondary(aria-hidden="true")
+                                    .col(data-toggle="tooltip" data-placement="top" title="発送済みにする"): i.fa.fa-check.fa-lg.text-secondary(aria-hidden="true")
+                        tr
+                            td.align-middle
+                                .row
+                                    .col-12.text-center
+                                        input(type='checkbox', name='filter', value='open')
+                            td.align-middle
+                                a(href='/shipment/register/') 123456
+                            td.align-middle 123-45678
+                            td.align-middle
+                                a(href='#') 345
+                                    button.btn.btn-outline-primary.py-2.mb-2(type='button') 新規受付
                                 br
-                                | 大阪市淀川区十三東1-17-13
-                                br
-                                | 1-17-13
-                                br
-                                | 田中 秀雄
-                                br
-                                | 06-6666-6666
-                        td.align-middle 日本郵便
-                        td.align-middle
-                            i.fa.fa-check.fa-lg.text-success(aria-hidden="true")
-                            | 2017/10/31
-                        td.align-middle
-                        td.align-middle
-                            .row.text-center
-                                .col
-                                    a.text-right(href="/shipment/mail/" data-toggle="tooltip" data-placement="top" title="メール送信")
-                                        i.fa.fa-send.fa-lg.text-secondary(aria-hidden="true")
-                                .col(data-toggle="tooltip" data-placement="top" title="発送済みにする"): i.fa.fa-check.fa-lg.text-secondary(aria-hidden="true")
-                    tr
-                        td.align-middle
-                            .row
-                                .col-12.text-center
-                                    input(type='checkbox', name='filter', value='open')
-                        td.align-middle
-                            a(href='/shipment/register/') 123456
-                        td.align-middle 123-45678
-                        td.align-middle
-                            a(href='#') 345
-                                button.btn.btn-outline-primary.py-2.mb-2(type='button') 新規受付
-                            br
-                            |
-                            a(href='#') 346
-                                button.btn.btn-outline-success.py-2(type='button') 入金済み
-                        td.align-middle
-                            label.m-0
-                                | 532-0023
-                                br
-                                | 大阪市淀川区十三東1-17-13
-                                br
-                                | 1-17-13
-                                br
-                                | 田中 秀雄
-                                br
-                                | 06-6666-6666
-                        td.align-middle 日本郵便
-                        td.align-middle -
-                        td.align-middle
-                        td.align-middle
-                            .row.text-center
-                                .col
-                                    a.text-right(href="/shipment/mail/" data-toggle="tooltip" data-placement="top" title="メール送信")
-                                        i.fa.fa-send.fa-lg.text-secondary(aria-hidden="true")
-                                .col(data-toggle="tooltip" data-placement="top" title="発送済みにする"): i.fa.fa-check.fa-lg.text-secondary(aria-hidden="true")
-                    tr
-                        td.align-middle
-                            .row
-                                .col-12.text-center
-                                    input(type='checkbox', name='filter', value='open')
-                        td.align-middle
-                            a(href='/shipment/register/') 123456
-                        td.align-middle 123-45678
-                        td.align-middle
-                            a(href='#') 345
-                                button.btn.btn-outline-primary.py-2.mb-2(type='button') 新規受付
-                            br
-                            |
-                            a(href='#') 346
-                                button.btn.btn-outline-success.py-2(type='button') 入金済み
-                        td.align-middle
-                            label.m-0
-                                | 532-0023
-                                br
-                                | 大阪市淀川区十三東1-17-13
-                                br
-                                | 1-17-13
-                                br
-                                | 田中 秀雄
-                                br
-                                | 06-6666-6666
-                        td.align-middle ヤマト
-                        td.align-middle
-                            i.fa.fa-check.fa-lg.text-success(aria-hidden="true")
-                            | 2017/10/31
-                        td.align-middle
-                        td.align-middle
-                            .row.text-center
-                                .col
-                                    a.text-right(href="/shipment/mail/" data-toggle="tooltip" data-placement="top" title="メール送信")
-                                        i.fa.fa-send.fa-lg.text-secondary(aria-hidden="true")
-                                .col(data-toggle="tooltip" data-placement="top" title="発送済みにする"): i.fa.fa-check.fa-lg.text-secondary(aria-hidden="true")
-                    tr
-                        td.align-middle
-                            .row
-                                .col-12.text-center
-                                    input(type='checkbox', name='filter', value='open')
-                        td.align-middle
-                            a(href='/shipment/register/') 123456
-                        td.align-middle 123-45678
-                        td.align-middle
-                            a(href='#') 345
-                                button.btn.btn-outline-primary.py-2.mb-2(type='button') 新規受付
-                            br
-                            |
-                            a(href='#') 346
-                                button.btn.btn-outline-success.py-2(type='button') 入金済み
-                        td.align-middle
-                            label.m-0
-                                | 532-0023
-                                br
-                                | 大阪市淀川区十三東1-17-13
-                                br
-                                | 1-17-13
-                                br
-                                | 田中 秀雄
-                                br
-                                | 06-6666-6666
-                        td.align-middle 日本郵便
-                        td.align-middle -
-                        td.align-middle
-                        td.align-middle
-                            .row.text-center
-                                .col
-                                    a.text-right(href="/shipment/mail/" data-toggle="tooltip" data-placement="top" title="メール送信")
-                                        i.fa.fa-send.fa-lg.text-secondary(aria-hidden="true")
-                                .col(data-toggle="tooltip" data-placement="top" title="発送済みにする"): i.fa.fa-check.fa-lg.text-secondary(aria-hidden="true")
-                    tr
-                        td.align-middle
-                            .row
-                                .col-12.text-center
-                                    input(type='checkbox', name='filter', value='open')
-                        td.align-middle
-                            a(href='/shipment/register/') 123456
-                        td.align-middle 123-45678
-                        td.align-middle
-                            a(href='#') 345
-                                button.btn.btn-outline-primary.py-2.mb-2(type='button') 新規受付
-                            br
-                            |
-                            a(href='#') 346
-                                button.btn.btn-outline-success.py-2(type='button') 入金済み
-                        td.align-middle
-                            label.m-0
-                                | 532-0023
-                                br
-                                | 大阪市淀川区十三東1-17-13
-                                br
-                                | 1-17-13
-                                br
-                                | 田中 秀雄
-                                br
-                                | 06-6666-6666
-                        td.align-middle 日本郵便
-                        td.align-middle
-                            i.fa.fa-check.fa-lg.text-success(aria-hidden="true")
-                            | 2017/10/31
-                        td.align-middle
-                        td.align-middle
-                            .row.text-center
-                                .col
-                                    a.text-right(href="/shipment/mail/" data-toggle="tooltip" data-placement="top" title="メール送信")
-                                        i.fa.fa-send.fa-lg.text-secondary(aria-hidden="true")
-                                .col(data-toggle="tooltip" data-placement="top" title="発送済みにする"): i.fa.fa-check.fa-lg.text-secondary(aria-hidden="true")
-                    tr
-                        td.align-middle
-                            .row
-                                .col-12.text-center
-                                    input(type='checkbox', name='filter', value='open')
-                        td.align-middle
-                            a(href='/shipment/register/') 123456
-                        td.align-middle 123-45678
-                        td.align-middle
-                            a(href='#') 345
-                                button.btn.btn-outline-primary.py-2.mb-2(type='button') 新規受付
-                            br
-                            |
-                            a(href='#') 346
-                                button.btn.btn-outline-success.py-2(type='button') 入金済み
-                        td.align-middle
-                            label.m-0
-                                | 532-0023
-                                br
-                                | 大阪市淀川区十三東1-17-13
-                                br
-                                | 1-17-13
-                                br
-                                | 田中 秀雄
-                                br
-                                | 06-6666-6666
-                        td.align-middle 日本郵便
-                        td.align-middle -
-                        td.align-middle
-                        td.align-middle
-                            .row.text-center
-                                .col
-                                    a.text-right(href="/shipment/mail/" data-toggle="tooltip" data-placement="top" title="メール送信")
-                                        i.fa.fa-send.fa-lg.text-secondary(aria-hidden="true")
-                                .col(data-toggle="tooltip" data-placement="top" title="発送済みにする"): i.fa.fa-check.fa-lg.text-secondary(aria-hidden="true")
-                    tr
-                        td.align-middle
-                            .row
-                                .col-12.text-center
-                                    input(type='checkbox', name='filter', value='open')
-                        td.align-middle
-                            a(href='/shipment/register/') 123456
-                        td.align-middle 123-45678
-                        td.align-middle
-                            a(href='#') 345
-                                button.btn.btn-outline-primary.py-2.mb-2(type='button') 新規受付
-                            br
-                            |
-                            a(href='#') 346
-                                button.btn.btn-outline-success.py-2(type='button') 入金済み
-                        td.align-middle
-                            label.m-0
-                                | 532-0023
-                                br
-                                | 大阪市淀川区十三東1-17-13
-                                br
-                                | 1-17-13
-                                br
-                                | 田中 秀雄
-                                br
-                                | 06-6666-6666
-                        td.align-middle 日本郵便
-                        td.align-middle -
-                        td.align-middle
-                        td.align-middle
-                            .row.text-center
-                                .col
-                                    a.text-right(href="/shipment/mail/" data-toggle="tooltip" data-placement="top" title="メール送信")
-                                        i.fa.fa-send.fa-lg.text-secondary(aria-hidden="true")
-                                .col(data-toggle="tooltip" data-placement="top" title="発送済みにする"): i.fa.fa-check.fa-lg.text-secondary(aria-hidden="true")
-                    tr
-                        td.align-middle
-                            .row
-                                .col-12.text-center
-                                    input(type='checkbox', name='filter', value='open')
-                        td.align-middle
-                            a(href='/shipment/register/') 123456
-                        td.align-middle 123-45678
-                        td.align-middle
-                            a(href='#') 345
-                                button.btn.btn-outline-primary.py-2.mb-2(type='button') 新規受付
-                            br
-                            |
-                            a(href='#') 346
-                                button.btn.btn-outline-success.py-2(type='button') 入金済み
-                        td.align-middle
-                            label.m-0
-                                | 532-0023
-                                br
-                                | 大阪市淀川区十三東1-17-13
-                                br
-                                | 1-17-13
-                                br
-                                | 田中 秀雄
-                                br
-                                | 06-6666-6666
-                        td.align-middle 佐川急便
-                        td.align-middle
-                            i.fa.fa-check.fa-lg.text-success(aria-hidden="true")
-                            | 2017/10/31
-                        td.align-middle
-                        td.align-middle
-                            .row.text-center
-                                .col
-                                    a.text-right(href="/shipment/mail/" data-toggle="tooltip" data-placement="top" title="メール送信")
-                                        i.fa.fa-send.fa-lg.text-secondary(aria-hidden="true")
-                                .col(data-toggle="tooltip" data-placement="top" title="発送済みにする"): i.fa.fa-check.fa-lg.text-secondary(aria-hidden="true")
-                    tr
-                        td.align-middle
-                            .row
-                                .col-12.text-center
-                                    input(type='checkbox', name='filter', value='open')
-                        td.align-middle
-                            a(href='/shipment/register/') 123456
-                        td.align-middle 123-45678
-                        td.align-middle
-                            a(href='#') 345
-                                button.btn.btn-outline-primary.py-2.mb-2(type='button') 新規受付
-                            br
-                            |
-                            a(href='#') 346
-                                button.btn.btn-outline-success.py-2(type='button') 入金済み
-                        td.align-middle
-                            label.m-0
-                                | 532-0023
-                                br
-                                | 大阪市淀川区十三東1-17-13
-                                br
-                                | 1-17-13
-                                br
-                                | 田中 秀雄
-                                br
-                                | 06-6666-6666
-                        td.align-middle 日本郵便
-                        td.align-middle -
-                        td.align-middle
-                        td.align-middle
-                            .row.text-center
-                                .col
-                                    a.text-right(href="/shipment/mail/" data-toggle="tooltip" data-placement="top" title="メール送信")
-                                        i.fa.fa-send.fa-lg.text-secondary(aria-hidden="true")
-                                .col(data-toggle="tooltip" data-placement="top" title="発送済みにする"): i.fa.fa-check.fa-lg.text-secondary(aria-hidden="true")
-                    tr
-                        td.align-middle
-                            .row
-                                .col-12.text-center
-                                    input(type='checkbox', name='filter', value='open')
-                        td.align-middle
-                            a(href='/shipment/register/') 123456
-                        td.align-middle 123-45678
-                        td.align-middle
-                            a(href='#') 345
-                                button.btn.btn-outline-primary.py-2.mb-2(type='button') 新規受付
-                            br
-                            |
-                            a(href='#') 346
-                                button.btn.btn-outline-success.py-2(type='button') 入金済み
-                        td.align-middle
-                            label.m-0
-                                | 532-0023
-                                br
-                                | 大阪市淀川区十三東1-17-13
-                                br
-                                | 1-17-13
-                                br
-                                | 田中 秀雄
-                                br
-                                | 06-6666-6666
-                        td.align-middle 日本郵便
-                        td.align-middle -
-                        td.align-middle
-                        td.align-middle
-                            .row.text-center
-                                .col
-                                    a.text-right(href="/shipment/mail/" data-toggle="tooltip" data-placement="top" title="メール送信")
-                                        i.fa.fa-send.fa-lg.text-secondary(aria-hidden="true")
-                                .col(data-toggle="tooltip" data-placement="top" title="発送済みにする"): i.fa.fa-check.fa-lg.text-secondary(aria-hidden="true")
+                                |
+                                a(href='#') 346
+                                    button.btn.btn-outline-success.py-2(type='button') 入金済み
+                            td.align-middle
+                                label.m-0
+                                    | 532-0023
+                                    br
+                                    | 大阪市淀川区十三東1-17-13
+                                    br
+                                    | 田中 秀雄
+                                    br
+                                    | 06-6666-6666
+                            td.align-middle 日本郵便
+                            td.align-middle -
+                            td.align-middle
+                            td.align-middle
+                                .row.text-center
+                                    .col
+                                        a.text-right(href="/shipment/mail/" data-toggle="tooltip" data-placement="top" title="メール送信")
+                                            i.fa.fa-send.fa-lg.text-secondary(aria-hidden="true")
+                                    .col(data-toggle="tooltip" data-placement="top" title="発送済みにする"): i.fa.fa-check.fa-lg.text-secondary(aria-hidden="true")
+
             .row.justify-content-md-center.mb-4
                 .col-auto
                     .btn-group.btn-group-lg
                         button.btn.btn-secondary(type='button') 1
                     .btn-group.btn-group-lg
-                        button.btn.btn-light.border.border-dark(type='button') 2
+                        button.btn.btn-outline-secondary(type='button') 2
                     .btn-group.btn-group-lg
-                        button.btn.btn-light.border.border-dark(type='button') 3
+                        button.btn.btn-outline-secondary(type='button') 3
                     .btn-group.btn-group-lg
-                        button.btn.btn-light.border.border-dark(type='button') 4
+                        button.btn.btn-outline-secondary(type='button') 4
