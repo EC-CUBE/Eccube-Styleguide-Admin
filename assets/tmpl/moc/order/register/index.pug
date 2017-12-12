@@ -202,7 +202,7 @@ block primaryContents
             .card-body
                 .row.justify-content-between.mb-2
                     .col-6
-                        button.btn.btn-light.border.border-dark.mr-2(data-toggle="modal" data-target="#addProduct") 商品を追加
+                        button.btn.btn-outline-dark.mr-2(data-toggle="modal" data-target="#addProduct") 商品を追加
                         #addProduct.modal.fade(tabindex='-1', role='dialog', aria-labelledby='addProduct', aria-hidden='true')
                             .modal-dialog(role='document')
                                 .modal-content
@@ -216,7 +216,7 @@ block primaryContents
                                             select.form-control.mb-3
                                                 option(value='') カテゴリを選択
                                             a.c-button--regular.c-button--conversion.mb-5(href='') 検索
-                                        table.table.table-striped.mb-3
+                                        table.table.table-striped.table-sm.mb-3
                                             thead.table-active
                                                 th 商品名・コード
                                                 th 規格
@@ -261,7 +261,7 @@ block primaryContents
                                                     button.btn.btn-light.border.border-dark(type='button') 3
                                                 .btn-group.btn-group-lg
                                                     button.btn.btn-light.border.border-dark(type='button') 4
-                        button.btn.btn-light.border.border-dark.mr-2(data-toggle="modal" data-target="#addDetail") その他の明細を追加
+                        button.btn.btn-outline-dark.mr-2(data-toggle="modal" data-target="#addDetail") その他の明細を追加
                         #addDetail.modal.fade(tabindex='-1', role='dialog', aria-labelledby='addDetail', aria-hidden='true')
                             .modal-dialog(role='document')
                                 .modal-content
@@ -306,9 +306,9 @@ block primaryContents
                                                 .btn-group.btn-group-lg
                                                     button.btn.btn-light.border.border-dark(type='button') 4
                     .col-5.text-right
-                        button.btn.btn-light.border.border-dark.mr-2 計算結果の更新
+                        button.btn.btn-outline-dark.mr-2 計算結果の更新
 
-                table.table.table-striped.mb-0
+                table.table.table-striped.table-sm.mb-0
                     thead.table-active
                         th 商品名・コード
                         th 出荷番号
@@ -320,7 +320,7 @@ block primaryContents
                     tbody
                         tr
                             td.align-middle.w-25
-                                p  ☆ご予約販売☆
+                                p.mb-0.font-weight-bold  ☆ご予約販売☆
                                     br
                                     | あかもく ぎばさ 秋田県男鹿の三高水産 冷凍(200g×10袋)ギバサ・アカモクはフコイダンが豊富な海藻！日本海産/ぎばさ/あかもく/ギバサ/アカモク/たけしの家庭の医学で紹介！
                                 span Cafe01
@@ -347,7 +347,7 @@ block primaryContents
                                 i.fa.fa-close.fa-lg.text-secondary(data-toggle="tooltip" data-placement="top" title="Tooltip")
                         tr
                             td.align-middle.w-25
-                                p  パーコレーター
+                                p.mb-0.font-weight-bold  パーコレーター
                                 span Cafe01
                             td.align-middle
                                 a(href="") 56
@@ -372,7 +372,7 @@ block primaryContents
                                 i.fa.fa-close.fa-lg.text-secondary(data-toggle="tooltip" data-placement="top" title="Tooltip")
                         tr
                             td.align-middle.w-25
-                                p  パーコレーター
+                                p.mb-0.font-weight-bold  パーコレーター
                                 span Cafe01
                             td.align-middle
                                 a(href="") 56
@@ -718,7 +718,7 @@ block primaryContents
                                             .modal-footer
                                                 button.btn.btn-light(type='button', data-dismiss='modal') 閉じる
                 .text-center
-                    a(href="/order/mail/").btn.btn-light.border.border-dark メールの新規作成
+                    a(href="/order/mail/").btn.btn-outline-dark メールの新規作成
 
     .card.rounded.border-0.mb-4
         .card-header
