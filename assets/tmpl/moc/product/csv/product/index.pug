@@ -1,9 +1,7 @@
 extends /assets/tmpl/moc/layout/_layout-2col.pug
 block pageTitle
-    +b.c-pageTitle
-        +e.titles
-            +e.H2.title 商品CSV登録
-            +e.SPAN.subTitle 商品管理
+    include /assets/tmpl/components/pageTitle.pug
+    +c-pageTitle("商品CSV登録","商品管理")
 
 block primaryContents
     .card.rounded.border-0.mb-4

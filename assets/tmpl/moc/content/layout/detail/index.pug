@@ -1,9 +1,7 @@
 extends /assets/tmpl/moc/layout/_layout-2col
 block pageTitle
-    +b.c-pageTitle
-        +e.titles
-            +e.H2.title レイアウト管理
-            +e.SPAN.subTitle コンテンツ管理
+    include /assets/tmpl/components/pageTitle.pug
+    +c-pageTitle("レイアウト管理","コンテンツ管理")
 
 block primaryContents
     .card.rounded.border-0.mb-4

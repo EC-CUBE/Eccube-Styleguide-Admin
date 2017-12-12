@@ -1,9 +1,7 @@
 extends /assets/tmpl/moc/layout/_layout-3col
 block pageTitle
-    +b.c-pageTitle
-        +e.titles
-            +e.H2.title ファイル管理
-            +e.SPAN.subTitle コンテンツ管理
+    include /assets/tmpl/components/pageTitle.pug
+    +c-pageTitle("ファイル管理","コンテンツ管理")
 
 block outsideBlock
     +b.c-outsideBlock

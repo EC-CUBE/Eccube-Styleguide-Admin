@@ -1,9 +1,7 @@
 extends /assets/tmpl/moc/layout/_layout-2col
 block pageTitle
-    +b.c-pageTitle
-        +e.titles
-            +e.H2.title メール通知
-            +e.SPAN.subTitle 受注管理
+    include /assets/tmpl/components/pageTitle.pug
+    +c-pageTitle("メール通知","受注管理")
 
 block primaryContents
     .card.rounded.border-0.mb-4
