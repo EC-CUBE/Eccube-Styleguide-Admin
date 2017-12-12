@@ -8,10 +8,9 @@ block outsideBlock
         +e.contents
             .row.justify-content-start
                 .col-6
-                    form
-                        .form-group
-                            label.col-form-label 会員ID・メールアドレス・お名前
-                            input.form-control(type='text')
+                    form.mb-2
+                        label.col-form-label 会員ID・メールアドレス・お名前
+                        input.form-control(type='text')
                     .d-inline-block.mb-3(data-toggle="collapse" href="#commentList" aria-expanded="false" aria-controls="commentList")
                         i.fa.fa-minus-square-o.font-weight-bold.mr-1
                         span.font-weight-bold 詳細検索
@@ -19,7 +18,7 @@ block outsideBlock
             .row.mb-2
                 .col
                     form.form-row
-                        .form-group.col-12
+                        .col-12
                             p.col-form-label 会員種別
                             label.form-check-label.mr-3
                                 input.form-check-input(type='checkbox', value='')
@@ -29,13 +28,12 @@ block outsideBlock
                                 | 本会員
                 .col
                     form
-                        .form-group
-                            label 購入商品名
-                            input(type="text").form-control
+                        label 購入商品名
+                        input(type="text").form-control
             .row.mb-2
                 .col
                     form.form-row
-                        .form-group.col-12
+                        .col-12
                             p.col-form-label 性別
                             label.form-check-label.mr-3
                                 input.form-check-input(type='checkbox', value='')
@@ -45,110 +43,92 @@ block outsideBlock
                                 | 女性
                 .col
                     form
-                        .form-group
-                            label 購入金額
-                            .form-row.align-items-center
-                                .col
-                                    input.form-control(type='text')
-                                .col-auto
-                                    span 〜
-                                .col
-                                    input.form-control(type='text')
+                        label 購入金額
+                        .form-row.align-items-center
+                            .col
+                                input.form-control(type='text')
+                            .col-auto
+                                span 〜
+                            .col
+                                input.form-control(type='text')
             .row.mb-2
                 .col
                     form
-                        .form-group
-                            label 誕生月
-                            .row
-                                .col-5
-                                    select.form-control
-                                        option 選んでください
-                                        option ...
-                                .col-7
+                        label 誕生月
+                        .row
+                            .col-5
+                                select.form-control
+                                    option 選んでください
+                                    option ...
+                            .col-7
                 .col
                     form
-                        .form-group
-                            label 購入回数
-                            .form-row.align-items-center
-                                .col
-                                    input.form-control(type='text')
-                                .col-auto
-                                    span 〜
-                                .col
-                                    input.form-control(type='text')
+                        label 購入回数
+                        .form-row.align-items-center
+                            .col
+                                input.form-control(type='text')
+                            .col-auto
+                                span 〜
+                            .col
+                                input.form-control(type='text')
             .row.mb-2
                 .col
                     form
-                        .form-group
-                            label 誕生日
-                            .form-row.align-items-center
-                                .col
-                                    input.form-control(type='date', value='2000-01-01')
-                                .col-auto.text-center
-                                    span 〜
-                                .col
-                                    input.form-control(type='date', value='2000-01-01')
+                        label 誕生日
+                        .form-row.align-items-center
+                            .col
+                                input.form-control(type='date', value='2000-01-01')
+                            .col-auto.text-center
+                                span 〜
+                            .col
+                                input.form-control(type='date', value='2000-01-01')
                 .col
                     form
-                        .form-group
-                            label 登録日
-                            .form-row.align-items-center
-                                .col
-                                    input.form-control(type='date', value='2000-01-01')
-                                .col-auto.text-center
-                                    span 〜
-                                .col
-                                    input.form-control(type='date', value='2000-01-01')
+                        label 登録日
+                        .form-row.align-items-center
+                            .col
+                                input.form-control(type='date', value='2000-01-01')
+                            .col-auto.text-center
+                                span 〜
+                            .col
+                                input.form-control(type='date', value='2000-01-01')
             .row.mb-2
                 .col
                     form
-                        .form-group
-                            label 都道府県
-                            .row
-                                .col-5
-                                    select.form-control
-                                        option 選んでください
-                                        option ...
-                                .col-7
+                        label 都道府県
+                        .row
+                            .col-5
+                                select.form-control
+                                    option 選んでください
+                                    option ...
+                            .col-7
                 .col
                     form
-                        .form-group
-                            label 更新日
-                            .form-row.align-items-center
-                                .col
-                                    input.form-control(type='date', value='2000-01-01')
-                                .col-auto.text-center
-                                    span 〜
-                                .col
-                                    input.form-control(type='date', value='2000-01-01')
+                        label 更新日
+                        .form-row.align-items-center
+                            .col
+                                input.form-control(type='date', value='2000-01-01')
+                            .col-auto.text-center
+                                span 〜
+                            .col
+                                input.form-control(type='date', value='2000-01-01')
             .row.mb-4
                 .col
                     form.mb-3
                         label 電話番号
-                        .form-row.justify-content-start
-                            .col-2
-                                input.form-control(type='text', placeholder='0000')
-                            .col-auto.text-center.p-0
-                                span.align-middle -
-                            .col-2
-                                input.form-control(type='text', placeholder='0000')
-                            .col-auto.text-center.p-0
-                                span.align-middle -
-                            .col-2
-                                input.form-control(type='text', placeholder='0000')
+                        input(type="text").form-control
                 .col
                     form
-                        .form-group
-                            label 最終購入日
-                            .form-row.align-items-center
-                                .col
-                                    input.form-control(type='date', value='2000-01-01')
-                                .col-auto.text-center
-                                    span 〜
-                                .col
-                                    input.form-control(type='date', value='2000-01-01')
+                        label 最終購入日
+                        .form-row.align-items-center
+                            .col
+                                input.form-control(type='date', value='2000-01-01')
+                            .col-auto.text-center
+                                span 〜
+                            .col
+                                input.form-control(type='date', value='2000-01-01')
             .d-block.text-center
-                button(type="button").btn.btn-light.border.border-dark 検索条件クリア
+                button(type="button").btn.btn-outline-dark 検索条件クリア
         +e.contents.mb-5
             button.btn.btn-primary.px-5(type="button") 検索
 block primaryContents
@@ -188,7 +168,7 @@ block primaryContents
                         td.align-middle
                         td.align-middle
                             .row
-                                .col.text-center(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-times.fa-lg(aria-hidden="true")
+                                .col.text-center(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-close.fa-lg.text-secondary(aria-hidden="true")
             .row.justify-content-md-center.mb-4
                 .col-auto
                     .btn-group.btn-group-lg
