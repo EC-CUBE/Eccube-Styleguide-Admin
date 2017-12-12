@@ -14,14 +14,14 @@ block primaryContents
                         i.fa.fa-angle-up.fa-lg
         .collapse(id="ordererInfo").show
             .card-body
-                .row.mb-3
+                .row.mb-2
                     .col-3
                         .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
                             span 会員ID
                             i.fa.fa-question-circle.fa-lg.ml-1
                     .col
                         p 12
-                .row.mb-3
+                .row.mb-2
                     .col-3
                         span お名前
                         span.badge.badge-primary.ml-1 必須
@@ -32,7 +32,7 @@ block primaryContents
                                     input.form-control(type='text', placeholder='性')
                                 .col
                                     input.form-control(type='text', placeholder='名')
-                .row.mb-3
+                .row.mb-2
                     .col-3
                         span フリガナ
                         span.badge.badge-primary.ml-1 必須
@@ -43,13 +43,13 @@ block primaryContents
                                     input.form-control(type='text', placeholder='セイ')
                                 .col
                                     input.form-control(type='text', placeholder='メイ')
-                .row.mb-3
+                .row.mb-2
                     .col-3
                         span 会社名
                     .col
                         form
                             input.form-control(type='text')
-                .row.mb-3
+                .row.mb-2
                     .col-3
                         span 住所
                         span.badge.badge-primary.ml-1 必須
@@ -70,14 +70,14 @@ block primaryContents
                         form
                             input.form-control.mb-3(type='text', placeholder='住所1')
                             input.form-control(type='text', placeholder='住所2')
-                .row.mb-3
+                .row.mb-2
                     .col-3
                         span メールアドレス
                         span.badge.badge-primary.ml-1 必須
                     .col
                         form
                             input.form-control(type='email')
-                .row.mb-3
+                .row.mb-2
                     .col-3
                         span 電話番号
                         span.badge.badge-primary.ml-1 必須
@@ -94,7 +94,7 @@ block primaryContents
                                     span.align-middle -
                                 .col-2
                                     input.form-control(type='text', placeholder='0000')
-                .row.mb-3
+                .row.mb-2
                     .col-3
                         span FAX番号
                     .col
@@ -110,21 +110,21 @@ block primaryContents
                                     span.align-middle -
                                 .col-2
                                     input.form-control(type='text', placeholder='0000')
-                .row.mb-3
+                .row.mb-2
                     .col-3
                         span パスワード
                         span.badge.badge-primary.ml-1 必須
                     .col
                         form
                             input.form-control(type='password' , placeholder='')
-                .row.mb-3
+                .row.mb-2
                     .col-3
                         span パスワード（確認）
                         span.badge.badge-primary.ml-1 必須
                     .col
                         form
                             input.form-control(type='password' , placeholder='')
-                .row.mb-3
+                .row.mb-2
                     .col-3
                         span 性別
                     .col
@@ -137,14 +137,14 @@ block primaryContents
                                 label.form-check-label(for="female")
                                     input.form-check-input#female(type="radio", name="gender")
                                     |  女性
-                .row.mb-3
+                .row.mb-2
                     .col-3
                         span 職業
                     .col
                         form
                             select.form-control
                                 option(value='') 選択してください
-                .row.mb-3
+                .row.mb-2
                     .col-3
                         span 生年月日
                     .col
@@ -165,14 +165,14 @@ block primaryContents
                         i.fa.fa-angle-up.fa-lg
         .collapse(id="standardConfig").show
             .card-body
-                table.table.table-striped
+                table.table.table-striped.table-sm
                     thead.table-active
                         th.align-middle 注文日時
                         th.align-middle 注文番号
                         th.align-middle 購入金額
                         th.align-middle 対応状況
                     tbody
-                        - for (var x = 0; x < 4; x++)
+                        - for (var x = 0; x < 5; x++)
                             tr
                                 td.align-middle 2017/09/13
                                 td.align-middle
@@ -181,21 +181,6 @@ block primaryContents
                                     span.h5.font-weight-normal ¥4,000
                                 td.align-middle
                                     button.btn.btn-outline-secondary.py-2(type='button') 発送済み
-                .d-block.text-center.text-center
-                    button(type="button" data-toggle="modal" data-target="#confirmModal").btn.btn-outline-dark この商品の規格管理
-                    #confirmModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='confirmModal', aria-hidden='true')
-                        .modal-dialog(role='document')
-                            .modal-content
-                                .modal-header
-                                    h5.modal-title ページを移動します。
-                                    button.close(type='button', data-dismiss='modal', aria-label='Close')
-                                        span(aria-hidden='true') ×
-                                .modal-body
-                                    p 規格の管理画面に移動します。商品情報を保存してから移動しますか？
-                                .modal-footer
-                                    a(href="/product/register/standard").btn.btn-primary 変更を保存
-                                    button.btn.btn-secondary(type='button', data-dismiss='modal') キャンセル
-
     .card.rounded.border-0.mb-4
         .card-header
             .row
@@ -209,8 +194,7 @@ block primaryContents
         .collapse(id="shopMemo").show
             .card-body
                 form
-                    .form-group
-                        textarea(rows="8" placeholder="テキスト").form-control
+                    textarea(rows="8" placeholder="テキスト").form-control
 
 block conversionArea
     +b.c-conversionArea
@@ -225,7 +209,7 @@ block conversionArea
                     .row.align-items-center.justify-content-end
                         .col-auto
                             include /assets/tmpl/components/toggleSwitch.pug
-                            +c-toggleSwitch--customer
+                            +c-toggleSwitch('本会員')
                         .col-auto
                             button(type="submit").btn.btn-primary.px-5 会員情報を登録
 

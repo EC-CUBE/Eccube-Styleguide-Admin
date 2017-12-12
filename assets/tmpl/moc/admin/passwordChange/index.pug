@@ -8,18 +8,21 @@ block primaryContents
         .card-header
             span.card-title パスワード変更
         .card-body
-            form
-                .form-group
+            form.form-row.mb-2
+                .col-3
                     label.col-form-label 現在のパスワード
-                    input.form-control(type="password")
-            form
-                .form-group
+                .col
+                    input.form-control(type="password" placeholder="********")
+            form.form-row.mb-2
+                .col-3
                     label.col-form-label 新しいのパスワード
-                    input.form-control(type="password")
-            form
-                .form-group
+                .col
+                    input.form-control(type="password" placeholder="********")
+            form.form-row.mb-2
+                .col-3
                     label.col-form-label 新しいのパスワード（確認）
-                    input.form-control(type="password")
+                .col
+                    input.form-control(type="password" placeholder="********")
 block conversionArea
     +b.c-conversionArea
         +e.container

@@ -1,9 +1,7 @@
 extends /assets/tmpl/moc/layout/_layout-2col
 block pageTitle
-    +b.c-pageTitle
-        +e.titles
-            +e.H2.title メール通知
-            +e.SPAN.subTitle 出荷管理
+    include /assets/tmpl/components/pageTitle.pug
+    +c-pageTitle("メール通知","出荷管理")
 
 block primaryContents
     .card.rounded.border-0.mb-4
@@ -357,7 +355,7 @@ block primaryContents
                         form
                             select.form-control
                                 option(value='') 選択してください
-                .row.mb-3
+                .row.mb-2
                     .col-3
                             span 件名
                             span.badge.badge-primary.ml-1 必須
@@ -365,14 +363,14 @@ block primaryContents
                         form
                             input(type="text" placeholder="テキスト").form-control
 
-                .row.mb-3
+                .row.mb-2
                     .col-3
                         span ヘッダー文
                     .col
                         form
                             .form-group
                                 textarea(rows="8").form-control
-                .row.mb-3
+                .row.mb-2
                     .col-3
                         span フッター文
                     .col
@@ -525,6 +523,6 @@ block conversionArea
                         br
                 .modal-footer
                     button.btn.btn-secondary(type='button', data-dismiss='modal') 閉じる
-                    button.btn.btn-primary(type='button', data-dismiss='modal') 送信
+                    a(href="/shipment/master/").btn.btn-primary 送信
 
 
