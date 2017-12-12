@@ -7,7 +7,7 @@ block outsideBlock
     +b.c-outsideBlock
         +e.contents
             nav(aria-label='breadcrumb', role='navigation')
-                ol.breadcrumb
+                ol.breadcrumb.mb-2.p-0
                     li.breadcrumb-item
                         a(href='#') user_data
                     li.breadcrumb-item.active(aria-current='page') 電子書籍
@@ -15,14 +15,14 @@ block outsideBlock
                 .card-header
                     span.card-title ファイル・フォルダを追加
                 .card-body
-                    .row.mb-3
+                    .row.mb-2
                         .col-2
                             span ファイルを追加
                         .col
-                            form.mb-3
+                            form.mb-2
                                 input(type="file").form-control-file
                             button(type="submit").btn.btn-primary アップロード
-                    .row.mb-3
+                    .row.mb-2
                         .col-2
                             span フォルダを追加
                         .col
@@ -41,7 +41,7 @@ block primaryContents
                     a(data-toggle="collapse" href="#fileList" aria-expanded="false" aria-controls="fileList")
                         i.fa.fa-angle-up.fa-lg
         .collapse(id="fileList").show
-            .card-body
+            .card-body.p-0
                 table.table
                     tbody
                         tr
@@ -52,7 +52,7 @@ block primaryContents
                             td.align-middle
                             td.align-middle
                             td.align-middle.text-right
-                                .d-inline-block(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-close.fa-lg(aria-hidden="true")
+                                .d-inline-block(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-close.fa-lg.text-secondary(aria-hidden="true")
                         tr
                             td.align-middle.text-center
                                 i.fa.fa-folder-o.fa-2x
@@ -61,7 +61,7 @@ block primaryContents
                             td.align-middle
                             td.align-middle
                             td.align-middle.text-right
-                                .d-inline-block(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-close.fa-lg(aria-hidden="true")
+                                .d-inline-block(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-close.fa-lg.text-secondary(aria-hidden="true")
                         tr
                             td.align-middle.text-center
                                 .d-inline-block.p-3.bg-light
@@ -71,9 +71,9 @@ block primaryContents
                             td.align-middle 24KB
                             td.align-middle 2017/01/12 更新
                             td.align-middle.text-right
-                                .d-inline-block.mr-3(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-eye.fa-lg(aria-hidden="true")
-                                .d-inline-block.mr-3(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-cloud-download.fa-lg(aria-hidden="true")
-                                .d-inline-block(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-close.fa-lg(aria-hidden="true")
+                                .d-inline-block.mr-3(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-eye.fa-lg.text-secondary(aria-hidden="true")
+                                .d-inline-block.mr-3(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-cloud-download.fa-lg.text-secondary(aria-hidden="true")
+                                .d-inline-block(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-close.fa-lg.text-secondary(aria-hidden="true")
                         tr
                             td.align-middle.text-center
                                 .d-inline-block.p-3.bg-light
@@ -82,9 +82,9 @@ block primaryContents
                             td.align-middle 24KB
                             td.align-middle 2017/01/12 更新
                             td.align-middle.text-right
-                                .d-inline-block.mr-3(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-eye.fa-lg(aria-hidden="true")
-                                .d-inline-block.mr-3(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-cloud-download.fa-lg(aria-hidden="true")
-                                .d-inline-block(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-close.fa-lg(aria-hidden="true")
+                                .d-inline-block.mr-3(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-eye.fa-lg.text-secondary(aria-hidden="true")
+                                .d-inline-block.mr-3(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-cloud-download.fa-lg.text-secondary(aria-hidden="true")
+                                .d-inline-block(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-close.fa-lg.text-secondary(aria-hidden="true")
                         tr
                             td.align-middle.text-center
                                 .d-inline-block.p-3.bg-light
@@ -93,9 +93,9 @@ block primaryContents
                             td.align-middle 24KB
                             td.align-middle 2017/01/12 更新
                             td.align-middle.text-right
-                                .d-inline-block.mr-3(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-eye.fa-lg(aria-hidden="true")
-                                .d-inline-block.mr-3(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-cloud-download.fa-lg(aria-hidden="true")
-                                .d-inline-block(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-close.fa-lg(aria-hidden="true")
+                                .d-inline-block.mr-3(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-eye.fa-lg.text-secondary(aria-hidden="true")
+                                .d-inline-block.mr-3(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-cloud-download.fa-lg.text-secondary(aria-hidden="true")
+                                .d-inline-block(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-close.fa-lg.text-secondary(aria-hidden="true")
                         tr
                             td.align-middle.text-center
                                 .d-inline-block.p-3.bg-light
@@ -104,9 +104,9 @@ block primaryContents
                             td.align-middle 24KB
                             td.align-middle 2017/01/12 更新
                             td.align-middle.text-right
-                                .d-inline-block.mr-3(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-eye.fa-lg(aria-hidden="true")
-                                .d-inline-block.mr-3(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-cloud-download.fa-lg(aria-hidden="true")
-                                .d-inline-block(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-close.fa-lg(aria-hidden="true")
+                                .d-inline-block.mr-3(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-eye.fa-lg.text-secondary(aria-hidden="true")
+                                .d-inline-block.mr-3(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-cloud-download.fa-lg.text-secondary(aria-hidden="true")
+                                .d-inline-block(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-close.fa-lg.text-secondary(aria-hidden="true")
                         tr
                             td.align-middle.text-center
                                 .d-inline-block.p-3.bg-light
@@ -115,9 +115,9 @@ block primaryContents
                             td.align-middle 24KB
                             td.align-middle 2017/01/12 更新
                             td.align-middle.text-right
-                                .d-inline-block.mr-3(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-eye.fa-lg(aria-hidden="true")
-                                .d-inline-block.mr-3(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-cloud-download.fa-lg(aria-hidden="true")
-                                .d-inline-block(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-close.fa-lg(aria-hidden="true")
+                                .d-inline-block.mr-3(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-eye.fa-lg.text-secondary(aria-hidden="true")
+                                .d-inline-block.mr-3(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-cloud-download.fa-lg.text-secondary(aria-hidden="true")
+                                .d-inline-block(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-close.fa-lg.text-secondary(aria-hidden="true")
                         tr
                             td.align-middle.text-center
                                 .d-inline-block
@@ -126,9 +126,9 @@ block primaryContents
                             td.align-middle 24KB
                             td.align-middle 2017/01/12 更新
                             td.align-middle.text-right
-                                .d-inline-block.mr-3(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-eye.fa-lg(aria-hidden="true")
-                                .d-inline-block.mr-3(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-cloud-download.fa-lg(aria-hidden="true")
-                                .d-inline-block(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-close.fa-lg(aria-hidden="true")
+                                .d-inline-block.mr-3(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-eye.fa-lg.text-secondary(aria-hidden="true")
+                                .d-inline-block.mr-3(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-cloud-download.fa-lg.text-secondary(aria-hidden="true")
+                                .d-inline-block(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-close.fa-lg.text-secondary(aria-hidden="true")
 block secondaryContents
     .card.rounded.border-0.mb-4
         .card-header
