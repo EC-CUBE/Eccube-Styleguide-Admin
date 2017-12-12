@@ -40,20 +40,20 @@ block primaryContents
                             .col
                                 form.c-form--inline
                                     .c-form__select--register
-                                        select
+                                        select.mb-0
                                             option 出荷済み
                                             option ...
-                                    p.form-text.font-weight-bold.text-danger キャンセルする場合、在庫数は手動で戻してください。
-                        .row.mb-3
+                                    p.form-text.font-weight-bold.text-danger.mb-0 キャンセルする場合、在庫数は手動で戻してください。
+                        .row
                             .col-3
                                 span お支払い方法
                             .col
                                 form.c-form--inline
                                     .c-form__select--small
-                                        select
+                                        select.mb-0
                                             option 郵便振替
                                             option ...
-                                    p.form-text.font-weight-bold.text-danger お支払方法の変更に伴う手数料の変更は手動にてお願いします。
+                                    p.form-text.font-weight-bold.text-danger.mb-0 お支払方法の変更に伴う手数料の変更は手動にてお願いします。
                     .col-6
                         .row.mb-3
                             .col-3
@@ -93,14 +93,14 @@ block primaryContents
                         i.fa.fa-angle-up.fa-lg
         .collapse(id="ordererInfo").show
             .card-body
-                .row.mb-3
+                .row.mb-2
                     .col-3
                         .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
                             span 会員ID
                             i.fa.fa-question-circle.fa-lg.ml-1
                     .col
                         p 12
-                .row.mb-3
+                .row.mb-2
                     .col-3
                         span お名前
                         span.badge.badge-primary.ml-1 必須
@@ -111,12 +111,12 @@ block primaryContents
                                     input.form-control(type='text', placeholder='性')
                                 .col
                                     input.form-control(type='text', placeholder='名')
-                .row.mb-3
+                .row.mb-2
                     .col-3
                         span 住所
                         span.badge.badge-primary.ml-1 必須
                     .col.mb-3
-                        form.mb-3
+                        form.mb-2
                             .row.justify-content-start
                                 .col-2
                                     input.form-control(type='text', placeholder='郵便番号1')
@@ -124,22 +124,22 @@ block primaryContents
                                     span.align-middle -
                                 .col-2
                                     input.form-control(type='text', placeholder='郵便番号2')
-                        form.mb-3
+                        form.mb-2
                             .row.justify-content-start
                                 .col-2
                                     select.form-control
                                         option(value='') 東京都
                         form
-                            input.form-control.mb-3(type='text', placeholder='住所1')
+                            input.form-control.mb-2(type='text', placeholder='住所1')
                             input.form-control(type='text', placeholder='住所2')
-                .row.mb-3
+                .row.mb-2
                     .col-3
                         span メールアドレス
                         span.badge.badge-primary.ml-1 必須
                     .col
                         form
                             input.form-control(type='email')
-                .row.mb-3
+                .row.mb-2
                     .col-3
                         span 電話番号
                         span.badge.badge-primary.ml-1 必須
@@ -156,7 +156,7 @@ block primaryContents
                                     span.align-middle -
                                 .col-2
                                     input.form-control(type='text', placeholder='0000')
-                .row.mb-3
+                .row.mb-2
                     .col-3
                         span FAX番号
                         span.badge.badge-primary.ml-1 必須
@@ -173,13 +173,13 @@ block primaryContents
                                     span.align-middle -
                                 .col-2
                                     input.form-control(type='text', placeholder='0000')
-                .row.mb-3
+                .row.mb-2
                     .col-3
                         span 会社名
                     .col
                         form
                             input.form-control(type='text' , placeholder='テキスト')
-                .row.mb-3
+                .row.mb-2
                     .col-3
                         span お問い合わせ
                     .col
