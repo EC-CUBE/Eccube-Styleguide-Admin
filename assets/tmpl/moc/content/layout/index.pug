@@ -6,7 +6,7 @@ block pageTitle
 block outsideBlock
     +b.c-outsideBlock
         +e.contents
-            .row.mb-3
+            .row
                 .col.text-center
                     .btn-group(data-toggle='buttons')
                         label.btn.btn-outline-secondary.px-5.active
@@ -34,9 +34,8 @@ block primaryContents
                 .row
                     .col-3.pr-0
                         form
-                            .form-group
-                                select.form-control
-                                    option(value='') 下層ページ用レイアウト
+                            select.form-control
+                                option(value='') 下層ページ用レイアウト
                     .col
                         button.btn.btn-outline-dark(type='button') 登録
     .card.rounded.border-0.mb-4
@@ -51,7 +50,7 @@ block primaryContents
                         i.fa.fa-angle-up.fa-lg
         .collapse(id="topPageLayout").show
             .card-body.p-0
-                .d-block.p-4
+                .d-block.p-3
                     i.fa.fa-bars.text-secondary.mr-3
                     span トップページ（PC）
     .card.rounded.border-0.mb-4
@@ -66,16 +65,16 @@ block primaryContents
                         i.fa.fa-angle-up.fa-lg
         .collapse(id="lowerPageLayout").show
             .card-body.p-0
-                .d-block.border.border-top-0.border-right-0.border-left-0.p-4
+                .d-block.border.border-top-0.border-right-0.border-left-0.p-3
                     i.fa.fa-bars.text-secondary.mr-3
                     span 商品購入（お届け先変更）
-                .d-block.border.border-top-0.border-right-0.border-left-0.p-4
+                .d-block.border.border-top-0.border-right-0.border-left-0.p-3
                     i.fa.fa-bars.text-secondary.mr-3
                     span パスワード変更（完了）
-                .d-block.border.border-top-0.border-right-0.border-left-0.p-4
+                .d-block.border.border-top-0.border-right-0.border-left-0.p-3
                     i.fa.fa-bars.text-secondary.mr-3
                     span 商品購入（お届け先複数指定）
-                .d-block.p-4
+                .d-block.p-3
                     i.fa.fa-bars.text-secondary.mr-3
                     span 商品購入（支払い方法選択）
     .card.rounded.border-0.mb-4
@@ -103,7 +102,7 @@ block primaryContents
                         i.fa.fa-angle-up.fa-lg
         .collapse(id="lpLayout").show
             .card-body.p-0
-                .d-block.p-4
+                .d-block.p-3
                     span.text-muted ページの登録がありません
     #addPage.modal.fade(tabindex='-1', role='dialog', aria-labelledby='addPage', aria-hidden='true')
         .modal-dialog(role='document')
