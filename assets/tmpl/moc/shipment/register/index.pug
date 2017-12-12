@@ -1,9 +1,7 @@
 extends /assets/tmpl/moc/layout/_layout-2col
 block pageTitle
-    +b.c-pageTitle
-        +e.titles
-            +e.H2.title 出荷登録
-            +e.SPAN.subTitle 出荷管理
+    include /assets/tmpl/components/pageTitle.pug
+    +c-pageTitle("出荷登録","出荷管理")
 
 block primaryContents
     .card.rounded.border-0.mb-4
@@ -20,15 +18,15 @@ block primaryContents
             .card-body
                 .row
                     .col-6
-                        .row.mb-3.align-items-center
+                        .row.mb-2.align-items-center
                             .col-3
                                 span 出荷番号
-                            .col-9
+                            .col
                                 a(href="#") 345
-                        .row.mb-3
+                        .row.mb-2
                             .col-3
                                 span お届け先
-                            .col-9
+                            .col
                                 label
                                     | 田口 花子（タグチ ハナコ）
                                     br
@@ -39,75 +37,75 @@ block primaryContents
                                     |
                                     a(href="#")
                                         i.fa.fa-pencil(aria-hidden="true") お届け先の編集
-                        .row.mb-3
+                        .row.mb-2
                             .col-3
                                 span 注文者
-                            .col-9
+                            .col
                                 label
                                     | 田口 花子（タグチ ハナコ）
                                     br
                                     | 〒000-0000
                                     br
                                     | 大阪府大阪市淀川区十三東1-17-13
-                        .row.mb-3.align-items-center
+                        .row.mb-2.align-items-center
                             .col-3
                                 span 出荷伝票番号
-                            .col-9
+                            .col
                                 form
                                     input(type='text' placeholder="1234-567890").form-control
-                        .row.mb-3.align-items-center
+                        .row.mb-2.align-items-center
                             .col-3
                                 span 発送状況
-                            .col-3
+                            .col
                                 form
                                     select.form-control
                                         option 未発送
                                         option ...
                             .col-6
-                        .row.mb-3.align-items-center
+                        .row.mb-2.align-items-center
                             .col-3
                                 span 配送業者
-                            .col-3
+                            .col
                                 form
                                     select.form-control
                                         option ヤマト運輸
                                         option ...
                             .col-6
                     .col-6
-                        .row.mb-3.align-items-center
+                        .row.mb-2.align-items-center
                             .col-3
-                                span
-                                    i.fa.fa-calendar-check-o(aria-hidden="true") お届け希望日
-                            .col-9
+                                i.fa.fa-calendar-check-o.mr-1(aria-hidden="true")
+                                span お届け希望日
+                            .col
                                 form
                                     input.form-control(type='date', value='2000-01-01')
-                        .row.mb-3.align-items-center
+                        .row.mb-2.align-items-center
                             .col-3
-                                span
-                                    i.fa.fa-clock-o(aria-hidden="true") 時間帯指定
-                            .col-9
+                                i.fa.fa-clock-o.mr-1(aria-hidden="true")
+                                span 時間帯指定
+                            .col
                                 form
                                     select.form-control
                                         option 指定なし
                                         option ...
-                        .row.mb-3.align-items-center
+                        .row.mb-2.align-items-center
                             .col-3
-                                span
-                                    i.fa.fa-truck(aria-hidden="true") 発送日
-                            .col-9
+                                i.fa.fa-truck.mr-1(aria-hidden="true")
+                                span 発送日
+                            .col
                                 form
                                     input.form-control(type='date', value='2000-01-01')
-                        .row.mb-3.align-items-center
+                        .row.mb-2.align-items-center
                             .col-3
-                                span
-                                    i.fa.fa-refresh(aria-hidden="true") 最終更新日
-                            .col-9
+                                i.fa.fa-refresh.mr-1(aria-hidden="true")
+                                span 最終更新日
+                            .col
                                 span 2017/09/14
-                        .row.mb-3.align-items-center
+                        .row.mb-2.align-items-center
                             .col-3
-                                span
-                                    i.fa.fa-user(aria-hidden="true") 最終更新者
-                            .col-9
+                                i.fa.fa-user.mr-1(aria-hidden="true")
+                                span 最終更新者
+                            .col
                                 span user_name
     .card.rounded.border-0.mb-4
         .card-header
@@ -124,8 +122,8 @@ block primaryContents
                 .row.mb-2
                     .col-12
                         a(href="#")
-                            button.btn.btn-light.border.border-dark 商品を追加
-                table.table.table-striped.mb-0
+                            button.btn.btn-outline-dark 商品を追加
+                table.table.table-striped.table-sm.mb-0
                     thead.table-active
                         th 商品名・コード
                         th 注文番号
@@ -137,7 +135,7 @@ block primaryContents
                     tbody
                         tr
                             td.align-middle.w-25
-                                p  ☆ご予約販売☆
+                                p.font-weight-bold.mb-0  ☆ご予約販売☆
                                     br
                                     | あかもく ぎばさ 秋田県男鹿の三高水産 冷凍(200g×10袋)ギバサ・アカモクはフコイダンが豊富な海藻！日本海産/ぎばさ/あかもく/ギバサ/アカモク/たけしの家庭の医学で紹介！
                                 span Cafe01 /  ( 材質： 金 / サイズ： 120mm )
@@ -152,11 +150,11 @@ block primaryContents
                             td.align-middle
                                 span ¥5,400
                                 small （税込）
-                            td.align-middle
-                                i.fa.fa-close.fa-lg(data-toggle="tooltip" data-placement="top" title="Tooltip")
+                            td.align-middle.text-right
+                                i.fa.fa-close.fa-lg.mr-3.text-secondary(data-toggle="tooltip" data-placement="top" title="Tooltip")
                         tr
                             td.align-middle.w-25
-                                p  パーコレーター
+                                p.font-weight-bold.mb-0  パーコレーター
                                 span Cafe01
                             td.align-middle
                                 a(href="") 57
@@ -169,11 +167,11 @@ block primaryContents
                             td.align-middle
                                 span ¥5,400
                                 small （税込）
-                            td.align-middle
-                                i.fa.fa-close.fa-lg(data-toggle="tooltip" data-placement="top" title="Tooltip")
+                            td.align-middle.text-right
+                                i.fa.fa-close.fa-lg.mr-3.text-secondary(data-toggle="tooltip" data-placement="top" title="Tooltip")
                         tr
                             td.align-middle.w-25
-                                p  パーコレーター
+                                p.font-weight-bold.mb-0  パーコレーター
                                 span Cafe01
                             td.align-middle
                                 a(href="") 56
@@ -186,8 +184,8 @@ block primaryContents
                             td.align-middle
                                 span ¥5,400
                                 small （税込）
-                            td.align-middle
-                                i.fa.fa-close.fa-lg(data-toggle="tooltip" data-placement="top" title="Tooltip")
+                            td.align-middle.text-right
+                                i.fa.fa-close.fa-lg.mr-3.text-secondary(data-toggle="tooltip" data-placement="top" title="Tooltip")
     .card.rounded.border-0.mb-4
         .card-header
             .row
@@ -203,7 +201,6 @@ block primaryContents
                 form
                     .form-group
                         textarea(rows="8" placeholder="テキスト").form-control
-
 block conversionArea
     +b.c-conversionArea
         +e.container
@@ -216,4 +213,18 @@ block conversionArea
                 .col-6
                     .row.align-items-center.justify-content-end
                         .col-auto
-                            button(type="submit").btn.btn-primary.px-4 出荷情報を登録
+                            include /assets/tmpl/components/toggleSwitch.pug
+                            +c-toggleSwitch('未出荷')
+                        .col-auto
+                            button.btn.btn-primary.px-4(data-toggle="modal" data-target="#registerShipment") 出荷情報を登録
+    #registerShipment.modal.fade(tabindex='-1', role='dialog', aria-labelledby='registerShipment', aria-hidden='true')
+        .modal-dialog(role='document')
+            .modal-content
+                .modal-header
+                    h5.modal-title.font-weight-bold 配送に関わる情報が変更されました
+                    button.close(type='button', data-dismiss='modal', aria-label='Close')
+                        span(aria-hidden='true') ×
+                .modal-body
+                    p 送料の変更が必要な場合は、受注管理より手動で変更してください。
+                .modal-footer
+                    button.btn.btn-primary.px-5(type='button', data-dismiss='modal') OK

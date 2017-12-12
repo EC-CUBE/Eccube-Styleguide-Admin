@@ -27,11 +27,11 @@ block primaryContents
                             .col-3
                                 span 出荷番号
                             .col
-                                a(href="") 123456
+                                a(href="/shipment/register/") 123456
                                 span.ml-3.mr-3 |
-                                a(href="") 123456
+                                a(href="/shipment/register/") 123456
                                 span.ml-3.mr-3 |
-                                a(href="") 123456
+                                a(href="/shipment/register/") 123456
                         .row.mb-3
                             .col-3
                                 .c-toolTip(data-toggle="tooltip" data-placement="top" title="Tooltip")
@@ -40,20 +40,20 @@ block primaryContents
                             .col
                                 form.c-form--inline
                                     .c-form__select--register
-                                        select
+                                        select.mb-0
                                             option 出荷済み
                                             option ...
-                                    p.form-text.font-weight-bold.text-danger キャンセルする場合、在庫数は手動で戻してください。
-                        .row.mb-3
+                                    p.form-text.font-weight-bold.text-danger.mb-0 キャンセルする場合、在庫数は手動で戻してください。
+                        .row
                             .col-3
                                 span お支払い方法
                             .col
                                 form.c-form--inline
                                     .c-form__select--small
-                                        select
+                                        select.mb-0
                                             option 郵便振替
                                             option ...
-                                    p.form-text.font-weight-bold.text-danger お支払方法の変更に伴う手数料の変更は手動にてお願いします。
+                                    p.form-text.font-weight-bold.text-danger.mb-0 お支払方法の変更に伴う手数料の変更は手動にてお願いします。
                     .col-6
                         .row.mb-3
                             .col-3
@@ -93,14 +93,14 @@ block primaryContents
                         i.fa.fa-angle-up.fa-lg
         .collapse(id="ordererInfo").show
             .card-body
-                .row.mb-3
+                .row.mb-2
                     .col-3
                         .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
                             span 会員ID
                             i.fa.fa-question-circle.fa-lg.ml-1
                     .col
                         p 12
-                .row.mb-3
+                .row.mb-2
                     .col-3
                         span お名前
                         span.badge.badge-primary.ml-1 必須
@@ -111,12 +111,12 @@ block primaryContents
                                     input.form-control(type='text', placeholder='性')
                                 .col
                                     input.form-control(type='text', placeholder='名')
-                .row.mb-3
+                .row.mb-2
                     .col-3
                         span 住所
                         span.badge.badge-primary.ml-1 必須
                     .col.mb-3
-                        form.mb-3
+                        form.mb-2
                             .row.justify-content-start
                                 .col-2
                                     input.form-control(type='text', placeholder='郵便番号1')
@@ -124,22 +124,22 @@ block primaryContents
                                     span.align-middle -
                                 .col-2
                                     input.form-control(type='text', placeholder='郵便番号2')
-                        form.mb-3
+                        form.mb-2
                             .row.justify-content-start
                                 .col-2
                                     select.form-control
                                         option(value='') 東京都
                         form
-                            input.form-control.mb-3(type='text', placeholder='住所1')
+                            input.form-control.mb-2(type='text', placeholder='住所1')
                             input.form-control(type='text', placeholder='住所2')
-                .row.mb-3
+                .row.mb-2
                     .col-3
                         span メールアドレス
                         span.badge.badge-primary.ml-1 必須
                     .col
                         form
                             input.form-control(type='email')
-                .row.mb-3
+                .row.mb-2
                     .col-3
                         span 電話番号
                         span.badge.badge-primary.ml-1 必須
@@ -156,7 +156,7 @@ block primaryContents
                                     span.align-middle -
                                 .col-2
                                     input.form-control(type='text', placeholder='0000')
-                .row.mb-3
+                .row.mb-2
                     .col-3
                         span FAX番号
                         span.badge.badge-primary.ml-1 必須
@@ -173,13 +173,13 @@ block primaryContents
                                     span.align-middle -
                                 .col-2
                                     input.form-control(type='text', placeholder='0000')
-                .row.mb-3
+                .row.mb-2
                     .col-3
                         span 会社名
                     .col
                         form
                             input.form-control(type='text' , placeholder='テキスト')
-                .row.mb-3
+                .row.mb-2
                     .col-3
                         span お問い合わせ
                     .col
@@ -202,12 +202,113 @@ block primaryContents
             .card-body
                 .row.justify-content-between.mb-2
                     .col-6
-                        button.btn.btn-light.border.border-dark.mr-2 商品を追加
-                        button.btn.btn-light.border.border-dark.mr-2 その他の明細を追加
+                        button.btn.btn-outline-dark.mr-2(data-toggle="modal" data-target="#addProduct") 商品を追加
+                        #addProduct.modal.fade(tabindex='-1', role='dialog', aria-labelledby='addProduct', aria-hidden='true')
+                            .modal-dialog(role='document')
+                                .modal-content
+                                    .modal-header
+                                        h5.modal-title 商品を追加
+                                        button.close(type='button', data-dismiss='modal', aria-label='Close')
+                                            span(aria-hidden='true') ×
+                                    .modal-body
+                                        form
+                                            input.form-control.mb-3(type='text', placeholder='商品・ID・コード')
+                                            select.form-control.mb-3
+                                                option(value='') カテゴリを選択
+                                            a.c-button--regular.c-button--conversion.mb-5(href='') 検索
+                                        table.table.table-striped.table-sm.mb-3
+                                            thead.table-active
+                                                th 商品名・コード
+                                                th 規格
+                                                th
+                                            tbody
+                                                - for (var x = 0; x < 3; x++)
+                                                    tr
+                                                        td.align-middle
+                                                            p.m-0  パーコレーター
+                                                            span Cafe01
+                                                        td.align-middle
+                                                            .row.mb-2
+                                                                .col-4.pr-0
+                                                                    span 材質
+                                                                .col-8.text-left.pl-0
+                                                                    select.form-control
+                                                                        option(value='') 選択
+                                                            .row
+                                                                .col-4.pr-0
+                                                                    span サイズ
+                                                                .col-8.text-left.pl-0
+                                                                    select.form-control
+                                                                        option(value='') 選択
+                                                        td.align-middle
+                                                            button.close(type='button', data-dismiss='modal', aria-label='Close')
+                                                                span(aria-hidden='true') +
+                                                tr
+                                                    td.align-middle
+                                                        p.m-0  コーヒーケルト
+                                                        span Cafe02
+                                                    td.align-middle
+                                                    td.align-middle
+                                                        button.close(type='button', data-dismiss='modal', aria-label='Close')
+                                                            span(aria-hidden='true') +
+                                        .row.justify-content-md-center.mb-4
+                                            .col-auto
+                                                .btn-group.btn-group-lg
+                                                    button.btn.btn-secondary(type='button') 1
+                                                .btn-group.btn-group-lg
+                                                    button.btn.btn-light.border.border-dark(type='button') 2
+                                                .btn-group.btn-group-lg
+                                                    button.btn.btn-light.border.border-dark(type='button') 3
+                                                .btn-group.btn-group-lg
+                                                    button.btn.btn-light.border.border-dark(type='button') 4
+                        button.btn.btn-outline-dark.mr-2(data-toggle="modal" data-target="#addDetail") その他の明細を追加
+                        #addDetail.modal.fade(tabindex='-1', role='dialog', aria-labelledby='addDetail', aria-hidden='true')
+                            .modal-dialog(role='document')
+                                .modal-content
+                                    .modal-header
+                                        h5.modal-title その他の明細を追加
+                                        button.close(type='button', data-dismiss='modal', aria-label='Close')
+                                            span(aria-hidden='true') ×
+                                    .modal-body
+                                        table.table.table-striped.mb-3
+                                            thead.table-active
+                                                th 追加項目
+                                                th
+                                            tbody
+                                                tr
+                                                    td.align-middle 送料を追加
+                                                    td.align-middle
+                                                        button.close(type='button', data-dismiss='modal', aria-label='Close')
+                                                            span(aria-hidden='true') +
+                                                tr
+                                                    td.align-middle 手数料を追加
+                                                    td.align-middle
+                                                        button.close(type='button', data-dismiss='modal', aria-label='Close')
+                                                            span(aria-hidden='true') +
+                                                tr
+                                                    td.align-middle 値引きを追加
+                                                    td.align-middle
+                                                        button.close(type='button', data-dismiss='modal', aria-label='Close')
+                                                            span(aria-hidden='true') +
+                                                tr
+                                                    td.align-middle 空白の明細を追加
+                                                    td.align-middle
+                                                        button.close(type='button', data-dismiss='modal', aria-label='Close')
+                                                            span(aria-hidden='true') +
+                                        .row.justify-content-md-center.mb-4
+                                            .col-auto
+                                                .btn-group.btn-group-lg
+                                                    button.btn.btn-secondary(type='button') 1
+                                                .btn-group.btn-group-lg
+                                                    button.btn.btn-light.border.border-dark(type='button') 2
+                                                .btn-group.btn-group-lg
+                                                    button.btn.btn-light.border.border-dark(type='button') 3
+                                                .btn-group.btn-group-lg
+                                                    button.btn.btn-light.border.border-dark(type='button') 4
                     .col-5.text-right
-                        button.btn.btn-light.border.border-dark.mr-2 計算結果の更新
+                        button.btn.btn-outline-dark.mr-2 計算結果の更新
 
-                table.table.table-striped.mb-0
+                table.table.table-striped.table-sm.mb-0
                     thead.table-active
                         th 商品名・コード
                         th 出荷番号
@@ -219,7 +320,7 @@ block primaryContents
                     tbody
                         tr
                             td.align-middle.w-25
-                                p  ☆ご予約販売☆
+                                p.mb-0.font-weight-bold  ☆ご予約販売☆
                                     br
                                     | あかもく ぎばさ 秋田県男鹿の三高水産 冷凍(200g×10袋)ギバサ・アカモクはフコイダンが豊富な海藻！日本海産/ぎばさ/あかもく/ギバサ/アカモク/たけしの家庭の医学で紹介！
                                 span Cafe01
@@ -243,10 +344,10 @@ block primaryContents
                                 span ¥4,000
                                 small （税込）
                             td.align-middle
-                                i.fa.fa-close.fa-lg(data-toggle="tooltip" data-placement="top" title="Tooltip")
+                                i.fa.fa-close.fa-lg.text-secondary(data-toggle="tooltip" data-placement="top" title="Tooltip")
                         tr
                             td.align-middle.w-25
-                                p  パーコレーター
+                                p.mb-0.font-weight-bold  パーコレーター
                                 span Cafe01
                             td.align-middle
                                 a(href="") 56
@@ -268,10 +369,10 @@ block primaryContents
                                 span ¥4,000
                                 small （税込）
                             td.align-middle
-                                i.fa.fa-close.fa-lg(data-toggle="tooltip" data-placement="top" title="Tooltip")
+                                i.fa.fa-close.fa-lg.text-secondary(data-toggle="tooltip" data-placement="top" title="Tooltip")
                         tr
                             td.align-middle.w-25
-                                p  パーコレーター
+                                p.mb-0.font-weight-bold  パーコレーター
                                 span Cafe01
                             td.align-middle
                                 a(href="") 56
@@ -293,7 +394,7 @@ block primaryContents
                                 span ¥4,000
                                 small （税込）
                             td.align-middle
-                                i.fa.fa-close.fa-lg(data-toggle="tooltip" data-placement="top" title="Tooltip")
+                                i.fa.fa-close.fa-lg.text-secondary(data-toggle="tooltip" data-placement="top" title="Tooltip")
                 hr.mt-0
                 .row.justify-content-end.mb-3
                     .col-auto
@@ -616,8 +717,8 @@ block primaryContents
                                                     br
                                             .modal-footer
                                                 button.btn.btn-light(type='button', data-dismiss='modal') 閉じる
-
-
+                .text-center
+                    a(href="/order/mail/").btn.btn-outline-dark メールの新規作成
 
     .card.rounded.border-0.mb-4
         .card-header

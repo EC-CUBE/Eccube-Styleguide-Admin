@@ -1,15 +1,7 @@
-mixin c-toggleSwitch
+mixin c-toggleSwitch(text)
     +b.c-toggleSwitch
         +e.btn
             input(type="checkbox" id="switch")
             label(for="switch")
         +e.label
-            span 公開
-
-mixin c-toggleSwitch--customer
-    +b.c-toggleSwitch
-        +e.btn
-            input(type="checkbox" id="switch")
-            label(for="switch")
-        +e.label
-            span 本会員
+            span= text

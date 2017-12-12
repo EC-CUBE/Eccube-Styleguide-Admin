@@ -16,56 +16,52 @@ block primaryContents
                         i.fa.fa-angle-up.fa-lg
         .collapse(id="basicConfig").show
             .card-body
-                .row.mb-3
+                .row
                     .col-3
                         .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
                             span 商品名
                             i.fa.fa-question-circle.fa-lg.ml-1
                     .col
                         p 12
-                .row.mb-3
+                .row
                     .col-3
                         .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
                             span 商品ID
                             i.fa.fa-question-circle.fa-lg.ml-1
                             span.badge.badge-primary.ml-1 必須
-                    .col
+                    .col.mb-2
                         form
-                            .form-group
-                                input(type="text" placeholder="テキスト").form-control
-                .row.mb-3
+                            input(type="text" placeholder="テキスト").form-control
+                .row
                     .col-3
                         .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
                             span 商品種別
                             i.fa.fa-question-circle.fa-lg.ml-1
                             span.badge.badge-primary.ml-1 必須
-                    .col
+                    .col.mb-2
                         form
-                            .form-group
-                                select.form-control
-                                    option(value='') 通常商品
-                .row.mb-3
+                            select.form-control
+                                option(value='') 通常商品
+                .row
                     .col-3
                         .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
                             span 商品画像
                             i.fa.fa-question-circle.fa-lg.ml-1
-                    .col
+                    .col.mb-2
                         form
-                            .form-group
-                                input(type="file").form-control-file
-                .row.mb-3
+                            input(type="file").form-control-file
+                .row
                     .col-3
                         .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
                             span 商品説明
                             i.fa.fa-question-circle.fa-lg.ml-1
                     .col
                         form
-                            .form-group
-                                textarea(rows="8").form-control
-                        .d-inline-block
+                            textarea(rows="8").form-control
+                        .d-inline-block.mb-2
                             i.fa.fa-plus-square-o.font-weight-bold.mr-1
                             span.font-weight-bold 一覧コメントを追加
-                .row.mb-3
+                .row
                     .col-3
                         .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
                             span 販売価格
@@ -73,12 +69,11 @@ block primaryContents
                             span.badge.badge-primary.ml-1 必須
                     .col
                         form
-                            .form-group
-                                input(type="text" placeholder="テキスト").form-control
-                        .d-inline-block
+                            input(type="text" placeholder="テキスト").form-control
+                        .d-inline-block.mb-2
                             i.fa.fa-plus-square-o.font-weight-bold.mr-1
                             span.font-weight-bold 通常価格を追加
-                .row.mb-3
+                .row
                     .col-3
                         .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
                             span 在庫数
@@ -86,21 +81,19 @@ block primaryContents
                             span.badge.badge-primary.ml-1 必須
                     .col
                         form
-                            .form-group
-                                input(type="text" placeholder="テキスト").form-control
-                            .form-check
+                            input(type="text" placeholder="テキスト").form-control
+                            .form-check.mb-2
                                 label.form-check-label
                                     input.form-check-input(type="checkbox")
                                     span 無制限
-                .row.mb-3
+                .row
                     .col-3
                         .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
                             span 検索ワード
                             i.fa.fa-question-circle.fa-lg.ml-1
-                    .col
+                    .col.mb-2
                         form
-                            .form-group
-                                input(type="text" placeholder="テキスト").form-control
+                            input(type="text" placeholder="テキスト").form-control
     .card.rounded.border-0.mb-4
         .card-header
             .row
@@ -184,8 +177,7 @@ block primaryContents
                             i.fa.fa-question-circle.fa-lg.ml-1
                     .col-9
                         form
-                            .form-group
-                                textarea(rows="8" placeholder="テキスト").form-control
+                            textarea(rows="8" placeholder="テキスト").form-control
 
 block secondaryContents
     .card.rounded.border-0.mb-4
@@ -292,8 +284,7 @@ block secondaryContents
         .collapse(id="shopMemo").show
             .card-body
                 form
-                    .form-group
-                        textarea(rows="8" placeholder="テキスト").form-control
+                    textarea(rows="8" placeholder="テキスト").form-control
 
 block conversionArea
     +b.c-conversionArea
@@ -308,6 +299,6 @@ block conversionArea
                     .row.align-items-center.justify-content-end
                         .col-auto
                             include /assets/tmpl/components/toggleSwitch.pug
-                            +c-toggleSwitch
+                            +c-toggleSwitch('公開')
                         .col-auto
                             button(type="submit").btn.btn-primary.px-5 更新
