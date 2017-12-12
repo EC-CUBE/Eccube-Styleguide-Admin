@@ -14,14 +14,14 @@ block primaryContents
                         i.fa.fa-angle-up.fa-lg
         .collapse(id="layoutOverview").show
             .card-body
-                .row.mb-3
+                .row.mb-2
                     .col-3.pr-0
                         span レイアウト名
                         span.badge.badge-primary.ml-1 必須
                     .col
                         form
                             input.form-control(type='text', placeholder='テキスト')
-                .row.mb-3
+                .row
                     .col-3.pr-0
                         .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
                             span 端末種別
@@ -47,8 +47,8 @@ block primaryContents
                     .col.p-2
                         .d-block.border
                             .d-block.p-3.border.border-top-0.border-right-0.border-left-0
-                                p.font-weight-bold headセクション
-                                .d-block.border.border-secondary.bg-light.p-3.mb-2
+                                p.font-weight-bold.mb-2 headセクション
+                                .d-block.border.border-secondary.bg-light.p-2.mb-2
                                     .row.justify-content-between
                                         .col
                                             i.fa.fa-bars.text-secondary.mr-3
@@ -62,7 +62,7 @@ block primaryContents
                                                 data-html="true"
                                             )
                                                 i.fa.fa-ellipsis-v.fa-lg.text-secondary
-                                .d-block.border.border-secondary.bg-light.p-3
+                                .d-block.border.border-secondary.bg-light.p-2
                                     .row.justify-content-between
                                         .col
                                             i.fa.fa-bars.text-secondary.mr-3
@@ -77,12 +77,12 @@ block primaryContents
                                             )
                                                 i.fa.fa-ellipsis-v.fa-lg.text-secondary
                             .d-block.p-3.border.border-top-0.border-right-0.border-left-0
-                                p.font-weight-bold <body>タグ直後
+                                p.font-weight-bold.mb-2 <body>タグ直後
                                 .d-block.text-center.border.border-secondary.p-3
                                     span.text-secondary ブロックをドラッグ＆ドロップ
                             .d-block.p-3.border.border-top-0.border-right-0.border-left-0
-                                p.font-weight-bold #header
-                                .d-block.border.border-secondary.bg-light.p-3.mb-2
+                                p.font-weight-bold.mb-2 #header
+                                .d-block.border.border-secondary.bg-light.p-2.mb-2
                                     .row.justify-content-between
                                         .col
                                             i.fa.fa-bars.text-secondary.mr-3
@@ -96,7 +96,7 @@ block primaryContents
                                             data-html="true"
                                             )
                                                 i.fa.fa-ellipsis-v.fa-lg.text-secondary
-                                .d-block.border.border-secondary.bg-light.p-3
+                                .d-block.border.border-secondary.bg-light.p-2
                                     .row.justify-content-between
                                         .col
                                             i.fa.fa-bars.text-secondary.mr-3
@@ -111,15 +111,15 @@ block primaryContents
                                             )
                                                 i.fa.fa-ellipsis-v.fa-lg.text-secondary
                             .d-block.p-3.border.border-top-0.border-right-0.border-left-0
-                                p.font-weight-bold #contents_top
+                                p.font-weight-bold.mb-2 #contents_top
                                 .d-block.text-center.border.border-secondary.p-3
                                     span.text-secondary ブロックをドラッグ＆ドロップ
                             .d-block.pl-3.pr-3.border.border-top-0.border-right-0.border-left-0
                                 .row
                                     .col.align-items-start.pr-0.p-3.border.border-top-0
                                         .d-block
-                                            p.font-weight-bold #side_left
-                                            .d-block.border.border-secondary.bg-light.p-3.mb-2.h-100
+                                            p.font-weight-bold.mb-2 #side_left
+                                            .d-block.border.border-secondary.bg-light.p-2.mb-2.h-100
                                                 .row.justify-content-between
                                                     .col
                                                         i.fa.fa-bars.text-secondary.mr-3
@@ -133,7 +133,7 @@ block primaryContents
                                                         data-html="true"
                                                         )
                                                             i.fa.fa-ellipsis-v.fa-lg.text-secondary
-                                            .d-block.border.border-secondary.bg-light.p-3
+                                            .d-block.border.border-secondary.bg-light.p-2
                                                 .row.justify-content-between
                                                     .col
                                                         i.fa.fa-bars.text-secondary.mr-3
@@ -150,40 +150,40 @@ block primaryContents
                                     .col.align-items-start.pl-0.pr-0.border.border-top-0.border-left-0.border-bottom-0
                                         .d-block.h-100
                                             .d-block.p-3.border.border-top-0.border-left-0.border-right-0
-                                                p.font-weight-bold #main_top
-                                                .d-block.text-center.border.border-secondary.p-3
+                                                p.font-weight-bold.mb-2 #main_top
+                                                .d-block.text-center.border.border-secondary.p-2
                                                     span.text-secondary ブロックをドラッグ＆ドロップ
                                             .d-block.p-3.border.border-top-0.border-left-0.border-right-0.bg-light
-                                                p.font-weight-bold #main
+                                                p.font-weight-bold.mb-2 #main
                                                 .d-block.text-center.p-3
                                             .d-block.p-3.border.border-top-0.border-left-0.border-right-0
-                                                p.font-weight-bold #main_bottom
-                                                .d-block.text-center.border.border-secondary.p-3
+                                                p.font-weight-bold.mb-2 #main_bottom
+                                                .d-block.text-center.border.border-secondary.p-2
                                                     span.text-secondary ブロックをドラッグ＆ドロップ
                                     .col.align-items-start.pl-0.border.border-top-0.border-left-0
                                         .d-block.p-3.h-100
-                                            p.font-weight-bold #side_right
-                                            .d-block.text-center.border.border-secondary.p-3
+                                            p.font-weight-bold.mb-2 #side_right
+                                            .d-block.text-center.border.border-secondary.p-2
                                                 span.text-secondary ブロックをドラッグ＆ドロップ
                             .d-block.border.border-top-0.border-right-0.border-left-0
                                 .d-block.p-3.border-top-0.border-right-0.border-left-0
-                                    p.font-weight-bold #contents_bottom
-                                    .d-block.text-center.border.border-secondary.p-3
+                                    p.font-weight-bold.mb-2 #contents_bottom
+                                    .d-block.text-center.border.border-secondary.p-2
                                         span.text-secondary ブロックをドラッグ＆ドロップ
                             .d-block.border.border-top-0.border-right-0.border-left-0
                                 .d-block.p-3.border-top-0.border-right-0.border-left-0
-                                    p.font-weight-bold #footer
-                                    .d-block.text-center.border.border-secondary.p-3
+                                    p.font-weight-bold.mb-2 #footer
+                                    .d-block.text-center.border.border-secondary.p-2
                                         span.text-secondary ブロックをドラッグ＆ドロップ
                             .d-block.border.border-top-0.border-right-0.border-left-0
                                 .d-block.p-3.border-top-0.border-right-0.border-left-0
-                                    p.font-weight-bold #drawer
-                                    .d-block.text-center.border.border-secondary.p-3
+                                    p.font-weight-bold.mb-2 #drawer
+                                    .d-block.text-center.border.border-secondary.p-2
                                         span.text-secondary ブロックをドラッグ＆ドロップ
                             .d-block
                                 .d-block.p-3.border-top-0.border-right-0.border-left-0
-                                    p.font-weight-bold </body>タグ直前
-                                    .d-block.border.border-secondary.bg-light.p-3.mb-2
+                                    p.font-weight-bold.mb-2 </body>タグ直前
+                                    .d-block.border.border-secondary.bg-light.p-2.mb-2
                                         .row.justify-content-between
                                             .col
                                                 i.fa.fa-bars.text-secondary.mr-3
@@ -200,7 +200,7 @@ block primaryContents
                     .col-3.p-2
                         .d-block.border
                             .d-block.p-3.border.border-top-0.border-right-0.border-left-0
-                                p.font-weight-bold 未使用ブロック
+                                p.font-weight-bold.mb-2 未使用ブロック
                                 form.mb-3
                                     .form-row
                                         .col
@@ -208,7 +208,7 @@ block primaryContents
                                         .col-auto
                                             button.btn.btn-light(type="submit"): i.fa.fa-search
                                 - for (var x = 0; x < 15; x++)
-                                    .d-block.border.border-secondary.bg-light.p-3.mb-2
+                                    .d-block.border.border-secondary.bg-light.p-2.mb-2
                                         .row.justify-content-between
                                             .col
                                                 i.fa.fa-bars.text-secondary.mr-3
