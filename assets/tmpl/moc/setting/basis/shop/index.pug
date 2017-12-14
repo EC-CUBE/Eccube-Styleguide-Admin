@@ -1,0 +1,237 @@
+extends /assets/tmpl/moc/layout/_layout-2col.pug
+block pageTitle
+    include /assets/tmpl/components/pageTitle.pug
+    +c-pageTitle("ショップマスター","基本情報設定")
+
+block primaryContents
+    .card.rounded.border-0.mb-4
+        .card-header
+            .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
+                span 基本情報
+        .card-body
+            .card-body
+                .row
+                    .col-3
+                        .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
+                            span 会社名
+                    .col.mb-2
+                        form
+                            input(type="text").form-control
+                .row
+                    .col-3
+                        .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
+                            span 会社名（フリガナ）
+                    .col.mb-2
+                        form
+                            input(type="text").form-control
+                .row
+                    .col-3
+                        .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
+                            span 店名
+                    .col.mb-2
+                        form
+                            input(type="text").form-control
+                .row
+                    .col-3
+                        .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
+                            span 店名（フリガナ）
+                    .col.mb-2
+                        form
+                            input(type="text").form-control
+                .row
+                    .col-3
+                        .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
+                            span 店名（英語表記）
+                    .col.mb-2
+                        form
+                            input(type="text").form-control
+                .row
+                    .col-3
+                        .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
+                            span 住所
+                            span.badge.badge-primary.ml-1 必須
+                    .col.mb-2
+                        form.mb-2
+                            .row.justify-content-start
+                                .col-2
+                                    input.form-control(type='text', placeholder='郵便番号1')
+                                .col-auto.text-center.p-0
+                                    span.align-middle -
+                                .col-2
+                                    input.form-control(type='text', placeholder='郵便番号2')
+                        form.mb-2
+                            .row.justify-content-start
+                                .col-3
+                                    select.form-control
+                                        option(value='') 都道府県を選択
+                        form
+                            input.form-control.mb-2(type='text', placeholder='市区町村名（例：千代田区神田神保町）')
+                            input.form-control(type='text', placeholder='番地・ビル名（例：1-1-2）')
+                .row.mb-4
+                    .col-3
+                        .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
+                            span 店舗営業時間
+                    .col.mb-2
+                        form
+                            input(type="text").form-control
+                .row.mb-3
+                    .col-3
+                        .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
+                            span 送信元メールアドレス(From)
+                    .col.mb-2
+                        form
+                            input(type="text").form-control
+                .row.mb-3
+                    .col-3
+                        .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
+                            span 問い合わせ受付メールアドレス(From, ReplyTo)
+                    .col.mb-2
+                        form
+                            input(type="text").form-control
+                .row.mb-3
+                    .col-3
+                        .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
+                            span 返信受付メールアドレス(ReplyTo)
+                    .col.mb-2
+                        form
+                            input(type="text").form-control
+                .row.mb-3
+                    .col-3
+                        .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
+                            span 返信受付メールアドレス(ReplyTo)
+                    .col.mb-2
+                        form
+                            input(type="text").form-control
+                .row
+                    .col-3
+                        .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
+                            span 取り扱い商品説明文
+                    .col.mb-2
+                        form
+                            textarea(rows="8").form-control
+                .row
+                    .col-3
+                        .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
+                            span 店舗からのメッセージ
+                    .col.mb-2
+                        form
+                            textarea(rows="8").form-control
+    .card.rounded.border-0.mb-4
+        .card-header
+            .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
+                span 送料設定
+        .card-body
+            .card-body
+                .row
+                    .col-3
+                        .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
+                            span 送料無料条件（金額）
+                            i.fa.fa-question-circle.fa-lg.ml-1
+                    .col.mb-2
+                        .input-group
+                            span.input-group-addon ￥
+                            input(type="text").form-control
+                .row
+                    .col-3
+                        .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
+                            span 送料無料条件（金額）
+                            i.fa.fa-question-circle.fa-lg.ml-1
+                    .col.mb-2
+                        .input-group
+                            input(type="text").form-control
+                .row
+                    .col-3
+                        .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
+                            span 商品ごとの送料設定
+                    .col.mb-2
+                        include /assets/tmpl/components/toggleSwitch.pug
+                        +c-toggleSwitch('switch_productCost', '無効')
+                .row
+                    .col-3
+                        .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
+                            span 複数配送
+                    .col.mb-2
+                        include /assets/tmpl/components/toggleSwitch.pug
+                        +c-toggleSwitch('switch_multiDelivery', '無効')
+    .card.rounded.border-0.mb-4
+        .card-header
+            .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
+                span 会員設定
+        .card-body
+            .card-body
+                .row
+                    .col-3
+                        .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
+                            span 仮会員機能
+                    .col.mb-2
+                        include /assets/tmpl/components/toggleSwitch.pug
+                        +c-toggleSwitch('switch_provisionalUser', '有効')
+                .row
+                    .col-3
+                        .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
+                            span マイページに注文状況を表示
+                    .col.mb-2
+                        include /assets/tmpl/components/toggleSwitch.pug
+                        +c-toggleSwitch('switch_mypageOrder', '有効')
+                .row
+                    .col-3
+                        .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
+                            span お気に入り商品機能
+                    .col.mb-2
+                        include /assets/tmpl/components/toggleSwitch.pug
+                        +c-toggleSwitch('switch_autoLogin', '有効')
+                .row
+                    .col-3
+                        .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
+                            span 自動ログイン機能
+                    .col.mb-2
+                        include /assets/tmpl/components/toggleSwitch.pug
+                        +c-toggleSwitch('switch_autoLogin', '無効')
+    .card.rounded.border-0.mb-4
+        .card-header
+            .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
+                span 商品設定
+        .card-body
+            .card-body
+                .row
+                    .col-3
+                        .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
+                            span 在庫切れ商品の表示
+                    .col.mb-2
+                        include /assets/tmpl/components/toggleSwitch.pug
+                        +c-toggleSwitch('switch_autoLogin', '非表示')
+    .card.rounded.border-0.mb-4
+        .card-header
+            .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
+                span 地図設定
+        .card-body
+            .card-body
+                .row
+                    .col-3
+                        .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
+                            span 緯度
+                            i.fa.fa-question-circle.fa-lg.ml-1
+                    .col.mb-2
+                        .input-group
+                            input(type="text").form-control
+                            span.input-group-addon 度
+                .row
+                    .col-3
+                        .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
+                            span 経度
+                            i.fa.fa-question-circle.fa-lg.ml-1
+                    .col.mb-2
+                        .input-group
+                            input(type="text").form-control
+                            span.input-group-addon 度
+
+block conversionArea
+    +b.c-conversionArea
+        +e.container
+            .row.justify-content-between.align-items-center
+                .col-6
+                    +e.leftBlockItem
+                .col-6
+                    .row.align-items-center.justify-content-end
+                        .col-auto
+                            button(type="submit").btn.btn-primary.px-5 登録

@@ -9,7 +9,10 @@ mixin c-toggleSwitch--conversion(id,text)
 mixin c-toggleSwitch(id,text)
     +b.c-toggleSwitch
         +e.btn
-            input(type="checkbox" id=id)
+            if text == '有効'
+                input(type="checkbox" id=id checked)
+            else
+                input(type="checkbox" id=id)
             label(for=id)
         +e.label
-            span= text
+            span.text-dark= text
