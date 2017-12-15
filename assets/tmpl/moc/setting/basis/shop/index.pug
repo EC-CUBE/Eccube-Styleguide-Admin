@@ -9,7 +9,6 @@ block primaryContents
             .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
                 span 基本情報
         .card-body
-            .card-body
                 .row
                     .col-3
                         .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
@@ -67,7 +66,7 @@ block primaryContents
                         form
                             input.form-control.mb-2(type='text', placeholder='市区町村名（例：千代田区神田神保町）')
                             input.form-control(type='text', placeholder='番地・ビル名（例：1-1-2）')
-                .row.mb-4
+                .row.mb-3
                     .col-3
                         .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
                             span 店舗営業時間
@@ -121,7 +120,6 @@ block primaryContents
             .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
                 span 送料設定
         .card-body
-            .card-body
                 .row
                     .col-3
                         .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
@@ -130,7 +128,7 @@ block primaryContents
                     .col.mb-2
                         .input-group
                             span.input-group-addon ￥
-                            input(type="text").form-control
+                            input(type="number").form-control
                 .row
                     .col-3
                         .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
@@ -138,7 +136,8 @@ block primaryContents
                             i.fa.fa-question-circle.fa-lg.ml-1
                     .col.mb-2
                         .input-group
-                            input(type="text").form-control
+                            input(type="number").form-control
+                            span.input-group-addon 点
                 .row
                     .col-3
                         .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
@@ -158,7 +157,6 @@ block primaryContents
             .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
                 span 会員設定
         .card-body
-            .card-body
                 .row
                     .col-3
                         .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
@@ -179,7 +177,7 @@ block primaryContents
                             span お気に入り商品機能
                     .col.mb-2
                         include /assets/tmpl/components/toggleSwitch.pug
-                        +c-toggleSwitch('switch_autoLogin', '有効')
+                        +c-toggleSwitch('switch_favoriteProduct', '有効')
                 .row
                     .col-3
                         .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
@@ -192,20 +190,18 @@ block primaryContents
             .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
                 span 商品設定
         .card-body
-            .card-body
-                .row
-                    .col-3
-                        .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
-                            span 在庫切れ商品の表示
-                    .col.mb-2
-                        include /assets/tmpl/components/toggleSwitch.pug
-                        +c-toggleSwitch('switch_autoLogin', '非表示')
+            .row
+                .col-3
+                    .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
+                        span 在庫切れ商品の表示
+                .col.mb-2
+                    include /assets/tmpl/components/toggleSwitch.pug
+                    +c-toggleSwitch('switch_productDisplay', '非表示')
     .card.rounded.border-0.mb-4
         .card-header
             .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
                 span 地図設定
         .card-body
-            .card-body
                 .row
                     .col-3
                         .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
@@ -213,7 +209,7 @@ block primaryContents
                             i.fa.fa-question-circle.fa-lg.ml-1
                     .col.mb-2
                         .input-group
-                            input(type="text").form-control
+                            input(type="number").form-control
                             span.input-group-addon 度
                 .row
                     .col-3
@@ -222,7 +218,7 @@ block primaryContents
                             i.fa.fa-question-circle.fa-lg.ml-1
                     .col.mb-2
                         .input-group
-                            input(type="text").form-control
+                            input(type="number").form-control
                             span.input-group-addon 度
 
 block conversionArea
