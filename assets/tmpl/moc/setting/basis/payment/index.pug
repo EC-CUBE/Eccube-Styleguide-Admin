@@ -9,8 +9,8 @@ block primaryContents
             .row
                 .col-8
                     .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
-                        span.card-title 基本設定
-        .card.rounded.border-0.mb-4
+                        span.card-title 支払方法
+        .card-body.p-0
             ul.list-group.list-group-flush.mb-4
                 li.list-group-item
                     .row.justify-content-around
@@ -27,7 +27,7 @@ block primaryContents
                         .col-auto
                             i.fa.fa-bars
                         .col-1
-                            a(href="/product/standard/detail") 郵便振替
+                            a(href="/setting/basis/payment/edit") 郵便振替
                         .col-1
                             span 0.00
                         .col
@@ -41,7 +41,7 @@ block primaryContents
                         .col-auto
                             i.fa.fa-bars
                         .col-1
-                            a(href="/product/standard/detail") 銀行振込
+                            a(href="/setting/basis/payment/edit") 銀行振込
                         .col-1
                             span 0.00
                         .col
@@ -55,7 +55,7 @@ block primaryContents
                         .col-auto
                             i.fa.fa-bars
                         .col-1
-                            a(href="/product/standard/detail") 現金書留
+                            a(href="/setting/basis/payment/edit") 現金書留
                         .col-1
                             span 0.00
                         .col
@@ -69,7 +69,7 @@ block primaryContents
                         .col-auto
                             i.fa.fa-bars
                         .col-1
-                            a(href="/product/standard/detail") 代金引換
+                            a(href="/setting/basis/payment/edit") 代金引換
                         .col-1
                             span 0.00
                         .col
@@ -78,6 +78,6 @@ block primaryContents
                             .d-inline-block.mr-3(href="" data-toggle="tooltip" data-placement="top" title="上へ移動"): i.fa.fa-arrow-up.fa-lg.text-secondary
                             .d-inline-block.mr-3(href="" data-toggle="tooltip" data-placement="top" title="下へ移動"): i.fa.fa-arrow-down.fa-lg.text-secondary
                             .d-inline-block.mr-3(href="" data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-close.fa-lg.text-secondary
-            .col-4.text-left
-                button.btn.btn-outline-dark 新規作成
+            .col-4.text-left.mb-4
+                a(href="/setting/basis/payment/edit").btn.btn-outline-dark 新規作成
     p 項目の順番はドラッグ＆ドロップでも変更可能です。
