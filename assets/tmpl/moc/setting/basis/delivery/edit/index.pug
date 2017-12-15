@@ -1,0 +1,140 @@
+extends /assets/tmpl/moc/layout/_layout-2col.pug
+block pageTitle
+    include /assets/tmpl/components/pageTitle.pug
+    +c-pageTitle("支払方法登録・編集","基本情報設定")
+
+block primaryContents
+    .card.rounded.border-0.mb-4
+        .card-header
+            span 配送方法登録・編集
+        .card-body
+            .row
+                .col-3
+                    span 配送業者名
+                .col.mb-2
+                    form
+                        input(type="text").form-control
+            .row
+                .col-3
+                    span 配送方法名称
+                .col.mb-2
+                    form
+                        input(type="text").form-control
+            .row
+                .col-3
+                    .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
+                        span 伝票No.URL
+                        i.fa.fa-question-circle.fa-lg.ml-1
+                .col.mb-2
+                    form
+                        input(type="text").form-control
+            .row
+                .col-3
+                    span 取扱商品種別
+                .col.mb-2
+                    form
+                        select.form-control
+                            option(value='') 商品種別B
+    .card.rounded.border-0.mb-4
+        .card-header
+            span 取り扱う支払方法
+        .card-body
+            form
+                label.form-check-label.mr-3
+                    input.form-check-input(type='checkbox', value='')
+                    | 郵便振替
+                label.form-check-label.mr-3
+                    input.form-check-input(type='checkbox', value='')
+                    | 現金書留
+                label.form-check-label
+                    input.form-check-input(type='checkbox', value='')
+                    | 銀行振込
+                label.form-check-label
+                    input.form-check-input(type='checkbox', value='')
+                    | 代金引換
+    .card.rounded.border-0.mb-2
+        .card-header
+            span お届け時間設定
+        .card-body.p-0
+            include /assets/tmpl/components/table.pug
+            +c-sortTable--delivery("[配送業者A] 配送業者A","[配送業者B] 配送業者B","[配送業者C] 配送業者C")
+    p.mb-4 項目の順番はドラッグ＆ドロップでも変更可能です。
+    .card.rounded.border-0.mb-4
+        .card-header
+            span 都道府県別送料設定
+        .card-body.p-0
+            ul.list-group.list-group-flush
+                li.list-group-item
+                    .row.justify-content-start
+                        .col-2
+                            .d-inline-block.align-middle(data-toggle="tooltip" data-placement="top" title="Tooltip")
+                                span.card-title 全国一律に設定
+                                i.fa.fa-question-circle.fa-lg.ml-1
+                        .col-3
+                            form.input-group
+                                span.input-group-addon ￥
+                                input(type="number").form-control
+                        .col-auto
+                            button(type="button").btn.btn-outline-dark 各都道府県に適用
+                li.list-group-item
+                    .row.mb-2
+                        .col
+                            form.row
+                                .col-auto
+                                    label 北海道
+                                .col.pl-0
+                                    .input-group
+                                        span.input-group-addon ￥
+                                        input(type="number").form-control
+                        .col
+                            form.row
+                                .col-auto
+                                    label 青森県
+                                .col.pl-0
+                                    .input-group
+                                        span.input-group-addon ￥
+                                        input(type="number").form-control
+                    .row.mb-2
+                        .col
+                            form.row
+                                .col-auto
+                                    label 岩手県
+                                .col.pl-0
+                                    .input-group
+                                        span.input-group-addon ￥
+                                        input(type="number").form-control
+                        .col
+                            form.row
+                                .col-auto
+                                    label 秋田県
+                                .col.pl-0
+                                    .input-group
+                                        span.input-group-addon ￥
+                                        input(type="number").form-control
+    .card.rounded.border-0.mb-4
+        .card-header
+            .row
+                .col-8
+                    .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
+                        span.card-title ショップ用メモ欄
+                            i.fa.fa-question-circle.fa-lg.ml-1
+                .col-4.text-right
+                    a(data-toggle="collapse" href="#freeArea" aria-expanded="false" aria-controls="freeArea")
+                        i.fa.fa-angle-up.fa-lg
+        .collapse(id="freeArea").show
+            .card-body
+                form
+                    textarea(rows="8" placeholder="テキスト").form-control
+block conversionArea
+    +b.c-conversionArea
+        +e.container
+            .row.justify-content-between.align-items-center
+                .col-6
+                    +e.leftBlockItem
+                        a(href="/setting/basis/delivery").c-beseLink
+                            i.fa.fa-backward(aria-hidden="true")
+                            span 配送方法一覧
+                .col-6
+                    .row.align-items-center.justify-content-end
+                        .col-auto
+                            button(type="submit").btn.btn-primary.px-5 登録
