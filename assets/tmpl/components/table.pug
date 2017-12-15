@@ -41,7 +41,7 @@ mixin c-table--standard
 
 //- 並び替えテーブル
 mixin c-sortTable(text1,text2,text3)
-    .card.rounded.border-0.mb-4
+    .card.rounded.border-0.mb-2
         ul.list-group.list-group-flush
             li.list-group-item
                 form.form-row
@@ -85,6 +85,57 @@ mixin c-sortTable(text1,text2,text3)
                         i.fa.fa-bars
                     .col
                         a(href="/product/standard/detail")= text3
+                    .col-3.text-right
+                        .d-inline-block.mr-3(href="" data-toggle="tooltip" data-placement="top" title="上へ移動"): i.fa.fa-arrow-up.fa-lg.text-secondary
+                        .d-inline-block.mr-3(href="" data-toggle="tooltip" data-placement="top" title="下へ移動"): i.fa.fa-arrow-down.fa-lg.text-secondary
+                        .d-inline-block.mr-3(href="" data-toggle="tooltip" data-placement="top" title="名前を編集"): i.fa.fa-pencil.fa-lg.text-secondary
+                        .d-inline-block.mr-3(href="" data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-close.fa-lg.text-secondary
+//- 並び替えテーブル（配送設定）
+mixin c-sortTable--delivery(text1,text2,text3)
+    .card.rounded.border-0.mb-2
+        ul.list-group.list-group-flush
+            li.list-group-item
+                form.form-row
+                    .col-3
+                        input(type="text" placeholder="テキスト").form-control
+                    .col-auto
+                        button(type="submit").btn.btn-outline-dark 新規作成
+            li.list-group-item
+                .row.justify-content-around
+                    .col-auto
+                        i.fa.fa-bars
+                    .col
+                        a(href="/setting/basis/delivery/edit")= text1
+                    .col-3.text-right
+                        .d-inline-block.mr-3(href="" data-toggle="tooltip" data-placement="top" title="上へ移動"): i.fa.fa-arrow-up.fa-lg.text-secondary
+                        .d-inline-block.mr-3(href="" data-toggle="tooltip" data-placement="top" title="下へ移動"): i.fa.fa-arrow-down.fa-lg.text-secondary
+                        .d-inline-block.mr-3(href="" data-toggle="tooltip" data-placement="top" title="名前を編集"): i.fa.fa-pencil.fa-lg.text-secondary
+                        .d-inline-block.mr-3(href="" data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-close.fa-lg.text-secondary
+            li.list-group-item
+                .row.justify-content-around
+                    .col-auto
+                        i.fa.fa-bars
+                    .col
+                        a(href="/setting/basis/delivery/edit")= text2
+                    .col-3.text-right
+                        .d-inline-block.mr-3(href="" data-toggle="tooltip" data-placement="top" title="上へ移動"): i.fa.fa-arrow-up.fa-lg.text-secondary
+                        .d-inline-block.mr-3(href="" data-toggle="tooltip" data-placement="top" title="下へ移動"): i.fa.fa-arrow-down.fa-lg.text-secondary
+                        .d-inline-block.mr-3(href="" data-toggle="tooltip" data-placement="top" title="名前を編集"): i.fa.fa-pencil.fa-lg.text-secondary
+                        .d-inline-block.mr-3(href="" data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-close.fa-lg.text-secondary
+            li.list-group-item
+                form.form-row
+                    .col-3
+                        input(type="text" placeholder="テキスト").form-control
+                    .col-auto
+                        button(type="submit").btn.btn-primary 決定
+                    .col-auto
+                        button(type="submit").btn.btn-light キャンセル
+            li.list-group-item
+                .row.justify-content-around
+                    .col-auto
+                        i.fa.fa-bars
+                    .col
+                        a(href="/setting/basis/delivery/edit")= text3
                     .col-3.text-right
                         .d-inline-block.mr-3(href="" data-toggle="tooltip" data-placement="top" title="上へ移動"): i.fa.fa-arrow-up.fa-lg.text-secondary
                         .d-inline-block.mr-3(href="" data-toggle="tooltip" data-placement="top" title="下へ移動"): i.fa.fa-arrow-down.fa-lg.text-secondary

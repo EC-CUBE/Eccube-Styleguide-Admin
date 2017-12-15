@@ -1,0 +1,63 @@
+extends /assets/tmpl/moc/layout/_layout-2col.pug
+block pageTitle
+    include /assets/tmpl/components/pageTitle.pug
+    +c-pageTitle("支払方法登録・編集","基本情報設定")
+
+block primaryContents
+    .card.rounded.border-0.mb-4
+        .card-header
+            span 支払方法登録・編集
+        .card-body
+            .row
+                .col-3
+                    span 支払方法名称
+                .col.mb-2
+                    form
+                        input(type="text").form-control
+            .row
+                .col-3
+
+                    span 手数料
+                .col.mb-2
+                    .input-group
+                        span.input-group-addon ￥
+                        input(type="number").form-control
+            .row
+                .col-3
+
+                    span 利用条件
+                .col.mb-2
+                    form.mb-2
+                        .row.justify-content-start
+                            .col-4
+                                .input-group
+                                    span.input-group-addon ￥
+                                    input(type="number").form-control
+                            .col-auto.text-center.p-0
+                                span.align-middle 〜
+                            .col-4
+                                .input-group
+                                    span.input-group-addon ￥
+                                    input(type="number").form-control
+            .row
+                .col-3
+                    .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
+                        span ロゴ画像
+                        i.fa.fa-question-circle.fa-lg.ml-1
+                .col.mb-2
+                    form
+                        input(type="file").form-control-file
+
+block conversionArea
+    +b.c-conversionArea
+        +e.container
+            .row.justify-content-between.align-items-center
+                .col-6
+                    +e.leftBlockItem
+                        a(href="/setting/basis/payment").c-beseLink
+                            i.fa.fa-backward(aria-hidden="true")
+                            span 支払方法一覧
+                .col-6
+                    .row.align-items-center.justify-content-end
+                        .col-auto
+                            button(type="submit").btn.btn-primary.px-5 登録

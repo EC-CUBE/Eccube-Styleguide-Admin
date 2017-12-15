@@ -104,7 +104,11 @@ Styleguide 3.0
   z-index: 500;
 
   @include media_sp {
-    display: none;
+    left: -220px;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    transition: left 0.2s , opacity 0.1s 0.2s, width 0.1s 0.3s, height 0.3s;
   }
   ul {
     padding-left: 0;
@@ -140,6 +144,7 @@ Styleguide 3.0
     }
   }
   &__navItemTitle {
+    transform: translateX(0);
     display: block;
     border-bottom: 1px solid $dllNavy20;
     padding: 10px 15px;
@@ -211,4 +216,11 @@ Styleguide 3.0
       color: $navy80;
     }
   }
+}
+.c-mainNavArea.is-active{
+  width: 220px;
+  height: 100%;
+  left: 0;
+  opacity: 1;
+  transition: left 0.2s 0.2s, opacity 0.1s 0.1s, width 0.1s, height 0.1s;
 }

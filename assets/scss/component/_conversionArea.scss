@@ -21,6 +21,7 @@ Styleguide 7.0
   bottom: 0;
   right: 0;
   text-align: right;
+  z-index: 100;
 
   @include media_sp {
     width: 100%;

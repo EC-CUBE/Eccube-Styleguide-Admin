@@ -1,0 +1,12 @@
+extends /assets/tmpl/moc/layout/_layout-2col.pug
+
+block pageTitle
+    include /assets/tmpl/components/pageTitle
+    +c-pageTitle("配送方法設定","商品管理")
+
+block primaryContents
+    .card.rounded.border-0.mb-4
+        .card-body.p-0
+            include /assets/tmpl/components/table.pug
+            +c-sortTable--delivery("[配送業者A] 配送業者A","[配送業者B] 配送業者B","[配送業者C] 配送業者C")
+    p 項目の順番はドラッグ＆ドロップでも変更可能です。
