@@ -6,49 +6,42 @@ block pageTitle
 block primaryContents
     .card.rounded.border-0.mb-4
         .card-header
-            .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
-                span 基本情報
+            span 基本情報
         .card-body
                 .row
                     .col-3
-                        .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
-                            span 会社名
+                        span 会社名
                     .col.mb-2
                         form
                             input(type="text").form-control
                 .row
                     .col-3
-                        .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
-                            span 会社名（フリガナ）
+                        span 会社名（フリガナ）
                     .col.mb-2
                         form
                             input(type="text").form-control
                 .row
                     .col-3
-                        .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
-                            span 店名
+                        span 店名
                     .col.mb-2
                         form
                             input(type="text").form-control
                 .row
                     .col-3
-                        .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
-                            span 店名（フリガナ）
+                        span 店名（フリガナ）
                     .col.mb-2
                         form
                             input(type="text").form-control
                 .row
                     .col-3
-                        .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
-                            span 店名（英語表記）
+                        span 店名（英語表記）
                     .col.mb-2
                         form
                             input(type="text").form-control
                 .row
                     .col-3
-                        .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
-                            span 住所
-                            span.badge.badge-primary.ml-1 必須
+                        span 住所
+                        span.badge.badge-primary.ml-1 必須
                     .col.mb-2
                         form.mb-2
                             .row.justify-content-start
@@ -68,57 +61,49 @@ block primaryContents
                             input.form-control(type='text', placeholder='番地・ビル名（例：1-1-2）')
                 .row.mb-3
                     .col-3
-                        .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
-                            span 店舗営業時間
+                        span 店舗営業時間
                     .col.mb-2
                         form
                             input(type="text").form-control
                 .row.mb-3
                     .col-3
-                        .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
-                            span 送信元メールアドレス(From)
+                        span 送信元メールアドレス(From)
                     .col.mb-2
                         form
                             input(type="text").form-control
                 .row.mb-3
                     .col-3
-                        .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
-                            span 問い合わせ受付メールアドレス(From, ReplyTo)
+                        span 問い合わせ受付メールアドレス(From, ReplyTo)
                     .col.mb-2
                         form
                             input(type="text").form-control
                 .row.mb-3
                     .col-3
-                        .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
-                            span 返信受付メールアドレス(ReplyTo)
+                        span 返信受付メールアドレス(ReplyTo)
                     .col.mb-2
                         form
                             input(type="text").form-control
                 .row.mb-3
                     .col-3
-                        .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
-                            span 返信受付メールアドレス(ReplyTo)
+                        span 返信受付メールアドレス(ReplyTo)
                     .col.mb-2
                         form
                             input(type="text").form-control
                 .row
                     .col-3
-                        .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
-                            span 取り扱い商品説明文
+                        span 取り扱い商品説明文
                     .col.mb-2
                         form
                             textarea(rows="8").form-control
                 .row
                     .col-3
-                        .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
-                            span 店舗からのメッセージ
+                        span 店舗からのメッセージ
                     .col.mb-2
                         form
                             textarea(rows="8").form-control
     .card.rounded.border-0.mb-4
         .card-header
-            .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
-                span 送料設定
+            span 送料設定
         .card-body
                 .row
                     .col-3
@@ -140,8 +125,7 @@ block primaryContents
                             span.input-group-addon 点
                 .row
                     .col-3
-                        .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
-                            span 商品ごとの送料設定
+                        span 商品ごとの送料設定
                     .col.mb-2
                         include /assets/tmpl/components/toggleSwitch.pug
                         +c-toggleSwitch('switch_productCost', '無効')
@@ -154,53 +138,45 @@ block primaryContents
                         +c-toggleSwitch('switch_multiDelivery', '無効')
     .card.rounded.border-0.mb-4
         .card-header
-            .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
-                span 会員設定
+            span 会員設定
         .card-body
                 .row
                     .col-3
-                        .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
-                            span 仮会員機能
+                        span 仮会員機能
                     .col.mb-2
                         include /assets/tmpl/components/toggleSwitch.pug
                         +c-toggleSwitch('switch_provisionalUser', '有効')
                 .row
                     .col-3
-                        .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
-                            span マイページに注文状況を表示
+                        span マイページに注文状況を表示
                     .col.mb-2
                         include /assets/tmpl/components/toggleSwitch.pug
                         +c-toggleSwitch('switch_mypageOrder', '有効')
                 .row
                     .col-3
-                        .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
-                            span お気に入り商品機能
+                        span お気に入り商品機能
                     .col.mb-2
                         include /assets/tmpl/components/toggleSwitch.pug
                         +c-toggleSwitch('switch_favoriteProduct', '有効')
                 .row
                     .col-3
-                        .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
-                            span 自動ログイン機能
+                        span 自動ログイン機能
                     .col.mb-2
                         include /assets/tmpl/components/toggleSwitch.pug
                         +c-toggleSwitch('switch_autoLogin', '無効')
     .card.rounded.border-0.mb-4
         .card-header
-            .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
-                span 商品設定
+            span 商品設定
         .card-body
             .row
                 .col-3
-                    .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
-                        span 在庫切れ商品の表示
+                    span 在庫切れ商品の表示
                 .col.mb-2
                     include /assets/tmpl/components/toggleSwitch.pug
                     +c-toggleSwitch('switch_productDisplay', '非表示')
     .card.rounded.border-0.mb-4
         .card-header
-            .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
-                span 地図設定
+            span 地図設定
         .card-body
                 .row
                     .col-3
