@@ -1,7 +1,18 @@
-mixin c-toggleSwitch(text)
+mixin c-toggleSwitch--conversion(id,text)
     +b.c-toggleSwitch
         +e.btn
-            input(type="checkbox" id="switch")
-            label(for="switch")
+            input(type="checkbox" id=id)
+            label(for=id)
         +e.label
-            span= text
+            span.text-white= text
+
+mixin c-toggleSwitch(id,text)
+    +b.c-toggleSwitch
+        +e.btn
+            if text == '有効'
+                input(type="checkbox" id=id checked)
+            else
+                input(type="checkbox" id=id)
+            label(for=id)
+        +e.label
+            span.text-dark= text
