@@ -1,3 +1,4 @@
+//Theme color
 $primary:       #437ec4 !default;
 $secondary:     #54687A !default;
 $success:       #25b877 !default;
@@ -7,18 +8,18 @@ $danger:        #c04949 !default;
 $light:         #eff0f4 !default;
 $dark:          #595959 !default;
 
-
+//card
 $card-cap-bg: white;
 
+//table
 $table-border-color: #ccc;
 $table-accent-bg: #f9f9f9;
 $table-active-bg: #f2f2f2;
-.table-lightGray{
+.table-ec-lightGray{
   background-color: #f2f2f2;
 }
 
-
+//breadcrumb
 $breadcrumb-bg: #eff0f4;
-
 
 @import "../../node_modules/bootstrap/scss/bootstrap";
