@@ -13,7 +13,7 @@ block outsideBlock
                         input.form-control(type='text')
                     .d-inline-block.mb-3(data-toggle="collapse" href="#commentList" aria-expanded="false" aria-controls="commentList")
                         i.fa.fa-plus-square-o.font-weight-bold.mr-1
-                        span.font-weight-bold 詳細検索
+                        span.font-weight-bold 一覧コメントを追加
 
         +b.c-subContents.collapse(id="commentList").show
             .row
@@ -61,6 +61,7 @@ block outsideBlock
                                 input.form-control(type='date', value='2000-01-01')
         +e.contents.mb-5
             button.btn.btn-primary.px-5(type="button") 検索
+            span.font-weight-bold.ml-2 検索結果：56件が該当しました
 
 block primaryContents
     .row.justify-content-between.mb-2

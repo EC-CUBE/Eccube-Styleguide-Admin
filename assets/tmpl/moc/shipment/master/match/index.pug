@@ -1,0 +1,280 @@
+extends /assets/tmpl/moc/layout/_layout-2col.pug
+block pageTitle
+    include /assets/tmpl/components/pageTitle.pug
+    +c-pageTitle("出荷マスター","出荷管理")
+
+block outsideBlock
+    +b.c-outsideBlock
+        +e.contents
+            .row
+                .col-12
+                    form
+                        label.col-form-label 配送番号・お届け先・お届け先会社名
+                        input.form-control(type='text')
+                    form.form-row
+                        .form-group.col-12
+                            p.col-form-label 対応状況
+                            label.form-check-label.mr-3
+                                input.form-check-input(type='checkbox', value='' , checked='checked')
+                                | 新規受付
+                            label.form-check-label.mr-3
+                                input.form-check-input(type='checkbox', value='')
+                                | 決済処理中
+                            label.form-check-label
+                                input.form-check-input(type='checkbox', value='')
+                                | 入金待ち
+                            label.form-check-label
+                                input.form-check-input(type='checkbox', value='')
+                                | 入金済み
+                            label.form-check-label
+                                input.form-check-input(type='checkbox', value='')
+                                | キャンセル
+                            label.form-check-label
+                                input.form-check-input(type='checkbox', value='')
+                                | 取り寄せ中
+                            label.form-check-label
+                                input.form-check-input(type='checkbox', value='')
+                                | 発送済み
+                            label.form-check-label
+                                input.form-check-input(type='checkbox', value='')
+                                | 購入処理中
+                    .d-inline-block.mb-3(data-toggle="collapse" href="#searchDetail" aria-expanded="false" aria-controls="searchDetail")
+                        i.fa.fa-minus-square-o.mr-1
+                        span.font-weight-bold 詳細検索
+        +b.c-subContents.collapse(id="searchDetail").show
+            .row
+                .col
+                    form
+                        label.col-form-label お届け先
+                        input(type="text").form-control
+                .col
+                    form
+                        label.col-form-label お届け先（フリガナ）
+                        input(type="text").form-control
+            .row
+                .col
+                    form
+                        label.col-form-label ご注文者
+                        input(type="text").form-control
+                .col
+                    form
+                        label.col-form-label ご注文者（フリガナ）
+                        input(type="text").form-control
+            .row
+                .col
+                    form
+                        label.col-form-label 注文番号
+                        input(type="text").form-control
+                .col
+                    form
+                        label.col-form-label お届け先電話番号
+                        input(type="text").form-control
+            .row
+                .col
+                    form
+                        label.col-form-label お届け予定日
+                        .form-row.align-items-center
+                            .col
+                                input.form-control(type='date', value='2000-01-01')
+                            .col-auto.text-center
+                                span 〜
+                            .col
+                                input.form-control(type='date', value='2000-01-01')
+                .col
+                    form
+                        label.col-form-label 発送日
+                        .form-row.align-items-center
+                            .col
+                                input.form-control(type='date', value='2000-01-01')
+                            .col-auto.text-center
+                                span 〜
+                            .col
+                                input.form-control(type='date', value='2000-01-01')
+            .row
+                .col
+                    form
+                        label.col-form-label 更新日
+                        .form-row.align-items-center
+                            .col
+                                input.form-control(type='date', value='2000-01-01')
+                            .col-auto.text-center
+                                span 〜
+                            .col
+                                input.form-control(type='date', value='2000-01-01')
+                .col
+            .row.mb-3
+                .col
+                    form
+                        label.col-form-label 購入金額
+                        .form-row.align-items-center
+                            .col
+                                input.form-control(type='text')
+                            .col-auto
+                                span 〜
+                            .col
+                                input.form-control(type='text')
+                .col
+                    form
+                        label.col-form-label 購入商品
+                        input(type="text").form-control
+            .d-block.text-center
+                button(type="button").btn.btn-outline-dark 検索条件クリア
+        +e.contents.mb-3
+            button.btn.btn-primary.px-5(type="button") 検索
+            span.font-weight-bold.ml-2 検索結果：56件が該当しました
+
+block primaryContents
+    .row.justify-content-between.mb-2
+        .col-6
+            label.mr-2 一括操作
+            button.btn.btn-light.border.border-dark.mr-2 メールする
+            button.btn.btn-light.border.border-dark.mr-2(data-toggle="modal" data-target="#sentUpdate") 発送済みに更新
+            #sentUpdate.modal.fade(tabindex='-1', role='dialog', aria-labelledby='sentUpdate', aria-hidden='true')
+                .modal-dialog(role='document')
+                    .modal-content
+                        .modal-header
+                            h5.modal-title.font-weight-bold 一括で発送済みにします
+                            button.close(type='button', data-dismiss='modal', aria-label='Close')
+                                span(aria-hidden='true') ×
+                        .modal-body
+                            p.mb-4 選択した配送をすべて発送済みにします。同時におこなう操作を選択してから［変更を確定］ボタンを押してください。この操作は取り消すことができません。ご注意ください。
+                            form.mb-4
+                                .font-weight-bold.mb-2 関係する受注ステータスの変更
+                                .form-check.form-check-inline
+                                    label.form-check-label
+                                        input.form-check-input(type="radio", name="orderStatus" checked="")
+                                        |  この発送に関係する受注ステータスをすべて「発送済み」にします
+                                .form-check.form-check-inline
+                                    label.form-check-label
+                                        input.form-check-input(type="radio", name="orderStatus")
+                                        |  この発送に関係する受注ステータスはあとで手動で変更します
+                            form
+                                .font-weight-bold.mb-2 メールの送信
+                                .form-check.form-check-inline
+                                    label.form-check-label
+                                        input.form-check-input(type="checkbox", name="notificationMail" checked="")
+                                        |  発送お知らせメールを同時に送る
+                            .d-inline-block(data-toggle="collapse" href="#viewEmail" aria-expanded="false" aria-controls="viewEmail")
+                                i.fa.fa-minus-square-o.font-weight-bold.mr-1
+                                span.font-weight-bold メール文面を確認
+                            .collapse(id="viewEmail").bg-light.p-4
+                                p [注文者名]様
+                                p お客さまがご注文された以下の商品を発送いたしました。商品の到着まで、今しばらくお待ちくださいませ。
+                                p [発送商品リストと明細]
+                        .modal-footer
+                            button.btn.btn-secondary(type='button', data-dismiss='modal') キャンセル
+                            button.btn.btn-primary(type='button', data-dismiss='modal') 変更を確定
+
+            button.btn.btn-danger 削除
+        .col-5.text-right
+            .d-inline-block.mr-2
+                form
+                    select.custom-select
+                        option(selected='') 10件
+                        option ...
+            .d-inline-block
+                .btn-group(role='group')
+                    button.btn.btn-light.border.border-dark(type='button')
+                        i.fa.fa-cloud-download.mr-1
+                        span CSVダウンロード
+                    button.btn.btn-light.border.border-dark(type='button')
+                        i.fa.fa-cog.mr-1
+                        span CSV出力設定
+    .card.rounded.border-0.mb-4
+        .card-body.p-0
+            table.table.table-sm
+                thead
+                    tr
+                        th.border-top-0
+                            .row
+                                .col-12.text-center
+                                    input(type='checkbox', name='filter', value='open')
+                        th.border-top-0 発送番号
+                        th.border-top-0 出荷伝票番号
+                        th.border-top-0 注文番号
+                        th.border-top-0 お届け先
+                        th.border-top-0 配送業者
+                        th.border-top-0 発送日
+                        th.border-top-0 &nbsp;
+                        th.border-top-0 &nbsp;
+                tbody
+                    - for (var x = 0; x < 5; x++)
+                        tr
+                            td.align-middle
+                                .row
+                                    .col-12.text-center
+                                        input(type='checkbox', name='filter', value='open')
+                            td.align-middle
+                                a(href='/shipment/register/') 123456
+                            td.align-middle 123-45678
+                            td.align-middle
+                                .d-block
+                                    a(href='#') 345
+                                    button.btn.btn-outline-primary.py-2.mb-2(type='button') 新規受付
+                                .d-block
+                                    a(href='#') 346
+                                    button.btn.btn-outline-success.py-2(type='button') 入金済み
+                            td.align-middle
+                                label.m-0
+                                    | 532-0023
+                                    br
+                                    | 大阪市淀川区十三東1-17-13
+                                    br
+                                    | 田中 秀雄
+                                    br
+                                    | 06-6666-6666
+                            td.align-middle 日本郵便
+                            td.align-middle
+                                i.fa.fa-check.fa-lg.text-success(aria-hidden="true")
+                                | 2017/10/31
+                            td.align-middle
+                            td.align-middle
+                                .row.text-center
+                                    .col
+                                        a.text-right(href="/shipment/mail/" data-toggle="tooltip" data-placement="top" title="メール送信")
+                                            i.fa.fa-send.fa-lg.text-secondary(aria-hidden="true")
+                                    .col(data-toggle="tooltip" data-placement="top" title="発送済みにする"): i.fa.fa-check.fa-lg.text-secondary(aria-hidden="true")
+                        tr
+                            td.align-middle
+                                .row
+                                    .col-12.text-center
+                                        input(type='checkbox', name='filter', value='open')
+                            td.align-middle
+                                a(href='/shipment/register/') 123456
+                            td.align-middle 123-45678
+                            td.align-middle
+                                a(href='#') 345
+                                    button.btn.btn-outline-primary.py-2.mb-2(type='button') 新規受付
+                                br
+                                |
+                                a(href='#') 346
+                                    button.btn.btn-outline-success.py-2(type='button') 入金済み
+                            td.align-middle
+                                label.m-0
+                                    | 532-0023
+                                    br
+                                    | 大阪市淀川区十三東1-17-13
+                                    br
+                                    | 田中 秀雄
+                                    br
+                                    | 06-6666-6666
+                            td.align-middle 日本郵便
+                            td.align-middle -
+                            td.align-middle
+                            td.align-middle
+                                .row.text-center
+                                    .col
+                                        a.text-right(href="/shipment/mail/" data-toggle="tooltip" data-placement="top" title="メール送信")
+                                            i.fa.fa-send.fa-lg.text-secondary(aria-hidden="true")
+                                    .col(data-toggle="tooltip" data-placement="top" title="発送済みにする"): i.fa.fa-check.fa-lg.text-secondary(aria-hidden="true")
+
+            .row.justify-content-md-center.mb-4
+                .col-auto
+                    .btn-group.btn-group-lg
+                        button.btn.btn-secondary(type='button') 1
+                    .btn-group.btn-group-lg
+                        button.btn.btn-outline-secondary(type='button') 2
+                    .btn-group.btn-group-lg
+                        button.btn.btn-outline-secondary(type='button') 3
+                    .btn-group.btn-group-lg
+                        button.btn.btn-outline-secondary(type='button') 4
