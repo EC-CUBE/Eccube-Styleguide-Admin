@@ -41,7 +41,7 @@ block outsideBlock
                     .d-inline-block.mb-3(data-toggle="collapse" href="#searchDetail" aria-expanded="false" aria-controls="searchDetail")
                         i.fa.fa-minus-square-o.mr-1
                         span.font-weight-bold 詳細検索
-        +b.c-subContents.collapse(id="searchDetail").show
+        +b.c-subContents.collapse(id="searchDetail")
             .row
                 .col
                     form
@@ -184,7 +184,7 @@ block primaryContents
             table.table.table-sm
                 thead
                     tr
-                        th.border-top-0
+                        th.border-top-0.pl-3.pr-3.pt-2.pb-2
                             .row
                                 .col-12.text-center
                                     input(type='checkbox', name='filter', value='open')
@@ -199,7 +199,7 @@ block primaryContents
                 tbody
                     - for (var x = 0; x < 5; x++)
                         tr
-                            td.align-middle
+                            td.align-middle.pl-3.pr-3
                                 .row
                                     .col-12.text-center
                                         input(type='checkbox', name='filter', value='open')
@@ -234,7 +234,7 @@ block primaryContents
                                             i.fa.fa-send.fa-lg.text-secondary(aria-hidden="true")
                                     .col(data-toggle="tooltip" data-placement="top" title="発送済みにする"): i.fa.fa-check.fa-lg.text-secondary(aria-hidden="true")
                         tr
-                            td.align-middle
+                            td.align-middle.pl-3.pr-3
                                 .row
                                     .col-12.text-center
                                         input(type='checkbox', name='filter', value='open')
