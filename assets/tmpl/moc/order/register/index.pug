@@ -202,7 +202,7 @@ block primaryContents
             .card-body
                 .row.justify-content-between.mb-2
                     .col-6
-                        button.btn.btn-outline-dark.mr-2(data-toggle="modal" data-target="#addProduct") 商品を追加
+                        button.btn.btn-ec-regular.mr-2(data-toggle="modal" data-target="#addProduct") 商品を追加
                         #addProduct.modal.fade(tabindex='-1', role='dialog', aria-labelledby='addProduct', aria-hidden='true')
                             .modal-dialog(role='document')
                                 .modal-content
@@ -256,12 +256,12 @@ block primaryContents
                                                 .btn-group.btn-group-lg
                                                     button.btn.btn-secondary(type='button') 1
                                                 .btn-group.btn-group-lg
-                                                    button.btn.btn-light.border.border-dark(type='button') 2
+                                                    button.btn.btn-ec-regular.border.border-dark(type='button') 2
                                                 .btn-group.btn-group-lg
-                                                    button.btn.btn-light.border.border-dark(type='button') 3
+                                                    button.btn.btn-ec-regular.border.border-dark(type='button') 3
                                                 .btn-group.btn-group-lg
-                                                    button.btn.btn-light.border.border-dark(type='button') 4
-                        button.btn.btn-outline-dark.mr-2(data-toggle="modal" data-target="#addDetail") その他の明細を追加
+                                                    button.btn.btn-ec-regular.border.border-dark(type='button') 4
+                        button.btn.btn-ec-regular.mr-2(data-toggle="modal" data-target="#addDetail") その他の明細を追加
                         #addDetail.modal.fade(tabindex='-1', role='dialog', aria-labelledby='addDetail', aria-hidden='true')
                             .modal-dialog(role='document')
                                 .modal-content
@@ -300,13 +300,13 @@ block primaryContents
                                                 .btn-group.btn-group-lg
                                                     button.btn.btn-secondary(type='button') 1
                                                 .btn-group.btn-group-lg
-                                                    button.btn.btn-light.border.border-dark(type='button') 2
+                                                    button.btn.btn-ec-regular.border.border-dark(type='button') 2
                                                 .btn-group.btn-group-lg
-                                                    button.btn.btn-light.border.border-dark(type='button') 3
+                                                    button.btn.btn-ec-regular.border.border-dark(type='button') 3
                                                 .btn-group.btn-group-lg
-                                                    button.btn.btn-light.border.border-dark(type='button') 4
+                                                    button.btn.btn-ec-regular.border.border-dark(type='button') 4
                     .col-5.text-right
-                        button.btn.btn-outline-dark.mr-2 計算結果の更新
+                        button.btn.btn-ec-regular.mr-2 計算結果の更新
 
                 table.table.table-striped.table-sm.mb-0
                     thead.table-active
@@ -581,7 +581,7 @@ block primaryContents
                                                     | ご質問やご不明な点がございましたら、こちらからお願いいたします。
                                                     br
                                             .modal-footer
-                                                button.btn.btn-light(type='button', data-dismiss='modal') 閉じる
+                                                button.btn.btn-ec-regular(type='button', data-dismiss='modal') 閉じる
                         tr
                             td 2017/12/01
                             td ご注文ありがとうございます
@@ -716,9 +716,9 @@ block primaryContents
                                                     | ご質問やご不明な点がございましたら、こちらからお願いいたします。
                                                     br
                                             .modal-footer
-                                                button.btn.btn-light(type='button', data-dismiss='modal') 閉じる
+                                                button.btn.btn-ec-regular(type='button', data-dismiss='modal') 閉じる
                 .text-center
-                    a(href="/order/mail/").btn.btn-outline-dark メールの新規作成
+                    a(href="/order/mail/").btn.btn-ec-regular メールの新規作成
 
     .card.rounded.border-0.mb-4
         .card-header
@@ -747,4 +747,4 @@ block conversionArea
                 .col-6
                     .row.align-items-center.justify-content-end
                         .col-auto
-                            button(type="submit").btn.btn-primary.px-5 受注情報を登録
+                            button(type="submit").btn.btn-ec-conversion.px-5 受注情報を登録

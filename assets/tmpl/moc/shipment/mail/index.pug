@@ -194,7 +194,7 @@ block primaryContents
                                                     | ご質問やご不明な点がございましたら、こちらからお願いいたします。
                                                     br
                                             .modal-footer
-                                                button.btn.btn-light(type='button', data-dismiss='modal') 閉じる
+                                                button.btn.btn-ec-regular(type='button', data-dismiss='modal') 閉じる
                         tr
                             td 2017/12/01
                             td ご注文ありがとうございます
@@ -329,7 +329,7 @@ block primaryContents
                                                     | ご質問やご不明な点がございましたら、こちらからお願いいたします。
                                                     br
                                             .modal-footer
-                                                button.btn.btn-light(type='button', data-dismiss='modal') 閉じる
+                                                button.btn.btn-ec-regular(type='button', data-dismiss='modal') 閉じる
 
 
 
@@ -389,7 +389,7 @@ block conversionArea
                 .col-6
                     .row.align-items-center.justify-content-end
                         .col-auto
-                            button(data-toggle="modal" data-target="#mailConfirm").btn.btn-primary.px-5 配信内容を確認
+                            button(data-toggle="modal" data-target="#mailConfirm").btn.btn-ec-conversion.px-5 配信内容を確認
     #mailConfirm.modal.fade(tabindex='-1', role='dialog', aria-labelledby='mailConfirm', aria-hidden='true')
         .modal-dialog(role='document')
             .modal-content
@@ -522,7 +522,7 @@ block conversionArea
                         | ご質問やご不明な点がございましたら、こちらからお願いいたします。
                         br
                 .modal-footer
-                    button.btn.btn-secondary(type='button', data-dismiss='modal') 閉じる
-                    a(href="/shipment/master/").btn.btn-primary 送信
+                    button.btn.btn-ec-sub(type='button', data-dismiss='modal') 閉じる
+                    a(href="/shipment/master/").btn.btn-ec-conversion 送信
 
 
