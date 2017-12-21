@@ -252,15 +252,19 @@ block primaryContents
                                                         button.close(type='button', data-dismiss='modal', aria-label='Close')
                                                             span(aria-hidden='true') +
                                         .row.justify-content-md-center.mb-4
-                                            .col-auto
-                                                .btn-group.btn-group-lg
-                                                    button.btn.btn-secondary(type='button') 1
-                                                .btn-group.btn-group-lg
-                                                    button.btn.btn-light.border.border-dark(type='button') 2
-                                                .btn-group.btn-group-lg
-                                                    button.btn.btn-light.border.border-dark(type='button') 3
-                                                .btn-group.btn-group-lg
-                                                    button.btn.btn-light.border.border-dark(type='button') 4
+                                            ul.pagination
+                                                li.page-item
+                                                    a.page-link(href='#') Previous
+                                                li.page-item.active
+                                                    a.page-link(href='#') 1
+                                                li.page-item
+                                                    a.page-link(href='#') 2
+                                                li.page-item
+                                                    a.page-link(href='#') 3
+                                                li.page-item
+                                                    a.page-link(href='#') 4
+                                                li.page-item
+                                                    a.page-link(href='#') Next
                         button.btn.btn-outline-dark.mr-2(data-toggle="modal" data-target="#addDetail") その他の明細を追加
                         #addDetail.modal.fade(tabindex='-1', role='dialog', aria-labelledby='addDetail', aria-hidden='true')
                             .modal-dialog(role='document')
@@ -296,15 +300,19 @@ block primaryContents
                                                         button.close(type='button', data-dismiss='modal', aria-label='Close')
                                                             span(aria-hidden='true') +
                                         .row.justify-content-md-center.mb-4
-                                            .col-auto
-                                                .btn-group.btn-group-lg
-                                                    button.btn.btn-secondary(type='button') 1
-                                                .btn-group.btn-group-lg
-                                                    button.btn.btn-light.border.border-dark(type='button') 2
-                                                .btn-group.btn-group-lg
-                                                    button.btn.btn-light.border.border-dark(type='button') 3
-                                                .btn-group.btn-group-lg
-                                                    button.btn.btn-light.border.border-dark(type='button') 4
+                                            ul.pagination
+                                                li.page-item
+                                                    a.page-link(href='#') Previous
+                                                li.page-item.active
+                                                    a.page-link(href='#') 1
+                                                li.page-item
+                                                    a.page-link(href='#') 2
+                                                li.page-item
+                                                    a.page-link(href='#') 3
+                                                li.page-item
+                                                    a.page-link(href='#') 4
+                                                li.page-item
+                                                    a.page-link(href='#') Next
                     .col-5.text-right
                         button.btn.btn-outline-dark.mr-2 計算結果の更新
 
