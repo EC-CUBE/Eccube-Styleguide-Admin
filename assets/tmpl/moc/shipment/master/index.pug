@@ -39,9 +39,9 @@ block outsideBlock
                                 input.form-check-input(type='checkbox', value='')
                                 | 購入処理中
                     .d-inline-block.mb-3(data-toggle="collapse" href="#searchDetail" aria-expanded="false" aria-controls="searchDetail")
-                        i.fa.fa-minus-square-o.mr-1
+                        i.fa.fa-plus-square-o.font-weight-bold.mr-1
                         span.font-weight-bold 詳細検索
-        +b.c-subContents.collapse(id="searchDetail").show
+        +b.c-subContents.collapse(id="searchDetail")
             .row
                 .col
                     form
@@ -120,7 +120,7 @@ block outsideBlock
             .d-block.text-center
                 button(type="button").btn.btn-outline-dark 検索条件クリア
         +e.contents.mb-3
-            button.btn.btn-primary.px-5(type="button") 検索
+            a(href="/shipment/master/match").btn.btn-primary.px-5 検索
 
 block primaryContents
     .row.justify-content-between.mb-2

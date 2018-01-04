@@ -39,7 +39,7 @@ block outsideBlock
                                 input.form-check-input(type='checkbox', value='')
                                 | 購入処理中
                     .d-inline-block.mb-3(data-toggle="collapse" href="#searchDetail" aria-expanded="false" aria-controls="searchDetail")
-                        i.fa.fa-minus-square-o.mr-1
+                        i.fa.fa-plus-square-o.font-weight-bold.mr-1
                         span.font-weight-bold 詳細検索
         +b.c-subContents.collapse(id="searchDetail")
             .row
@@ -120,11 +120,11 @@ block outsideBlock
             .d-block.text-center
                 button(type="button").btn.btn-outline-dark 検索条件クリア
         +e.contents.mb-3
-            button.btn.btn-primary.px-5(type="button") 検索
+            a(href="/shipment/master/none").btn.btn-primary.px-5 検索
 
 block primaryContents
-    .card.rounded.border-0.pt-4.pb-4
-        .card-body.p-0
+    .card.rounded.border-0
+        .card-body.p-4
             .text-center.text-muted.mb-4.h5 検索条件に合致するデータが見つかりませんでした
             .text-center.text-muted 検索条件を変えて、再度検索をお試しください。
             .text-center.text-muted [詳細検索]も試してみましょう。
