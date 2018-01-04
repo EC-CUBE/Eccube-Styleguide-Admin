@@ -1,0 +1,131 @@
+extends /assets/tmpl/moc/layout/_layout-2col.pug
+block pageTitle
+    include /assets/tmpl/components/pageTitle.pug
+    +c-pageTitle("出荷マスター","出荷管理")
+
+block outsideBlock
+    +b.c-outsideBlock
+        +e.contents
+            .row
+                .col-12
+                    form
+                        label.col-form-label 配送番号・お届け先・お届け先会社名
+                        input.form-control(type='text')
+                    form.form-row
+                        .form-group.col-12
+                            p.col-form-label 対応状況
+                            label.form-check-label.mr-3
+                                input.form-check-input(type='checkbox', value='' , checked='checked')
+                                | 新規受付
+                            label.form-check-label.mr-3
+                                input.form-check-input(type='checkbox', value='')
+                                | 決済処理中
+                            label.form-check-label
+                                input.form-check-input(type='checkbox', value='')
+                                | 入金待ち
+                            label.form-check-label
+                                input.form-check-input(type='checkbox', value='')
+                                | 入金済み
+                            label.form-check-label
+                                input.form-check-input(type='checkbox', value='')
+                                | キャンセル
+                            label.form-check-label
+                                input.form-check-input(type='checkbox', value='')
+                                | 取り寄せ中
+                            label.form-check-label
+                                input.form-check-input(type='checkbox', value='')
+                                | 発送済み
+                            label.form-check-label
+                                input.form-check-input(type='checkbox', value='')
+                                | 購入処理中
+                    .d-inline-block.mb-3(data-toggle="collapse" href="#searchDetail" aria-expanded="false" aria-controls="searchDetail")
+                        i.fa.fa-plus-square-o.font-weight-bold.mr-1
+                        span.font-weight-bold 詳細検索
+        +b.c-subContents.collapse(id="searchDetail")
+            .row
+                .col
+                    form
+                        label.col-form-label お届け先
+                        input(type="text").form-control
+                .col
+                    form
+                        label.col-form-label お届け先（フリガナ）
+                        input(type="text").form-control
+            .row
+                .col
+                    form
+                        label.col-form-label ご注文者
+                        input(type="text").form-control
+                .col
+                    form
+                        label.col-form-label ご注文者（フリガナ）
+                        input(type="text").form-control
+            .row
+                .col
+                    form
+                        label.col-form-label 注文番号
+                        input(type="text").form-control
+                .col
+                    form
+                        label.col-form-label お届け先電話番号
+                        input(type="text").form-control
+            .row
+                .col
+                    form
+                        label.col-form-label お届け予定日
+                        .form-row.align-items-center
+                            .col
+                                input.form-control(type='date', value='2000-01-01')
+                            .col-auto.text-center
+                                span 〜
+                            .col
+                                input.form-control(type='date', value='2000-01-01')
+                .col
+                    form
+                        label.col-form-label 発送日
+                        .form-row.align-items-center
+                            .col
+                                input.form-control(type='date', value='2000-01-01')
+                            .col-auto.text-center
+                                span 〜
+                            .col
+                                input.form-control(type='date', value='2000-01-01')
+            .row
+                .col
+                    form
+                        label.col-form-label 更新日
+                        .form-row.align-items-center
+                            .col
+                                input.form-control(type='date', value='2000-01-01')
+                            .col-auto.text-center
+                                span 〜
+                            .col
+                                input.form-control(type='date', value='2000-01-01')
+                .col
+            .row.mb-3
+                .col
+                    form
+                        label.col-form-label 購入金額
+                        .form-row.align-items-center
+                            .col
+                                input.form-control(type='text')
+                            .col-auto
+                                span 〜
+                            .col
+                                input.form-control(type='text')
+                .col
+                    form
+                        label.col-form-label 購入商品
+                        input(type="text").form-control
+            .d-block.text-center
+                button(type="button").btn.btn-outline-dark 検索条件クリア
+        +e.contents.mb-3
+            a(href="/shipment/master").btn.btn-primary.px-5 検索
+
+block primaryContents
+    .card.rounded.border-0
+        .card-body.p-4
+            .text-center.text-muted.mb-2.h5 現在データが登録されていません。登録してみましょう！
+            .text-center.mb-4
+                button(type="button" data-toggle="modal" data-target="#confirmModal").btn.btn-outline-dark.pl-4.pr-4 新規登録
+            .text-center.text-muted データが消えてしまいましたか？バックアップをしているならリストアを試してみましょう。

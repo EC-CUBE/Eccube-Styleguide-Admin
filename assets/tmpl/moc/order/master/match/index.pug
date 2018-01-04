@@ -1,0 +1,483 @@
+extends /assets/tmpl/moc/layout/_layout-2col
+block pageTitle
+    include /assets/tmpl/components/pageTitle.pug
+    +c-pageTitle("受注マスター","受注管理")
+
+block outsideBlock
+    +b.c-outsideBlock
+        +e.contents
+            .row
+                .col-12
+                    form
+                        label.col-form-label 受注ID・注文者名・注文者会社名・メールアドレス・電話番号
+                        input.form-control(type='text')
+                    form.form-row
+                        .form-group.col-12
+                            p.col-form-label 対応状況
+                            label.form-check-label.mr-3
+                                input.form-check-input(type='checkbox', value='')
+                                | 新規受付
+                            label.form-check-label.mr-3
+                                input.form-check-input(type='checkbox', value='')
+                                | 決済処理中
+                            label.form-check-label.mr-3
+                                input.form-check-input(type='checkbox', value='')
+                                | 入金待ち
+                            label.form-check-label.mr-3
+                                input.form-check-input(type='checkbox', value='')
+                                | 入金済み
+                            label.form-check-label.mr-3
+                                input.form-check-input(type='checkbox', value='')
+                                | キャンセル
+                            label.form-check-label.mr-3
+                                input.form-check-input(type='checkbox', value='')
+                                | 取り寄せ中
+                            label.form-check-label.mr-3
+                                input.form-check-input(type='checkbox', value='')
+                                | 発送済み
+                            label.form-check-label.mr-3
+                                input.form-check-input(type='checkbox', value='')
+                                | 購入処理中
+                    .d-inline-block.mb-3(data-toggle="collapse" href="#searchDetail" aria-expanded="false" aria-controls="searchDetail")
+                        i.fa.fa-plus-square-o.font-weight-bold.mr-1
+                        span.font-weight-bold 詳細検索
+        +b.c-subContents.collapse(id="searchDetail")
+            .row
+                .col
+                    form
+                        label.col-form-label 注文者名
+                        input(type="text").form-control
+                .col
+                    form.form-row
+                        .col-12
+                            p.col-form-label 性別
+                            label.form-check-label.mr-3
+                                input.form-check-input(type='checkbox', value='')
+                                | 男性
+                            label.form-check-label.mr-3
+                                input.form-check-input(type='checkbox', value='')
+                                | 女性
+            .row
+                .col
+                    form
+                        label.col-form-label 注文者名（フリガナ）
+                        input(type="text").form-control
+                .col
+                    form.form-row
+                        .col-12
+                            p.col-form-label 支払方法
+                            label.form-check-label.mr-3
+                                input.form-check-input(type='checkbox', value='')
+                                | 郵便振替
+                            label.form-check-label.mr-3
+                                input.form-check-input(type='checkbox', value='')
+                                | 現金書留
+                            label.form-check-label.mr-3
+                                input.form-check-input(type='checkbox', value='')
+                                | 銀行振込
+                            label.form-check-label.mr-3
+                                input.form-check-input(type='checkbox', value='')
+                                | 代金引換
+            .row
+                .col
+                    form
+                        label.col-form-label 注文者会社名
+                        input(type="text").form-control
+                .col
+                    form
+                        label.col-form-label 受注日
+                        .form-row.align-items-center
+                            .col
+                                input.form-control(type='date', value='2000-01-01')
+                            .col-auto.text-center
+                                span 〜
+                            .col
+                                input.form-control(type='date', value='2000-01-01')
+            .row
+                .col
+                    form
+                        label.col-form-label メールアドレス
+                        input(type="email").form-control
+                .col
+                    form
+                        label.col-form-label 入金日
+                        .form-row.align-items-center
+                            .col
+                                input.form-control(type='date', value='2000-01-01')
+                            .col-auto.text-center
+                                span 〜
+                            .col
+                                input.form-control(type='date', value='2000-01-01')
+            .row
+                .col
+                    form
+                        label.col-form-label 受注ID
+                        input(type="text").form-control
+                .col
+                    form
+                        label.col-form-label
+                            | 更新日
+                        .form-row.align-items-center
+                            .col
+                                input.form-control(type='date', value='2000-01-01')
+                            .col-auto
+                                span 〜
+                            .col
+                                input.form-control(type='date', value='2000-01-01')
+            .row
+                .col
+                    form
+                        label.col-form-label 電話番号
+                        input(type='text').form-control
+                .col
+                    form
+                        label.col-form-label
+                            | 購入金額
+                        .form-row.align-items-center
+                            .col
+                                input.form-control(type='text')
+                            .col-auto
+                                span 〜
+                            .col
+                                input.form-control(type='text')
+            .row
+                .col
+                .col
+                    form.mb-3
+                        label.col-form-label 商品名
+                        input(type="text").form-control
+
+            .d-block.text-center
+                button(type="button").btn.btn-outline-dark 検索条件クリア
+        +e.contents
+            .row
+                .mb-4
+                    .col-12
+                        a(href="/order/master/mismatch").btn.btn-primary.px-5 検索
+                        span.font-weight-bold.ml-2 検索結果：56件が該当しました
+block primaryContents
+    .row.justify-content-between.mb-2
+        .col-auto
+            label.mr-2 一括操作
+            button.btn.btn-light.border.border-dark.mr-2 メールする
+            button.btn.btn-light.border.border-dark.mr-2 帳票出力
+            button.btn.btn-danger 削除
+        .col
+            .d-inline-block.mr-2
+                form
+                    select.custom-select
+                        option(selected='') 対応状況の変更
+                        option ...
+            button.btn.btn-light.border.border-dark.mr-2 決定
+
+        .col-auto.text-right
+            .d-inline-block
+                form
+                    select.custom-select
+                        option(selected='') 10件
+                        option ...
+            .d-inline-block
+                .btn-group(role='group')
+                    button.btn.btn-light.border.border-dark(type='button')
+                        i.fa.fa-cloud-download.mr-1
+                        span CSVダウンロード
+                    button.btn.btn-light.border.border-dark(type='button')
+                        i.fa.fa-cog.mr-1
+                        span CSV出力設定
+    .card.rounded.border-0.mb-4
+        .card-body.p-0
+            table.table.table-sm
+                thead
+                    tr
+                        th.border-top-0
+                            input(type='checkbox', name='filter', value='open')
+                        th.border-top-0 受注日時
+                        th.border-top-0 注文番号
+                        th.border-top-0 お名前
+                        th.border-top-0 支払方法
+                        th.border-top-0 購入金額（円）
+                        th.border-top-0 出荷番号
+                        th.border-top-0 対応状況
+                        th.border-top-0 メモ／問合せ
+                        th.border-top-0
+                tbody
+                    tr
+                        td.align-middle
+                            input(type='checkbox', name='filter', value='open')
+                        td.align-middle 2017/09/13
+                            br
+                            | 21:23
+                        td.align-middle
+                            a(href="/order/register/") 127645
+                        td.align-middle 山田はなこ
+                        td.align-middle 郵便振替
+                        td.align-middle 53,920
+                        td.align-middle
+                            a(href='/shipment/register/') 12345
+                                br
+                                | 12346
+                        td.align-middle
+                            button.btn.btn-outline-primary.py-2(type='button') 新規受付
+
+                        td.align-middle
+                        td.align-middle.pr-3
+                            .row.justify-content-end
+                                .col-auto.text-center
+                                    a(href="/order/mail/" data-toggle="tooltip" data-placement="top" title="メール送信"): i.fa.fa-send.fa-lg.text-secondary(aria-hidden="true")
+                                .col-auto.text-center
+                                    a(data-toggle="tooltip" data-placement="top" title="帳票"): i.fa.fa-table.fa-lg.text-secondary(aria-hidden="true")
+                                .col-auto.text-center
+                                    a(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-close.fa-lg.text-secondary(aria-hidden="true")
+
+                    tr
+                        td.align-middle
+                            input(type='checkbox', name='filter', value='open')
+                        td.align-middle 2017/09/13
+                            br
+                            | 21:23
+                        td.align-middle
+                            a(href="/order/register/") 127645
+                        td.align-middle 山田はなこ
+                        td.align-middle 郵便振替
+                        td.align-middle 53,920
+                        td.align-middle
+                            a(href='/shipment/register/') 12345
+                                br
+                                | 12346
+                        td.align-middle
+                            button.btn.btn-outline-danger.py-2(type='button') 入金待ち
+                        td.align-middle
+                            a(href="/order/register/" data-toggle="tooltip" data-placement="top" title="メモ/お問い合わせあり"): i.fa.fa-commenting.fa-lg.text-secondary(aria-hidden="true")
+                        td.align-middle.pr-3
+                            .row.justify-content-end
+                                .col-auto.text-center
+                                    a(href="/order/mail/" data-toggle="tooltip" data-placement="top" title="メール送信"): i.fa.fa-send.fa-lg.text-secondary(aria-hidden="true")
+                                .col-auto.text-center
+                                    a(data-toggle="tooltip" data-placement="top" title="帳票"): i.fa.fa-table.fa-lg.text-secondary(aria-hidden="true")
+                                .col-auto.text-center
+                                    a(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-close.fa-lg.text-secondary(aria-hidden="true")
+                    tr
+                        td.align-middle
+                            input(type='checkbox', name='filter', value='open')
+                        td.align-middle 2017/09/13
+                            br
+                            | 21:23
+                        td.align-middle
+                            a(href="/order/register/") 127645
+                        td.align-middle 山田はなこ
+                        td.align-middle 郵便振替
+                        td.align-middle 53,920
+                        td.align-middle
+                            a(href='/shipment/register/') 12345
+                                br
+                                | 12346
+                        td.align-middle
+                            button.btn.btn-outline-secondary.py-2(type='button') キャンセル
+
+                        td.align-middle
+                            a(href="/order/register/" data-toggle="tooltip" data-placement="top" title="メモ/お問い合わせあり"): i.fa.fa-commenting.fa-lg.text-secondary(aria-hidden="true")
+                        td.align-middle.pr-3
+                            .row.justify-content-end
+                                .col-auto.text-center
+                                    a(href="/order/mail/" data-toggle="tooltip" data-placement="top" title="メール送信"): i.fa.fa-send.fa-lg.text-secondary(aria-hidden="true")
+                                .col-auto.text-center
+                                    a(data-toggle="tooltip" data-placement="top" title="帳票"): i.fa.fa-table.fa-lg.text-secondary(aria-hidden="true")
+                                .col-auto.text-center
+                                    a(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-close.fa-lg.text-secondary(aria-hidden="true")
+                    tr
+                        td.align-middle
+                            input(type='checkbox', name='filter', value='open')
+                        td.align-middle 2017/09/13
+                            br
+                            | 21:23
+                        td.align-middle
+                            a(href="/order/register/") 127645
+                        td.align-middle 山田はなこ
+                        td.align-middle 郵便振替
+                        td.align-middle 53,920
+                        td.align-middle
+                            a(href='/shipment/register/') 12345
+                                br
+                                | 12346
+                        td.align-middle
+                            button.btn.btn-outline-success.py-2(type='button') 入金済み
+                        td.align-middle
+                        td.align-middle.pr-3
+                            .row.justify-content-end
+                                .col-auto.text-center
+                                    a(href="/order/mail/" data-toggle="tooltip" data-placement="top" title="メール送信"): i.fa.fa-send.fa-lg.text-secondary(aria-hidden="true")
+                                .col-auto.text-center
+                                    a(data-toggle="tooltip" data-placement="top" title="帳票"): i.fa.fa-table.fa-lg.text-secondary(aria-hidden="true")
+                                .col-auto.text-center
+                                    a(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-close.fa-lg.text-secondary(aria-hidden="true")
+                    tr
+                        td.align-middle
+                            input(type='checkbox', name='filter', value='open')
+                        td.align-middle 2017/09/13
+                            br
+                            | 21:23
+                        td.align-middle
+                            a(href="/order/register/") 127645
+                        td.align-middle 山田はなこ
+                        td.align-middle 郵便振替
+                        td.align-middle 53,920
+                        td.align-middle
+                            a(href='/shipment/register/') 12345
+                                br
+                                | 12346
+                        td.align-middle
+                            button.btn.btn-outline-secondary.py-2(type='button') 発送済み
+                        td.align-middle
+                            a(href="/order/register/" data-toggle="tooltip" data-placement="top" title="メモ/お問い合わせあり"): i.fa.fa-commenting.fa-lg.text-secondary(aria-hidden="true")
+                        td.align-middle.pr-3
+                            .row.justify-content-end
+                                .col-auto.text-center
+                                    a(href="/order/mail/" data-toggle="tooltip" data-placement="top" title="メール送信"): i.fa.fa-send.fa-lg.text-secondary(aria-hidden="true")
+                                .col-auto.text-center
+                                    a(data-toggle="tooltip" data-placement="top" title="帳票"): i.fa.fa-table.fa-lg.text-secondary(aria-hidden="true")
+                                .col-auto.text-center
+                                    a(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-close.fa-lg.text-secondary(aria-hidden="true")
+                    tr.text-secondary
+                        td.align-middle
+                            input(type='checkbox', name='filter', value='open')
+                        td.align-middle 2017/09/13
+                            br
+                            | 21:23
+                        td.align-middle
+                            a(href="/order/register/") 127645
+                        td.align-middle 山田はなこ
+                        td.align-middle 郵便振替
+                        td.align-middle 53,920
+                        td.align-middle
+                            a(href='/shipment/register/') 12345
+                                br
+                                | 12346
+                        td.align-middle
+                            button.btn.btn-outline-danger.py-2(type='button') 取り寄せ中
+                        td.align-middle
+                        td.align-middle.pr-3
+                            .row.justify-content-end
+                                .col-auto.text-center
+                                    a(href="/order/mail/" data-toggle="tooltip" data-placement="top" title="メール送信"): i.fa.fa-send.fa-lg.text-secondary(aria-hidden="true")
+                                .col-auto.text-center
+                                    a(data-toggle="tooltip" data-placement="top" title="帳票"): i.fa.fa-table.fa-lg.text-secondary(aria-hidden="true")
+                                .col-auto.text-center
+                                    a(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-close.fa-lg.text-secondary(aria-hidden="true")
+                    tr
+                        td.align-middle
+                            input(type='checkbox', name='filter', value='open')
+                        td.align-middle 2017/09/13
+                            br
+                            | 21:23
+                        td.align-middle
+                            a(href="/order/register/") 127645
+                        td.align-middle 山田はなこ
+                        td.align-middle 郵便振替
+                        td.align-middle 53,920
+                        td.align-middle
+                            a(href='/shipment/register/') -
+                        td.align-middle
+                            button.btn.btn-outline-warning.py-2(type='button') 購入処理中
+                        td.align-middle
+                            a(href="/order/register/" data-toggle="tooltip" data-placement="top" title="メモ/お問い合わせあり"): i.fa.fa-commenting.fa-lg.text-secondary(aria-hidden="true")
+                        td.align-middle.pr-3
+                            .row.justify-content-end
+                                .col-auto.text-center
+                                    a(href="/order/mail/" data-toggle="tooltip" data-placement="top" title="メール送信"): i.fa.fa-send.fa-lg.text-secondary(aria-hidden="true")
+                                .col-auto.text-center
+                                    a(data-toggle="tooltip" data-placement="top" title="帳票"): i.fa.fa-table.fa-lg.text-secondary(aria-hidden="true")
+                                .col-auto.text-center
+                                    a(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-close.fa-lg.text-secondary(aria-hidden="true")
+                    tr
+                        td.align-middle
+                            input(type='checkbox', name='filter', value='open')
+                        td.align-middle 2017/09/13
+                            br
+                            | 21:23
+                        td.align-middle
+                            a(href="/order/register/") 127645
+                        td.align-middle 山田はなこ
+                        td.align-middle 郵便振替
+                        td.align-middle 53,920
+                        td.align-middle
+                            a(href='/shipment/register/') 12345
+                                br
+                                | 12346
+                        td.align-middle
+                            button.btn.btn-outline-warning.py-2(type='button') 決済処理中
+                        td.align-middle
+                        td.align-middle.pr-3
+                            .row.justify-content-end
+                                .col-auto.text-center
+                                    a(href="/order/mail/" data-toggle="tooltip" data-placement="top" title="メール送信"): i.fa.fa-send.fa-lg.text-secondary(aria-hidden="true")
+                                .col-auto.text-center
+                                    a(data-toggle="tooltip" data-placement="top" title="帳票"): i.fa.fa-table.fa-lg.text-secondary(aria-hidden="true")
+                                .col-auto.text-center
+                                    a(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-close.fa-lg.text-secondary(aria-hidden="true")
+                    tr
+                        td.align-middle
+                            input(type='checkbox', name='filter', value='open')
+                        td.align-middle 2017/09/13
+                            br
+                            | 21:23
+                        td.align-middle
+                            a(href="/order/register/") 127645
+                        td.align-middle 山田はなこ
+                        td.align-middle 郵便振替
+                        td.align-middle 53,920
+                        td.align-middle
+                            a(href='/shipment/register/') 12345
+                                br
+                                | 12346
+                        td.align-middle
+                            button.btn.btn-outline-secondary.py-2(type='button') 発送済み
+                        td.align-middle
+                        td.align-middle.pr-3
+                            .row.justify-content-end
+                                .col-auto.text-center
+                                    a(href="/order/mail/" data-toggle="tooltip" data-placement="top" title="メール送信"): i.fa.fa-send.fa-lg.text-secondary(aria-hidden="true")
+                                .col-auto.text-center
+                                    a(data-toggle="tooltip" data-placement="top" title="帳票"): i.fa.fa-table.fa-lg.text-secondary(aria-hidden="true")
+                                .col-auto.text-center
+                                    a(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-close.fa-lg.text-secondary(aria-hidden="true")
+                    tr
+                        td.align-middle
+                            input(type='checkbox', name='filter', value='open')
+                        td.align-middle 2017/09/13
+                            br
+                            | 21:23
+                        td.align-middle
+                            a(href="/order/register/") 127645
+                        td.align-middle 山田はなこ
+                        td.align-middle 郵便振替
+                        td.align-middle 53,920
+                        td.align-middle
+                            a(href='/shipment/register/') 12345
+                                br
+                                | 12346
+                        td.align-middle
+                            button.btn.btn-outline-secondary.py-2(type='button') 発送済み
+                        td.align-middle
+                            a(href="/order/register/" data-toggle="tooltip" data-placement="top" title="メモ/お問い合わせあり"): i.fa.fa-commenting.fa-lg.text-secondary(aria-hidden="true")
+                        td.align-middle.pr-3
+                            .row.justify-content-end
+                                .col-auto.text-center
+                                    a(href="/order/mail/" data-toggle="tooltip" data-placement="top" title="メール送信"): i.fa.fa-send.fa-lg.text-secondary(aria-hidden="true")
+                                .col-auto.text-center
+                                    a(data-toggle="tooltip" data-placement="top" title="帳票"): i.fa.fa-table.fa-lg.text-secondary(aria-hidden="true")
+                                .col-auto.text-center
+                                    a(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-close.fa-lg.text-secondary(aria-hidden="true")
+            .row.justify-content-md-center.mb-4
+                ul.pagination
+                    li.page-item
+                        a.page-link(href='#') Previous
+                    li.page-item.active
+                        a.page-link(href='#') 1
+                    li.page-item
+                        a.page-link(href='#') 2
+                    li.page-item
+                        a.page-link(href='#') 3
+                    li.page-item
+                        a.page-link(href='#') 4
+                    li.page-item
+                        a.page-link(href='#') Next

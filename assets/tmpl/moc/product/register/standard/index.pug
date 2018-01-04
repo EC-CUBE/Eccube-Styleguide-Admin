@@ -10,7 +10,7 @@ block primaryContents
                 .col-8
                     span.card-title.align-middle 商品名：フォーク
                 .col-4.text-right
-                    button.btn.btn-danger(data-toggle="modal" data-target="#initializationConfirm") 商品規格を初期化
+                    button.btn.btn-ec-delete(data-toggle="modal" data-target="#initializationConfirm") 商品規格を初期化
                     #initializationConfirm.modal.fade(tabindex='-1', role='dialog', aria-labelledby='deleteConfirm', aria-hidden='true')
                         .modal-dialog(role='document')
                             .modal-content
@@ -21,8 +21,8 @@ block primaryContents
                                 .modal-body
                                     p.text-left この商品に登録された規格を初期化します。これまでの販売データには影響はありませんが、この操作は取り消すことができません。初期化しますか？
                                 .modal-footer
-                                    button.btn.btn-secondary(type='button', data-dismiss='modal') キャンセル
-                                    button(type='button').btn.btn-danger 規格を初期化
+                                    button.btn.btn-ec-sub(type='button', data-dismiss='modal') キャンセル
+                                    button(type='button').btn.btn-ec-delete 規格を初期化
         .card-body
             .row.mb-2
                 .col
@@ -43,7 +43,7 @@ block primaryContents
                 .col-6
                     span.align-middle 9件の規格の組み合わせがあります
                 .col-4.text-right
-                    button.btn.btn-outline-dark
+                    button.btn.btn-ec-regular
                         i.fa.fa-files-o.mr-1
                         span 一行目をすべての行に複製
         .card-body.p-0
@@ -110,4 +110,4 @@ block conversionArea
                             include /assets/tmpl/components/toggleSwitch.pug
                             +c-toggleSwitch--conversion('switch','公開')
                         .col-auto
-                            button(type="submit").btn.btn-primary.px-5 更新
+                            button(type="submit").btn.btn-ec-conversion.px-5 更新

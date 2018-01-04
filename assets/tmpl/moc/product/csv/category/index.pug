@@ -17,7 +17,7 @@ block primaryContents
                 .col
                     form.mb-2
                         input(type="file").form-control-file
-                    button(type="submit").btn.btn-primary 一括登録を実行
+                    button(type="submit").btn.btn-ec-conversion 一括登録を実行
     .card.rounded.border-0.mb-4
         .card-header
             .row.justify-content-between
@@ -26,19 +26,19 @@ block primaryContents
                         span.align-middle カテゴリ登録CSVファイルフォーマット
                         i.fa.fa-question-circle.fa-lg.fa-lg.ml-1
                 .col-4.text-right
-                    button.btn.btn-outline-dark 雛形ファイルダウンロード
+                    button.btn.btn-ec-regular 雛形ファイルダウンロード
         .card-body
             table.table.table-striped.table-bordered
                 tbody
                     tr
-                        th.w-25.align-middle.table-secondary カテゴリID
+                        th.w-25.align-middle.table-ec-lightGray カテゴリID
                         td.align-middle 新規登録時は未設定
                             br
                             | 既存商品の更新は商品IDを設定
                     tr
-                        th.w-25.align-middle.table-secondary カテゴリ名
+                        th.w-25.align-middle.table-ec-lightGray カテゴリ名
                             span.badge.badge-primary.ml-1 必須
                         td.align-middle
                     tr
-                        th.w-25.align-middle.table-secondary 親カテゴリID
+                        th.w-25.align-middle.table-ec-lightGray 親カテゴリID
                         td.align-middle

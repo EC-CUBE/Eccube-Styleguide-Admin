@@ -51,7 +51,7 @@ Markup:
 form.c-form
   .c-form__text
     input(type="text")
-    textarea(rows="9" placeholder="テキスト")
+    textarea(rows="9")
 form.c-form
   .c-form__text--regular
     input(type="text")
@@ -642,7 +642,7 @@ Markup:
       .col-12
         form.c-form
           .c-form__text
-            input(type="text" placeholder="テキスト")
+            input(type="text")
 +b.c-horizontalForm
   +e.label
     .c-toolTip(data-toggle="tooltip" data-placement="top" title="Tooltip")

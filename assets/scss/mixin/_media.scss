@@ -5,3 +5,10 @@
     @content;
   }
 }
+
+
+@mixin media_mainNav(){
+  @media only screen and (max-width: 1280px) {
+    @content;
+  }
+}

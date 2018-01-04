@@ -1,3 +1,4 @@
+//Theme color
 $primary:       #437ec4 !default;
 $secondary:     #54687A !default;
 $success:       #25b877 !default;
@@ -7,10 +8,34 @@ $danger:        #c04949 !default;
 $light:         #eff0f4 !default;
 $dark:          #595959 !default;
 
-
+//card
 $card-cap-bg: white;
 
+//table
 $table-border-color: #ccc;
 $table-accent-bg: #f9f9f9;
+$table-active-bg: #f2f2f2;
+.table-ec-lightGray{
+  background-color: #f2f2f2;
+}
+
+//breadcrumb
+$breadcrumb-bg: #eff0f4;
 
 @import "../../node_modules/bootstrap/scss/bootstrap";
+
+.btn-ec-conversion{
+  @include button-variant(#437EC4, transparent, #2963AB, transparent, #2963AB, transparent )
+}
+.btn-ec-delete{
+  @include button-variant(#C04949, transparent, #A62E2E, transparent, #A62E2E, transparent )
+}
+.btn-ec-regular{
+  @include button-variant(#FFFFFF, #595959, #F2F2F2, #262626, #F2F2F2, #262626 )
+}
+.btn-ec-sub{
+  @include button-variant(#F5F6F8, transparent, #D6D9E0, transparent, #D6D9E0, transparent )
+}
+.btn-ec-icon{
+  @include button-variant(#F5F6F8, transparent, #D6D9E0, transparent, #D6D9E0, transparent )
+}

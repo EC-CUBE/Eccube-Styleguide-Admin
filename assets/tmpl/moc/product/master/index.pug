@@ -13,10 +13,10 @@ block outsideBlock
                         input.form-control(type='text')
                     .d-inline-block.mb-3(data-toggle="collapse" href="#commentList" aria-expanded="false" aria-controls="commentList")
                         i.fa.fa-plus-square-o.font-weight-bold.mr-1
-                        span.font-weight-bold 一覧コメントを追加
+                        span.font-weight-bold 詳細検索
 
-        +b.c-subContents.collapse(id="commentList").show
-            .row
+        +b.c-subContents.collapse(id="commentList")
+            .row.mb-2
                 .col-6
                     form.form-row.mb-2
                         .col-6
@@ -59,20 +59,22 @@ block outsideBlock
                                 span 〜
                             .col
                                 input.form-control(type='date', value='2000-01-01')
+            .d-block.text-center
+                button(type="button").btn.btn-outline-dark 検索条件クリア
         +e.contents.mb-5
-            button.btn.btn-primary.px-5(type="button") 検索
+            a(href="/product/master/match").btn.btn-ec-conversion.px-5 検索
 
 block primaryContents
     .row.justify-content-between.mb-2
         .col-6
             label.mr-2 一括操作
             .btn-group(role='group').mr-2
-                button.btn.btn-light.border.border-dark(type='button')
+                button.btn.btn-ec-regular.border.border-dark(type='button')
                     span 公開
-                button.btn.btn-light.border.border-dark(type='button')
+                button.btn.btn-ec-regular.border.border-dark(type='button')
                     span 非公開
-            button.btn.btn-light.border.border-dark.mr-2 廃止
-            button.btn.btn-danger 完全に削除
+            button.btn.btn-ec-regular.border.border-dark.mr-2 廃止
+            button.btn.btn-ec-delete 完全に削除
 
         .col-5.text-right
             .d-inline-block.mr-2
@@ -82,10 +84,10 @@ block primaryContents
                         option ...
             .d-inline-block
                 .btn-group(role='group')
-                    button.btn.btn-light.border.border-dark(type='button')
+                    button.btn.btn-ec-regular.border.border-dark(type='button')
                         i.fa.fa-cloud-download.mr-1
                         span CSVダウンロード
-                    button.btn.btn-light.border.border-dark(type='button')
+                    button.btn.btn-ec-regular.border.border-dark(type='button')
                         i.fa.fa-cog.mr-1
                         span CSV出力設定
 
@@ -94,7 +96,7 @@ block primaryContents
             table.table.table-sm
                 thead
                     tr
-                        th.border-top-0
+                        th.border-top-0.pl-3.pr-3.pt-2.pb-2
                             input(type='checkbox', name='filter', value='open')
                         th.border-top-0 ID
                         th.border-top-0 画像
@@ -108,7 +110,7 @@ block primaryContents
                         th.border-top-0(colspan="3")
                 tbody
                     tr
-                        td.align-middle
+                        td.align-middle.pl-3.pr-3
                             input(type='checkbox', name='filter', value='open')
                         td.align-middle 34
                         td.align-middle
@@ -141,10 +143,10 @@ block primaryContents
                                                 .modal-body.text-left
                                                     p.text-left 商品は一覧（マスター）から削除されますが、これまでの取引等のデータから消えることはありません。この操作はあとから取り消すことができません。この商品を廃止しますか？
                                                 .modal-footer
-                                                    button.btn.btn-secondary(type='button', data-dismiss='modal') キャンセル
-                                                    button(type='button').btn.btn-danger 取扱を停止
-                    tr.table-secondary
-                        td.align-middle
+                                                    button.btn.btn-ec-sub(type='button', data-dismiss='modal') キャンセル
+                                                    button(type='button').btn.btn-ec-delete 取扱を停止
+                    tr.table-ec-lightGray
+                        td.align-middle.pl-3.pr-3
                             input(type='checkbox', name='filter', value='open')
                         td.align-middle 33
                         td.align-middle
@@ -168,7 +170,7 @@ block primaryContents
                                     a(data-toggle="modal" data-target="#discontinuance")
                                         i.fa.fa-close.fa-lg.text-secondary(aria-hidden="true")
                     tr
-                        td.align-middle
+                        td.align-middle.pl-3.pr-3
                             input(type='checkbox', name='filter', value='open')
                         td.align-middle 1
 
@@ -223,8 +225,8 @@ block primaryContents
                                                             td 6
                                                             td 8,000
                                         .modal-footer
-                                            button.btn.btn-secondary(type='button', data-dismiss='modal') 戻る
-                                            a(href="/product/register/standard").btn.btn-primary 規格の編集
+                                            button.btn.btn-ec-sub(type='button', data-dismiss='modal') 戻る
+                                            a(href="/product/register/standard").btn.btn-ec-conversion 規格の編集
                         td.align-middle 公開
                         td.align-middle 2017/01/12
                         td.align-middle 2017/07/12
@@ -238,7 +240,7 @@ block primaryContents
                                     a(data-toggle="modal" data-target="#discontinuance")
                                         i.fa.fa-close.fa-lg.text-secondary(aria-hidden="true")
                     tr
-                        td.align-middle
+                        td.align-middle.pl-3.pr-3
                             input(type='checkbox', name='filter', value='open')
                         td.align-middle 31
 
@@ -262,8 +264,8 @@ block primaryContents
                                 .col(data-toggle="tooltip" data-placement="top" title="廃止").text-center
                                     a(data-toggle="modal" data-target="#discontinuance")
                                         i.fa.fa-close.fa-lg.text-secondary(aria-hidden="true")
-                    tr.table-secondary
-                        td.align-middle
+                    tr.table-ec-lightGray
+                        td.align-middle.pl-3.pr-3
                             input(type='checkbox', name='filter', value='open')
                         td.align-middle 30
 
@@ -288,7 +290,7 @@ block primaryContents
                                     a(data-toggle="modal" data-target="#discontinuance")
                                         i.fa.fa-close.fa-lg.text-secondary(aria-hidden="true")
                     tr.table-danger
-                        td.align-middle
+                        td.align-middle.pl-3.pr-3
                             input(type='checkbox', name='filter', value='open')
                         td.align-middle 29
                         td.align-middle
@@ -312,7 +314,7 @@ block primaryContents
                                     a(data-toggle="modal" data-target="#discontinuance")
                                         i.fa.fa-close.fa-lg.text-secondary(aria-hidden="true")
                     tr
-                        td.align-middle
+                        td.align-middle.pl-3.pr-3
                             input(type='checkbox', name='filter', value='open')
                         td.align-middle 28
                         td.align-middle
@@ -336,7 +338,7 @@ block primaryContents
                                     a(data-toggle="modal" data-target="#discontinuance")
                                         i.fa.fa-close.fa-lg.text-secondary(aria-hidden="true")
                     tr
-                        td.align-middle
+                        td.align-middle.pl-3.pr-3
                             input(type='checkbox', name='filter', value='open')
                         td.align-middle 27
                         td.align-middle
@@ -360,7 +362,7 @@ block primaryContents
                                     a(data-toggle="modal" data-target="#discontinuance")
                                         i.fa.fa-close.fa-lg.text-secondary(aria-hidden="true")
                     tr
-                        td.align-middle
+                        td.align-middle.pl-3.pr-3
                             input(type='checkbox', name='filter', value='open')
                         td.align-middle 26
                         td.align-middle
@@ -384,7 +386,7 @@ block primaryContents
                                     a(data-toggle="modal" data-target="#discontinuance")
                                         i.fa.fa-close.fa-lg.text-secondary(aria-hidden="true")
                     tr
-                        td.align-middle
+                        td.align-middle.pl-3.pr-3
                             input(type='checkbox', name='filter', value='open')
                         td.align-middle 25
                         td.align-middle
@@ -408,12 +410,16 @@ block primaryContents
                                     a(data-toggle="modal" data-target="#discontinuance")
                                         i.fa.fa-close.fa-lg.text-secondary(aria-hidden="true")
         .row.justify-content-md-center.mb-4
-            .col-auto
-                .btn-group.btn-group-lg
-                    button.btn.btn-secondary(type='button') 1
-                .btn-group.btn-group-lg
-                    button.btn.btn-outline-secondary(type='button') 2
-                .btn-group.btn-group-lg
-                    button.btn.btn-outline-secondary(type='button') 3
-                .btn-group.btn-group-lg
-                    button.btn.btn-outline-secondary(type='button') 4
+            ul.pagination
+                li.page-item
+                    a.page-link(href='#') Previous
+                li.page-item.active
+                    a.page-link(href='#') 1
+                li.page-item
+                    a.page-link(href='#') 2
+                li.page-item
+                    a.page-link(href='#') 3
+                li.page-item
+                    a.page-link(href='#') 4
+                li.page-item
+                    a.page-link(href='#') Next

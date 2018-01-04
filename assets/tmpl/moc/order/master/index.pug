@@ -41,7 +41,7 @@ block outsideBlock
                     .d-inline-block.mb-3(data-toggle="collapse" href="#searchDetail" aria-expanded="false" aria-controls="searchDetail")
                         i.fa.fa-plus-square-o.font-weight-bold.mr-1
                         span.font-weight-bold 詳細検索
-        +b.c-subContents.collapse(id="searchDetail").show
+        +b.c-subContents.collapse(id="searchDetail")
             .row
                 .col
                     form
@@ -97,7 +97,7 @@ block outsideBlock
                 .col
                     form
                         label.col-form-label メールアドレス
-                        input(type="email")
+                        input(type="email").form-control
                 .col
                     form
                         label.col-form-label 入金日
@@ -148,26 +148,26 @@ block outsideBlock
                         input(type="text").form-control
 
             .d-block.text-center
-                button(type="button").btn.btn-outline-dark 検索条件クリア
+                button(type="button").btn.btn-ec-regular 検索条件クリア
         +e.contents
             .row
                 .mb-4
                     .col-12
-                        a.c-button--regular.c-button--conversion(href='') 検索
+                        a(href="/order/master/match").btn.btn-primary.px-5 検索
 block primaryContents
     .row.justify-content-between.mb-2
         .col-auto
             label.mr-2 一括操作
-            button.btn.btn-light.border.border-dark.mr-2 メールする
-            button.btn.btn-light.border.border-dark.mr-2 帳票出力
-            button.btn.btn-danger 削除
+            button.btn.btn-ec-regular.border.border-dark.mr-2 メールする
+            button.btn.btn-ec-regular.border.border-dark.mr-2 帳票出力
+            button.btn.btn-ec-delete 削除
         .col
             .d-inline-block.mr-2
                 form
                     select.custom-select
                         option(selected='') 対応状況の変更
                         option ...
-            button.btn.btn-light.border.border-dark.mr-2 決定
+            button.btn.btn-ec-regular.border.border-dark.mr-2 決定
 
         .col-auto.text-right
             .d-inline-block
@@ -177,10 +177,10 @@ block primaryContents
                         option ...
             .d-inline-block
                 .btn-group(role='group')
-                    button.btn.btn-light.border.border-dark(type='button')
+                    button.btn.btn-ec-regular.border.border-dark(type='button')
                         i.fa.fa-cloud-download.mr-1
                         span CSVダウンロード
-                    button.btn.btn-light.border.border-dark(type='button')
+                    button.btn.btn-ec-regular.border.border-dark(type='button')
                         i.fa.fa-cog.mr-1
                         span CSV出力設定
     .card.rounded.border-0.mb-4
@@ -188,7 +188,7 @@ block primaryContents
             table.table.table-sm
                 thead
                     tr
-                        th.border-top-0
+                        th.border-top-0.pl-3.pr-3.pt-2.pb-2
                             input(type='checkbox', name='filter', value='open')
                         th.border-top-0 受注日時
                         th.border-top-0 注文番号
@@ -201,7 +201,7 @@ block primaryContents
                         th.border-top-0
                 tbody
                     tr
-                        td.align-middle
+                        td.align-middle.pl-3.pr-3
                             input(type='checkbox', name='filter', value='open')
                         td.align-middle 2017/09/13
                             br
@@ -229,7 +229,7 @@ block primaryContents
                                     a(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-close.fa-lg.text-secondary(aria-hidden="true")
 
                     tr
-                        td.align-middle
+                        td.align-middle.pl-3.pr-3
                             input(type='checkbox', name='filter', value='open')
                         td.align-middle 2017/09/13
                             br
@@ -256,7 +256,7 @@ block primaryContents
                                 .col-auto.text-center
                                     a(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-close.fa-lg.text-secondary(aria-hidden="true")
                     tr
-                        td.align-middle
+                        td.align-middle.pl-3.pr-3
                             input(type='checkbox', name='filter', value='open')
                         td.align-middle 2017/09/13
                             br
@@ -284,7 +284,7 @@ block primaryContents
                                 .col-auto.text-center
                                     a(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-close.fa-lg.text-secondary(aria-hidden="true")
                     tr
-                        td.align-middle
+                        td.align-middle.pl-3.pr-3
                             input(type='checkbox', name='filter', value='open')
                         td.align-middle 2017/09/13
                             br
@@ -310,7 +310,7 @@ block primaryContents
                                 .col-auto.text-center
                                     a(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-close.fa-lg.text-secondary(aria-hidden="true")
                     tr
-                        td.align-middle
+                        td.align-middle.pl-3.pr-3
                             input(type='checkbox', name='filter', value='open')
                         td.align-middle 2017/09/13
                             br
@@ -337,7 +337,7 @@ block primaryContents
                                 .col-auto.text-center
                                     a(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-close.fa-lg.text-secondary(aria-hidden="true")
                     tr.text-secondary
-                        td.align-middle
+                        td.align-middle.pl-3.pr-3
                             input(type='checkbox', name='filter', value='open')
                         td.align-middle 2017/09/13
                             br
@@ -363,7 +363,7 @@ block primaryContents
                                 .col-auto.text-center
                                     a(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-close.fa-lg.text-secondary(aria-hidden="true")
                     tr
-                        td.align-middle
+                        td.align-middle.pl-3.pr-3
                             input(type='checkbox', name='filter', value='open')
                         td.align-middle 2017/09/13
                             br
@@ -388,7 +388,7 @@ block primaryContents
                                 .col-auto.text-center
                                     a(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-close.fa-lg.text-secondary(aria-hidden="true")
                     tr
-                        td.align-middle
+                        td.align-middle.pl-3.pr-3
                             input(type='checkbox', name='filter', value='open')
                         td.align-middle 2017/09/13
                             br
@@ -414,7 +414,7 @@ block primaryContents
                                 .col-auto.text-center
                                     a(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-close.fa-lg.text-secondary(aria-hidden="true")
                     tr
-                        td.align-middle
+                        td.align-middle.pl-3.pr-3
                             input(type='checkbox', name='filter', value='open')
                         td.align-middle 2017/09/13
                             br
@@ -440,7 +440,7 @@ block primaryContents
                                 .col-auto.text-center
                                     a(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-close.fa-lg.text-secondary(aria-hidden="true")
                     tr
-                        td.align-middle
+                        td.align-middle.pl-3.pr-3
                             input(type='checkbox', name='filter', value='open')
                         td.align-middle 2017/09/13
                             br
@@ -467,12 +467,16 @@ block primaryContents
                                 .col-auto.text-center
                                     a(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-close.fa-lg.text-secondary(aria-hidden="true")
             .row.justify-content-md-center.mb-4
-                .col-auto
-                    .btn-group.btn-group-lg
-                        button.btn.btn-secondary(type='button') 1
-                    .btn-group.btn-group-lg
-                        button.btn.btn-outline-secondary(type='button') 2
-                    .btn-group.btn-group-lg
-                        button.btn.btn-outline-secondary(type='button') 3
-                    .btn-group.btn-group-lg
-                        button.btn.btn-outline-secondary(type='button') 4
+                ul.pagination
+                    li.page-item
+                        a.page-link(href='#') Previous
+                    li.page-item.active
+                        a.page-link(href='#') 1
+                    li.page-item
+                        a.page-link(href='#') 2
+                    li.page-item
+                        a.page-link(href='#') 3
+                    li.page-item
+                        a.page-link(href='#') 4
+                    li.page-item
+                        a.page-link(href='#') Next

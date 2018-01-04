@@ -1,0 +1,139 @@
+extends /assets/tmpl/moc/layout/_layout-2col.pug
+block pageTitle
+    include /assets/tmpl/components/pageTitle.pug
+    +c-pageTitle("会員マスター","会員管理")
+
+block outsideBlock
+    +b.c-outsideBlock
+        +e.contents
+            .row.justify-content-start
+                .col-6
+                    form.mb-2
+                        label.col-form-label 会員ID・メールアドレス・お名前
+                        input.form-control(type='text')
+                    .d-inline-block.mb-3(data-toggle="collapse" href="#commentList" aria-expanded="false" aria-controls="commentList")
+                        i.fa.fa-plus-square-o.font-weight-bold.mr-1
+                        span.font-weight-bold 詳細検索
+        +b.c-subContents.collapse(id="commentList")
+            .row.mb-2
+                .col
+                    form.form-row
+                        .col-12
+                            p.col-form-label 会員種別
+                            label.form-check-label.mr-3
+                                input.form-check-input(type='checkbox', value='')
+                                | 仮会員
+                            label.form-check-label.mr-3
+                                input.form-check-input(type='checkbox', value='')
+                                | 本会員
+                .col
+                    form
+                        label 購入商品名
+                        input(type="text").form-control
+            .row.mb-2
+                .col
+                    form.form-row
+                        .col-12
+                            p.col-form-label 性別
+                            label.form-check-label.mr-3
+                                input.form-check-input(type='checkbox', value='')
+                                | 男性
+                            label.form-check-label.mr-3
+                                input.form-check-input(type='checkbox', value='')
+                                | 女性
+                .col
+                    form
+                        label 購入金額
+                        .form-row.align-items-center
+                            .col
+                                input.form-control(type='text')
+                            .col-auto
+                                span 〜
+                            .col
+                                input.form-control(type='text')
+            .row.mb-2
+                .col
+                    form
+                        label 誕生月
+                        .row
+                            .col-5
+                                select.form-control
+                                    option 選んでください
+                                    option ...
+                            .col-7
+                .col
+                    form
+                        label 購入回数
+                        .form-row.align-items-center
+                            .col
+                                input.form-control(type='text')
+                            .col-auto
+                                span 〜
+                            .col
+                                input.form-control(type='text')
+            .row.mb-2
+                .col
+                    form
+                        label 誕生日
+                        .form-row.align-items-center
+                            .col
+                                input.form-control(type='date', value='2000-01-01')
+                            .col-auto.text-center
+                                span 〜
+                            .col
+                                input.form-control(type='date', value='2000-01-01')
+                .col
+                    form
+                        label 登録日
+                        .form-row.align-items-center
+                            .col
+                                input.form-control(type='date', value='2000-01-01')
+                            .col-auto.text-center
+                                span 〜
+                            .col
+                                input.form-control(type='date', value='2000-01-01')
+            .row.mb-2
+                .col
+                    form
+                        label 都道府県
+                        .row
+                            .col-5
+                                select.form-control
+                                    option 選んでください
+                                    option ...
+                            .col-7
+                .col
+                    form
+                        label 更新日
+                        .form-row.align-items-center
+                            .col
+                                input.form-control(type='date', value='2000-01-01')
+                            .col-auto.text-center
+                                span 〜
+                            .col
+                                input.form-control(type='date', value='2000-01-01')
+            .row.mb-4
+                .col
+                    form.mb-3
+                        label 電話番号
+                        input(type="text").form-control
+                .col
+                    form
+                        label 最終購入日
+                        .form-row.align-items-center
+                            .col
+                                input.form-control(type='date', value='2000-01-01')
+                            .col-auto.text-center
+                                span 〜
+                            .col
+                                input.form-control(type='date', value='2000-01-01')
+            .d-block.text-center
+                button(type="button").btn.btn-outline-dark 検索条件クリア
+        +e.contents.mb-5
+            a(href="/customer/master/none").btn.btn-primary.px-5 検索
+block primaryContents
+    .card.rounded.border-0
+        .card-body.p-4
+            .text-center.text-muted.mb-4.h5 検索条件に合致するデータが見つかりませんでした
+            .text-center.text-muted 検索条件を変えて、再度検索をお試しください。
+            .text-center.text-muted [詳細検索]も試してみましょう。
