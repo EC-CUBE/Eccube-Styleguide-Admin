@@ -5,22 +5,22 @@ block pageTitle
             +e.H2.title ホーム
 
 block outsideBlock
-    .alert.alert-primary.alert-dismissible.fade.show(role='alert')
+    .alert.alert-primary.alert-dismissible.fade.show.m-3(role='alert')
         i.fa.fa-comment.fa-lg.mr-2
         span.font-weight-bold アラート：通常
         button.close(type='button', data-dismiss='alert', aria-label='Close')
             span(aria-hidden='true') ×
-    .alert.alert-success.alert-dismissible.fade.show(role='alert')
+    .alert.alert-success.alert-dismissible.fade.show.m-3(role='alert')
         i.fa.fa-check.fa-lg.mr-2
         span.font-weight-bold アラート：成功
         button.close(type='button', data-dismiss='alert', aria-label='Close')
             span(aria-hidden='true') ×
-    .alert.alert-danger.alert-dismissible.fade.show(role='alert')
+    .alert.alert-danger.alert-dismissible.fade.show.m-3(role='alert')
         i.fa.fa-warning.fa-lg.mr-2
         span.font-weight-bold アラート：失敗
         button.close(type='button', data-dismiss='alert', aria-label='Close')
             span(aria-hidden='true') ×
-    .alert.alert-warning.alert-dismissible.fade.show(role='alert')
+    .alert.alert-warning.alert-dismissible.fade.show.m-3(role='alert')
         i.fa.fa-warning.fa-lg.mr-2
         span.font-weight-bold アラート：警告
         button.close(type='button', data-dismiss='alert', aria-label='Close')
@@ -162,4 +162,4 @@ block primaryContents
                         span.card-title お知らせ
                 .card-body.p-0
                     .
-                        <iframe name="information" class="link_list_wrap" src="https://www.ec-cube.net/info/3/" style="width:100%; border:0; min-height:320px;"></iframe>
+                        <iframe name="information" class="link_list_wrap" src="https://www.ec-cube.net/info/3/" style="width:100%; border:0; min-height:300px;"></iframe>
