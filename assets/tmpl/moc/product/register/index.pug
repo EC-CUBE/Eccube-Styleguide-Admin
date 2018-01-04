@@ -31,7 +31,7 @@ block primaryContents
                             span.badge.badge-primary.ml-1 必須
                     .col.mb-2
                         form
-                            input(type="text" placeholder="テキスト").form-control
+                            input(type="text").form-control
                 .row
                     .col-3
                         .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
@@ -69,7 +69,7 @@ block primaryContents
                             span.badge.badge-primary.ml-1 必須
                     .col
                         form
-                            input(type="text" placeholder="テキスト").form-control
+                            input(type="text").form-control
                         .d-inline-block.mb-2
                             i.fa.fa-plus-square-o.font-weight-bold.mr-1
                             span.font-weight-bold 通常価格を追加
@@ -81,7 +81,7 @@ block primaryContents
                             span.badge.badge-primary.ml-1 必須
                     .col
                         form
-                            input(type="text" placeholder="テキスト").form-control
+                            input(type="text").form-control
                             .form-check.mb-2
                                 label.form-check-label
                                     input.form-check-input(type="checkbox")
@@ -93,7 +93,7 @@ block primaryContents
                             i.fa.fa-question-circle.fa-lg.ml-1
                     .col.mb-2
                         form
-                            input(type="text" placeholder="テキスト").form-control
+                            input(type="text").form-control
     .card.rounded.border-0.mb-4
         .card-header
             .row
@@ -142,7 +142,7 @@ block primaryContents
                             td 6
                             td 8,000
                 .d-block.text-center.text-center
-                    button(type="button" data-toggle="modal" data-target="#confirmModal").btn.btn-outline-dark この商品の規格管理
+                    button(type="button" data-toggle="modal" data-target="#confirmModal").btn.btn-ec-regular この商品の規格管理
                     #confirmModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='confirmModal', aria-hidden='true')
                         .modal-dialog(role='document')
                             .modal-content
@@ -153,8 +153,8 @@ block primaryContents
                                 .modal-body
                                     p 規格の管理画面に移動します。商品情報を保存してから移動しますか？
                                 .modal-footer
-                                    a(href="/product/register/standard").btn.btn-primary 変更を保存
-                                    button.btn.btn-secondary(type='button', data-dismiss='modal') キャンセル
+                                    a(href="/product/register/standard").btn.btn-ec-conversion 変更を保存
+                                    button.btn.btn-ec-sub(type='button', data-dismiss='modal') キャンセル
 
 
 
@@ -177,7 +177,7 @@ block primaryContents
                             i.fa.fa-question-circle.fa-lg.ml-1
                     .col-9
                         form
-                            textarea(rows="8" placeholder="テキスト").form-control
+                            textarea(rows="8").form-control
 
 block secondaryContents
     .card.rounded.border-0.mb-4
@@ -197,12 +197,12 @@ block secondaryContents
                         .col
                             input.form-control(type="search" placeholder="カテゴリ検索" aria-label="Search")
                         .col-auto
-                            button.btn.btn-light(type="submit"): i.fa.fa-search
+                            button.btn.btn-ec-regular(type="submit"): i.fa.fa-search
                 include /assets/tmpl/components/directory.pug
                 +c-directoryTreeRegister
 
                 .d-block.text-center
-                    button(type="button").btn.btn-block.btn-outline-dark カテゴリの追加・編集
+                    button(type="button").btn.btn-block.btn-ec-regular カテゴリの追加・編集
 
     .card.rounded.border-0.mb-4
         .card-header
@@ -238,7 +238,7 @@ block secondaryContents
                     i.fa.fa-plus-square-o.font-weight-bold.mr-1
                     span.font-weight-bold 全てのタグを表示
                 .d-block.text-center
-                    button(type="button").btn.btn-block.btn-outline-dark タグの追加・編集
+                    button(type="button").btn.btn-block.btn-ec-regular タグの追加・編集
 
     .card.rounded.border-0.mb-4
         .card-header
@@ -284,7 +284,7 @@ block secondaryContents
         .collapse(id="shopMemo").show
             .card-body
                 form
-                    textarea(rows="8" placeholder="テキスト").form-control
+                    textarea(rows="8").form-control
 
 block conversionArea
     +b.c-conversionArea
@@ -301,4 +301,4 @@ block conversionArea
                             include /assets/tmpl/components/toggleSwitch.pug
                             +c-toggleSwitch--conversion('switch','公開')
                         .col-auto
-                            button(type="submit").btn.btn-primary.px-5 更新
+                            button(type="submit").btn.btn-ec-conversion.px-5 更新

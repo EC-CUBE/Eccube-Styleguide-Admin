@@ -75,7 +75,7 @@ Styleguide 2.0
     vertical-align: middle;
     text-decoration: none;
     cursor: pointer;
-    @include media_sp{
+    @include media_mainNav{
       display: table-cell;
     }
 

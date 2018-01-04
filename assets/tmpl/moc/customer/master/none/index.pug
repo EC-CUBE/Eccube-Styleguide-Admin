@@ -128,58 +128,13 @@ block outsideBlock
                             .col
                                 input.form-control(type='date', value='2000-01-01')
             .d-block.text-center
-                button(type="button").btn.btn-ec-regular 検索条件クリア
+                button(type="button").btn.btn-outline-dark 検索条件クリア
         +e.contents.mb-5
-            a(href="/customer/master/match").btn.btn-ec-conversion.px-5 検索
+            a(href="/customer/master").btn.btn-primary.px-5 検索
 block primaryContents
-    .row.justify-content-between.mb-2
-        .col-6
-        .col-5.text-right
-            .d-inline-block.mr-2
-                form
-                    select.custom-select
-                        option(selected='') 10件
-                        option ...
-            .d-inline-block
-                .btn-group(role='group')
-                    button.btn.btn-ec-regular.border.border-dark(type='button')
-                        i.fa.fa-cloud-download.mr-1
-                        span CSVダウンロード
-                    button.btn.btn-ec-regular.border.border-dark(type='button')
-                        i.fa.fa-cog.mr-1
-                        span CSV出力設定
-    .card.rounded.border-0.mb-4
-        .card-body.p-0
-            table.table
-                thead
-                    th.border-top-0.pl-3.pr-3.pt-2.pb-3 会員ID
-                    th.border-top-0 会員名
-                    th.border-top-0 電話番号
-                    th.border-top-0 メールアドレス
-                    th.border-top-0 &nbsp;
-                    th.border-top-0 &nbsp;
-                - for (var x = 0; x < 10; x++)
-                    tr
-                        td.align-middle.pl-3.pr-3 1
-                        td.align-middle
-                            a(href='/customer/register/') 山田 はなこ
-                        td.align-middle 06-6666-6666
-                        td.align-middle witchdoktor@gmail.com
-                        td.align-middle
-                        td.align-middle
-                            .row
-                                .col.text-center(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-close.fa-lg.text-secondary(aria-hidden="true")
-            .row.justify-content-md-center.mb-4
-                ul.pagination
-                    li.page-item
-                        a.page-link(href='#') Previous
-                    li.page-item.active
-                        a.page-link(href='#') 1
-                    li.page-item
-                        a.page-link(href='#') 2
-                    li.page-item
-                        a.page-link(href='#') 3
-                    li.page-item
-                        a.page-link(href='#') 4
-                    li.page-item
-                        a.page-link(href='#') Next
+    .card.rounded.border-0
+        .card-body.p-4
+            .text-center.text-muted.mb-2.h5 現在データが登録されていません。登録してみましょう！
+            .text-center.mb-4
+                button(type="button" data-toggle="modal" data-target="#confirmModal").btn.btn-outline-dark.pl-4.pr-4 新規登録
+            .text-center.text-muted データが消えてしまいましたか？バックアップをしているならリストアを試してみましょう。
