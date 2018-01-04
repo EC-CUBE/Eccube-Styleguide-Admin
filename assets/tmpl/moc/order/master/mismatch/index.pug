@@ -97,7 +97,7 @@ block outsideBlock
                 .col
                     form
                         label.col-form-label メールアドレス
-                        input(type="email")
+                        input(type="email").form-control
                 .col
                     form
                         label.col-form-label 入金日
@@ -153,10 +153,10 @@ block outsideBlock
             .row
                 .mb-4
                     .col-12
-                        a.c-button--regular.c-button--conversion(href='') 検索
+                        a(href="/order/master/none").btn.btn-primary.px-5 検索
 block primaryContents
-    .card.rounded.border-0.pt-4.pb-4
-        .card-body.p-0
+    .card.rounded.border-0
+        .card-body.p-4
             .text-center.text-muted.mb-4.h5 検索条件に合致するデータが見つかりませんでした
             .text-center.text-muted 検索条件を変えて、再度検索をお試しください。
             .text-center.text-muted [詳細検索]も試してみましょう。
