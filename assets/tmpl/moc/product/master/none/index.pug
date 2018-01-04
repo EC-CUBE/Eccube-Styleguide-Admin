@@ -1,0 +1,71 @@
+extends /assets/tmpl/moc/layout/_layout-2col.pug
+block pageTitle
+    include /assets/tmpl/components/pageTitle.pug
+    +c-pageTitle("商品マスター","商品管理")
+
+block outsideBlock
+    +b.c-outsideBlock
+        +e.contents
+            .row.justify-content-start
+                .col-6
+                    form.mb-2
+                        label.col-form-label 商品名・商品ID・商品コード
+                        input.form-control(type='text')
+                    .d-inline-block.mb-3(data-toggle="collapse" href="#commentList" aria-expanded="false" aria-controls="commentList")
+                        i.fa.fa-plus-square-o.font-weight-bold.mr-1
+                        span.font-weight-bold 詳細検索
+
+        +b.c-subContents.collapse(id="commentList")
+            .row
+                .col-6
+                    form.form-row.mb-2
+                        .col-6
+                            label.col-form-label カテゴリ
+                            select.form-control
+                                option 選んでください
+                                option ...
+                    form.form-row.mb-2
+                        .col-12
+                            p.col-form-label フィルタ
+                            label.form-check-label.mr-3
+                                input.form-check-input(type='checkbox', value='')
+                                | 公開
+                            label.form-check-label.mr-3
+                                input.form-check-input(type='checkbox', value='')
+                                | 非公開
+                            label.form-check-label
+                                input.form-check-input(type='checkbox', value='')
+                                | 在庫切れ
+                .col-6
+                    form.mb-2
+                        label.col-form-label(data-toggle="tooltip" data-placement="top" title="Tooltip")
+                            | 登録日
+                            i.fa.fa-question-circle.fa-lg.ml-1
+                        .form-row.align-items-center
+                            .col
+                                input.form-control(type='date', value='2000-01-01')
+                            .col-auto.text-center
+                                span 〜
+                            .col
+                                input.form-control(type='date', value='2000-01-01')
+
+                    form.mb-2
+                        label.col-form-label
+                            | 更新日
+                        .form-row.align-items-center
+                            .col
+                                input.form-control(type='date', value='2000-01-01')
+                            .col-auto
+                                span 〜
+                            .col
+                                input.form-control(type='date', value='2000-01-01')
+        +e.contents.mb-5
+            button.btn.btn-primary.px-5(type="button") 検索
+
+block primaryContents
+    .card.rounded.border-0.pt-4.pb-4
+        .card-body.p-0
+            .text-center.text-muted.mb-2.h5 現在データが登録されていません。登録してみましょう！
+            .text-center.mb-4
+                button(type="button" data-toggle="modal" data-target="#confirmModal").btn.btn-outline-dark.pl-4.pr-4 新規登録
+            .text-center.text-muted データが消えてしまいましたか？バックアップをしているならリストアを試してみましょう。
