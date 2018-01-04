@@ -12,7 +12,7 @@ block outsideBlock
                         label.col-form-label 会員ID・メールアドレス・お名前
                         input.form-control(type='text')
                     .d-inline-block.mb-3(data-toggle="collapse" href="#commentList" aria-expanded="false" aria-controls="commentList")
-                        i.fa.fa-minus-square-o.font-weight-bold.mr-1
+                        i.fa.fa-plus-square-o.font-weight-bold.mr-1
                         span.font-weight-bold 詳細検索
         +b.c-subContents.collapse(id="commentList")
             .row.mb-2
@@ -130,7 +130,7 @@ block outsideBlock
             .d-block.text-center
                 button(type="button").btn.btn-outline-dark 検索条件クリア
         +e.contents.mb-5
-            button.btn.btn-primary.px-5(type="button") 検索
+            a(href="/customer/master/mismatch").btn.btn-primary.px-5 検索
             span.font-weight-bold.ml-2 検索結果：56件が該当しました
 block primaryContents
     .row.justify-content-between.mb-2
@@ -171,12 +171,16 @@ block primaryContents
                             .row
                                 .col.text-center(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-close.fa-lg.text-secondary(aria-hidden="true")
             .row.justify-content-md-center.mb-4
-                .col-auto
-                    .btn-group.btn-group-lg
-                        button.btn.btn-secondary(type='button') 1
-                    .btn-group.btn-group-lg
-                        button.btn.btn-outline-secondary(type='button') 2
-                    .btn-group.btn-group-lg
-                        button.btn.btn-outline-secondary(type='button') 3
-                    .btn-group.btn-group-lg
-                        button.btn.btn-outline-secondary(type='button') 4
+                ul.pagination
+                    li.page-item
+                        a.page-link(href='#') Previous
+                    li.page-item.active
+                        a.page-link(href='#') 1
+                    li.page-item
+                        a.page-link(href='#') 2
+                    li.page-item
+                        a.page-link(href='#') 3
+                    li.page-item
+                        a.page-link(href='#') 4
+                    li.page-item
+                        a.page-link(href='#') Next
