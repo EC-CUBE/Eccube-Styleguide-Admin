@@ -128,9 +128,9 @@ block outsideBlock
                             .col
                                 input.form-control(type='date', value='2000-01-01')
             .d-block.text-center
-                button(type="button").btn.btn-outline-dark 検索条件クリア
+                button(type="button").btn.btn-ec-regular 検索条件クリア
         +e.contents.mb-5
-            a(href="/customer/master/match").btn.btn-primary.px-5 検索
+            a(href="/customer/master/match").btn.btn-ec-conversion.px-5 検索
 block primaryContents
     .row.justify-content-between.mb-2
         .col-6
@@ -142,10 +142,10 @@ block primaryContents
                         option ...
             .d-inline-block
                 .btn-group(role='group')
-                    button.btn.btn-light.border.border-dark(type='button')
+                    button.btn.btn-ec-regular.border.border-dark(type='button')
                         i.fa.fa-cloud-download.mr-1
                         span CSVダウンロード
-                    button.btn.btn-light.border.border-dark(type='button')
+                    button.btn.btn-ec-regular.border.border-dark(type='button')
                         i.fa.fa-cog.mr-1
                         span CSV出力設定
     .card.rounded.border-0.mb-4

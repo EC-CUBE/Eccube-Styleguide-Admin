@@ -62,19 +62,19 @@ block outsideBlock
             .d-block.text-center
                 button(type="button").btn.btn-outline-dark 検索条件クリア
         +e.contents.mb-5
-            a(href="/product/master/match").btn.btn-primary.px-5 検索
+            a(href="/product/master/match").btn.btn-ec-conversion.px-5 検索
 
 block primaryContents
     .row.justify-content-between.mb-2
         .col-6
             label.mr-2 一括操作
             .btn-group(role='group').mr-2
-                button.btn.btn-light.border.border-dark(type='button')
+                button.btn.btn-ec-regular.border.border-dark(type='button')
                     span 公開
-                button.btn.btn-light.border.border-dark(type='button')
+                button.btn.btn-ec-regular.border.border-dark(type='button')
                     span 非公開
-            button.btn.btn-light.border.border-dark.mr-2 廃止
-            button.btn.btn-danger 完全に削除
+            button.btn.btn-ec-regular.border.border-dark.mr-2 廃止
+            button.btn.btn-ec-delete 完全に削除
 
         .col-5.text-right
             .d-inline-block.mr-2
@@ -84,10 +84,10 @@ block primaryContents
                         option ...
             .d-inline-block
                 .btn-group(role='group')
-                    button.btn.btn-light.border.border-dark(type='button')
+                    button.btn.btn-ec-regular.border.border-dark(type='button')
                         i.fa.fa-cloud-download.mr-1
                         span CSVダウンロード
-                    button.btn.btn-light.border.border-dark(type='button')
+                    button.btn.btn-ec-regular.border.border-dark(type='button')
                         i.fa.fa-cog.mr-1
                         span CSV出力設定
 
@@ -143,8 +143,8 @@ block primaryContents
                                                 .modal-body.text-left
                                                     p.text-left 商品は一覧（マスター）から削除されますが、これまでの取引等のデータから消えることはありません。この操作はあとから取り消すことができません。この商品を廃止しますか？
                                                 .modal-footer
-                                                    button.btn.btn-secondary(type='button', data-dismiss='modal') キャンセル
-                                                    button(type='button').btn.btn-danger 取扱を停止
+                                                    button.btn.btn-ec-sub(type='button', data-dismiss='modal') キャンセル
+                                                    button(type='button').btn.btn-ec-delete 取扱を停止
                     tr.table-ec-lightGray
                         td.align-middle
                             input(type='checkbox', name='filter', value='open')
@@ -225,8 +225,8 @@ block primaryContents
                                                             td 6
                                                             td 8,000
                                         .modal-footer
-                                            button.btn.btn-secondary(type='button', data-dismiss='modal') 戻る
-                                            a(href="/product/register/standard").btn.btn-primary 規格の編集
+                                            button.btn.btn-ec-sub(type='button', data-dismiss='modal') 戻る
+                                            a(href="/product/register/standard").btn.btn-ec-conversion 規格の編集
                         td.align-middle 公開
                         td.align-middle 2017/01/12
                         td.align-middle 2017/07/12
