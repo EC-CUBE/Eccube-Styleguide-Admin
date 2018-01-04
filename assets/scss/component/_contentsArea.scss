@@ -43,8 +43,7 @@ Styleguide 4.1
 .c-contentsArea {
   margin-left: 220px;
   background: $paleBlue;
-
-  @include media_sp {
+  @include media_mainNav {
     margin-left: 0;
   }
   &__cols {

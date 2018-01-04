@@ -103,7 +103,7 @@ Styleguide 3.0
   overflow-y: scroll;
   z-index: 500;
 
-  @include media_sp {
+  @include media_mainNav {
     left: -220px;
     width: 0;
     height: 0;
