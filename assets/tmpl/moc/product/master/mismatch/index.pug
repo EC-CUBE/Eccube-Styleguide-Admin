@@ -16,7 +16,7 @@ block outsideBlock
                         span.font-weight-bold 詳細検索
 
         +b.c-subContents.collapse(id="commentList")
-            .row
+            .row.mb-2
                 .col-6
                     form.form-row.mb-2
                         .col-6
@@ -60,11 +60,11 @@ block outsideBlock
                             .col
                                 input.form-control(type='date', value='2000-01-01')
         +e.contents.mb-5
-            button.btn.btn-primary.px-5(type="button") 検索
+            a(href="/product/master/none").btn.btn-primary.px-5 検索
 
 block primaryContents
-    .card.rounded.border-0.pt-4.pb-4
-        .card-body.p-0
+    .card.rounded.border-0
+        .card-body.p-4
             .text-center.text-muted.mb-4.h5 検索条件に合致するデータが見つかりませんでした
             .text-center.text-muted 検索条件を変えて、再度検索をお試しください。
             .text-center.text-muted [詳細検索]も試してみましょう。

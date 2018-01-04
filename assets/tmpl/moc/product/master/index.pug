@@ -15,7 +15,7 @@ block outsideBlock
                         i.fa.fa-plus-square-o.font-weight-bold.mr-1
                         span.font-weight-bold 詳細検索
 
-        +b.c-subContents.collapse(id="commentList").show
+        +b.c-subContents.collapse(id="commentList")
             .row.mb-2
                 .col-6
                     form.form-row.mb-2
@@ -62,7 +62,7 @@ block outsideBlock
             .d-block.text-center
                 button(type="button").btn.btn-outline-dark 検索条件クリア
         +e.contents.mb-5
-            button.btn.btn-primary.px-5(type="button") 検索
+            a(href="/product/master/match").btn.btn-primary.px-5 検索
 
 block primaryContents
     .row.justify-content-between.mb-2
