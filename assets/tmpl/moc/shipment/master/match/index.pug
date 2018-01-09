@@ -120,7 +120,7 @@ block outsideBlock
             .d-block.text-center
                 button(type="button").btn.btn-outline-dark 検索条件クリア
         +e.contents.mb-3
-            a(href="/shipment/master/mismatch").btn.btn-primary.px-5 検索
+            a(href="/shipment/master/mismatch").btn.btn-ec-conversion.px-5 検索
             span.font-weight-bold.ml-2 検索結果：56件が該当しました
 
 block primaryContents
@@ -162,10 +162,10 @@ block primaryContents
                                 p お客さまがご注文された以下の商品を発送いたしました。商品の到着まで、今しばらくお待ちくださいませ。
                                 p [発送商品リストと明細]
                         .modal-footer
-                            button.btn.btn-secondary(type='button', data-dismiss='modal') キャンセル
-                            button.btn.btn-primary(type='button', data-dismiss='modal') 変更を確定
+                            button.btn.btn-ec-sub(type='button', data-dismiss='modal') キャンセル
+                            button.btn.btn-ec-conversion(type='button', data-dismiss='modal') 変更を確定
 
-            button.btn.btn-danger 削除
+            button.btn.btn-ec-delete 削除
         .col-5.text-right
             .d-inline-block.mr-2
                 form
