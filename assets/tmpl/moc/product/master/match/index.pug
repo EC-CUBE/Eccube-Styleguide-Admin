@@ -75,7 +75,7 @@ block primaryContents
                 button.btn.btn-light.border.border-dark(type='button')
                     span 非公開
             button.btn.btn-light.border.border-dark.mr-2 廃止
-            button.btn.btn-danger 完全に削除
+            button.btn.btn-ec-delete 完全に削除
 
         .col-5.text-right
             .d-inline-block.mr-2
@@ -145,7 +145,7 @@ block primaryContents
                                                     p.text-left 商品は一覧（マスター）から削除されますが、これまでの取引等のデータから消えることはありません。この操作はあとから取り消すことができません。この商品を廃止しますか？
                                                 .modal-footer
                                                     button.btn.btn-secondary(type='button', data-dismiss='modal') キャンセル
-                                                    button(type='button').btn.btn-danger 取扱を停止
+                                                    button(type='button').btn.btn-ec-delete 取扱を停止
                     tr.table-ec-lightGray
                         td.align-middle
                             input(type='checkbox', name='filter', value='open')
