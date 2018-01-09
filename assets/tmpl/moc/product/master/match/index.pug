@@ -70,11 +70,11 @@ block primaryContents
         .col-6
             label.mr-2 一括操作
             .btn-group(role='group').mr-2
-                button.btn.btn-light.border.border-dark(type='button')
+                button.btn.btn-ec-regular(type='button')
                     span 公開
-                button.btn.btn-light.border.border-dark(type='button')
+                button.btn.btn-ec-regular(type='button')
                     span 非公開
-            button.btn.btn-light.border.border-dark.mr-2 廃止
+            button.btn.btn-ec-regular.mr-2 廃止
             button.btn.btn-ec-delete 完全に削除
 
         .col-5.text-right
@@ -85,11 +85,11 @@ block primaryContents
                         option ...
             .d-inline-block
                 .btn-group(role='group')
-                    button.btn.btn-light.border.border-dark(type='button')
-                        i.fa.fa-cloud-download.mr-1
+                    button.btn.btn-ec-regular(type='button')
+                        i.fa.fa-cloud-download.mr-1.text-secondary
                         span CSVダウンロード
-                    button.btn.btn-light.border.border-dark(type='button')
-                        i.fa.fa-cog.mr-1
+                    button.btn.btn-ec-regular(type='button')
+                        i.fa.fa-cog.mr-1.text-secondary
                         span CSV出力設定
 
     .card.rounded.border-0.mb-4

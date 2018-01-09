@@ -4,16 +4,17 @@ block pageTitle
     +c-pageTitle("ページ管理","コンテンツ管理")
 
 block primaryContents
-    .row.justify-content-between
+    .row.justify-content-between.mb-2
         .col-9
-            a(href="/content/page/edit").btn.btn-ec-regular.border.border-dark 新規追加
+            a(href="/content/page/edit").btn.btn-ec-regular.py-2 新規追加
         .col-3
             form.mb-2
                 .form-row
                     .col
                         input.form-control(type="search" placeholder="" aria-label="Search")
                     .col-auto
-                        button.btn.btn-ec-regular(type="submit"): i.fa.fa-search
+                        button.btn.btn-ec-icon(type="submit")
+                            i.fa.fa-search.fa-lg.text-secondary
     .card.rounded.border-0.mb-4
         .card-body.p-0
             table.table.table-sm

@@ -118,7 +118,7 @@ block outsideBlock
                         label.col-form-label 購入商品
                         input(type="text").form-control
             .d-block.text-center
-                button(type="button").btn.btn-outline-dark 検索条件クリア
+                button(type="button").btn.btn-ec-regular 検索条件クリア
         +e.contents.mb-3
             a(href="/shipment/master/mismatch").btn.btn-ec-conversion.px-5 検索
             span.font-weight-bold.ml-2 検索結果：56件が該当しました
@@ -127,8 +127,8 @@ block primaryContents
     .row.justify-content-between.mb-2
         .col-6
             label.mr-2 一括操作
-            button.btn.btn-light.border.border-dark.mr-2 メールする
-            button.btn.btn-light.border.border-dark.mr-2(data-toggle="modal" data-target="#sentUpdate") 発送済みに更新
+            button.btn.btn-ec-regular.mr-2 メールする
+            button.btn.btn-ec-regular.mr-2(data-toggle="modal" data-target="#sentUpdate") 発送済みに更新
             #sentUpdate.modal.fade(tabindex='-1', role='dialog', aria-labelledby='sentUpdate', aria-hidden='true')
                 .modal-dialog(role='document')
                     .modal-content
@@ -174,11 +174,11 @@ block primaryContents
                         option ...
             .d-inline-block
                 .btn-group(role='group')
-                    button.btn.btn-light.border.border-dark(type='button')
-                        i.fa.fa-cloud-download.mr-1
+                    button.btn.btn-ec-regular(type='button')
+                        i.fa.fa-cloud-download.mr-1.text-secondary
                         span CSVダウンロード
-                    button.btn.btn-light.border.border-dark(type='button')
-                        i.fa.fa-cog.mr-1
+                    button.btn.btn-ec-regular(type='button')
+                        i.fa.fa-cog.mr-1.text-secondary
                         span CSV出力設定
     .card.rounded.border-0.mb-4
         .card-body.p-0
