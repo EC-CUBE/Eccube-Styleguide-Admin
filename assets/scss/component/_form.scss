@@ -690,3 +690,26 @@ form.c-form
   color: $lightGreen;
   border-radius: 4px;
 }
+
+/*
+商品画像
+
+Markup:
+.imgWrapper
+
+Styleguide 10.12
+*/
+.imgWrapper {
+  display: inline-block;
+  width: 70px;
+  height: 70px;
+  background-color: #f5f6f8;
+  background-image: url('../../img/moc.png');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  &:hover {
+    background: #333;
+    opacity: 0.5;
+  }
+}

@@ -48,8 +48,21 @@ block primaryContents
                             span 商品画像
                             i.fa.fa-question-circle.fa-lg.ml-1
                     .col.mb-2
-                        form
-                            input(type="file").form-control-file
+                        form.c-form.mb-2
+                            .c-form__fileUpload
+                                i.fa.fa-cloud-upload(aria-hidden="true")
+                                p 画像をドラッグ＆ドロップ
+                                    br
+                                    | または
+                                input(type="file")
+                                button.c-button--regular.c-button--normal ファイルを選択
+                        .imgWrapper.mr-2
+                        .imgWrapper.mr-2
+                        .imgWrapper.mr-2
+                        .imgWrapper.mr-2
+                        .imgWrapper.mr-2
+                        .imgWrapper.mr-2
+                        p 項目の内容はドラッグ＆ドロップで変更可能です。
                 .row
                     .col-3
                         .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
