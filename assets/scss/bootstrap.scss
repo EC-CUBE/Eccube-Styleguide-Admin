@@ -95,3 +95,19 @@ $breadcrumb-bg: #eff0f4;
   font-size: 14px;
   font-weight: normal;
 }
+
+//border
+.border-ec-gray {
+  border-color: #ccc !important;
+}
+.border-ec-dashed{
+  border: $border-width dashed #ccc !important;
+}
+
+//background
+.bg-ec-lightGray{
+  background-color: #f9f9f9 !important;
+}
+
+//colors
+.text-ec-gray { color: #999 !important; }
