@@ -59,8 +59,19 @@ block primaryContents
                         form
                             textarea(rows="8").form-control
                         .d-inline-block.mb-2
-                            i.fa.fa-plus-square-o.font-weight-bold.mr-1
+                            a(data-toggle='collapse', href='#commentList', role='button', aria-expanded='false', aria-controls='commentList')
+                                i.fa.fa-plus-square-o.font-weight-bold.mr-1
                             span.font-weight-bold 一覧コメントを追加
+
+                #commentList.collapse
+                    .row
+                        .col-3
+                            .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
+                                span 一覧コメント
+                                i.fa.fa-question-circle.fa-lg.ml-1
+                        .col.mb-4
+                            form
+                                textarea(rows="4").form-control
                 .row
                     .col-3
                         .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
@@ -71,8 +82,20 @@ block primaryContents
                         form
                             input(type="text").form-control
                         .d-inline-block.mb-2
-                            i.fa.fa-plus-square-o.font-weight-bold.mr-1
+                            a(data-toggle='collapse', href='#addPrice', role='button', aria-expanded='false', aria-controls='addPrice')
+                                i.fa.fa-plus-square-o.font-weight-bold.mr-1
                             span.font-weight-bold 通常価格を追加
+                #addPrice.collapse
+                    .row
+                        .col-3
+                            .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
+                                span 通常価格
+                                i.fa.fa-question-circle.fa-lg.ml-1
+                                span.badge.badge-primary.ml-1 必須
+                        .col.mb-4
+                            form
+                                input(type="text").form-control
+
                 .row
                     .col-3
                         .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
