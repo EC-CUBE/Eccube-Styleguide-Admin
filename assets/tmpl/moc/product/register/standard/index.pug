@@ -49,19 +49,20 @@ block primaryContents
         .card-body.p-0
             table.table.table-sm
                 thead
-                    th.pl-3.pr-3.pt-2.pb-2 登録
-                    th 材質
-                    th サイズ
-                    th コード
-                    th 在庫数
-                    th 販売制限数
-                    th 通常価格
-                    th 販売価格
-                    th お届け可能日
-                    th 商品種別
+                    th.pt-2.pb-2.pl-3 登録
+                    th.pt-2.pb-2 材質
+                    th.pt-2.pb-2 サイズ
+                    th.pt-2.pb-2 コード
+                    th.pt-2.pb-2 在庫数
+                    th.pt-2.pb-2 販売制限数
+                    th.pt-2.pb-2 通常価格
+                    th.pt-2.pb-2 販売価格
+                    th.pt-2.pb-2 お届け可能日
+                    th.pt-2.pb-2.pr-3 商品種別
+
                 - for (var x = 0; x < 9; x++)
                     tr
-                        td.align-middle.pl-3.pr-3
+                        td.align-middle.pl-3
                             input(type="checkbox")
                         td.align-middle プラチナ
                         td.align-middle 130cm
@@ -89,7 +90,7 @@ block primaryContents
                                 select.custom-select
                                     option 指定なし
                                     option ...
-                        td.align-middle
+                        td.align-middle.pr-3
                             form
                                 select.custom-select
                                     option 商品種別A

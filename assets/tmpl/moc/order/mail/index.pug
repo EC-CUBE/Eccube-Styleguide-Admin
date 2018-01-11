@@ -56,14 +56,14 @@ block primaryContents
             .card-body
                 table.table.table-striped
                     thead.table-active
-                        th.pl-3.pr-3.pt-2.pb-2 配信日
-                        th テンプレート
-                        th 件名
+                        th.pt-2.pb-2.pl-3 配信日
+                        th.pt-2.pb-2 テンプレート
+                        th.pt-2.pb-2.pr-3 件名
                     tbody
                         tr
-                            td.pl-3.pr-3 2017/12/03
+                            td.pl-3 2017/12/03
                             td お問い合わせを受け付けました
-                            td
+                            td.pr-3
                                 a.text-primary(data-toggle="modal" data-target="#mail2") お問い合わせを受け付けました
                                 #mail2.modal.fade(tabindex='-1', role='dialog', aria-labelledby='mail2', aria-hidden='true')
                                     .modal-dialog(role='document')
@@ -196,9 +196,9 @@ block primaryContents
                                             .modal-footer
                                                 button.btn.btn-ec-regular(type='button', data-dismiss='modal') 閉じる
                         tr
-                            td.pl-3.pr-3.pt-2.pb-2 2017/12/01
+                            td.pl-3.pt-2.pb-2 2017/12/01
                             td ご注文ありがとうございます
-                            td
+                            td.pr-3
                                 a.text-primary(data-toggle="modal" data-target="#mail1") ご注文ありがとうございます
                                 #mail1.modal.fade(tabindex='-1', role='dialog', aria-labelledby='mail1', aria-hidden='true')
                                     .modal-dialog(role='document')

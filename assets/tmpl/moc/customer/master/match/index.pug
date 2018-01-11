@@ -153,21 +153,21 @@ block primaryContents
         .card-body.p-0
             table.table
                 thead
-                    th.border-top-0.pl-3.pr-3.pt-2.pb-2 会員ID
-                    th.border-top-0 会員名
-                    th.border-top-0 電話番号
-                    th.border-top-0 メールアドレス
-                    th.border-top-0 &nbsp;
-                    th.border-top-0 &nbsp;
+                    th.border-top-0.pt-2.pb-3.pl-3 会員ID
+                    th.border-top-0.pt-2.pb-3 会員名
+                    th.border-top-0.pt-2.pb-3 電話番号
+                    th.border-top-0.pt-2.pb-3 メールアドレス
+                    th.border-top-0.pt-2.pb-3 &nbsp;
+                    th.border-top-0.pt-2.pb-3.pr-3 &nbsp;
                 - for (var x = 0; x < 10; x++)
                     tr
-                        td.align-middle.pl-3.pr-3 1
+                        td.align-middle.pl-3 1
                         td.align-middle
                             a(href='/customer/register/') 山田 はなこ
                         td.align-middle 06-6666-6666
                         td.align-middle witchdoktor@gmail.com
                         td.align-middle
-                        td.align-middle
+                        td.align-middle.pr-3
                             .row
                                 .col.text-center(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-close.fa-lg.text-secondary(aria-hidden="true")
             .row.justify-content-md-center.mb-4

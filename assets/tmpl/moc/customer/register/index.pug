@@ -167,19 +167,19 @@ block primaryContents
             .card-body
                 table.table.table-striped.table-sm
                     thead.table-active
-                        th.align-middle.pl-3.pr-3.pt-2.pb-2  注文日時
-                        th.align-middle 注文番号
-                        th.align-middle 購入金額
-                        th.align-middle 対応状況
+                        th.align-middle.pt-2.pb-2.pl-3 注文日時
+                        th.align-middle.pt-2.pb-2 注文番号
+                        th.align-middle.pt-2.pb-2 購入金額
+                        th.align-middle.pt-2.pb-2.pr-3 対応状況
                     tbody
                         - for (var x = 0; x < 5; x++)
                             tr
-                                td.align-middle.pl-3.pr-3 2017/09/13
+                                td.align-middle.pl-3 2017/09/13
                                 td.align-middle
                                     a(href="") 56
                                 td.align-middle
                                     span.h5.font-weight-normal ¥4,000
-                                td.align-middle
+                                td.align-middle.pr-3
                                     button.btn.btn-outline-secondary.py-2(type='button') 発送済み
     .card.rounded.border-0.mb-4
         .card-header

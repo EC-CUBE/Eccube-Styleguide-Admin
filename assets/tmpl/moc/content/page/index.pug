@@ -19,12 +19,12 @@ block primaryContents
         .card-body.p-0
             table.table.table-sm
                 thead
-                    th.border-0.pl-3.pr-3.pt-2.pb-2  ページ名
-                    th.border-0 レイアウト
-                    th.border-0
+                    th.border-0.pt-2.pb-2.pl-3  ページ名
+                    th.border-0.pt-2.pb-2 レイアウト
+                    th.border-0.pt-2.pb-2.pr-3
                 - for (var x = 0; x < 8; x++)
                     tr
-                        td.align-middle.pl-3.pr-3
+                        td.align-middle.pl-3
                             a(href="/content/page/edit") MYページ/会員登録内容変更(入力ページ)
                         td.align-middle
                             .d-block
@@ -33,4 +33,4 @@ block primaryContents
                             .d-block
                                 i.fa.fa-mobile.fa-2x.mr-2
                                 span 下層ページ用レイアウト（SP）
-                        td.align-middle.text-center(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-close.fa-lg.text-secondary(aria-hidden="true")
+                        td.align-middle.pr-3.text-center(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-close.fa-lg.text-secondary(aria-hidden="true")

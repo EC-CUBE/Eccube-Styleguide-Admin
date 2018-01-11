@@ -184,25 +184,21 @@ block primaryContents
             table.table.table-sm
                 thead
                     tr
-                        th.border-top-0.pl-3.pr-3.pt-2.pb-2
-                            .row
-                                .col-12.text-center
-                                    input(type='checkbox', name='filter', value='open')
-                        th.border-top-0 発送番号
-                        th.border-top-0 出荷伝票番号
-                        th.border-top-0 注文番号
-                        th.border-top-0 お届け先
-                        th.border-top-0 配送業者
-                        th.border-top-0 発送日
-                        th.border-top-0 &nbsp;
-                        th.border-top-0 &nbsp;
+                        th.border-top-0.pt-2.pb-2.pl-3
+                            input(type='checkbox', name='filter', value='open')
+                        th.border-top-0.pt-2.pb-2 発送番号
+                        th.border-top-0.pt-2.pb-2 出荷伝票番号
+                        th.border-top-0.pt-2.pb-2 注文番号
+                        th.border-top-0.pt-2.pb-2 お届け先
+                        th.border-top-0.pt-2.pb-2 配送業者
+                        th.border-top-0.pt-2.pb-2 発送日
+                        th.border-top-0.pt-2.pb-2 &nbsp;
+                        th.border-top-0.pt-2.pb-2.pr-3 &nbsp;
                 tbody
                     - for (var x = 0; x < 5; x++)
                         tr
-                            td.align-middle.pl-3.pr-3
-                                .row
-                                    .col-12.text-center
-                                        input(type='checkbox', name='filter', value='open')
+                            td.align-middle.pl-3
+                                input(type='checkbox', name='filter', value='open')
                             td.align-middle
                                 a(href='/shipment/register/') 123456
                             td.align-middle 123-45678
@@ -224,20 +220,18 @@ block primaryContents
                                     | 06-6666-6666
                             td.align-middle 日本郵便
                             td.align-middle
-                                i.fa.fa-check.fa-lg.text-success(aria-hidden="true")
+                                i.fa.fa-check.fa-lg.text-success.mr-1(aria-hidden="true")
                                 | 2017/10/31
                             td.align-middle
-                            td.align-middle
+                            td.align-middle.pr-3
                                 .row.text-center
                                     .col
                                         a.text-right(href="/shipment/mail/" data-toggle="tooltip" data-placement="top" title="メール送信")
                                             i.fa.fa-send.fa-lg.text-secondary(aria-hidden="true")
                                     .col(data-toggle="tooltip" data-placement="top" title="発送済みにする"): i.fa.fa-check.fa-lg.text-secondary(aria-hidden="true")
                         tr
-                            td.align-middle.pl-3.pr-3
-                                .row
-                                    .col-12.text-center
-                                        input(type='checkbox', name='filter', value='open')
+                            td.align-middle.pl-3
+                                input(type='checkbox', name='filter', value='open')
                             td.align-middle
                                 a(href='/shipment/register/') 123456
                             td.align-middle 123-45678
@@ -260,12 +254,12 @@ block primaryContents
                             td.align-middle 日本郵便
                             td.align-middle -
                             td.align-middle
-                            td.align-middle
+                            td.align-middle.pr-3
                                 .row.text-center
                                     .col
                                         a.text-right(href="/shipment/mail/" data-toggle="tooltip" data-placement="top" title="メール送信")
                                             i.fa.fa-send.fa-lg.text-secondary(aria-hidden="true")
-                                    .col(data-toggle="tooltip" data-placement="top" title="発送済みにする"): i.fa.fa-check.fa-lg.text-secondary(aria-hidden="true")
+                                    .col(data-toggle="tooltip" data-placement="top" title="発送済みにする"): i.fa.fa-check.fa-lg.text-secondary.mr-1(aria-hidden="true")
 
             .row.justify-content-md-center.mb-4
                 ul.pagination
