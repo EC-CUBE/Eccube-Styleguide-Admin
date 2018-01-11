@@ -58,13 +58,12 @@ block primaryContents
                     .col
                         form
                             textarea(rows="8").form-control
-                        .d-inline-block.mb-2
-                            a(data-toggle='collapse', href='#commentList', role='button', aria-expanded='false', aria-controls='commentList')
-                                i.fa.fa-plus-square-o.font-weight-bold.mr-1
-                            span.font-weight-bold 一覧コメントを追加
+                        .d-inline-block.mb-2(data-toggle='collapse', href='#addComment', role='button', aria-expanded='false', aria-controls='addComment')
+                            i.fa.fa-plus-square-o.font-weight-bold.mr-1
+                            span.font-weight-bold.text-ec-black 一覧コメントを追加
 
-                #commentList.collapse
-                    .row
+                #addComment.collapse
+                    .row.bg-ec-formGray.pt-3.mb-2
                         .col-3
                             .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
                                 span 一覧コメント
@@ -81,12 +80,11 @@ block primaryContents
                     .col
                         form
                             input(type="text").form-control
-                        .d-inline-block.mb-2
-                            a(data-toggle='collapse', href='#addPrice', role='button', aria-expanded='false', aria-controls='addPrice')
-                                i.fa.fa-plus-square-o.font-weight-bold.mr-1
-                            span.font-weight-bold 通常価格を追加
+                        .d-inline-block.mb-2(data-toggle='collapse', href='#addPrice', role='button', aria-expanded='false', aria-controls='addPrice')
+                            i.fa.fa-plus-square-o.font-weight-bold.mr-1
+                            span.font-weight-bold.text-ec-black 通常価格を追加
                 #addPrice.collapse
-                    .row
+                    .row.bg-ec-formGray.pt-3.mb-2
                         .col-3
                             .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
                                 span 通常価格
@@ -257,9 +255,29 @@ block secondaryContents
                     button.btn.btn-outline-secondary(type='button') 値下げしました
                 .d-inline-block.mb-2.mr-2
                     button.btn.btn-outline-secondary(type='button') 送料無料
-                .d-block.mb-3
+                .d-block.mb-3(data-toggle='collapse', href='#allTags', role='button', aria-expanded='false', aria-controls='allTags')
                     i.fa.fa-plus-square-o.font-weight-bold.mr-1
                     span.font-weight-bold 全てのタグを表示
+                #allTags.collapse.p-3.bg-ec-lightGray.mb-3
+                    .d-inline-block.mb-2.mr-2
+                        button.btn.btn-outline-primary(type='button') オススメ
+                    .d-inline-block.mb-2.mr-2
+                        button.btn.btn-outline-secondary(type='button') 限定品
+                    .d-inline-block.mb-2.mr-2
+                        button.btn.btn-outline-primary(type='button') 新入荷
+                    .d-inline-block.mb-2.mr-2
+                        button.btn.btn-outline-secondary(type='button') 値下げしました
+                    .d-inline-block.mb-2.mr-2
+                        button.btn.btn-outline-primary(type='button') オススメ
+                    .d-inline-block.mb-2.mr-2
+                        button.btn.btn-outline-secondary(type='button') 限定品
+                    .d-inline-block.mb-2.mr-2
+                        button.btn.btn-outline-primary(type='button') 新入荷
+                    .d-inline-block.mb-2.mr-2
+                        button.btn.btn-outline-secondary(type='button') 値下げしました
+                    .d-inline-block.mb-2.mr-2
+                        button.btn.btn-outline-secondary(type='button') 送料無料
+                    .d-block.mb-3(data-toggle='collapse', href='#allTags', role='button', aria-expanded='false', aria-controls='allTags')
                 .d-block.text-center
                     button(type="button").btn.btn-block.btn-ec-regular タグの追加・編集
 
