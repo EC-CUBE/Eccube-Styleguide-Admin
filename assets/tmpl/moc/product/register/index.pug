@@ -49,19 +49,20 @@ block primaryContents
                             i.fa.fa-question-circle.fa-lg.ml-1
                     .col.mb-2
                         form.c-form.mb-2
-                            .c-form__fileUpload
+                            +b.c-form__fileUpload
                                 i.fa.fa-cloud-upload(aria-hidden="true")
                                 p 画像をドラッグ＆ドロップ
                                     br
                                     | または
                                 input(type="file")
                                 button.c-button--regular.c-button--normal ファイルを選択
-                        .imgWrapper.mr-2
-                        .imgWrapper.mr-2
-                        .imgWrapper.mr-2
-                        .imgWrapper.mr-2
-                        .imgWrapper.mr-2
-                        .imgWrapper.mr-2
+                        .c-form__fileUploadThumbnails
+                            .c-form__fileUploadThumbnail(style="background-image:url('http://via.placeholder.com/150x150')")
+                            .c-form__fileUploadThumbnail(style="background-image:url('http://via.placeholder.com/350x150')")
+                            .c-form__fileUploadThumbnail(style="background-image:url('http://via.placeholder.com/350x600')")
+                            .c-form__fileUploadThumbnail(style="background-image:url('http://via.placeholder.com/600x600')")
+                            .c-form__fileUploadThumbnail(style="background-image:url('http://via.placeholder.com/350x150')")
+                            .c-form__fileUploadThumbnail(style="background-image:url('http://via.placeholder.com/350x600')")
                         p 項目の内容はドラッグ＆ドロップで変更可能です。
                 .row
                     .col-3
