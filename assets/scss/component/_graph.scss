@@ -37,7 +37,8 @@
     position: relative;
     margin-left: calc((100% - 200px) / 7);
     width: 25px;
-    background-color: #437EC4
+    background-color: #437EC4;
+    transition: all .3s ease;
   }
   & &__labelHorizontal {
     margin-left: 60px;
