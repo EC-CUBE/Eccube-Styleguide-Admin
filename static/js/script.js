@@ -12,7 +12,7 @@ var mainNavArea = function(){
         });
     })
 };
-
+mainNavArea();
 
 //c-directoryTreeRegister
 var directoryTreeRegister = function(){
