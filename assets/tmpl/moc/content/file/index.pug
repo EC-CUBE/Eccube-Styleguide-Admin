@@ -18,10 +18,13 @@ block outsideBlock
                     .row.mb-2
                         .col-2
                             span ファイルを追加
-                        .col
+                        .col.mb-3
                             form.mb-2
-                                input(type="file").form-control-file
-                            button(type="submit").btn.btn-ec-conversion アップロード
+                                a(onclick="$('#fileForm').click()").btn.btn-ec-regular.mr-2 ファイルを選択
+                                span 選択されていません
+                                input#fileForm.d-none(type="file")
+                            form
+                                button(type="submit").btn.btn-ec-conversion アップロード
                     .row.mb-2
                         .col-2
                             span フォルダを追加

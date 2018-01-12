@@ -48,22 +48,8 @@ block primaryContents
                             span 商品画像
                             i.fa.fa-question-circle.fa-lg.ml-1
                     .col.mb-2
-                        form.c-form.mb-2
-                            +b.c-form__fileUpload
-                                i.fa.fa-cloud-upload(aria-hidden="true")
-                                p 画像をドラッグ＆ドロップ
-                                    br
-                                    | または
-                                input(type="file")
-                                button.c-button--regular.c-button--normal ファイルを選択
-                        .c-form__fileUploadThumbnails
-                            .c-form__fileUploadThumbnail(style="background-image:url('http://via.placeholder.com/150x150')")
-                            .c-form__fileUploadThumbnail(style="background-image:url('http://via.placeholder.com/350x150')")
-                            .c-form__fileUploadThumbnail(style="background-image:url('http://via.placeholder.com/350x600')")
-                            .c-form__fileUploadThumbnail(style="background-image:url('http://via.placeholder.com/600x600')")
-                            .c-form__fileUploadThumbnail(style="background-image:url('http://via.placeholder.com/350x150')")
-                            .c-form__fileUploadThumbnail(style="background-image:url('http://via.placeholder.com/350x600')")
-                        p 項目の内容はドラッグ＆ドロップで変更可能です。
+                        include /assets/tmpl/components/fileUpload.pug
+                        +c-fileUpload
                 .row
                     .col-3
                         .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")

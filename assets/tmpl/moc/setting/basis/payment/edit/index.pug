@@ -45,8 +45,10 @@ block primaryContents
                         span ロゴ画像
                         i.fa.fa-question-circle.fa-lg.ml-1
                 .col.mb-2
-                    form
-                        input(type="file").form-control-file
+                    form.mb-2
+                        a(onclick="$('#fileForm').click()").btn.btn-ec-regular.mr-2 ファイルを選択
+                        span 選択されていません
+                        input#fileForm.d-none(type="file")
 
 block conversionArea
     +b.c-conversionArea
