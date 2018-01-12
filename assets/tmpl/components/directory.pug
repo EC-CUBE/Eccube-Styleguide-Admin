@@ -86,11 +86,11 @@ mixin c-directoryTreeFolder
                 ul#directory_userdata.collapse
                     li
                         label.collapsed(data-toggle="collapse" href="#directory_pdf" aria-expanded="false" aria-controls="directory_pdf")
-                            span pdf
+                            a(href="/content/file") pdf
                         ul#directory_pdf.collapse
                             li
                                 label
-                                    span フォルダA
+                                    a(href="/content/file") フォルダA
                             li
                                 label
                                     span フォルダB
@@ -110,4 +110,4 @@ mixin c-directoryTreeFolder
                             span イメージA
                     li
                         label
-                            span イメージB
+                            a(href="/content/file") イメージB
