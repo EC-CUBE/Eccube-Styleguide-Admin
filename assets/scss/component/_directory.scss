@@ -218,9 +218,9 @@ Styleguide 21.2
     li > label {
       margin-left: 10px;
       position: relative;
-      span {
+      span,a {
         display: inline-block;
-        margin-left: 16px;
+        margin-left: 1.5rem;
       }
     }
     li:not(:last-of-type) > label::before {

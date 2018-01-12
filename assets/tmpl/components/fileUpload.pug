@@ -1,0 +1,17 @@
+mixin c-fileUpload
+    form.text-center.w-100.py-5.border-ec-dashed.mb-2.rounded
+        i.fa.fa-cloud-upload.fa-4x.text-ec-lightGray(aria-hidden="true")
+        p.font-weight-bold.text-ec-gray 画像をドラッグ＆ドロップ
+            br
+            | または
+        input#fileForm.d-none(type="file")
+        a(onclick="$('#fileForm').click()").btn.btn-ec-regular.mr-2 ファイルを選択
+    .c-form__fileUploadThumbnails
+        .c-form__fileUploadThumbnail(style="background-image:url('http://via.placeholder.com/150x150')")
+        .c-form__fileUploadThumbnail(style="background-image:url('http://via.placeholder.com/350x150')")
+        .c-form__fileUploadThumbnail(style="background-image:url('http://via.placeholder.com/350x600')")
+        .c-form__fileUploadThumbnail(style="background-image:url('http://via.placeholder.com/600x600')")
+        .c-form__fileUploadThumbnail(style="background-image:url('http://via.placeholder.com/350x150')")
+        .c-form__fileUploadThumbnail(style="background-image:url('http://via.placeholder.com/350x600')")
+    p 項目の内容はドラッグ＆ドロップで変更可能です。
+

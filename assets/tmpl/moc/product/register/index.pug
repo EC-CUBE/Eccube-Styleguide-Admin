@@ -48,8 +48,8 @@ block primaryContents
                             span 商品画像
                             i.fa.fa-question-circle.fa-lg.ml-1
                     .col.mb-2
-                        form
-                            input(type="file").form-control-file
+                        include /assets/tmpl/components/fileUpload.pug
+                        +c-fileUpload
                 .row
                     .col-3
                         .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
@@ -58,9 +58,19 @@ block primaryContents
                     .col
                         form
                             textarea(rows="8").form-control
-                        .d-inline-block.mb-2
+                        .d-inline-block.mb-2(data-toggle='collapse', href='#addComment', role='button', aria-expanded='false', aria-controls='addComment')
                             i.fa.fa-plus-square-o.font-weight-bold.mr-1
-                            span.font-weight-bold 一覧コメントを追加
+                            span.font-weight-bold.text-ec-black 一覧コメントを追加
+
+                #addComment.collapse
+                    .row.bg-ec-formGray.pt-3.mb-2
+                        .col-3
+                            .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
+                                span 一覧コメント
+                                i.fa.fa-question-circle.fa-lg.ml-1
+                        .col.mb-4
+                            form
+                                textarea(rows="4").form-control
                 .row
                     .col-3
                         .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
@@ -70,9 +80,20 @@ block primaryContents
                     .col
                         form
                             input(type="text").form-control
-                        .d-inline-block.mb-2
+                        .d-inline-block.mb-2(data-toggle='collapse', href='#addPrice', role='button', aria-expanded='false', aria-controls='addPrice')
                             i.fa.fa-plus-square-o.font-weight-bold.mr-1
-                            span.font-weight-bold 通常価格を追加
+                            span.font-weight-bold.text-ec-black 通常価格を追加
+                #addPrice.collapse
+                    .row.bg-ec-formGray.pt-3.mb-2
+                        .col-3
+                            .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
+                                span 通常価格
+                                i.fa.fa-question-circle.fa-lg.ml-1
+                                span.badge.badge-primary.ml-1 必須
+                        .col.mb-4
+                            form
+                                input(type="text").form-control
+
                 .row
                     .col-3
                         .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
@@ -111,36 +132,36 @@ block primaryContents
                     i.fa.fa-question-circle.fa-lg.ml-1
                 table.table.table-striped
                     thead.table-active
-                        th 規格１
-                        th 規格２
-                        th 商品コード
-                        th 在庫数
-                        th 販売価格（円）
+                        th.pl-3.pt-2.pb-2 規格１
+                        th.pt-2.pb-2 規格２
+                        th.pt-2.pb-2 商品コード
+                        th.pt-2.pb-2 在庫数
+                        th.pr-3.pt-2.pb-2 販売価格（円）
                     tbody
                         tr
-                            td プラチナ
+                            td.pl-3 プラチナ
                             td 100cm
                             td aa-001
                             td 4
-                            td 10,000
+                            td.pr-3 10,000
                         tr
-                            td プラチナ
+                            td.pl-3 プラチナ
                             td 130cm
                             td aa-002
                             td 8
-                            td 10,000
+                            td.pr-3 10,000
                         tr
-                            td シルバー
+                            td.pl-3 シルバー
                             td 100cm
                             td aa-003
                             td 4
-                            td 8,000
+                            td.pr-3 8,000
                         tr
-                            td シルバー
+                            td.pl-3 シルバー
                             td 130cm
                             td aa-004
                             td 6
-                            td 8,000
+                            td.pr-3  8,000
                 .d-block.text-center.text-center
                     button(type="button" data-toggle="modal" data-target="#confirmModal").btn.btn-ec-regular この商品の規格管理
                     #confirmModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='confirmModal', aria-hidden='true')
@@ -197,7 +218,7 @@ block secondaryContents
                         .col
                             input.form-control(type="search" placeholder="カテゴリ検索" aria-label="Search")
                         .col-auto
-                            button.btn.btn-ec-regular(type="submit"): i.fa.fa-search
+                            button.btn.btn-ec-sub(type="submit"): i.fa.fa-search
                 include /assets/tmpl/components/directory.pug
                 +c-directoryTreeRegister
 
@@ -234,9 +255,29 @@ block secondaryContents
                     button.btn.btn-outline-secondary(type='button') 値下げしました
                 .d-inline-block.mb-2.mr-2
                     button.btn.btn-outline-secondary(type='button') 送料無料
-                .d-block.mb-3
+                .d-block.mb-3(data-toggle='collapse', href='#allTags', role='button', aria-expanded='false', aria-controls='allTags')
                     i.fa.fa-plus-square-o.font-weight-bold.mr-1
                     span.font-weight-bold 全てのタグを表示
+                #allTags.collapse.p-3.bg-ec-lightGray.mb-3
+                    .d-inline-block.mb-2.mr-2
+                        button.btn.btn-outline-primary(type='button') オススメ
+                    .d-inline-block.mb-2.mr-2
+                        button.btn.btn-outline-secondary(type='button') 限定品
+                    .d-inline-block.mb-2.mr-2
+                        button.btn.btn-outline-primary(type='button') 新入荷
+                    .d-inline-block.mb-2.mr-2
+                        button.btn.btn-outline-secondary(type='button') 値下げしました
+                    .d-inline-block.mb-2.mr-2
+                        button.btn.btn-outline-primary(type='button') オススメ
+                    .d-inline-block.mb-2.mr-2
+                        button.btn.btn-outline-secondary(type='button') 限定品
+                    .d-inline-block.mb-2.mr-2
+                        button.btn.btn-outline-primary(type='button') 新入荷
+                    .d-inline-block.mb-2.mr-2
+                        button.btn.btn-outline-secondary(type='button') 値下げしました
+                    .d-inline-block.mb-2.mr-2
+                        button.btn.btn-outline-secondary(type='button') 送料無料
+                    .d-block.mb-3(data-toggle='collapse', href='#allTags', role='button', aria-expanded='false', aria-controls='allTags')
                 .d-block.text-center
                     button(type="button").btn.btn-block.btn-ec-regular タグの追加・編集
 

@@ -18,10 +18,13 @@ block outsideBlock
                     .row.mb-2
                         .col-2
                             span ファイルを追加
-                        .col
+                        .col.mb-3
                             form.mb-2
-                                input(type="file").form-control-file
-                            button(type="submit").btn.btn-ec-conversion アップロード
+                                a(onclick="$('#fileForm').click()").btn.btn-ec-regular.mr-2 ファイルを選択
+                                span 選択されていません
+                                input#fileForm.d-none(type="file")
+                            form
+                                button(type="submit").btn.btn-ec-conversion アップロード
                     .row.mb-2
                         .col-2
                             span フォルダを追加
@@ -51,8 +54,11 @@ block primaryContents
                                 a(href='#') foldername
                             td.align-middle
                             td.align-middle
-                            td.align-middle.text-right
-                                .d-inline-block(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-close.fa-lg.text-secondary(aria-hidden="true")
+                            td.align-middle.text-right.pr-3
+                                .row.justify-content-end
+                                    .col-auto.text-center
+                                        a.btn.btn-ec-actionIcon(data-toggle="tooltip" data-placement="top" title="削除")
+                                            i.fa.fa-close.fa-lg.text-secondary(aria-hidden="true")
                         tr
                             td.align-middle.text-center
                                 i.fa.fa-folder-o.fa-2x
@@ -60,8 +66,11 @@ block primaryContents
                                 a(href='#') foldername
                             td.align-middle
                             td.align-middle
-                            td.align-middle.text-right
-                                .d-inline-block(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-close.fa-lg.text-secondary(aria-hidden="true")
+                            td.align-middle.text-right.pr-3
+                                .row.justify-content-end
+                                    .col-auto.text-center
+                                        a.btn.btn-ec-actionIcon(data-toggle="tooltip" data-placement="top" title="削除")
+                                            i.fa.fa-close.fa-lg.text-secondary(aria-hidden="true")
                         tr
                             td.align-middle.text-center
                                 .d-inline-block.p-3.bg-light
@@ -70,10 +79,17 @@ block primaryContents
                                 a(href='#') filename.pdf
                             td.align-middle 24KB
                             td.align-middle 2017/01/12 更新
-                            td.align-middle.text-right
-                                .d-inline-block.mr-3(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-eye.fa-lg.text-secondary(aria-hidden="true")
-                                .d-inline-block.mr-3(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-cloud-download.fa-lg.text-secondary(aria-hidden="true")
-                                .d-inline-block(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-close.fa-lg.text-secondary(aria-hidden="true")
+                            td.align-middle.text-right.pr-3
+                                .row.justify-content-end
+                                    .col-auto.text-center
+                                        a.btn.btn-ec-actionIcon(href="/order/mail/" data-toggle="tooltip" data-placement="top" title="削除")
+                                            i.fa.fa-eye.fa-lg.text-secondary(aria-hidden="true")
+                                    .col-auto.text-center
+                                        a.btn.btn-ec-actionIcon(data-toggle="tooltip" data-placement="top" title="削除")
+                                            i.fa.fa-cloud-download.fa-lg.text-secondary(aria-hidden="true")
+                                    .col-auto.text-center
+                                        a.btn.btn-ec-actionIcon(data-toggle="tooltip" data-placement="top" title="削除")
+                                            i.fa.fa-close.fa-lg.text-secondary(aria-hidden="true")
                         tr
                             td.align-middle.text-center
                                 .d-inline-block.p-3.bg-light
@@ -81,10 +97,17 @@ block primaryContents
                             td.align-middle filename.mp3
                             td.align-middle 24KB
                             td.align-middle 2017/01/12 更新
-                            td.align-middle.text-right
-                                .d-inline-block.mr-3(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-eye.fa-lg.text-secondary(aria-hidden="true")
-                                .d-inline-block.mr-3(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-cloud-download.fa-lg.text-secondary(aria-hidden="true")
-                                .d-inline-block(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-close.fa-lg.text-secondary(aria-hidden="true")
+                            td.align-middle.text-right.pr-3
+                                .row.justify-content-end
+                                    .col-auto.text-center
+                                        a.btn.btn-ec-actionIcon(href="/order/mail/" data-toggle="tooltip" data-placement="top" title="削除")
+                                            i.fa.fa-eye.fa-lg.text-secondary(aria-hidden="true")
+                                    .col-auto.text-center
+                                        a.btn.btn-ec-actionIcon(data-toggle="tooltip" data-placement="top" title="削除")
+                                            i.fa.fa-cloud-download.fa-lg.text-secondary(aria-hidden="true")
+                                    .col-auto.text-center
+                                        a.btn.btn-ec-actionIcon(data-toggle="tooltip" data-placement="top" title="削除")
+                                            i.fa.fa-close.fa-lg.text-secondary(aria-hidden="true")
                         tr
                             td.align-middle.text-center
                                 .d-inline-block.p-3.bg-light
@@ -92,10 +115,17 @@ block primaryContents
                             td.align-middle filename.mov
                             td.align-middle 24KB
                             td.align-middle 2017/01/12 更新
-                            td.align-middle.text-right
-                                .d-inline-block.mr-3(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-eye.fa-lg.text-secondary(aria-hidden="true")
-                                .d-inline-block.mr-3(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-cloud-download.fa-lg.text-secondary(aria-hidden="true")
-                                .d-inline-block(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-close.fa-lg.text-secondary(aria-hidden="true")
+                            td.align-middle.text-right.pr-3
+                                .row.justify-content-end
+                                    .col-auto.text-center
+                                        a.btn.btn-ec-actionIcon(href="/order/mail/" data-toggle="tooltip" data-placement="top" title="削除")
+                                            i.fa.fa-eye.fa-lg.text-secondary(aria-hidden="true")
+                                    .col-auto.text-center
+                                        a.btn.btn-ec-actionIcon(data-toggle="tooltip" data-placement="top" title="削除")
+                                            i.fa.fa-cloud-download.fa-lg.text-secondary(aria-hidden="true")
+                                    .col-auto.text-center
+                                        a.btn.btn-ec-actionIcon(data-toggle="tooltip" data-placement="top" title="削除")
+                                            i.fa.fa-close.fa-lg.text-secondary(aria-hidden="true")
                         tr
                             td.align-middle.text-center
                                 .d-inline-block.p-3.bg-light
@@ -103,10 +133,17 @@ block primaryContents
                             td.align-middle filename.zip
                             td.align-middle 24KB
                             td.align-middle 2017/01/12 更新
-                            td.align-middle.text-right
-                                .d-inline-block.mr-3(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-eye.fa-lg.text-secondary(aria-hidden="true")
-                                .d-inline-block.mr-3(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-cloud-download.fa-lg.text-secondary(aria-hidden="true")
-                                .d-inline-block(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-close.fa-lg.text-secondary(aria-hidden="true")
+                            td.align-middle.text-right.pr-3
+                                .row.justify-content-end
+                                    .col-auto.text-center
+                                        a.btn.btn-ec-actionIcon(href="/order/mail/" data-toggle="tooltip" data-placement="top" title="削除")
+                                            i.fa.fa-eye.fa-lg.text-secondary(aria-hidden="true")
+                                    .col-auto.text-center
+                                        a.btn.btn-ec-actionIcon(data-toggle="tooltip" data-placement="top" title="削除")
+                                            i.fa.fa-cloud-download.fa-lg.text-secondary(aria-hidden="true")
+                                    .col-auto.text-center
+                                        a.btn.btn-ec-actionIcon(data-toggle="tooltip" data-placement="top" title="削除")
+                                            i.fa.fa-close.fa-lg.text-secondary(aria-hidden="true")
                         tr
                             td.align-middle.text-center
                                 .d-inline-block.p-3.bg-light
@@ -114,10 +151,17 @@ block primaryContents
                             td.align-middle filename.xlsx
                             td.align-middle 24KB
                             td.align-middle 2017/01/12 更新
-                            td.align-middle.text-right
-                                .d-inline-block.mr-3(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-eye.fa-lg.text-secondary(aria-hidden="true")
-                                .d-inline-block.mr-3(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-cloud-download.fa-lg.text-secondary(aria-hidden="true")
-                                .d-inline-block(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-close.fa-lg.text-secondary(aria-hidden="true")
+                            td.align-middle.text-right.pr-3
+                                .row.justify-content-end
+                                    .col-auto.text-center
+                                        a.btn.btn-ec-actionIcon(href="/order/mail/" data-toggle="tooltip" data-placement="top" title="削除")
+                                            i.fa.fa-eye.fa-lg.text-secondary(aria-hidden="true")
+                                    .col-auto.text-center
+                                        a.btn.btn-ec-actionIcon(data-toggle="tooltip" data-placement="top" title="削除")
+                                            i.fa.fa-cloud-download.fa-lg.text-secondary(aria-hidden="true")
+                                    .col-auto.text-center
+                                        a.btn.btn-ec-actionIcon(data-toggle="tooltip" data-placement="top" title="削除")
+                                            i.fa.fa-close.fa-lg.text-secondary(aria-hidden="true")
                         tr
                             td.align-middle.text-center
                                 .d-inline-block
@@ -125,10 +169,17 @@ block primaryContents
                             td.align-middle filename.xlsx
                             td.align-middle 24KB
                             td.align-middle 2017/01/12 更新
-                            td.align-middle.text-right
-                                .d-inline-block.mr-3(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-eye.fa-lg.text-secondary(aria-hidden="true")
-                                .d-inline-block.mr-3(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-cloud-download.fa-lg.text-secondary(aria-hidden="true")
-                                .d-inline-block(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-close.fa-lg.text-secondary(aria-hidden="true")
+                            td.align-middle.text-right.pr-3
+                                .row.justify-content-end
+                                    .col-auto.text-center
+                                        a.btn.btn-ec-actionIcon(href="/order/mail/" data-toggle="tooltip" data-placement="top" title="削除")
+                                            i.fa.fa-eye.fa-lg.text-secondary(aria-hidden="true")
+                                    .col-auto.text-center
+                                        a.btn.btn-ec-actionIcon(data-toggle="tooltip" data-placement="top" title="削除")
+                                            i.fa.fa-cloud-download.fa-lg.text-secondary(aria-hidden="true")
+                                    .col-auto.text-center
+                                        a.btn.btn-ec-actionIcon(data-toggle="tooltip" data-placement="top" title="削除")
+                                            i.fa.fa-close.fa-lg.text-secondary(aria-hidden="true")
 block secondaryContents
     .card.rounded.border-0.mb-4
         .card-header
