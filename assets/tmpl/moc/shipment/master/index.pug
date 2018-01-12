@@ -225,10 +225,12 @@ block primaryContents
                             td.align-middle
                             td.align-middle.pr-3
                                 .row.text-center
-                                    .col
-                                        a.text-right(href="/shipment/mail/" data-toggle="tooltip" data-placement="top" title="メール送信")
+                                    .col(data-toggle="tooltip" data-placement="top" title="メール送信")
+                                        a.btn.btn-ec-actionIcon(href="/shipment/mail/")
                                             i.fa.fa-send.fa-lg.text-secondary(aria-hidden="true")
-                                    .col(data-toggle="tooltip" data-placement="top" title="発送済みにする"): i.fa.fa-check.fa-lg.text-secondary(aria-hidden="true")
+                                    .col(data-toggle="tooltip" data-placement="top" title="発送済みにする")
+                                        a.btn.btn-ec-actionIcon
+                                            i.fa.fa-check.fa-lg.text-secondary(aria-hidden="true")
                         tr
                             td.align-middle.pl-3
                                 input(type='checkbox', name='filter', value='open')
@@ -256,10 +258,12 @@ block primaryContents
                             td.align-middle
                             td.align-middle.pr-3
                                 .row.text-center
-                                    .col
-                                        a.text-right(href="/shipment/mail/" data-toggle="tooltip" data-placement="top" title="メール送信")
+                                    .col(data-toggle="tooltip" data-placement="top" title="メール送信")
+                                        a.btn.btn-ec-actionIcon(href="/shipment/mail/")
                                             i.fa.fa-send.fa-lg.text-secondary(aria-hidden="true")
-                                    .col(data-toggle="tooltip" data-placement="top" title="発送済みにする"): i.fa.fa-check.fa-lg.text-secondary.mr-1(aria-hidden="true")
+                                    .col(data-toggle="tooltip" data-placement="top" title="発送済みにする")
+                                        a.btn.btn-ec-actionIcon
+                                            i.fa.fa-check.fa-lg.text-secondary(aria-hidden="true")
 
             .row.justify-content-md-center.mb-4
                 ul.pagination

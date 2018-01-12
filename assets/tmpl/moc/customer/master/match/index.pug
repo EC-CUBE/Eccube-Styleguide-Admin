@@ -160,16 +160,18 @@ block primaryContents
                     th.border-top-0.pt-2.pb-3 &nbsp;
                     th.border-top-0.pt-2.pb-3.pr-3 &nbsp;
                 - for (var x = 0; x < 10; x++)
-                    tr
-                        td.align-middle.pl-3 1
-                        td.align-middle
-                            a(href='/customer/register/') 山田 はなこ
-                        td.align-middle 06-6666-6666
-                        td.align-middle witchdoktor@gmail.com
-                        td.align-middle
-                        td.align-middle.pr-3
-                            .row
-                                .col.text-center(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-close.fa-lg.text-secondary(aria-hidden="true")
+                tr
+                    td.align-middle.pl-3 1
+                    td.align-middle
+                        a(href='/customer/register/') 山田 はなこ
+                    td.align-middle 06-6666-6666
+                    td.align-middle witchdoktor@gmail.com
+                    td.align-middle
+                    td.align-middle.pr-3
+                        .row
+                            .col.text-right(data-toggle="tooltip" data-placement="top" title="削除")
+                                a.btn.btn-ec-actionIcon
+                                    i.fa.fa-close.fa-lg.text-secondary(aria-hidden="true")
             .row.justify-content-md-center.mb-4
                 ul.pagination
                     li.page-item
