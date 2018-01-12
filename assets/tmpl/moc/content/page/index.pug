@@ -4,26 +4,27 @@ block pageTitle
     +c-pageTitle("ページ管理","コンテンツ管理")
 
 block primaryContents
-    .row.justify-content-between
+    .row.justify-content-between.mb-2
         .col-9
-            a(href="/content/page/edit").btn.btn-ec-regular.border.border-dark 新規追加
+            a(href="/content/page/edit").btn.btn-ec-regular.py-2 新規追加
         .col-3
             form.mb-2
                 .form-row
                     .col
                         input.form-control(type="search" placeholder="" aria-label="Search")
                     .col-auto
-                        button.btn.btn-ec-regular(type="submit"): i.fa.fa-search
+                        button.btn.btn-ec-sub(type="submit")
+                            i.fa.fa-search.fa-lg.text-secondary
     .card.rounded.border-0.mb-4
         .card-body.p-0
             table.table.table-sm
                 thead
-                    th.border-0 ページ名
-                    th.border-0 レイアウト
-                    th.border-0
+                    th.border-0.pt-2.pb-2.pl-3  ページ名
+                    th.border-0.pt-2.pb-2 レイアウト
+                    th.border-0.pt-2.pb-2.pr-3
                 - for (var x = 0; x < 8; x++)
                     tr
-                        td.align-middle
+                        td.align-middle.pl-3
                             a(href="/content/page/edit") MYページ/会員登録内容変更(入力ページ)
                         td.align-middle
                             .d-block
@@ -32,4 +33,8 @@ block primaryContents
                             .d-block
                                 i.fa.fa-mobile.fa-2x.mr-2
                                 span 下層ページ用レイアウト（SP）
-                        td.align-middle.text-center(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-close.fa-lg.text-secondary(aria-hidden="true")
+                        td.align-middle.pr-3
+                            .row.justify-content-end
+                                .col-auto.text-center
+                                    a.btn.btn-ec-actionIcon(data-toggle="tooltip" data-placement="top" title="削除")
+                                        i.fa.fa-close.fa-lg.text-secondary(aria-hidden="true")

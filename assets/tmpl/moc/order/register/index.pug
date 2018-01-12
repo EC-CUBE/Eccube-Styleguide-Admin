@@ -113,6 +113,17 @@ block primaryContents
                                     input.form-control(type='text', placeholder='名')
                 .row.mb-2
                     .col-3
+                        span フリガナ
+                        span.badge.badge-primary.ml-1 必須
+                    .col
+                        form
+                            .row
+                                .col
+                                    input.form-control(type='text', placeholder='セイ')
+                                .col
+                                    input.form-control(type='text', placeholder='メイ')
+                .row.mb-2
+                    .col-3
                         span 住所
                         span.badge.badge-primary.ml-1 必須
                     .col.mb-3
@@ -218,13 +229,13 @@ block primaryContents
                                             a.c-button--regular.c-button--conversion.mb-5(href='') 検索
                                         table.table.table-striped.table-sm.mb-3
                                             thead.table-active
-                                                th 商品名・コード
-                                                th 規格
-                                                th
+                                                th.pt-2.pb-2.pl-3 商品名・コード
+                                                th.pt-2.pb-2 規格
+                                                th.pt-2.pb-2.pr-3
                                             tbody
                                                 - for (var x = 0; x < 3; x++)
                                                     tr
-                                                        td.align-middle
+                                                        td.align-middle.pl-3
                                                             p.m-0  パーコレーター
                                                             span Cafe01
                                                         td.align-middle
@@ -240,15 +251,15 @@ block primaryContents
                                                                 .col-8.text-left.pl-0
                                                                     select.form-control
                                                                         option(value='') 選択
-                                                        td.align-middle
+                                                        td.align-middle.pr-3
                                                             button.close(type='button', data-dismiss='modal', aria-label='Close')
                                                                 span(aria-hidden='true') +
                                                 tr
-                                                    td.align-middle
+                                                    td.align-middle.pl-3
                                                         p.m-0  コーヒーケルト
                                                         span Cafe02
                                                     td.align-middle
-                                                    td.align-middle
+                                                    td.align-middle.pr-3
                                                         button.close(type='button', data-dismiss='modal', aria-label='Close')
                                                             span(aria-hidden='true') +
                                         .row.justify-content-md-center.mb-4
@@ -265,7 +276,7 @@ block primaryContents
                                                     a.page-link(href='#') 4
                                                 li.page-item
                                                     a.page-link(href='#') Next
-                        button.btn.btn-outline-dark.mr-2(data-toggle="modal" data-target="#addDetail") その他の明細を追加
+                        button.btn.btn-ec-regular.mr-2(data-toggle="modal" data-target="#addDetail") その他の明細を追加
                         #addDetail.modal.fade(tabindex='-1', role='dialog', aria-labelledby='addDetail', aria-hidden='true')
                             .modal-dialog(role='document')
                                 .modal-content
@@ -276,27 +287,27 @@ block primaryContents
                                     .modal-body
                                         table.table.table-striped.mb-3
                                             thead.table-active
-                                                th 追加項目
-                                                th
+                                                th.pt-2.pb-2.pl-3 追加項目
+                                                th.pt-2.pb-2.pr-3
                                             tbody
                                                 tr
-                                                    td.align-middle 送料を追加
-                                                    td.align-middle
+                                                    td.align-middle.pl-3 送料を追加
+                                                    td.align-middle.pr-3
                                                         button.close(type='button', data-dismiss='modal', aria-label='Close')
                                                             span(aria-hidden='true') +
                                                 tr
-                                                    td.align-middle 手数料を追加
-                                                    td.align-middle
+                                                    td.align-middle.pl-3 手数料を追加
+                                                    td.align-middle.pr-3
                                                         button.close(type='button', data-dismiss='modal', aria-label='Close')
                                                             span(aria-hidden='true') +
                                                 tr
-                                                    td.align-middle 値引きを追加
-                                                    td.align-middle
+                                                    td.align-middle.pl-3 値引きを追加
+                                                    td.align-middle.pr-3
                                                         button.close(type='button', data-dismiss='modal', aria-label='Close')
                                                             span(aria-hidden='true') +
                                                 tr
-                                                    td.align-middle 空白の明細を追加
-                                                    td.align-middle
+                                                    td.align-middle.pl-3 空白の明細を追加
+                                                    td.align-middle.pr-3
                                                         button.close(type='button', data-dismiss='modal', aria-label='Close')
                                                             span(aria-hidden='true') +
                                         .row.justify-content-md-center.mb-4
@@ -318,16 +329,16 @@ block primaryContents
 
                 table.table.table-striped.table-sm.mb-0
                     thead.table-active
-                        th 商品名・コード
-                        th 出荷番号
-                        th 販売価格
-                        th 数量
-                        th 税率
-                        th 小計
-                        th
+                        th.pt-2.pb-2.pl-3 商品名・コード
+                        th.pt-2.pb-2 出荷番号
+                        th.pt-2.pb-2 販売価格
+                        th.pt-2.pb-2 数量
+                        th.pt-2.pb-2 税率
+                        th.pt-2.pb-2 小計
+                        th.pt-2.pb-2.pr-3
                     tbody
                         tr
-                            td.align-middle.w-25
+                            td.align-middle.w-25.pl-3
                                 p.mb-0.font-weight-bold  ☆ご予約販売☆
                                     br
                                     | あかもく ぎばさ 秋田県男鹿の三高水産 冷凍(200g×10袋)ギバサ・アカモクはフコイダンが豊富な海藻！日本海産/ぎばさ/あかもく/ギバサ/アカモク/たけしの家庭の医学で紹介！
@@ -351,10 +362,10 @@ block primaryContents
                             td.align-middle
                                 span ¥4,000
                                 small （税込）
-                            td.align-middle
+                            td.align-middle.pr-3
                                 i.fa.fa-close.fa-lg.text-secondary(data-toggle="tooltip" data-placement="top" title="Tooltip")
                         tr
-                            td.align-middle.w-25
+                            td.align-middle.w-25.pl-3
                                 p.mb-0.font-weight-bold  パーコレーター
                                 span Cafe01
                             td.align-middle
@@ -376,10 +387,10 @@ block primaryContents
                             td.align-middle
                                 span ¥4,000
                                 small （税込）
-                            td.align-middle
+                            td.align-middle.pr-3
                                 i.fa.fa-close.fa-lg.text-secondary(data-toggle="tooltip" data-placement="top" title="Tooltip")
                         tr
-                            td.align-middle.w-25
+                            td.align-middle.w-25.pl-3
                                 p.mb-0.font-weight-bold  パーコレーター
                                 span Cafe01
                             td.align-middle
@@ -401,7 +412,7 @@ block primaryContents
                             td.align-middle
                                 span ¥4,000
                                 small （税込）
-                            td.align-middle
+                            td.align-middle.pr-3
                                 i.fa.fa-close.fa-lg.text-secondary(data-toggle="tooltip" data-placement="top" title="Tooltip")
                 hr.mt-0
                 .row.justify-content-end.mb-3
@@ -451,14 +462,14 @@ block primaryContents
             .card-body
                 table.table.table-striped
                     thead.table-active
-                        th 配信日
-                        th テンプレート
-                        th 件名
+                        th.pt-2.pb-2.pl-3 配信日
+                        th.pt-2.pb-2 テンプレート
+                        th.pt-2.pb-2.pr-3 件名
                     tbody
                         tr
-                            td 2017/12/03
+                            td.pl-3 2017/12/03
                             td お問い合わせを受け付けました
-                            td
+                            td.pr-3
                                 a.text-primary(data-toggle="modal" data-target="#mail2") お問い合わせを受け付けました
                                 #mail2.modal.fade(tabindex='-1', role='dialog', aria-labelledby='mail2', aria-hidden='true')
                                     .modal-dialog(role='document')
@@ -591,9 +602,9 @@ block primaryContents
                                             .modal-footer
                                                 button.btn.btn-ec-regular(type='button', data-dismiss='modal') 閉じる
                         tr
-                            td 2017/12/01
+                            td.pl-3 2017/12/01
                             td ご注文ありがとうございます
-                            td
+                            td.pr-3
                                 a.text-primary(data-toggle="modal" data-target="#mail1") ご注文ありがとうございます
                                 #mail1.modal.fade(tabindex='-1', role='dialog', aria-labelledby='mail1', aria-hidden='true')
                                     .modal-dialog(role='document')

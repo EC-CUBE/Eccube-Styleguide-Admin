@@ -153,13 +153,13 @@ block outsideBlock
             .row
                 .mb-4
                     .col-12
-                        a(href="/order/master/match").btn.btn-primary.px-5 検索
+                        a(href="/order/master/match").btn.btn-ec-conversion.px-5 検索
 block primaryContents
     .row.justify-content-between.mb-2
         .col-auto
             label.mr-2 一括操作
-            button.btn.btn-ec-regular.border.border-dark.mr-2 メールする
-            button.btn.btn-ec-regular.border.border-dark.mr-2 帳票出力
+            button.btn.btn-ec-regular.mr-2 メールする
+            button.btn.btn-ec-regular.mr-2 帳票出力
             button.btn.btn-ec-delete 削除
         .col
             .d-inline-block.mr-2
@@ -167,7 +167,7 @@ block primaryContents
                     select.custom-select
                         option(selected='') 対応状況の変更
                         option ...
-            button.btn.btn-ec-regular.border.border-dark.mr-2 決定
+            button.btn.btn-ec-regular.mr-2 決定
 
         .col-auto.text-right
             .d-inline-block
@@ -177,31 +177,31 @@ block primaryContents
                         option ...
             .d-inline-block
                 .btn-group(role='group')
-                    button.btn.btn-ec-regular.border.border-dark(type='button')
-                        i.fa.fa-cloud-download.mr-1
+                    button.btn.btn-ec-regular(type='button')
+                        i.fa.fa-cloud-download.mr-1.text-secondary
                         span CSVダウンロード
-                    button.btn.btn-ec-regular.border.border-dark(type='button')
-                        i.fa.fa-cog.mr-1
+                    button.btn.btn-ec-regular(type='button')
+                        i.fa.fa-cog.mr-1.text-secondary
                         span CSV出力設定
     .card.rounded.border-0.mb-4
         .card-body.p-0
             table.table.table-sm
                 thead
                     tr
-                        th.border-top-0.pl-3.pr-3.pt-2.pb-2
+                        th.border-top-0.pt-2.pb-2.pl-3
                             input(type='checkbox', name='filter', value='open')
-                        th.border-top-0 受注日時
-                        th.border-top-0 注文番号
-                        th.border-top-0 お名前
-                        th.border-top-0 支払方法
-                        th.border-top-0 購入金額（円）
-                        th.border-top-0 出荷番号
-                        th.border-top-0 対応状況
-                        th.border-top-0 メモ／問合せ
-                        th.border-top-0
+                        th.border-top-0.pt-2.pb-2 受注日時
+                        th.border-top-0.pt-2.pb-2 注文番号
+                        th.border-top-0.pt-2.pb-2 お名前
+                        th.border-top-0.pt-2.pb-2 支払方法
+                        th.border-top-0.pt-2.pb-2 購入金額（円）
+                        th.border-top-0.pt-2.pb-2 出荷番号
+                        th.border-top-0.pt-2.pb-2 対応状況
+                        th.border-top-0.pt-2.pb-2 メモ／問合せ
+                        th.border-top-0.pt-2.pb-2.pr-3
                 tbody
                     tr
-                        td.align-middle.pl-3.pr-3
+                        td.align-middle.pl-3
                             input(type='checkbox', name='filter', value='open')
                         td.align-middle 2017/09/13
                             br
@@ -216,20 +216,23 @@ block primaryContents
                                 br
                                 | 12346
                         td.align-middle
-                            button.btn.btn-outline-primary.py-2(type='button') 新規受付
+                            span.badge.badge-ec-blue 新規受付
 
                         td.align-middle
                         td.align-middle.pr-3
                             .row.justify-content-end
                                 .col-auto.text-center
-                                    a(href="/order/mail/" data-toggle="tooltip" data-placement="top" title="メール送信"): i.fa.fa-send.fa-lg.text-secondary(aria-hidden="true")
+                                    a.btn.btn-ec-actionIcon(href="/order/mail/" data-toggle="tooltip" data-placement="top" title="メール送信")
+                                        i.fa.fa-send.fa-lg.text-secondary(aria-hidden="true")
                                 .col-auto.text-center
-                                    a(data-toggle="tooltip" data-placement="top" title="帳票"): i.fa.fa-table.fa-lg.text-secondary(aria-hidden="true")
+                                    a.btn.btn-ec-actionIcon(data-toggle="tooltip" data-placement="top" title="帳票")
+                                        i.fa.fa-table.fa-lg.text-secondary(aria-hidden="true")
                                 .col-auto.text-center
-                                    a(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-close.fa-lg.text-secondary(aria-hidden="true")
+                                    a.btn.btn-ec-actionIcon(data-toggle="tooltip" data-placement="top" title="削除")
+                                        i.fa.fa-close.fa-lg.text-secondary(aria-hidden="true")
 
                     tr
-                        td.align-middle.pl-3.pr-3
+                        td.align-middle.pl-3
                             input(type='checkbox', name='filter', value='open')
                         td.align-middle 2017/09/13
                             br
@@ -244,19 +247,22 @@ block primaryContents
                                 br
                                 | 12346
                         td.align-middle
-                            button.btn.btn-outline-danger.py-2(type='button') 入金待ち
+                            span.badge.badge-ec-red 入金待ち
                         td.align-middle
-                            a(href="/order/register/" data-toggle="tooltip" data-placement="top" title="メモ/お問い合わせあり"): i.fa.fa-commenting.fa-lg.text-secondary(aria-hidden="true")
+                            a.btn.btn-ec-actionIcon(href="/order/register/" data-toggle="tooltip" data-placement="top" title="メモ/お問い合わせあり"): i.fa.fa-commenting.fa-lg.text-secondary(aria-hidden="true")
                         td.align-middle.pr-3
                             .row.justify-content-end
                                 .col-auto.text-center
-                                    a(href="/order/mail/" data-toggle="tooltip" data-placement="top" title="メール送信"): i.fa.fa-send.fa-lg.text-secondary(aria-hidden="true")
+                                    a.btn.btn-ec-actionIcon(href="/order/mail/" data-toggle="tooltip" data-placement="top" title="メール送信")
+                                        i.fa.fa-send.fa-lg.text-secondary(aria-hidden="true")
                                 .col-auto.text-center
-                                    a(data-toggle="tooltip" data-placement="top" title="帳票"): i.fa.fa-table.fa-lg.text-secondary(aria-hidden="true")
+                                    a.btn.btn-ec-actionIcon(data-toggle="tooltip" data-placement="top" title="帳票")
+                                        i.fa.fa-table.fa-lg.text-secondary(aria-hidden="true")
                                 .col-auto.text-center
-                                    a(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-close.fa-lg.text-secondary(aria-hidden="true")
+                                    a.btn.btn-ec-actionIcon(data-toggle="tooltip" data-placement="top" title="削除")
+                                        i.fa.fa-close.fa-lg.text-secondary(aria-hidden="true")
                     tr
-                        td.align-middle.pl-3.pr-3
+                        td.align-middle.pl-3
                             input(type='checkbox', name='filter', value='open')
                         td.align-middle 2017/09/13
                             br
@@ -271,20 +277,23 @@ block primaryContents
                                 br
                                 | 12346
                         td.align-middle
-                            button.btn.btn-outline-secondary.py-2(type='button') キャンセル
+                            span.badge.badge-ec-glay キャンセル
 
                         td.align-middle
-                            a(href="/order/register/" data-toggle="tooltip" data-placement="top" title="メモ/お問い合わせあり"): i.fa.fa-commenting.fa-lg.text-secondary(aria-hidden="true")
+                            a.btn.btn-ec-actionIcon(href="/order/register/" data-toggle="tooltip" data-placement="top" title="メモ/お問い合わせあり"): i.fa.fa-commenting.fa-lg.text-secondary(aria-hidden="true")
                         td.align-middle.pr-3
                             .row.justify-content-end
                                 .col-auto.text-center
-                                    a(href="/order/mail/" data-toggle="tooltip" data-placement="top" title="メール送信"): i.fa.fa-send.fa-lg.text-secondary(aria-hidden="true")
+                                    a.btn.btn-ec-actionIcon(href="/order/mail/" data-toggle="tooltip" data-placement="top" title="メール送信")
+                                        i.fa.fa-send.fa-lg.text-secondary(aria-hidden="true")
                                 .col-auto.text-center
-                                    a(data-toggle="tooltip" data-placement="top" title="帳票"): i.fa.fa-table.fa-lg.text-secondary(aria-hidden="true")
+                                    a.btn.btn-ec-actionIcon(data-toggle="tooltip" data-placement="top" title="帳票")
+                                        i.fa.fa-table.fa-lg.text-secondary(aria-hidden="true")
                                 .col-auto.text-center
-                                    a(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-close.fa-lg.text-secondary(aria-hidden="true")
+                                    a.btn.btn-ec-actionIcon(data-toggle="tooltip" data-placement="top" title="削除")
+                                        i.fa.fa-close.fa-lg.text-secondary(aria-hidden="true")
                     tr
-                        td.align-middle.pl-3.pr-3
+                        td.align-middle.pl-3
                             input(type='checkbox', name='filter', value='open')
                         td.align-middle 2017/09/13
                             br
@@ -299,18 +308,21 @@ block primaryContents
                                 br
                                 | 12346
                         td.align-middle
-                            button.btn.btn-outline-success.py-2(type='button') 入金済み
+                            span.badge.badge-ec-green 入金済み
                         td.align-middle
                         td.align-middle.pr-3
                             .row.justify-content-end
                                 .col-auto.text-center
-                                    a(href="/order/mail/" data-toggle="tooltip" data-placement="top" title="メール送信"): i.fa.fa-send.fa-lg.text-secondary(aria-hidden="true")
+                                    a.btn.btn-ec-actionIcon(href="/order/mail/" data-toggle="tooltip" data-placement="top" title="メール送信")
+                                        i.fa.fa-send.fa-lg.text-secondary(aria-hidden="true")
                                 .col-auto.text-center
-                                    a(data-toggle="tooltip" data-placement="top" title="帳票"): i.fa.fa-table.fa-lg.text-secondary(aria-hidden="true")
+                                    a.btn.btn-ec-actionIcon(data-toggle="tooltip" data-placement="top" title="帳票")
+                                        i.fa.fa-table.fa-lg.text-secondary(aria-hidden="true")
                                 .col-auto.text-center
-                                    a(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-close.fa-lg.text-secondary(aria-hidden="true")
+                                    a.btn.btn-ec-actionIcon(data-toggle="tooltip" data-placement="top" title="削除")
+                                        i.fa.fa-close.fa-lg.text-secondary(aria-hidden="true")
                     tr
-                        td.align-middle.pl-3.pr-3
+                        td.align-middle.pl-3
                             input(type='checkbox', name='filter', value='open')
                         td.align-middle 2017/09/13
                             br
@@ -325,19 +337,22 @@ block primaryContents
                                 br
                                 | 12346
                         td.align-middle
-                            button.btn.btn-outline-secondary.py-2(type='button') 発送済み
+                            span.badge.badge-ec-glay 発送済み
                         td.align-middle
-                            a(href="/order/register/" data-toggle="tooltip" data-placement="top" title="メモ/お問い合わせあり"): i.fa.fa-commenting.fa-lg.text-secondary(aria-hidden="true")
+                            a.btn.btn-ec-actionIcon(href="/order/register/" data-toggle="tooltip" data-placement="top" title="メモ/お問い合わせあり"): i.fa.fa-commenting.fa-lg.text-secondary(aria-hidden="true")
                         td.align-middle.pr-3
                             .row.justify-content-end
                                 .col-auto.text-center
-                                    a(href="/order/mail/" data-toggle="tooltip" data-placement="top" title="メール送信"): i.fa.fa-send.fa-lg.text-secondary(aria-hidden="true")
+                                    a.btn.btn-ec-actionIcon(href="/order/mail/" data-toggle="tooltip" data-placement="top" title="メール送信")
+                                        i.fa.fa-send.fa-lg.text-secondary(aria-hidden="true")
                                 .col-auto.text-center
-                                    a(data-toggle="tooltip" data-placement="top" title="帳票"): i.fa.fa-table.fa-lg.text-secondary(aria-hidden="true")
+                                    a.btn.btn-ec-actionIcon(data-toggle="tooltip" data-placement="top" title="帳票")
+                                        i.fa.fa-table.fa-lg.text-secondary(aria-hidden="true")
                                 .col-auto.text-center
-                                    a(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-close.fa-lg.text-secondary(aria-hidden="true")
+                                    a.btn.btn-ec-actionIcon(data-toggle="tooltip" data-placement="top" title="削除")
+                                        i.fa.fa-close.fa-lg.text-secondary(aria-hidden="true")
                     tr.text-secondary
-                        td.align-middle.pl-3.pr-3
+                        td.align-middle.pl-3
                             input(type='checkbox', name='filter', value='open')
                         td.align-middle 2017/09/13
                             br
@@ -352,18 +367,21 @@ block primaryContents
                                 br
                                 | 12346
                         td.align-middle
-                            button.btn.btn-outline-danger.py-2(type='button') 取り寄せ中
+                            span.badge.badge-ec-red 取り寄せ中
                         td.align-middle
                         td.align-middle.pr-3
                             .row.justify-content-end
                                 .col-auto.text-center
-                                    a(href="/order/mail/" data-toggle="tooltip" data-placement="top" title="メール送信"): i.fa.fa-send.fa-lg.text-secondary(aria-hidden="true")
+                                    a.btn.btn-ec-actionIcon(href="/order/mail/" data-toggle="tooltip" data-placement="top" title="メール送信")
+                                        i.fa.fa-send.fa-lg.text-secondary(aria-hidden="true")
                                 .col-auto.text-center
-                                    a(data-toggle="tooltip" data-placement="top" title="帳票"): i.fa.fa-table.fa-lg.text-secondary(aria-hidden="true")
+                                    a.btn.btn-ec-actionIcon(data-toggle="tooltip" data-placement="top" title="帳票")
+                                        i.fa.fa-table.fa-lg.text-secondary(aria-hidden="true")
                                 .col-auto.text-center
-                                    a(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-close.fa-lg.text-secondary(aria-hidden="true")
+                                    a.btn.btn-ec-actionIcon(data-toggle="tooltip" data-placement="top" title="削除")
+                                        i.fa.fa-close.fa-lg.text-secondary(aria-hidden="true")
                     tr
-                        td.align-middle.pl-3.pr-3
+                        td.align-middle.pl-3
                             input(type='checkbox', name='filter', value='open')
                         td.align-middle 2017/09/13
                             br
@@ -376,19 +394,22 @@ block primaryContents
                         td.align-middle
                             a(href='/shipment/register/') -
                         td.align-middle
-                            button.btn.btn-outline-warning.py-2(type='button') 購入処理中
+                            span.badge.badge-ec-yellow 購入処理中
                         td.align-middle
-                            a(href="/order/register/" data-toggle="tooltip" data-placement="top" title="メモ/お問い合わせあり"): i.fa.fa-commenting.fa-lg.text-secondary(aria-hidden="true")
+                            a.btn.btn-ec-actionIcon(href="/order/register/" data-toggle="tooltip" data-placement="top" title="メモ/お問い合わせあり"): i.fa.fa-commenting.fa-lg.text-secondary(aria-hidden="true")
                         td.align-middle.pr-3
                             .row.justify-content-end
                                 .col-auto.text-center
-                                    a(href="/order/mail/" data-toggle="tooltip" data-placement="top" title="メール送信"): i.fa.fa-send.fa-lg.text-secondary(aria-hidden="true")
+                                    a.btn.btn-ec-actionIcon(href="/order/mail/" data-toggle="tooltip" data-placement="top" title="メール送信")
+                                        i.fa.fa-send.fa-lg.text-secondary(aria-hidden="true")
                                 .col-auto.text-center
-                                    a(data-toggle="tooltip" data-placement="top" title="帳票"): i.fa.fa-table.fa-lg.text-secondary(aria-hidden="true")
+                                    a.btn.btn-ec-actionIcon(data-toggle="tooltip" data-placement="top" title="帳票")
+                                        i.fa.fa-table.fa-lg.text-secondary(aria-hidden="true")
                                 .col-auto.text-center
-                                    a(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-close.fa-lg.text-secondary(aria-hidden="true")
+                                    a.btn.btn-ec-actionIcon(data-toggle="tooltip" data-placement="top" title="削除")
+                                        i.fa.fa-close.fa-lg.text-secondary(aria-hidden="true")
                     tr
-                        td.align-middle.pl-3.pr-3
+                        td.align-middle.pl-3
                             input(type='checkbox', name='filter', value='open')
                         td.align-middle 2017/09/13
                             br
@@ -403,18 +424,21 @@ block primaryContents
                                 br
                                 | 12346
                         td.align-middle
-                            button.btn.btn-outline-warning.py-2(type='button') 決済処理中
+                            span.badge.badge-ec-yellow 決済処理中
                         td.align-middle
                         td.align-middle.pr-3
                             .row.justify-content-end
                                 .col-auto.text-center
-                                    a(href="/order/mail/" data-toggle="tooltip" data-placement="top" title="メール送信"): i.fa.fa-send.fa-lg.text-secondary(aria-hidden="true")
+                                    a.btn.btn-ec-actionIcon(href="/order/mail/" data-toggle="tooltip" data-placement="top" title="メール送信")
+                                        i.fa.fa-send.fa-lg.text-secondary(aria-hidden="true")
                                 .col-auto.text-center
-                                    a(data-toggle="tooltip" data-placement="top" title="帳票"): i.fa.fa-table.fa-lg.text-secondary(aria-hidden="true")
+                                    a.btn.btn-ec-actionIcon(data-toggle="tooltip" data-placement="top" title="帳票")
+                                        i.fa.fa-table.fa-lg.text-secondary(aria-hidden="true")
                                 .col-auto.text-center
-                                    a(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-close.fa-lg.text-secondary(aria-hidden="true")
+                                    a.btn.btn-ec-actionIcon(data-toggle="tooltip" data-placement="top" title="削除")
+                                        i.fa.fa-close.fa-lg.text-secondary(aria-hidden="true")
                     tr
-                        td.align-middle.pl-3.pr-3
+                        td.align-middle.pl-3
                             input(type='checkbox', name='filter', value='open')
                         td.align-middle 2017/09/13
                             br
@@ -429,18 +453,21 @@ block primaryContents
                                 br
                                 | 12346
                         td.align-middle
-                            button.btn.btn-outline-secondary.py-2(type='button') 発送済み
+                            span.badge.badge-ec-glay 発送済み
                         td.align-middle
                         td.align-middle.pr-3
                             .row.justify-content-end
                                 .col-auto.text-center
-                                    a(href="/order/mail/" data-toggle="tooltip" data-placement="top" title="メール送信"): i.fa.fa-send.fa-lg.text-secondary(aria-hidden="true")
+                                    a.btn.btn-ec-actionIcon(href="/order/mail/" data-toggle="tooltip" data-placement="top" title="メール送信")
+                                        i.fa.fa-send.fa-lg.text-secondary(aria-hidden="true")
                                 .col-auto.text-center
-                                    a(data-toggle="tooltip" data-placement="top" title="帳票"): i.fa.fa-table.fa-lg.text-secondary(aria-hidden="true")
+                                    a.btn.btn-ec-actionIcon(data-toggle="tooltip" data-placement="top" title="帳票")
+                                        i.fa.fa-table.fa-lg.text-secondary(aria-hidden="true")
                                 .col-auto.text-center
-                                    a(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-close.fa-lg.text-secondary(aria-hidden="true")
+                                    a.btn.btn-ec-actionIcon(data-toggle="tooltip" data-placement="top" title="削除")
+                                        i.fa.fa-close.fa-lg.text-secondary(aria-hidden="true")
                     tr
-                        td.align-middle.pl-3.pr-3
+                        td.align-middle.pl-3
                             input(type='checkbox', name='filter', value='open')
                         td.align-middle 2017/09/13
                             br
@@ -455,17 +482,20 @@ block primaryContents
                                 br
                                 | 12346
                         td.align-middle
-                            button.btn.btn-outline-secondary.py-2(type='button') 発送済み
+                            span.badge.badge-ec-glay 発送済み
                         td.align-middle
-                            a(href="/order/register/" data-toggle="tooltip" data-placement="top" title="メモ/お問い合わせあり"): i.fa.fa-commenting.fa-lg.text-secondary(aria-hidden="true")
+                            a.btn.btn-ec-actionIcon(href="/order/register/" data-toggle="tooltip" data-placement="top" title="メモ/お問い合わせあり"): i.fa.fa-commenting.fa-lg.text-secondary(aria-hidden="true")
                         td.align-middle.pr-3
                             .row.justify-content-end
                                 .col-auto.text-center
-                                    a(href="/order/mail/" data-toggle="tooltip" data-placement="top" title="メール送信"): i.fa.fa-send.fa-lg.text-secondary(aria-hidden="true")
+                                    a.btn.btn-ec-actionIcon(href="/order/mail/" data-toggle="tooltip" data-placement="top" title="メール送信")
+                                        i.fa.fa-send.fa-lg.text-secondary(aria-hidden="true")
                                 .col-auto.text-center
-                                    a(data-toggle="tooltip" data-placement="top" title="帳票"): i.fa.fa-table.fa-lg.text-secondary(aria-hidden="true")
+                                    a.btn.btn-ec-actionIcon(data-toggle="tooltip" data-placement="top" title="帳票")
+                                        i.fa.fa-table.fa-lg.text-secondary(aria-hidden="true")
                                 .col-auto.text-center
-                                    a(data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-close.fa-lg.text-secondary(aria-hidden="true")
+                                    a.btn.btn-ec-actionIcon(data-toggle="tooltip" data-placement="top" title="削除")
+                                        i.fa.fa-close.fa-lg.text-secondary(aria-hidden="true")
             .row.justify-content-md-center.mb-4
                 ul.pagination
                     li.page-item

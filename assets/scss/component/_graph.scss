@@ -1,0 +1,58 @@
+@import "../library/_variable";
+@import "../mixin/_media";
+
+.c-graf--week {
+  overflow: hidden;
+  width: 100%;
+  & &__container {
+    display: flex;
+    width: 100%;
+  }
+  & &__labelVertical{
+    .c-graf__label{
+      font-size: 12px;
+      line-height: 26px;
+      text-align: right;
+      padding-right: 10px;
+    }
+  }
+  & &__graph {
+    height: 261px;
+    width: 100%;
+    border: 1px solid #F0F0F0 ;
+    position: relative;
+    margin-top: 13px;
+  }
+  hr {
+    border: none;
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    margin: 0 auto;
+    background: #F0F0F0 ;
+  }
+  .c-graf__bar {
+    float: left;
+    text-align: center;
+    position: relative;
+    margin-left: calc((100% - 200px) / 7);
+    width: 25px;
+    background-color: #437EC4;
+    transition: all .3s ease;
+  }
+  & &__labelHorizontal {
+    margin-left: 60px;
+    width: calc( 100% - 60px );
+    display: flex;
+    .c-graf__label{
+      font-size: 12px;
+      margin-left: calc((100% - 200px) / 7);
+      width: 25px;
+      text-align: center;
+      padding-top: 6px;
+    }
+    .c-graf__label:first-of-type{
+      //margin-left: 41px;
+    }
+  }
+}
