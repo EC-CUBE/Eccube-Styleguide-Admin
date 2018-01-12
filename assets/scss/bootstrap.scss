@@ -51,6 +51,10 @@ $breadcrumb-bg: #eff0f4;
 
 .btn-ec-icon{
   @include button-variant(#FFFFFF, transparent, #F5F6F8, transparent, #F5F6F8, transparent );
+  color: #54687A;
+  &:hover {
+    color: #54687A;
+  }
 }
 
 .btn-ec-actionIcon{
