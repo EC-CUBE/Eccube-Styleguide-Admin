@@ -16,7 +16,9 @@ block primaryContents
                         i.fa.fa-question-circle.fa-lg.ml-1
                 .col
                     form.mb-2
-                        input(type="file").form-control-file
+                        a(onclick="$('#fileForm').click()").btn.btn-ec-regular.mr-2 ファイルを選択
+                        span 選択されていません
+                        input#fileForm.d-none(type="file")
                     button(type="submit").btn.btn-ec-conversion 一括登録を実行
     .card.rounded.border-0.mb-4
         .card-header
