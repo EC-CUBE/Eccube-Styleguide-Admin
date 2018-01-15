@@ -1,0 +1,110 @@
+extends /assets/tmpl/moc/layout/_layout-2col.pug
+block pageTitle
+    include /assets/tmpl/components/pageTitle.pug
+    +c-pageTitle("CSV出力項目設定","基本情報設定")
+
+block primaryContents
+    .card.rounded.border-0.mb-4
+        .card-header
+            span CSV出力項目
+        .card-body
+            .row.mb-4.justify-content-between
+                .col-2
+                    span CSV出力種別
+                .col-6
+                    form
+                        select.form-control
+                            option(value='') 受注CSV
+                .col
+            .row.mb-2
+                .col-4
+                    span CSV出力しない項目
+                .col-2
+                .col-4
+                    span CSV出力する項目
+                .col-2
+            .row.mb-2
+                .col-4
+                    ul
+                        li アイテムa
+                        li アイテムb
+                        li アイテムc
+                        li アイテムd
+                        li アイテムe
+                        li アイテムk
+                        li アイテムl
+                        li アイテムm
+                        li アイテムn
+                        li アイテムo
+                        li アイテムp
+                        li アイテムq
+                        li アイテムr
+                        li アイテムs
+                        li アイテムt
+                        li アイテムu
+                        li アイテムv
+                        li アイテムw
+                        li アイテムx
+                        li アイテムy
+                        li アイテムz
+                .col-2
+                    .row.mb-2
+                        .col.text-center
+                            span 操作項目
+                    .row.mb-2
+                        .col.text-center
+                            .btn.btn-ec-regular.px-4
+                                i.fa.fa-arrow-right(aria-hidden="true")
+                                span &nbsp;出力
+                    .row.mb-2
+                        .col.text-center
+                            .btn.btn-ec-regular.px-4
+                                i.fa.fa-arrow-left(aria-hidden="true")
+                                    span &nbsp;解除
+                    .row.mb-2
+                        .col.text-center
+                            .btn.btn-ec-regular
+                                i.fa.fa-arrow-circle-right(aria-hidden="true")
+                                    span &nbsp;すべて出力
+                    .row.mb-2
+                        .col.text-center
+                            .btn.btn-ec-regular
+                                i.fa.fa-arrow-circle-left(aria-hidden="true")
+                                    span &nbsp;すべて解除
+                .col-4
+                    ul
+                        li アイテムf
+                        li アイテムg
+                        li アイテムh
+                        li アイテムi
+                        li アイテムj
+                .col-2
+                    .row.mb-2
+                        .col.text-center
+                            span 項目順序
+                    .row.mb-2
+                        .col.text-center
+                            .btn.btn-ec-regular
+                                i.fa.fa-arrow-up(aria-hidden="true")
+                                    span &nbsp;ひとつ上へ
+                    .row.mb-2
+                        .col.text-center
+                            .btn.btn-ec-regular
+                                i.fa.fa-arrow-down(aria-hidden="true")
+                                    span &nbsp;ひとつ下へ
+                    .row.mb-2
+                        .col.text-center
+                            .btn.btn-ec-regular
+                                i.fa.fa-arrow-circle-up(aria-hidden="true")
+                                    span &nbsp;一番上へ
+                    .row.mb-2
+                        .col.text-center
+                            .btn.btn-ec-regular
+                                i.fa.fa-arrow-circle-down(aria-hidden="true")
+                                    span &nbsp;一番下へ
+            p
+            |任意の項目を押して選択してから［項目操作］ボタンで移動し、CSV出力する項目を設定してください。
+            br
+            | 出力する項目の順序は［項目順序］ボタンで変更することができます。
+            br
+            | 複数の項目を選択する場合はctrlキー（Macの場合はcommandキー）を押しながら項目を押します。shiftキーを押しながら選択すると範囲選択ができます。
