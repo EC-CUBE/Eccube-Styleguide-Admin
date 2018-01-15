@@ -45,6 +45,8 @@ block primaryContents
                     .col.mb-2
                         form.mb-2
                             .row.justify-content-start
+                                .col-auto.text-center.pr-0
+                                    span.align-middle 〒
                                 .col-2
                                     input.form-control(type='text', placeholder='郵便番号1')
                                 .col-auto.text-center.p-0
@@ -59,6 +61,39 @@ block primaryContents
                         form
                             input.form-control.mb-2(type='text', placeholder='市区町村名（例：千代田区神田神保町）')
                             input.form-control(type='text', placeholder='番地・ビル名（例：1-1-2）')
+                .row.mb-2
+                    .col-3
+                        span 電話番号
+                        span.badge.badge-primary.ml-1 必須
+                    .col
+                        form
+                            .row.justify-content-start
+                                .col-2
+                                    input.form-control(type='text')
+                                .col-auto.text-center.p-0
+                                    span.align-middle -
+                                .col-2
+                                    input.form-control(type='text')
+                                .col-auto.text-center.p-0
+                                    span.align-middle -
+                                .col-2
+                                    input.form-control(type='text')
+                .row.mb-2
+                    .col-3
+                        span FAX番号
+                    .col
+                        form
+                            .row.justify-content-start
+                                .col-2
+                                    input.form-control(type='text')
+                                .col-auto.text-center.p-0
+                                    span.align-middle -
+                                .col-2
+                                    input.form-control(type='text')
+                                .col-auto.text-center.p-0
+                                    span.align-middle -
+                                .col-2
+                                    input.form-control(type='text')
                 .row.mb-3
                     .col-3
                         span 店舗営業時間
@@ -111,18 +146,18 @@ block primaryContents
                             span 送料無料条件（金額）
                             i.fa.fa-question-circle.fa-lg.ml-1
                     .col.mb-2
-                        .input-group
+                        .input-group.col-4.pl-0
                             span.input-group-addon ￥
                             input(type="number").form-control
                 .row
                     .col-3
                         .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
-                            span 送料無料条件（金額）
+                            span 送料無料条件（数量）
                             i.fa.fa-question-circle.fa-lg.ml-1
                     .col.mb-2
-                        .input-group
+                        .input-group.col-4.pl-0
                             input(type="number").form-control
-                            span.input-group-addon 点
+                            span.input-group-addon 個
                 .row
                     .col-3
                         span 商品ごとの送料設定
@@ -176,26 +211,15 @@ block primaryContents
                     +c-toggleSwitch('switch_productDisplay', '非表示')
     .card.rounded.border-0.mb-4
         .card-header
-            span 地図設定
+            span 個別税率設定
         .card-body
                 .row
                     .col-3
                         .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
-                            span 緯度
-                            i.fa.fa-question-circle.fa-lg.ml-1
+                            span 商品別税率機能
                     .col.mb-2
-                        .input-group
-                            input(type="number").form-control
-                            span.input-group-addon 度
-                .row
-                    .col-3
-                        .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
-                            span 経度
-                            i.fa.fa-question-circle.fa-lg.ml-1
-                    .col.mb-2
-                        .input-group
-                            input(type="number").form-control
-                            span.input-group-addon 度
+                        include /assets/tmpl/components/toggleSwitch.pug
+                        +c-toggleSwitch('switch_autoLogin', '無効')
 
 block conversionArea
     +b.c-conversionArea
