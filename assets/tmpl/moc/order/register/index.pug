@@ -93,6 +93,58 @@ block primaryContents
                         i.fa.fa-angle-up.fa-lg
         .collapse(id="ordererInfo").show
             .card-body
+                .row.align-items-center.justify-content-start.mb-4
+                    .col-auto
+                        button.btn.btn-ec-regular.px-3(data-toggle="modal" data-target="#orderRegisterSearch") 会員から検索・入力
+                    .col-auto
+                #orderRegisterSearch.modal.fade(tabindex='-1', role='dialog', aria-labelledby='orderRegisterSearch', aria-hidden='true')
+                    .modal-dialog(role='document')
+                        .modal-content
+                            .modal-header
+                                h5.modal-title.font-weight-bold 会員を検索
+                                button.close(type='button', data-dismiss='modal', aria-label='Close')
+                                    span(aria-hidden='true') ×
+                            .modal-body
+                                form.mb-2
+                                    input.form-control(type='text', placeholder='会員ID・メールアドレス・お名前')
+                                button(type="submit").btn.btn-ec-conversion.px-5.mb-4 検索
+                                table.table.table-striped
+                                    thead.table-active
+                                        tr
+                                            th.pt-2.pb-2.pl-3 ID
+                                            th.pt-2.pb-2 お名前（カナ）
+                                            th.pt-2.pb-2 電話番号
+                                            th.pt-2.pb-2 メールアドレス
+                                            th.pt-2.pb-2.pl-5 &nbsp;
+                                    tbody
+                                        - for (var i = 0; i < 3; i++)
+                                            tr
+                                                td.text-center
+                                                    span 1
+                                                td
+                                                    span 山田 花子（ヤマダ ハナコ）
+                                                td
+                                                    span 090-2222-3333
+                                                td
+                                                    span mail@example.com
+                                                td
+                                                    .row.justify-content-end.pr-2
+                                                        a.btn.btn-ec-actionIcon(href="" data-toggle="tooltip" data-placement="top" title="追加")
+                                                            i.fa.fa-plus.fa-lg.text-secondary(aria-hidden="true")
+                                .row.justify-content-md-center.mb-4
+                                    ul.pagination
+                                        li.page-item
+                                            a.page-link(href='#') Previous
+                                        li.page-item.active
+                                            a.page-link(href='#') 1
+                                        li.page-item
+                                            a.page-link(href='#') 2
+                                        li.page-item
+                                            a.page-link(href='#') 3
+                                        li.page-item
+                                            a.page-link(href='#') 4
+                                        li.page-item
+                                            a.page-link(href='#') Next
                 .row.mb-2
                     .col-3
                         .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
@@ -129,6 +181,8 @@ block primaryContents
                     .col.mb-3
                         form.mb-2
                             .row.justify-content-start
+                                .col-auto.text-center.pr-0
+                                    span 〒
                                 .col-2
                                     input.form-control(type='text', placeholder='郵便番号1')
                                 .col-auto.text-center.p-0
@@ -141,8 +195,8 @@ block primaryContents
                                     select.form-control
                                         option(value='') 東京都
                         form
-                            input.form-control.mb-2(type='text', placeholder='住所1')
-                            input.form-control(type='text', placeholder='住所2')
+                            input.form-control.mb-2(type='text', placeholder='市区町村名（例：千代田区神田神保町）')
+                            input.form-control(type='text', placeholder='番地・ビル名（例：1-1-2 ）')
                 .row.mb-2
                     .col-3
                         span メールアドレス
