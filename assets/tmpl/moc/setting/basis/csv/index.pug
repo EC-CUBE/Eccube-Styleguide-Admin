@@ -18,36 +18,31 @@ block primaryContents
                 .col
             .row.mb-2
                 .col-4
-                    span CSV出力しない項目
-                .col-2
-                .col-4
-                    span CSV出力する項目
-                .col-2
-            .row.mb-2
-                .col-4
-                    ul
-                        li アイテムa
-                        li アイテムb
-                        li アイテムc
-                        li アイテムd
-                        li アイテムe
-                        li アイテムk
-                        li アイテムl
-                        li アイテムm
-                        li アイテムn
-                        li アイテムo
-                        li アイテムp
-                        li アイテムq
-                        li アイテムr
-                        li アイテムs
-                        li アイテムt
-                        li アイテムu
-                        li アイテムv
-                        li アイテムw
-                        li アイテムx
-                        li アイテムy
-                        li アイテムz
-                .col-2
+                    .form-group
+                        label(for='FormControlSelect1') CSV出力しない項目
+                        select#FormControlSelect1.form-control(multiple='' style="height: 374px;")
+                            option アイテムa
+                            option アイテムb
+                            option アイテムc
+                            option アイテムd
+                            option アイテムe
+                            option アイテムk
+                            option アイテムl
+                            option アイテムm
+                            option アイテムn
+                            option アイテムo
+                            option アイテムp
+                            option アイテムq
+                            option アイテムr
+                            option アイテムs
+                            option アイテムt
+                            option アイテムu
+                            option アイテムv
+                            option アイテムw
+                            option アイテムx
+                            option アイテムy
+                            option アイテムz
+                .col-2.align-self-center
                     .row.mb-2
                         .col.text-center
                             span 操作項目
@@ -72,13 +67,15 @@ block primaryContents
                                 i.fa.fa-arrow-circle-left(aria-hidden="true")
                                     span &nbsp;すべて解除
                 .col-4
-                    ul
-                        li アイテムf
-                        li アイテムg
-                        li アイテムh
-                        li アイテムi
-                        li アイテムj
-                .col-2
+                    .form-group
+                        label(for='FormControlSelect2') CSV出力する項目
+                        select#FormControlSelect2.form-control(multiple='' style="height: 374px;")
+                            option アイテムf
+                            option アイテムg
+                            option アイテムh
+                            option アイテムi
+                            option アイテムj
+                .col-2.align-self-center
                     .row.mb-2
                         .col.text-center
                             span 項目順序
