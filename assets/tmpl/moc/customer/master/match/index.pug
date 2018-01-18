@@ -11,10 +11,10 @@ block outsideBlock
                     form.mb-2
                         label.col-form-label 会員ID・メールアドレス・お名前
                         input.form-control(type='text')
-                    .d-inline-block.mb-3(data-toggle="collapse" href="#commentList" aria-expanded="false" aria-controls="commentList")
+                    .d-inline-block.mb-3(data-toggle="collapse" href="#searchDetail" aria-expanded="false" aria-controls="searchDetail")
                         i.fa.fa-plus-square-o.font-weight-bold.mr-1
                         span.font-weight-bold 詳細検索
-        +b.c-subContents.collapse(id="commentList")
+        +b.c-subContents.collapse(id="searchDetail").ec-collapse
             .row.mb-2
                 .col
                     form.form-row
