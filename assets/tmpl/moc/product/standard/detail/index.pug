@@ -11,23 +11,17 @@ block primaryContents
                     span.card-title 基本設定
         .card-body
             .row.mb-2
-                .col-3
+                .col-auto
                     .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
                         span 表示名
-                        i.fa.fa-question-circle.fa-lg.ml-1
-                        span.badge.badge-primary.ml-1 必須
-                .col-9
-                    form
-                        input(type="text").form-control
+                .col-auto
+                    span 靴サイズ
             .row.mb-2
-                .col-3
+                .col-auto
                     .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
                         span 管理名
-                        i.fa.fa-question-circle.fa-lg.ml-1
-                        span.badge.badge-primary.ml-1 必須
-                .col-9
-                    form
-                        input(type="text").form-control
+                .col-auto
+                    span サイズ
     .card.rounded.border-0.mb-4
         .card-header
             span.card-title 分類設定
@@ -52,6 +46,19 @@ block primaryContents
                                 a.btn.btn-ec-actionIcon.mr-3(href="" data-toggle="tooltip" data-placement="top" title="名前を編集"): i.fa.fa-pencil.fa-lg.text-secondary
                                 a.btn.btn-ec-actionIcon.mr-3(href="" data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-close.fa-lg.text-secondary
                     li.list-group-item
+                        form.form-row
+                            .col-auto.d-flex.align-items-center
+                                input(type="text" placeholder="分類名を入力").form-control
+                            .col-auto.d-flex.align-items-center
+                                button(type="submit").btn.btn-ec-conversion 決定
+                            .col-auto.d-flex.align-items-center
+                                button(type="submit").btn.btn-ec-sub キャンセル
+                            .col.text-right.justify-content-end
+                                a.btn.btn-ec-actionIcon.mr-3(href="" data-toggle="tooltip" data-placement="top" title="上へ移動"): i.fa.fa-arrow-up.fa-lg.text-secondary
+                                a.btn.btn-ec-actionIcon.mr-3(href="" data-toggle="tooltip" data-placement="top" title="下へ移動"): i.fa.fa-arrow-down.fa-lg.text-secondary
+                                a.btn.btn-ec-actionIcon.mr-3(href="" data-toggle="tooltip" data-placement="top" title="名前を編集"): i.fa.fa-pencil.fa-lg.text-secondary
+                                a.btn.btn-ec-actionIcon.mr-3(href="" data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-close.fa-lg.text-secondary
+                    li.list-group-item
                         .row.justify-content-around
                             .col-auto.d-flex.align-items-center
                                 i.fa.fa-bars.text-ec-gray
@@ -62,14 +69,6 @@ block primaryContents
                                 a.btn.btn-ec-actionIcon.mr-3(href="" data-toggle="tooltip" data-placement="top" title="下へ移動"): i.fa.fa-arrow-down.fa-lg.text-secondary
                                 a.btn.btn-ec-actionIcon.mr-3(href="" data-toggle="tooltip" data-placement="top" title="名前を編集"): i.fa.fa-pencil.fa-lg.text-secondary
                                 a.btn.btn-ec-actionIcon.mr-3(href="" data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-close.fa-lg.text-secondary
-                    li.list-group-item
-                        form.form-row
-                            .col-auto.d-flex.align-items-center
-                                input(type="text").form-control
-                            .col-auto.d-flex.align-items-center
-                                button(type="submit").btn.btn-ec-conversion 決定
-                            .col-auto.d-flex.align-items-center
-                                button(type="submit").btn.btn-ec-sub キャンセル
                     li.list-group-item
                         .row.justify-content-around
                             .col-auto.d-flex.align-items-center
