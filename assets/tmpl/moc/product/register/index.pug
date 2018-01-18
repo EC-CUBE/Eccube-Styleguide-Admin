@@ -338,8 +338,11 @@ block conversionArea
                             span 商品マスター
                 .col-6
                     .row.align-items-center.justify-content-end
-                        .col-auto
-                            include /assets/tmpl/components/toggleSwitch.pug
-                            +c-toggleSwitch--conversion('switch','公開')
+                        .col-2
+                            form
+                                select.form-control
+                                    option(value='') 公開
+                                    option(value='') 非公開
+                                    option(value='') 廃止
                         .col-auto
                             button(type="submit").btn.btn-ec-conversion.px-5 更新
