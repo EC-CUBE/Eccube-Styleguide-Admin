@@ -1,0 +1,100 @@
+extends /assets/tmpl/moc/layout/_layout-2col.pug
+block pageTitle
+    include /assets/tmpl/components/pageTitle.pug
+    +c-pageTitle("税率設定","基本情報設定")
+
+block primaryContents
+    .card.rounded.border-0.mb-4
+        .card-header
+            span 共通税率設定
+        .card-body.p-0
+            table.table.tabel-sm
+                thead
+                    tr
+                        th.border-top-0.pt-2.pb-2.pl-3 ID
+                        th.border-top-0.pt-2.pb-2.pl-3 税率
+                        th.border-top-0.pt-2.pb-2.pl-3 課税規則
+                        th.border-top-0.pt-2.pb-2.pl-3 適応日時
+                        th.border-top-0.pt-2.pb-2.pl-3 &nbsp;
+                        th.border-top-0.pt-2.pb-2.pl-3.pr-5 &nbsp;
+                tbody
+                    tr
+                        td.align-middle.pl-3
+                        td.align-middle
+                            form.form-inline
+                                input.form-control(type="text")
+                                span.pl-1 %
+                        td.align-middle
+                            form
+                                select.form-control
+                                    option 四捨五入
+                                    option 切り捨て
+                        td.align-middle
+                            form
+                                input.form-control(type='date', value='2000-01-01')
+                        td.align-middle
+                        td.align-middle.pr-5
+                            .row.justify-content-end
+                                button(type="button").btn.btn-ec-regular.px-4 新規作成
+                    tr
+                        td.align-middle.pl-3
+                            span 3
+                        td.align-middle
+                            span 10%
+                        td.align-middle
+                            span 切り捨て
+                        td.align-middle
+                            span 2019/04/01 0:00 〜
+                        td.align-middle
+                        td.align-middle
+                            .row.justify-content-end.pr-2
+                                .col-auto.text-center.pr-0
+                                    a.btn.btn-ec-actionIcon(data-toggle="tooltip" data-placement="top" title="編集")
+                                        i.fa.fa-pencil.fa-lg.text-secondary(aria-hidden="true")
+                                .col-auto.text-center
+                                    a.btn.btn-ec-actionIcon(data-toggle="tooltip" data-placement="top" title="削除")
+                                        i.fa.fa-times.fa-lg.text-secondary(aria-hidden="true")
+                    tr
+                        td.align-middle.pl-3
+                            span 2
+                        td.align-middle
+                            form.form-inline
+                                input.form-control(type="text")
+                                span.pl-1 %
+                        td.align-middle
+                            form
+                                select.form-control
+                                    option 四捨五入
+                                    option 切り捨て
+                        td.align-middle
+                            form
+                                input.form-control(type='date', value='2000-01-01')
+                        td.align-middle
+                            .btn.btn-ec-conversion 決定
+                            .btn.btn-ec-sub キャンセル
+                        td.align-middle
+                            .row.justify-content-end.pr-2
+                                .col-auto.text-center.pr-0
+                                    a.btn.btn-ec-actionIcon(data-toggle="tooltip" data-placement="top" title="編集")
+                                        i.fa.fa-pencil.fa-lg.text-secondary(aria-hidden="true")
+                                .col-auto.text-center
+                                    a.btn.btn-ec-actionIcon(data-toggle="tooltip" data-placement="top" title="削除")
+                                        i.fa.fa-times.fa-lg.text-secondary(aria-hidden="true")
+                    tr
+                        td.align-middle.pl-3
+                            span 1
+                        td.align-middle
+                            span 16%
+                        td.align-middle
+                            span 四捨五入
+                        td.align-middle
+                            span 基本税率設定
+                        td.align-middle
+                        td.align-middle
+                            .row.justify-content-end.pr-2
+                                .col-auto.text-center.pr-0
+                                    a.btn.btn-ec-actionIcon(data-toggle="tooltip" data-placement="top" title="編集")
+                                        i.fa.fa-pencil.fa-lg.text-secondary(aria-hidden="true")
+                                .col-auto.text-center
+                                    a.btn.btn-ec-actionIcon(data-toggle="tooltip" data-placement="top" title="削除")
+                                        i.fa.fa-times.fa-lg.text-secondary(aria-hidden="true")

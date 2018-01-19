@@ -42,7 +42,7 @@ block primaryContents
                         .col-8
                             a(href="/content/layout/detail").card-title.align-middle トップページ用レイアウト
                             button.btn.btn-ec-regular(type='button' data-toggle='modal' data-target='#addPage') ページ追加
-
+                            button.btn.btn-ec-sub(type='button' data-toggle='modal' data-target='#layoutDelete') レイアウト削除
                         .col-4.text-right
                             a(data-toggle="collapse" href="#topPageLayout" aria-expanded="false" aria-controls="topPageLayout")
                                 i.fa.fa-angle-up.fa-lg
@@ -57,11 +57,11 @@ block primaryContents
                         .col-8
                             a(href="/content/layout/detail").card-title.align-middle 下層ページ用レイアウト
                             button.btn.btn-ec-regular(type='button' data-toggle='modal' data-target='#addPage') ページ追加
-
+                            button.btn.btn-ec-sub(type='button' data-toggle='modal' data-target='#layoutDelete') レイアウト削除
                         .col-4.text-right
                             a(data-toggle="collapse" href="#lowerPageLayout" aria-expanded="false" aria-controls="lowerPageLayout")
                                 i.fa.fa-angle-up.fa-lg
-                .collapsez#lowerPageLayout.show
+                .collapse#lowerPageLayout.show
                     .card-body.p-0
                         .d-block.border.border-top-0.border-right-0.border-left-0.p-3
                             i.fa.fa-bars.text-ec-gray.mr-3
@@ -81,7 +81,7 @@ block primaryContents
                         .col-8
                             a(href="/content/layout/detail").card-title.align-middle ショッピングガイド用レイアウト
                             button.btn.btn-ec-regular(type='button' data-toggle='modal' data-target='#addPage') ページ追加
-
+                            button.btn.btn-ec-sub(type='button' data-toggle='modal' data-target='#layoutDelete') レイアウト削除
                         .col-4.text-right
                             a(data-toggle="collapse" href="#shopGuideLayout" aria-expanded="false" aria-controls="shopGuideLayout")
                                 i.fa.fa-angle-up.fa-lg
@@ -94,7 +94,7 @@ block primaryContents
                         .col-8
                             a(href="/content/layout/detail").card-title.align-middle LPレイアウト
                             button.btn.btn-ec-regular(type='button' data-toggle='modal' data-target='#addPage') ページ追加
-
+                            button.btn.btn-ec-sub(type='button' data-toggle='modal' data-target='#layoutDelete') レイアウト削除
                         .col-4.text-right
                             a(data-toggle="collapse" href="#lpLayout" aria-expanded="false" aria-controls="lpLayout")
                                 i.fa.fa-angle-up.fa-lg
@@ -128,7 +128,7 @@ block primaryContents
                         .col-8
                             a(href="/content/layout/detail").card-title.align-middle トップページ用レイアウト
                             button.btn.btn-ec-regular(type='button' data-toggle='modal' data-target='#addPage') ページ追加
-
+                            button.btn.btn-ec-sub(type='button' data-toggle='modal' data-target='#layoutDelete') レイアウト削除
                         .col-4.text-right
                             a(data-toggle="collapse" href="#topPageLayout" aria-expanded="false" aria-controls="topPageLayout")
                                 i.fa.fa-angle-up.fa-lg
@@ -143,7 +143,7 @@ block primaryContents
                         .col-8
                             a(href="/content/layout/detail").card-title.align-middle 下層ページ用レイアウト
                             button.btn.btn-ec-regular(type='button' data-toggle='modal' data-target='#addPage') ページ追加
-
+                            button.btn.btn-ec-sub(type='button' data-toggle='modal' data-target='#layoutDelete') レイアウト削除
                         .col-4.text-right
                             a(data-toggle="collapse" href="#lowerPageLayout" aria-expanded="false" aria-controls="lowerPageLayout")
                                 i.fa.fa-angle-up.fa-lg
@@ -167,7 +167,7 @@ block primaryContents
                         .col-8
                             a(href="/content/layout/detail").card-title.align-middle ショッピングガイド用レイアウト
                             button.btn.btn-ec-regular(type='button' data-toggle='modal' data-target='#addPage') ページ追加
-
+                            button.btn.btn-ec-sub(type='button' data-toggle='modal' data-target='#layoutDelete') レイアウト削除
                         .col-4.text-right
                             a(data-toggle="collapse" href="#shopGuideLayout" aria-expanded="false" aria-controls="shopGuideLayout")
                                 i.fa.fa-angle-up.fa-lg
@@ -180,7 +180,7 @@ block primaryContents
                         .col-8
                             a(href="/content/layout/detail").card-title.align-middle LPレイアウト
                             button.btn.btn-ec-regular(type='button' data-toggle='modal' data-target='#addPage') ページ追加
-
+                            button.btn.btn-ec-sub(type='button' data-toggle='modal' data-target='#layoutDelete') レイアウト削除
                         .col-4.text-right
                             a(data-toggle="collapse" href="#lpLayout" aria-expanded="false" aria-controls="lpLayout")
                                 i.fa.fa-angle-up.fa-lg
@@ -205,3 +205,15 @@ block primaryContents
                 .modal-footer
                     button.btn.btn-ec-sub.w-25(type='button', data-dismiss='modal') キャンセル
                     button.btn.btn-ec-conversion.w-25(type='button', data-dismiss='modal') ページを追加
+    #layoutDelete.modal.fade(tabindex='-1', role='dialog', aria-labelledby='layoutDelete', aria-hidden='true')
+        .modal-dialog(role='document')
+            .modal-content
+                .modal-header
+                    h5.modal-title レイアウトを削除
+                    button.close(type='button', data-dismiss='modal', aria-label='Close')
+                        span(aria-hidden='true') ×
+                .modal-body
+                    p レイアウトを削除しますか？ この操作は取り消せません。
+                .modal-footer
+                    button.btn.btn-ec-sub.w-25(type='button', data-dismiss='modal') キャンセル
+                    button.btn.btn-ec-delete(type='button', data-dismiss='modal') レイアウトを削除

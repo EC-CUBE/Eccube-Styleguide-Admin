@@ -53,3 +53,28 @@ var popoverAll = function(){
     })
 };
 popoverAll();
+
+//collapseIconChange　collapseと連動するアイコン変化
+var collapseIconMinus = function(){
+    $(function () {
+        $('.ec-collapse').on('shown.bs.collapse', function () {
+            var id = $(this).attr("id");
+            var icon = $("[href='#"+id+"']").find('i')
+            icon.removeClass("fa-plus-square-o")
+            icon.addClass("fa-minus-square-o")
+        })
+    })
+};
+collapseIconMinus();
+
+var collapseIconPlus = function(){
+    $(function () {
+        $('.ec-collapse').on('hidden.bs.collapse', function () {
+            var id = $(this).attr("id");
+            var icon = $("[href='#"+id+"']").find('i')
+            icon.removeClass("fa-minus-square-o")
+            icon.addClass("fa-plus-square-o")
+        })
+    })
+};
+collapseIconPlus();

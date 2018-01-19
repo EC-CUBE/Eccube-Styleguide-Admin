@@ -62,7 +62,7 @@ block primaryContents
                             i.fa.fa-plus-square-o.font-weight-bold.mr-1
                             span.font-weight-bold.text-ec-black 一覧コメントを追加
 
-                #addComment.collapse
+                #addComment.collapse.ec-collapse
                     .row.bg-ec-formGray.pt-3.mb-2
                         .col-3
                             .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
@@ -83,7 +83,7 @@ block primaryContents
                         .d-inline-block.mb-2(data-toggle='collapse', href='#addPrice', role='button', aria-expanded='false', aria-controls='addPrice')
                             i.fa.fa-plus-square-o.font-weight-bold.mr-1
                             span.font-weight-bold.text-ec-black 通常価格を追加
-                #addPrice.collapse
+                #addPrice.collapse.ec-collapse
                     .row.bg-ec-formGray.pt-3.mb-2
                         .col-3
                             .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
@@ -258,7 +258,7 @@ block secondaryContents
                 .d-block.mb-3(data-toggle='collapse', href='#allTags', role='button', aria-expanded='false', aria-controls='allTags')
                     i.fa.fa-plus-square-o.font-weight-bold.mr-1
                     span.font-weight-bold 全てのタグを表示
-                #allTags.collapse.p-3.bg-ec-lightGray.mb-3
+                #allTags.collapse.p-3.bg-ec-lightGray.mb-3.ec-collapse
                     .d-inline-block.mb-2.mr-2
                         button.btn.btn-outline-primary(type='button') オススメ
                     .d-inline-block.mb-2.mr-2
@@ -338,8 +338,11 @@ block conversionArea
                             span 商品マスター
                 .col-6
                     .row.align-items-center.justify-content-end
-                        .col-auto
-                            include /assets/tmpl/components/toggleSwitch.pug
-                            +c-toggleSwitch--conversion('switch','公開')
+                        .col-2
+                            form
+                                select.form-control
+                                    option(value='') 公開
+                                    option(value='') 非公開
+                                    option(value='') 廃止
                         .col-auto
                             button(type="submit").btn.btn-ec-conversion.px-5 更新
