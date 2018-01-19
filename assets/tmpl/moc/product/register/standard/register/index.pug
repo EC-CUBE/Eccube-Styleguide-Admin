@@ -1,0 +1,22 @@
+extends /assets/tmpl/moc/layout/_layout-2col.pug
+block pageTitle
+    include /assets/tmpl/components/pageTitle.pug
+    +c-pageTitle("商品登録（規格設定）","商品管理")
+
+block primaryContents
+    .card.rounded.border-0.mb-4
+        .card-header
+            span 商品名：フォーク
+        .card-body
+            p この商品には規格が設定されていません。設定したい規格を選択し［商品規格の設定］ボタンを押してください。
+            .row.mb-4.justify-content-start
+                .col-3
+                    form
+                        select.form-control
+                            option(value='') 規格１を選択
+                .col-3
+                    form
+                        select.form-control
+                            option(value='') 規格２を選択
+            a.btn.btn-ec-regular.mr-2(href="/product/register/standard") 商品規格の設定
+            a.btn.btn-ec-sub(href="/product/register") キャンセル

@@ -220,9 +220,11 @@ block conversionArea
                             span 出荷マスター
                 .col-6
                     .row.align-items-center.justify-content-end
-                        .col-auto
-                            include /assets/tmpl/components/toggleSwitch.pug
-                            +c-toggleSwitch--conversion('switch','未出荷')
+                        .col-2
+                            form
+                                select.form-control
+                                    option(value='') 未出荷
+                                    option(value='') ...
                         .col-auto
                             button.btn.btn-ec-conversion.px-4(data-toggle="modal" data-target="#registerShipment") 出荷情報を登録
     #registerShipment.modal.fade(tabindex='-1', role='dialog', aria-labelledby='registerShipment', aria-hidden='true')

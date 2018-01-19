@@ -207,9 +207,12 @@ block conversionArea
                             span 会員マスター
                 .col-6
                     .row.align-items-center.justify-content-end
-                        .col-auto
-                            include /assets/tmpl/components/toggleSwitch.pug
-                            +c-toggleSwitch--conversion('switch','本会員')
+                        .col-2
+                            form
+                                select.form-control
+                                    option(value='') 本会員
+                                    option(value='') 仮会員
+                                    option(value='') 脱会
                         .col-auto
                             button(type="submit").btn.btn-ec-conversion.px-5 会員情報を登録
 
