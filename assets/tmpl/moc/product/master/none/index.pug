@@ -60,12 +60,12 @@ block outsideBlock
                             .col
                                 input.form-control(type='date', value='2000-01-01')
         +e.contents.mb-5
-            button.btn.btn-ec-conversion.px-5(type="button") 検索
+            a.btn.btn-ec-conversion.px-5(href="/product/master") 検索
 
 block primaryContents
     .card.rounded.border-0
         .card-body.p-4
             .text-center.text-muted.mb-2.h5 現在データが登録されていません。登録してみましょう！
             .text-center.mb-4
-                button(type="button" data-toggle="modal" data-target="#confirmModal").btn.btn-ec-regular.pl-4.pr-4 新規登録
+                a(href="/product/register").btn.btn-ec-regular.pl-4.pr-4 新規登録
             .text-center.text-muted データが消えてしまいましたか？バックアップをしているならリストアを試してみましょう。
