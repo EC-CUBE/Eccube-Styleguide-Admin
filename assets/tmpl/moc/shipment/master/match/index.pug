@@ -156,9 +156,10 @@ block primaryContents
                                         input.form-check-input(type="checkbox", name="notificationMail" checked="")
                                         |  発送お知らせメールを同時に送る
                             .d-inline-block(data-toggle="collapse" href="#viewEmail" aria-expanded="false" aria-controls="viewEmail")
-                                i.fa.fa-minus-square-o.font-weight-bold.mr-1
-                                span.font-weight-bold メール文面を確認
-                            .collapse(id="viewEmail").bg-light.p-4
+                                a
+                                    i.fa.fa-plus-square-o.font-weight-bold.mr-1
+                                    span.font-weight-bold メール文面を確認
+                            .collapse(id="viewEmail").bg-light.p-4.ec-collapse.bg-ec-formGray
                                 p [注文者名]様
                                 p お客さまがご注文された以下の商品を発送いたしました。商品の到着まで、今しばらくお待ちくださいませ。
                                 p [発送商品リストと明細]
