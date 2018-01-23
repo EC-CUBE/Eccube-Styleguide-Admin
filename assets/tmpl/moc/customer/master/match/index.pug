@@ -47,11 +47,15 @@ block outsideBlock
                         label 購入金額
                         .form-row.align-items-center
                             .col
-                                input.form-control(type='text')
+                                .input-group
+                                    span.input-group-addon ￥
+                                    input(type="number").form-control
                             .col-auto
                                 span 〜
                             .col
-                                input.form-control(type='text')
+                                .input-group
+                                    span.input-group-addon ￥
+                                    input(type="number").form-control
             .row.mb-2
                 .col
                     form
@@ -169,9 +173,9 @@ block primaryContents
                         td.align-middle witchdoktor@gmail.com
                         td.align-middle
                         td.align-middle.pr-3
-                            .row
-                                .col.text-right(data-toggle="tooltip" data-placement="top" title="削除")
-                                    a.btn.btn-ec-actionIcon
+                            .row.justify-content-end
+                                .col-auto.text-center
+                                    a.btn.btn-ec-actionIcon(data-toggle="tooltip" data-placement="top" title="削除")
                                         i.fa.fa-close.fa-lg.text-secondary(aria-hidden="true")
             .row.justify-content-md-center.mb-4
                 ul.pagination
