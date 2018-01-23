@@ -48,9 +48,13 @@ block primaryContents
                                 i.fa.fa-angle-up.fa-lg
                 .collapse#topPageLayout.show
                     .card-body.p-0
-                        .d-block.p-3
-                            i.fa.fa-bars.text-ec-gray.mr-3
-                            span トップページ（PC）
+                        .row.justify-content-between.p-3
+                            .col-auto
+                                i.fa.fa-bars.text-ec-gray.mr-3
+                                span トップページ（PC）
+                            .col-auto.text-right
+                                a: i.fa.fa-close.fa-lg.text-secondary.mr-1
+
             .card.rounded.border-0.mb-4
                 .card-header
                     .row
@@ -63,18 +67,30 @@ block primaryContents
                                 i.fa.fa-angle-up.fa-lg
                 .collapse#lowerPageLayout.show
                     .card-body.p-0
-                        .d-block.border.border-top-0.border-right-0.border-left-0.p-3
-                            i.fa.fa-bars.text-ec-gray.mr-3
-                            span 商品購入（お届け先変更）
-                        .d-block.border.border-top-0.border-right-0.border-left-0.p-3
-                            i.fa.fa-bars.text-ec-gray.mr-3
-                            span パスワード変更（完了）
-                        .d-block.border.border-top-0.border-right-0.border-left-0.p-3
-                            i.fa.fa-bars.text-ec-gray.mr-3
-                            span 商品購入（お届け先複数指定）
-                        .d-block.p-3
-                            i.fa.fa-bars.text-ec-gray.mr-3
-                            span 商品購入（支払い方法選択）
+                        .row.justify-content-between.border.border-top-0.border-right-0.border-left-0.p-3
+                            .col-auto
+                                i.fa.fa-bars.text-ec-gray.mr-3
+                                span 商品購入（お届け先変更）
+                            .col-auto.text-right
+                                a: i.fa.fa-close.fa-lg.text-secondary.mr-1
+                        .row.justify-content-between.border.border-top-0.border-right-0.border-left-0.p-3
+                            .col-auto
+                                i.fa.fa-bars.text-ec-gray.mr-3
+                                span パスワード変更（完了）
+                            .col-auto.text-right
+                                a: i.fa.fa-close.fa-lg.text-secondary.mr-1
+                        .row.justify-content-between.border.border-top-0.border-right-0.border-left-0.p-3
+                            .col-auto
+                                i.fa.fa-bars.text-ec-gray.mr-3
+                                span 商品購入（お届け先複数指定）
+                            .col-auto.text-right
+                                a: i.fa.fa-close.fa-lg.text-secondary.mr-1
+                        .row.justify-content-between.p-3
+                            .col-auto
+                                i.fa.fa-bars.text-ec-gray.mr-3
+                                span 商品購入（支払い方法選択）
+                            .col-auto.text-right
+                                a: i.fa.fa-close.fa-lg.text-secondary.mr-1
             .card.rounded.border-0.mb-4
                 .card-header
                     .row
