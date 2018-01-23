@@ -6,7 +6,7 @@ block pageTitle
 block primaryContents
     .card.rounded.border-0.mb-4
         .card-header
-            span 配送方法登録・編集
+            span 基本情報
         .card-body
             .row
                 .col-3
@@ -46,7 +46,7 @@ block primaryContents
                 label.form-check-label.mr-3
                     input.form-check-input(type='checkbox', value='')
                     | 現金書留
-                label.form-check-label
+                label.form-check-label.mr-3
                     input.form-check-input(type='checkbox', value='')
                     | 銀行振込
                 label.form-check-label
@@ -87,13 +87,21 @@ block primaryContents
                                 a.btn.btn-ec-actionIcon.mr-3(href="" data-toggle="tooltip" data-placement="top" title="名前を編集"): i.fa.fa-pencil.fa-lg.text-secondary
                                 a.btn.btn-ec-actionIcon.mr-3(href="" data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-close.fa-lg.text-secondary
                     li.list-group-item
-                        form.form-row
-                            .col-auto.d-flex.align-items-center
-                                input(type="text").form-control
-                            .col-auto.d-flex.align-items-center
-                                button(type="submit").btn.btn-ec-conversion 決定
-                            .col-auto.d-flex.align-items-center
-                                button(type="submit").btn.btn-ec-sub キャンセル
+                        .row.justify-content-around
+                            .col-7.d-flex.align-items-center
+                                form.form-row
+                                    .col-auto.d-flex.align-items-center
+                                        input(type="text" placeholder="配送方法名を入力").form-control
+                                    .col-auto.d-flex.align-items-center
+                                        button(type="submit").btn.btn-ec-conversion 決定
+                                    .col-auto.d-flex.align-items-center
+                                        button(type="submit").btn.btn-ec-sub キャンセル
+                            .col-5.text-right
+                                a.btn.btn-ec-actionIcon.mr-3(href="" data-toggle="tooltip" data-placement="top" title="上へ移動"): i.fa.fa-arrow-up.fa-lg.text-secondary
+                                a.btn.btn-ec-actionIcon.mr-3(href="" data-toggle="tooltip" data-placement="top" title="下へ移動"): i.fa.fa-arrow-down.fa-lg.text-secondary
+                                a.btn.btn-ec-actionIcon.mr-3(href="" data-toggle="tooltip" data-placement="top" title="名前を編集"): i.fa.fa-pencil.fa-lg.text-secondary
+                                a.btn.btn-ec-actionIcon.mr-3(href="" data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-close.fa-lg.text-secondary
+
     p.mb-4 項目の順番はドラッグ＆ドロップでも変更可能です。
     .card.rounded.border-0.mb-4
         .card-header
