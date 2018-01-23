@@ -266,7 +266,7 @@ block primaryContents
                     .col-6
                         button.btn.btn-ec-regular.mr-2(data-toggle="modal" data-target="#addProduct") 商品を追加
                         #addProduct.modal.fade(tabindex='-1', role='dialog', aria-labelledby='addProduct', aria-hidden='true')
-                            .modal-dialog(role='document')
+                            .modal-dialog.modal-lg(role='document')
                                 .modal-content
                                     .modal-header
                                         h5.modal-title 商品を追加
@@ -302,17 +302,17 @@ block primaryContents
                                                                 .col-8.text-left.pl-0
                                                                     select.form-control
                                                                         option(value='') 選択
-                                                        td.align-middle.pr-3
-                                                            button.close(type='button', data-dismiss='modal', aria-label='Close')
-                                                                span(aria-hidden='true') +
+                                                        td.align-middle.pr-3.text-right
+                                                            a
+                                                                i.fa.fa-plus.fa-lg.font-weight-bold.text-secondary
                                                 tr
                                                     td.align-middle.pl-3
                                                         p.m-0  コーヒーケルト
                                                         span Cafe02
                                                     td.align-middle
-                                                    td.align-middle.pr-3
-                                                        button.close(type='button', data-dismiss='modal', aria-label='Close')
-                                                            span(aria-hidden='true') +
+                                                    td.align-middle.pr-3.text-right
+                                                        a
+                                                            i.fa.fa-plus.fa-lg.font-weight-bold.text-secondary
                                         .row.justify-content-md-center.mb-4
                                             ul.pagination
                                                 li.page-item
@@ -343,24 +343,24 @@ block primaryContents
                                             tbody
                                                 tr
                                                     td.align-middle.pl-3 送料を追加
-                                                    td.align-middle.pr-3
-                                                        button.close(type='button', data-dismiss='modal', aria-label='Close')
-                                                            span(aria-hidden='true') +
+                                                    td.align-middle.pr-3.text-right
+                                                        a
+                                                            i.fa.fa-plus.fa-lg.font-weight-bold.text-secondary
                                                 tr
                                                     td.align-middle.pl-3 手数料を追加
-                                                    td.align-middle.pr-3
-                                                        button.close(type='button', data-dismiss='modal', aria-label='Close')
-                                                            span(aria-hidden='true') +
+                                                    td.align-middle.pr-3.text-right
+                                                        a
+                                                            i.fa.fa-plus.fa-lg.font-weight-bold.text-secondary
                                                 tr
                                                     td.align-middle.pl-3 値引きを追加
-                                                    td.align-middle.pr-3
-                                                        button.close(type='button', data-dismiss='modal', aria-label='Close')
-                                                            span(aria-hidden='true') +
+                                                    td.align-middle.pr-3.text-right
+                                                        a
+                                                            i.fa.fa-plus.fa-lg.font-weight-bold.text-secondary
                                                 tr
                                                     td.align-middle.pl-3 空白の明細を追加
-                                                    td.align-middle.pr-3
-                                                        button.close(type='button', data-dismiss='modal', aria-label='Close')
-                                                            span(aria-hidden='true') +
+                                                    td.align-middle.pr-3.text-right
+                                                        a
+                                                            i.fa.fa-plus.fa-lg.font-weight-bold.text-secondary
                                         .row.justify-content-md-center.mb-4
                                             ul.pagination
                                                 li.page-item
@@ -413,8 +413,11 @@ block primaryContents
                             td.align-middle
                                 span ¥4,000
                                 small （税込）
-                            td.align-middle.pr-3
-                                i.fa.fa-close.fa-lg.text-secondary(data-toggle="tooltip" data-placement="top" title="Tooltip")
+                            td.align-middle.text-right.pr-3
+                                .row.justify-content-end
+                                    .col-auto.text-center
+                                        a.btn.btn-ec-actionIcon(data-toggle="tooltip" data-placement="top" title="削除")
+                                            i.fa.fa-close.fa-lg.text-secondary(aria-hidden="true")
                         tr
                             td.align-middle.w-25.pl-3
                                 p.mb-0.font-weight-bold  パーコレーター
@@ -438,8 +441,11 @@ block primaryContents
                             td.align-middle
                                 span ¥4,000
                                 small （税込）
-                            td.align-middle.pr-3
-                                i.fa.fa-close.fa-lg.text-secondary(data-toggle="tooltip" data-placement="top" title="Tooltip")
+                            td.align-middle.text-right.pr-3
+                                .row.justify-content-end
+                                    .col-auto.text-center
+                                        a.btn.btn-ec-actionIcon(data-toggle="tooltip" data-placement="top" title="削除")
+                                            i.fa.fa-close.fa-lg.text-secondary(aria-hidden="true")
                         tr
                             td.align-middle.w-25.pl-3
                                 p.mb-0.font-weight-bold  パーコレーター
@@ -463,8 +469,11 @@ block primaryContents
                             td.align-middle
                                 span ¥4,000
                                 small （税込）
-                            td.align-middle.pr-3
-                                i.fa.fa-close.fa-lg.text-secondary(data-toggle="tooltip" data-placement="top" title="Tooltip")
+                            td.align-middle.text-right.pr-3
+                                .row.justify-content-end
+                                    .col-auto.text-center
+                                        a.btn.btn-ec-actionIcon(data-toggle="tooltip" data-placement="top" title="削除")
+                                            i.fa.fa-close.fa-lg.text-secondary(aria-hidden="true")
                 hr.mt-0
                 .row.justify-content-end.mb-3
                     .col-auto
