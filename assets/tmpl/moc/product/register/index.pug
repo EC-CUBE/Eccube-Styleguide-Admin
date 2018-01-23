@@ -59,8 +59,9 @@ block primaryContents
                         form
                             textarea(rows="8").form-control
                         .d-inline-block.mb-2(data-toggle='collapse', href='#addComment', role='button', aria-expanded='false', aria-controls='addComment')
-                            i.fa.fa-plus-square-o.font-weight-bold.mr-1
-                            span.font-weight-bold.text-ec-black 一覧コメントを追加
+                            a
+                                i.fa.fa-plus-square-o.font-weight-bold.mr-1
+                                span.font-weight-bold.text-ec-black 一覧コメントを追加
 
                 #addComment.collapse.ec-collapse
                     .row.bg-ec-formGray.pt-3.mb-2
@@ -81,8 +82,9 @@ block primaryContents
                         form
                             input(type="text").form-control
                         .d-inline-block.mb-2(data-toggle='collapse', href='#addPrice', role='button', aria-expanded='false', aria-controls='addPrice')
-                            i.fa.fa-plus-square-o.font-weight-bold.mr-1
-                            span.font-weight-bold.text-ec-black 通常価格を追加
+                            a
+                                i.fa.fa-plus-square-o.font-weight-bold.mr-1
+                                span.font-weight-bold.text-ec-black 通常価格を追加
                 #addPrice.collapse.ec-collapse
                     .row.bg-ec-formGray.pt-3.mb-2
                         .col-3
@@ -256,8 +258,9 @@ block secondaryContents
                 .d-inline-block.mb-2.mr-2
                     button.btn.btn-outline-secondary(type='button') 送料無料
                 .d-block.mb-3(data-toggle='collapse', href='#allTags', role='button', aria-expanded='false', aria-controls='allTags')
-                    i.fa.fa-plus-square-o.font-weight-bold.mr-1
-                    span.font-weight-bold 全てのタグを表示
+                    a
+                        i.fa.fa-plus-square-o.font-weight-bold.mr-1
+                        span.font-weight-bold 全てのタグを表示
                 #allTags.collapse.p-3.bg-ec-lightGray.mb-3.ec-collapse
                     .d-inline-block.mb-2.mr-2
                         button.btn.btn-outline-primary(type='button') オススメ

@@ -39,8 +39,9 @@ block outsideBlock
                                 input.form-check-input(type='checkbox', value='')
                                 | 購入処理中
                     .d-inline-block.mb-3(data-toggle="collapse" href="#searchDetail" aria-expanded="false" aria-controls="searchDetail")
-                        i.fa.fa-plus-square-o.font-weight-bold.mr-1
-                        span.font-weight-bold 詳細検索
+                        a
+                            i.fa.fa-plus-square-o.font-weight-bold.mr-1
+                            span.font-weight-bold 詳細検索
         +b.c-subContents.collapse(id="searchDetail").ec-collapse
             .row
                 .col
