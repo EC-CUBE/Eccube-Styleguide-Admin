@@ -1,9 +1,0 @@
-mixin c-subAction(text,className)
-    if className != undefined
-        +b.c-subAction(class=className)
-            +e.A.btn(href='#')
-                span= text
-    else
-        +b.c-subAction
-            +e.A.btn(href='#')
-                span= text
