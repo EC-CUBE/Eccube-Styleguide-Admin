@@ -11,12 +11,11 @@ block outsideBlock
                     .btn-group.nav.d-inline-flex#pills-tab(role='tablist')
                         a#pills-pc-tab.nav-link.active.btn.btn-ec-tab.py-2.pl-4.pr-4(data-toggle='pill', href='#pills-pc', role='tab', aria-controls='pills-pc', aria-selected='true') PC
                         a#pills-mobile-tab.nav-link.btn.btn-ec-tab.py-2.pl-4.pr-4(data-toggle='pill', href='#pills-mobile', role='tab', aria-controls='pills-mobile', aria-selected='false') モバイル
-            .d-block.mb-3
-                a.btn.btn-ec-regular(href="/content/layout/detail") PC用レイアウトを新規追加
-
 block primaryContents
     #pills-tabContent.tab-content
         #pills-pc.tab-pane.fade.show.active(role='tabpanel', aria-labelledby='pills-pc-tab')
+            .d-block.mb-3
+                a.btn.btn-ec-regular(href="/content/layout/detail") PC用レイアウトを新規追加
             .card.rounded.border-0.mb-4
                 .card-header
                     .row
@@ -25,9 +24,9 @@ block primaryContents
                                 span.card-title デフォルトのレイアウト
                                 i.fa.fa-question-circle.fa-lg.ml-1
                         .col-4.text-right
-                            a(data-toggle="collapse" href="#defaultLayout" aria-expanded="false" aria-controls="defaultLayout")
+                            a(data-toggle="collapse" href="#defaultLayout-pc" aria-expanded="false" aria-controls="defaultLayout-pc")
                                 i.fa.fa-angle-up.fa-lg
-                .collapse#defaultLayout.show
+                #defaultLayout-pc.collapse.show.ec-cardCollapse
                     .card-body
                         .row
                             .col-3.pr-0
@@ -44,9 +43,9 @@ block primaryContents
                             button.btn.btn-ec-regular(type='button' data-toggle='modal' data-target='#addPage') ページ追加
                             button.btn.btn-ec-sub(type='button' data-toggle='modal' data-target='#layoutDelete') レイアウト削除
                         .col-4.text-right
-                            a(data-toggle="collapse" href="#topPageLayout" aria-expanded="false" aria-controls="topPageLayout")
+                            a(data-toggle="collapse" href="#topPageLayout-pc" aria-expanded="false" aria-controls="topPageLayout-pc")
                                 i.fa.fa-angle-up.fa-lg
-                .collapse#topPageLayout.show
+                #topPageLayout-pc.collapse.show.ec-cardCollapse
                     .card-body.p-0
                         .row.justify-content-between.p-3
                             .col-auto
@@ -63,9 +62,9 @@ block primaryContents
                             button.btn.btn-ec-regular(type='button' data-toggle='modal' data-target='#addPage') ページ追加
                             button.btn.btn-ec-sub(type='button' data-toggle='modal' data-target='#layoutDelete') レイアウト削除
                         .col-4.text-right
-                            a(data-toggle="collapse" href="#lowerPageLayout" aria-expanded="false" aria-controls="lowerPageLayout")
+                            a(data-toggle="collapse" href="#lowerPageLayout-pc" aria-expanded="false" aria-controls="lowerPageLayout-pc")
                                 i.fa.fa-angle-up.fa-lg
-                .collapse#lowerPageLayout.show
+                #lowerPageLayout-pc.collapse.show.ec-cardCollapse
                     .card-body.p-0
                         .row.justify-content-between.border.border-top-0.border-right-0.border-left-0.p-3
                             .col-auto
@@ -99,10 +98,12 @@ block primaryContents
                             button.btn.btn-ec-regular(type='button' data-toggle='modal' data-target='#addPage') ページ追加
                             button.btn.btn-ec-sub(type='button' data-toggle='modal' data-target='#layoutDelete') レイアウト削除
                         .col-4.text-right
-                            a(data-toggle="collapse" href="#shopGuideLayout" aria-expanded="false" aria-controls="shopGuideLayout")
+                            a(data-toggle="collapse" href="#shopGuideLayout-pc" aria-expanded="false" aria-controls="shopGuideLayout-pc")
                                 i.fa.fa-angle-up.fa-lg
-                .collapse#shopGuideLayout.show
+                #shopGuideLayout-pc.collapse.show.ec-cardCollapse
                     .card-body.p-0
+                        .d-block.p-3
+                            span.text-muted ページの登録がありません
 
             .card.rounded.border-0.mb-4
                 .card-header
@@ -112,13 +113,15 @@ block primaryContents
                             button.btn.btn-ec-regular(type='button' data-toggle='modal' data-target='#addPage') ページ追加
                             button.btn.btn-ec-sub(type='button' data-toggle='modal' data-target='#layoutDelete') レイアウト削除
                         .col-4.text-right
-                            a(data-toggle="collapse" href="#lpLayout" aria-expanded="false" aria-controls="lpLayout")
+                            a(data-toggle="collapse" href="#lpLayout-pc" aria-expanded="false" aria-controls="lpLayout-pc")
                                 i.fa.fa-angle-up.fa-lg
-                .collapse#lpLayout.show
+                #lpLayout-pc.collapse.show.ec-cardCollapse
                     .card-body.p-0
                         .d-block.p-3
                             span.text-muted ページの登録がありません
         #pills-mobile.tab-pane.fade(role='tabpanel', aria-labelledby='pills-mobile-tab')
+            .d-block.mb-3
+                a.btn.btn-ec-regular(href="/content/layout/detail") モバイル用レイアウトを新規追加
             .card.rounded.border-0.mb-4
                 .card-header
                     .row
@@ -127,9 +130,9 @@ block primaryContents
                                 span.card-title デフォルトのレイアウト
                                 i.fa.fa-question-circle.fa-lg.ml-1
                         .col-4.text-right
-                            a(data-toggle="collapse" href="#defaultLayout" aria-expanded="false" aria-controls="defaultLayout")
+                            a(data-toggle="collapse" href="#defaultLayout-mobile" aria-expanded="false" aria-controls="defaultLayout-mobile")
                                 i.fa.fa-angle-up.fa-lg
-                .collapse#defaultLayout.show
+                #defaultLayout-mobile.collapse.show.ec-cardCollapse
                     .card-body
                         .row
                             .col-3.pr-0
@@ -146,13 +149,16 @@ block primaryContents
                             button.btn.btn-ec-regular(type='button' data-toggle='modal' data-target='#addPage') ページ追加
                             button.btn.btn-ec-sub(type='button' data-toggle='modal' data-target='#layoutDelete') レイアウト削除
                         .col-4.text-right
-                            a(data-toggle="collapse" href="#topPageLayout" aria-expanded="false" aria-controls="topPageLayout")
+                            a(data-toggle="collapse" href="#topPageLayout-mobile" aria-expanded="false" aria-controls="topPageLayout-mobile")
                                 i.fa.fa-angle-up.fa-lg
-                .collapse#topPageLayout.show
+                #topPageLayout-mobile.collapse.show.ec-cardCollapse
                     .card-body.p-0
-                        .d-block.p-3
-                            i.fa.fa-bars.text-ec-gray.mr-3
-                            span トップページ（PC）
+                        .row.justify-content-between.p-3
+                            .col-auto
+                                i.fa.fa-bars.text-ec-gray.mr-3
+                                span トップページ（モバイル）
+                            .col-auto.text-right
+                                a: i.fa.fa-close.fa-lg.text-secondary.mr-1
             .card.rounded.border-0.mb-4
                 .card-header
                     .row
@@ -161,22 +167,34 @@ block primaryContents
                             button.btn.btn-ec-regular(type='button' data-toggle='modal' data-target='#addPage') ページ追加
                             button.btn.btn-ec-sub(type='button' data-toggle='modal' data-target='#layoutDelete') レイアウト削除
                         .col-4.text-right
-                            a(data-toggle="collapse" href="#lowerPageLayout" aria-expanded="false" aria-controls="lowerPageLayout")
+                            a(data-toggle="collapse" href="#lowerPageLayout-mobile" aria-expanded="false" aria-controls="lowerPageLayout-mobile")
                                 i.fa.fa-angle-up.fa-lg
-                .collapse#lowerPageLayout.show
+                #lowerPageLayout-mobile.collapse.show.ec-cardCollapse
                     .card-body.p-0
-                        .d-block.border.border-top-0.border-right-0.border-left-0.p-3
-                            i.fa.fa-bars.text-ec-gray.mr-3
-                            span 商品購入（お届け先変更）
-                        .d-block.border.border-top-0.border-right-0.border-left-0.p-3
-                            i.fa.fa-bars.text-ec-gray.mr-3
-                            span パスワード変更（完了）
-                        .d-block.border.border-top-0.border-right-0.border-left-0.p-3
-                            i.fa.fa-bars.text-ec-gray.mr-3
-                            span 商品購入（お届け先複数指定）
-                        .d-block.p-3
-                            i.fa.fa-bars.text-ec-gray.mr-3
-                            span 商品購入（支払い方法選択）
+                        .row.justify-content-between.border.border-top-0.border-right-0.border-left-0.p-3
+                            .col-auto
+                                i.fa.fa-bars.text-ec-gray.mr-3
+                                span 商品購入（お届け先変更）
+                            .col-auto.text-right
+                                a: i.fa.fa-close.fa-lg.text-secondary.mr-1
+                        .row.justify-content-between.border.border-top-0.border-right-0.border-left-0.p-3
+                            .col-auto
+                                i.fa.fa-bars.text-ec-gray.mr-3
+                                span パスワード変更（完了）
+                            .col-auto.text-right
+                                a: i.fa.fa-close.fa-lg.text-secondary.mr-1
+                        .row.justify-content-between.border.border-top-0.border-right-0.border-left-0.p-3
+                            .col-auto
+                                i.fa.fa-bars.text-ec-gray.mr-3
+                                span 商品購入（お届け先複数指定）
+                            .col-auto.text-right
+                                a: i.fa.fa-close.fa-lg.text-secondary.mr-1
+                        .row.justify-content-between.p-3
+                            .col-auto
+                                i.fa.fa-bars.text-ec-gray.mr-3
+                                span 商品購入（支払い方法選択）
+                            .col-auto.text-right
+                                a: i.fa.fa-close.fa-lg.text-secondary.mr-1
             .card.rounded.border-0.mb-4
                 .card-header
                     .row
@@ -185,10 +203,12 @@ block primaryContents
                             button.btn.btn-ec-regular(type='button' data-toggle='modal' data-target='#addPage') ページ追加
                             button.btn.btn-ec-sub(type='button' data-toggle='modal' data-target='#layoutDelete') レイアウト削除
                         .col-4.text-right
-                            a(data-toggle="collapse" href="#shopGuideLayout" aria-expanded="false" aria-controls="shopGuideLayout")
+                            a(data-toggle="collapse" href="#shopGuideLayout-mobile" aria-expanded="false" aria-controls="shopGuideLayout-mobile")
                                 i.fa.fa-angle-up.fa-lg
-                .collapse(id="shopGuideLayout").show
+                #shopGuideLayout-mobile.collapse.show.ec-cardCollapse
                     .card-body.p-0
+                        .d-block.p-3
+                            span.text-muted ページの登録がありません
 
             .card.rounded.border-0.mb-4
                 .card-header
@@ -198,9 +218,9 @@ block primaryContents
                             button.btn.btn-ec-regular(type='button' data-toggle='modal' data-target='#addPage') ページ追加
                             button.btn.btn-ec-sub(type='button' data-toggle='modal' data-target='#layoutDelete') レイアウト削除
                         .col-4.text-right
-                            a(data-toggle="collapse" href="#lpLayout" aria-expanded="false" aria-controls="lpLayout")
+                            a(data-toggle="collapse" href="#lpLayout-mobile" aria-expanded="false" aria-controls="lpLayout-mobile")
                                 i.fa.fa-angle-up.fa-lg
-                .collapse#lpLayout.show
+                #lpLayout-mobile.collapse.show.ec-cardCollapse
                     .card-body.p-0
                         .d-block.p-3
                             span.text-muted ページの登録がありません
