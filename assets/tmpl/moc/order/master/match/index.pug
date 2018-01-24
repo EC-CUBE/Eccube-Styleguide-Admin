@@ -51,21 +51,6 @@ block outsideBlock
                 .col
                     form.form-row
                         .col-12
-                            p.col-form-label 性別
-                            label.form-check-label.mr-3
-                                input.form-check-input(type='checkbox', value='')
-                                | 男性
-                            label.form-check-label.mr-3
-                                input.form-check-input(type='checkbox', value='')
-                                | 女性
-            .row
-                .col
-                    form
-                        label.col-form-label 注文者名（フリガナ）
-                        input(type="text").form-control
-                .col
-                    form.form-row
-                        .col-12
                             p.col-form-label 支払方法
                             label.form-check-label.mr-3
                                 input.form-check-input(type='checkbox', value='')
@@ -82,7 +67,7 @@ block outsideBlock
             .row
                 .col
                     form
-                        label.col-form-label 注文者会社名
+                        label.col-form-label 注文者名（フリガナ）
                         input(type="text").form-control
                 .col
                     form
@@ -97,8 +82,8 @@ block outsideBlock
             .row
                 .col
                     form
-                        label.col-form-label メールアドレス
-                        input(type="email").form-control
+                        label.col-form-label 注文者会社名
+                        input(type="text").form-control
                 .col
                     form
                         label.col-form-label 入金日
@@ -112,8 +97,8 @@ block outsideBlock
             .row
                 .col
                     form
-                        label.col-form-label 受注ID
-                        input(type="text").form-control
+                        label.col-form-label メールアドレス
+                        input(type="email").form-control
                 .col
                     form
                         label.col-form-label
@@ -128,8 +113,8 @@ block outsideBlock
             .row
                 .col
                     form
-                        label.col-form-label 電話番号
-                        input(type='text').form-control
+                        label.col-form-label 受注ID
+                        input(type="text").form-control
                 .col
                     form
                         label.col-form-label
@@ -143,11 +128,25 @@ block outsideBlock
                                 input.form-control(type='text')
             .row
                 .col
+                    form
+                        label.col-form-label 電話番号
+                        input(type='text').form-control
                 .col
                     form.mb-3
-                        label.col-form-label 商品名
+                        label.col-form-label 購入商品名
                         input(type="text").form-control
-
+            .row
+                .col
+                    form.form-row
+                        .col-12
+                            p.col-form-label 性別
+                            label.form-check-label.mr-3
+                                input.form-check-input(type='checkbox', value='')
+                                | 男性
+                            label.form-check-label.mr-3
+                                input.form-check-input(type='checkbox', value='')
+                                | 女性
+                .col
             .d-block.text-center
                 button(type="button").btn.btn-ec-regular 検索条件クリア
         +e.contents
