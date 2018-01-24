@@ -56,20 +56,22 @@ block primaryContents
                     .col.mb-3
                         form.mb-3
                             .row.justify-content-start
+                                .col-auto.pr-0.align-self-center
+                                    span 〒
                                 .col-2
                                     input.form-control(type='text', placeholder='郵便番号1')
-                                .col-auto.text-center.p-0
-                                    span.align-middle -
+                                .col-auto.p-0.align-self-center
+                                    span -
                                 .col-2
                                     input.form-control(type='text', placeholder='郵便番号2')
                         form.mb-3
                             .row.justify-content-start
-                                .col-2
+                                .col-auto
                                     select.form-control
-                                        option(value='') 東京都
+                                        option(value='') 都道府県を選択
                         form
-                            input.form-control.mb-3(type='text', placeholder='住所1')
-                            input.form-control(type='text', placeholder='住所2')
+                            input.form-control.mb-3(type='text', placeholder='市区町村名（例：千代田区神田神保町）')
+                            input.form-control(type='text', placeholder='番地・ビル名（例：1-1-2 ）')
                 .row.mb-2
                     .col-3
                         span メールアドレス
@@ -180,7 +182,7 @@ block primaryContents
                                 td.align-middle
                                     span.h5.font-weight-normal ¥4,000
                                 td.align-middle.pr-3
-                                    button.btn.btn-outline-secondary.py-2(type='button') 発送済み
+                                    span.badge.badge-ec-glay 発送済み
     .card.rounded.border-0.mb-4
         .card-header
             .row
