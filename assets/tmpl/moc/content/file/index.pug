@@ -43,7 +43,7 @@ block primaryContents
                 .col-4.text-right
                     a(data-toggle="collapse" href="#fileList" aria-expanded="false" aria-controls="fileList")
                         i.fa.fa-angle-up.fa-lg
-        .collapse(id="fileList").show
+        #fileList.collapse.show.ec-cardCollapse
             .card-body.p-0
                 table.table
                     tbody
@@ -189,7 +189,7 @@ block secondaryContents
                 .col-4.text-right
                     a(data-toggle="collapse" href="#folderDirectory" aria-expanded="false" aria-controls="folderDirectory")
                         i.fa.fa-angle-up.fa-lg
-        .collapse(id="folderDirectory").show
+        #folderDirectory.collapse.show.ec-cardCollapse
             .card-body
                 include /assets/tmpl/components/directory.pug
                 +c-directoryTreeFolder

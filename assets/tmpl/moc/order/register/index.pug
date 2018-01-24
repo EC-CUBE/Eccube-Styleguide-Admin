@@ -14,7 +14,7 @@ block primaryContents
                 .col-4.text-right
                     a(data-toggle="collapse" href="#orderOverview" aria-expanded="false" aria-controls="orderOverview")
                         i.fa.fa-angle-up.fa-lg
-        .collapse(id="orderOverview").show
+        #orderOverview.collapse.show.ec-cardCollapse
             .card-body
                 .row
                     .col-6
@@ -89,7 +89,7 @@ block primaryContents
                 .col-4.text-right
                     a(data-toggle="collapse" href="#ordererInfo" aria-expanded="false" aria-controls="ordererInfo")
                         i.fa.fa-angle-up.fa-lg
-        .collapse(id="ordererInfo").show
+        #ordererInfo.collapse.show.ec-cardCollapse
             .card-body
                 .row.mb-4
                     .col-auto
@@ -260,7 +260,7 @@ block primaryContents
                 .col-4.text-right
                     a(data-toggle="collapse" href="#orderItem" aria-expanded="false" aria-controls="orderItem")
                         i.fa.fa-angle-up.fa-lg
-        .collapse(id="orderItem").show
+        #orderItem.collapse.show.ec-cardCollapse
             .card-body
                 .row.justify-content-between.mb-2
                     .col-6
@@ -518,7 +518,7 @@ block primaryContents
                 .col-4.text-right
                     a(data-toggle="collapse" href="#mailHistory" aria-expanded="false" aria-controls="mailHistory")
                         i.fa.fa-angle-up.fa-lg
-        .collapse(id="mailHistory").show
+        #mailHistory.collapse.show.ec-cardCollapse
             .card-body
                 table.table.table-striped
                     thead.table-active
@@ -809,7 +809,7 @@ block primaryContents
                 .col-4.text-right
                     a(data-toggle="collapse" href="#freeArea" aria-expanded="false" aria-controls="freeArea")
                         i.fa.fa-angle-up.fa-lg
-        .collapse(id="freeArea").show
+        #freeArea.collapse.show.ec-cardCollapse
             .card-body
                 form
                     textarea(rows="8").form-control

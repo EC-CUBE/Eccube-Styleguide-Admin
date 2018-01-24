@@ -12,7 +12,7 @@ block primaryContents
                 .col-4.text-right
                     a(data-toggle="collapse" href="#layoutOverview" aria-expanded="false" aria-controls="layoutOverview")
                         i.fa.fa-angle-up.fa-lg
-        .collapse(id="layoutOverview").show
+        #layoutOverview.collapse.show.ec-cardCollapse
             .card-body
                 .row.mb-2
                     .col-3.pr-0
@@ -36,7 +36,7 @@ block primaryContents
                 .col-4.text-right
                     a(data-toggle="collapse" href="#layoutBlockEdit" aria-expanded="false" aria-controls="layoutBlockEdit")
                         i.fa.fa-angle-up.fa-lg
-        .collapse(id="layoutBlockEdit").show
+        #layoutBlockEdit.collapse.show.ec-cardCollapse
             .card-body
                 .row
                     .col.p-2

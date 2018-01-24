@@ -12,7 +12,7 @@ block primaryContents
                 .col-4.text-right
                     a(data-toggle="collapse" href="#ordererInfo" aria-expanded="false" aria-controls="ordererInfo")
                         i.fa.fa-angle-up.fa-lg
-        .collapse(id="ordererInfo").show
+        #ordererInfo.collapse.show.ec-cardCollapse
             .card-body
                 .row.mb-2
                     .col-3
@@ -163,7 +163,7 @@ block primaryContents
                 .col-4.text-right
                     a(data-toggle="collapse" href="#standardConfig" aria-expanded="false" aria-controls="standardConfig")
                         i.fa.fa-angle-up.fa-lg
-        .collapse(id="standardConfig").show
+        #standardConfig.collapse.show.ec-cardCollapse
             .card-body
                 table.table.table-striped.table-sm
                     thead.table-active
@@ -191,7 +191,7 @@ block primaryContents
                 .col-4.text-right
                     a(data-toggle="collapse" href="#shopMemo" aria-expanded="false" aria-controls="shopMemo")
                         i.fa.fa-angle-up.fa-lg
-        .collapse(id="shopMemo").show
+        #shopMemo.collapse.show.ec-cardCollapse
             .card-body
                 form
                     textarea(rows="8").form-control
