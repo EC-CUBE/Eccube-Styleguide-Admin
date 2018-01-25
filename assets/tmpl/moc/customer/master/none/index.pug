@@ -21,12 +21,12 @@ block outsideBlock
                     form.form-row
                         .col-12
                             p.col-form-label 会員種別
-                            label.form-check-label.mr-3
-                                input.form-check-input(type='checkbox', value='')
-                                | 仮会員
-                            label.form-check-label.mr-3
-                                input.form-check-input(type='checkbox', value='')
-                                | 本会員
+                            .form-check.form-check-inline
+                                input.form-check-input#check_temporaryCustomer(type='checkbox', value='')
+                                label.form-check-label(for="check_temporaryCustomer") 仮会員
+                            .form-check.form-check-inline
+                                input.form-check-input#check_customer(type='checkbox', value='')
+                                label.form-check-label(for="check_customer")  本会員
                 .col
                     form
                         label 購入商品名
@@ -36,22 +36,28 @@ block outsideBlock
                     form.form-row
                         .col-12
                             p.col-form-label 性別
-                            label.form-check-label.mr-3
-                                input.form-check-input(type='checkbox', value='')
-                                | 男性
-                            label.form-check-label.mr-3
-                                input.form-check-input(type='checkbox', value='')
-                                | 女性
+                            .form-check.form-check-inline
+                                input.form-check-input#check_male(type='checkbox', value='')
+                                label.form-check-label(for="check_male") 男性
+                            .form-check.form-check-inline
+                                input.form-check-input#check_female(type='checkbox', value='')
+                                label.form-check-label(for="check_female")  女性
                 .col
                     form
                         label 購入金額
                         .form-row.align-items-center
                             .col
-                                input.form-control(type='text')
+                                .input-group
+                                    .input-group-prepend
+                                        .input-group-text ￥
+                                    input.form-control(type='number')
                             .col-auto
                                 span 〜
                             .col
-                                input.form-control(type='text')
+                                .input-group
+                                    .input-group-prepend
+                                        .input-group-text ￥
+                                    input.form-control(type='number')
             .row.mb-2
                 .col
                     form
