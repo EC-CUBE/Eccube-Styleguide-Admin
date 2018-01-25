@@ -14,30 +14,30 @@ block outsideBlock
                     form.form-row
                         .form-group.col-12
                             p.col-form-label 対応状況
-                            label.form-check-label.mr-3
-                                input.form-check-input(type='checkbox', value='')
-                                | 新規受付
-                            label.form-check-label.mr-3
-                                input.form-check-input(type='checkbox', value='')
-                                | 決済処理中
-                            label.form-check-label.mr-3
-                                input.form-check-input(type='checkbox', value='')
-                                | 入金待ち
-                            label.form-check-label.mr-3
-                                input.form-check-input(type='checkbox', value='')
-                                | 入金済み
-                            label.form-check-label.mr-3
-                                input.form-check-input(type='checkbox', value='')
-                                | キャンセル
-                            label.form-check-label.mr-3
-                                input.form-check-input(type='checkbox', value='')
-                                | 取り寄せ中
-                            label.form-check-label.mr-3
-                                input.form-check-input(type='checkbox', value='')
-                                | 発送済み
-                            label.form-check-label.mr-3
-                                input.form-check-input(type='checkbox', value='')
-                                | 購入処理中
+                            .form-check.form-check-inline
+                                input.form-check-input#check_newReception(type='checkbox', value='')
+                                label.form-check-label(for="check_newReception") 新規受付
+                            .form-check.form-check-inline
+                                input.form-check-input#check_paymentProgress(type='checkbox', value='')
+                                label.form-check-label(for="check_paymentProgress")  決済処理中
+                            .form-check.form-check-inline
+                                input.form-check-input#check_paymentWait(type='checkbox', value='')
+                                label.form-check-label(for="check_paymentWait") 入金待ち
+                            .form-check.form-check-inline
+                                input.form-check-input#check_paymentDone(type='checkbox', value='')
+                                label.form-check-label(for="check_paymentDone")  入金済み
+                            .form-check.form-check-inline
+                                input.form-check-input#check_cancel(type='checkbox', value='')
+                                label.form-check-label(for="check_cancel") キャンセル
+                            .form-check.form-check-inline
+                                input.form-check-input#check_stockNow(type='checkbox', value='')
+                                label.form-check-label(for="check_stockNow")  取り寄せ中
+                            .form-check.form-check-inline
+                                input.form-check-input#check_sent(type='checkbox', value='')
+                                label.form-check-label(for="check_sent") 発送済み
+                            .form-check.form-check-inline
+                                input.form-check-input#check_purchasingProgress(type='checkbox', value='')
+                                label.form-check-label(for="check_purchasingProgress")  購入処理中
                     .d-inline-block.mb-3(data-toggle="collapse" href="#searchDetail" aria-expanded="false" aria-controls="searchDetail")
                         a
                             i.fa.fa-plus-square-o.font-weight-bold.mr-1
@@ -52,18 +52,18 @@ block outsideBlock
                     form.form-row
                         .col-12
                             p.col-form-label 支払方法
-                            label.form-check-label.mr-3
-                                input.form-check-input(type='checkbox', value='')
-                                | 郵便振替
-                            label.form-check-label.mr-3
-                                input.form-check-input(type='checkbox', value='')
-                                | 現金書留
-                            label.form-check-label.mr-3
-                                input.form-check-input(type='checkbox', value='')
-                                | 銀行振込
-                            label.form-check-label.mr-3
-                                input.form-check-input(type='checkbox', value='')
-                                | 代金引換
+                            .form-check.form-check-inline
+                                input.form-check-input#check_postalTransfer(type='checkbox', value='')
+                                label.form-check-label(for="check_postalTransfer") 郵便振替
+                            .form-check.form-check-inline
+                                input.form-check-input#check_registeredMail(type='checkbox', value='')
+                                label.form-check-label(for="check_registeredMail")  現金書留
+                            .form-check.form-check-inline
+                                input.form-check-input#check_bankTransfer(type='checkbox', value='')
+                                label.form-check-label(for="check_bankTransfer") 銀行振込
+                            .form-check.form-check-inline
+                                input.form-check-input#check_cashOnDelivery(type='checkbox', value='')
+                                label.form-check-label(for="check_cashOnDelivery")  代金引換
             .row
                 .col
                     form
@@ -117,15 +117,20 @@ block outsideBlock
                         input(type="text").form-control
                 .col
                     form
-                        label.col-form-label
-                            | 購入金額
+                        label.col-form-label 購入金額
                         .form-row.align-items-center
                             .col
-                                input.form-control(type='text')
+                                .input-group
+                                    .input-group-prepend
+                                        .input-group-text ￥
+                                    input.form-control(type='number')
                             .col-auto
                                 span 〜
                             .col
-                                input.form-control(type='text')
+                                .input-group
+                                    .input-group-prepend
+                                        .input-group-text ￥
+                                    input.form-control(type='number')
             .row
                 .col
                     form
@@ -140,12 +145,12 @@ block outsideBlock
                     form.form-row
                         .col-12
                             p.col-form-label 性別
-                            label.form-check-label.mr-3
-                                input.form-check-input(type='checkbox', value='')
-                                | 男性
-                            label.form-check-label.mr-3
-                                input.form-check-input(type='checkbox', value='')
-                                | 女性
+                            .form-check.form-check-inline
+                                input.form-check-input#check_male(type='checkbox', value='')
+                                label.form-check-label(for="check_male") 男性
+                            .form-check.form-check-inline
+                                input.form-check-input#check_female(type='checkbox', value='')
+                                label.form-check-label(for="check_female")  女性
                 .col
             .d-block.text-center
                 button(type="button").btn.btn-ec-regular 検索条件クリア
