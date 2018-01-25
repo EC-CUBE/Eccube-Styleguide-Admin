@@ -2,54 +2,6 @@
 @import "../mixin/_media";
 
 /*
-サブアクションボタン
-
-`.c-subAction`に`.is-active`クラスを付与することでアクティブ状態のスタイルを適用することが出来ます。
-
-Markup:
-include /assets/tmpl/components/subAction.pug
-+c-subAction("すべてのタグを表示")
-+c-subAction("すべてのタグを表示","is-active")
-
-Styleguide 20.0
-*/
-
-.c-subAction {
-  &__btn {
-    display: inline-block;
-    margin-bottom: 15px;
-    text-decoration: none;
-    color: #333;
-
-    &:hover {
-      text-decoration: none;
-      color: #333;
-    }
-
-    &::before {
-      content: "\f196";
-      display: inline-block;
-      margin-right: .5em;
-      font-family: FontAwesome;
-    }
-
-    span {
-      margin-left: 5px;
-      font-weight: bold;
-    }
-  }
-  &.is-active {
-    .c-subAction__btn::before {
-      content: "\f147";
-      display: inline-block;
-      margin-right: .5em;
-      font-family: FontAwesome;
-    }
-  }
-}
-
-
-/*
 サブコンテンツ
 
 メインとなるコンテンツの補助として存在し、表示/非表示を切り替えることのできるコンテンツです。
