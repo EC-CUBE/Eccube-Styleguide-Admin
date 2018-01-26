@@ -106,9 +106,8 @@ block primaryContents
                         form
                             input(type="text").form-control
                             .form-check.mb-2
-                                label.form-check-label
-                                    input.form-check-input(type="checkbox")
-                                    span 無制限
+                                input#check_unlimited.form-check-input(type='checkbox', value='')
+                                label.form-check-label(for="check_unlimited") 無制限
                 .row
                     .col-3
                         .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
