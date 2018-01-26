@@ -40,18 +40,18 @@ block primaryContents
             span 取り扱う支払方法
         .card-body
             form
-                label.form-check-label.mr-3
-                    input.form-check-input(type='checkbox', value='')
-                    | 郵便振替
-                label.form-check-label.mr-3
-                    input.form-check-input(type='checkbox', value='')
-                    | 現金書留
-                label.form-check-label.mr-3
-                    input.form-check-input(type='checkbox', value='')
-                    | 銀行振込
-                label.form-check-label
-                    input.form-check-input(type='checkbox', value='')
-                    | 代金引換
+                .form-check.form-check-inline
+                    input.form-check-input#check_postalTransfer(type='checkbox', value='')
+                    label.form-check-label(for="check_postalTransfer") 郵便振替
+                .form-check.form-check-inline
+                    input.form-check-input#check_registeredMail(type='checkbox', value='')
+                    label.form-check-label(for="check_registeredMail")  現金書留
+                .form-check.form-check-inline
+                    input.form-check-input#check_bankTransfer(type='checkbox', value='')
+                    label.form-check-label(for="check_bankTransfer") 銀行振込
+                .form-check.form-check-inline
+                    input.form-check-input#check_cashOnDelivery(type='checkbox', value='')
+                    label.form-check-label(for="check_cashOnDelivery")  代金引換
     .card.rounded.border-0.mb-2
         .card-header
             span お届け時間設定
@@ -115,9 +115,10 @@ block primaryContents
                                 span.card-title 全国一律に設定
                                 i.fa.fa-question-circle.fa-lg.ml-1
                         .col-3
-                            form.input-group
-                                span.input-group-addon ￥
-                                input(type="number").form-control
+                            .input-group
+                                .input-group-prepend
+                                    .input-group-text ￥
+                                input.form-control(type='number')
                         .col-auto
                             button(type="button").btn.btn-ec-regular 各都道府県に適用
                 li.list-group-item
@@ -128,16 +129,18 @@ block primaryContents
                                     label 北海道
                                 .col.pl-0
                                     .input-group
-                                        span.input-group-addon ￥
-                                        input(type="number").form-control
+                                        .input-group-prepend
+                                            .input-group-text ￥
+                                        input.form-control(type='number')
                         .col
                             form.row
                                 .col-auto
                                     label 青森県
                                 .col.pl-0
                                     .input-group
-                                        span.input-group-addon ￥
-                                        input(type="number").form-control
+                                        .input-group-prepend
+                                            .input-group-text ￥
+                                        input.form-control(type='number')
                     .row.mb-2
                         .col
                             form.row
@@ -145,16 +148,18 @@ block primaryContents
                                     label 岩手県
                                 .col.pl-0
                                     .input-group
-                                        span.input-group-addon ￥
-                                        input(type="number").form-control
+                                        .input-group-prepend
+                                            .input-group-text ￥
+                                        input.form-control(type='number')
                         .col
                             form.row
                                 .col-auto
                                     label 秋田県
                                 .col.pl-0
                                     .input-group
-                                        span.input-group-addon ￥
-                                        input(type="number").form-control
+                                        .input-group-prepend
+                                            .input-group-text ￥
+                                        input.form-control(type='number')
     .card.rounded.border-0.mb-4
         .card-header
             .row
