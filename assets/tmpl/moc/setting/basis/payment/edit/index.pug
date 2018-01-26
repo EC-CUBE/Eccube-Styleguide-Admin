@@ -20,8 +20,9 @@ block primaryContents
                     span 手数料
                 .col.mb-2
                     .input-group
-                        span.input-group-addon ￥
-                        input(type="number").form-control
+                        .input-group-prepend
+                            .input-group-text ￥
+                        input.form-control(type='number')
             .row
                 .col-3
 
@@ -31,14 +32,16 @@ block primaryContents
                         .row.justify-content-start
                             .col-4
                                 .input-group
-                                    span.input-group-addon ￥
-                                    input(type="number").form-control
+                                    .input-group-prepend
+                                        .input-group-text ￥
+                                    input.form-control(type='number')
                             .col-auto.text-center.p-0
                                 span.align-middle 〜
                             .col-4
                                 .input-group
-                                    span.input-group-addon ￥
-                                    input(type="number").form-control
+                                    .input-group-prepend
+                                        .input-group-text ￥
+                                    input.form-control(type='number')
             .row
                 .col-3
                     .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")

@@ -12,8 +12,9 @@ block outsideBlock
                         label.col-form-label 商品名・商品ID・商品コード
                         input.form-control(type='text')
                     .d-inline-block.mb-3(data-toggle="collapse" href="#searchDetail" aria-expanded="false" aria-controls="searchDetail")
-                        i.fa.fa-plus-square-o.font-weight-bold.mr-1
-                        span.font-weight-bold 詳細検索
+                        a
+                            i.fa.fa-plus-square-o.font-weight-bold.mr-1
+                            span.font-weight-bold 詳細検索
 
         +b.c-subContents.collapse(id="searchDetail").ec-collapse
             .row.mb-2
@@ -27,15 +28,15 @@ block outsideBlock
                     form.form-row.mb-2
                         .col-12
                             p.col-form-label フィルタ
-                            label.form-check-label.mr-3
-                                input.form-check-input(type='checkbox', value='')
-                                | 公開
-                            label.form-check-label.mr-3
-                                input.form-check-input(type='checkbox', value='')
-                                | 非公開
-                            label.form-check-label
-                                input.form-check-input(type='checkbox', value='')
-                                | 在庫切れ
+                            .form-check.form-check-inline
+                                input.form-check-input#check_public(type='checkbox', value='')
+                                label.form-check-label(for="check_public") 公開
+                            .form-check.form-check-inline
+                                input.form-check-input#check_private(type='checkbox', value='')
+                                label.form-check-label(for="check_private")  非公開
+                            .form-check.form-check-inline
+                                input.form-check-input#check_stockout(type='checkbox', value='')
+                                label.form-check-label(for="check_stockout")  在庫切れ
                 .col-6
                     form.mb-2
                         label.col-form-label(data-toggle="tooltip" data-placement="top" title="Tooltip")

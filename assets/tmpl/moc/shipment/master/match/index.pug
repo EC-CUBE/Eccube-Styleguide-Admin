@@ -14,33 +14,34 @@ block outsideBlock
                     form.form-row
                         .form-group.col-12
                             p.col-form-label 対応状況
-                            label.form-check-label.mr-3
-                                input.form-check-input(type='checkbox', value='' , checked='checked')
-                                | 新規受付
-                            label.form-check-label.mr-3
-                                input.form-check-input(type='checkbox', value='')
-                                | 決済処理中
-                            label.form-check-label
-                                input.form-check-input(type='checkbox', value='')
-                                | 入金待ち
-                            label.form-check-label
-                                input.form-check-input(type='checkbox', value='')
-                                | 入金済み
-                            label.form-check-label
-                                input.form-check-input(type='checkbox', value='')
-                                | キャンセル
-                            label.form-check-label
-                                input.form-check-input(type='checkbox', value='')
-                                | 取り寄せ中
-                            label.form-check-label
-                                input.form-check-input(type='checkbox', value='')
-                                | 発送済み
-                            label.form-check-label
-                                input.form-check-input(type='checkbox', value='')
-                                | 購入処理中
+                            .form-check.form-check-inline
+                                input.form-check-input#check_newReception(type='checkbox', value='')
+                                label.form-check-label(for="check_newReception") 新規受付
+                            .form-check.form-check-inline
+                                input.form-check-input#check_paymentProgress(type='checkbox', value='')
+                                label.form-check-label(for="check_paymentProgress")  決済処理中
+                            .form-check.form-check-inline
+                                input.form-check-input#check_paymentWait(type='checkbox', value='')
+                                label.form-check-label(for="check_paymentWait") 入金待ち
+                            .form-check.form-check-inline
+                                input.form-check-input#check_paymentDone(type='checkbox', value='')
+                                label.form-check-label(for="check_paymentDone")  入金済み
+                            .form-check.form-check-inline
+                                input.form-check-input#check_cancel(type='checkbox', value='')
+                                label.form-check-label(for="check_cancel") キャンセル
+                            .form-check.form-check-inline
+                                input.form-check-input#check_stockNow(type='checkbox', value='')
+                                label.form-check-label(for="check_stockNow")  取り寄せ中
+                            .form-check.form-check-inline
+                                input.form-check-input#check_sent(type='checkbox', value='')
+                                label.form-check-label(for="check_sent") 発送済み
+                            .form-check.form-check-inline
+                                input.form-check-input#check_purchasingProgress(type='checkbox', value='')
+                                label.form-check-label(for="check_purchasingProgress")  購入処理中
                     .d-inline-block.mb-3(data-toggle="collapse" href="#searchDetail" aria-expanded="false" aria-controls="searchDetail")
-                        i.fa.fa-plus-square-o.font-weight-bold.mr-1
-                        span.font-weight-bold 詳細検索
+                        a
+                            i.fa.fa-plus-square-o.font-weight-bold.mr-1
+                            span.font-weight-bold 詳細検索
         +b.c-subContents.collapse(id="searchDetail").ec-collapse
             .row
                 .col
@@ -108,11 +109,17 @@ block outsideBlock
                         label.col-form-label 購入金額
                         .form-row.align-items-center
                             .col
-                                input.form-control(type='text')
+                                .input-group
+                                    .input-group-prepend
+                                        .input-group-text ￥
+                                    input.form-control(type='number')
                             .col-auto
                                 span 〜
                             .col
-                                input.form-control(type='text')
+                                .input-group
+                                    .input-group-prepend
+                                        .input-group-text ￥
+                                    input.form-control(type='number')
                 .col
                     form
                         label.col-form-label 購入商品
@@ -155,9 +162,10 @@ block primaryContents
                                         input.form-check-input(type="checkbox", name="notificationMail" checked="")
                                         |  発送お知らせメールを同時に送る
                             .d-inline-block(data-toggle="collapse" href="#viewEmail" aria-expanded="false" aria-controls="viewEmail")
-                                i.fa.fa-minus-square-o.font-weight-bold.mr-1
-                                span.font-weight-bold メール文面を確認
-                            .collapse(id="viewEmail").bg-light.p-4
+                                a
+                                    i.fa.fa-plus-square-o.font-weight-bold.mr-1
+                                    span.font-weight-bold メール文面を確認
+                            .collapse(id="viewEmail").bg-light.p-4.ec-collapse.bg-ec-formGray
                                 p [注文者名]様
                                 p お客さまがご注文された以下の商品を発送いたしました。商品の到着まで、今しばらくお待ちくださいませ。
                                 p [発送商品リストと明細]

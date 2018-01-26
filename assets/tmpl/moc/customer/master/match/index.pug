@@ -12,20 +12,21 @@ block outsideBlock
                         label.col-form-label 会員ID・メールアドレス・お名前
                         input.form-control(type='text')
                     .d-inline-block.mb-3(data-toggle="collapse" href="#searchDetail" aria-expanded="false" aria-controls="searchDetail")
-                        i.fa.fa-plus-square-o.font-weight-bold.mr-1
-                        span.font-weight-bold 詳細検索
+                        a
+                            i.fa.fa-plus-square-o.font-weight-bold.mr-1
+                            span.font-weight-bold 詳細検索
         +b.c-subContents.collapse(id="searchDetail").ec-collapse
             .row.mb-2
                 .col
                     form.form-row
                         .col-12
                             p.col-form-label 会員種別
-                            label.form-check-label.mr-3
-                                input.form-check-input(type='checkbox', value='')
-                                | 仮会員
-                            label.form-check-label.mr-3
-                                input.form-check-input(type='checkbox', value='')
-                                | 本会員
+                            .form-check.form-check-inline
+                                input.form-check-input#check_temporaryCustomer(type='checkbox', value='')
+                                label.form-check-label(for="check_temporaryCustomer") 仮会員
+                            .form-check.form-check-inline
+                                input.form-check-input#check_customer(type='checkbox', value='')
+                                label.form-check-label(for="check_customer")  本会員
                 .col
                     form
                         label 購入商品名
@@ -35,22 +36,28 @@ block outsideBlock
                     form.form-row
                         .col-12
                             p.col-form-label 性別
-                            label.form-check-label.mr-3
-                                input.form-check-input(type='checkbox', value='')
-                                | 男性
-                            label.form-check-label.mr-3
-                                input.form-check-input(type='checkbox', value='')
-                                | 女性
+                            .form-check.form-check-inline
+                                input.form-check-input#check_male(type='checkbox', value='')
+                                label.form-check-label(for="check_male") 男性
+                            .form-check.form-check-inline
+                                input.form-check-input#check_female(type='checkbox', value='')
+                                label.form-check-label(for="check_female")  女性
                 .col
                     form
                         label 購入金額
                         .form-row.align-items-center
                             .col
-                                input.form-control(type='text')
+                                .input-group
+                                    .input-group-prepend
+                                        .input-group-text ￥
+                                    input.form-control(type='number')
                             .col-auto
                                 span 〜
                             .col
-                                input.form-control(type='text')
+                                .input-group
+                                    .input-group-prepend
+                                        .input-group-text ￥
+                                    input.form-control(type='number')
             .row.mb-2
                 .col
                     form
@@ -168,9 +175,9 @@ block primaryContents
                         td.align-middle witchdoktor@gmail.com
                         td.align-middle
                         td.align-middle.pr-3
-                            .row
-                                .col.text-right(data-toggle="tooltip" data-placement="top" title="削除")
-                                    a.btn.btn-ec-actionIcon
+                            .row.justify-content-end
+                                .col-auto.text-center
+                                    a.btn.btn-ec-actionIcon(data-toggle="tooltip" data-placement="top" title="削除")
                                         i.fa.fa-close.fa-lg.text-secondary(aria-hidden="true")
             .row.justify-content-md-center.mb-4
                 ul.pagination

@@ -14,7 +14,7 @@ block primaryContents
                 .col-4.text-right
                     a(data-toggle="collapse" href="#basicConfig" aria-expanded="false" aria-controls="basicConfig")
                         i.fa.fa-angle-up.fa-lg
-        .collapse(id="basicConfig").show
+        #basicConfig.collapse.show.ec-cardCollapse
             .card-body
                 .row
                     .col-3
@@ -59,8 +59,9 @@ block primaryContents
                         form
                             textarea(rows="8").form-control
                         .d-inline-block.mb-2(data-toggle='collapse', href='#addComment', role='button', aria-expanded='false', aria-controls='addComment')
-                            i.fa.fa-plus-square-o.font-weight-bold.mr-1
-                            span.font-weight-bold.text-ec-black 一覧コメントを追加
+                            a
+                                i.fa.fa-plus-square-o.font-weight-bold.mr-1
+                                span.font-weight-bold.text-ec-black 一覧コメントを追加
 
                 #addComment.collapse.ec-collapse
                     .row.bg-ec-formGray.pt-3.mb-2
@@ -81,8 +82,9 @@ block primaryContents
                         form
                             input(type="text").form-control
                         .d-inline-block.mb-2(data-toggle='collapse', href='#addPrice', role='button', aria-expanded='false', aria-controls='addPrice')
-                            i.fa.fa-plus-square-o.font-weight-bold.mr-1
-                            span.font-weight-bold.text-ec-black 通常価格を追加
+                            a
+                                i.fa.fa-plus-square-o.font-weight-bold.mr-1
+                                span.font-weight-bold.text-ec-black 通常価格を追加
                 #addPrice.collapse.ec-collapse
                     .row.bg-ec-formGray.pt-3.mb-2
                         .col-3
@@ -104,9 +106,8 @@ block primaryContents
                         form
                             input(type="text").form-control
                             .form-check.mb-2
-                                label.form-check-label
-                                    input.form-check-input(type="checkbox")
-                                    span 無制限
+                                input#check_unlimited.form-check-input(type='checkbox', value='')
+                                label.form-check-label(for="check_unlimited") 無制限
                 .row
                     .col-3
                         .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
@@ -125,7 +126,7 @@ block primaryContents
                 .col-4.text-right
                     a(data-toggle="collapse" href="#standardConfig" aria-expanded="false" aria-controls="standardConfig")
                         i.fa.fa-angle-up.fa-lg
-        .collapse(id="standardConfig").show
+        #standardConfig.collapse.show.ec-cardCollapse
             .card-body
                 .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
                     span この商品の規格
@@ -189,13 +190,11 @@ block primaryContents
                 .col-4.text-right
                     a(data-toggle="collapse" href="#freeArea" aria-expanded="false" aria-controls="freeArea")
                         i.fa.fa-angle-up.fa-lg
-        .collapse(id="freeArea").show
+        #freeArea.collapse.show.ec-cardCollapse
             .card-body
                 .row
                     .col-3
-                        .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
-                            span フリーエリア
-                            i.fa.fa-question-circle.fa-lg.ml-1
+                        span フリーエリア
                     .col-9
                         form
                             textarea(rows="8").form-control
@@ -211,7 +210,7 @@ block secondaryContents
                 .col-4.text-right
                     a(data-toggle="collapse" href="#category" aria-expanded="false" aria-controls="category")
                         i.fa.fa-angle-up.fa-lg
-        .collapse(id="category").show
+        #category.collapse.show.ec-cardCollapse
             .card-body
                 form.mb-3
                     .form-row
@@ -235,7 +234,7 @@ block secondaryContents
                 .col-4.text-right
                     a(data-toggle="collapse" href="#tag" aria-expanded="false" aria-controls="tag")
                         i.fa.fa-angle-up.fa-lg
-        .collapse(id="tag").show
+        #tag.collapse.show.ec-cardCollapse
             .card-body
                 .d-inline-block.mb-2.mr-2
                     button.btn.btn-outline-primary(type='button') オススメ
@@ -256,8 +255,9 @@ block secondaryContents
                 .d-inline-block.mb-2.mr-2
                     button.btn.btn-outline-secondary(type='button') 送料無料
                 .d-block.mb-3(data-toggle='collapse', href='#allTags', role='button', aria-expanded='false', aria-controls='allTags')
-                    i.fa.fa-plus-square-o.font-weight-bold.mr-1
-                    span.font-weight-bold 全てのタグを表示
+                    a
+                        i.fa.fa-plus-square-o.font-weight-bold.mr-1
+                        span.font-weight-bold 全てのタグを表示
                 #allTags.collapse.p-3.bg-ec-lightGray.mb-3.ec-collapse
                     .d-inline-block.mb-2.mr-2
                         button.btn.btn-outline-primary(type='button') オススメ
@@ -285,13 +285,11 @@ block secondaryContents
         .card-header
             .row
                 .col-8
-                    .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
-                        span.card-title 登録日・更新日
-                            i.fa.fa-question-circle.fa-lg.ml-1
+                    span.card-title 登録日・更新日
                 .col-4.text-right
                     a(data-toggle="collapse" href="#update" aria-expanded="false" aria-controls="update")
                         i.fa.fa-angle-up.fa-lg
-        .collapse(id="update").show
+        #update.collapse.show.ec-cardCollapse
             .card-body
                 .row.mb-2
                     .col
@@ -322,7 +320,7 @@ block secondaryContents
                 .col-4.text-right
                     a(data-toggle="collapse" href="#shopMemo" aria-expanded="false" aria-controls="shopMemo")
                         i.fa.fa-angle-up.fa-lg
-        .collapse(id="shopMemo").show
+        #shopMemo.collapse.show.ec-cardCollapse
             .card-body
                 form
                     textarea(rows="8").form-control
@@ -338,7 +336,7 @@ block conversionArea
                             span 商品マスター
                 .col-6
                     .row.align-items-center.justify-content-end
-                        .col-2
+                        .col-auto
                             form
                                 select.form-control
                                     option(value='') 公開
