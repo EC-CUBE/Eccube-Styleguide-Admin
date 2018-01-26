@@ -5,11 +5,13 @@ block pageTitle
 
 block primaryContents
     .card.rounded.border-0.mb-4
-        .card-header
-            .row
-                .col-8
-                    span.card-title 支払方法
         .card-body.p-0
+            .row.my-3.ml-1
+                .col-3
+                    form
+                        input.form-control(type='text')
+                .col-auto.pl-0
+                    button.btn.btn-ec-regular(type="submit") 新規作成
             ul.list-group.list-group-flush.mb-4
                 li.list-group-item
                     .row.justify-content-around

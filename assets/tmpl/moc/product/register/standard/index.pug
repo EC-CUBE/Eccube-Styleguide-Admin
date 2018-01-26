@@ -61,6 +61,7 @@ block primaryContents
                     th.pt-2.pb-2.pr-3 商品種別
 
                 - for (var x = 0; x < 9; x++)
+                    - var id = 'check_unlimited' + x
                     tr
                         td.align-middle.pl-3
                             input(type="checkbox")
@@ -74,9 +75,9 @@ block primaryContents
                                 .col-5
                                     input.form-control(type="number")
                                 .col-auto
-                                    label.form-check-label.align-middle
-                                        input.form-check-input(type="checkbox")
-                                        span 無制限
+                                    .form-check.form-check-inline
+                                        input.form-check-input(id=id, type='checkbox', value='')
+                                        label.form-check-label(for=id) 無制限
                         td.align-middle
                             form.form-row
                                 .col-6
@@ -107,11 +108,5 @@ block conversionArea
                             span 商品マスター
                 .col-6
                     .row.align-items-center.justify-content-end
-                        .col-2
-                            form
-                                select.form-control
-                                    option(value='') 公開
-                                    option(value='') 非公開
-                                    option(value='') 廃止
                         .col-auto
                             button(type="submit").btn.btn-ec-conversion.px-5 更新

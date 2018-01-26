@@ -18,6 +18,9 @@ dl, ol, ul {
   margin-top: 0;
   margin-bottom: 0;
 }
+a,button {
+  cursor: pointer;
+}
 
 
 @import "component/_container";
@@ -26,16 +29,8 @@ dl, ol, ul {
 @import "component/_contentsArea";
 @import "component/_conversionArea";
 @import "component/_block";
-@import "component/_button";
 @import "component/_form";
-@import "component/_tab";
 @import "component/_pageTitle";
-@import "component/_pagenation";
-@import "component/_breadcrumbs";
-@import "component/_searchBox";
-@import "component/_toolTip";
-@import "component/_tags";
-@import "component/_definitionList";
 @import "component/_ancillary";
 @import "component/_directory";
 @import "component/_graph";

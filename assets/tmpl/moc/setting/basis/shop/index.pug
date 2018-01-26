@@ -147,8 +147,9 @@ block primaryContents
                             i.fa.fa-question-circle.fa-lg.ml-1
                     .col.mb-2
                         .input-group.col-4.pl-0
-                            span.input-group-addon ￥
-                            input(type="number").form-control
+                            .input-group-prepend
+                                .input-group-text ￥
+                            input.form-control(type='number')
                 .row
                     .col-3
                         .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
@@ -156,8 +157,9 @@ block primaryContents
                             i.fa.fa-question-circle.fa-lg.ml-1
                     .col.mb-2
                         .input-group.col-4.pl-0
-                            input(type="number").form-control
-                            span.input-group-addon 個
+                            input.form-control(type='number')
+                            .input-group-append
+                                .input-group-text 個
                 .row
                     .col-3
                         span 商品ごとの送料設定

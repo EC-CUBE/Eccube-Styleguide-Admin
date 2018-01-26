@@ -14,7 +14,7 @@ block primaryContents
                 .col-4.text-right
                     a(data-toggle="collapse" href="#mailTo" aria-expanded="false" aria-controls="mailTo")
                         i.fa.fa-angle-up.fa-lg
-        .collapse(id="mailTo").show
+        #mailTo.collapse.show.ec-cardCollapse
             .card-body
                 .row.mb-2
                     .col-2
@@ -42,8 +42,7 @@ block primaryContents
                     .col-2
                         span 対応状況
                     .col-10
-                        .c-label
-                            span 発送済み
+                        span.badge.badge-ec-glay 発送済み
     .card.rounded.border-0.mb-4
         .card-header
             .row
@@ -52,7 +51,7 @@ block primaryContents
                 .col-4.text-right
                     a(data-toggle="collapse" href="#mailHistory" aria-expanded="false" aria-controls="mailHistory")
                         i.fa.fa-angle-up.fa-lg
-        .collapse(id="mailHistory").show
+        #mailHistory.collapse.show.ec-cardCollapse
             .card-body
                 table.table.table-striped
                     thead.table-active
@@ -337,13 +336,11 @@ block primaryContents
         .card-header
             .row
                 .col-8
-                    .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
-                        span.card-title 新規メール配信
-                        i.fa.fa-question-circle.fa-lg.ml-1
+                    span.card-title 新規メール配信
                 .col-4.text-right
                     a(data-toggle="collapse" href="#mailCreate" aria-expanded="false" aria-controls="mailCreate")
                         i.fa.fa-angle-up.fa-lg
-        .collapse(id="mailCreate").show
+        #mailCreate.collapse.show.ec-cardCollapse
             .card-body
                 .row.mb-2
                     .col-3
