@@ -10,7 +10,7 @@ Markup:
 include /assets/tmpl/components/directory.pug
 +c-directoryTree
 
-Styleguide 21.0
+Styleguide 7.0
 */
 .c-directoryTree {
   //1層目
@@ -128,7 +128,7 @@ Markup:
 include /assets/tmpl/components/directory.pug
 +c-directoryTreeRegister
 
-Styleguide 21.1
+Styleguide 7.1
 */
 .c-directoryTree--register {
   max-height: 300px;
@@ -180,7 +180,7 @@ Markup:
 include /assets/tmpl/components/directory.pug
 +c-directoryTreeRegister
 
-Styleguide 21.2
+Styleguide 7.2
 */
 
 .c-directoryTree--folder {

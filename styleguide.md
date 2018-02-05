@@ -12,9 +12,9 @@ Styleguide On Heorku　[TODO リポジトリが決まったらアドレス修正
 
 [http://eccube3-styleguide.herokuapp.com/](http://eccube3-styleguide.herokuapp.com/)
 
-HTML Moc On Heroku　[TODO リポジトリが決まったらアドレス修正]
+HTML Moc On Heroku
 
-[http://eccube3-styleguide.herokuapp.com/moc/](http://eccube3-styleguide.herokuapp.com/moc/)
+[http://eccube3-admin-styleguide.herokuapp.com/](http://eccube3-admin-styleguide.herokuapp.com/)
 
 ## コンポーネント設計について
 
