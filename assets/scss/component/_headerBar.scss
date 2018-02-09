@@ -7,20 +7,26 @@
 画面上部に固定表示されます。ロゴ・店舗名（および店舗ページへのリンク）・ユーザメニューが含まれます。
 
 Markup:
-+b.HEADER.c-headerBar(style="position: static;")
-  // `style="position: static;` はスタイルガイドにおけるサンプル表示の都合上付与しています。
-  +e.container
-    +e.logo
-        img(src="/img/logo@2x.png")
-    +e.A.toggleBtn(href="")
-        i.fa.fa-bars(aria-hidden="true")
-    +e.A.shopTitle(href="")
-        span EC-CUBE SHOP
-        i.fa.fa-angle-right(aria-hidden="true")
-    +e.A.userMenu(data-container="body", data-toggle="popover" data-placement="bottom", title="最終ログイン", data-content="<p>2017/12/18 12:18</p><button class='btn btn-ec-regular btn-block'>パスワード変更</button><button class='btn btn-light btn-block'>ログアウト</button>" , data-html="true")
-        i.fa.fa-user-circle(aria-hidden="true")
-        span 管理者 様
-        i.fa.fa-angle-down(aria-hidden="true")
+<!-- `style="position: static;"` はスタイルガイドにおけるサンプル表示の都合上付与しています。-->
+<header class="c-headerBar" style="position: static;">
+  <div class="c-headerBar__container">
+    <div class="c-headerBar__logo">
+      <h1><img src="/img/logo@2x.png"></h1>
+    </div>
+    <a class="c-headerBar__toggleBtn">
+      <i class="fa fa-bars" aria-hidden="true"></i>
+    </a>
+    <a class="c-headerBar__shopTitle" href="">
+      <span>EC-CUBE SHOP</span>
+      <i class="fa fa-angle-right" aria-hidden="true"></i>
+    </a>
+    <a class="c-headerBar__userMenu" data-container="body" data-toggle="popover" data-placement="bottom" title="" data-content="<p>2017/12/18 12:18</p><a href='/admin/passwordChange' class='btn btn-ec-regular btn-block'>パスワード変更</a><a href='/admin/login' class='btn btn-ec-sub btn-block'>ログアウト</a>" data-html="true" data-original-title="最終ログイン">
+      <i class="fa fa-user-circle" aria-hidden="true"></i>
+      <span>管理者 様</span>
+      <i class="fa fa-angle-down" aria-hidden="true"></i>
+    </a>
+  </div>
+</header>
 
 Styleguide 2.0
 */
