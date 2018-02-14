@@ -6,14 +6,7 @@
 Bootstrap
 
 スタイルガイドで使用される一部クラスは [Bootstrap](https://getbootstrap.com/) を使用しています。
-
 Bootstrap で利用可能なクラス群については、 [Bootstrap 公式サイト](https://getbootstrap.com/) をご利用ください。
-
-Markup:
-<div class="row">
-  <div class="col"></div>
-  <div class="col"></div>
-</div>
 
 Styleguide 12.0
 */
@@ -197,9 +190,9 @@ Styleguide 12.4
 オリジナルで作成したクラスです。
 
 Markup:
-<!-- `style="margin-bottom: 10px;"` はスタイルガイドにおけるサンプル表示の都合上付与しています。-->
-.d-block.border.border-ec-gray(style="margin-bottom: 10px;") ボーダー
-.d-block.border-ec-dashed ボーダー
+<!-- `style="padding: 20px; margin-bottom: 10px;"` はスタイルガイドにおけるサンプル表示の都合上付与しています。-->
+.d-block.border.border-ec-gray(style="padding: 20px; margin-bottom: 10px;") ボーダー solid
+.d-block.border-ec-dashed(style="padding: 20px; margin-bottom: 10px;") ボーダー dashed
 
 Styleguide 12.5
 */
@@ -216,9 +209,9 @@ Styleguide 12.5
 オリジナルで作成したクラスです。
 
 Markup:
-<!-- `style="margin-bottom: 10px;"` はスタイルガイドにおけるサンプル表示の都合上付与しています。-->
-.d-block.bg-ec-lightGray(style="margin-bottom: 10px;") 背景色
-.d-block.bg-ec-formGray 背景色
+<!-- `style="padding: 20px; margin-bottom: 10px;"` はスタイルガイドにおけるサンプル表示の都合上付与しています。-->
+.d-block.bg-ec-lightGray(style="padding: 20px; margin-bottom: 10px;") 背景色 #f9f9f9
+.d-block.bg-ec-formGray(style="padding: 20px; margin-bottom: 10px;") 背景色 #F8F9FA
 
 Styleguide 12.6
 */
