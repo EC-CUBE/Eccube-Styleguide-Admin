@@ -11,6 +11,12 @@
 <br>
 ユーザメニューのフキダシはBootstrapにて実装しております。詳細はBootstrapの<a href="https://getbootstrap.com/docs/4.0/components/popovers/" target="_blank">popvers</a>ページをご確認下さい。
 
+sg-wrapper:
+  <script>
+    popoverHeader();
+  </script>
+<sg-wrapper-content/>
+
 Markup:
 <!-- `style="position: static;"` はスタイルガイドにおけるサンプル表示の都合上付与しています。-->
 <header class="c-headerBar" style="position: static;">
