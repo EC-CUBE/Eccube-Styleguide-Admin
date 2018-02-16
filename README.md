@@ -6,7 +6,15 @@ https://chatboxinc.backlog.jp/alias/wiki/220525
 
 ## Usage
 
+moc
 ````
 $ npm i
 $ npm run dev
 ````
+
+スタイルガイド
+
+```
+$ gulp styleguide:server
+```
+http://localhost:4000/で確認可能

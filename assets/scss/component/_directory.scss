@@ -4,13 +4,12 @@
 ディレクトリツリー
 
 ディレクトリ構造をツリー形式で表示します。
-選択中のタブ`.c-dietriTree`直下の`ul > li`に`.is-active`クラスを付与することでアクティブ状態のスタイルを適用することが出来ます。
 
 Markup:
 include /assets/tmpl/components/directory.pug
 +c-directoryTree
 
-Styleguide 21.0
+Styleguide 7.0
 */
 .c-directoryTree {
   //1層目
@@ -119,16 +118,21 @@ Styleguide 21.0
 
 
 /*
-カテゴリ登録
+ディレクトリツリー（カテゴリ登録）
 
-タブサイズは `regular` `small` の2種類定義されています。
-選択中のタブ`.c-tab__item`に`.is-active`クラスを付与することでアクティブ状態のスタイルを適用することが出来ます。
+カテゴリ登録ページに使用されるディレクトリツリーのコンポーネントです。
+
+sg-wrapper:
+  <script>
+    directoryTreeRegister();
+  </script>
+<sg-wrapper-content/>
 
 Markup:
 include /assets/tmpl/components/directory.pug
 +c-directoryTreeRegister
 
-Styleguide 21.1
+Styleguide 7.1
 */
 .c-directoryTree--register {
   max-height: 300px;
@@ -171,16 +175,16 @@ Styleguide 21.1
 }
 
 /*
-フォルダー
+ディレクトリツリー（フォルダー）
 
-タブサイズは `regular` `small` の2種類定義されています。
-選択中のタブ`.c-tab__item`に`.is-active`クラスを付与することでアクティブ状態のスタイルを適用することが出来ます。
+ファイル管理ページに使用されるディレクトリツリーのコンポーネントです。
+フォルダ名、もしくはフォルダアイコンをクリックすることで下層の要素を表示することが出来ます。
 
 Markup:
 include /assets/tmpl/components/directory.pug
-+c-directoryTreeRegister
++c-directoryTreeFolder
 
-Styleguide 21.2
+Styleguide 7.2
 */
 
 .c-directoryTree--folder {
