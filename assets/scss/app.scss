@@ -3,6 +3,7 @@
 html,body {
   font-size: 14px;
   background: $paleBlue;
+  background-color: $paleBlue !important;
 }
 ul {
   -webkit-margin-before: 0;
@@ -32,5 +33,5 @@ a,button {
 @import "component/_pageTitle";
 @import "component/_directory";
 @import "component/_graph";
-@import "component/_toggleSwitch.scss";
-@import "component/_icon.scss";
+@import "component/_toggleSwitch";
+@import "component/_icon";
