@@ -13,7 +13,7 @@ EC-CUBE3デモサイト
 
 Styleguide On Heorku 
 
-[http://eccube3-styleguide.herokuapp.com/](http://eccube3-styleguide.herokuapp.com/)
+[http://eccube3-admin-styleguide.herokuapp.com/styleguide/](http://eccube3-admin-styleguide.herokuapp.com/styleguide/)
 
 HTML Moc On Heroku 
 
