@@ -254,8 +254,8 @@ EC-CUBE管理画面専用のオリジナルborderクラスを定義していま�
 
 Markup:
 <!-- `style="padding: 20px; margin-bottom: 10px;"` はスタイルガイドにおけるサンプル表示の都合上付与しています。-->
-.d-block.border.border-ec-gray(style="padding: 20px; margin-bottom: 10px;") ボーダー solid
-.d-block.border-ec-dashed(style="padding: 20px; margin-bottom: 10px;") ボーダー dashed
+.d-block.border.border-ec-gray(style="padding: 20px; margin-bottom: 10px;") ボーダーsolid　 .border-ec-gray 　
+.d-block.border-ec-dashed(style="padding: 20px; margin-bottom: 10px;") ボーダーdashed　 .border-ec-dashed
 
 Styleguide 12.5
 */
