@@ -8,9 +8,9 @@ EC-CUBE3　管理画面デモサイト　／　ID: admin　パスワード: pass
 
 [https://github.com/EC-CUBE/Eccube-Styleguide-Admin](https://github.com/EC-CUBE/Eccube-Styleguide-Admin)
 
-Styleguide On Heorku　[TODO リポジトリが決まったらアドレス修正]
+Styleguide On Heorku
 
-[http://eccube3-styleguide.herokuapp.com/](http://eccube3-styleguide.herokuapp.com/)
+[http://eccube3-admin-styleguide.herokuapp.com/styleguide/](http://eccube3-admin-styleguide.herokuapp.com/styleguide/)
 
 HTML Moc On Heroku
 
