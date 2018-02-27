@@ -21,7 +21,7 @@
     "build:run": "gulp build && gulp styleguide:build"
   },
   "author": "",
-  "license": "ISC",
+  "license": "LGPL",
   "dependencies": {
     "bootstrap": "^4.0.0",
     "browser-sync": "^2.18.13",
