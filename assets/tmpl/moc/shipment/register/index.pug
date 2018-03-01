@@ -226,7 +226,7 @@ block conversionArea
                                     option(value='') 出荷
                                     option(value='') 未出荷
                         .col-auto
-                            button.btn.btn-ec-conversion.px-4(data-toggle="modal" data-target="#registerShipment") 出荷情報を登録
+                            a.btn.btn-ec-conversion.px-4(data-toggle="modal" data-target="#registerShipment" tabindex) 出荷情報を登録
     #registerShipment.modal.fade(tabindex='-1', role='dialog', aria-labelledby='registerShipment', aria-hidden='true')
         .modal-dialog(role='document')
             .modal-content
