@@ -384,7 +384,7 @@ block conversionArea
                 .col-6
                     .row.align-items-center.justify-content-end
                         .col-auto
-                            button(data-toggle="modal" data-target="#mailConfirm").btn.btn-ec-conversion.px-5 配信内容を確認
+                            a(data-toggle="modal" data-target="#mailConfirm" tabindex).btn.btn-ec-conversion.px-5 配信内容を確認
     #mailConfirm.modal.fade(tabindex='-1', role='dialog', aria-labelledby='mailConfirm', aria-hidden='true')
         .modal-dialog(role='document')
             .modal-content
