@@ -210,31 +210,32 @@ block primaryContents
                 form
                     textarea(rows="8").form-control
 block conversionArea
-    +b.c-conversionArea
-        +e.container
-            .row.justify-content-between.align-items-center
-                .col-6
-                    +e.leftBlockItem
-                        a(href="/shipment/master").c-beseLink
-                            i.fa.fa-backward(aria-hidden="true")
-                            span 出荷マスター
-                .col-6
-                    .row.align-items-center.justify-content-end
-                        .col-auto
-                            form
-                                select.form-control
-                                    option(value='') 出荷
-                                    option(value='') 未出荷
-                        .col-auto
-                            a.btn.btn-ec-conversion.px-4(data-toggle="modal" data-target="#registerShipment" tabindex) 出荷情報を登録
-    #registerShipment.modal.fade(tabindex='-1', role='dialog', aria-labelledby='registerShipment', aria-hidden='true')
-        .modal-dialog(role='document')
-            .modal-content
-                .modal-header
-                    h5.modal-title.font-weight-bold 配送に関わる情報が変更されました
-                    button.close(type='button', data-dismiss='modal', aria-label='Close')
-                        span(aria-hidden='true') ×
-                .modal-body
-                    p 送料の変更が必要な場合は、受注管理より手動で変更してください。
-                .modal-footer
-                    button.btn.btn-ec-conversion.px-5(type='button', data-dismiss='modal') OK
+    form
+        +b.c-conversionArea
+            +e.container
+                .row.justify-content-between.align-items-center
+                    .col-6
+                        +e.leftBlockItem
+                            a(href="/shipment/master").c-beseLink
+                                i.fa.fa-backward(aria-hidden="true")
+                                span 出荷マスター
+                    .col-6
+                        .row.align-items-center.justify-content-end
+                            .col-auto
+                                form
+                                    select.form-control
+                                        option(value='') 出荷
+                                        option(value='') 未出荷
+                            .col-auto
+                                a.btn.btn-ec-conversion.px-4(data-toggle="modal" data-target="#registerShipment" tabindex) 出荷情報を登録
+        #registerShipment.modal.fade(tabindex='-1', role='dialog', aria-labelledby='registerShipment', aria-hidden='true')
+            .modal-dialog(role='document')
+                .modal-content
+                    .modal-header
+                        h5.modal-title.font-weight-bold 配送に関わる情報が変更されました
+                        button.close(type='button', data-dismiss='modal', aria-label='Close')
+                            span(aria-hidden='true') ×
+                    .modal-body
+                        p 送料の変更が必要な場合は、受注管理より手動で変更してください。
+                    .modal-footer
+                        button.btn.btn-ec-conversion.px-5(type='button', data-dismiss='modal') OK

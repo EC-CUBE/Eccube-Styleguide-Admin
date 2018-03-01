@@ -107,13 +107,14 @@ block primaryContents
             | 複数の項目を選択する場合はctrlキー（Macの場合はcommandキー）を押しながら項目を押します。shiftキーを押しながら選択すると範囲選択ができます。
 
 block conversionArea
-    +b.c-conversionArea
-        +e.container
-            .row.justify-content-between.align-items-center
-                .col-6
-                    +e.leftBlockItem
+    form
+        +b.c-conversionArea
+            +e.container
+                .row.justify-content-between.align-items-center
+                    .col-6
+                        +e.leftBlockItem
 
-                .col-6
-                    .row.align-items-center.justify-content-end
-                        .col-auto
-                            button(type="submit").btn.btn-ec-conversion.px-5 登録
+                    .col-6
+                        .row.align-items-center.justify-content-end
+                            .col-auto
+                                button(type="submit").btn.btn-ec-conversion.px-5 登録
