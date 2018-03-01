@@ -199,22 +199,23 @@ block primaryContents
                     textarea(rows="8").form-control
 
 block conversionArea
-    +b.c-conversionArea
-        +e.container
-            .row.justify-content-between.align-items-center
-                .col-6
-                    +e.leftBlockItem
-                        a(href="").c-beseLink
-                            i.fa.fa-backward(aria-hidden="true")
-                            span 会員マスター
-                .col-6
-                    .row.align-items-center.justify-content-end
-                        .col-auto
-                            form
-                                select.form-control
-                                    option(value='') 本会員
-                                    option(value='') 仮会員
-                                    option(value='') 脱会
-                        .col-auto
-                            button(type="submit").btn.btn-ec-conversion.px-5 会員情報を登録
+    form
+        +b.c-conversionArea
+            +e.container
+                .row.justify-content-between.align-items-center
+                    .col-6
+                        +e.leftBlockItem
+                            a(href="").c-beseLink
+                                i.fa.fa-backward(aria-hidden="true")
+                                span 会員マスター
+                    .col-6
+                        .row.align-items-center.justify-content-end
+                            .col-auto
+                                form
+                                    select.form-control
+                                        option(value='') 本会員
+                                        option(value='') 仮会員
+                                        option(value='') 脱会
+                            .col-auto
+                                button(type="submit").btn.btn-ec-conversion.px-5 会員情報を登録
 

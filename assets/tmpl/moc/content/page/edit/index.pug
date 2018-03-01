@@ -122,15 +122,16 @@ block primaryContents
                             input.form-control(type='text')
 
 block conversionArea
-    +b.c-conversionArea
-        +e.container
-            .row.justify-content-between.align-items-center
-                .col-6
-                    +e.leftBlockItem
-                        a(href="/content/page").c-beseLink
-                            i.fa.fa-backward(aria-hidden="true")
-                            span ページ一覧
-                .col-6
-                    .row.align-items-center.justify-content-end
-                        .col-auto
-                            button(type="submit").btn.btn-ec-conversion.px-5 登録
+    form
+        +b.c-conversionArea
+            +e.container
+                .row.justify-content-between.align-items-center
+                    .col-6
+                        +e.leftBlockItem
+                            a(href="/content/page").c-beseLink
+                                i.fa.fa-backward(aria-hidden="true")
+                                span ページ一覧
+                    .col-6
+                        .row.align-items-center.justify-content-end
+                            .col-auto
+                                button(type="submit").btn.btn-ec-conversion.px-5 登録
