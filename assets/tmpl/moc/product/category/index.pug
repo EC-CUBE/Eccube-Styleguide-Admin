@@ -11,10 +11,10 @@ block outsideBlock
                             li.breadcrumb-item.active(aria-current='page') カテゴリA
                 .col-6.text-right
                     .btn-group(role='group')
-                        button.btn.btn-ec-regular(type='button')
+                        a(href="" tabindex="0").btn.btn-ec-regular
                             i.fa.fa-cloud-download.mr-1.text-secondary
                             span CSVダウンロード
-                        button.btn.btn-ec-regular(type='button')
+                        a(href="" tabindex="0").btn.btn-ec-regular
                             i.fa.fa-cog.mr-1.text-secondary
                             span CSV出力設定
 
@@ -32,7 +32,7 @@ block primaryContents
                             .col-auto
                                 input(type="text").form-control
                             .col-auto
-                                button(type="submit").btn.btn-ec-regular 新規作成
+                                a(tabindex="0").btn.btn-ec-regular 新規作成
                     li.list-group-item
                         .row.justify-content-around
                             .col-auto.d-flex.align-items-center
@@ -60,9 +60,9 @@ block primaryContents
                             .col-auto.d-flex.align-items-center
                                 input(type="text").form-control
                             .col-auto.d-flex.align-items-center
-                                button(type="submit").btn.btn-ec-conversion 決定
+                                a(tabindex="0").btn.btn-ec-conversion 決定
                             .col-auto.d-flex.align-items-center
-                                button(type="submit").btn.btn-ec-sub キャンセル
+                                a(tabindex="0").btn.btn-ec-sub キャンセル
                     li.list-group-item
                         .row.justify-content-around
                             .col-auto.d-flex.align-items-center
