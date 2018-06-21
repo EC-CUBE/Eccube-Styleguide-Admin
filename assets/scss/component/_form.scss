@@ -19,11 +19,23 @@ form.text-center.w-100.py-5.border-ec-dashed.mb-2.rounded
   a(onclick="$('#fileForm').click()").btn.btn-ec-regular.mr-2 ファイルを選択
 .c-form__fileUploadThumbnails
   .c-form__fileUploadThumbnail(style="background-image:url('http://via.placeholder.com/150x150')")
+    a(tabindex="-1").c-form__fileUploadThumbnailClose
+      i.fa.fa-close
   .c-form__fileUploadThumbnail(style="background-image:url('http://via.placeholder.com/350x150')")
+    a(tabindex="-1").c-form__fileUploadThumbnailClose
+      i.fa.fa-close
   .c-form__fileUploadThumbnail(style="background-image:url('http://via.placeholder.com/350x600')")
+    a(tabindex="-1").c-form__fileUploadThumbnailClose
+      i.fa.fa-close
   .c-form__fileUploadThumbnail(style="background-image:url('http://via.placeholder.com/600x600')")
+    a(tabindex="-1").c-form__fileUploadThumbnailClose
+      i.fa.fa-close
   .c-form__fileUploadThumbnail(style="background-image:url('http://via.placeholder.com/350x150')")
+    a(tabindex="-1").c-form__fileUploadThumbnailClose
+      i.fa.fa-close
   .c-form__fileUploadThumbnail(style="background-image:url('http://via.placeholder.com/350x600')")
+    a(tabindex="-1").c-form__fileUploadThumbnailClose
+      i.fa.fa-close
 p 項目の内容はドラッグ＆ドロップで変更可能です。
 
   Styleguide 9.0
@@ -50,39 +62,29 @@ p 項目の内容はドラッグ＆ドロップで変更可能です。
       height:100%;
       background: transparent;
     }
-    &::after{
-      display: none;
-      content: "\f00d";
-      font-family: FontAwesome;
-      font-size: 18px;
-      line-height: 1;
-      color: #54687A;
-      padding: 5px;
-      background: #fff;
-      border-radius: 3px;
-      position: absolute;
-      top:2px;
-      right: 2px;
-    }
+  }
+  &ThumbnailClose {
+    display: none;
+    font-size: 18px;
+    line-height: 1;
+    color: #54687A;
+    padding: 5px;
+    background: #fff;
+    border-radius: 3px;
+    position: absolute;
+    top:2px;
+    right: 2px;
   }
   &Thumbnail:hover {
     &::before{
       background: rgba(0,0,0,0.5);
     }
 
-    &::after{
+    .c-form__fileUploadThumbnailClose {
       display: inline-block;
-      content: "\f00d";
-      font-family: FontAwesome;
-      font-size: 18px;
-      line-height: 1;
-      color: #54687A;
-      padding: 5px;
-      background: #fff;
-      border-radius: 3px;
-      position: absolute;
-      top:2px;
-      right: 2px;
+      &:hover {
+        opacity: .8;
+      }
     }
   }
 }
