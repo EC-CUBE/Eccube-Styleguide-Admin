@@ -8,7 +8,7 @@ block primaryContents
         .card-header
             .row
                 .col-8
-                    .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
+                    .d-inline-block(data-tooltip='tooltip' data-placement="top" title="Tooltip")
                         span.card-title 基本設定
                         i.fa.fa-question-circle.fa-lg.ml-1
                 .col-4.text-right
@@ -18,14 +18,14 @@ block primaryContents
             .card-body
                 .row
                     .col-3
-                        .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
+                        .d-inline-block(data-tooltip='tooltip' data-placement="top" title="Tooltip")
                             span 商品ID
                             i.fa.fa-question-circle.fa-lg.ml-1
                     .col
                         p 12
                 .row
                     .col-3
-                        .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
+                        .d-inline-block(data-tooltip='tooltip' data-placement="top" title="Tooltip")
                             span 商品名
                             i.fa.fa-question-circle.fa-lg.ml-1
                             span.badge.badge-primary.ml-1 必須
@@ -34,7 +34,7 @@ block primaryContents
                             input(type="text").form-control
                 .row
                     .col-3
-                        .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
+                        .d-inline-block(data-tooltip='tooltip' data-placement="top" title="Tooltip")
                             span 商品種別
                             i.fa.fa-question-circle.fa-lg.ml-1
                             span.badge.badge-primary.ml-1 必須
@@ -44,7 +44,7 @@ block primaryContents
                                 option(value='') 通常商品
                 .row
                     .col-3
-                        .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
+                        .d-inline-block(data-tooltip='tooltip' data-placement="top" title="Tooltip")
                             span 商品画像
                             i.fa.fa-question-circle.fa-lg.ml-1
                     .col.mb-2
@@ -52,7 +52,7 @@ block primaryContents
                         +c-fileUpload
                 .row
                     .col-3
-                        .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
+                        .d-inline-block(data-tooltip='tooltip' data-placement="top" title="Tooltip")
                             span 商品説明
                             i.fa.fa-question-circle.fa-lg.ml-1
                     .col
@@ -66,7 +66,7 @@ block primaryContents
                 #addComment.collapse.ec-collapse
                     .row.bg-ec-formGray.pt-3.mb-2
                         .col-3
-                            .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
+                            .d-inline-block(data-tooltip='tooltip' data-placement="top" title="Tooltip")
                                 span 一覧コメント
                                 i.fa.fa-question-circle.fa-lg.ml-1
                         .col.mb-4
@@ -74,7 +74,7 @@ block primaryContents
                                 textarea(rows="4").form-control
                 .row
                     .col-3
-                        .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
+                        .d-inline-block(data-tooltip='tooltip' data-placement="top" title="Tooltip")
                             span 販売価格
                             i.fa.fa-question-circle.fa-lg.ml-1
                             span.badge.badge-primary.ml-1 必須
@@ -88,7 +88,7 @@ block primaryContents
                 #addPrice.collapse.ec-collapse
                     .row.bg-ec-formGray.pt-3.mb-2
                         .col-3
-                            .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
+                            .d-inline-block(data-tooltip='tooltip' data-placement="top" title="Tooltip")
                                 span 通常価格
                                 i.fa.fa-question-circle.fa-lg.ml-1
                                 span.badge.badge-primary.ml-1 必須
@@ -98,7 +98,7 @@ block primaryContents
 
                 .row
                     .col-3
-                        .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
+                        .d-inline-block(data-tooltip='tooltip' data-placement="top" title="Tooltip")
                             span 在庫数
                             i.fa.fa-question-circle.fa-lg.ml-1
                             span.badge.badge-primary.ml-1 必須
@@ -110,7 +110,7 @@ block primaryContents
                                 label.form-check-label(for="check_unlimited") 無制限
                 .row
                     .col-3
-                        .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
+                        .d-inline-block(data-tooltip='tooltip' data-placement="top" title="Tooltip")
                             span 検索ワード
                             i.fa.fa-question-circle.fa-lg.ml-1
                     .col.mb-2
@@ -120,7 +120,7 @@ block primaryContents
         .card-header
             .row
                 .col-8
-                    .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
+                    .d-inline-block(data-tooltip='tooltip' data-placement="top" title="Tooltip")
                         span.card-title 規格設定
                             i.fa.fa-question-circle.fa-lg.ml-1
                 .col-4.text-right
@@ -128,7 +128,7 @@ block primaryContents
                         i.fa.fa-angle-up.fa-lg
         #standardConfig.collapse.show.ec-cardCollapse
             .card-body
-                .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
+                .d-inline-block(data-tooltip='tooltip' data-placement="top" title="Tooltip")
                     span この商品の規格
                     i.fa.fa-question-circle.fa-lg.ml-1
                 table.table.table-striped
@@ -184,7 +184,7 @@ block primaryContents
         .card-header
             .row
                 .col-8
-                    .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
+                    .d-inline-block(data-tooltip='tooltip' data-placement="top" title="Tooltip")
                         span.card-title フリーエリア
                         i.fa.fa-question-circle.fa-lg.ml-1
                 .col-4.text-right
@@ -204,7 +204,7 @@ block secondaryContents
         .card-header
             .row
                 .col-8
-                    .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
+                    .d-inline-block(data-tooltip='tooltip' data-placement="top" title="Tooltip")
                         span.card-title カテゴリ
                         i.fa.fa-question-circle.fa-lg.ml-1
                 .col-4.text-right
@@ -228,7 +228,7 @@ block secondaryContents
         .card-header
             .row
                 .col-8
-                    .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
+                    .d-inline-block(data-tooltip='tooltip' data-placement="top" title="Tooltip")
                         span.card-title タグ
                             i.fa.fa-question-circle.fa-lg.ml-1
                 .col-4.text-right
@@ -314,7 +314,7 @@ block secondaryContents
         .card-header
             .row
                 .col-8
-                    .d-inline-block(data-toggle="tooltip" data-placement="top" title="Tooltip")
+                    .d-inline-block(data-tooltip='tooltip' data-placement="top" title="Tooltip")
                         span.card-title ショップ用メモ
                             i.fa.fa-question-circle.fa-lg.ml-1
                 .col-4.text-right
