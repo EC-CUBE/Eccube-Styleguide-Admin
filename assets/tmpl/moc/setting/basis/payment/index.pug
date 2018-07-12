@@ -6,8 +6,8 @@ block pageTitle
 block primaryContents
     .card.rounded.border-0.mb-4
         .card-body.p-0
-            .row.my-3.ml-1
-                .col-3
+            .row.py-3.ml-1.border-bottom
+                .col-2
                     form
                         input.form-control(type='text')
                 .col-auto.pl-0
@@ -15,19 +15,9 @@ block primaryContents
             ul.list-group.list-group-flush.mb-4
                 li.list-group-item
                     .row.justify-content-around
-                        .col-auto
-                            strong &nbsp;
-                        .col-1
-                            strong 支払方法
-                        .col-1
-                            strong 手数料
-                        .col
-                            strong 利用条件
-                li.list-group-item
-                    .row.justify-content-around
                         .col-auto.d-flex.align-items-center
                             i.fa.fa-bars.text-ec-gray
-                        .col-1.d-flex.align-items-center
+                        .col-2.d-flex.align-items-center
                             a(href="/setting/basis/payment/edit") 郵便振替
                         .col-1.d-flex.align-items-center
                             span 0.00
@@ -36,13 +26,15 @@ block primaryContents
                         .col-3.text-right
                             a.btn.btn-ec-actionIcon.mr-2(href="" data-tooltip='tooltip' data-placement="top" title="上へ移動"): i.fa.fa-arrow-up.fa-lg.text-secondary
                             a.btn.btn-ec-actionIcon.mr-2(href="" data-tooltip='tooltip' data-placement="top" title="下へ移動"): i.fa.fa-arrow-down.fa-lg.text-secondary
+                            a.btn.btn-ec-actionIcon.mr-2(href="" data-tooltip='tooltip' data-placement="top" title="非表示"): i.fa.fa-eye.fa-lg.text-secondary
                             a.btn.btn-ec-actionIcon.mr-2(data-target='#paymentDeleteConfirm', data-toggle='modal', data-tooltip='tooltip', data-placement='top', title='', data-original-title='削除'): i.fa.fa-close.fa-lg.text-secondary
                 li.list-group-item
                     .row.justify-content-around
                         .col-auto.d-flex.align-items-center
                             i.fa.fa-bars.text-ec-gray
-                        .col-1.d-flex.align-items-center
+                        .col-2.d-flex.align-items-center
                             a(href="/setting/basis/payment/edit") 銀行振込
+                                span （非表示）
                         .col-1.d-flex.align-items-center
                             span 0.00
                         .col.d-flex.align-items-center
@@ -50,12 +42,13 @@ block primaryContents
                         .col-3.text-right
                             a.btn.btn-ec-actionIcon.mr-2(href="" data-tooltip='tooltip' data-placement="top" title="上へ移動"): i.fa.fa-arrow-up.fa-lg.text-secondary
                             a.btn.btn-ec-actionIcon.mr-2(href="" data-tooltip='tooltip' data-placement="top" title="下へ移動"): i.fa.fa-arrow-down.fa-lg.text-secondary
+                            a.btn.btn-ec-actionIcon.hide.mr-2(href="" data-tooltip='tooltip' data-placement="top" title="表示"): i.fa.fa-eye-slash.fa-lg.text-secondary
                             a.btn.btn-ec-actionIcon.mr-2(data-target='#paymentDeleteConfirm', data-toggle='modal', data-tooltip='tooltip', data-placement='top', title='', data-original-title='削除'): i.fa.fa-close.fa-lg.text-secondary
                 li.list-group-item
                     .row.justify-content-around
                         .col-auto.d-flex.align-items-center
                             i.fa.fa-bars.text-ec-gray
-                        .col-1.d-flex.align-items-center
+                        .col-2.d-flex.align-items-center
                             a(href="/setting/basis/payment/edit") 現金書留
                         .col-1.d-flex.align-items-center
                             span 0.00
@@ -64,12 +57,13 @@ block primaryContents
                         .col-3.text-right
                             a.btn.btn-ec-actionIcon.mr-2(href="" data-tooltip='tooltip' data-placement="top" title="上へ移動"): i.fa.fa-arrow-up.fa-lg.text-secondary
                             a.btn.btn-ec-actionIcon.mr-2(href="" data-tooltip='tooltip' data-placement="top" title="下へ移動"): i.fa.fa-arrow-down.fa-lg.text-secondary
+                            a.btn.btn-ec-actionIcon.mr-2(href="" data-tooltip='tooltip' data-placement="top" title="非表示"): i.fa.fa-eye.fa-lg.text-secondary
                             a.btn.btn-ec-actionIcon.mr-2(data-target='#paymentDeleteConfirm', data-toggle='modal', data-tooltip='tooltip', data-placement='top', title='', data-original-title='削除'): i.fa.fa-close.fa-lg.text-secondary
                 li.list-group-item
                     .row.justify-content-around
                         .col-auto.d-flex.align-items-center
                             i.fa.fa-bars.text-ec-gray
-                        .col-1.d-flex.align-items-center
+                        .col-2.d-flex.align-items-center
                             a(href="/setting/basis/payment/edit") 代金引換
                         .col-1.d-flex.align-items-center
                             span 0.00
@@ -78,6 +72,7 @@ block primaryContents
                         .col-3.text-right
                             a.btn.btn-ec-actionIcon.mr-2(href="" data-tooltip='tooltip' data-placement="top" title="上へ移動"): i.fa.fa-arrow-up.fa-lg.text-secondary
                             a.btn.btn-ec-actionIcon.mr-2(href="" data-tooltip='tooltip' data-placement="top" title="下へ移動"): i.fa.fa-arrow-down.fa-lg.text-secondary
+                            a.btn.btn-ec-actionIcon.mr-2(href="" data-tooltip='tooltip' data-placement="top" title="非表示"): i.fa.fa-eye.fa-lg.text-secondary
                             a.btn.btn-ec-actionIcon.mr-2(data-target='#paymentDeleteConfirm', data-toggle='modal', data-tooltip='tooltip', data-placement='top', title='', data-original-title='削除'): i.fa.fa-close.fa-lg.text-secondary
     p 項目の順番はドラッグ＆ドロップでも変更可能です。
     #paymentDeleteConfirm.modal.fade.show(tabindex='-1', role='dialog', aria-labelledby='confirmModal-4', aria-hidden='true')

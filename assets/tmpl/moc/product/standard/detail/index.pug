@@ -42,6 +42,7 @@ block primaryContents
                                 a.btn.btn-ec-actionIcon.mr-2(href="" data-tooltip='tooltip' data-placement="top" title="上へ移動"): i.fa.fa-arrow-up.fa-lg.text-secondary
                                 a.btn.btn-ec-actionIcon.mr-2(href="" data-tooltip='tooltip' data-placement="top" title="下へ移動"): i.fa.fa-arrow-down.fa-lg.text-secondary
                                 a.btn.btn-ec-actionIcon.mr-2(href="" data-tooltip='tooltip' data-placement="top" title="名前を編集"): i.fa.fa-pencil.fa-lg.text-secondary
+                                a.btn.btn-ec-actionIcon.mr-2(href="" data-tooltip='tooltip' data-placement="top" title="非表示"): i.fa.fa-eye.fa-lg.text-secondary
                                 a.btn.btn-ec-actionIcon.mr-2(data-target='#standardDeleteConfirm', data-toggle='modal', data-tooltip='tooltip', data-placement='top', title='', data-original-title='削除'): i.fa.fa-close.fa-lg.text-secondary
                     li.list-group-item
                         form.form-row
@@ -55,6 +56,7 @@ block primaryContents
                                 a.btn.btn-ec-actionIcon.mr-2(href="" data-tooltip='tooltip' data-placement="top" title="上へ移動"): i.fa.fa-arrow-up.fa-lg.text-secondary
                                 a.btn.btn-ec-actionIcon.mr-2(href="" data-tooltip='tooltip' data-placement="top" title="下へ移動"): i.fa.fa-arrow-down.fa-lg.text-secondary
                                 a.btn.btn-ec-actionIcon.mr-2(href="" data-tooltip='tooltip' data-placement="top" title="名前を編集"): i.fa.fa-pencil.fa-lg.text-secondary
+                                a.btn.btn-ec-actionIcon.mr-2(href="" data-tooltip='tooltip' data-placement="top" title="非表示"): i.fa.fa-eye.fa-lg.text-secondary
                                 a.btn.btn-ec-actionIcon.mr-2(data-target='#standardDeleteConfirm', data-toggle='modal', data-tooltip='tooltip', data-placement='top', title='', data-original-title='削除'): i.fa.fa-close.fa-lg.text-secondary
                     li.list-group-item
                         .row.justify-content-around
@@ -62,10 +64,12 @@ block primaryContents
                                 i.fa.fa-bars.text-ec-gray
                             .col.d-flex.align-items-center
                                 a(href="/product/standard/detail") 120cm
+                                    span （非表示）
                             .col-auto.text-right
                                 a.btn.btn-ec-actionIcon.mr-2(href="" data-tooltip='tooltip' data-placement="top" title="上へ移動"): i.fa.fa-arrow-up.fa-lg.text-secondary
                                 a.btn.btn-ec-actionIcon.mr-2(href="" data-tooltip='tooltip' data-placement="top" title="下へ移動"): i.fa.fa-arrow-down.fa-lg.text-secondary
                                 a.btn.btn-ec-actionIcon.mr-2(href="" data-tooltip='tooltip' data-placement="top" title="名前を編集"): i.fa.fa-pencil.fa-lg.text-secondary
+                                a.btn.btn-ec-actionIcon.hide.mr-2(href="" data-tooltip='tooltip' data-placement="top" title="表示"): i.fa.fa-eye-slash.fa-lg.text-second
                                 a.btn.btn-ec-actionIcon.mr-2(data-target='#standardDeleteConfirm', data-toggle='modal', data-tooltip='tooltip', data-placement='top', title='', data-original-title='削除'): i.fa.fa-close.fa-lg.text-secondary
                     li.list-group-item
                         .row.justify-content-around
@@ -77,6 +81,7 @@ block primaryContents
                                 a.btn.btn-ec-actionIcon.mr-2(href="" data-tooltip='tooltip' data-placement="top" title="上へ移動"): i.fa.fa-arrow-up.fa-lg.text-secondary
                                 a.btn.btn-ec-actionIcon.mr-2(href="" data-tooltip='tooltip' data-placement="top" title="下へ移動"): i.fa.fa-arrow-down.fa-lg.text-secondary
                                 a.btn.btn-ec-actionIcon.mr-2(href="" data-tooltip='tooltip' data-placement="top" title="名前を編集"): i.fa.fa-pencil.fa-lg.text-secondary
+                                a.btn.btn-ec-actionIcon.mr-2(href="" data-tooltip='tooltip' data-placement="top" title="非表示"): i.fa.fa-eye.fa-lg.text-secondary
                                 a.btn.btn-ec-actionIcon.mr-2(data-target='#standardDeleteConfirm', data-toggle='modal', data-tooltip='tooltip', data-placement='top', title='', data-original-title='削除'): i.fa.fa-close.fa-lg.text-secondary
     p 項目の順番はドラッグ＆ドロップでも変更可能です。
     #standardDeleteConfirm.modal.fade.show(tabindex='-1', role='dialog', aria-labelledby='confirmModal-4', aria-hidden='true')
