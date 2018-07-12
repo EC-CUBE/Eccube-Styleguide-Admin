@@ -22,9 +22,9 @@ block primaryContents
                             .col.d-flex.align-items-center
                                 a(href="/setting/basis/delivery/edit") [配送業者A] 配送業者A
                             .col-auto.text-right
-                                a.btn.btn-ec-actionIcon.mr-2(href="" data-toggle="tooltip" data-placement="top" title="上へ移動"): i.fa.fa-arrow-up.fa-lg.text-secondary
-                                a.btn.btn-ec-actionIcon.mr-2(href="" data-toggle="tooltip" data-placement="top" title="下へ移動"): i.fa.fa-arrow-down.fa-lg.text-secondary
-                                a.btn.btn-ec-actionIcon.mr-2(href="" data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-close.fa-lg.text-secondary
+                                a.btn.btn-ec-actionIcon.mr-2(href="" data-tooltip='tooltip' data-placement="top" title="上へ移動"): i.fa.fa-arrow-up.fa-lg.text-secondary
+                                a.btn.btn-ec-actionIcon.mr-2(href="" data-tooltip='tooltip' data-placement="top" title="下へ移動"): i.fa.fa-arrow-down.fa-lg.text-secondary
+                                a.btn.btn-ec-actionIcon.mr-2(data-target='#deliveryDeleteConfirm', data-toggle='modal', data-tooltip='tooltip', data-placement='top', title='', data-original-title='削除'): i.fa.fa-close.fa-lg.text-secondary
                     li.list-group-item
                         .row.justify-content-around
                             .col-auto.d-flex.align-items-center
@@ -32,9 +32,9 @@ block primaryContents
                             .col.d-flex.align-items-center
                                 a(href="/setting/basis/delivery/edit") [配送業者B] 配送業者B
                             .col-auto.text-right
-                                a.btn.btn-ec-actionIcon.mr-2(href="" data-toggle="tooltip" data-placement="top" title="上へ移動"): i.fa.fa-arrow-up.fa-lg.text-secondary
-                                a.btn.btn-ec-actionIcon.mr-2(href="" data-toggle="tooltip" data-placement="top" title="下へ移動"): i.fa.fa-arrow-down.fa-lg.text-secondary
-                                a.btn.btn-ec-actionIcon.mr-2(href="" data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-close.fa-lg.text-secondary
+                                a.btn.btn-ec-actionIcon.mr-2(href="" data-tooltip='tooltip' data-placement="top" title="上へ移動"): i.fa.fa-arrow-up.fa-lg.text-secondary
+                                a.btn.btn-ec-actionIcon.mr-2(href="" data-tooltip='tooltip' data-placement="top" title="下へ移動"): i.fa.fa-arrow-down.fa-lg.text-secondary
+                                a.btn.btn-ec-actionIcon.mr-2(data-target='#deliveryDeleteConfirm', data-toggle='modal', data-tooltip='tooltip', data-placement='top', title='', data-original-title='削除'): i.fa.fa-close.fa-lg.text-secondary
                     li.list-group-item
                         .row.justify-content-around
                             .col-auto.d-flex.align-items-center
@@ -42,9 +42,9 @@ block primaryContents
                             .col.d-flex.align-items-center
                                 a(href="/setting/basis/delivery/edit") [配送業者D] 配送業者D
                             .col-auto.text-right
-                                a.btn.btn-ec-actionIcon.mr-2(href="" data-toggle="tooltip" data-placement="top" title="上へ移動"): i.fa.fa-arrow-up.fa-lg.text-secondary
-                                a.btn.btn-ec-actionIcon.mr-2(href="" data-toggle="tooltip" data-placement="top" title="下へ移動"): i.fa.fa-arrow-down.fa-lg.text-secondary
-                                a.btn.btn-ec-actionIcon.mr-2(href="" data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-close.fa-lg.text-secondary
+                                a.btn.btn-ec-actionIcon.mr-2(href="" data-tooltip='tooltip' data-placement="top" title="上へ移動"): i.fa.fa-arrow-up.fa-lg.text-secondary
+                                a.btn.btn-ec-actionIcon.mr-2(href="" data-tooltip='tooltip' data-placement="top" title="下へ移動"): i.fa.fa-arrow-down.fa-lg.text-secondary
+                                a.btn.btn-ec-actionIcon.mr-2(data-target='#deliveryDeleteConfirm', data-toggle='modal', data-tooltip='tooltip', data-placement='top', title='', data-original-title='削除'): i.fa.fa-close.fa-lg.text-secondary
                     li.list-group-item
                         .row.justify-content-around
                             .col-auto.d-flex.align-items-center
@@ -52,7 +52,19 @@ block primaryContents
                             .col.d-flex.align-items-center
                                 a(href="/setting/basis/delivery/edit") [配送業者C] 配送業者C
                             .col-auto.text-right
-                                a.btn.btn-ec-actionIcon.mr-2(href="" data-toggle="tooltip" data-placement="top" title="上へ移動"): i.fa.fa-arrow-up.fa-lg.text-secondary
-                                a.btn.btn-ec-actionIcon.mr-2(href="" data-toggle="tooltip" data-placement="top" title="下へ移動"): i.fa.fa-arrow-down.fa-lg.text-secondary
-                                a.btn.btn-ec-actionIcon.mr-2(href="" data-toggle="tooltip" data-placement="top" title="削除"): i.fa.fa-close.fa-lg.text-secondary
+                                a.btn.btn-ec-actionIcon.mr-2(href="" data-tooltip='tooltip' data-placement="top" title="上へ移動"): i.fa.fa-arrow-up.fa-lg.text-secondary
+                                a.btn.btn-ec-actionIcon.mr-2(href="" data-tooltip='tooltip' data-placement="top" title="下へ移動"): i.fa.fa-arrow-down.fa-lg.text-secondary
+                                a.btn.btn-ec-actionIcon.mr-2(data-target='#deliveryDeleteConfirm', data-toggle='modal', data-tooltip='tooltip', data-placement='top', title='', data-original-title='削除'): i.fa.fa-close.fa-lg.text-secondary
     p 項目の順番はドラッグ＆ドロップでも変更可能です。
+    #deliveryDeleteConfirm.modal.fade.show(tabindex='-1', role='dialog', aria-labelledby='confirmModal-4', aria-hidden='true')
+        .modal-dialog(role='document')
+            .modal-content
+                .modal-header
+                    h5.modal-title.font-weight-bold この項目を完全に削除します
+                    button.close(type='button', data-dismiss='modal', aria-label='Close')
+                        span(aria-hidden='true') ×
+                .modal-body.text-left
+                    p.text-left この項目を完全に削除します。これまでの販売データには影響はありませんが、この操作は取り消すことができません。削除しますか？
+                .modal-footer
+                    button.btn.btn-ec-sub(type='button', data-dismiss='modal') キャンセル
+                    a.btn.btn-ec-delete(href='', data-confirm='false', data-method='delete') 完全に削除
