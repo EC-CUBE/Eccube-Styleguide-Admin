@@ -1,0 +1,58 @@
+extends /assets/tmpl/moc/layout/_layout-2col.pug
+block pageTitle
+    include /assets/tmpl/components/pageTitle.pug
+    +c-pageTitle("新着情報管理","コンテンツ管理")
+
+block primaryContents
+    .card.rounded.border-0.mb-4
+        .card-header
+            .row
+                .col-8
+                    span.card-title 新着情報登録・編集
+                .col-4.text-right
+                    a(data-toggle="collapse" href="#ordererInfo" aria-expanded="false" aria-controls="ordererInfo")
+                        i.fa.fa-angle-up.fa-lg
+        #ordererInfo.collapse.show.ec-cardCollapse
+            .card-body
+                .row.mb-2
+                    .col-3
+                        span 日付
+                    .col
+                        .row
+                            .col-6
+                                form
+                                    input.form-control(type='date', value='0000-01-01')
+                .row.mb-2
+                    .col-3
+                        span タイトル
+                    .col
+                        form
+                            input.form-control(type='text')
+                .row.mb-2
+                    .col-3
+                        span URL
+                    .col
+                        form
+                            input.form-control(type='text')
+                .row.mb-2
+                    .col-3
+                        span 本文
+                    .col
+                        form
+                            textarea(rows="8").form-control
+
+block conversionArea
+    form
+        +b.c-conversionArea
+            +e.container
+                .row.justify-content-between.align-items-center
+                    .col-6
+                        +e.leftBlockItem
+                            a(href="/content/news").c-beseLink
+                                i.fa.fa-backward(aria-hidden="true")
+                                span 新着情報管理
+                    .col-6
+                        .row.align-items-center.justify-content-end
+                            .col-auto
+                                button(type="submit").btn.btn-ec-conversion.px-5 登録・更新
+
