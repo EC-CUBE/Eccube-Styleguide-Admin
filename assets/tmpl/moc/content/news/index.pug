@@ -1,0 +1,107 @@
+extends /assets/tmpl/moc/layout/_layout-2col
+block pageTitle
+    include /assets/tmpl/components/pageTitle.pug
+    +c-pageTitle("新着情報管理","コンテンツ管理")
+
+block primaryContents
+    a(href="/content/news/edit/").btn.btn-ec-conversion.mb-2 新規作成
+    .card.rounded.border-0.mb-4
+        .card-body.p-0
+            table.table.table-sm
+                thead
+                    tr
+                        th.border-top-0.pt-2.pb-2.pl-3 順位
+                        th.border-top-0.pt-2.pb-2 日付
+                        th.border-top-0.pt-2.pb-2 タイトル
+                        th.border-top-0.pt-2.pb-2.pr-3
+                tbody
+                    tr
+                        td.align-middle.pl-4 1
+                        td.align-middle 2017/09/13
+                        td.align-middle
+                            a(href="/content/news/edit/") サイトオープンいたしました!
+                        td.align-middle.pr-3
+                            .text-right
+                                .px-1.d-inline-block
+                                    a.btn.btn-ec-actionIcon(href="" data-tooltip='tooltip' data-placement="top" title="上へ移動")
+                                        i.fa.fa-arrow-up.fa-lg.text-secondary
+                                .px-1.d-inline-block
+                                    a.btn.btn-ec-actionIcon(href="" data-tooltip='tooltip' data-placement="top" title="下へ移動")
+                                        i.fa.fa-arrow-down.fa-lg.text-secondary
+                                .px-1.d-inline-block
+                                    a.btn.btn-ec-actionIcon(data-tooltip='tooltip' data-placement="top" title="編集")
+                                        i.fa.fa-pencil.fa-lg.text-secondary(aria-hidden="true")
+                                .px-1.d-inline-block
+                                    a.btn.btn-ec-actionIcon(data-tooltip='tooltip' data-placement="top" title="削除")
+                                        i.fa.fa-close.fa-lg.text-secondary(aria-hidden="true")
+                    tr
+                        td.align-middle.pl-4 2
+                        td.align-middle 2017/09/13
+                        td.align-middle
+                            a(href="/content/news/edit/") サイトオープンいたしました!
+                        td.align-middle.pr-3
+                            .text-right
+                                .px-1.d-inline-block
+                                    a.btn.btn-ec-actionIcon(href="" data-tooltip='tooltip' data-placement="top" title="上へ移動")
+                                        i.fa.fa-arrow-up.fa-lg.text-secondary
+                                .px-1.d-inline-block
+                                    a.btn.btn-ec-actionIcon(href="" data-tooltip='tooltip' data-placement="top" title="下へ移動")
+                                        i.fa.fa-arrow-down.fa-lg.text-secondary
+                                .px-1.d-inline-block
+                                    a.btn.btn-ec-actionIcon(data-tooltip='tooltip' data-placement="top" title="編集")
+                                        i.fa.fa-pencil.fa-lg.text-secondary(aria-hidden="true")
+                                .px-1.d-inline-block
+                                    a.btn.btn-ec-actionIcon(data-tooltip='tooltip' data-placement="top" title="削除")
+                                        i.fa.fa-close.fa-lg.text-secondary(aria-hidden="true")
+                    tr
+                        td.align-middle.pl-4 3
+                        td.align-middle 2017/09/13
+                        td.align-middle
+                            a(href="/content/news/edit/") サイトオープンいたしました!
+                        td.align-middle.pr-3
+                            .text-right
+                                .px-1.d-inline-block
+                                    a.btn.btn-ec-actionIcon(href="" data-tooltip='tooltip' data-placement="top" title="上へ移動")
+                                        i.fa.fa-arrow-up.fa-lg.text-secondary
+                                .px-1.d-inline-block
+                                    a.btn.btn-ec-actionIcon(href="" data-tooltip='tooltip' data-placement="top" title="下へ移動")
+                                        i.fa.fa-arrow-down.fa-lg.text-secondary
+                                .px-1.d-inline-block
+                                    a.btn.btn-ec-actionIcon(data-tooltip='tooltip' data-placement="top" title="編集")
+                                        i.fa.fa-pencil.fa-lg.text-secondary(aria-hidden="true")
+                                .px-1.d-inline-block
+                                    a.btn.btn-ec-actionIcon(data-tooltip='tooltip' data-placement="top" title="削除")
+                                        i.fa.fa-close.fa-lg.text-secondary(aria-hidden="true")
+                    tr
+                        td.align-middle.pl-4 4
+                        td.align-middle 2017/09/13
+                        td.align-middle
+                            a(href="/content/news/edit/") サイトオープンいたしました!
+                        td.align-middle.pr-3
+                            .text-right
+                                .px-1.d-inline-block
+                                    a.btn.btn-ec-actionIcon(href="" data-tooltip='tooltip' data-placement="top" title="上へ移動")
+                                        i.fa.fa-arrow-up.fa-lg.text-secondary
+                                .px-1.d-inline-block
+                                    a.btn.btn-ec-actionIcon(href="" data-tooltip='tooltip' data-placement="top" title="下へ移動")
+                                        i.fa.fa-arrow-down.fa-lg.text-secondary
+                                .px-1.d-inline-block
+                                    a.btn.btn-ec-actionIcon(data-tooltip='tooltip' data-placement="top" title="編集")
+                                        i.fa.fa-pencil.fa-lg.text-secondary(aria-hidden="true")
+                                .px-1.d-inline-block
+                                    a.btn.btn-ec-actionIcon(data-tooltip='tooltip' data-placement="top" title="削除")
+                                        i.fa.fa-close.fa-lg.text-secondary(aria-hidden="true")
+            .row.justify-content-md-center.mb-4
+                ul.pagination
+                    li.page-item
+                        a.page-link(href='#') Previous
+                    li.page-item.active
+                        a.page-link(href='#') 1
+                    li.page-item
+                        a.page-link(href='#') 2
+                    li.page-item
+                        a.page-link(href='#') 3
+                    li.page-item
+                        a.page-link(href='#') 4
+                    li.page-item
+                        a.page-link(href='#') Next
