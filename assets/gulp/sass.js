@@ -2,13 +2,16 @@
 
 const gulp = require("gulp");
 const $ = require("gulp-load-plugins")();
-const runSequence = require("run-sequence");
+const sassCompiler = require('sass');
+const gulpSass = require('gulp-sass')(sassCompiler);
+const browserSync = require('browser-sync');
+const through = require('through2'); // Import through2
 
-const {src,dest,scss_option} = global;
+const { src, dest, scss_option } = global;
 
-gulp.task("sass",()=> {
-    let options = (scss_option)?scss_option:{
-        sourceMap: true,
+function sassTask() {
+    let options = (scss_option) ? scss_option : {
+        // sourceMap: true, // Sourcemaps are handled by gulp-sourcemaps
     };
 
     let srcPattern = [
@@ -20,25 +23,28 @@ gulp.task("sass",()=> {
             errorHandler: $.notify.onError('<%= error.message %>')
         }))
         .pipe($.sourcemaps.init())
-        .pipe($.sass(options))
+        .pipe(gulpSass(options).on('error', gulpSass.logError))
         .pipe($.pleeease({
-            autoprefixer:true,
+            autoprefixer: true,
             minifier: true,
             mqpacker: true
         }))
-        .pipe($.sourcemaps.write())
-        .pipe(gulp.dest(`${dest}assets/css/`));
-});
+        .pipe($.sourcemaps.write('.'))
+        .pipe(gulp.dest(`${dest}assets/css/`))
+        // Only stream if browserSync is active
+        .pipe(browserSync.active ? browserSync.stream() : through.obj());
+}
 
-gulp.task("sass:watch",()=>{
+function watchSass() {
     let target = [
         `${src}assets/scss/**/*.scss`,
     ];
-    return gulp.watch(target,["sass"])
-    // return gulp.watch(target,()=>{
-    //     runSequence("sass","server:reload")
-    // })
-});
+    // Use gulp.series to run sassTask
+    return gulp.watch(target, gulp.series(sassTask));
+}
 
-global.watch.push("sass:watch")
-global.build.push("sass")
+// Export tasks for use in gulpfile.js
+module.exports = {
+    sass: sassTask,
+    watchSass: watchSass
+};

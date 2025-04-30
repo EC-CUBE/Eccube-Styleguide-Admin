@@ -1,106 +1,106 @@
 "use strict";
 
 const gulp = require("gulp");
-const $ = require("gulp-load-plugins")();
+const browserSync = require("browser-sync").create(); // Use create() for instance
 
-const browserSync = require("browser-sync");
+const { src, dest } = global;
 
-const {src,dest} = global;
-
-const fs = require("fs")
-const path = require("path")
-const url = require("url")
-const pug = require("pug")
+const fs = require("fs");
+const path = require("path");
+const url = require("url");
+const pug = require("pug");
 
 const pugMiddleWare = (req, res, next) => {
+    const baseDir = process.cwd(); // Corrected variable name
+    const pugPath = getPugTemplatePath(baseDir, req);
 
-    const basedir = process.cwd();
-    const pugPath = getPugTemplatePath(basedir,req)
-
-    if ( pugPath === false ) {
+    if (pugPath === false) {
         return next();
     }
 
-    try{
-        console.log("[BS] try to file "+ pugPath)
-        fs.statSync(pugPath)
+    try {
+        console.log("[BS] try to file " + pugPath);
+        fs.statSync(pugPath); // Check if file exists
         const content = pug.renderFile(pugPath, {
-            locals:{},
+            locals: {},
             pretty: true,
-            basedir,
+            basedir: baseDir,
             compileDebug: true,
             doctype: "html"
         });
-        res.end(new Buffer(content));
-    }catch (e){
-        console.log(e)
-        return next();
+        res.setHeader('Content-Type', 'text/html'); // Set content type
+        // Use Buffer.from() instead of new Buffer()
+        res.end(Buffer.from(content));
+    } catch (e) {
+        // Check if error is because file doesn't exist
+        if (e.code === 'ENOENT') {
+            console.log("[BS] File not found: " + pugPath);
+        } else {
+            // Log other errors
+            console.error("[BS] Pug render error:", e);
+        }
+        return next(); // Continue if file not found or error occurs
     }
-}
+};
 
-const getPugTemplatePath = (baseDir,req)=>{
-    let requestPath = url.parse(req.url).pathname.replace(".html",".pug");
-    if (
-      path.parse(requestPath).ext &&
-      path.parse(requestPath).ext !== ".pug"
-    ) {
-      return false;
+const getPugTemplatePath = (baseDir, req) => {
+    const parsedUrl = url.parse(req.url);
+    let requestPath = parsedUrl.pathname;
+
+    // If it's a directory path, assume index.pug
+    if (requestPath.endsWith('/')) {
+        requestPath += 'index.html';
     }
-    const suffix = path.parse(requestPath).ext ? "": "index.pug"
-    return path.join(baseDir,"assets/tmpl/moc/",requestPath,suffix);
-}
 
+    // Only handle .html requests
+    if (!requestPath.endsWith('.html')) {
+        return false;
+    }
 
-gulp.task("server",()=> {
+    // Convert .html to .pug
+    requestPath = requestPath.replace(/\.html$/, ".pug");
 
-    // var config = {
-    //     proxy: "127.0.0.1:8000",
-    //     open: "external",
-    //     //notify: false
-    // };
-    //
-    // var server = {
-    //     base: `${dest}`,
-    // }
-    //
-    // php.server(server,() => {
-    //     browserSync(config)
-    // });
+    // Construct the potential path to the Pug file
+    const potentialPath = path.join(baseDir, "assets/tmpl/moc", requestPath);
 
-  browserSync({
-    // proxy:"localhost:4000",
-    // serveStatic:["./public",],
-    server:{
-        middleware: [pugMiddleWare],
-        baseDir:"public",
-        index: "index.html",
-    },
-    // middleware: [pugMiddleWare],
-    open:true,
+    // Check if the corresponding .pug file exists
+    try {
+        fs.accessSync(potentialPath, fs.constants.R_OK);
+        return potentialPath;
+    } catch (err) {
+        // If the direct path doesn't exist, check for index.pug in the directory
+        const dirPath = path.dirname(potentialPath);
+        const indexPath = path.join(dirPath, path.basename(requestPath, '.pug'), 'index.pug');
+        try {
+            fs.accessSync(indexPath, fs.constants.R_OK);
+            return indexPath;
+        } catch (innerErr) {
+            return false; // Neither file exists
+        }
+    }
+};
 
-  })
-
-    // browserSync({
-    //     server:{
-    //         middleware: [pugMiddleWare],
-    //         baseDir:"public",
-    //         index: "index.html",
-    //     },
-    //     open: "external",
-    // })
-    return gulp.watch([
-        `${dest}/**/*`,
-        `${src}/assets/tmpl/**/*`
-    ], (e) => {
-        // console.log(e)
-        setTimeout(function(){
-            browserSync.reload();
-        },500);
+function serverTask() {
+    browserSync.init({
+        server: {
+            baseDir: dest, // Use global.dest
+            directory: true, // Enable directory listing
+            middleware: [pugMiddleWare] // Add the Pug middleware
+        },
+        port: 3000, // Specify a port (default is 3000)
+        open: true,
+        notify: false // Disable notifications
     });
-});
 
-gulp.task("server:reload",()=>{
-    browserSync.reload();
-})
+    // Watch for changes in the destination directory and reload
+    // Note: Pug and Sass tasks already trigger reloads via browserSync.stream()
+    // This watcher might be redundant or cause double reloads if not careful.
+    // Consider removing if Pug/Sass watch covers all needs.
+    // gulp.watch([`${dest}/**/*`], browserSync.reload);
+}
 
-global.watch.push("server")
+// Export the server task
+module.exports = {
+    browserSync: serverTask
+    // No separate reload task needed as stream() is used in pug/sass tasks
+};

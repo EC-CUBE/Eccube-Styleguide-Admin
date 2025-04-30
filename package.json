@@ -5,37 +5,37 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev:moc": "run-s dev:moc:*",
-    "dev:moc:init": "rm -rf ./public",
-    "dev:moc:mv": "gulp mv",
-    "dev:moc:sass": "gulp sass",
-    "dev:moc:watch": "gulp",
-    "dev:sg": "run-s dev:sg:*",
-    "dev:sg:init": "rm -rf ./public",
-    "dev:sg:mv": "gulp mv",
-    "dev:sg:server": "gulp styleguide:server",
-    "dev": "run-p dev:sg dev:moc",
-    "build": "run-s build:*",
-    "build:init": "rm -rf ./public",
-    "build:mv": "gulp mv",
-    "build:run": "gulp build && gulp styleguide:build"
+    "dev:moc": "gulp dev:moc",
+    "dev:sg": "gulp dev:sg",
+    "dev": "gulp dev",
+    "build": "gulp build"
   },
   "author": "",
   "license": "LGPL",
   "dependencies": {
     "bootstrap": "^4.0.0",
-    "browser-sync": "^2.18.13",
-    "gulp": "^3.9.1",
-    "gulp-load-plugins": "^1.5.0",
-    "gulp-notify": "^3.0.0",
+    "browser-sync": "^2.27.10",
+    "gulp": "^4.0.2",
+    "gulp-load-plugins": "^2.0.8",
+    "gulp-notify": "^4.0.0",
     "gulp-pleeease": "^2.0.2",
-    "gulp-plumber": "^1.1.0",
-    "gulp-pug": "^3.3.0",
-    "gulp-sass": "^3.1.0",
-    "gulp-sourcemaps": "^2.6.1",
-    "npm-run-all": "^4.1.1",
-    "run-sequence": "^2.2.0",
-    "sc5-styleguide": "^2.0.4"
+    "gulp-plumber": "^1.2.1",
+    "gulp-pug": "^5.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "sass": "^1.77.8",
+    "nanasess-sc5-styleguide": "latest",
+    "webpack": "^5.76.0",
+    "webpack-stream": "^7.0.0"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "through2": "^4.0.2",
+    "webpack-cli": "^5.0.1"
+  },
+  "engines": {
+    "node": ">=16"
+  },
+  "overrides": {
+    "node-sass": "npm:sass@^1.69.5"
+  }
 }
