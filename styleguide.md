@@ -1,20 +1,20 @@
-# EC-CUBE 3 管理画面スタイルガイド制作
+# EC-CUBE 4 管理画面スタイルガイド制作
 
-EC-CUBE3　管理画面デモサイト　／　ID: admin　パスワード: password
+EC-CUBE4　管理画面デモサイト
 
-[https://site3.ec-cube.net/admin/](https://site3.ec-cube.net/admin/)
+[https://www.ec-cube.net/demo/](https://www.ec-cube.net/demo/)
 
 開発リポジトリ
 
 [https://github.com/EC-CUBE/Eccube-Styleguide-Admin](https://github.com/EC-CUBE/Eccube-Styleguide-Admin)
 
-Styleguide On Heorku
+Styleguide
 
-[http://eccube3-admin-styleguide.herokuapp.com/styleguide/](http://eccube3-admin-styleguide.herokuapp.com/styleguide/)
+[https://doc.ec-cube.net/Eccube-Styleguide-Admin/styleguide/](https://doc.ec-cube.net/Eccube-Styleguide-Admin/styleguide/)
 
-HTML Moc On Heroku
+HTML Moc
 
-[http://eccube3-admin-styleguide.herokuapp.com/](http://eccube3-admin-styleguide.herokuapp.com/)
+[https://doc.ec-cube.net/Eccube-Styleguide-Admin/](https://doc.ec-cube.net/Eccube-Styleguide-Admin/)
 
 ## コンポーネント設計について
 

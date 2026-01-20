@@ -24,7 +24,7 @@
     "gulp-sass": "^5.1.0",
     "gulp-sourcemaps": "^3.0.0",
     "sass": "^1.77.8",
-    "nanasess-sc5-styleguide": "latest",
+    "nanasess-sc5-styleguide": "4.1.2",
     "webpack": "^5.76.0",
     "webpack-stream": "^7.0.0"
   },
@@ -36,6 +36,8 @@
     "node": ">=16"
   },
   "overrides": {
-    "node-sass": "npm:sass@^1.69.5"
+    "node-sass": "npm:sass@^1.69.5",
+    "deep-extend": "^0.6.0",
+    "lodash": "^4.17.21"
   }
 }

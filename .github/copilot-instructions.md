@@ -6,7 +6,7 @@
 - node v22 で動作しないパッケージは、別のパッケージに代替するか、最新バージョンにマイグレーションします
 - nanasess-sc5-styleguide は node v22.14.0 で `npm run test` 及び `npm run demo` が成功し、ブラウザでスタイルガイドの表示を確認済みです。
 - run-sequence に依存しないようにしてください
-
+- タスクが完了したら、[.github/prompts](.github/prompts) 以下に `YYYYMMhhmm.md` というファイル名で、プロンプトの履歴を保存してください。
 
 ## node.js のバージョン切替
 

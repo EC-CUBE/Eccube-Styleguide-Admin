@@ -40,7 +40,9 @@ const styleguideConfig = {
 
 // Generate task (for server)
 function styleguideGenerate() {
-    const options = { ...styleguideConfig, server: true, port: 4000, rootPath: outputPath }; // Serve from 'public'
+    // 環境変数 APP_ROOT からパスを取得、指定がなければデフォルト "/" を使用（開発環境ではルート直下で実行する）
+    const appRoot = process.env.APP_ROOT || "/";
+    const options = { ...styleguideConfig, appRoot, server: true, port: 4000, rootPath: outputPath }; // Serve from 'public'
     return gulp.src(sassSrcPath + '**/*.scss')
         .pipe(plumber({ errorHandler: notify.onError('<%= error.message %>') }))
         .pipe(styleguide.generate(options))
@@ -58,7 +60,9 @@ function styleguideApplyStylesServer() {
 
 // Generate task (for build)
 function styleguideGenerateBuild() {
-    const options = { ...styleguideConfig, appRoot: "/styleguide/", server: false, rootPath: styleguideDest }; // Build to 'public/styleguide'
+    // 環境変数 APP_ROOT からパスを取得、指定がなければデフォルト "/styleguide/" を使用
+    const appRoot = process.env.APP_ROOT || "/styleguide/";
+    const options = { ...styleguideConfig, appRoot, server: false, rootPath: styleguideDest }; // Build to 'public/styleguide'
     return gulp.src(sassSrcPath + '**/*.scss')
         .pipe(plumber({ errorHandler: notify.onError('<%= error.message %>') }))
         .pipe(styleguide.generate(options))
